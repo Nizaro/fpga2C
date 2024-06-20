@@ -322,7 +322,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	with sck_en select sck <= clk_spi_in when '1',
 					          '0' when others;
 
-	flagprocess : process(S_AXI_ARESETN, readyflag,powerdownflag,spiflag);
+	flagprocess : process(S_AXI_ARESETN, readyflag,powerdownflag,spiflag)
+	begin
 		if(s00_axi_aresetn = '1') then
 			send_data <= (others => '0');
 		else
@@ -333,10 +334,9 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 				send_data(1 downto 0) <= "00";
 			elsif(spiflag = '1') then
 				send_data(1 downto 0) <= "01";
-				spi_data(31 downto 16) = spi_data;
+				spi_data(31 downto 16) <= spi_data;
 			end if;
 		end if;
-	begin
 
 	end process;
 

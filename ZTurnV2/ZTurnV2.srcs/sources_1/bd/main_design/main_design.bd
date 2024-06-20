@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x31E0550FBA559EAA",
+      "boundary_crc": "0x769564BE9BCC5A42",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2024.1"
+      "tool_version": "2024.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -68,7 +69,20 @@
       "monitor0_slice0": "",
       "monitor0_slice1": "",
       "monitor1_slice0": "",
-      "monitor1_slice1": ""
+      "monitor1_slice1": "",
+      "lvds_sync_0_ibuf": "",
+      "lvds_dout0_0_ibuf": "",
+      "lvds_dout1_0_ibuf": "",
+      "lvds_data_0_concat": "",
+      "lvds_dout2_0_ibuf": "",
+      "lvds_dout3_0_ibuf": "",
+      "lvds_clkin_1_ibuf": "",
+      "lvds_data_1_concat": "",
+      "lvds_dout0_1_ibuf": "",
+      "lvds_dout1_1_ibuf": "",
+      "lvds_dout2_1_ibuf": "",
+      "lvds_dout3_1_ibuf": "",
+      "lvds_sync_1_ibuf": ""
     },
     "interface_ports": {
       "DDR": {
@@ -238,25 +252,6 @@
             "direction": "IO"
           }
         }
-      },
-      "noip_lvds_1": {
-        "mode": "Master",
-        "vlnv_bus_definition": "onsemi:user:noip_lvds:1.0",
-        "vlnv": "onsemi:user:noip_lvds_rtl:1.0",
-        "port_maps": {
-          "lvds_clock": {
-            "physical_name": "noip_lvds_1_lvds_clock",
-            "direction": "I"
-          },
-          "lvds_sync": {
-            "physical_name": "noip_lvds_1_lvds_sync",
-            "direction": "I"
-          },
-          "lvds_data": {
-            "physical_name": "noip_lvds_1_lvds_data",
-            "direction": "I"
-          }
-        }
       }
     },
     "ports": {
@@ -273,13 +268,57 @@
         "type": "clk",
         "direction": "I",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_clk_0_p",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "lvds_clk_0_n": {
         "type": "clk",
         "direction": "I",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_clk_0_n",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "noip_ss": {
         "direction": "O",
@@ -293,20 +332,38 @@
       },
       "noip_trigger": {
         "direction": "O",
-        "left": "0",
-        "right": "1"
+        "left": "1",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "2",
+            "value_src": "ip_prop"
+          }
+        }
       },
       "noip_monitor0": {
         "type": "data",
         "direction": "I",
         "left": "0",
-        "right": "1"
+        "right": "1",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "noip_monitor1": {
         "type": "data",
         "direction": "I",
         "left": "0",
-        "right": "1"
+        "right": "1",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "noip_rst_n": {
         "direction": "O",
@@ -332,6 +389,622 @@
         "direction": "O",
         "left": "0",
         "right": "1"
+      },
+      "lvds_sync_0_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_IBUF_DS_P_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_sync_0_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_IBUF_DS_N_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout0_0_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_IBUF_DS_P_1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout0_0_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_IBUF_DS_N_1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout1_0_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout1_0_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout2_0_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout2_0_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout3_0_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout1_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout3_0_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout1_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_clk_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_clk_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_clk_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_clk_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout0_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout0_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout0_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout1_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout1_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout1_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout1_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout2_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout2_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout2_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout2_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout3_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout3_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_dout3_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_dout3_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_sync_1_p": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_scyn_0_p1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "lvds_sync_1_n": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "main_design_lvds_sync_0_n1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -2932,6 +3605,195 @@
             "value": "1"
           }
         }
+      },
+      "lvds_sync_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_clkin_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_sync_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout0_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_sync_0_ibuf1_0",
+        "xci_path": "ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci",
+        "inst_hier_path": "lvds_dout0_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout1_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout0_0_ibuf_0",
+        "xci_path": "ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci",
+        "inst_hier_path": "lvds_dout1_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_data_0_concat": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "6",
+        "xci_name": "main_design_xlconcat_0_1",
+        "xci_path": "ip/main_design_xlconcat_0_1/main_design_xlconcat_0_1.xci",
+        "inst_hier_path": "lvds_data_0_concat",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "lvds_dout2_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout0_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_dout2_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout3_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout1_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_dout3_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_clkin_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_clkin_0_ibuf_4",
+        "xci_path": "ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci",
+        "inst_hier_path": "lvds_clkin_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_data_1_concat": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "6",
+        "xci_name": "main_design_lvds_data_0_concat_1",
+        "xci_path": "ip/main_design_lvds_data_0_concat_1/main_design_lvds_data_0_concat_1.xci",
+        "inst_hier_path": "lvds_data_1_concat",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "lvds_dout0_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout0_0_ibuf_3",
+        "xci_path": "ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci",
+        "inst_hier_path": "lvds_dout0_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout1_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout1_0_ibuf_3",
+        "xci_path": "ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci",
+        "inst_hier_path": "lvds_dout1_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout2_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout2_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_dout2_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_dout3_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_dout3_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_dout3_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_sync_1_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_sync_0_ibuf_1",
+        "xci_path": "ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci",
+        "inst_hier_path": "lvds_sync_1_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2995,12 +3857,6 @@
           "axis_interconnect_1/S01_AXIS"
         ]
       },
-      "noip_lvds_stream_1_noip_lvds": {
-        "interface_ports": [
-          "noip_lvds_1",
-          "noip_lvds_stream_1/noip_lvds"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -3039,10 +3895,226 @@
           "lvds_clkin_0_ibuf/IBUF_DS_N"
         ]
       },
+      "IBUF_DS_N_0_2": {
+        "ports": [
+          "lvds_sync_0_n",
+          "lvds_sync_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_0_3": {
+        "ports": [
+          "lvds_clk_1_n",
+          "lvds_clkin_1_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_0_4": {
+        "ports": [
+          "lvds_sync_1_n",
+          "lvds_sync_1_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_1_1": {
+        "ports": [
+          "lvds_dout0_0_n",
+          "lvds_dout0_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_1_2": {
+        "ports": [
+          "lvds_dout2_0_n",
+          "lvds_dout2_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_1_3": {
+        "ports": [
+          "lvds_dout0_1_n",
+          "lvds_dout0_1_ibuf/IBUF_DS_N"
+        ]
+      },
+      "IBUF_DS_N_1_4": {
+        "ports": [
+          "lvds_dout2_1_n",
+          "lvds_dout2_1_ibuf/IBUF_DS_N"
+        ]
+      },
       "IBUF_DS_P_0_1": {
         "ports": [
           "lvds_clk_0_p",
           "lvds_clkin_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_0_2": {
+        "ports": [
+          "lvds_sync_0_p",
+          "lvds_sync_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_0_3": {
+        "ports": [
+          "lvds_clk_1_p",
+          "lvds_clkin_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_0_4": {
+        "ports": [
+          "lvds_sync_1_p",
+          "lvds_sync_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_1_1": {
+        "ports": [
+          "lvds_dout0_0_p",
+          "lvds_dout0_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_1_2": {
+        "ports": [
+          "lvds_dout2_0_p",
+          "lvds_dout2_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_1_3": {
+        "ports": [
+          "lvds_dout0_1_p",
+          "lvds_dout0_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "IBUF_DS_P_1_4": {
+        "ports": [
+          "lvds_dout2_1_p",
+          "lvds_dout2_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "lvds_clkin_0_ibuf_IBUF_OUT": {
+        "ports": [
+          "lvds_clkin_0_ibuf/IBUF_OUT",
+          "noip_lvds_stream_0/lvds_clk"
+        ]
+      },
+      "lvds_clkin_0_ibuf_IBUF_OUT1": {
+        "ports": [
+          "lvds_clkin_1_ibuf/IBUF_OUT",
+          "noip_lvds_stream_1/lvds_clk"
+        ]
+      },
+      "lvds_data_0_concat_dout": {
+        "ports": [
+          "lvds_data_0_concat/dout",
+          "noip_lvds_stream_0/lvds_data"
+        ]
+      },
+      "lvds_data_0_concat_dout1": {
+        "ports": [
+          "lvds_data_1_concat/dout",
+          "noip_lvds_stream_1/lvds_data"
+        ]
+      },
+      "lvds_dout0_0_ibuf_IBUF_OUT": {
+        "ports": [
+          "lvds_dout0_0_ibuf/IBUF_OUT",
+          "lvds_data_0_concat/In0"
+        ]
+      },
+      "lvds_dout0_0_ibuf_IBUF_OUT1": {
+        "ports": [
+          "lvds_dout2_0_ibuf/IBUF_OUT",
+          "lvds_data_0_concat/In2"
+        ]
+      },
+      "lvds_dout0_0_ibuf_IBUF_OUT2": {
+        "ports": [
+          "lvds_dout0_1_ibuf/IBUF_OUT",
+          "lvds_data_1_concat/In0"
+        ]
+      },
+      "lvds_dout0_0_ibuf_IBUF_OUT3": {
+        "ports": [
+          "lvds_dout2_1_ibuf/IBUF_OUT",
+          "lvds_data_1_concat/In2"
+        ]
+      },
+      "lvds_dout1_0_ibuf_IBUF_OUT": {
+        "ports": [
+          "lvds_dout1_0_ibuf/IBUF_OUT",
+          "lvds_data_0_concat/In1"
+        ]
+      },
+      "lvds_dout1_0_ibuf_IBUF_OUT1": {
+        "ports": [
+          "lvds_dout3_0_ibuf/IBUF_OUT",
+          "lvds_data_0_concat/In3"
+        ]
+      },
+      "lvds_dout1_0_ibuf_IBUF_OUT2": {
+        "ports": [
+          "lvds_dout1_1_ibuf/IBUF_OUT",
+          "lvds_data_1_concat/In1"
+        ]
+      },
+      "lvds_dout1_0_ibuf_IBUF_OUT3": {
+        "ports": [
+          "lvds_dout3_1_ibuf/IBUF_OUT",
+          "lvds_data_1_concat/In3"
+        ]
+      },
+      "lvds_dout1_0_n_1": {
+        "ports": [
+          "lvds_dout1_0_n",
+          "lvds_dout1_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "lvds_dout1_0_n_2": {
+        "ports": [
+          "lvds_dout3_0_n",
+          "lvds_dout3_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "lvds_dout1_0_n_3": {
+        "ports": [
+          "lvds_dout1_1_n",
+          "lvds_dout1_1_ibuf/IBUF_DS_N"
+        ]
+      },
+      "lvds_dout1_0_n_4": {
+        "ports": [
+          "lvds_dout3_1_n",
+          "lvds_dout3_1_ibuf/IBUF_DS_N"
+        ]
+      },
+      "lvds_dout1_0_p_1": {
+        "ports": [
+          "lvds_dout1_0_p",
+          "lvds_dout1_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "lvds_dout1_0_p_2": {
+        "ports": [
+          "lvds_dout3_0_p",
+          "lvds_dout3_0_ibuf/IBUF_DS_P"
+        ]
+      },
+      "lvds_dout1_0_p_3": {
+        "ports": [
+          "lvds_dout1_1_p",
+          "lvds_dout1_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "lvds_dout1_0_p_4": {
+        "ports": [
+          "lvds_dout3_1_p",
+          "lvds_dout3_1_ibuf/IBUF_DS_P"
+        ]
+      },
+      "lvds_sync_0_ibuf1_IBUF_OUT": {
+        "ports": [
+          "lvds_sync_0_ibuf/IBUF_OUT",
+          "noip_lvds_stream_0/lvds_sync"
+        ]
+      },
+      "lvds_sync_0_ibuf1_IBUF_OUT1": {
+        "ports": [
+          "lvds_sync_1_ibuf/IBUF_OUT",
+          "noip_lvds_stream_1/lvds_sync"
         ]
       },
       "monitor1_slice0_Dout": {

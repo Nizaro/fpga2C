@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Thu Jun 20 11:53:55 2024
+--Date        : Thu Jun 20 14:46:35 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -37,13 +37,41 @@ entity main_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_clk_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_clk_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     noip_clk_pll : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_miso : in STD_LOGIC;
-    noip_monitor : in STD_LOGIC;
+    noip_monitor0 : in STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_monitor1 : in STD_LOGIC_VECTOR ( 0 to 1 );
     noip_mosi : out STD_LOGIC;
+    noip_rst_n : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_sck : out STD_LOGIC;
     noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
-    noip_trigger : out STD_LOGIC
+    noip_trigger : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    sw_enable_n : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vdd18_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vdd33_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
 end main_design_wrapper;
 
@@ -77,9 +105,37 @@ architecture STRUCTURE of main_design_wrapper is
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
-    noip_trigger : out STD_LOGIC;
-    noip_monitor : in STD_LOGIC;
-    noip_clk_pll : out STD_LOGIC_VECTOR ( 0 to 1 )
+    noip_clk_pll : out STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_trigger : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    noip_monitor0 : in STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_monitor1 : in STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_rst_n : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vdd18_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vdd33_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
+    vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
+    sw_enable_n : out STD_LOGIC_VECTOR ( 0 to 1 );
+    lvds_sync_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_clk_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_clk_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout0_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout1_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout2_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_dout3_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design;
 begin
@@ -108,12 +164,40 @@ main_design_i: component main_design
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       lvds_clk_0_n(0) => lvds_clk_0_n(0),
       lvds_clk_0_p(0) => lvds_clk_0_p(0),
+      lvds_clk_1_n(0) => lvds_clk_1_n(0),
+      lvds_clk_1_p(0) => lvds_clk_1_p(0),
+      lvds_dout0_0_n(0) => lvds_dout0_0_n(0),
+      lvds_dout0_0_p(0) => lvds_dout0_0_p(0),
+      lvds_dout0_1_n(0) => lvds_dout0_1_n(0),
+      lvds_dout0_1_p(0) => lvds_dout0_1_p(0),
+      lvds_dout1_0_n(0) => lvds_dout1_0_n(0),
+      lvds_dout1_0_p(0) => lvds_dout1_0_p(0),
+      lvds_dout1_1_n(0) => lvds_dout1_1_n(0),
+      lvds_dout1_1_p(0) => lvds_dout1_1_p(0),
+      lvds_dout2_0_n(0) => lvds_dout2_0_n(0),
+      lvds_dout2_0_p(0) => lvds_dout2_0_p(0),
+      lvds_dout2_1_n(0) => lvds_dout2_1_n(0),
+      lvds_dout2_1_p(0) => lvds_dout2_1_p(0),
+      lvds_dout3_0_n(0) => lvds_dout3_0_n(0),
+      lvds_dout3_0_p(0) => lvds_dout3_0_p(0),
+      lvds_dout3_1_n(0) => lvds_dout3_1_n(0),
+      lvds_dout3_1_p(0) => lvds_dout3_1_p(0),
+      lvds_sync_0_n(0) => lvds_sync_0_n(0),
+      lvds_sync_0_p(0) => lvds_sync_0_p(0),
+      lvds_sync_1_n(0) => lvds_sync_1_n(0),
+      lvds_sync_1_p(0) => lvds_sync_1_p(0),
       noip_clk_pll(0 to 1) => noip_clk_pll(0 to 1),
       noip_miso => noip_miso,
-      noip_monitor => noip_monitor,
+      noip_monitor0(0 to 1) => noip_monitor0(0 to 1),
+      noip_monitor1(0 to 1) => noip_monitor1(0 to 1),
       noip_mosi => noip_mosi,
+      noip_rst_n(0 to 1) => noip_rst_n(0 to 1),
       noip_sck => noip_sck,
       noip_ss(0 to 1) => noip_ss(0 to 1),
-      noip_trigger => noip_trigger
+      noip_trigger(1 downto 0) => noip_trigger(1 downto 0),
+      sw_enable_n(0 to 1) => sw_enable_n(0 to 1),
+      vdd18_toggle(0 to 1) => vdd18_toggle(0 to 1),
+      vdd33_toggle(0 to 1) => vdd33_toggle(0 to 1),
+      vddpix_toggle(0 to 1) => vddpix_toggle(0 to 1)
     );
 end STRUCTURE;

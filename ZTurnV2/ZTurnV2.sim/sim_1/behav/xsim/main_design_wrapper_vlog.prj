@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" --include "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../ZTurnV2.ip_user_files/bd/main_design/ip/main_design_processing_system7_0_0/sim/main_design_processing_system7_0_0.v" \
+"../../../../ZTurnV2.ip_user_files/bd/main_design/ip/main_design_auto_pc_0/sim/main_design_auto_pc_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

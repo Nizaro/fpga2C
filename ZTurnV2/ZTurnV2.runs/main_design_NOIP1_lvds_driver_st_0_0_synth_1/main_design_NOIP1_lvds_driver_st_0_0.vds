@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Jun 14 10:06:03 2024
+# Process ID: 22946
+# Current directory: /home/nothon/ISIR/ZTurnV2/ZTurnV2.runs/main_design_NOIP1_lvds_driver_st_0_0_synth_1
+# Command line: vivado -log main_design_NOIP1_lvds_driver_st_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_NOIP1_lvds_driver_st_0_0.tcl
+# Log file: /home/nothon/ISIR/ZTurnV2/ZTurnV2.runs/main_design_NOIP1_lvds_driver_st_0_0_synth_1/main_design_NOIP1_lvds_driver_st_0_0.vds
+# Journal file: /home/nothon/ISIR/ZTurnV2/ZTurnV2.runs/main_design_NOIP1_lvds_driver_st_0_0_synth_1/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :2899.970 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :4294 MB
+# Total Virtual     :12285 MB
+# Available Virtual :5531 MB
+#-----------------------------------------------------------
+source main_design_NOIP1_lvds_driver_st_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/ISIR/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/ISIR/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_NOIP1_lvds_driver_st_0_0
+Command: synth_design -top main_design_NOIP1_lvds_driver_st_0_0 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23253

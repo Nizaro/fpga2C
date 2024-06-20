@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Wed Jun 19 09:05:43 2024
+--Date        : Thu Jun 20 11:53:55 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -37,10 +37,13 @@ entity main_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    noip_clk_pll : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_miso : in STD_LOGIC;
+    noip_monitor : in STD_LOGIC;
     noip_mosi : out STD_LOGIC;
     noip_sck : out STD_LOGIC;
-    noip_ss : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_trigger : out STD_LOGIC
   );
 end main_design_wrapper;
 
@@ -71,9 +74,12 @@ architecture STRUCTURE of main_design_wrapper is
     noip_mosi : out STD_LOGIC;
     noip_miso : in STD_LOGIC;
     noip_sck : out STD_LOGIC;
-    noip_ss : out STD_LOGIC_VECTOR ( 1 downto 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
-    lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 )
+    lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
+    noip_trigger : out STD_LOGIC;
+    noip_monitor : in STD_LOGIC;
+    noip_clk_pll : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   end component main_design;
 begin
@@ -102,9 +108,12 @@ main_design_i: component main_design
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       lvds_clk_0_n(0) => lvds_clk_0_n(0),
       lvds_clk_0_p(0) => lvds_clk_0_p(0),
+      noip_clk_pll(0 to 1) => noip_clk_pll(0 to 1),
       noip_miso => noip_miso,
+      noip_monitor => noip_monitor,
       noip_mosi => noip_mosi,
       noip_sck => noip_sck,
-      noip_ss(1 downto 0) => noip_ss(1 downto 0)
+      noip_ss(0 to 1) => noip_ss(0 to 1),
+      noip_trigger => noip_trigger
     );
 end STRUCTURE;

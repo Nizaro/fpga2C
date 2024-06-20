@@ -46,12 +46,12 @@
     "boundary": {
       "ports": {
         "clk_72M_pll": [ { "direction": "in" } ],
-        "clk_pll_out": [ { "direction": "out" } ],
-        "noip_reset_n": [ { "direction": "out" } ],
-        "vdd18_toggle": [ { "direction": "out" } ],
-        "vdd33_toggle": [ { "direction": "out" } ],
-        "vddpix_toggle": [ { "direction": "out" } ],
-        "sw_enable_n": [ { "direction": "out" } ],
+        "clk_pll_out": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
+        "noip_reset_n": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
+        "vdd18_toggle": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
+        "vdd33_toggle": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
+        "vddpix_toggle": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
+        "sw_enable_n": [ { "direction": "out", "size_left": "0", "size_right": "1" } ],
         "clk_spi_in": [ { "direction": "in" } ],
         "miso": [ { "direction": "in" } ],
         "mosi": [ { "direction": "out" } ],
@@ -170,6 +170,17 @@
           },
           "port_maps": {
             "CLK": [ { "physical_name": "s00_axi_aclk" } ]
+          }
+        },
+        "noip_spi": {
+          "vlnv": "xilinx.com:interface:spi:1.0",
+          "abstraction_type": "xilinx.com:interface:spi_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "IO1_O": [ { "physical_name": "mosi" } ],
+            "SCK_O": [ { "physical_name": "sck" } ],
+            "IO1_I": [ { "physical_name": "miso" } ],
+            "SS_O": [ { "physical_name": "ss_n" } ]
           }
         }
       },

@@ -1,0 +1,461 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jun 20 10:52:02 2024
+# Process ID: 33251
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :1140.948 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :4294 MB
+# Total Virtual     :12285 MB
+# Available Virtual :7109 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
+INFO: [Project 1-313] Project file moved from '/home/nothon/ISIR/ZTurnV2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+update_compile_order -fileset sources_1
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_0
+WARNING: [BD 41-721] Attempt to set value '0' on disabled parameter 'C_S_AXI4_ID_WIDTH' of cell '/axi_quad_spi_0' is ignored
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clkin_0_ibuf
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Parameter 'HAS_BURST' is not defined on '/axi_dma_0/M_AXIS_MM2S'. Parameter ignored.
+WARNING: [BD 41-1282] Parameter 'HAS_BURST' is not defined on '/axi_dma_0/M_AXIS_MM2S'. Parameter ignored.
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:noip_lvds_stream:1.0 noip_lvds_stream_0
+endgroup
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins noip_lvds_stream_0/S00_AXIS]
+connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {50} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins noip_lvds_stream_0/m00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {50} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins noip_lvds_stream_0/s00_axis_aclk]
+endgroup
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+delete_bd_objs [get_bd_nets axi_quad_spi_0_io0_o] [get_bd_nets axi_quad_spi_0_ss_o] [get_bd_nets io1_i_0_1] [get_bd_nets axi_quad_spi_0_sck_o] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells axi_quad_spi_0]
+delete_bd_objs [get_bd_ports noip_ss]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_ports noip_ss]'
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:noip_ctrl:1.0 noip_ctrl_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/noip_ctrl_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins noip_ctrl_0/S00_AXI]
+Slave segment '/noip_ctrl_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+set_property location {3 1406 232} [get_bd_cells noip_ctrl_0]
+connect_bd_net [get_bd_ports noip_miso] [get_bd_pins noip_ctrl_0/miso]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+connect_bd_net [get_bd_ports noip_sck] [get_bd_pins noip_ctrl_0/sck]
+connect_bd_net [get_bd_ports noip_mosi] [get_bd_pins noip_ctrl_0/mosi]
+connect_bd_net [get_bd_ports noip_ss] [get_bd_pins noip_ctrl_0/ss_n]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/noip_lvds_stream_0/lvds_clk
+/noip_lvds_stream_0/lvds_sync
+/noip_lvds_stream_0/lvds_data
+/noip_lvds_stream_0/monitor
+/noip_ctrl_0/clk_72M_pll
+/noip_ctrl_0/clk_spi_in
+
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins noip_ctrl_0/clk_spi_in]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1]
+connect_bd_net [get_bd_pins noip_ctrl_0/clk_72M_pll] [get_bd_pins processing_system7_0/FCLK_CLK1]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/trigger0]
+endgroup
+set_property name noip_trigger [get_bd_ports trigger0_0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor]
+endgroup
+set_property name noip_monitor [get_bd_ports monitor_0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3420] Updated main_design_noip_ctrl_0_0 to use current project options
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'noip_spi' (xilinx.com:interface:spi:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'main_design_noip_ctrl_0_0'.
+WARNING: [IP_Flow 19-4706] Upgraded port 'clk_pll_out' width 2 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'noip_reset_n' width 2 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'sw_enable_n' width 2 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'vdd18_toggle' width 2 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'vdd33_toggle' width 2 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'vddpix_toggle' width 2 differs from original width 1
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'main_design_noip_ctrl_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'main_design_noip_ctrl_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets noip_ctrl_0_mosi]
+delete_bd_objs [get_bd_nets noip_ctrl_0_sck]
+delete_bd_objs [get_bd_nets noip_miso_1]
+delete_bd_objs [get_bd_nets noip_ctrl_0_ss_n]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_ss_n]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_miso_1]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_sck]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_mosi]'
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/noip_lvds_stream_0/lvds_clk
+/noip_lvds_stream_0/lvds_sync
+/noip_lvds_stream_0/lvds_data
+/noip_ctrl_0/clk_spi_in
+
+report_ip_status -name ip_status 
+startgroup
+make_bd_pins_external  [get_bd_pins noip_ctrl_0/clk_pll_out]
+endgroup
+set_property name noip_clk_pll [get_bd_ports clk_pll_out_0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_lvds_stream:1.0 [get_ips  main_design_noip_lvds_stream_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3420] Updated main_design_noip_lvds_stream_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'monitor'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'monitor0'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'monitor1'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'main_design_noip_lvds_stream_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'monitor' is not found on the upgraded version of the cell '/noip_lvds_stream_0'. Its connection to the net 'monitor_0_1' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'main_design_noip_lvds_stream_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_lvds_stream_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/noip_lvds_stream_0/lvds_clk
+/noip_lvds_stream_0/lvds_sync
+/noip_lvds_stream_0/lvds_data
+/noip_lvds_stream_0/monitor0
+/noip_lvds_stream_0/monitor1
+/noip_ctrl_0/clk_spi_in
+
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-5160] IP 'main_design_xbar_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_lvds_stream_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_ctrl_0 .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+generate_target: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 8519.781 ; gain = 227.090 ; free physical = 763 ; free virtual = 3145
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets monitor_0_1] [get_bd_ports noip_monitor]
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor1]
+endgroup
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+set_property name noip_monitor0 [get_bd_ports monitor0_0]
+set_property name noip_monitor1 [get_bd_ports monitor1_0]
+copy_bd_objs /  [get_bd_cells {noip_lvds_stream_0}]
+set_property location {1.5 278 263} [get_bd_cells noip_lvds_stream_1]
+set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]
+startgroup
+set_property -dict [list \
+  CONFIG.c_enable_multi_channel {1} \
+  CONFIG.c_num_mm2s_channels {2} \
+  CONFIG.c_num_s2mm_channels {2} \
+] [get_bd_cells axi_dma_0]
+endgroup
+startgroup
+set_property CONFIG.c_enable_multi_channel {0} [get_bd_cells axi_dma_0]
+endgroup
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_mcdma:1.1 axi_mcdma_0
+endgroup
+set_property location {1 107 490} [get_bd_cells axi_mcdma_0]
+set_property location {2 496 448} [get_bd_cells axi_mcdma_0]
+set_property -dict [list \
+  CONFIG.c_num_mm2s_channels {2} \
+  CONFIG.c_num_s2mm_channels {2} \
+] [get_bd_cells axi_mcdma_0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+set_property location {2 927 345} [get_bd_cells axi_dma_0]
+delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_M00_AXIS] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_cells axi_dma_0]
+set_property location {2 921 322} [get_bd_cells axi_mcdma_0]
+connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_SG] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S02_AXI]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_mcdma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_mcdma_0/S_AXI_LITE]
+Slave segment '/axi_mcdma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C1_0000 [ 64K ]>.
+connect_bd_net [get_bd_pins axi_mcdma_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+startgroup
+endgroup
+connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS] [get_bd_intf_pins axi_mcdma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXIS_MM2S] [get_bd_intf_pins noip_lvds_stream_0/S00_AXIS]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXIS_MM2S] [get_bd_intf_pins noip_lvds_stream_0/S00_AXIS]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS] [get_bd_intf_pins axi_mcdma_0/S_AXIS_S2MM]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_mcdma_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]'
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_mcdma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_mcdma_0/S_AXI_LITE]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S02_AXI]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S01_AXI]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_SG] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI]'
+undo
+INFO: [Common 17-17] undo 'set_property location {2 921 322} [get_bd_cells axi_mcdma_0]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_M00_AXIS] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_cells axi_dma_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {2 927 345} [get_bd_cells axi_dma_0]'
+undo
+INFO: [Common 17-17] undo 'set_property -dict [list \
+  CONFIG.c_num_mm2s_channels {2} \
+  CONFIG.c_num_s2mm_channels {2} \
+] [get_bd_cells axi_mcdma_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {2 496 448} [get_bd_cells axi_mcdma_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {1 107 490} [get_bd_cells axi_mcdma_0]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:axi_mcdma:1.1 axi_mcdma_0'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.c_enable_multi_channel {0} [get_bd_cells axi_dma_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property -dict [list \
+  CONFIG.c_enable_multi_channel {1} \
+  CONFIG.c_num_mm2s_channels {2} \
+  CONFIG.c_num_s2mm_channels {2} \
+] [get_bd_cells axi_dma_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]'
+redo
+INFO: [Common 17-16] redo 'set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]'
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+report_ip_status -name ip_status 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_0
+endgroup
+set_property location {1 458 465} [get_bd_cells axis_interconnect_0]
+set_property location {0.5 -328 876} [get_bd_cells axi_dma_0]
+report_ip_status -name ip_status 

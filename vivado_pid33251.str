@@ -697,3 +697,1247 @@ expandTreeTable(PAResourceAtoD.ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE, "P
 // [GUI Memory]: 208 MB (+6460kb) [00:34:34]
 // Elapsed time: 658 seconds
 dismissDialog("Re-customize IP"); // m (dialog4)
+// Elapsed time: 505 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /noip_lvds_stream_0/M00_AXIS]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/trigger0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 13 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/trigger0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 460, 250, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/trigger0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/trigger0] 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /trigger0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /trigger0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 442, 240, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /trigger0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "noip_trigger", true); // R (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name noip_trigger [get_bd_ports trigger0_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name noip_trigger [get_bd_ports trigger0_0] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 46m:40s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,143 MB. GUI used memory: 132 MB. Current time: 6/20/24, 11:39:06 AM CEST
+// Elapsed Time for: 'L.f': 46m:42s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 126, 179, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor] 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "noip_monitor", true); // R (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name noip_monitor [get_bd_ports monitor_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name noip_monitor [get_bd_ports monitor_0] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 47m:04s
+// Elapsed Time for: 'L.f': 47m:06s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,161 MB. GUI used memory: 131 MB. Current time: 6/20/24, 11:39:31 AM CEST
+// Elapsed time: 12 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_ctrl_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_ctrl_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+// Elapsed time: 517 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // g (PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'. 
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status 
+dismissDialog("Refresh IP Catalog"); // bj (Refresh IP Catalog Progress)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // g (PAResourceQtoS.SystemTab_SHOW_IP_STATUS)
+ // selectButton(PAResourceItoN.IPStatusTablePanel_MORE_INFO, "Upgrade IP"); // o.d (PAResourceItoN.IPStatusTablePanel_MORE_INFO)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "/noip_ctrl_0 ; true ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ;  ; NOIP1 Controller ; 1.0 (Rev. 1) ; 1.0 (Rev. 1) ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ; xc7z020clg400-2", 1, "main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk)", 3, false); // x (PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE)
+ // selectButton(PAResourceItoN.IPStatusTablePanel_MORE_INFO, "Upgrade IP"); // o.d (PAResourceItoN.IPStatusTablePanel_MORE_INFO)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "/noip_ctrl_0 ; true ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ;  ; NOIP1 Controller ; 1.0 (Rev. 1) ; 1.0 (Rev. 1) ; main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk) ; xc7z020clg400-2", 1, "main_design_noip_ctrl_0_0 [NOIP1 Controller] (Incompatible IP data detected. IP definition 'NOIP1 Controller (1.0)' changed on disk)", 3, false); // x (PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// [Engine Memory]: 2,181 MB (+8424kb) [00:56:33]
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated main_design_noip_ctrl_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet 
+selectButton("OptionPane.button", "OK", "Upgrade IP"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 56m:16s
+// Elapsed Time for: 'L.f': 56m:18s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL, "Skip", "Generate Output Products"); // a (PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL)
+dismissDialog("Generate Output Products"); // W (dialog5)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,190 MB. GUI used memory: 135 MB. Current time: 6/20/24, 11:48:46 AM CEST
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog6)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_ctrl_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_ctrl_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_miso_1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_ctrl_0_sck]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_ctrl_0_mosi]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets noip_ctrl_0_mosi] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_ctrl_0_sck]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets noip_ctrl_0_sck] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_miso_1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets noip_miso_1] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /noip_ctrl_0_ss_n]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets noip_ctrl_0_ss_n] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_ctrl_0/mosi]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 650, 184, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_ctrl_0/mosi]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_ctrl_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_ss_n]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_miso_1]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_sck]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets noip_ctrl_0_mosi]' 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 374, 178, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // am (PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, Expand/Collapse)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // am (PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, Expand/Collapse)
+selectMenuItem(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "Validate Design"); // ap (PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, validate_bd_design_rsb_menu)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: RSB_VALIDATE_DIAGRAM
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design 
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+dismissDialog("Validate Design"); // bj (Validate Design Progress)
+// Elapsed Time for: 'L.f': 56m:56s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // dL.a (dialog7)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// Elapsed Time for: 'L.f': 56m:58s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,210 MB. GUI used memory: 136 MB. Current time: 6/20/24, 11:49:26 AM CEST
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+// Elapsed time: 10 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_ctrl_0/clk_pll_out]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 423, 214, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_ctrl_0/clk_pll_out]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins noip_ctrl_0/clk_pll_out] 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /clk_pll_out_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /clk_pll_out_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "noip_clk_pll", true); // R (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name noip_clk_pll [get_bd_ports clk_pll_out_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name noip_clk_pll [get_bd_ports clk_pll_out_0] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: save_bd_design 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 57m:34s
+// Elapsed Time for: 'L.f': 57m:36s
+// Elapsed time: 226 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // g (PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'. 
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status 
+dismissDialog("Refresh IP Catalog"); // bj (Refresh IP Catalog Progress)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "/noip_lvds_stream_0 ; true ; main_design_noip_lvds_stream_0_0 [noip_lvds_stream_v1.0] (IP definition 'noip_lvds_stream_v1.0 (1.0)' changed on disk) ; main_design_noip_lvds_stream_0_0 [noip_lvds_stream_v1.0] (IP definition 'noip_lvds_stream_v1.0 (1.0)' changed on disk) ;  ; noip_lvds_stream_v1.0 ; 1.0 (Rev. 1) ; 1.0 (Rev. 1) ; main_design_noip_lvds_stream_0_0 [noip_lvds_stream_v1.0] (IP definition 'noip_lvds_stream_v1.0 (1.0)' changed on disk) ; xc7z020clg400-2", 1, (String) null, 4, false); // x (PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: upgrade_ip -vlnv user.org:user:noip_lvds_stream:1.0 [get_ips  main_design_noip_lvds_stream_0_0] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd' 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,236 MB. GUI used memory: 140 MB. Current time: 6/20/24, 11:53:46 AM CEST
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated main_design_noip_lvds_stream_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips main_design_noip_lvds_stream_0_0] -no_script -sync -force -quiet 
+selectButton("OptionPane.button", "OK", "Upgrade IP"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 01h:01m:22s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // a (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// Elapsed Time for: 'L.f': 01h:01m:24s
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 2,420 MB (+135963kb) [01:01:50]
+// Tcl Message: VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd 
+// Tcl Message: VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created. 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// [GUI Memory]: 221 MB (+2014kb) [01:02:02]
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_lvds_stream_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_ctrl_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 8519.781 ; gain = 227.090 ; free physical = 763 ; free virtual = 3145 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Elapsed Time for: 'W.b': 21s
+// Elapsed time: 21 seconds
+dismissDialog("Managing Output Products"); // bj (Managing Output Products Progress)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:01m:46s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog9)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[Coretcl 2-1279] The upgrade of 'main_design_noip_lvds_stream_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.", 1); // b (PAResourceAtoD.CmdMsgDialog_MESSAGES)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[BD 41-1167] The pin 'monitor' is not found on the upgraded version of the cell '/noip_lvds_stream_0'. Its connection to the net 'monitor_0_1' has been removed.", 0); // b (PAResourceAtoD.CmdMsgDialog_MESSAGES)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog10)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /noip_monitor]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets monitor_0_1] [get_bd_ports noip_monitor] 
+// Elapsed Time for: 'L.f': 01h:02m:06s
+// Elapsed Time for: 'L.f': 01h:02m:10s
+// Elapsed time: 13 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 527, 222, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor0] 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 465, 253, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /noip_lvds_stream_0/monitor1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor1] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// HMemoryUtils.trashcanNow. Engine heap size: 2,497 MB. GUI used memory: 140 MB. Current time: 6/20/24, 11:54:51 AM CEST
+// Elapsed Time for: 'L.f': 01h:02m:26s
+// Elapsed Time for: 'L.f': 01h:02m:28s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor0_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "noip_monitor0", true); // R (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name noip_monitor0 [get_bd_ports monitor0_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name noip_monitor0 [get_bd_ports monitor0_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor1_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor1_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /monitor1_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectLabel((HResource) null, "monitor1_0_1"); // i.b (AgAAAgg)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "noip_monitor1", true); // R (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name noip_monitor1 [get_bd_ports monitor1_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name noip_monitor1 [get_bd_ports monitor1_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_COPY
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /noip_lvds_stream_0/noip_lvds]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_COPY_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: copy_bd_objs /  [get_bd_cells {noip_lvds_stream_0}] 
+// Elapsed Time for: 'L.f': 01h:03m:04s
+// Tcl Command: 'set_property location {1.5 278 263} [get_bd_cells noip_lvds_stream_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 278 263} [get_bd_cells noip_lvds_stream_1] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,534 MB. GUI used memory: 140 MB. Current time: 6/20/24, 11:55:31 AM CEST
+// Elapsed Time for: 'L.f': 01h:03m:06s
+// Tcl Command: 'set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1] 
+// Elapsed time: 20 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// HMemoryUtils.trashcanNow. Engine heap size: 2,558 MB. GUI used memory: 148 MB. Current time: 6/20/24, 11:56:01 AM CEST
+// Elapsed time: 15 seconds
+selectCheckBox((HResource) null, "Enable Multi Channel Support", true); // f: TRUE
+selectCheckBox((HResource) null, "Enable Multi Channel Support", false); // f: FALSE
+selectCheckBox((HResource) null, "Enable Multi Channel Support", true); // f: TRUE
+// [Engine Memory]: 2,558 MB (+18110kb) [01:04:08]
+selectComboBox("Number of Channels (c_num_mm2s_channels)", "2", 1); // D (Number of Channels (c_num_mm2s_channels))
+selectComboBox("Number of Channels (c_num_s2mm_channels)", "2", 1); // D (Number of Channels (c_num_s2mm_channels))
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog11)
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list \   CONFIG.c_enable_multi_channel {1} \   CONFIG.c_num_mm2s_channels {2} \   CONFIG.c_num_s2mm_channels {2} \ ] [get_bd_cells axi_dma_0] 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 10 seconds
+selectCheckBox((HResource) null, "Enable Multi Channel Support", false); // f: FALSE
+selectCheckBox((HResource) null, "Enable Multi Channel Support", true); // f: TRUE
+selectCheckBox((HResource) null, "Enable Multi Channel Support", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Re-customize IP"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Re-customize IP"); // m (dialog12)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+dismissDialog("Re-customize IP"); // m (dialog13)
+// [GUI Memory]: 245 MB (+13613kb) [01:04:37]
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectCheckBox((HResource) null, "Enable Multi Channel Support", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog14)
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property CONFIG.c_enable_multi_channel {0} [get_bd_cells axi_dma_0] 
+// Tcl Message: endgroup 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "multi"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /axi_dma_0/S_AXIS_S2MM]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_1]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 01h:04m:40s
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+// Elapsed Time for: 'L.f': 01h:04m:42s
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "multi channel"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Multi Channel Direct Memory Access", 0, "AXI Multi Channel Direct Memory Access", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Multi Channel Direct Memory Access", 0); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Multi Channel Direct Memory Access", 0, "AXI Multi Channel Direct Memory Access", 0, false, false, false, false, false, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_mcdma:1.1 axi_mcdma_0 
+// Tcl Message: endgroup 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 148 MB. Current time: 6/20/24, 11:57:11 AM CEST
+// Elapsed Time for: 'L.f': 01h:04m:46s
+// Tcl Command: 'set_property location {1 107 490} [get_bd_cells axi_mcdma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 107 490} [get_bd_cells axi_mcdma_0] 
+// Elapsed Time for: 'L.f': 01h:04m:48s
+// Tcl Command: 'set_property location {2 496 448} [get_bd_cells axi_mcdma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 496 448} [get_bd_cells axi_mcdma_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectComboBox("Number of Channels (c_num_mm2s_channels)", "2", 1); // D (Number of Channels (c_num_mm2s_channels))
+selectComboBox("Number of Channels (c_num_s2mm_channels)", "2", 1); // D (Number of Channels (c_num_s2mm_channels))
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Advanced", 1); // bc (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bc (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog15)
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.c_num_mm2s_channels {2} \   CONFIG.c_num_s2mm_channels {2} \ ] [get_bd_cells axi_mcdma_0] 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g (PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION)
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (0 out of 4 selected), axi_mcdma_0]", 1, true, false, ui.utils.collection.couples.TriState.False); // G.c (PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE) - Node
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+dismissDialog("Run Connection Automation"); // G (dialog16)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 01h:05m:18s
+// Elapsed Time for: 'L.f': 01h:05m:20s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,630 MB. GUI used memory: 138 MB. Current time: 6/20/24, 11:57:46 AM CEST
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /axi_dma_0/M_AXI_SG]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXI_SG]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXI_MM2S]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXI_S2MM]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {2 927 345} [get_bd_cells axi_dma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 927 345} [get_bd_cells axi_dma_0] 
+// Elapsed time: 46 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_M00_AXIS] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_cells axi_dma_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 01h:06m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,645 MB. GUI used memory: 135 MB. Current time: 6/20/24, 11:58:56 AM CEST
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 01h:06m:32s
+// Tcl Command: 'set_property location {2 921 322} [get_bd_cells axi_mcdma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 921 322} [get_bd_cells axi_mcdma_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_SG] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S01_AXI] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S02_AXI] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 01h:07m:14s
+// Elapsed Time for: 'L.f': 01h:07m:16s
+// Elapsed time: 41 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g (PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Run Connection Automation"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Run Connection Automation"); // G (dialog17)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// No Address Blocks Available for network [Network 0]
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_mcdma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_mcdma_0/S_AXI_LITE] 
+// Tcl Message: Slave segment '/axi_mcdma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C1_0000 [ 64K ]>. 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_mcdma_0/s_axi_aclk]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_net [get_bd_pins axi_mcdma_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 01h:07m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,679 MB. GUI used memory: 136 MB. Current time: 6/20/24, 11:59:56 AM CEST
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_mcdma_0/mm2s_prmry_reset_out_n]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 01h:07m:32s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_mcdma_0/s2mm_prmry_reset_out_n]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 17 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog18)
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// [Engine Memory]: 2,688 MB (+2541kb) [01:08:12]
+// Elapsed time: 18 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS] [get_bd_intf_pins axi_mcdma_0/S_AXIS_S2MM] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXIS_MM2S] [get_bd_intf_pins noip_lvds_stream_0/S00_AXIS] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 01h:08m:28s
+// Elapsed time: 17 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_mcdma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// HMemoryUtils.trashcanNow. Engine heap size: 2,699 MB. GUI used memory: 147 MB. Current time: 6/20/24, 12:00:56 PM CEST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Advanced", 1); // bc (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bc (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Re-customize IP"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Re-customize IP"); // m (dialog19)
+// Elapsed Time for: 'L.f': 01h:08m:38s
+// Elapsed time: 37 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXIS_MM2S] [get_bd_intf_pins noip_lvds_stream_0/S00_AXIS]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS] [get_bd_intf_pins axi_mcdma_0/S_AXIS_S2MM]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'startgroup' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_mcdma_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_mcdma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_mcdma_0/S_AXI_LITE]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S02_AXI]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S01_AXI]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// No Address Blocks Available for network [Network 0]
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins axi_mcdma_0/M_AXI_SG] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {2 921 322} [get_bd_cells axi_mcdma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_M00_AXIS] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_cells axi_dma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {2 927 345} [get_bd_cells axi_dma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property -dict [list \   CONFIG.c_num_mm2s_channels {2} \   CONFIG.c_num_s2mm_channels {2} \ ] [get_bd_cells axi_mcdma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {2 496 448} [get_bd_cells axi_mcdma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {1 107 490} [get_bd_cells axi_mcdma_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:axi_mcdma:1.1 axi_mcdma_0' INFO: [Common 17-17] undo 'startgroup' 
+typeControlKey(null, null, 'z');
+// Elapsed Time for: 'L.f': 01h:09m:20s
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'set_property CONFIG.c_enable_multi_channel {0} [get_bd_cells axi_dma_0]' INFO: [Common 17-17] undo 'startgroup' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'set_property -dict [list \   CONFIG.c_enable_multi_channel {1} \   CONFIG.c_num_mm2s_channels {2} \   CONFIG.c_num_s2mm_channels {2} \ ] [get_bd_cells axi_dma_0]' INFO: [Common 17-17] undo 'startgroup' 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,723 MB. GUI used memory: 144 MB. Current time: 6/20/24, 12:01:46 PM CEST
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]' 
+// Elapsed Time for: 'L.f': 01h:09m:22s
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 52, 248, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectButton(RDIResourceCommand.RDICommands_REDO, "redo"); // B (RDIResourceCommand.RDICommands_REDO, redo)
+// Run Command: RDIResourceCommand.RDICommands_REDO
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'set_property location {1.5 493 200} [get_bd_cells noip_lvds_stream_1]' 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed Time for: 'L.f': 01h:09m:28s
+// Elapsed Time for: 'L.f': 01h:09m:30s
+// Elapsed time: 36 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "interconn"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+// Elapsed time: 64 seconds
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// HMemoryUtils.trashcanNow. Engine heap size: 2,756 MB. GUI used memory: 144 MB. Current time: 6/20/24, 12:31:46 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,756 MB. GUI used memory: 141 MB. Current time: 6/20/24, 1:01:46 PM CEST
+// Elapsed time: 3943 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /noip_lvds_stream_0/S00_AXIS]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXIS_MM2S]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bj (Add IP Progress)
+// Elapsed Time for: 'L.f': 02h:17m:19s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axis_interconnect_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 02h:17m:21s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,782 MB. GUI used memory: 142 MB. Current time: 6/20/24, 1:09:46 PM CEST
+// Tcl Command: 'set_property location {1 458 465} [get_bd_cells axis_interconnect_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 458 465} [get_bd_cells axis_interconnect_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_pins /axi_dma_0/S_AXIS_S2MM]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /noip_lvds_stream_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXI_S2MM]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXIS_MM2S]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /noip_lvds_stream_0_M00_AXIS]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /axi_dma_0_M_AXIS_MM2S]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {0.5 -328 876} [get_bd_cells axi_dma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {0.5 -328 876} [get_bd_cells axi_dma_0] 
+// Elapsed time: 1477 seconds
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  

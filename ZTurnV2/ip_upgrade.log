@@ -1,0 +1,82 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Thu Jun 20 11:53:45 2024
+| Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_design_noip_lvds_stream_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of main_design_noip_lvds_stream_0_0 (user.org:user:noip_lvds_stream:1.0 (Rev. 1)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'main_design_noip_lvds_stream_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'monitor'
+
+-Upgrade has added port 'monitor0'
+
+-Upgrade has added port 'monitor1'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Thu Jun 20 11:48:39 2024
+| Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_design_noip_ctrl_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of main_design_noip_ctrl_0_0 (user.org:user:noip_ctrl:1.0 (Rev. 1)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'main_design_noip_ctrl_0_0'.
+
+
+-Upgrade has added interface 'noip_spi' (xilinx.com:interface:spi:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'main_design_noip_ctrl_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'clk_pll_out' width 2 differs from original width 1
+
+-Upgraded port 'noip_reset_n' width 2 differs from original width 1
+
+-Upgraded port 'sw_enable_n' width 2 differs from original width 1
+
+-Upgraded port 'vdd18_toggle' width 2 differs from original width 1
+
+-Upgraded port 'vdd33_toggle' width 2 differs from original width 1
+
+-Upgraded port 'vddpix_toggle' width 2 differs from original width 1
+
+

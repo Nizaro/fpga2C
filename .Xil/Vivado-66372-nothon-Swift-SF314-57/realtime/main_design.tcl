@@ -170,7 +170,6 @@ set rt::rc [catch {
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/synth/main_design_noip_lvds_stream_0_1.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/synth/main_design_axi_dma_0_0.vhd
-      /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/synth/main_design_lvds_clkin_0_ibuf_1.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/synth/main_design_lvds_sync_0_ibuf1_0.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/synth/main_design_lvds_dout0_0_ibuf_0.vhd
@@ -182,6 +181,7 @@ set rt::rc [catch {
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/synth/main_design_lvds_dout2_0_ibuf_1.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/synth/main_design_lvds_dout3_0_ibuf_1.vhd
       /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/synth/main_design_lvds_sync_0_ibuf_1.vhd
+      /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
     }
       rt::read_vhdl -lib blk_mem_gen_v8_4_8 /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/09bd/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
       rt::read_vhdl -lib fifo_generator_v13_2_10 /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/1443/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd

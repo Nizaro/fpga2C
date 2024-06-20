@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/nothon/ISIR/ZTurnV2/ZTurnV2.runs/synth_1'
+HD_PWD='/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log main_design.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design.tcl
+EAStep vivado -log main_design_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_wrapper.tcl

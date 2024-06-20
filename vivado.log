@@ -829,3 +829,504 @@ RTL Elaboration failed
 5 Infos, 0 Warnings, 0 Critical Warnings and 21 Errors encountered.
 synth_design failed
 ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-2
+Top: main_design
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 10272.719 ; gain = 0.000 ; free physical = 433 ; free virtual = 2417
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-36] 'rec_data' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:127]
+ERROR: [Synth 8-9114] actual of formal out port 'rec_data' cannot be an expression [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:127]
+ERROR: [Synth 8-36] 'send_data' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:128]
+ERROR: [Synth 8-36] 'rec_data' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:154]
+ERROR: [Synth 8-36] 'rec_data' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:155]
+ERROR: [Synth 8-36] 'rec_data' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:156]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:177]
+ERROR: [Synth 8-36] 'bvalid' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:175]
+ERROR: [Synth 8-944] 0 definitions of operator "and" match here [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:175]
+ERROR: [Synth 8-36] 'clken' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:195]
+ERROR: [Synth 8-36] 'state' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:205]
+ERROR: [Synth 8-36] 'bvalid' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:208]
+ERROR: [Synth 8-944] 0 definitions of operator "and" match here [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:208]
+ERROR: [Synth 8-10148] use := to assign to variable 'mode' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:259]
+ERROR: [Synth 8-10148] use := to assign to variable 'mode' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:269]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:270]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:272]
+ERROR: [Synth 8-36] 'bvalid' is not declared [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:268]
+ERROR: [Synth 8-944] 0 definitions of operator "and" match here [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:268]
+ERROR: [Synth 8-439] module 'main_design' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 10272.719 ; gain = 0.000 ; free physical = 432 ; free virtual = 2421
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 21 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3420] Updated main_design_noip_ctrl_0_0 to use current project options
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_ctrl_0 .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-5160] IP 'main_design_s_arb_req_suppress_concat_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 10311.754 ; gain = 10.000 ; free physical = 406 ; free virtual = 2433
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3420] Updated main_design_noip_ctrl_0_0 to use current project options
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+set_property FILE_TYPE {VHDL 2008} [get_files *.vhd]
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/3a26/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/synth/main_design_proc_sys_reset_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/sim/main_design_util_ds_buf_0_2.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/synth/main_design_util_ds_buf_0_2.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/synth/main_design_noip_lvds_stream_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/sim/main_design_noip_lvds_stream_0_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/synth/main_design_noip_lvds_stream_0_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/8c68/hdl/lib_pkg_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/1e5a/hdl/lib_srl_fifo_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6f54/hdl/axi_sg_v4_1_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/sim/main_design_axi_dma_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/synth/main_design_axi_dma_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/sim/main_design_lvds_clkin_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/synth/main_design_lvds_clkin_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/sim/main_design_lvds_sync_0_ibuf1_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/synth/main_design_lvds_sync_0_ibuf1_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/sim/main_design_lvds_dout0_0_ibuf_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/synth/main_design_lvds_dout0_0_ibuf_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/sim/main_design_lvds_dout0_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/synth/main_design_lvds_dout0_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/sim/main_design_lvds_dout1_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/synth/main_design_lvds_dout1_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/sim/main_design_lvds_clkin_0_ibuf_4.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/synth/main_design_lvds_clkin_0_ibuf_4.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/sim/main_design_lvds_dout0_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/synth/main_design_lvds_dout0_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/sim/main_design_lvds_dout1_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/synth/main_design_lvds_dout1_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/sim/main_design_lvds_dout2_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/synth/main_design_lvds_dout2_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/sim/main_design_lvds_dout3_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/synth/main_design_lvds_dout3_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/sim/main_design_lvds_sync_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/synth/main_design_lvds_sync_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_ctrl_0 .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us .
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-5160] IP 'main_design_s_arb_req_suppress_concat_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 10711.949 ; gain = 0.000 ; free physical = 863 ; free virtual = 2461
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-2
+Top: main_design
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 10746.957 ; gain = 0.000 ; free physical = 175 ; free virtual = 2065
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:179]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:177]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:210]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:272]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:274]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:270]
+INFO: [Synth 8-11252] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:347]
+INFO: [Synth 8-10443] VHDL file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd' is ignored due to errors
+ERROR: [Synth 8-439] module 'main_design' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 10746.957 ; gain = 0.000 ; free physical = 186 ; free virtual = 2053
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+3 Infos, 0 Warnings, 0 Critical Warnings and 8 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+set_property FILE_TYPE {VHDL 2008} [get_files *.vhd]
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/3a26/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/synth/main_design_proc_sys_reset_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/sim/main_design_util_ds_buf_0_2.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/synth/main_design_util_ds_buf_0_2.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/synth/main_design_noip_lvds_stream_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/sim/main_design_noip_ctrl_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/sim/main_design_noip_lvds_stream_0_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/synth/main_design_noip_lvds_stream_0_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/8c68/hdl/lib_pkg_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/1e5a/hdl/lib_srl_fifo_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6f54/hdl/axi_sg_v4_1_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/sim/main_design_axi_dma_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/synth/main_design_axi_dma_0_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/sim/main_design_lvds_clkin_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/synth/main_design_lvds_clkin_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/sim/main_design_lvds_sync_0_ibuf1_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/synth/main_design_lvds_sync_0_ibuf1_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/main_design_lvds_sync_0_ibuf1_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/sim/main_design_lvds_dout0_0_ibuf_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/synth/main_design_lvds_dout0_0_ibuf_0.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/main_design_lvds_dout0_0_ibuf_0.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/sim/main_design_lvds_dout0_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/synth/main_design_lvds_dout0_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/main_design_lvds_dout0_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/sim/main_design_lvds_dout1_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/synth/main_design_lvds_dout1_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/main_design_lvds_dout1_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/sim/main_design_lvds_clkin_0_ibuf_4.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/synth/main_design_lvds_clkin_0_ibuf_4.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/main_design_lvds_clkin_0_ibuf_4.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/sim/main_design_lvds_dout0_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/synth/main_design_lvds_dout0_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout0_0_ibuf_3/main_design_lvds_dout0_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/sim/main_design_lvds_dout1_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/synth/main_design_lvds_dout1_0_ibuf_3.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout1_0_ibuf_3/main_design_lvds_dout1_0_ibuf_3.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/sim/main_design_lvds_dout2_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/synth/main_design_lvds_dout2_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/main_design_lvds_dout2_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/sim/main_design_lvds_dout3_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/synth/main_design_lvds_dout3_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/main_design_lvds_dout3_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/util_ds_buf.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/sim/main_design_lvds_sync_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/synth/main_design_lvds_sync_0_ibuf_1.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd
+CRITICAL WARNING: [filemgmt 20-1702] Unable to set property on the file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+File is managed as part of sub-design (IP, Block Design, DSP Design, etc.) file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-2
+Top: main_design
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 10746.957 ; gain = 0.000 ; free physical = 285 ; free virtual = 1850
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:179]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:177]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:210]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:272]
+ERROR: [Synth 8-2757] this construct is only supported in VHDL 1076-2008 [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:274]
+ERROR: [Synth 8-10557] cannot read from 'out' object 's00_axi_bvalid'; use 'buffer' or 'inout' instead [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:270]
+INFO: [Synth 8-11252] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:347]
+INFO: [Synth 8-10443] VHDL file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd' is ignored due to errors
+ERROR: [Synth 8-439] module 'main_design' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 10746.957 ; gain = 0.000 ; free physical = 279 ; free virtual = 1849
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+3 Infos, 0 Warnings, 0 Critical Warnings and 8 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+set_property vhdl_version vhdl_93
+ERROR: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info.
+set_property vhdl_version vhdl_93 [current fileset]
+ambiguous command name "current": current_bd_design current_bd_instance current_board current_board_part current_dashboard current_design current_fileset current_instance current_pr_configuration current_project current_run current_vivado_preferences
+set_property vhdl_version vhdl_93 [main_design_wrapper]
+invalid command name "main_design_wrapper"
+set_property vhdl_version vhdl_93 [main_design_wrapper.vhd]
+invalid command name "main_design_wrapper.vhd"
+set_property vhd_version vhdl_2008 [get_files *.vhd]
+ERROR: [Common 17-142] Invalid property name 'vhd_version'.  Please use the 'list_property' command to find properties supported by the target 'file' object.
+set_property vhdl_version vhdl_2008 [get_files *.vhd]
+ERROR: [Common 17-142] Invalid property name 'vhdl_version'.  Please use the 'list_property' command to find properties supported by the target 'file' object.
+list_property *.vhd
+ERROR: [Common 17-58] '*.vhd' is not a valid first class Tcl object.
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+capteur_lentille
+constraints
+doc
+hs_err_pid33251.log
+infos_vivado
+interface_repo
+ip_repo
+Kick
+Materiel.ods
+notes
+Pinout.ods
+README.md
+test_Vitis_workspace
+vivado_30800.backup.jou
+vivado_30800.backup.log
+vivado_33251.backup.jou
+vivado_33251.backup.log
+vivado.jou
+vivado.log
+vivado_pid33251.str
+vivado_pid66372.str
+ZTurnV2
+set_property file_type {VHDL 2008} [get_files [get_filesets sources_1]]
+WARNING: [Vivado 12-818] No files matched 'sources_1'
+ERROR: [Common 17-55] 'set_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.

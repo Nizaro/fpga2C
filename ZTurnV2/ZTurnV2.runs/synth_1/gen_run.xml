@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1718781384" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
-  <File Type="RDS-DCP" Name="main_design.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="main_design_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="main_design.tcl"/>
-  <File Type="RDS-UTIL" Name="main_design_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="main_design_reports.tcl"/>
-  <File Type="RDS-RDS" Name="main_design.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1718895031" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
+  <File Type="RDS-DCP" Name="main_design_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="main_design_wrapper_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="main_design_wrapper.tcl"/>
+  <File Type="RDS-UTIL" Name="main_design_wrapper_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="main_design_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="main_design_wrapper.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/main_design/main_design.bd">
@@ -16,15 +16,14 @@
       </FileInfo>
     </File>
     <File Path="$PGENDIR/sources_1/bd/main_design/hdl/main_design_wrapper.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+      <FileInfo SFType="VHDL2008">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="main_design"/>
+      <Option Name="TopModule" Val="main_design_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

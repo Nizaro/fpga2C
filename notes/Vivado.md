@@ -28,3 +28,10 @@ Generate bitstream
 
 https://support.xilinx.com/s/question/0D54U00007jzNEXSA2/vitis-20232-unable-to-create-platform-component-project-on-ubuntu?language=en_US
 
+# Mémoire Swap
+
+https://support.xilinx.com/s/question/0D52E00006vFXkwSAG/is-there-a-workaround-for-vivado-rdiprog-crash-during-synth-while-running-20211-on-ubuntu-18046-lts?language=en_US
+
+https://linuxize.com/post/create-a-linux-swap-file/
+
+1 fichier de 10G en plus

@@ -965,7 +965,7 @@
 					"ports": {
 						"ACLK": { "actual": "M00_AXIS_ACLK"},
 						"ARESETN": { "actual": "M00_AXIS_ARESETN"},
-						"TDATA": { "actual": "M00_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M00_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "M00_AXIS_tlast"},
 						"TREADY": { "actual": "M00_AXIS_tready"},
 						"TSTRB": { "actual": "M00_AXIS_tstrb[3:0]"},
@@ -977,7 +977,7 @@
 					"ports": {
 						"ACLK": { "actual": "M01_AXIS_ACLK"},
 						"ARESETN": { "actual": "M01_AXIS_ARESETN"},
-						"TDATA": { "actual": "M01_AXIS_tdata[15:8]"},
+						"TDATA": { "actual": "M01_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "M01_AXIS_tlast"},
 						"TREADY": { "actual": "M01_AXIS_tready"},
 						"TSTRB": { "actual": "M01_AXIS_tstrb[3:0]"},
@@ -989,7 +989,7 @@
 					"ports": {
 						"ACLK": { "actual": "S00_AXIS_ACLK"},
 						"ARESETN": { "actual": "S00_AXIS_ARESETN"},
-						"TDATA": { "actual": "S00_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S00_AXIS_tdata[31:0]"},
 						"TKEEP": { "actual": "S00_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "S00_AXIS_tlast"},
 						"TREADY": { "actual": "S00_AXIS_tready"},
@@ -1001,7 +1001,7 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "M_AXIS_tlast"},
 						"TREADY": { "actual": "M_AXIS_tready"},
 						"TSTRB": { "actual": "M_AXIS_tstrb[3:0]"},
@@ -1013,7 +1013,7 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S_AXIS_tdata[31:0]"},
 						"TDEST": { "actual": "S_AXIS_tdest[0:0]"},
 						"TKEEP": { "actual": "S_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "S_AXIS_tlast"},
@@ -1075,7 +1075,7 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[15:8]"},
+						"TDATA": { "actual": "M_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "M_AXIS_tlast"},
 						"TREADY": { "actual": "M_AXIS_tready"},
 						"TSTRB": { "actual": "M_AXIS_tstrb[3:0]"},
@@ -1087,8 +1087,8 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[15:8]"},
-						"TDEST": { "actual": "S_AXIS_tdest[1:1]"},
+						"TDATA": { "actual": "S_AXIS_tdata[31:0]"},
+						"TDEST": { "actual": "S_AXIS_tdest[0:0]"},
 						"TKEEP": { "actual": "S_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "S_AXIS_tlast"},
 						"TREADY": { "actual": "S_AXIS_tready"},
@@ -1149,7 +1149,7 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M_AXIS_tdata[31:0]"},
 						"TDEST": { "actual": "M_AXIS_tdest[0:0]"},
 						"TKEEP": { "actual": "M_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "M_AXIS_tlast"},
@@ -1162,7 +1162,7 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S_AXIS_tdata[31:0]"},
 						"TKEEP": { "actual": "S_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "S_AXIS_tlast"},
 						"TREADY": { "actual": "S_AXIS_tready"},
@@ -1238,7 +1238,7 @@
 					"ports": {
 						"ACLK": { "actual": "M00_AXIS_ACLK"},
 						"ARESETN": { "actual": "M00_AXIS_ARESETN"},
-						"TDATA": { "actual": "M00_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M00_AXIS_tdata[31:0]"},
 						"TKEEP": { "actual": "M00_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "M00_AXIS_tlast"},
 						"TREADY": { "actual": "M00_AXIS_tready"},
@@ -1250,7 +1250,7 @@
 					"ports": {
 						"ACLK": { "actual": "S00_AXIS_ACLK"},
 						"ARESETN": { "actual": "S00_AXIS_ARESETN"},
-						"TDATA": { "actual": "S00_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S00_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "S00_AXIS_tlast[0:0]"},
 						"TREADY": { "actual": "S00_AXIS_tready[0:0]"},
 						"TSTRB": { "actual": "S00_AXIS_tstrb[3:0]"},
@@ -1262,10 +1262,10 @@
 					"ports": {
 						"ACLK": { "actual": "S01_AXIS_ACLK"},
 						"ARESETN": { "actual": "S01_AXIS_ARESETN"},
-						"TDATA": { "actual": "S01_AXIS_tdata[15:8]"},
-						"TLAST": { "actual": "S01_AXIS_tlast[0:0]"},
+						"TDATA": { "actual": "S01_AXIS_tdata[63:32]"},
+						"TLAST": { "actual": "S01_AXIS_tlast[1:1]"},
 						"TREADY": { "actual": "S01_AXIS_tready[1:1]"},
-						"TSTRB": { "actual": "S01_AXIS_tstrb[3:0]"},
+						"TSTRB": { "actual": "S01_AXIS_tstrb[7:4]"},
 						"TVALID": { "actual": "S01_AXIS_tvalid[1:1]"}
 					}
 				},
@@ -1274,7 +1274,7 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M_AXIS_tdata[31:0]"},
 						"TKEEP": { "actual": "M_AXIS_tkeep[3:0]"},
 						"TLAST": { "actual": "M_AXIS_tlast"},
 						"TREADY": { "actual": "M_AXIS_tready"},
@@ -1286,7 +1286,7 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "S_AXIS_tlast"},
 						"TREADY": { "actual": "S_AXIS_tready"},
 						"TSTRB": { "actual": "S_AXIS_tstrb[3:0]"},
@@ -1348,7 +1348,7 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "M_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "M_AXIS_tlast[0:0]"},
 						"TREADY": { "actual": "M_AXIS_tready[0:0]"},
 						"TSTRB": { "actual": "M_AXIS_tstrb[3:0]"},
@@ -1360,7 +1360,7 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[7:0]"},
+						"TDATA": { "actual": "S_AXIS_tdata[31:0]"},
 						"TLAST": { "actual": "S_AXIS_tlast[0:0]"},
 						"TREADY": { "actual": "S_AXIS_tready[0:0]"},
 						"TSTRB": { "actual": "S_AXIS_tstrb[3:0]"},
@@ -1372,10 +1372,10 @@
 					"ports": {
 						"ACLK": { "actual": "M_AXIS_ACLK"},
 						"ARESETN": { "actual": "M_AXIS_ARESETN"},
-						"TDATA": { "actual": "M_AXIS_tdata[15:8]"},
-						"TLAST": { "actual": "M_AXIS_tlast[0:0]"},
+						"TDATA": { "actual": "M_AXIS_tdata[63:32]"},
+						"TLAST": { "actual": "M_AXIS_tlast[1:1]"},
 						"TREADY": { "actual": "M_AXIS_tready[1:1]"},
-						"TSTRB": { "actual": "M_AXIS_tstrb[3:0]"},
+						"TSTRB": { "actual": "M_AXIS_tstrb[7:4]"},
 						"TVALID": { "actual": "M_AXIS_tvalid[1:1]"}
 					}
 				},
@@ -1384,10 +1384,10 @@
 					"ports": {
 						"ACLK": { "actual": "S_AXIS_ACLK"},
 						"ARESETN": { "actual": "S_AXIS_ARESETN"},
-						"TDATA": { "actual": "S_AXIS_tdata[15:8]"},
-						"TLAST": { "actual": "S_AXIS_tlast[0:0]"},
+						"TDATA": { "actual": "S_AXIS_tdata[63:32]"},
+						"TLAST": { "actual": "S_AXIS_tlast[1:1]"},
 						"TREADY": { "actual": "S_AXIS_tready[1:1]"},
-						"TSTRB": { "actual": "S_AXIS_tstrb[3:0]"},
+						"TSTRB": { "actual": "S_AXIS_tstrb[7:4]"},
 						"TVALID": { "actual": "S_AXIS_tvalid[1:1]"}
 					}
 				},

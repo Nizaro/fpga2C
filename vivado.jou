@@ -409,3 +409,36 @@ generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources
 export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
 export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 synth_design -rtl -rtl_skip_mlo -name rtl_1
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+set_property FILE_TYPE {VHDL 2008} [get_files *.vhd]
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+set_property FILE_TYPE {VHDL 2008} [get_files *.vhd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+set_property vhdl_version vhdl_93
+set_property vhdl_version vhdl_93 [current fileset]
+set_property vhdl_version vhdl_93 [main_design_wrapper]
+set_property vhdl_version vhdl_93 [main_design_wrapper.vhd]
+set_property vhd_version vhdl_2008 [get_files *.vhd]
+set_property vhdl_version vhdl_2008 [get_files *.vhd]
+list_property *.vhd
+ls
+set_property file_type {VHDL 2008} [get_files [get_filesets sources_1]]

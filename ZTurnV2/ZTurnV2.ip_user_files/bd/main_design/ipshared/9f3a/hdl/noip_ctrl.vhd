@@ -97,6 +97,8 @@ architecture arch_imp of noip_ctrl is
 
 	-- user signals start here
 	-- GENERIC DATA-RELATED
+	signal rec_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal send_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal opcode : std_logic_vector(1 downto 0);
 	signal sensor_id : std_logic_vector(1 downto 0);
 
@@ -172,7 +174,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 		elsif(rising_edge(s00_axi_aclk)) then
 			case StartupState is
 				when IDLE => 
-					if(bvalid = '1' and opcode = "11") then -- startup
+					if(s00_axi_bvalid = '1' and opcode = "11") then -- startup
 						with sensor_id select id := 0 when "00",
 													1 when others;
 						sw_enable_n(id) <= '0';
@@ -192,7 +194,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 					StartupState <= ONCLK;
 
 				when ONCLK =>
-					clken(id) <= '1';
+					pll_clk_en(id) <= '1';
 					StartupState <= ONRSTN;
 
 				when ONRSTN =>
@@ -202,10 +204,10 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 				when SEND_RDY =>
 					readyflag <= '1';
 
-					State <= READY;
+					StartupState <= READY;
 
 				when READY =>
-					if(bvalid = '1' and opcode = "00") then -- shutdown
+					if(s00_axi_bvalid = '1' and opcode = "00") then -- shutdown
 						
 					end if;
 
@@ -256,7 +258,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 			ss_n <= (others => '1');
 			addr_ctr := 8;
 			data_ctr := 15;
-			mode <= '0';
+			mode := '0';
 			spiflag <= '0';
 			SPIState <= IDLE;
 		elsif(rising_edge(clk_spi_in)) then
@@ -265,8 +267,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 					addr_ctr := 8;
 					data_ctr := 15;
 					ss_n <= "11";
-					if((bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
-						with opcode select mode <= '0' when "01", -- "01" = read, "10" = write
+					if((s00_axi_bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
+						with opcode select mode := '0' when "01", -- "01" = read, "10" = write
 												   '1' when others;
 						with sensor_id select ss_n <= "10" when "00",
 													  "01" when others;
@@ -306,7 +308,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 					SPIState <= IDLE;
 
 				end case;
-		elsif(falling_edge(clk_spi_in)) then -- NOIP Doc p23 : "The miso pin must be sampled by the system on the falling edge of sck"
+			end if;
+		if(falling_edge(clk_spi_in)) then -- NOIP Doc p23 : "The miso pin must be sampled by the system on the falling edge of sck"
 			case SPIState is
 				when R_DATA =>
 					spi_data(data_ctr) <= miso;
@@ -315,6 +318,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 						SPIState <= IDLE;
 					end if;
 					data_ctr := data_ctr - 1;
+				when others =>
+
 				end case;
 		end if;
 	end process;
@@ -322,7 +327,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	with sck_en select sck <= clk_spi_in when '1',
 					          '0' when others;
 
-	flagprocess : process(S_AXI_ARESETN, readyflag,powerdownflag,spiflag)
+	flagprocess : process(s00_axi_aresetn, readyflag,powerdownflag,spiflag)
 	begin
 		if(s00_axi_aresetn = '1') then
 			send_data <= (others => '0');
@@ -334,7 +339,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 				send_data(1 downto 0) <= "00";
 			elsif(spiflag = '1') then
 				send_data(1 downto 0) <= "01";
-				spi_data(31 downto 16) <= spi_data;
+				send_data(31 downto 16) <= spi_data;
 			end if;
 		end if;
 

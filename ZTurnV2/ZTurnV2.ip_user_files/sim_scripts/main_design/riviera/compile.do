@@ -140,8 +140,12 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
 "../../../bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
+
+vcom -work xil_defaultlib -2008  -incr \
 "../../../bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
 "../../../bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd" \
+
+vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_noip_ctrl_0_0/sim/main_design_noip_ctrl_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_1/sim/main_design_noip_lvds_stream_0_1.vhd" \
 
@@ -165,7 +169,6 @@ vcom -work axi_dma_v7_1_32 -93  -incr \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_axi_dma_0_0_1/sim/main_design_axi_dma_0_0.vhd" \
-"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work axis_infrastructure_v1_1_1  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_17 -l processing_system7_vip_v1_0_19 -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l generic_baseblocks_v2_1_2 -l axi_register_slice_v2_1_31 -l fifo_generator_v13_2_10 -l axi_data_fifo_v2_1_30 -l axi_crossbar_v2_1_32 -l lib_pkg_v1_0_4 -l lib_fifo_v1_0_19 -l lib_srl_fifo_v1_0_4 -l axi_datamover_v5_1_33 -l axi_sg_v4_1_18 -l axi_dma_v7_1_32 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_31 -l axis_switch_v1_1_31 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 -l axi_protocol_converter_v2_1_31 -l axi_clock_converter_v2_1_30 -l blk_mem_gen_v8_4_8 -l axi_dwidth_converter_v2_1_31 -l axis_subset_converter_v1_1_31 \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
@@ -307,6 +310,9 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tlast_main_design_auto_ss_slidr_2.v" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/top_main_design_auto_ss_slidr_2.v" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/sim/main_design_auto_ss_slidr_2.v" \
+
+vcom -work xil_defaultlib -93  -incr \
+"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

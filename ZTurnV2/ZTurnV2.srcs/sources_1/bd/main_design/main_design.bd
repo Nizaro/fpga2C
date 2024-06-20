@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD6E2A2F6367D0ABF",
+      "boundary_crc": "0x7745F4D297DA5C9B",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
@@ -20,7 +20,6 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "axi_quad_spi_0": "",
       "lvds_clkin_0_ibuf": "",
       "axi_dma_0": "",
       "axi_mem_intercon": {
@@ -37,7 +36,9 @@
         "m00_couplers": {
           "auto_pc": ""
         }
-      }
+      },
+      "noip_lvds_stream_0": "",
+      "noip_ctrl_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -219,11 +220,6 @@
       "noip_sck": {
         "direction": "O"
       },
-      "noip_ss": {
-        "direction": "O",
-        "left": "1",
-        "right": "0"
-      },
       "lvds_clk_0_p": {
         "type": "clk",
         "direction": "I",
@@ -235,6 +231,11 @@
         "direction": "I",
         "left": "0",
         "right": "0"
+      },
+      "noip_ss": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
       }
     },
     "components": {
@@ -908,27 +909,6 @@
               "m00_couplers/S_ARESETN",
               "m01_couplers/S_ARESETN"
             ]
-          }
-        }
-      },
-      "axi_quad_spi_0": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "30",
-        "xci_name": "main_design_axi_quad_spi_0_2",
-        "xci_path": "ip/main_design_axi_quad_spi_0_2/main_design_axi_quad_spi_0_2.xci",
-        "inst_hier_path": "axi_quad_spi_0",
-        "parameters": {
-          "C_NUM_SS_BITS": {
-            "value": "2"
-          },
-          "C_NUM_TRANSFER_BITS": {
-            "value": "16"
-          },
-          "C_USE_STARTUP": {
-            "value": "0"
-          },
-          "Master_mode": {
-            "value": "1"
           }
         }
       },
@@ -1652,9 +1632,29 @@
             ]
           }
         }
+      },
+      "noip_lvds_stream_0": {
+        "vlnv": "user.org:user:noip_lvds_stream:1.0",
+        "ip_revision": "1",
+        "xci_name": "main_design_noip_lvds_stream_0_0",
+        "xci_path": "ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci",
+        "inst_hier_path": "noip_lvds_stream_0"
+      },
+      "noip_ctrl_0": {
+        "vlnv": "user.org:user:noip_ctrl:1.0",
+        "ip_revision": "1",
+        "xci_name": "main_design_noip_ctrl_0_0",
+        "xci_path": "ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci",
+        "inst_hier_path": "noip_ctrl_0"
       }
     },
     "interface_nets": {
+      "axi_dma_0_M_AXIS_MM2S": {
+        "interface_ports": [
+          "axi_dma_0/M_AXIS_MM2S",
+          "noip_lvds_stream_0/S00_AXIS"
+        ]
+      },
       "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
           "axi_dma_0/M_AXI_MM2S",
@@ -1679,6 +1679,12 @@
           "processing_system7_0/S_AXI_HP0"
         ]
       },
+      "noip_lvds_stream_0_M00_AXIS": {
+        "interface_ports": [
+          "noip_lvds_stream_0/M00_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -1700,7 +1706,7 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "axi_quad_spi_0/AXI_LITE"
+          "noip_ctrl_0/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {
@@ -1723,28 +1729,28 @@
           "lvds_clkin_0_ibuf/IBUF_DS_P"
         ]
       },
-      "axi_quad_spi_0_io0_o": {
+      "noip_ctrl_0_mosi": {
         "ports": [
-          "axi_quad_spi_0/io0_o",
+          "noip_ctrl_0/mosi",
           "noip_mosi"
         ]
       },
-      "axi_quad_spi_0_sck_o": {
+      "noip_ctrl_0_sck": {
         "ports": [
-          "axi_quad_spi_0/sck_o",
+          "noip_ctrl_0/sck",
           "noip_sck"
         ]
       },
-      "axi_quad_spi_0_ss_o": {
+      "noip_ctrl_0_ss_n": {
         "ports": [
-          "axi_quad_spi_0/ss_o",
+          "noip_ctrl_0/ss_n",
           "noip_ss"
         ]
       },
-      "io1_i_0_1": {
+      "noip_miso_1": {
         "ports": [
           "noip_miso",
-          "axi_quad_spi_0/io1_i"
+          "noip_ctrl_0/miso"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -1753,14 +1759,16 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "axi_quad_spi_0/s_axi_aresetn",
           "axi_dma_0/axi_resetn",
           "ps7_0_axi_periph/M01_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
-          "axi_mem_intercon/S02_ARESETN"
+          "axi_mem_intercon/S02_ARESETN",
+          "noip_lvds_stream_0/m00_axis_aresetn",
+          "noip_lvds_stream_0/s00_axis_aresetn",
+          "noip_ctrl_0/s00_axi_aresetn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1771,8 +1779,6 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "axi_quad_spi_0/s_axi_aclk",
-          "axi_quad_spi_0/ext_spi_clk",
           "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_dma_0/s_axi_lite_aclk",
           "ps7_0_axi_periph/M01_ACLK",
@@ -1783,7 +1789,16 @@
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S01_ACLK",
           "axi_dma_0/m_axi_s2mm_aclk",
-          "axi_mem_intercon/S02_ACLK"
+          "axi_mem_intercon/S02_ACLK",
+          "noip_lvds_stream_0/m00_axis_aclk",
+          "noip_lvds_stream_0/s00_axis_aclk",
+          "noip_ctrl_0/s00_axi_aclk"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK1",
+          "noip_ctrl_0/clk_72M_pll"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1803,11 +1818,12 @@
                 "offset": "0x40400000",
                 "range": "64K"
               },
-              "SEG_axi_quad_spi_0_Reg": {
-                "address_block": "/axi_quad_spi_0/AXI_LITE/Reg",
-                "offset": "0x41E00000",
+              "SEG_noip_ctrl_0_S00_AXI_reg": {
+                "address_block": "/noip_ctrl_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x43C00000",
                 "range": "64K",
-                "offset_high_param": "C_HIGHADDR"
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
               }
             }
           }

@@ -7,8 +7,8 @@
    "Color Coded_ScaleFactor":"0.905109",
    "Color Coded_TopLeft":"-122,2",
    "Default View_Layers":"/proc_sys_reset_0_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|/processing_system7_0_FCLK_CLK1:true|",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"723,-273",
+   "Default View_ScaleFactor":"0.999345",
+   "Default View_TopLeft":"980,97",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -25,43 +25,47 @@
 preplace port DDR -pg 1 -lvl 4 -x 2070 -y 290 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -lvl 4 -x 2070 -y 350 -defaultsOSRD
 preplace port port-id_noip_mosi -pg 1 -lvl 4 -x 2070 -y 130 -defaultsOSRD
-preplace port port-id_noip_miso -pg 1 -lvl 0 -x -90 -y 20 -defaultsOSRD
+preplace port port-id_noip_miso -pg 1 -lvl 0 -x -120 -y 20 -defaultsOSRD
 preplace port port-id_noip_sck -pg 1 -lvl 4 -x 2070 -y 170 -defaultsOSRD
-preplace portBus noip_ss -pg 1 -lvl 4 -x 2070 -y 320 -defaultsOSRD
-preplace portBus lvds_clk_0_p -pg 1 -lvl 0 -x -90 -y -90 -defaultsOSRD
-preplace portBus lvds_clk_0_n -pg 1 -lvl 0 -x -90 -y -60 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 1400 -y 420 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 920 -y 480 -defaultsOSRD
+preplace portBus lvds_clk_0_p -pg 1 -lvl 0 -x -120 -y -90 -defaultsOSRD
+preplace portBus lvds_clk_0_n -pg 1 -lvl 0 -x -120 -y -60 -defaultsOSRD
+preplace portBus noip_ss -pg 1 -lvl 4 -x 2070 -y -140 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 1410 -y 460 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 920 -y 560 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 1840 -y 480 -defaultsOSRD
-preplace inst axi_quad_spi_0 -pg 1 -lvl 2 -x 1400 -y 200 -defaultsOSRD
-preplace inst lvds_clkin_0_ibuf -pg 1 -lvl 2 -x 1400 -y -80 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 1 -x 920 -y 240 -defaultsOSRD
+preplace inst lvds_clkin_0_ibuf -pg 1 -lvl 2 -x 1410 -y -80 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 1 -x 920 -y 330 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1840 -y 180 -defaultsOSRD
+preplace inst noip_lvds_stream_0 -pg 1 -lvl 1 -x 920 -y 110 -defaultsOSRD
+preplace inst noip_ctrl_0 -pg 1 -lvl 2 -x 1410 -y 230 -defaultsOSRD
 preplace netloc IBUF_DS_N_0_1 1 0 2 NJ -60 N
 preplace netloc IBUF_DS_P_0_1 1 0 2 NJ -90 1100
-preplace netloc axi_quad_spi_0_io0_o 1 2 2 1620J 0 2050J
-preplace netloc axi_quad_spi_0_sck_o 1 2 2 1650J 670 2030J
-preplace netloc axi_quad_spi_0_ss_o 1 2 2 1630J 680 2050J
-preplace netloc io1_i_0_1 1 0 3 NJ 20 N 20 1610
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 740 370 1170 310 1690
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 730 580 1160 530 1680
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 720 590 N 590 1610
-preplace netloc axi_dma_0_M_AXI_MM2S 1 1 2 1110 80 NJ
-preplace netloc axi_dma_0_M_AXI_S2MM 1 1 2 1120 90 1680J
-preplace netloc axi_dma_0_M_AXI_SG 1 1 2 1100J 70 1680
-preplace netloc axi_mem_intercon_M00_AXI 1 1 3 1190 650 NJ 650 2010
-preplace netloc processing_system7_0_DDR 1 2 2 1640J 620 2020
-preplace netloc processing_system7_0_FIXED_IO 1 2 2 1620J 630 2040
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 1660 400n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 3 1180 660 NJ 660 2000
-preplace netloc ps7_0_axi_periph_M01_AXI 1 0 4 710 640 NJ 640 NJ 640 1990
-levelinfo -pg 1 -90 920 1400 1840 2070
-pagesize -pg 1 -db -bbox -sgen -270 -410 2210 690
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 720 670 1170 590 1690
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 700 460 1160 580 1670
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 710 680 N 680 1620
+preplace netloc noip_miso_1 1 0 2 -80J -20 1140
+preplace netloc noip_ctrl_0_sck 1 2 2 1650J 650 2020
+preplace netloc noip_ctrl_0_mosi 1 2 2 1650 -10 2020J
+preplace netloc noip_ctrl_0_ss_n 1 2 2 1640 -140 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 2 1200 570 1630
+preplace netloc axi_dma_0_M_AXI_MM2S 1 1 2 1130 80 NJ
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 2 1150 90 1690J
+preplace netloc axi_dma_0_M_AXI_SG 1 1 2 1120J 70 1690
+preplace netloc axi_mem_intercon_M00_AXI 1 1 3 1180 0 NJ 0 2000
+preplace netloc processing_system7_0_DDR 1 2 2 1660J 620 2010
+preplace netloc processing_system7_0_FIXED_IO 1 2 2 1640J 630 2030
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 1680 400n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 4 740 660 NJ 660 NJ 660 1990
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 2 740 0 1110
+preplace netloc noip_lvds_stream_0_M00_AXIS 1 0 2 730 -10 1100
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 3 1190J 640 NJ 640 2000
+levelinfo -pg 1 -120 920 1410 1840 2070
+pagesize -pg 1 -db -bbox -sgen -280 -420 2210 690
 "
 }
 {
-   "da_axi4_cnt":"9",
+   "da_axi4_cnt":"10",
    "da_board_cnt":"6",
-   "da_clkrst_cnt":"9",
+   "da_clkrst_cnt":"11",
    "da_ps7_cnt":"1"
 }

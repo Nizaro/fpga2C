@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Thu Jun 20 17:27:05 2024
+-- Date        : Fri Jun 21 11:54:59 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_stub.vhdl

@@ -1031,7 +1031,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "50.000000"
+            "value": "100.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "72.000000"
@@ -1085,7 +1085,7 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "50000000"
+            "value": "100000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "72000000"
@@ -1113,6 +1113,9 @@
           },
           "PCW_FCLK_CLK1_BUF": {
             "value": "TRUE"
+          },
+          "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "100"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "72"
@@ -4274,14 +4277,14 @@
           "noip_lvds_stream_0/m00_axis_aclk",
           "noip_lvds_stream_1/s00_axis_aclk",
           "noip_lvds_stream_1/m00_axis_aclk",
-          "noip_ctrl_0/s00_axi_aclk"
+          "noip_ctrl_0/s00_axi_aclk",
+          "noip_ctrl_0/clk_spi_in"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK1",
-          "noip_ctrl_0/clk_72M_pll",
-          "noip_ctrl_0/clk_spi_in"
+          "noip_ctrl_0/clk_72M_pll"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

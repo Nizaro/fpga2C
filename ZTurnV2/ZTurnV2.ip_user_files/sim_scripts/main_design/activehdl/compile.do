@@ -107,6 +107,7 @@ vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/sim/main_design_lvds_dout2_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/sim/main_design_lvds_dout3_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/sim/main_design_lvds_sync_0_ibuf_1.vhd" \
+"../../../bd/main_design/sim/main_design.vhd" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_1/main_design_auto_us_1_sim_netlist.vhdl" \
@@ -124,7 +125,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/m
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl" \
-"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

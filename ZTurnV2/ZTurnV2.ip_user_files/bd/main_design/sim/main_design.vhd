@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Fri Jun 21 10:58:58 2024
+--Date        : Fri Jun 21 13:31:00 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -5355,7 +5355,7 @@ noip_ctrl_0: component main_design_noip_ctrl_0_0
      port map (
       clk_72M_pll => processing_system7_0_FCLK_CLK1,
       clk_pll_out(0 to 1) => noip_ctrl_0_clk_pll_out(0 to 1),
-      clk_spi_in => processing_system7_0_FCLK_CLK1,
+      clk_spi_in => processing_system7_0_FCLK_CLK0,
       miso => noip_miso_1,
       mosi => noip_ctrl_0_mosi,
       noip_reset_n(0 to 1) => noip_ctrl_0_noip_reset_n(0 to 1),

@@ -151,7 +151,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -210,7 +210,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     M00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     M00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     M00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     M00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -263,7 +263,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S01_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S01_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S01_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S01_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S01_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S01_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -404,7 +404,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -463,7 +463,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     M00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     M00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     M00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     M00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -516,7 +516,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S01_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S01_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S01_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S01_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S01_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S01_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -657,7 +657,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -716,7 +716,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     M00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     M00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     M00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     M00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -769,7 +769,7 @@ void main_design_xbar_4::before_end_of_elaboration()
     S01_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S01_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S01_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S01_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S01_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S01_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -865,7 +865,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     S00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -926,7 +926,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     M00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     M00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     M00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     M00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     M00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -961,7 +961,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     S01_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S01_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S01_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S01_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S01_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S01_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -1108,7 +1108,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     S00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -1169,7 +1169,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     M00_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     M00_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     M00_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    M00_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M00_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     M00_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     M00_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");
@@ -1204,7 +1204,7 @@ main_design_xbar_4::main_design_xbar_4(const sc_core::sc_module_name& nm) : main
     S01_AXIS_transactor_param_props.addLong("HAS_TSTRB", "1");
     S01_AXIS_transactor_param_props.addLong("HAS_TKEEP", "0");
     S01_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
-    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "50000000");
+    S01_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S01_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
     S01_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
     S01_AXIS_transactor_param_props.addString("CLK_DOMAIN", "main_design_processing_system7_0_0_FCLK_CLK0");

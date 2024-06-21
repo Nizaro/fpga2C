@@ -1,4 +1,6 @@
 
+# REGARDER LE RESULTAT SYNTH  de NOIP_LVDS_STREAM_0
+
 https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/
 
 sudo -s
@@ -34,4 +36,14 @@ https://support.xilinx.com/s/question/0D52E00006vFXkwSAG/is-there-a-workaround-f
 
 https://linuxize.com/post/create-a-linux-swap-file/
 
-1 fichier de 10G en plus
+1 fichier de 16G en plus
+
+## Commandes
+
+```
+sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+```

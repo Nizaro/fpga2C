@@ -261,66 +261,68 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 			mode := '0';
 			spiflag <= '0';
 			SPIState <= IDLE;
-		elsif(rising_edge(clk_spi_in)) then
-			case SPIState is
-				when IDLE =>
-					addr_ctr := 8;
-					data_ctr := 15;
-					ss_n <= "11";
-					if((s00_axi_bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
-						with opcode select mode := '0' when "01", -- "01" = read, "10" = write
-												   '1' when others;
-						with sensor_id select ss_n <= "10" when "00",
-													  "01" when others;
-						SPIState <= S_ADDR;
-					end if;
-
-				when S_ADDR =>
-					sck_en <= '1';
-					mosi <= spi_addr(addr_ctr);
-					if(addr_ctr = -1) then -- write mode and be done with address
-						mosi <= mode;
-						if(mode = '0') then
-							SPIState <= R_DATA;
-						else
-							spi_data <= rec_data(31 downto 16);
-							SPIState <= W_DATA;			
+		else
+			if(rising_edge(clk_spi_in)) then
+				case SPIState is
+					when IDLE =>
+						addr_ctr := 8;
+						data_ctr := 15;
+						ss_n <= "11";
+						if((s00_axi_bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
+							with opcode select mode := '0' when "01", -- "01" = read, "10" = write
+													'1' when others;
+							with sensor_id select ss_n <= "10" when "00",
+														"01" when others;
+							SPIState <= S_ADDR;
 						end if;
-					end if;
-					addr_ctr := addr_ctr - 1;
 
-				when R_DATA =>
-					-- do nothing : covered in falling edge of sck.
+					when S_ADDR =>
+						sck_en <= '1';
+						mosi <= spi_addr(addr_ctr);
+						if(addr_ctr = -1) then -- write mode and be done with address
+							mosi <= mode;
+							if(mode = '0') then
+								SPIState <= R_DATA;
+							else
+								spi_data <= rec_data(31 downto 16);
+								SPIState <= W_DATA;			
+							end if;
+						end if;
+						addr_ctr := addr_ctr - 1;
 
-				when W_DATA =>
-					mosi <= spi_data(data_ctr);
-					if(data_ctr = 0) then
-						sck_en <= '0';
-						SPIState <= SEND_RD_DATA;
-					end if;
-					data_ctr := data_ctr - 1;
+					when R_DATA =>
+						-- do nothing : covered in falling edge of sck.
 
-				when SEND_RD_DATA =>
-					spiflag <= '1';
-					SPIState <= IDLE;
+					when W_DATA =>
+						mosi <= spi_data(data_ctr);
+						if(data_ctr = 0) then
+							sck_en <= '0';
+							SPIState <= SEND_RD_DATA;
+						end if;
+						data_ctr := data_ctr - 1;
 
-				when others =>
-					SPIState <= IDLE;
-
-				end case;
-			end if;
-		if(falling_edge(clk_spi_in)) then -- NOIP Doc p23 : "The miso pin must be sampled by the system on the falling edge of sck"
-			case SPIState is
-				when R_DATA =>
-					spi_data(data_ctr) <= miso;
-					if(data_ctr = 0) then
-						sck_en <= '0';
+					when SEND_RD_DATA =>
+						spiflag <= '1';
 						SPIState <= IDLE;
-					end if;
-					data_ctr := data_ctr - 1;
-				when others =>
 
-				end case;
+					when others =>
+						SPIState <= IDLE;
+
+					end case;
+				end if;
+			if(falling_edge(clk_spi_in)) then -- NOIP Doc p23 : "The miso pin must be sampled by the system on the falling edge of sck"
+				case SPIState is
+					when R_DATA =>
+						spi_data(data_ctr) <= miso;
+						if(data_ctr = 0) then
+							sck_en <= '0';
+							SPIState <= IDLE;
+						end if;
+						data_ctr := data_ctr - 1;
+					when others =>
+
+					end case;
+			end if;
 		end if;
 	end process;
 

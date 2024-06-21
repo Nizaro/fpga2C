@@ -42,7 +42,8 @@ architecture tb of tb_lvds_stream is
 	signal	lvds_sync : std_logic := '0';
 	signal	lvds_data : std_logic_vector(0 to 3) := x"0";
 	signal	trigger0 :  std_logic := '0';
-	signal	monitor : std_logic := '0';
+	signal	monitor0 : std_logic := '0';
+	signal	monitor1 : std_logic := '0';
 
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
@@ -76,7 +77,8 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		lvds_sync => lvds_sync, 
 		lvds_data => lvds_data, 
 		trigger0 => trigger0, 
-		monitor => monitor, 
+		monitor0 => monitor0,
+		monitor1 => monitor1, 
 		s00_axis_aclk => s00_axis_aclk,	
 		s00_axis_aresetn => s00_axis_aresetn,	
 		s00_axis_tready => s00_axis_tready,	

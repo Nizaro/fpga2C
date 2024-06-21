@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1718953623" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/noip_lvds_stream.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="noip_lvds_stream_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="noip_lvds_stream.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="noip_lvds_stream_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="noip_lvds_stream_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="noip_lvds_stream_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="noip_lvds_stream.vds"/>
+  <File Type="REPORTS-TCL" Name="noip_lvds_stream_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="noip_lvds_stream_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="noip_lvds_stream.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/noip_lvds_stream_1_0/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="noip_lvds_stream"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/noip_lvds_stream.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

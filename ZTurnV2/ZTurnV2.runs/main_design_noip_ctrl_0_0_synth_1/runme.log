@@ -1,0 +1,550 @@
+
+*** Running vivado
+    with args -log main_design_noip_ctrl_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_noip_ctrl_0_0.tcl
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Jun 20 19:38:34 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main_design_noip_ctrl_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1413.941 ; gain = 63.410 ; free physical = 261 ; free virtual = 15746
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_noip_ctrl_0_0
+Command: synth_design -top main_design_noip_ctrl_0_0 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14290
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2136.945 ; gain = 413.746 ; free physical = 210 ; free virtual = 13071
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:94]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'noip_ctrl' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:5' bound to instance 'U0' of component 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:63]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'noip_ctrl_slave_lite_v1_0_S00_AXI' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'noip_ctrl_slave_lite_v1_0_S00_AXI_inst' of component 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
+INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:219]
+INFO: [Synth 8-256] done synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
+WARNING: [Synth 8-614] signal 'sensor_id' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:332]
+WARNING: [Synth 8-614] signal 'spi_data' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:332]
+INFO: [Synth 8-256] done synthesizing module 'noip_ctrl' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'main_design_noip_ctrl_0_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:215]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:216]
+WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:286]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARADDR[3] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARADDR[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARADDR[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARADDR[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2222.914 ; gain = 499.715 ; free physical = 183 ; free virtual = 12854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2237.758 ; gain = 514.559 ; free physical = 226 ; free virtual = 12773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2237.758 ; gain = 514.559 ; free physical = 226 ; free virtual = 12773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2237.758 ; gain = 0.000 ; free physical = 212 ; free virtual = 12759
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2390.508 ; gain = 0.000 ; free physical = 197 ; free virtual = 12163
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2390.508 ; gain = 0.000 ; free physical = 195 ; free virtual = 12163
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2390.508 ; gain = 667.309 ; free physical = 221 ; free virtual = 11394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 221 ; free virtual = 11394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 213 ; free virtual = 11386
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'StartupState_reg' in module 'noip_ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                   waddr |                              010 |                               10
+                   wdata |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'one-hot' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   raddr |                               01 |                               10
+                   rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                             0000
+                    on18 |                              001 |                             0001
+                    on33 |                              010 |                             0010
+                   onpix |                              011 |                             0011
+                   onclk |                              100 |                             0100
+                  onrstn |                              101 |                             0101
+                send_rdy |                              110 |                             0110
+                   ready |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'StartupState_reg' using encoding 'sequential' in module 'noip_ctrl'
+WARNING: [Synth 8-327] inferring latch for variable 'send_data_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:130]
+WARNING: [Synth 8-327] inferring latch for variable 'powerdownflag_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:172]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 201 ; free virtual = 11189
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   6 Input   16 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   8 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 2     
+	   8 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_araddr[3] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_araddr[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_araddr[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_araddr[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/SPIState_reg[2]/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/SPIState_reg[1]/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/SPIState_reg[0]/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:263]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[31]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[30]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[29]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[28]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[27]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[26]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[25]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[24]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[23]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[22]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[21]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[20]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[19]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[18]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[17]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[16]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[15]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[14]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[13]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[12]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[11]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[10]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[9]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[8]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[7]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[6]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[5]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[4]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[3]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[2]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[1]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/spi_process.data_ctr_reg[0]__0/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:260]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/sck_en_reg/Q' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:256]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:256]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd:256]
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[15]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[21]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[23]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[30]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[31]  is always disabled
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 166 ; free virtual = 10768
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 223 ; free virtual = 8701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \U0/send_data_reg[17]  is always disabled
+INFO: [Common 17-14] Message 'Synth 8-264' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 190 ; free virtual = 8670
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[31]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[30]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[29]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[28]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[27]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[26]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[25]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[24]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[23]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[22]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[21]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[20]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[19]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[18]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[17]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[16]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 169 ; free virtual = 8644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 133 ; free virtual = 7486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 133 ; free virtual = 7487
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 128 ; free virtual = 7488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 123 ; free virtual = 7483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 123 ; free virtual = 7484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 123 ; free virtual = 7485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     8|
+|3     |LUT3 |     3|
+|4     |LUT4 |     1|
+|5     |LUT5 |    11|
+|6     |LUT6 |    16|
+|7     |FDCE |    13|
+|8     |FDPE |     4|
+|9     |FDRE |    15|
+|10    |FDSE |     1|
+|11    |LD   |     1|
+|12    |LDC  |     4|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 675.312 ; free physical = 138 ; free virtual = 7503
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 108 critical warnings and 173 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.512 ; gain = 522.562 ; free physical = 117 ; free virtual = 7290
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2398.520 ; gain = 675.312 ; free physical = 114 ; free virtual = 7285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2398.520 ; gain = 0.000 ; free physical = 194 ; free virtual = 7506
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2454.539 ; gain = 0.000 ; free physical = 129 ; free virtual = 7041
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LD => LDCE (inverted pins: G): 1 instance 
+  LDC => LDCE: 4 instances
+
+Synth Design complete | Checksum: 3fd05b0a
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 129 Warnings, 108 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2454.539 ; gain = 1040.598 ; free physical = 115 ; free virtual = 6724
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1543.596; main = 1186.869; forked = 356.727
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3434.969; main = 2454.543; forked = 1036.453
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2478.551 ; gain = 0.000 ; free physical = 178 ; free virtual = 6719
+INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/main_design_noip_ctrl_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2478.551 ; gain = 0.000 ; free physical = 164 ; free virtual = 6664
+INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/main_design_noip_ctrl_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_noip_ctrl_0_0_utilization_synth.rpt -pb main_design_noip_ctrl_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 19:39:27 2024...

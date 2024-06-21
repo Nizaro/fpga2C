@@ -6,7 +6,7 @@
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "None",
+      "synth_flow_mode": "Hierarchical",
       "tool_version": "2024.1",
       "validated": "true"
     },
@@ -397,7 +397,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_IBUF_DS_P_0",
+            "value": "main_design_lvds_sync_0_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -425,7 +425,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_IBUF_DS_N_0",
+            "value": "main_design_lvds_sync_0_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -453,7 +453,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_IBUF_DS_P_1",
+            "value": "main_design_lvds_dout0_0_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -481,7 +481,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_IBUF_DS_N_1",
+            "value": "main_design_lvds_dout0_0_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -509,7 +509,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_n1",
+            "value": "main_design_lvds_dout1_0_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -537,7 +537,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_p1",
+            "value": "main_design_lvds_dout1_0_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -565,7 +565,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_n1",
+            "value": "main_design_lvds_dout2_0_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -593,7 +593,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_p1",
+            "value": "main_design_lvds_dout2_0_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -621,7 +621,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout1_0_n1",
+            "value": "main_design_lvds_dout3_0_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -649,7 +649,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout1_0_p1",
+            "value": "main_design_lvds_dout3_0_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -677,7 +677,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_clk_0_n1",
+            "value": "main_design_lvds_clk_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -705,7 +705,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_clk_0_p1",
+            "value": "main_design_lvds_clk_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -733,7 +733,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_n1",
+            "value": "main_design_lvds_dout0_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -761,7 +761,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout0_0_p1",
+            "value": "main_design_lvds_dout0_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -789,7 +789,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout1_0_n1",
+            "value": "main_design_lvds_dout1_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -817,7 +817,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout1_0_p1",
+            "value": "main_design_lvds_dout1_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -845,7 +845,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout2_0_n1",
+            "value": "main_design_lvds_dout2_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -873,7 +873,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout2_0_p1",
+            "value": "main_design_lvds_dout2_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -901,7 +901,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout3_0_n1",
+            "value": "main_design_lvds_dout3_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -929,7 +929,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_dout3_0_p1",
+            "value": "main_design_lvds_dout3_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -957,7 +957,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_scyn_0_p1",
+            "value": "main_design_lvds_sync_1_p",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -985,7 +985,7 @@
         "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "main_design_lvds_sync_0_n1",
+            "value": "main_design_lvds_sync_1_n",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -4227,20 +4227,20 @@
           "axi_mem_intercon/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "axi_mem_intercon/S02_ARESETN",
-          "noip_lvds_stream_0/s00_axis_aresetn",
-          "noip_lvds_stream_0/m00_axis_aresetn",
           "axi_dma_0/axi_resetn",
           "axis_interconnect_0/ARESETN",
           "axis_interconnect_0/M00_AXIS_ARESETN",
           "axis_interconnect_0/M01_AXIS_ARESETN",
-          "noip_lvds_stream_1/s00_axis_aresetn",
           "axis_interconnect_0/S00_AXIS_ARESETN",
           "axis_interconnect_1/ARESETN",
           "axis_interconnect_1/M00_AXIS_ARESETN",
           "axis_interconnect_1/S00_AXIS_ARESETN",
           "axis_interconnect_1/S01_AXIS_ARESETN",
-          "noip_lvds_stream_1/m00_axis_aresetn",
-          "noip_ctrl_0/s00_axi_aresetn"
+          "noip_ctrl_0/s00_axi_aresetn",
+          "noip_lvds_stream_0/s00_axis_aresetn",
+          "noip_lvds_stream_0/m00_axis_aresetn",
+          "noip_lvds_stream_1/s00_axis_aresetn",
+          "noip_lvds_stream_1/m00_axis_aresetn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -4258,8 +4258,6 @@
           "axi_mem_intercon/ACLK",
           "axi_mem_intercon/S01_ACLK",
           "axi_mem_intercon/S02_ACLK",
-          "noip_lvds_stream_0/s00_axis_aclk",
-          "noip_lvds_stream_0/m00_axis_aclk",
           "axi_dma_0/s_axi_lite_aclk",
           "axi_dma_0/m_axi_s2mm_aclk",
           "axi_dma_0/m_axi_mm2s_aclk",
@@ -4267,14 +4265,16 @@
           "axis_interconnect_0/ACLK",
           "axis_interconnect_0/M00_AXIS_ACLK",
           "axis_interconnect_0/M01_AXIS_ACLK",
-          "noip_lvds_stream_1/s00_axis_aclk",
           "axis_interconnect_0/S00_AXIS_ACLK",
           "axis_interconnect_1/ACLK",
           "axis_interconnect_1/M00_AXIS_ACLK",
           "axis_interconnect_1/S00_AXIS_ACLK",
           "axis_interconnect_1/S01_AXIS_ACLK",
-          "noip_lvds_stream_1/m00_axis_aclk",
-          "noip_ctrl_0/s00_axi_aclk"
+          "noip_ctrl_0/s00_axi_aclk",
+          "noip_lvds_stream_0/s00_axis_aclk",
+          "noip_lvds_stream_0/m00_axis_aclk",
+          "noip_lvds_stream_1/s00_axis_aclk",
+          "noip_lvds_stream_1/m00_axis_aclk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {

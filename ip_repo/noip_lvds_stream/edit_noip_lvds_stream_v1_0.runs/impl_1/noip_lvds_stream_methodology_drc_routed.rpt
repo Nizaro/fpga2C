@@ -1,0 +1,125 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Fri Jun 21 09:09:12 2024
+| Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
+| Command      : report_methodology -file noip_lvds_stream_methodology_drc_routed.rpt -pb noip_lvds_stream_methodology_drc_routed.pb -rpx noip_lvds_stream_methodology_drc_routed.rpx
+| Design       : noip_lvds_stream
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_noip_lvds_stream
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 18
++-----------+------------------+-----------------------------+------------+
+| Rule      | Severity         | Description                 | Violations |
++-----------+------------------+-----------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 18         |
++-----------+------------------+-----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/FSM_sequential_mst_exec_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/FSM_sequential_mst_exec_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/axis_tlast_delay_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/axis_tvalid_delay_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/read_pointer_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/read_pointer_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/read_pointer_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst/mst_exec_state_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst/writes_done_reg/C is not reached by a timing clock
+Related violations: <none>
+
+

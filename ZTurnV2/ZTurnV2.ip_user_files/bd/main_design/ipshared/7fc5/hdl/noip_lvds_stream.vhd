@@ -151,7 +151,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 
 	-- Add user logic here
 	
-	lvds_read_process : process(lvds_clk)
+	lvds_read_process : process(lvds_clk, s00_axis_aresetn)
 		variable i : integer := 0;
 	begin
 		if(s00_axis_aresetn = '0') then
@@ -178,7 +178,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 		end if;
 	end process;
 
-	lvds_fsm : process(lvds_word_ready) 
+	lvds_fsm : process(lvds_word_ready, s00_axis_aresetn) 
 	begin
 		if(s00_axis_aresetn = '0') then
 			DState <= IDLE;
@@ -213,17 +213,17 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					DState <= REC_IMG;
 
 				when REC_IMG => -- receiving pixels and storing them. 
-					if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
-						image(im_line)(im_column+pixel_polarity) <= lvds_data_words(0);
-						image(im_line)(im_column+pixel_polarity+2) <= lvds_data_words(1);
-						image(im_line)(im_column+pixel_polarity+4) <= lvds_data_words(2);
-						image(im_line)(im_column+pixel_polarity+6) <= lvds_data_words(3);
-					else 								 -- odd kernel : pixels read out descending
-						image(im_line)(im_column-pixel_polarity+7) <= lvds_data_words(0);
-						image(im_line)(im_column-pixel_polarity+5) <= lvds_data_words(1);
-						image(im_line)(im_column-pixel_polarity+3) <= lvds_data_words(2);
-						image(im_line)(im_column-pixel_polarity+1) <= lvds_data_words(3);
-					end if; 
+					-- if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
+					-- 	image(im_line)(im_column+pixel_polarity) <= lvds_data_words(0);
+					-- 	image(im_line)(im_column+pixel_polarity+2) <= lvds_data_words(1);
+					-- 	image(im_line)(im_column+pixel_polarity+4) <= lvds_data_words(2);
+					-- 	image(im_line)(im_column+pixel_polarity+6) <= lvds_data_words(3);
+					-- else 								 -- odd kernel : pixels read out descending
+					-- 	image(im_line)(im_column-pixel_polarity+7) <= lvds_data_words(0);
+					-- 	image(im_line)(im_column-pixel_polarity+5) <= lvds_data_words(1);
+					-- 	image(im_line)(im_column-pixel_polarity+3) <= lvds_data_words(2);
+					-- 	image(im_line)(im_column-pixel_polarity+1) <= lvds_data_words(3);
+					-- end if; 
 
 					if(pixel_polarity = 1) then -- we received all the pixels for this kernel
 						nb_kernel <= nb_kernel + 1;

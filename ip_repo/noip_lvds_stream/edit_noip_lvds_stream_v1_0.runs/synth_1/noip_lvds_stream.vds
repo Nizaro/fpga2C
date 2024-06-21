@@ -1,0 +1,348 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Jun 21 09:07:06 2024
+# Process ID: 13269
+# Current directory: /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.runs/synth_1
+# Command line: vivado -log noip_lvds_stream.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source noip_lvds_stream.tcl
+# Log file: /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.runs/synth_1/noip_lvds_stream.vds
+# Journal file: /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.runs/synth_1/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :2981.079 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :23326 MB
+#-----------------------------------------------------------
+source noip_lvds_stream.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1349.590 ; gain = 63.410 ; free physical = 416 ; free virtual = 21810
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/nothon/fpga2C/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.runs/synth_1'.)
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/utils_1/imports/synth_1/noip_lvds_stream.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/utils_1/imports/synth_1/noip_lvds_stream.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top noip_lvds_stream -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13439
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1789.117 ; gain = 420.684 ; free physical = 375 ; free virtual = 21079
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'noip_lvds_stream' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:52]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS' declared at '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd:5' bound to instance 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst' of component 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd:38]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS' (0#1) [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd:38]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'noip_lvds_stream_master_stream_v1_0_M00_AXIS' declared at '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd:5' bound to instance 'noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst' of component 'noip_lvds_stream_master_stream_v1_0_M00_AXIS' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'noip_lvds_stream_master_stream_v1_0_M00_AXIS' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd:40]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'noip_lvds_stream_master_stream_v1_0_M00_AXIS' (0#1) [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'noip_lvds_stream' (0#1) [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:52]
+WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[0].stream_data_fifo_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[1].stream_data_fifo_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[2].stream_data_fifo_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[3].stream_data_fifo_reg was removed. 
+WARNING: [Synth 8-3848] Net trigger0 in module/entity noip_lvds_stream does not have driver. [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:25]
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[31] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[30] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[29] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[28] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[27] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[26] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[25] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[24] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[23] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[22] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[21] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[20] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[19] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[18] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[17] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[16] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[15] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[14] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[13] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[12] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[11] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[10] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[9] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[8] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[7] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[6] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[5] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[4] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[3] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[2] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[1] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[0] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TSTRB[3] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TSTRB[2] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TSTRB[1] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TSTRB[0] in module noip_lvds_stream_slave_stream_v1_0_S00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port trigger0 in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_clk in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_sync in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[0] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[1] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[2] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[3] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor0 in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor1 in module noip_lvds_stream is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2473.195 ; gain = 1104.762 ; free physical = 332 ; free virtual = 20342
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2473.195 ; gain = 1104.762 ; free physical = 341 ; free virtual = 20346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 341 ; free virtual = 20346
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+            init_counter |                               01 |                               01
+             send_stream |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using encoding 'sequential' in module 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 337 ; free virtual = 20347
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design noip_lvds_stream has port m00_axis_tstrb[3] driven by constant 1
+WARNING: [Synth 8-3917] design noip_lvds_stream has port m00_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design noip_lvds_stream has port m00_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design noip_lvds_stream has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-7129] Port trigger0 in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_clk in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_sync in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[0] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[1] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[2] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lvds_data[3] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor0 in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor1 in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[31] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[30] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[29] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[28] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[27] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[26] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[25] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[24] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[23] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[22] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[21] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[20] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[19] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[18] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[17] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[16] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[15] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[14] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[13] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[12] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[11] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[10] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[9] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[8] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[7] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[6] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[5] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[4] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[3] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[2] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[1] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tdata[0] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[3] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[2] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module noip_lvds_stream is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module noip_lvds_stream is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 330 ; free virtual = 20370
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 330 ; free virtual = 20370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 330 ; free virtual = 20370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     2|
+|2     |LUT1  |     4|
+|3     |LUT2  |     3|
+|4     |LUT3  |     7|
+|5     |LUT4  |     4|
+|6     |LUT5  |     4|
+|7     |LUT6  |     1|
+|8     |FDRE  |    17|
+|9     |FDSE  |     1|
+|10    |IBUF  |     7|
+|11    |OBUF  |    39|
+|12    |OBUFT |     1|
++------+------+------+
+
+Report Instance Areas: 
++------+----------------------------------------------------+---------------------------------------------+------+
+|      |Instance                                            |Module                                       |Cells |
++------+----------------------------------------------------+---------------------------------------------+------+
+|1     |top                                                 |                                             |    90|
+|2     |  noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst |noip_lvds_stream_master_stream_v1_0_M00_AXIS |    36|
+|3     |  noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst  |noip_lvds_stream_slave_stream_v1_0_S00_AXIS  |     5|
++------+----------------------------------------------------+---------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.199 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.207 ; gain = 1112.766 ; free physical = 325 ; free virtual = 20367
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.207 ; gain = 0.000 ; free physical = 606 ; free virtual = 20652
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2537.227 ; gain = 0.000 ; free physical = 607 ; free virtual = 20657
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 59271848
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2537.227 ; gain = 1176.730 ; free physical = 607 ; free virtual = 20658
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2243.459; main = 1955.900; forked = 429.278
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3506.660; main = 2537.230; forked = 1033.461
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2561.238 ; gain = 0.000 ; free physical = 607 ; free virtual = 20658
+INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.runs/synth_1/noip_lvds_stream.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file noip_lvds_stream_utilization_synth.rpt -pb noip_lvds_stream_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 21 09:07:35 2024...

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 20 16:45:43 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jun 21 09:23:26 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -6758,8 +6758,6 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S02_ARESETN"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aresetn"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="aresetn"/>
@@ -6767,12 +6765,14 @@
             <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_0_m01_couplers_auto_ss_k" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="aresetn"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_k" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aresetn"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7830,8 +7830,6 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S02_ACLK"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_mm2s_aclk"/>
@@ -7842,12 +7840,14 @@
             <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_0_m01_couplers_auto_ss_k" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="aclk"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_k" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aclk"/>
-            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="72000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">

@@ -116,6 +116,8 @@ architecture arch_imp of noip_ctrl is
 	signal spi_data : std_logic_vector(15 downto 0);
 	signal spiflag : std_logic;
 	signal read_data_ctr : integer := 15;
+	signal addr_ctr : integer := 8; -- MSB FIRST
+	signal write_data_ctr : integer := 15;
     -- user signals end
 
 begin
@@ -249,24 +251,22 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	end generate;
 
 	rising_spi_process : process(clk_spi_in, s00_axi_aresetn)
-		variable addr_ctr : integer := 8; -- MSB FIRST
-		variable write_data_ctr : integer := 15;
 		variable mode : std_logic := '0'; -- READ = '0', WRITE = '1'
 	begin
 		if(s00_axi_aresetn = '0') then
 			sck_en <= '0';
 			mosi <= '0';
 			ss_n <= (others => '1');
-			addr_ctr := 8;
-			write_data_ctr := 15;
+			addr_ctr <= 8;
+			write_data_ctr <= 15;
 			mode := '0';
 			spiflag <= '0';
 			SPIState <= IDLE;
 		elsif(rising_edge(clk_spi_in)) then
 			case SPIState is
 				when IDLE =>
-					addr_ctr := 8;
-					write_data_ctr := 15;
+					addr_ctr <= 8;
+					write_data_ctr <= 15;
 					ss_n <= "11";
 					if((s00_axi_bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
 						with opcode select mode := '0' when "01", -- "01" = read, "10" = write
@@ -287,7 +287,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 							SPIState <= W_DATA;			
 						end if;
 					end if;
-					addr_ctr := addr_ctr - 1;
+					addr_ctr <= addr_ctr - 1;
 
 				when R_DATA =>
 					if(read_data_ctr = 0) then
@@ -301,7 +301,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 						sck_en <= '0';
 						SPIState <= SEND_RD_DATA;
 					end if;
-					write_data_ctr := write_data_ctr - 1;
+					write_data_ctr <= write_data_ctr - 1;
 
 				when SEND_RD_DATA =>
 					spiflag <= '1';

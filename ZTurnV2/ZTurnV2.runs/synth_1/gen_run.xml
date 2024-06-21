@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1718969485" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1718978377" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="main_design_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="main_design_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="main_design_wrapper_utilization_synth.pb"/>
@@ -60,26 +60,26 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_sync_0_ibuf_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout3_0_ibuf_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout2_0_ibuf_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout1_0_ibuf_3"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout0_0_ibuf_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_clkin_0_ibuf_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout1_0_ibuf_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout0_0_ibuf_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout1_0_ibuf_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout0_0_ibuf_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_sync_0_ibuf1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_clkin_0_ibuf_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout3_0_ibuf_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_4"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_dout1_0_ibuf_3"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_util_ds_buf_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_lvds_clkin_0_ibuf_1"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_processing_system7_0_0"/>
 </GenRun>

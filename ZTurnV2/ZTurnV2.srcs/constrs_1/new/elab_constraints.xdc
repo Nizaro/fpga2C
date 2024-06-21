@@ -1,6 +1,3 @@
-set_property PACKAGE_PIN T11 [get_ports noip_72M_clk]
-set_property IOSTANDARD LVCMOS33 [get_ports noip_72M_clk]
-set_property SLEW FAST [get_ports noip_72M_clk]
 set_property PACKAGE_PIN R14 [get_ports noip_miso]
 set_property IOSTANDARD LVCMOS33 [get_ports noip_miso]
 set_property PACKAGE_PIN P14 [get_ports noip_mosi]

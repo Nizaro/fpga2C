@@ -60,8 +60,8 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -2008  -incr \
-"../../../bd/main_design/ipshared/9f3a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
-"../../../bd/main_design/ipshared/9f3a/hdl/noip_ctrl.vhd" \
+"../../../bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd" \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_noip_ctrl_0_0/sim/main_design_noip_ctrl_0_0.vhd" \

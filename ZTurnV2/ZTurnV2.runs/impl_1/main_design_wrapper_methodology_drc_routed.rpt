@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Fri Jun 21 09:51:46 2024
+| Date         : Fri Jun 21 11:08:33 2024
 | Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_methodology -file main_design_wrapper_methodology_drc_routed.rpt -pb main_design_wrapper_methodology_drc_routed.pb -rpx main_design_wrapper_methodology_drc_routed.rpx
 | Design       : main_design_wrapper
@@ -23,16 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 21
+             Violations found: 62
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
 | TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
 | TIMING-7  | Critical Warning | No common node between related clocks          | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                   | 3          |
-| TIMING-16 | Warning          | Large setup violation                          | 2          |
-| TIMING-18 | Warning          | Missing input or output delay                  | 10         |
-| TIMING-20 | Warning          | Non-clocked latch                              | 3          |
+| TIMING-16 | Warning          | Large setup violation                          | 25         |
+| TIMING-18 | Warning          | Missing input or output delay                  | 12         |
+| TIMING-20 | Warning          | Non-clocked latch                              | 19         |
 | LATCH-1   | Advisory         | Existing latches in the design                 | 1          |
 +-----------+------------------+------------------------------------------------+------------+
 
@@ -110,60 +110,185 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.537 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/axi_bvalid_reg/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/ss_n_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.549 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.571 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/axi_bvalid_reg/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/ss_n_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.589 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[7]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.592 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.605 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[6]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.605 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[9]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.611 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[3]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.612 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.613 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.613 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.620 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.629 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[2]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.631 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/rising_spi_process.mode_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.637 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[4]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.639 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[8]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.641 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.658 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[10]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.693 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/spi_data_reg[5]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.863 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[2]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/ss_n_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.880 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[2]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/ss_n_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/FSM_onehot_SPIState_reg[0]/CE (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/FSM_onehot_SPIState_reg[1]/CE (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/FSM_onehot_SPIState_reg[2]/CE (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/FSM_onehot_SPIState_reg[3]/CE (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[1]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/FSM_onehot_SPIState_reg[4]/CE (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -3.224 ns between main_design_i/noip_ctrl_0/U0/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[27]/C (clocked by clk_fpga_0) and main_design_i/noip_ctrl_0/U0/mosi_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on noip_ss[0] relative to the rising and/or falling clock edge(s) of clk_fpga_1.
+An input delay is missing on noip_miso relative to the rising and/or falling clock edge(s) of clk_fpga_1.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on noip_ss[1] relative to the rising and/or falling clock edge(s) of clk_fpga_1.
+An output delay is missing on noip_mosi relative to the rising and/or falling clock edge(s) of clk_fpga_1.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on sw_enable_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on noip_ss[0] relative to the rising and/or falling clock edge(s) of clk_fpga_1.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on sw_enable_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on noip_ss[1] relative to the rising and/or falling clock edge(s) of clk_fpga_1.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on vdd18_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on sw_enable_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on vdd18_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on sw_enable_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on vdd33_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on vdd18_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on vdd33_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on vdd18_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on vddpix_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on vdd33_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on vdd33_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on vddpix_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#12 Warning
 Missing input or output delay  
 An output delay is missing on vddpix_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
@@ -180,12 +305,92 @@ Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[16] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[17] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[18] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[19] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
 The latch main_design_i/noip_ctrl_0/U0/send_data_reg[1] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[20] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[21] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[22] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[23] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[24] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[25] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[26] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[27] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[28] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[29] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[30] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch main_design_i/noip_ctrl_0/U0/send_data_reg[31] cannot be properly analyzed as its control pin main_design_i/noip_ctrl_0/U0/send_data_reg[31]/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 5 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 21 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

@@ -60,6 +60,7 @@ Valeurs de SYNC :
 - CRC : 0x059
 - TR (Training pattern) : 0x3A6
 
+https://stackoverflow.com/questions/27241973/creating-large-dual-port-ram-in-vhdl
 # Data Order (p40)
 
 Mode 4 canaux : 1 canal = 2 pixels du kernel de 1x8

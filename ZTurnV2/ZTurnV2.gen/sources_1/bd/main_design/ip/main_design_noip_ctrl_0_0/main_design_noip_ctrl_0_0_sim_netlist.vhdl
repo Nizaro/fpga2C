@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Fri Jun 21 15:59:09 2024
+-- Date        : Mon Jun 24 11:22:29 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0_sim_netlist.vhdl
@@ -34,7 +34,7 @@ entity main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
     \FSM_onehot_SPIState_reg[3]\ : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     sw_enable_n : in STD_LOGIC_VECTOR ( 0 to 1 );
-    mosi_i_3_0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    mosi_i_4_0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \FSM_onehot_SPIState_reg[0]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -42,15 +42,13 @@ entity main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
     StartupState : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \FSM_onehot_SPIState_reg[0]_1\ : in STD_LOGIC;
     \FSM_onehot_SPIState_reg[0]_2\ : in STD_LOGIC;
-    \FSM_onehot_SPIState_reg[0]_3\ : in STD_LOGIC;
-    \FSM_onehot_SPIState_reg[0]_4\ : in STD_LOGIC;
-    mosi_reg : in STD_LOGIC;
-    mosi_reg_0 : in STD_LOGIC;
-    D : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mosi_reg_1 : in STD_LOGIC;
-    mosi_reg_2 : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bready : in STD_LOGIC;
+    mosi_reg : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    mosi_reg_0 : in STD_LOGIC;
+    mosi_reg_1 : in STD_LOGIC;
+    mosi_reg_2 : in STD_LOGIC;
+    mosi_reg_3 : in STD_LOGIC;
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC;
     \startup_process.id_reg[0]\ : in STD_LOGIC;
@@ -64,7 +62,7 @@ entity main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
 end main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI;
 
 architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
-  signal \FSM_onehot_SPIState[4]_i_5_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_SPIState[4]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_write[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_write[2]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_write_reg_n_0_[1]\ : STD_LOGIC;
@@ -81,14 +79,14 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S0
   signal \^axi_awready_reg_0\ : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_bvalid_i_2_n_0 : STD_LOGIC;
+  signal axi_bvalid_i_3_n_0 : STD_LOGIC;
   signal \^axi_bvalid_reg_0\ : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal \^axi_rvalid_reg_0\ : STD_LOGIC;
   signal axi_wready : STD_LOGIC;
   signal axi_wready_i_1_n_0 : STD_LOGIC;
   signal id : STD_LOGIC;
-  signal mosi_i_13_n_0 : STD_LOGIC;
-  signal mosi_i_14_n_0 : STD_LOGIC;
+  signal mosi_i_10_n_0 : STD_LOGIC;
   signal mosi_i_15_n_0 : STD_LOGIC;
   signal mosi_i_16_n_0 : STD_LOGIC;
   signal mosi_i_17_n_0 : STD_LOGIC;
@@ -97,14 +95,16 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S0
   signal mosi_i_20_n_0 : STD_LOGIC;
   signal mosi_i_21_n_0 : STD_LOGIC;
   signal mosi_i_22_n_0 : STD_LOGIC;
+  signal mosi_i_23_n_0 : STD_LOGIC;
+  signal mosi_i_24_n_0 : STD_LOGIC;
   signal mosi_i_2_n_0 : STD_LOGIC;
   signal mosi_i_3_n_0 : STD_LOGIC;
-  signal mosi_i_8_n_0 : STD_LOGIC;
+  signal mosi_i_4_n_0 : STD_LOGIC;
   signal mosi_i_9_n_0 : STD_LOGIC;
-  signal mosi_reg_i_4_n_0 : STD_LOGIC;
   signal mosi_reg_i_5_n_0 : STD_LOGIC;
   signal mosi_reg_i_6_n_0 : STD_LOGIC;
   signal mosi_reg_i_7_n_0 : STD_LOGIC;
+  signal mosi_reg_i_8_n_0 : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 24 downto 3 );
   signal \^s00_axi_aresetn_0\ : STD_LOGIC;
   signal \^s00_axi_wready\ : STD_LOGIC;
@@ -131,18 +131,20 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S0
   signal spi_addr : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal state_read : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state_write[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_4\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_onehot_state_write[2]_i_1\ : label is "soft_lutpair1";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_write_reg[0]\ : label is "idle:001,wdata:100,waddr:010";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_write_reg[1]\ : label is "idle:001,wdata:100,waddr:010";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_write_reg[2]\ : label is "idle:001,wdata:100,waddr:010";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_read_reg[0]\ : label is "idle:00,rdata:10,raddr:01";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_read_reg[1]\ : label is "idle:00,rdata:10,raddr:01";
-  attribute SOFT_HLUTNM of axi_bvalid_i_2 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \ss_n[0]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \startup_process.id[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \sw_enable_n[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sw_enable_n[1]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_bvalid_i_2 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \rising_spi_process.mode_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \ss_n[0]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \startup_process.id[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \sw_enable_n[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sw_enable_n[1]_i_1\ : label is "soft_lutpair2";
 begin
   Q(3 downto 0) <= \^q\(3 downto 0);
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -153,28 +155,26 @@ begin
   s00_axi_wready <= \^s00_axi_wready\;
 \FSM_onehot_SPIState[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFAEFFAEFFAE"
+      INIT => X"FFEAFFFFFFEAFFEA"
     )
         port map (
       I0 => \FSM_onehot_SPIState_reg[0]_1\,
       I1 => \FSM_onehot_SPIState_reg[0]_2\,
-      I2 => \FSM_onehot_SPIState_reg[0]_3\,
-      I3 => \FSM_onehot_SPIState[4]_i_5_n_0\,
-      I4 => \FSM_onehot_SPIState_reg[0]_4\,
-      I5 => \FSM_onehot_SPIState_reg[0]_0\(1),
+      I2 => \FSM_onehot_SPIState_reg[0]_0\(1),
+      I3 => \FSM_onehot_SPIState_reg[0]_0\(3),
+      I4 => \FSM_onehot_SPIState[4]_i_4_n_0\,
+      I5 => \FSM_onehot_SPIState_reg[0]_0\(0),
       O => E(0)
     );
-\FSM_onehot_SPIState[4]_i_5\: unisim.vcomponents.LUT5
+\FSM_onehot_SPIState[4]_i_4\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AEEAAAAA"
+      INIT => X"D7"
     )
         port map (
-      I0 => \FSM_onehot_SPIState_reg[0]_0\(3),
-      I1 => \^axi_bvalid_reg_0\,
-      I2 => \^q\(0),
-      I3 => \^q\(1),
-      I4 => \FSM_onehot_SPIState_reg[0]_0\(0),
-      O => \FSM_onehot_SPIState[4]_i_5_n_0\
+      I0 => \^axi_bvalid_reg_0\,
+      I1 => \^q\(0),
+      I2 => \^q\(1),
+      O => \FSM_onehot_SPIState[4]_i_4_n_0\
     );
 \FSM_onehot_state_write[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -316,10 +316,10 @@ axi_arready_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => s00_axi_awaddr(0),
-      I1 => s00_axi_aresetn,
-      I2 => \^axi_awready_reg_0\,
-      I3 => s00_axi_awvalid,
-      I4 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I1 => \^axi_awready_reg_0\,
+      I2 => s00_axi_awvalid,
+      I3 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I4 => s00_axi_aresetn,
       I5 => axi_awaddr(2),
       O => \axi_awaddr[2]_i_1_n_0\
     );
@@ -329,10 +329,10 @@ axi_arready_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => s00_axi_awaddr(1),
-      I1 => s00_axi_aresetn,
-      I2 => \^axi_awready_reg_0\,
-      I3 => s00_axi_awvalid,
-      I4 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I1 => \^axi_awready_reg_0\,
+      I2 => s00_axi_awvalid,
+      I3 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I4 => s00_axi_aresetn,
       I5 => axi_awaddr(3),
       O => \axi_awaddr[3]_i_1_n_0\
     );
@@ -375,28 +375,38 @@ axi_awready_reg: unisim.vcomponents.FDRE
     );
 axi_bvalid_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EEEFCCCCFFFFCCCC"
+      INIT => X"FCECFFFFFCECF000"
     )
         port map (
-      I0 => axi_wready,
-      I1 => axi_bvalid_i_2_n_0,
-      I2 => \FSM_onehot_state_write_reg_n_0_[2]\,
-      I3 => \FSM_onehot_state_write_reg_n_0_[1]\,
-      I4 => \^axi_bvalid_reg_0\,
-      I5 => s00_axi_bready,
+      I0 => \FSM_onehot_state_write_reg_n_0_[2]\,
+      I1 => axi_wready,
+      I2 => s00_axi_wvalid,
+      I3 => axi_bvalid_i_2_n_0,
+      I4 => axi_bvalid_i_3_n_0,
+      I5 => \^axi_bvalid_reg_0\,
       O => axi_bvalid_i_1_n_0
     );
-axi_bvalid_i_2: unisim.vcomponents.LUT5
+axi_bvalid_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AAAA8000"
+      INIT => X"80"
     )
         port map (
-      I0 => s00_axi_wvalid,
-      I1 => \FSM_onehot_state_write_reg_n_0_[1]\,
-      I2 => s00_axi_awvalid,
-      I3 => \^axi_awready_reg_0\,
-      I4 => \FSM_onehot_state_write_reg_n_0_[2]\,
+      I0 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I1 => s00_axi_awvalid,
+      I2 => \^axi_awready_reg_0\,
       O => axi_bvalid_i_2_n_0
+    );
+axi_bvalid_i_3: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"F8F88800"
+    )
+        port map (
+      I0 => \^axi_bvalid_reg_0\,
+      I1 => s00_axi_bready,
+      I2 => s00_axi_wvalid,
+      I3 => \FSM_onehot_state_write_reg_n_0_[1]\,
+      I4 => \FSM_onehot_state_write_reg_n_0_[2]\,
+      O => axi_bvalid_i_3_n_0
     );
 axi_bvalid_reg: unisim.vcomponents.FDRE
      port map (
@@ -444,55 +454,41 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s00_axi_wready\,
       R => \^s00_axi_aresetn_0\
     );
-mosi_i_1: unisim.vcomponents.LUT5
+mosi_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ECEFECE0"
+      INIT => X"FEFEFEFFFEFEFE00"
     )
         port map (
       I0 => mosi_i_2_n_0,
       I1 => mosi_i_3_n_0,
-      I2 => \FSM_onehot_SPIState_reg[0]_0\(2),
-      I3 => \FSM_onehot_SPIState_reg[0]_0\(1),
-      I4 => mosi,
+      I2 => mosi_i_4_n_0,
+      I3 => \FSM_onehot_SPIState_reg[0]_0\(2),
+      I4 => \FSM_onehot_SPIState_reg[0]_0\(1),
+      I5 => mosi,
       O => \FSM_onehot_SPIState_reg[3]\
     );
-mosi_i_13: unisim.vcomponents.LUT6
+mosi_i_10: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"FEAE"
     )
         port map (
-      I0 => spi_addr(7),
-      I1 => spi_addr(6),
-      I2 => mosi_reg_2(1),
-      I3 => spi_addr(5),
-      I4 => mosi_reg_2(0),
-      I5 => spi_addr(4),
-      O => mosi_i_13_n_0
-    );
-mosi_i_14: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \slv_reg0_reg_n_0_[15]\,
-      I1 => \slv_reg0_reg_n_0_[14]\,
-      I2 => mosi_reg_2(1),
-      I3 => \slv_reg0_reg_n_0_[13]\,
-      I4 => mosi_reg_2(0),
-      I5 => spi_addr(8),
-      O => mosi_i_14_n_0
+      I0 => mosi_i_4_0(3),
+      I1 => mosi_i_23_n_0,
+      I2 => mosi_i_4_0(2),
+      I3 => mosi_i_24_n_0,
+      O => mosi_i_10_n_0
     );
 mosi_i_15: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \^q\(3),
-      I1 => \^q\(2),
-      I2 => mosi_reg_2(1),
-      I3 => \^q\(1),
-      I4 => mosi_reg_2(0),
-      I5 => \^q\(0),
+      I0 => \slv_reg0_reg_n_0_[19]\,
+      I1 => \slv_reg0_reg_n_0_[18]\,
+      I2 => mosi_reg(1),
+      I3 => \slv_reg0_reg_n_0_[17]\,
+      I4 => mosi_reg(0),
+      I5 => \slv_reg0_reg_n_0_[16]\,
       O => mosi_i_15_n_0
     );
 mosi_i_16: unisim.vcomponents.LUT6
@@ -500,12 +496,12 @@ mosi_i_16: unisim.vcomponents.LUT6
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => spi_addr(3),
-      I1 => spi_addr(2),
-      I2 => mosi_reg_2(1),
-      I3 => spi_addr(1),
-      I4 => mosi_reg_2(0),
-      I5 => spi_addr(0),
+      I0 => \slv_reg0_reg_n_0_[23]\,
+      I1 => \slv_reg0_reg_n_0_[22]\,
+      I2 => mosi_reg(1),
+      I3 => \slv_reg0_reg_n_0_[21]\,
+      I4 => mosi_reg(0),
+      I5 => \slv_reg0_reg_n_0_[20]\,
       O => mosi_i_16_n_0
     );
 mosi_i_17: unisim.vcomponents.LUT6
@@ -515,9 +511,9 @@ mosi_i_17: unisim.vcomponents.LUT6
         port map (
       I0 => \slv_reg0_reg_n_0_[27]\,
       I1 => \slv_reg0_reg_n_0_[26]\,
-      I2 => mosi_reg_2(1),
+      I2 => mosi_reg(1),
       I3 => \slv_reg0_reg_n_0_[25]\,
-      I4 => mosi_reg_2(0),
+      I4 => mosi_reg(0),
       I5 => \slv_reg0_reg_n_0_[24]\,
       O => mosi_i_17_n_0
     );
@@ -528,9 +524,9 @@ mosi_i_18: unisim.vcomponents.LUT6
         port map (
       I0 => \slv_reg0_reg_n_0_[31]\,
       I1 => \slv_reg0_reg_n_0_[30]\,
-      I2 => mosi_reg_2(1),
+      I2 => mosi_reg(1),
       I3 => \slv_reg0_reg_n_0_[29]\,
-      I4 => mosi_reg_2(0),
+      I4 => mosi_reg(0),
       I5 => \slv_reg0_reg_n_0_[28]\,
       O => mosi_i_18_n_0
     );
@@ -539,25 +535,24 @@ mosi_i_19: unisim.vcomponents.LUT6
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \slv_reg0_reg_n_0_[19]\,
-      I1 => \slv_reg0_reg_n_0_[18]\,
-      I2 => mosi_reg_2(1),
-      I3 => \slv_reg0_reg_n_0_[17]\,
-      I4 => mosi_reg_2(0),
-      I5 => \slv_reg0_reg_n_0_[16]\,
+      I0 => \^q\(3),
+      I1 => \^q\(2),
+      I2 => mosi_reg(1),
+      I3 => \^q\(1),
+      I4 => mosi_reg(0),
+      I5 => \^q\(0),
       O => mosi_i_19_n_0
     );
-mosi_i_2: unisim.vcomponents.LUT6
+mosi_i_2: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"0000E200"
     )
         port map (
-      I0 => mosi_reg_i_4_n_0,
-      I1 => mosi_reg_i_5_n_0,
-      I2 => mosi_reg_2(4),
-      I3 => mosi_reg_i_6_n_0,
-      I4 => mosi_reg_2(3),
-      I5 => mosi_reg_i_7_n_0,
+      I0 => mosi_reg_i_5_n_0,
+      I1 => mosi_reg(3),
+      I2 => mosi_reg_i_6_n_0,
+      I3 => \FSM_onehot_SPIState_reg[0]_0\(2),
+      I4 => mosi_reg(4),
       O => mosi_i_2_n_0
     );
 mosi_i_20: unisim.vcomponents.LUT6
@@ -565,12 +560,12 @@ mosi_i_20: unisim.vcomponents.LUT6
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \slv_reg0_reg_n_0_[23]\,
-      I1 => \slv_reg0_reg_n_0_[22]\,
-      I2 => mosi_reg_2(1),
-      I3 => \slv_reg0_reg_n_0_[21]\,
-      I4 => mosi_reg_2(0),
-      I5 => \slv_reg0_reg_n_0_[20]\,
+      I0 => spi_addr(3),
+      I1 => spi_addr(2),
+      I2 => mosi_reg(1),
+      I3 => spi_addr(1),
+      I4 => mosi_reg(0),
+      I5 => spi_addr(0),
       O => mosi_i_20_n_0
     );
 mosi_i_21: unisim.vcomponents.LUT6
@@ -578,12 +573,12 @@ mosi_i_21: unisim.vcomponents.LUT6
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => spi_addr(3),
-      I1 => spi_addr(2),
-      I2 => mosi_i_3_0(1),
-      I3 => spi_addr(1),
-      I4 => mosi_i_3_0(0),
-      I5 => spi_addr(0),
+      I0 => spi_addr(7),
+      I1 => spi_addr(6),
+      I2 => mosi_reg(1),
+      I3 => spi_addr(5),
+      I4 => mosi_reg(0),
+      I5 => spi_addr(4),
       O => mosi_i_21_n_0
     );
 mosi_i_22: unisim.vcomponents.LUT6
@@ -591,75 +586,102 @@ mosi_i_22: unisim.vcomponents.LUT6
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => spi_addr(7),
-      I1 => spi_addr(6),
-      I2 => mosi_i_3_0(1),
-      I3 => spi_addr(5),
-      I4 => mosi_i_3_0(0),
-      I5 => spi_addr(4),
+      I0 => \slv_reg0_reg_n_0_[15]\,
+      I1 => \slv_reg0_reg_n_0_[14]\,
+      I2 => mosi_reg(1),
+      I3 => \slv_reg0_reg_n_0_[13]\,
+      I4 => mosi_reg(0),
+      I5 => spi_addr(8),
       O => mosi_i_22_n_0
     );
-mosi_i_3: unisim.vcomponents.LUT6
+mosi_i_23: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF4F444044"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => mosi_i_8_n_0,
-      I1 => mosi_i_9_n_0,
-      I2 => mosi_reg,
-      I3 => mosi_reg_0,
-      I4 => D(0),
-      I5 => mosi_reg_1,
+      I0 => spi_addr(3),
+      I1 => spi_addr(2),
+      I2 => mosi_i_4_0(1),
+      I3 => spi_addr(1),
+      I4 => mosi_i_4_0(0),
+      I5 => spi_addr(0),
+      O => mosi_i_23_n_0
+    );
+mosi_i_24: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => spi_addr(7),
+      I1 => spi_addr(6),
+      I2 => mosi_i_4_0(1),
+      I3 => spi_addr(5),
+      I4 => mosi_i_4_0(0),
+      I5 => spi_addr(4),
+      O => mosi_i_24_n_0
+    );
+mosi_i_3: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"E2000000"
+    )
+        port map (
+      I0 => mosi_reg_i_7_n_0,
+      I1 => mosi_reg(3),
+      I2 => mosi_reg_i_8_n_0,
+      I3 => mosi_reg(4),
+      I4 => \FSM_onehot_SPIState_reg[0]_0\(2),
       O => mosi_i_3_n_0
     );
-mosi_i_8: unisim.vcomponents.LUT3
+mosi_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFF40444F44"
+    )
+        port map (
+      I0 => mosi_i_9_n_0,
+      I1 => mosi_i_10_n_0,
+      I2 => mosi_reg_0,
+      I3 => mosi_reg_1,
+      I4 => mosi_reg_2,
+      I5 => mosi_reg_3,
+      O => mosi_i_4_n_0
+    );
+mosi_i_9: unisim.vcomponents.LUT3
     generic map(
       INIT => X"4F"
     )
         port map (
       I0 => spi_addr(8),
-      I1 => mosi_i_3_0(3),
+      I1 => mosi_i_4_0(3),
       I2 => \FSM_onehot_SPIState_reg[0]_0\(1),
-      O => mosi_i_8_n_0
-    );
-mosi_i_9: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FEAE"
-    )
-        port map (
-      I0 => mosi_i_3_0(3),
-      I1 => mosi_i_21_n_0,
-      I2 => mosi_i_3_0(2),
-      I3 => mosi_i_22_n_0,
       O => mosi_i_9_n_0
-    );
-mosi_reg_i_4: unisim.vcomponents.MUXF7
-     port map (
-      I0 => mosi_i_13_n_0,
-      I1 => mosi_i_14_n_0,
-      O => mosi_reg_i_4_n_0,
-      S => mosi_reg_2(2)
     );
 mosi_reg_i_5: unisim.vcomponents.MUXF7
      port map (
       I0 => mosi_i_15_n_0,
       I1 => mosi_i_16_n_0,
       O => mosi_reg_i_5_n_0,
-      S => mosi_reg_2(2)
+      S => mosi_reg(2)
     );
 mosi_reg_i_6: unisim.vcomponents.MUXF7
      port map (
       I0 => mosi_i_17_n_0,
       I1 => mosi_i_18_n_0,
       O => mosi_reg_i_6_n_0,
-      S => mosi_reg_2(2)
+      S => mosi_reg(2)
     );
 mosi_reg_i_7: unisim.vcomponents.MUXF7
      port map (
       I0 => mosi_i_19_n_0,
       I1 => mosi_i_20_n_0,
       O => mosi_reg_i_7_n_0,
-      S => mosi_reg_2(2)
+      S => mosi_reg(2)
+    );
+mosi_reg_i_8: unisim.vcomponents.MUXF7
+     port map (
+      I0 => mosi_i_21_n_0,
+      I1 => mosi_i_22_n_0,
+      O => mosi_reg_i_8_n_0,
+      S => mosi_reg(2)
     );
 \rising_spi_process.mode_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -1054,7 +1076,7 @@ entity main_design_noip_ctrl_0_0_noip_ctrl is
     axi_rvalid_reg : out STD_LOGIC;
     axi_bvalid_reg : out STD_LOGIC;
     clk_pll_out : out STD_LOGIC_VECTOR ( 0 to 1 );
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 19 downto 0 );
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 3 downto 0 );
     vdd18_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
     vdd33_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
@@ -1065,16 +1087,15 @@ entity main_design_noip_ctrl_0_0_noip_ctrl is
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC;
     clk_72M_pll : in STD_LOGIC;
     clk_spi_in : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    miso : in STD_LOGIC;
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_bready : in STD_LOGIC
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of main_design_noip_ctrl_0_0_noip_ctrl : entity is "noip_ctrl";
@@ -1102,7 +1123,7 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   signal \FSM_onehot_SPIState[4]_i_25_n_0\ : STD_LOGIC;
   signal \FSM_onehot_SPIState[4]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_SPIState[4]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_SPIState[4]_i_4_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_SPIState[4]_i_5_n_0\ : STD_LOGIC;
   signal \FSM_onehot_SPIState[4]_i_6_n_0\ : STD_LOGIC;
   signal \FSM_onehot_SPIState[4]_i_7_n_0\ : STD_LOGIC;
   signal \FSM_onehot_SPIState[4]_i_8_n_0\ : STD_LOGIC;
@@ -1243,17 +1264,18 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   signal in10 : STD_LOGIC_VECTOR ( 31 downto 1 );
   signal in9 : STD_LOGIC_VECTOR ( 31 downto 1 );
   signal \^mosi\ : STD_LOGIC;
-  signal mosi_i_10_n_0 : STD_LOGIC;
   signal mosi_i_11_n_0 : STD_LOGIC;
   signal mosi_i_12_n_0 : STD_LOGIC;
-  signal mosi_i_23_n_0 : STD_LOGIC;
-  signal mosi_i_24_n_0 : STD_LOGIC;
+  signal mosi_i_13_n_0 : STD_LOGIC;
+  signal mosi_i_14_n_0 : STD_LOGIC;
   signal mosi_i_25_n_0 : STD_LOGIC;
   signal mosi_i_26_n_0 : STD_LOGIC;
   signal mosi_i_27_n_0 : STD_LOGIC;
   signal mosi_i_28_n_0 : STD_LOGIC;
   signal mosi_i_29_n_0 : STD_LOGIC;
   signal mosi_i_30_n_0 : STD_LOGIC;
+  signal mosi_i_31_n_0 : STD_LOGIC;
+  signal mosi_i_32_n_0 : STD_LOGIC;
   signal noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1 : STD_LOGIC;
   signal noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_10 : STD_LOGIC;
   signal noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_11 : STD_LOGIC;
@@ -1367,41 +1389,17 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   signal \read_data_ctr_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \read_data_ctr_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \read_data_ctr_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal readyflag : STD_LOGIC;
   signal readyflag_i_1_n_0 : STD_LOGIC;
+  signal readyflag_reg_n_0 : STD_LOGIC;
   signal \rising_spi_process.mode_reg_n_0\ : STD_LOGIC;
   signal sck_en_i_1_n_0 : STD_LOGIC;
   signal sck_en_reg_n_0 : STD_LOGIC;
-  signal send_data : STD_LOGIC_VECTOR ( 31 downto 1 );
+  signal \send_data_inferred__0/i__n_0\ : STD_LOGIC;
   signal \send_data_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal sensor_id : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal spi_data : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \spi_data[0]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[10]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[11]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[11]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[12]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[12]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[13]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[13]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[14]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[14]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[15]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[15]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[15]_i_3_n_0\ : STD_LOGIC;
-  signal \spi_data[1]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[2]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[3]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[4]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[5]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[6]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[7]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[7]_i_2_n_0\ : STD_LOGIC;
-  signal \spi_data[8]_i_1_n_0\ : STD_LOGIC;
-  signal \spi_data[9]_i_1_n_0\ : STD_LOGIC;
   signal spiflag : STD_LOGIC;
-  signal spiflag_0 : STD_LOGIC;
   signal spiflag_i_1_n_0 : STD_LOGIC;
+  signal spiflag_reg_n_0 : STD_LOGIC;
   signal \^ss_n\ : STD_LOGIC_VECTOR ( 0 to 1 );
   signal \ss_n[0]_i_1_n_0\ : STD_LOGIC;
   signal \ss_n[1]_i_1_n_0\ : STD_LOGIC;
@@ -1510,20 +1508,19 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   signal \write_data_ctr[7]_i_1_n_0\ : STD_LOGIC;
   signal \write_data_ctr[8]_i_1_n_0\ : STD_LOGIC;
   signal \write_data_ctr[9]_i_1_n_0\ : STD_LOGIC;
-  signal write_data_ctr_1 : STD_LOGIC;
+  signal write_data_ctr_0 : STD_LOGIC;
   signal \NLW_addr_ctr0_carry__6_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_addr_ctr0_carry__6_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_read_data_ctr_reg[28]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_write_data_ctr0_carry__6_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_write_data_ctr0_carry__6_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[3]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_14\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_15\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_16\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_17\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_3\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_4\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[2]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[3]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_11\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_12\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_13\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \FSM_onehot_SPIState[4]_i_14\ : label is "soft_lutpair7";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_SPIState_reg[0]\ : label is "idle:00001,s_addr:00010,send_rd_data:10000,w_data:01000,r_data:00100";
   attribute FSM_ENCODED_STATES of \FSM_onehot_SPIState_reg[1]\ : label is "idle:00001,s_addr:00010,send_rd_data:10000,w_data:01000,r_data:00100";
@@ -1544,44 +1541,47 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   attribute ADDER_THRESHOLD of \addr_ctr0_carry__4\ : label is 35;
   attribute ADDER_THRESHOLD of \addr_ctr0_carry__5\ : label is 35;
   attribute ADDER_THRESHOLD of \addr_ctr0_carry__6\ : label is 35;
-  attribute SOFT_HLUTNM of \addr_ctr[10]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \addr_ctr[11]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \addr_ctr[12]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \addr_ctr[13]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \addr_ctr[14]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \addr_ctr[15]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \addr_ctr[16]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \addr_ctr[17]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \addr_ctr[18]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \addr_ctr[19]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \addr_ctr[1]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \addr_ctr[20]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \addr_ctr[21]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \addr_ctr[22]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \addr_ctr[23]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \addr_ctr[24]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \addr_ctr[25]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \addr_ctr[26]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \addr_ctr[27]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \addr_ctr[28]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \addr_ctr[29]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \addr_ctr[2]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \addr_ctr[30]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \addr_ctr[31]_i_2\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \addr_ctr[3]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \addr_ctr[4]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \addr_ctr[5]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \addr_ctr[6]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \addr_ctr[7]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \addr_ctr[8]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \addr_ctr[9]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \clk_pll_out[0]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \clk_pll_out[1]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of mosi_i_12 : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of mosi_i_24 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of mosi_i_26 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of mosi_i_28 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of mosi_i_30 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \addr_ctr[0]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \addr_ctr[10]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \addr_ctr[11]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \addr_ctr[12]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \addr_ctr[13]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \addr_ctr[14]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \addr_ctr[15]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \addr_ctr[16]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \addr_ctr[17]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \addr_ctr[18]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \addr_ctr[19]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \addr_ctr[1]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \addr_ctr[20]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \addr_ctr[21]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \addr_ctr[22]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \addr_ctr[23]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \addr_ctr[24]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \addr_ctr[25]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \addr_ctr[26]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \addr_ctr[27]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \addr_ctr[28]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \addr_ctr[29]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \addr_ctr[2]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \addr_ctr[30]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \addr_ctr[31]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \addr_ctr[3]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \addr_ctr[4]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \addr_ctr[5]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \addr_ctr[6]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \addr_ctr[7]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \addr_ctr[8]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \addr_ctr[9]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \clk_pll_out[0]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \clk_pll_out[1]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of mosi_i_13 : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of mosi_i_14 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of mosi_i_26 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of mosi_i_28 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of mosi_i_30 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of mosi_i_31 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of mosi_i_32 : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \pll_clk_en[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \pll_clk_en[1]_i_1\ : label is "soft_lutpair5";
   attribute OPT_MODIFIED : string;
@@ -1598,57 +1598,19 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   attribute ADDER_THRESHOLD of \read_data_ctr_reg[28]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \read_data_ctr_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \read_data_ctr_reg[8]_i_1\ : label is 11;
-  attribute SOFT_HLUTNM of readyflag_i_1 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of readyflag_i_1 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of sck_en_i_1 : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \send_data_inferred__0/i_\ : label is "soft_lutpair15";
   attribute XILINX_LEGACY_PRIM of \send_data_reg[0]\ : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[0]\ : label is "VCC:GE";
-  attribute SOFT_HLUTNM of \send_data_reg[0]_i_1\ : label is "soft_lutpair13";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[16]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[16]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[17]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[17]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[18]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[18]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[19]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[19]\ : label is "VCC:GE";
+  attribute SOFT_HLUTNM of \send_data_reg[0]_i_1\ : label is "soft_lutpair11";
   attribute XILINX_LEGACY_PRIM of \send_data_reg[1]\ : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[1]\ : label is "VCC:GE";
-  attribute SOFT_HLUTNM of \send_data_reg[1]_i_1\ : label is "soft_lutpair18";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[20]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[20]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[21]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[21]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[22]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[22]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[23]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[23]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[24]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[24]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[25]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[25]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[26]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[26]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[27]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[27]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[28]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[28]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[29]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[29]\ : label is "VCC:GE";
   attribute XILINX_LEGACY_PRIM of \send_data_reg[2]\ : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[2]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[30]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[30]\ : label is "VCC:GE";
-  attribute XILINX_LEGACY_PRIM of \send_data_reg[31]\ : label is "LDC";
-  attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[31]\ : label is "VCC:GE";
-  attribute SOFT_HLUTNM of \send_data_reg[31]_i_1\ : label is "soft_lutpair18";
   attribute XILINX_LEGACY_PRIM of \send_data_reg[3]\ : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of \send_data_reg[3]\ : label is "VCC:GE";
-  attribute SOFT_HLUTNM of \spi_data[11]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \spi_data[12]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \spi_data[13]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \spi_data[14]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \spi_data[15]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \spi_data[15]_i_3\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \spi_data[7]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of spiflag_i_1 : label is "soft_lutpair15";
   attribute ADDER_THRESHOLD of write_data_ctr0_carry : label is 35;
   attribute ADDER_THRESHOLD of \write_data_ctr0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \write_data_ctr0_carry__1\ : label is 35;
@@ -1657,38 +1619,38 @@ architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is
   attribute ADDER_THRESHOLD of \write_data_ctr0_carry__4\ : label is 35;
   attribute ADDER_THRESHOLD of \write_data_ctr0_carry__5\ : label is 35;
   attribute ADDER_THRESHOLD of \write_data_ctr0_carry__6\ : label is 35;
-  attribute SOFT_HLUTNM of \write_data_ctr[0]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \write_data_ctr[10]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \write_data_ctr[11]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \write_data_ctr[12]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \write_data_ctr[13]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \write_data_ctr[14]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \write_data_ctr[15]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \write_data_ctr[16]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \write_data_ctr[17]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \write_data_ctr[18]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \write_data_ctr[19]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \write_data_ctr[1]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \write_data_ctr[20]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \write_data_ctr[21]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \write_data_ctr[22]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \write_data_ctr[23]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \write_data_ctr[24]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \write_data_ctr[25]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \write_data_ctr[26]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \write_data_ctr[27]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \write_data_ctr[28]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \write_data_ctr[29]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \write_data_ctr[2]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \write_data_ctr[30]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \write_data_ctr[31]_i_2\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \write_data_ctr[3]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \write_data_ctr[4]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \write_data_ctr[5]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \write_data_ctr[6]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \write_data_ctr[7]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \write_data_ctr[8]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \write_data_ctr[9]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \write_data_ctr[0]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \write_data_ctr[10]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \write_data_ctr[11]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \write_data_ctr[12]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \write_data_ctr[13]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \write_data_ctr[14]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \write_data_ctr[15]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \write_data_ctr[16]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \write_data_ctr[17]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \write_data_ctr[18]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \write_data_ctr[19]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \write_data_ctr[1]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \write_data_ctr[20]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \write_data_ctr[21]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \write_data_ctr[22]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \write_data_ctr[23]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \write_data_ctr[24]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \write_data_ctr[25]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \write_data_ctr[26]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \write_data_ctr[27]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \write_data_ctr[28]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \write_data_ctr[29]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \write_data_ctr[2]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \write_data_ctr[30]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \write_data_ctr[31]_i_2\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \write_data_ctr[3]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \write_data_ctr[4]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \write_data_ctr[5]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \write_data_ctr[6]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \write_data_ctr[7]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \write_data_ctr[8]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \write_data_ctr[9]_i_1\ : label is "soft_lutpair45";
 begin
   axi_bvalid_reg <= \^axi_bvalid_reg\;
   mosi <= \^mosi\;
@@ -1703,7 +1665,7 @@ begin
     )
         port map (
       I0 => read_data_ctr,
-      I1 => spiflag_0,
+      I1 => spiflag,
       O => \FSM_onehot_SPIState[0]_i_1_n_0\
     );
 \FSM_onehot_SPIState[2]_i_1\: unisim.vcomponents.LUT2
@@ -1720,58 +1682,56 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => \FSM_onehot_SPIState_reg_n_0_[1]\,
-      I1 => \rising_spi_process.mode_reg_n_0\,
+      I0 => \rising_spi_process.mode_reg_n_0\,
+      I1 => \FSM_onehot_SPIState_reg_n_0_[1]\,
       O => \FSM_onehot_SPIState[3]_i_1_n_0\
     );
-\FSM_onehot_SPIState[4]_i_10\: unisim.vcomponents.LUT6
+\FSM_onehot_SPIState[4]_i_10\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
+      INIT => X"00000001"
     )
         port map (
-      I0 => write_data_ctr(1),
-      I1 => write_data_ctr(2),
-      I2 => write_data_ctr(3),
-      I3 => write_data_ctr(25),
-      I4 => write_data_ctr(11),
-      I5 => write_data_ctr(10),
+      I0 => write_data_ctr(26),
+      I1 => write_data_ctr(11),
+      I2 => write_data_ctr(7),
+      I3 => \FSM_onehot_SPIState[4]_i_24_n_0\,
+      I4 => \FSM_onehot_SPIState[4]_i_25_n_0\,
       O => \FSM_onehot_SPIState[4]_i_10_n_0\
     );
 \FSM_onehot_SPIState[4]_i_11\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"FFFF7FFF"
     )
         port map (
-      I0 => read_data_ctr_reg(24),
-      I1 => read_data_ctr_reg(30),
-      I2 => read_data_ctr_reg(26),
-      I3 => read_data_ctr_reg(25),
-      I4 => \FSM_onehot_SPIState[4]_i_22_n_0\,
+      I0 => \addr_ctr_reg_n_0_[25]\,
+      I1 => \addr_ctr_reg_n_0_[20]\,
+      I2 => \addr_ctr_reg_n_0_[27]\,
+      I3 => \addr_ctr_reg_n_0_[8]\,
+      I4 => mosi_i_31_n_0,
       O => \FSM_onehot_SPIState[4]_i_11_n_0\
     );
 \FSM_onehot_SPIState[4]_i_12\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"00008000"
     )
         port map (
-      I0 => read_data_ctr_reg(23),
-      I1 => read_data_ctr_reg(22),
-      I2 => read_data_ctr_reg(20),
-      I3 => read_data_ctr_reg(21),
-      I4 => \FSM_onehot_SPIState[4]_i_23_n_0\,
+      I0 => \addr_ctr_reg_n_0_[9]\,
+      I1 => \addr_ctr_reg_n_0_[1]\,
+      I2 => \addr_ctr_reg_n_0_[3]\,
+      I3 => \addr_ctr_reg_n_0_[2]\,
+      I4 => mosi_i_29_n_0,
       O => \FSM_onehot_SPIState[4]_i_12_n_0\
     );
-\FSM_onehot_SPIState[4]_i_13\: unisim.vcomponents.LUT6
+\FSM_onehot_SPIState[4]_i_13\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
+      INIT => X"FFFF7FFF"
     )
         port map (
-      I0 => read_data_ctr_reg(6),
-      I1 => read_data_ctr_reg(7),
-      I2 => read_data_ctr_reg(5),
-      I3 => read_data_ctr_reg(4),
-      I4 => \FSM_onehot_SPIState[4]_i_24_n_0\,
-      I5 => \FSM_onehot_SPIState[4]_i_25_n_0\,
+      I0 => \addr_ctr_reg_n_0_[21]\,
+      I1 => \addr_ctr_reg_n_0_[13]\,
+      I2 => \addr_ctr_reg_n_0_[29]\,
+      I3 => \addr_ctr_reg_n_0_[28]\,
+      I4 => mosi_i_27_n_0,
       O => \FSM_onehot_SPIState[4]_i_13_n_0\
     );
 \FSM_onehot_SPIState[4]_i_14\: unisim.vcomponents.LUT5
@@ -1779,47 +1739,44 @@ begin
       INIT => X"FFFF7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[14]\,
-      I1 => \addr_ctr_reg_n_0_[1]\,
-      I2 => \addr_ctr_reg_n_0_[21]\,
-      I3 => \addr_ctr_reg_n_0_[2]\,
-      I4 => mosi_i_29_n_0,
-      O => \FSM_onehot_SPIState[4]_i_14_n_0\
-    );
-\FSM_onehot_SPIState[4]_i_15\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00008000"
-    )
-        port map (
-      I0 => \addr_ctr_reg_n_0_[15]\,
-      I1 => \addr_ctr_reg_n_0_[11]\,
-      I2 => \addr_ctr_reg_n_0_[13]\,
-      I3 => \addr_ctr_reg_n_0_[0]\,
-      I4 => mosi_i_27_n_0,
-      O => \FSM_onehot_SPIState[4]_i_15_n_0\
-    );
-\FSM_onehot_SPIState[4]_i_16\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFF7FFF"
-    )
-        port map (
-      I0 => \addr_ctr_reg_n_0_[27]\,
-      I1 => \addr_ctr_reg_n_0_[6]\,
-      I2 => \addr_ctr_reg_n_0_[30]\,
-      I3 => \addr_ctr_reg_n_0_[31]\,
-      I4 => mosi_i_25_n_0,
-      O => \FSM_onehot_SPIState[4]_i_16_n_0\
-    );
-\FSM_onehot_SPIState[4]_i_17\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFF7FFF"
-    )
-        port map (
       I0 => \addr_ctr_reg_n_0_[12]\,
       I1 => \addr_ctr_reg_n_0_[10]\,
-      I2 => \addr_ctr_reg_n_0_[29]\,
-      I3 => \addr_ctr_reg_n_0_[4]\,
-      I4 => mosi_i_23_n_0,
+      I2 => \addr_ctr_reg_n_0_[19]\,
+      I3 => \addr_ctr_reg_n_0_[16]\,
+      I4 => mosi_i_25_n_0,
+      O => \FSM_onehot_SPIState[4]_i_14_n_0\
+    );
+\FSM_onehot_SPIState[4]_i_15\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => read_data_ctr_reg(29),
+      I1 => read_data_ctr_reg(11),
+      I2 => read_data_ctr_reg(16),
+      I3 => read_data_ctr_reg(26),
+      O => \FSM_onehot_SPIState[4]_i_15_n_0\
+    );
+\FSM_onehot_SPIState[4]_i_16\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => read_data_ctr_reg(30),
+      I1 => read_data_ctr_reg(6),
+      I2 => read_data_ctr_reg(21),
+      I3 => read_data_ctr_reg(2),
+      O => \FSM_onehot_SPIState[4]_i_16_n_0\
+    );
+\FSM_onehot_SPIState[4]_i_17\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => read_data_ctr_reg(3),
+      I1 => read_data_ctr_reg(0),
+      I2 => read_data_ctr_reg(28),
+      I3 => read_data_ctr_reg(24),
       O => \FSM_onehot_SPIState[4]_i_17_n_0\
     );
 \FSM_onehot_SPIState[4]_i_18\: unisim.vcomponents.LUT4
@@ -1827,32 +1784,36 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => write_data_ctr(7),
-      I1 => write_data_ctr(8),
-      I2 => write_data_ctr(31),
-      I3 => write_data_ctr(9),
+      I0 => read_data_ctr_reg(25),
+      I1 => read_data_ctr_reg(13),
+      I2 => read_data_ctr_reg(10),
+      I3 => read_data_ctr_reg(18),
       O => \FSM_onehot_SPIState[4]_i_18_n_0\
     );
-\FSM_onehot_SPIState[4]_i_19\: unisim.vcomponents.LUT4
+\FSM_onehot_SPIState[4]_i_19\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFFFFFFFFFFFFFFD"
     )
         port map (
-      I0 => write_data_ctr(4),
-      I1 => write_data_ctr(6),
-      I2 => write_data_ctr(26),
-      I3 => write_data_ctr(0),
+      I0 => \FSM_onehot_SPIState_reg_n_0_[3]\,
+      I1 => write_data_ctr(0),
+      I2 => write_data_ctr(9),
+      I3 => write_data_ctr(6),
+      I4 => write_data_ctr(12),
+      I5 => write_data_ctr(28),
       O => \FSM_onehot_SPIState[4]_i_19_n_0\
     );
-\FSM_onehot_SPIState[4]_i_2\: unisim.vcomponents.LUT4
+\FSM_onehot_SPIState[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0002"
+      INIT => X"0100FFFF01000100"
     )
         port map (
-      I0 => \FSM_onehot_SPIState[4]_i_7_n_0\,
-      I1 => \FSM_onehot_SPIState[4]_i_8_n_0\,
-      I2 => \FSM_onehot_SPIState[4]_i_9_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_10_n_0\,
+      I0 => \FSM_onehot_SPIState[4]_i_5_n_0\,
+      I1 => \FSM_onehot_SPIState[4]_i_6_n_0\,
+      I2 => \FSM_onehot_SPIState[4]_i_7_n_0\,
+      I3 => \FSM_onehot_SPIState[4]_i_8_n_0\,
+      I4 => \FSM_onehot_SPIState[4]_i_9_n_0\,
+      I5 => \FSM_onehot_SPIState[4]_i_10_n_0\,
       O => \FSM_onehot_SPIState[4]_i_2_n_0\
     );
 \FSM_onehot_SPIState[4]_i_20\: unisim.vcomponents.LUT4
@@ -1860,10 +1821,10 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => write_data_ctr(22),
-      I1 => write_data_ctr(23),
-      I2 => write_data_ctr(16),
-      I3 => write_data_ctr(21),
+      I0 => write_data_ctr(19),
+      I1 => write_data_ctr(20),
+      I2 => write_data_ctr(10),
+      I3 => write_data_ctr(17),
       O => \FSM_onehot_SPIState[4]_i_20_n_0\
     );
 \FSM_onehot_SPIState[4]_i_21\: unisim.vcomponents.LUT4
@@ -1871,10 +1832,10 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => write_data_ctr(30),
-      I1 => write_data_ctr(18),
-      I2 => write_data_ctr(13),
-      I3 => write_data_ctr(20),
+      I0 => write_data_ctr(8),
+      I1 => write_data_ctr(21),
+      I2 => write_data_ctr(30),
+      I3 => write_data_ctr(18),
       O => \FSM_onehot_SPIState[4]_i_21_n_0\
     );
 \FSM_onehot_SPIState[4]_i_22\: unisim.vcomponents.LUT4
@@ -1882,10 +1843,10 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => read_data_ctr_reg(31),
-      I1 => read_data_ctr_reg(28),
-      I2 => read_data_ctr_reg(29),
-      I3 => read_data_ctr_reg(27),
+      I0 => write_data_ctr(27),
+      I1 => write_data_ctr(3),
+      I2 => write_data_ctr(1),
+      I3 => write_data_ctr(15),
       O => \FSM_onehot_SPIState[4]_i_22_n_0\
     );
 \FSM_onehot_SPIState[4]_i_23\: unisim.vcomponents.LUT4
@@ -1893,10 +1854,10 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => read_data_ctr_reg(16),
-      I1 => read_data_ctr_reg(17),
-      I2 => read_data_ctr_reg(19),
-      I3 => read_data_ctr_reg(18),
+      I0 => write_data_ctr(25),
+      I1 => write_data_ctr(14),
+      I2 => write_data_ctr(13),
+      I3 => write_data_ctr(24),
       O => \FSM_onehot_SPIState[4]_i_23_n_0\
     );
 \FSM_onehot_SPIState[4]_i_24\: unisim.vcomponents.LUT4
@@ -1904,10 +1865,10 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => read_data_ctr_reg(10),
-      I1 => read_data_ctr_reg(11),
-      I2 => read_data_ctr_reg(9),
-      I3 => read_data_ctr_reg(8),
+      I0 => write_data_ctr(5),
+      I1 => write_data_ctr(29),
+      I2 => write_data_ctr(31),
+      I3 => write_data_ctr(23),
       O => \FSM_onehot_SPIState[4]_i_24_n_0\
     );
 \FSM_onehot_SPIState[4]_i_25\: unisim.vcomponents.LUT4
@@ -1915,67 +1876,70 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => read_data_ctr_reg(15),
-      I1 => read_data_ctr_reg(14),
-      I2 => read_data_ctr_reg(13),
-      I3 => read_data_ctr_reg(12),
+      I0 => write_data_ctr(22),
+      I1 => write_data_ctr(2),
+      I2 => write_data_ctr(16),
+      I3 => write_data_ctr(4),
       O => \FSM_onehot_SPIState[4]_i_25_n_0\
     );
-\FSM_onehot_SPIState[4]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000001"
-    )
-        port map (
-      I0 => read_data_ctr_reg(2),
-      I1 => \FSM_onehot_SPIState[4]_i_11_n_0\,
-      I2 => \FSM_onehot_SPIState[4]_i_12_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_13_n_0\,
-      I4 => read_data_ctr_reg(3),
-      O => \FSM_onehot_SPIState[4]_i_3_n_0\
-    );
-\FSM_onehot_SPIState[4]_i_4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FB"
-    )
-        port map (
-      I0 => read_data_ctr_reg(1),
-      I1 => read_data_ctr,
-      I2 => read_data_ctr_reg(0),
-      O => \FSM_onehot_SPIState[4]_i_4_n_0\
-    );
-\FSM_onehot_SPIState[4]_i_6\: unisim.vcomponents.LUT4
+\FSM_onehot_SPIState[4]_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0004"
     )
         port map (
-      I0 => \FSM_onehot_SPIState[4]_i_14_n_0\,
-      I1 => \FSM_onehot_SPIState[4]_i_15_n_0\,
-      I2 => \FSM_onehot_SPIState[4]_i_16_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_17_n_0\,
+      I0 => \FSM_onehot_SPIState[4]_i_11_n_0\,
+      I1 => \FSM_onehot_SPIState[4]_i_12_n_0\,
+      I2 => \FSM_onehot_SPIState[4]_i_13_n_0\,
+      I3 => \FSM_onehot_SPIState[4]_i_14_n_0\,
+      O => \FSM_onehot_SPIState[4]_i_3_n_0\
+    );
+\FSM_onehot_SPIState[4]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFD"
+    )
+        port map (
+      I0 => read_data_ctr,
+      I1 => read_data_ctr_reg(22),
+      I2 => read_data_ctr_reg(19),
+      I3 => read_data_ctr_reg(31),
+      I4 => read_data_ctr_reg(14),
+      I5 => read_data_ctr_reg(15),
+      O => \FSM_onehot_SPIState[4]_i_5_n_0\
+    );
+\FSM_onehot_SPIState[4]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => read_data_ctr_reg(12),
+      I1 => read_data_ctr_reg(1),
+      I2 => read_data_ctr_reg(20),
+      I3 => read_data_ctr_reg(23),
+      I4 => \FSM_onehot_SPIState[4]_i_15_n_0\,
       O => \FSM_onehot_SPIState[4]_i_6_n_0\
     );
 \FSM_onehot_SPIState[4]_i_7\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000001"
+      INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => write_data_ctr(27),
-      I1 => write_data_ctr(17),
-      I2 => write_data_ctr(24),
-      I3 => \FSM_onehot_SPIState[4]_i_18_n_0\,
-      I4 => \FSM_onehot_SPIState[4]_i_19_n_0\,
+      I0 => read_data_ctr_reg(9),
+      I1 => read_data_ctr_reg(7),
+      I2 => read_data_ctr_reg(5),
+      I3 => read_data_ctr_reg(27),
+      I4 => \FSM_onehot_SPIState[4]_i_16_n_0\,
       O => \FSM_onehot_SPIState[4]_i_7_n_0\
     );
 \FSM_onehot_SPIState[4]_i_8\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFEFF"
+      INIT => X"00000001"
     )
         port map (
-      I0 => write_data_ctr(15),
-      I1 => write_data_ctr(12),
-      I2 => write_data_ctr(5),
-      I3 => \FSM_onehot_SPIState_reg_n_0_[3]\,
-      I4 => \FSM_onehot_SPIState[4]_i_20_n_0\,
+      I0 => read_data_ctr_reg(17),
+      I1 => read_data_ctr_reg(4),
+      I2 => read_data_ctr_reg(8),
+      I3 => \FSM_onehot_SPIState[4]_i_17_n_0\,
+      I4 => \FSM_onehot_SPIState[4]_i_18_n_0\,
       O => \FSM_onehot_SPIState[4]_i_8_n_0\
     );
 \FSM_onehot_SPIState[4]_i_9\: unisim.vcomponents.LUT5
@@ -1983,11 +1947,11 @@ begin
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => write_data_ctr(29),
-      I1 => write_data_ctr(19),
-      I2 => write_data_ctr(14),
-      I3 => write_data_ctr(28),
-      I4 => \FSM_onehot_SPIState[4]_i_21_n_0\,
+      I0 => \FSM_onehot_SPIState[4]_i_19_n_0\,
+      I1 => \FSM_onehot_SPIState[4]_i_20_n_0\,
+      I2 => \FSM_onehot_SPIState[4]_i_21_n_0\,
+      I3 => \FSM_onehot_SPIState[4]_i_22_n_0\,
+      I4 => \FSM_onehot_SPIState[4]_i_23_n_0\,
       O => \FSM_onehot_SPIState[4]_i_9_n_0\
     );
 \FSM_onehot_SPIState_reg[0]\: unisim.vcomponents.FDPE
@@ -2043,7 +2007,7 @@ begin
       CE => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_14,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \FSM_onehot_SPIState_reg_n_0_[3]\,
-      Q => spiflag_0
+      Q => spiflag
     );
 \FSM_sequential_StartupState[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -3157,68 +3121,55 @@ addr_ctr0_carry_i_4: unisim.vcomponents.LUT1
       I1 => clk_72M_pll,
       O => clk_pll_out(1)
     );
-mosi_i_10: unisim.vcomponents.LUT4
+mosi_i_11: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => mosi_i_23_n_0,
-      I1 => mosi_i_24_n_0,
-      I2 => mosi_i_25_n_0,
-      I3 => mosi_i_26_n_0,
-      O => mosi_i_10_n_0
+      I0 => mosi_i_25_n_0,
+      I1 => mosi_i_26_n_0,
+      I2 => mosi_i_27_n_0,
+      I3 => mosi_i_28_n_0,
+      O => mosi_i_11_n_0
     );
-mosi_i_11: unisim.vcomponents.LUT4
+mosi_i_12: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0004"
     )
         port map (
-      I0 => mosi_i_27_n_0,
-      I1 => mosi_i_28_n_0,
-      I2 => mosi_i_29_n_0,
-      I3 => mosi_i_30_n_0,
-      O => mosi_i_11_n_0
+      I0 => mosi_i_29_n_0,
+      I1 => mosi_i_30_n_0,
+      I2 => mosi_i_31_n_0,
+      I3 => mosi_i_32_n_0,
+      O => mosi_i_12_n_0
     );
-mosi_i_12: unisim.vcomponents.LUT2
+mosi_i_13: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => \FSM_onehot_SPIState_reg_n_0_[1]\,
+      I1 => \rising_spi_process.mode_reg_n_0\,
+      O => mosi_i_13_n_0
+    );
+mosi_i_14: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => \FSM_onehot_SPIState_reg_n_0_[0]\,
       I1 => read_data_ctr,
-      O => mosi_i_12_n_0
-    );
-mosi_i_23: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => \addr_ctr_reg_n_0_[18]\,
-      I1 => \addr_ctr_reg_n_0_[19]\,
-      I2 => \addr_ctr_reg_n_0_[8]\,
-      I3 => \addr_ctr_reg_n_0_[24]\,
-      O => mosi_i_23_n_0
-    );
-mosi_i_24: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => \addr_ctr_reg_n_0_[4]\,
-      I1 => \addr_ctr_reg_n_0_[29]\,
-      I2 => \addr_ctr_reg_n_0_[10]\,
-      I3 => \addr_ctr_reg_n_0_[12]\,
-      O => mosi_i_24_n_0
+      O => mosi_i_14_n_0
     );
 mosi_i_25: unisim.vcomponents.LUT4
     generic map(
       INIT => X"7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[20]\,
-      I1 => \addr_ctr_reg_n_0_[23]\,
-      I2 => \addr_ctr_reg_n_0_[5]\,
-      I3 => \addr_ctr_reg_n_0_[28]\,
+      I0 => \addr_ctr_reg_n_0_[7]\,
+      I1 => \addr_ctr_reg_n_0_[30]\,
+      I2 => \addr_ctr_reg_n_0_[22]\,
+      I3 => \addr_ctr_reg_n_0_[26]\,
       O => mosi_i_25_n_0
     );
 mosi_i_26: unisim.vcomponents.LUT4
@@ -3226,10 +3177,10 @@ mosi_i_26: unisim.vcomponents.LUT4
       INIT => X"7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[31]\,
-      I1 => \addr_ctr_reg_n_0_[30]\,
-      I2 => \addr_ctr_reg_n_0_[6]\,
-      I3 => \addr_ctr_reg_n_0_[27]\,
+      I0 => \addr_ctr_reg_n_0_[16]\,
+      I1 => \addr_ctr_reg_n_0_[19]\,
+      I2 => \addr_ctr_reg_n_0_[10]\,
+      I3 => \addr_ctr_reg_n_0_[12]\,
       O => mosi_i_26_n_0
     );
 mosi_i_27: unisim.vcomponents.LUT4
@@ -3237,21 +3188,21 @@ mosi_i_27: unisim.vcomponents.LUT4
       INIT => X"7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[16]\,
-      I1 => \addr_ctr_reg_n_0_[17]\,
-      I2 => \addr_ctr_reg_n_0_[7]\,
-      I3 => \addr_ctr_reg_n_0_[25]\,
+      I0 => \addr_ctr_reg_n_0_[17]\,
+      I1 => \addr_ctr_reg_n_0_[18]\,
+      I2 => \addr_ctr_reg_n_0_[31]\,
+      I3 => \addr_ctr_reg_n_0_[6]\,
       O => mosi_i_27_n_0
     );
 mosi_i_28: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8000"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[0]\,
-      I1 => \addr_ctr_reg_n_0_[13]\,
-      I2 => \addr_ctr_reg_n_0_[11]\,
-      I3 => \addr_ctr_reg_n_0_[15]\,
+      I0 => \addr_ctr_reg_n_0_[28]\,
+      I1 => \addr_ctr_reg_n_0_[29]\,
+      I2 => \addr_ctr_reg_n_0_[13]\,
+      I3 => \addr_ctr_reg_n_0_[21]\,
       O => mosi_i_28_n_0
     );
 mosi_i_29: unisim.vcomponents.LUT4
@@ -3259,22 +3210,44 @@ mosi_i_29: unisim.vcomponents.LUT4
       INIT => X"7FFF"
     )
         port map (
-      I0 => \addr_ctr_reg_n_0_[22]\,
-      I1 => \addr_ctr_reg_n_0_[26]\,
-      I2 => \addr_ctr_reg_n_0_[3]\,
-      I3 => \addr_ctr_reg_n_0_[9]\,
+      I0 => \addr_ctr_reg_n_0_[14]\,
+      I1 => \addr_ctr_reg_n_0_[15]\,
+      I2 => \addr_ctr_reg_n_0_[23]\,
+      I3 => \addr_ctr_reg_n_0_[24]\,
       O => mosi_i_29_n_0
     );
 mosi_i_30: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7FFF"
+      INIT => X"8000"
     )
         port map (
       I0 => \addr_ctr_reg_n_0_[2]\,
-      I1 => \addr_ctr_reg_n_0_[21]\,
+      I1 => \addr_ctr_reg_n_0_[3]\,
       I2 => \addr_ctr_reg_n_0_[1]\,
-      I3 => \addr_ctr_reg_n_0_[14]\,
+      I3 => \addr_ctr_reg_n_0_[9]\,
       O => mosi_i_30_n_0
+    );
+mosi_i_31: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => \addr_ctr_reg_n_0_[4]\,
+      I1 => \addr_ctr_reg_n_0_[5]\,
+      I2 => \addr_ctr_reg_n_0_[0]\,
+      I3 => \addr_ctr_reg_n_0_[11]\,
+      O => mosi_i_31_n_0
+    );
+mosi_i_32: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => \addr_ctr_reg_n_0_[8]\,
+      I1 => \addr_ctr_reg_n_0_[27]\,
+      I2 => \addr_ctr_reg_n_0_[20]\,
+      I3 => \addr_ctr_reg_n_0_[25]\,
+      O => mosi_i_32_n_0
     );
 mosi_reg: unisim.vcomponents.FDCE
      port map (
@@ -3286,17 +3259,14 @@ mosi_reg: unisim.vcomponents.FDCE
     );
 noip_ctrl_slave_lite_v1_0_S00_AXI_inst: entity work.main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI
      port map (
-      D(0) => \FSM_onehot_SPIState[3]_i_1_n_0\,
       E(0) => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_14,
       \FSM_onehot_SPIState_reg[0]\ => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_16,
-      \FSM_onehot_SPIState_reg[0]_0\(3) => spiflag_0,
+      \FSM_onehot_SPIState_reg[0]_0\(3) => spiflag,
       \FSM_onehot_SPIState_reg[0]_0\(2) => \FSM_onehot_SPIState_reg_n_0_[3]\,
       \FSM_onehot_SPIState_reg[0]_0\(1) => \FSM_onehot_SPIState_reg_n_0_[1]\,
       \FSM_onehot_SPIState_reg[0]_0\(0) => \FSM_onehot_SPIState_reg_n_0_[0]\,
       \FSM_onehot_SPIState_reg[0]_1\ => \FSM_onehot_SPIState[4]_i_2_n_0\,
       \FSM_onehot_SPIState_reg[0]_2\ => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      \FSM_onehot_SPIState_reg[0]_3\ => \FSM_onehot_SPIState[4]_i_4_n_0\,
-      \FSM_onehot_SPIState_reg[0]_4\ => \FSM_onehot_SPIState[4]_i_6_n_0\,
       \FSM_onehot_SPIState_reg[3]\ => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_17,
       \FSM_sequential_StartupState_reg[2]\ => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_12,
       Q(3 downto 2) => sensor_id(1 downto 0),
@@ -3308,14 +3278,15 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst: entity work.main_design_noip_ctrl_0_0_no
       axi_bvalid_reg_0 => \^axi_bvalid_reg\,
       axi_rvalid_reg_0 => axi_rvalid_reg,
       mosi => \^mosi\,
-      mosi_i_3_0(3) => \addr_ctr_reg_n_0_[3]\,
-      mosi_i_3_0(2) => \addr_ctr_reg_n_0_[2]\,
-      mosi_i_3_0(1) => \addr_ctr_reg_n_0_[1]\,
-      mosi_i_3_0(0) => \addr_ctr_reg_n_0_[0]\,
-      mosi_reg => mosi_i_10_n_0,
+      mosi_i_4_0(3) => \addr_ctr_reg_n_0_[3]\,
+      mosi_i_4_0(2) => \addr_ctr_reg_n_0_[2]\,
+      mosi_i_4_0(1) => \addr_ctr_reg_n_0_[1]\,
+      mosi_i_4_0(0) => \addr_ctr_reg_n_0_[0]\,
+      mosi_reg(4 downto 0) => write_data_ctr(4 downto 0),
       mosi_reg_0 => mosi_i_11_n_0,
       mosi_reg_1 => mosi_i_12_n_0,
-      mosi_reg_2(4 downto 0) => write_data_ctr(4 downto 0),
+      mosi_reg_2 => mosi_i_13_n_0,
+      mosi_reg_3 => mosi_i_14_n_0,
       \rising_spi_process.mode_reg\ => \rising_spi_process.mode_reg_n_0\,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
@@ -4180,7 +4151,7 @@ readyflag_i_1: unisim.vcomponents.LUT4
       I0 => StartupState(1),
       I1 => StartupState(0),
       I2 => StartupState(2),
-      I3 => readyflag,
+      I3 => readyflag_reg_n_0,
       O => readyflag_i_1_n_0
     );
 readyflag_reg: unisim.vcomponents.FDCE
@@ -4189,7 +4160,7 @@ readyflag_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => readyflag_i_1_n_0,
-      Q => readyflag
+      Q => readyflag_reg_n_0
     );
 \rising_spi_process.mode_reg\: unisim.vcomponents.FDCE
     generic map(
@@ -4211,16 +4182,14 @@ sck_INST_0: unisim.vcomponents.LUT2
       I1 => sck_en_reg_n_0,
       O => sck
     );
-sck_en_i_1: unisim.vcomponents.LUT5
+sck_en_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"BBABAAAA"
+      INIT => X"BA"
     )
         port map (
       I0 => \FSM_onehot_SPIState_reg_n_0_[1]\,
       I1 => \FSM_onehot_SPIState[4]_i_2_n_0\,
-      I2 => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_4_n_0\,
-      I4 => sck_en_reg_n_0,
+      I2 => sck_en_reg_n_0,
       O => sck_en_i_1_n_0
     );
 sck_en_reg: unisim.vcomponents.FDCE
@@ -4231,6 +4200,16 @@ sck_en_reg: unisim.vcomponents.FDCE
       D => sck_en_i_1_n_0,
       Q => sck_en_reg_n_0
     );
+\send_data_inferred__0/i_\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => readyflag_reg_n_0,
+      I1 => spiflag_reg_n_0,
+      I2 => powerdownflag,
+      O => \send_data_inferred__0/i__n_0\
+    );
 \send_data_reg[0]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '0'
@@ -4238,7 +4217,7 @@ sck_en_reg: unisim.vcomponents.FDCE
         port map (
       CLR => s00_axi_aresetn,
       D => \send_data_reg[0]_i_1_n_0\,
-      G => send_data(1),
+      G => \send_data_inferred__0/i__n_0\,
       GE => '1',
       Q => s00_axi_rdata(0)
     );
@@ -4247,53 +4226,9 @@ sck_en_reg: unisim.vcomponents.FDCE
       INIT => X"B"
     )
         port map (
-      I0 => readyflag,
+      I0 => readyflag_reg_n_0,
       I1 => powerdownflag,
       O => \send_data_reg[0]_i_1_n_0\
-    );
-\send_data_reg[16]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(0),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(4)
-    );
-\send_data_reg[17]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(1),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(5)
-    );
-\send_data_reg[18]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(2),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(6)
-    );
-\send_data_reg[19]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(3),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(7)
     );
 \send_data_reg[1]\: unisim.vcomponents.LDCE
     generic map(
@@ -4301,130 +4236,10 @@ sck_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       CLR => s00_axi_aresetn,
-      D => readyflag,
-      G => send_data(1),
+      D => readyflag_reg_n_0,
+      G => \send_data_inferred__0/i__n_0\,
       GE => '1',
       Q => s00_axi_rdata(1)
-    );
-\send_data_reg[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => powerdownflag,
-      I1 => spiflag,
-      I2 => readyflag,
-      O => send_data(1)
-    );
-\send_data_reg[20]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(4),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(8)
-    );
-\send_data_reg[21]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(5),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(9)
-    );
-\send_data_reg[22]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(6),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(10)
-    );
-\send_data_reg[23]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(7),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(11)
-    );
-\send_data_reg[24]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(8),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(12)
-    );
-\send_data_reg[25]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(9),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(13)
-    );
-\send_data_reg[26]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(10),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(14)
-    );
-\send_data_reg[27]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(11),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(15)
-    );
-\send_data_reg[28]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(12),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(16)
-    );
-\send_data_reg[29]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(13),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(17)
     );
 \send_data_reg[2]\: unisim.vcomponents.LDCE
     generic map(
@@ -4433,41 +4248,9 @@ sck_en_reg: unisim.vcomponents.FDCE
         port map (
       CLR => s00_axi_aresetn,
       D => sensor_id(0),
-      G => '1',
+      G => \send_data_inferred__0/i__n_0\,
       GE => '1',
       Q => s00_axi_rdata(2)
-    );
-\send_data_reg[30]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(14),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(18)
-    );
-\send_data_reg[31]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => s00_axi_aresetn,
-      D => spi_data(15),
-      G => send_data(31),
-      GE => '1',
-      Q => s00_axi_rdata(19)
-    );
-\send_data_reg[31]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => spiflag,
-      I1 => readyflag,
-      I2 => powerdownflag,
-      O => send_data(31)
     );
 \send_data_reg[3]\: unisim.vcomponents.LDCE
     generic map(
@@ -4476,449 +4259,17 @@ sck_en_reg: unisim.vcomponents.FDCE
         port map (
       CLR => s00_axi_aresetn,
       D => sensor_id(1),
-      G => '1',
+      G => \send_data_inferred__0/i__n_0\,
       GE => '1',
       Q => s00_axi_rdata(3)
-    );
-\spi_data[0]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      I2 => \spi_data[12]_i_2_n_0\,
-      I3 => spi_data(0),
-      O => \spi_data[0]_i_1_n_0\
-    );
-\spi_data[10]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[14]_i_2_n_0\,
-      I2 => \spi_data[11]_i_2_n_0\,
-      I3 => spi_data(10),
-      O => \spi_data[10]_i_1_n_0\
-    );
-\spi_data[11]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_3_n_0\,
-      I2 => \spi_data[11]_i_2_n_0\,
-      I3 => spi_data(11),
-      O => \spi_data[11]_i_1_n_0\
-    );
-\spi_data[11]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFB"
-    )
-        port map (
-      I0 => read_data_ctr_reg(2),
-      I1 => read_data_ctr_reg(3),
-      I2 => \FSM_onehot_SPIState[4]_i_11_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_12_n_0\,
-      I4 => \FSM_onehot_SPIState[4]_i_13_n_0\,
-      O => \spi_data[11]_i_2_n_0\
-    );
-\spi_data[12]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_2_n_0\,
-      I2 => \spi_data[12]_i_2_n_0\,
-      I3 => spi_data(12),
-      O => \spi_data[12]_i_1_n_0\
-    );
-\spi_data[12]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"1000"
-    )
-        port map (
-      I0 => read_data_ctr_reg(0),
-      I1 => read_data_ctr_reg(1),
-      I2 => read_data_ctr,
-      I3 => s00_axi_aresetn,
-      O => \spi_data[12]_i_2_n_0\
-    );
-\spi_data[13]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_2_n_0\,
-      I2 => \spi_data[13]_i_2_n_0\,
-      I3 => spi_data(13),
-      O => \spi_data[13]_i_1_n_0\
-    );
-\spi_data[13]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"4000"
-    )
-        port map (
-      I0 => read_data_ctr_reg(1),
-      I1 => read_data_ctr_reg(0),
-      I2 => read_data_ctr,
-      I3 => s00_axi_aresetn,
-      O => \spi_data[13]_i_2_n_0\
-    );
-\spi_data[14]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_2_n_0\,
-      I2 => \spi_data[14]_i_2_n_0\,
-      I3 => spi_data(14),
-      O => \spi_data[14]_i_1_n_0\
-    );
-\spi_data[14]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"4000"
-    )
-        port map (
-      I0 => read_data_ctr_reg(0),
-      I1 => read_data_ctr_reg(1),
-      I2 => s00_axi_aresetn,
-      I3 => read_data_ctr,
-      O => \spi_data[14]_i_2_n_0\
-    );
-\spi_data[15]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_2_n_0\,
-      I2 => \spi_data[15]_i_3_n_0\,
-      I3 => spi_data(15),
-      O => \spi_data[15]_i_1_n_0\
-    );
-\spi_data[15]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000008"
-    )
-        port map (
-      I0 => read_data_ctr_reg(2),
-      I1 => read_data_ctr_reg(3),
-      I2 => \FSM_onehot_SPIState[4]_i_11_n_0\,
-      I3 => \FSM_onehot_SPIState[4]_i_12_n_0\,
-      I4 => \FSM_onehot_SPIState[4]_i_13_n_0\,
-      O => \spi_data[15]_i_2_n_0\
-    );
-\spi_data[15]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => read_data_ctr_reg(0),
-      I1 => read_data_ctr_reg(1),
-      I2 => s00_axi_aresetn,
-      I3 => read_data_ctr,
-      O => \spi_data[15]_i_3_n_0\
-    );
-\spi_data[1]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      I2 => \spi_data[13]_i_2_n_0\,
-      I3 => spi_data(1),
-      O => \spi_data[1]_i_1_n_0\
-    );
-\spi_data[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      I2 => \spi_data[14]_i_2_n_0\,
-      I3 => spi_data(2),
-      O => \spi_data[2]_i_1_n_0\
-    );
-\spi_data[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BF80"
-    )
-        port map (
-      I0 => miso,
-      I1 => \FSM_onehot_SPIState[4]_i_3_n_0\,
-      I2 => \spi_data[15]_i_3_n_0\,
-      I3 => spi_data(3),
-      O => \spi_data[3]_i_1_n_0\
-    );
-\spi_data[4]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[12]_i_2_n_0\,
-      I2 => \spi_data[7]_i_2_n_0\,
-      I3 => spi_data(4),
-      O => \spi_data[4]_i_1_n_0\
-    );
-\spi_data[5]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[13]_i_2_n_0\,
-      I2 => \spi_data[7]_i_2_n_0\,
-      I3 => spi_data(5),
-      O => \spi_data[5]_i_1_n_0\
-    );
-\spi_data[6]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[14]_i_2_n_0\,
-      I2 => \spi_data[7]_i_2_n_0\,
-      I3 => spi_data(6),
-      O => \spi_data[6]_i_1_n_0\
-    );
-\spi_data[7]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[15]_i_3_n_0\,
-      I2 => \spi_data[7]_i_2_n_0\,
-      I3 => spi_data(7),
-      O => \spi_data[7]_i_1_n_0\
-    );
-\spi_data[7]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFEFFFF"
-    )
-        port map (
-      I0 => \FSM_onehot_SPIState[4]_i_11_n_0\,
-      I1 => \FSM_onehot_SPIState[4]_i_12_n_0\,
-      I2 => \FSM_onehot_SPIState[4]_i_13_n_0\,
-      I3 => read_data_ctr_reg(3),
-      I4 => read_data_ctr_reg(2),
-      O => \spi_data[7]_i_2_n_0\
-    );
-\spi_data[8]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[12]_i_2_n_0\,
-      I2 => \spi_data[11]_i_2_n_0\,
-      I3 => spi_data(8),
-      O => \spi_data[8]_i_1_n_0\
-    );
-\spi_data[9]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FB08"
-    )
-        port map (
-      I0 => miso,
-      I1 => \spi_data[13]_i_2_n_0\,
-      I2 => \spi_data[11]_i_2_n_0\,
-      I3 => spi_data(9),
-      O => \spi_data[9]_i_1_n_0\
-    );
-\spi_data_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[0]_i_1_n_0\,
-      Q => spi_data(0),
-      R => '0'
-    );
-\spi_data_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[10]_i_1_n_0\,
-      Q => spi_data(10),
-      R => '0'
-    );
-\spi_data_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[11]_i_1_n_0\,
-      Q => spi_data(11),
-      R => '0'
-    );
-\spi_data_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[12]_i_1_n_0\,
-      Q => spi_data(12),
-      R => '0'
-    );
-\spi_data_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[13]_i_1_n_0\,
-      Q => spi_data(13),
-      R => '0'
-    );
-\spi_data_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[14]_i_1_n_0\,
-      Q => spi_data(14),
-      R => '0'
-    );
-\spi_data_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[15]_i_1_n_0\,
-      Q => spi_data(15),
-      R => '0'
-    );
-\spi_data_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[1]_i_1_n_0\,
-      Q => spi_data(1),
-      R => '0'
-    );
-\spi_data_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[2]_i_1_n_0\,
-      Q => spi_data(2),
-      R => '0'
-    );
-\spi_data_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[3]_i_1_n_0\,
-      Q => spi_data(3),
-      R => '0'
-    );
-\spi_data_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[4]_i_1_n_0\,
-      Q => spi_data(4),
-      R => '0'
-    );
-\spi_data_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[5]_i_1_n_0\,
-      Q => spi_data(5),
-      R => '0'
-    );
-\spi_data_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[6]_i_1_n_0\,
-      Q => spi_data(6),
-      R => '0'
-    );
-\spi_data_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[7]_i_1_n_0\,
-      Q => spi_data(7),
-      R => '0'
-    );
-\spi_data_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[8]_i_1_n_0\,
-      Q => spi_data(8),
-      R => '0'
-    );
-\spi_data_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => clk_spi_in,
-      CE => '1',
-      D => \spi_data[9]_i_1_n_0\,
-      Q => spi_data(9),
-      R => '0'
     );
 spiflag_i_1: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
-      I0 => spiflag_0,
-      I1 => spiflag,
+      I0 => spiflag,
+      I1 => spiflag_reg_n_0,
       O => spiflag_i_1_n_0
     );
 spiflag_reg: unisim.vcomponents.FDCE
@@ -4927,7 +4278,7 @@ spiflag_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => spiflag_i_1_n_0,
-      Q => spiflag
+      Q => spiflag_reg_n_0
     );
 \ss_n[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -5489,12 +4840,12 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     );
 \write_data_ctr[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"BA"
+      INIT => X"AE"
     )
         port map (
       I0 => \FSM_onehot_SPIState_reg_n_0_[0]\,
-      I1 => write_data_ctr(0),
-      I2 => \FSM_onehot_SPIState_reg_n_0_[3]\,
+      I1 => \FSM_onehot_SPIState_reg_n_0_[3]\,
+      I2 => write_data_ctr(0),
       O => \write_data_ctr[0]_i_1_n_0\
     );
 \write_data_ctr[10]_i_1\: unisim.vcomponents.LUT2
@@ -5713,7 +5064,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
         port map (
       I0 => \FSM_onehot_SPIState_reg_n_0_[3]\,
       I1 => \FSM_onehot_SPIState_reg_n_0_[0]\,
-      O => write_data_ctr_1
+      O => write_data_ctr_0
     );
 \write_data_ctr[31]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -5794,7 +5145,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       D => \write_data_ctr[0]_i_1_n_0\,
       PRE => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       Q => write_data_ctr(0)
@@ -5805,7 +5156,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[10]_i_1_n_0\,
       Q => write_data_ctr(10)
@@ -5816,7 +5167,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[11]_i_1_n_0\,
       Q => write_data_ctr(11)
@@ -5827,7 +5178,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[12]_i_1_n_0\,
       Q => write_data_ctr(12)
@@ -5838,7 +5189,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[13]_i_1_n_0\,
       Q => write_data_ctr(13)
@@ -5849,7 +5200,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[14]_i_1_n_0\,
       Q => write_data_ctr(14)
@@ -5860,7 +5211,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[15]_i_1_n_0\,
       Q => write_data_ctr(15)
@@ -5871,7 +5222,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[16]_i_1_n_0\,
       Q => write_data_ctr(16)
@@ -5882,7 +5233,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[17]_i_1_n_0\,
       Q => write_data_ctr(17)
@@ -5893,7 +5244,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[18]_i_1_n_0\,
       Q => write_data_ctr(18)
@@ -5904,7 +5255,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[19]_i_1_n_0\,
       Q => write_data_ctr(19)
@@ -5915,7 +5266,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       D => \write_data_ctr[1]_i_1_n_0\,
       PRE => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       Q => write_data_ctr(1)
@@ -5926,7 +5277,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[20]_i_1_n_0\,
       Q => write_data_ctr(20)
@@ -5937,7 +5288,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[21]_i_1_n_0\,
       Q => write_data_ctr(21)
@@ -5948,7 +5299,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[22]_i_1_n_0\,
       Q => write_data_ctr(22)
@@ -5959,7 +5310,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[23]_i_1_n_0\,
       Q => write_data_ctr(23)
@@ -5970,7 +5321,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[24]_i_1_n_0\,
       Q => write_data_ctr(24)
@@ -5981,7 +5332,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[25]_i_1_n_0\,
       Q => write_data_ctr(25)
@@ -5992,7 +5343,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[26]_i_1_n_0\,
       Q => write_data_ctr(26)
@@ -6003,7 +5354,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[27]_i_1_n_0\,
       Q => write_data_ctr(27)
@@ -6014,7 +5365,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[28]_i_1_n_0\,
       Q => write_data_ctr(28)
@@ -6025,7 +5376,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[29]_i_1_n_0\,
       Q => write_data_ctr(29)
@@ -6036,7 +5387,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       D => \write_data_ctr[2]_i_1_n_0\,
       PRE => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       Q => write_data_ctr(2)
@@ -6047,7 +5398,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[30]_i_1_n_0\,
       Q => write_data_ctr(30)
@@ -6058,7 +5409,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[31]_i_2_n_0\,
       Q => write_data_ctr(31)
@@ -6069,7 +5420,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       D => \write_data_ctr[3]_i_1_n_0\,
       PRE => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       Q => write_data_ctr(3)
@@ -6080,7 +5431,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[4]_i_1_n_0\,
       Q => write_data_ctr(4)
@@ -6091,7 +5442,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[5]_i_1_n_0\,
       Q => write_data_ctr(5)
@@ -6102,7 +5453,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[6]_i_1_n_0\,
       Q => write_data_ctr(6)
@@ -6113,7 +5464,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[7]_i_1_n_0\,
       Q => write_data_ctr(7)
@@ -6124,7 +5475,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[8]_i_1_n_0\,
       Q => write_data_ctr(8)
@@ -6135,7 +5486,7 @@ write_data_ctr0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       C => clk_spi_in,
-      CE => write_data_ctr_1,
+      CE => write_data_ctr_0,
       CLR => noip_ctrl_slave_lite_v1_0_S00_AXI_inst_n_1,
       D => \write_data_ctr[9]_i_1_n_0\,
       Q => write_data_ctr(9)
@@ -6193,7 +5544,7 @@ end main_design_noip_ctrl_0_0;
 
 architecture STRUCTURE of main_design_noip_ctrl_0_0 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute x_interface_info : string;
   attribute x_interface_info of miso : signal is "xilinx.com:interface:spi:1.0 noip_spi IO1_I";
   attribute x_interface_info of mosi : signal is "xilinx.com:interface:spi:1.0 noip_spi IO1_O";
@@ -6229,7 +5580,22 @@ begin
   noip_reset_n(1) <= \<const0>\;
   s00_axi_bresp(1) <= \<const0>\;
   s00_axi_bresp(0) <= \<const0>\;
-  s00_axi_rdata(31 downto 16) <= \^s00_axi_rdata\(31 downto 16);
+  s00_axi_rdata(31) <= \<const0>\;
+  s00_axi_rdata(30) <= \<const0>\;
+  s00_axi_rdata(29) <= \<const0>\;
+  s00_axi_rdata(28) <= \<const0>\;
+  s00_axi_rdata(27) <= \<const0>\;
+  s00_axi_rdata(26) <= \<const0>\;
+  s00_axi_rdata(25) <= \<const0>\;
+  s00_axi_rdata(24) <= \<const0>\;
+  s00_axi_rdata(23) <= \<const0>\;
+  s00_axi_rdata(22) <= \<const0>\;
+  s00_axi_rdata(21) <= \<const0>\;
+  s00_axi_rdata(20) <= \<const0>\;
+  s00_axi_rdata(19) <= \<const0>\;
+  s00_axi_rdata(18) <= \<const0>\;
+  s00_axi_rdata(17) <= \<const0>\;
+  s00_axi_rdata(16) <= \<const0>\;
   s00_axi_rdata(15) <= \<const0>\;
   s00_axi_rdata(14) <= \<const0>\;
   s00_axi_rdata(13) <= \<const0>\;
@@ -6258,7 +5624,6 @@ U0: entity work.main_design_noip_ctrl_0_0_noip_ctrl
       clk_72M_pll => clk_72M_pll,
       clk_pll_out(0 to 1) => clk_pll_out(0 to 1),
       clk_spi_in => clk_spi_in,
-      miso => miso,
       mosi => mosi,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
@@ -6266,7 +5631,6 @@ U0: entity work.main_design_noip_ctrl_0_0_noip_ctrl
       s00_axi_awaddr(1 downto 0) => s00_axi_awaddr(3 downto 2),
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
-      s00_axi_rdata(19 downto 4) => \^s00_axi_rdata\(31 downto 16),
       s00_axi_rdata(3 downto 0) => \^s00_axi_rdata\(3 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),

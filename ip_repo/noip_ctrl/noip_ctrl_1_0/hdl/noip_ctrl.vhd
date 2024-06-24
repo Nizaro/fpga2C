@@ -342,11 +342,16 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 			send_data(3 downto 2) <= sensor_id;
 			if(readyflag = '1') then
 				send_data(1 downto 0) <= "11";
+				send_data(31 downto 4) <= (others => '0');
 			elsif(powerdownflag = '1') then
 				send_data(1 downto 0) <= "00";
+				send_data(31 downto 4) <= (others => '0');
 			elsif(spiflag = '1') then
 				send_data(1 downto 0) <= "01";
 				send_data(31 downto 16) <= spi_data;
+				send_data(31 downto 4) <= (others => '0');
+			else
+				send_data <= send_data;
 			end if;
 		end if;
 

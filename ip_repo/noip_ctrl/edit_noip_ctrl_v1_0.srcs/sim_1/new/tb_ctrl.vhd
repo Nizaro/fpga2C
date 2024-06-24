@@ -113,7 +113,7 @@ workctrl : entity work.noip_ctrl(arch_imp)
 		s00_axi_rready => s00_axi_rready
     );
 
-    clk_spi_in <= not clk_spi_in after 1ns;
+    clk_spi_in <= not clk_spi_in after 1 ns;
 
     clk_72M_pll <= not clk_72M_pll after 1389 ps;
 

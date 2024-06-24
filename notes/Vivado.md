@@ -1,5 +1,4 @@
 
-# REGARDER LE RESULTAT SYNTH  de NOIP_LVDS_STREAM_0
 
 https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/
 

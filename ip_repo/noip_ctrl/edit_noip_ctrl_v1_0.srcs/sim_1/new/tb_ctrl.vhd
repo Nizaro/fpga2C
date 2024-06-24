@@ -115,6 +115,8 @@ workctrl : entity work.noip_ctrl(arch_imp)
 
     clk_spi_in <= not clk_spi_in after 1ns;
 
+    clk_72M_pll <= not clk_72M_pll after 1389 ps;
+
     s00_axi_aclk <= clk_spi_in;
     
     s00_axi_aresetn <= '1' after 2 ns;

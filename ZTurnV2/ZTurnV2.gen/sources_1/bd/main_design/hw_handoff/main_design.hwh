@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 24 11:21:44 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 25 14:45:48 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -107,6 +107,11 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="72000000" DIR="O" NAME="clk_test_port" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="lvds_clk_0_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_n">
@@ -7854,6 +7859,7 @@
         <PORT CLKFREQUENCY="72000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_72M_pll"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_test_port"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">

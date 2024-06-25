@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Mon Jun 24 11:21:42 2024
+--Date        : Tue Jun 25 14:45:46 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -35,6 +35,7 @@ entity main_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    clk_test_port : out STD_LOGIC;
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -135,7 +136,8 @@ architecture STRUCTURE of main_design_wrapper is
     lvds_dout3_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_dout3_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_sync_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
-    lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 )
+    lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    clk_test_port : out STD_LOGIC
   );
   end component main_design;
 begin
@@ -162,6 +164,7 @@ main_design_i: component main_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      clk_test_port => clk_test_port,
       lvds_clk_0_n(0) => lvds_clk_0_n(0),
       lvds_clk_0_p(0) => lvds_clk_0_p(0),
       lvds_clk_1_n(0) => lvds_clk_1_n(0),

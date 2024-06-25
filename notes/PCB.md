@@ -1,4 +1,4 @@
-
+	
 BOM  :
 - 2x résistances de 47k, taille 0603 en CMS : https://eu.mouser.com/ProductDetail/Panasonic/ERA-3AED473V?qs=sGAEpiMZZMvdGkrng054t%252Bl8%252B9D8YbFNy%252B3GoZaZX5g%3D
 Trois valeurs de capacités pour découplage, taille 0603, diélectrique X7R, en CMS :
@@ -24,5 +24,11 @@ https://www.engineersgarage.com/pcb-designing-using-kicad-part-12-12-multilayer-
 
 https://forum.kicad.info/t/multi-layer-pcb-tutorial/31619
 
+[JLC PCB](https://cart.jlcpcb.com/quote)
 
-GLC PCB
+4 layer
+
+https://support.xilinx.com/s/question/0D52E00006hpRLbSAM/inverting-lvds-signals-for-efficient-pcb-layout-with-zynq7000?language=en_US
+## Dimensions
+
+56 mm inter-connecteur (inside-outside)

@@ -69,3 +69,5 @@ set_property src_info {type:XDC file:1 line:83 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN Y7 [get_ports {vddpix_toggle[0]}]
 set_property src_info {type:XDC file:1 line:84 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y6 [get_ports {vddpix_toggle[1]}]
+set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M15 [get_ports clk_test_port]

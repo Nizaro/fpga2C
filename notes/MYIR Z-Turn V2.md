@@ -23,6 +23,6 @@ Nécessite LVDS_25 ou BLVDS_25, alimentation 2.5V
 ~~JTAG 14 pins~~
 [Prepare boot image](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841976/Prepare+boot+image)
 
-# Dimensions
-
-56 mm inter-connecteur (inside-outside)
+D25 (blue) : powered (from VDD_33)
+D7 (red) : FPGA_INIT_DONE
+D29 and D30 (green) : user leds

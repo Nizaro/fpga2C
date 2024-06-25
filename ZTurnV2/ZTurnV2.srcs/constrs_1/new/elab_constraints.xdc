@@ -84,3 +84,6 @@ set_property PACKAGE_PIN Y7 [get_ports {vddpix_toggle[0]}]
 set_property PACKAGE_PIN Y6 [get_ports {vddpix_toggle[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {vddpix_toggle[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {vddpix_toggle[1]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk_test_port]
+set_property PACKAGE_PIN M15 [get_ports clk_test_port]

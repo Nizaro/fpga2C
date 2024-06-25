@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Mon Jun 24 11:21:42 2024
+--Date        : Tue Jun 25 14:45:46 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4086,6 +4086,7 @@ entity main_design is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    clk_test_port : out STD_LOGIC;
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4882,6 +4883,8 @@ architecture STRUCTURE of main_design is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute X_INTERFACE_INFO of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
+  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 72000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -4959,6 +4962,7 @@ begin
   IBUF_DS_P_1_2(0) <= lvds_dout2_0_p(0);
   IBUF_DS_P_1_3(0) <= lvds_dout0_1_p(0);
   IBUF_DS_P_1_4(0) <= lvds_dout2_1_p(0);
+  clk_test_port <= processing_system7_0_FCLK_CLK1;
   lvds_dout1_0_n_1(0) <= lvds_dout1_0_n(0);
   lvds_dout1_0_n_2(0) <= lvds_dout3_0_n(0);
   lvds_dout1_0_n_3(0) <= lvds_dout1_1_n(0);

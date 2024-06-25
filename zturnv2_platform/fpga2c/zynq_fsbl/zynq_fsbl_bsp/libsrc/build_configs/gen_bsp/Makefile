@@ -165,6 +165,136 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named combined
+
+# Build rule for target.
+combined: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 combined
+.PHONY : combined
+
+# fast build rule for target.
+combined/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/CMakeFiles/combined.dir/build.make libsrc/CMakeFiles/combined.dir/build
+.PHONY : combined/fast
+
+#=============================================================================
+# Target rules for targets named axidma
+
+# Build rule for target.
+axidma: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 axidma
+.PHONY : axidma
+
+# fast build rule for target.
+axidma/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/axidma/src/CMakeFiles/axidma.dir/build.make libsrc/axidma/src/CMakeFiles/axidma.dir/build
+.PHONY : axidma/fast
+
+#=============================================================================
+# Target rules for targets named coresightps_dcc
+
+# Build rule for target.
+coresightps_dcc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coresightps_dcc
+.PHONY : coresightps_dcc
+
+# fast build rule for target.
+coresightps_dcc/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/build.make libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/build
+.PHONY : coresightps_dcc/fast
+
+#=============================================================================
+# Target rules for targets named devcfg
+
+# Build rule for target.
+devcfg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 devcfg
+.PHONY : devcfg
+
+# fast build rule for target.
+devcfg/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/devcfg/src/CMakeFiles/devcfg.dir/build.make libsrc/devcfg/src/CMakeFiles/devcfg.dir/build
+.PHONY : devcfg/fast
+
+#=============================================================================
+# Target rules for targets named dmaps
+
+# Build rule for target.
+dmaps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dmaps
+.PHONY : dmaps
+
+# fast build rule for target.
+dmaps/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/dmaps/src/CMakeFiles/dmaps.dir/build.make libsrc/dmaps/src/CMakeFiles/dmaps.dir/build
+.PHONY : dmaps/fast
+
+#=============================================================================
+# Target rules for targets named scugic
+
+# Build rule for target.
+scugic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scugic
+.PHONY : scugic
+
+# fast build rule for target.
+scugic/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/scugic/src/CMakeFiles/scugic.dir/build.make libsrc/scugic/src/CMakeFiles/scugic.dir/build
+.PHONY : scugic/fast
+
+#=============================================================================
+# Target rules for targets named scutimer
+
+# Build rule for target.
+scutimer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scutimer
+.PHONY : scutimer
+
+# fast build rule for target.
+scutimer/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/scutimer/src/CMakeFiles/scutimer.dir/build.make libsrc/scutimer/src/CMakeFiles/scutimer.dir/build
+.PHONY : scutimer/fast
+
+#=============================================================================
+# Target rules for targets named scuwdt
+
+# Build rule for target.
+scuwdt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scuwdt
+.PHONY : scuwdt
+
+# fast build rule for target.
+scuwdt/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/build.make libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/build
+.PHONY : scuwdt/fast
+
+#=============================================================================
+# Target rules for targets named xadcps
+
+# Build rule for target.
+xadcps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xadcps
+.PHONY : xadcps
+
+# fast build rule for target.
+xadcps/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/xadcps/src/CMakeFiles/xadcps.dir/build.make libsrc/xadcps/src/CMakeFiles/xadcps.dir/build
+.PHONY : xadcps/fast
+
+#=============================================================================
+# Target rules for targets named xilstandalone
+
+# Build rule for target.
+xilstandalone: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xilstandalone
+.PHONY : xilstandalone
+
+# fast build rule for target.
+xilstandalone/fast:
+	$(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build
+.PHONY : xilstandalone/fast
+
+#=============================================================================
 # Target rules for targets named xiltimer
 
 # Build rule for target.
@@ -203,19 +333,6 @@ xilrsa/fast:
 	$(MAKE) $(MAKESILENT) -f libsrc/xilrsa/src/CMakeFiles/xilrsa.dir/build.make libsrc/xilrsa/src/CMakeFiles/xilrsa.dir/build
 .PHONY : xilrsa/fast
 
-#=============================================================================
-# Target rules for targets named xilstandalone
-
-# Build rule for target.
-xilstandalone: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xilstandalone
-.PHONY : xilstandalone
-
-# fast build rule for target.
-xilstandalone/fast:
-	$(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build
-.PHONY : xilstandalone/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -228,6 +345,15 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... combined"
+	@echo "... axidma"
+	@echo "... coresightps_dcc"
+	@echo "... devcfg"
+	@echo "... dmaps"
+	@echo "... scugic"
+	@echo "... scutimer"
+	@echo "... scuwdt"
+	@echo "... xadcps"
 	@echo "... xilffs"
 	@echo "... xilrsa"
 	@echo "... xilstandalone"

@@ -235,8 +235,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/tools/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-strip
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/cortexa9_toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/cortexa9_toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -333,6 +333,15 @@ XILTIMER_tick_timer:STRING=None
 YOCTO:BOOL=OFF
 
 //Value Computed by CMake
+axidma_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/axidma/src
+
+//Value Computed by CMake
+axidma_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+axidma_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/axidma/src
+
+//Value Computed by CMake
 bsp_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
 
 //Value Computed by CMake
@@ -340,6 +349,51 @@ bsp_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 bsp_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp
+
+//Value Computed by CMake
+common_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/common/src
+
+//Value Computed by CMake
+common_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+common_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/common/src
+
+//Value Computed by CMake
+coresightps_dcc_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src
+
+//Value Computed by CMake
+coresightps_dcc_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+coresightps_dcc_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/coresightps_dcc/src
+
+//Value Computed by CMake
+devcfg_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src
+
+//Value Computed by CMake
+devcfg_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+devcfg_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/devcfg/src
+
+//Value Computed by CMake
+dmaps_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src
+
+//Value Computed by CMake
+dmaps_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+dmaps_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/dmaps/src
+
+//Value Computed by CMake
+libxil_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc
+
+//Value Computed by CMake
+libxil_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+libxil_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc
 
 //Archiver
 proc_archiver:STRING=arm-none-eabi-gcc-ar
@@ -355,6 +409,33 @@ proc_compiler_flags:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=ha
 
 //Extra Compiler Flags
 proc_extra_compiler_flags:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+
+//Value Computed by CMake
+scugic_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src
+
+//Value Computed by CMake
+scugic_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+scugic_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/scugic/src
+
+//Value Computed by CMake
+scutimer_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src
+
+//Value Computed by CMake
+scutimer_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+scutimer_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/scutimer/src
+
+//Value Computed by CMake
+scuwdt_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src
+
+//Value Computed by CMake
+scuwdt_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+scuwdt_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/scuwdt/src
 
 //This option is not supported in the Unified Vitis IDE in this
 // version. Change to the classic IDE if you want to use this option.
@@ -392,6 +473,15 @@ standalone_xpm_support:STRING=None
 
 //Not needed any more in Unified Vitis
 standalone_zynqmp_fsbl_bsp:STRING=None
+
+//Value Computed by CMake
+xadcps_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src
+
+//Value Computed by CMake
+xadcps_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+xadcps_SOURCE_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/xadcps/src
 
 //Value Computed by CMake
 xilffs_BINARY_DIR:STATIC=/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src
@@ -543,7 +633,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=26
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

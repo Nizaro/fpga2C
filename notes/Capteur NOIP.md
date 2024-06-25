@@ -43,7 +43,7 @@ Du moins fin/fspi >= 6, comme fin_pll = 72M, f_spi <= 12 M.
 - Clock Generator - enable all clocks, use PLL, and divide by 5 : 0x5 @32
 - General Logic enabled : 0x1 @34
 - Image core - enable power, mux, and bias : 0x7 @40
-- AFE (Analog Front End) - ??? : @48
+- AFE (Analog Front End) - powered on, 0x1 @48
 - Bias powered up : 0x1 @64
 - LVDS I/O - clock, sync and data on : 0x7 @ 112
 - Sync Words : untouched @116

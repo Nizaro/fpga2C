@@ -1,0 +1,52 @@
+{
+  "name": "fpga2c",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "/home/nothon/fpga2C/ZTurnV2/main_design_wrapper.xsa",
+    "xsaPathInPlatform": "fpga2c/hw/main_design_wrapper.xsa",
+    "emulationXsa": "",
+    "emulationXsaPathInPlatform": "",
+    "isCustomFSBL": false,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED",
+    "processorsMap": {
+      "ps7_cortexa9_0": "ps7_cortexa9",
+      "ps7_cortexa9_1": "ps7_cortexa9"
+    },
+    "supportedFamily": "zynq",
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "zynq_fsbl",
+        "displayName": "zynq_fsbl",
+        "processor": "ps7_cortexa9_0",
+        "cpuType": "cortex-a9",
+        "cpuInstance": "ps7_cortexa9_0",
+        "os": "standalone",
+        "appTemplate": "zynq_fsbl",
+        "isBootDomain": true,
+        "qemuData": "/home/nothon/fpga2C/zturnv2_platform/fpga2c/resources/zynq_fsbl/qemu",
+        "qemuArgsFile": "/home/nothon/fpga2C/zturnv2_platform/fpga2c/resources/zynq_fsbl/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "",
+        "isBSPGenReq": false
+      },
+      {
+        "name": "linux_ps7_cortexa9",
+        "displayName": "linux_ps7_cortexa9",
+        "processor": "ps7_cortexa9",
+        "cpuType": "cortex-a9",
+        "cpuInstance": "ps7_cortexa9",
+        "os": "linux",
+        "qemuData": "",
+        "qemuArgsFile": "/home/nothon/fpga2C/zturnv2_platform/fpga2c/resources/linux_ps7_cortexa9/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "",
+        "bifFile": "",
+        "bootDirectory": "",
+        "sdCardDirectory": ""
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  }
+}

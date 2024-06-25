@@ -18,7 +18,11 @@ Bank 35 : 24 paires (10-11-12-13 et 20-21-22-23)
 Nécessite LVDS_25 ou BLVDS_25, alimentation 2.5V
 -> Pas présent : **INPUT ONLY**
 
-# Allocation
+# Programmation
 
-B34 en LVCMOS
-Pins J11-(37-47) - paires B34_6,8,11 - SPI
+~~JTAG 14 pins~~
+[Prepare boot image](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841976/Prepare+boot+image)
+
+# Dimensions
+
+56 mm inter-connecteur (inside-outside)

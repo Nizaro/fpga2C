@@ -26,7 +26,7 @@ https://forum.kicad.info/t/multi-layer-pcb-tutorial/31619
 
 [JLC PCB](https://cart.jlcpcb.com/quote)
 
-4 layer
+4 layer - JLC04161H-7628
 
 100Ω diff impedance (50 Ω single-ended)
 

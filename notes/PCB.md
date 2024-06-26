@@ -28,7 +28,16 @@ https://forum.kicad.info/t/multi-layer-pcb-tutorial/31619
 
 4 layer
 
+100Ω diff impedance (50 Ω single-ended)
+
+[JLCPCB Stackup (impedance-controlled)](https://jlcpcb.com/impedance)
+
+https://www.digikey.com/en/maker/projects/how-to-route-differential-pairs-in-kicad-for-usb/45b99011f5d34879ae1831dce1f13e93
+
 https://support.xilinx.com/s/question/0D52E00006hpRLbSAM/inverting-lvds-signals-for-efficient-pcb-layout-with-zynq7000?language=en_US
+https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en_US
+
+-> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
 ## Dimensions
 
 56 mm inter-connecteur (inside-outside)

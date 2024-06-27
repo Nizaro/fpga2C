@@ -16,7 +16,7 @@ Et un capteur de plus
 ## Connecteurs
 
 + points de test pour les couches internes?
-## Design
+# Design
 
 [LVDS PCB Design Guidelines (Cadence)](https://resources.pcb.cadence.com/blog/2023-lvds-pcb-layout-guidelines)
 
@@ -38,6 +38,39 @@ https://support.xilinx.com/s/question/0D52E00006hpRLbSAM/inverting-lvds-signals-
 https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en_US
 
 -> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
-## Dimensions
 
-56 mm inter-connecteur (inside-outside)
+## Paramètres
+
+Distance entre pins NOIP : 1 mm
+(en mm) W = 0.29, S = 0.2, B = 0.2104 , D > 0.4
+## Effets LineCalc
+
+W↗ : Ω↘
+S↗ : Ω↗
+H↗ : Ω↗
+F↗ : Ω↘
+## Limites JLCPCB
+
+Clearance : 0.127 mm
+Trace Width : 0.09 mm
+Trace Spacing : 0.09 mm
+Prepreg depth : 0.2104 mm
+## Documents
+
+- [ ] Altera : Board Design Guidelines for LVDS Systems
+
+## List of design guidelines
+
+- [x] Space between the conductors should not be more than twice the width (S < 2W)
+- [x] Thickness of the board should be more than the space between the conductors (B > S)
+- [x] Space between two adjacent differential pairs should be greater than or equal to twice the space between the two individual conductors. (D > 2S)
+- [ ] The commonly used FR-4 material works well for low frequency (500 to 600 MHz) applications. G-TEK or Teflon can be considered for high-speed designs.
+- [ ] When using LVDS devices, all the VCC_CLK and VCC_CKOUT pins should be bypassed with a 0.1-, 0.01-, and 0.001 µF mica, ceramic or polystyrene 0805-size surface-mount chip capacitors connected in parallel. These capacitors should be placed immediately underneath the pins. In addition to these capacitors, another 2.7 µF capacitor should be placed close to the pin.
+- [ ] Keep the LVDS drivers and the receiver as close to any connectors as possible.
+- [x] The physical length of each trace between the transmitter outputs and the connector should be matched to within 5 mm of each other to reduce data skew.
+- [x] Isolate LVDS signals from TTL signals to reduce crosstalk (preferably on different layers). 
+- [ ] Separate LVDS ground and supply planes.
+- [ ] Always use high-impedance, low-capacitance scope probes with a widebandwidth scope.
+- [ ] Keep stub lengths as short as possible.
+- [ ] Multiple vias should be used to connect to power and ground planes.
+

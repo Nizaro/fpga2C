@@ -49,6 +49,7 @@ Du moins fin/fspi >= 6, comme fin_pll = 72M, f_spi <= 12 M.
 - Sync Words : untouched @116
 - AEC - ??? : @160
 - Sequencer - disabled by default : @192
+- Monitor select : @192[13:11]
 - Only one ROI, ROI0 : 0x1 @195
 - 1 black line, no blank : 0x1 @197 / 2 black lines, 1 blank : 0x102 @197
 - Exposure / Frame Rate : @195-203

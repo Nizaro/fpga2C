@@ -70,8 +70,8 @@ Prepreg depth : 0.2104 mm
 - [ ] Keep the LVDS drivers and the receiver as close to any connectors as possible.
 - [x] The physical length of each trace between the transmitter outputs and the connector should be matched to within 5 mm of each other to reduce data skew.
 - [x] Isolate LVDS signals from TTL signals to reduce crosstalk (preferably on different layers). 
-- [ ] Separate LVDS ground and supply planes.
-- [ ] Always use high-impedance, low-capacitance scope probes with a widebandwidth scope.
+- [x] Separate LVDS ground and supply planes.
+- [ ] Always use high-impedance, low-capacitance scope probes with a wide bandwidth scope.
 - [ ] Keep stub lengths as short as possible.
 - [ ] Multiple vias should be used to connect to power and ground planes.
 

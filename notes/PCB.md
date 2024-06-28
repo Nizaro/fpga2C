@@ -13,6 +13,7 @@ Trois valeurs de capacités pour découplage, taille 0603, diélectrique X7R, en
 
 Et un capteur de plus
 
+**PAS DE VIS POUR SUPPORT LENTILLE !!!**
 ## Connecteurs
 
 + points de test pour les couches internes?
@@ -41,7 +42,7 @@ https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en
 
 ## Paramètres
 
-Distance entre pins NOIP : 1 mm
+Distance entre pins NOIP : 1.016 mm
 (en mm) W = 0.29, S = 0.2, B = 0.2104 , D > 0.4
 ## Effets LineCalc
 

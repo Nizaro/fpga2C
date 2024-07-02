@@ -77,5 +77,3 @@ Prepreg depth : 0.2104 mm
 
 ## Calculs
 
-
-

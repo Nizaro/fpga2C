@@ -13,7 +13,6 @@ Trois valeurs de capacités pour découplage, taille 0603, diélectrique X7R, en
 
 Et un capteur de plus
 
-**PAS DE VIS POUR SUPPORT LENTILLE !!!**
 ## Connecteurs
 
 + points de test pour les couches internes?
@@ -27,13 +26,8 @@ https://forum.kicad.info/t/multi-layer-pcb-tutorial/31619
 
 [JLC PCB](https://cart.jlcpcb.com/quote)
 
-4 layer - JLC04161H-7628
-
-100Ω diff impedance (50 Ω single-ended)
-
 [JLCPCB Stackup (impedance-controlled)](https://jlcpcb.com/impedance)
 
-https://www.digikey.com/en/maker/projects/how-to-route-differential-pairs-in-kicad-for-usb/45b99011f5d34879ae1831dce1f13e93
 
 https://support.xilinx.com/s/question/0D52E00006hpRLbSAM/inverting-lvds-signals-for-efficient-pcb-layout-with-zynq7000?language=en_US
 https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en_US
@@ -42,22 +36,6 @@ https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en
 
 https://www.zuken.com/us/blog/how-to-calculate-trace-length-time-delay-value-high-speed-signals/
 
-## Paramètres
-
-Distance entre pins NOIP : 1.016 mm
-(en mm) W = 0.29, S = 0.2, B = 0.2104 , D > 0.4
-## Effets LineCalc
-
-W↗ : Ω↘
-S↗ : Ω↗
-H↗ : Ω↗
-F↗ : Ω↘
-## Limites JLCPCB
-
-Clearance : 0.127 mm
-Trace Width : 0.09 mm
-Trace Spacing : 0.09 mm
-Prepreg depth : 0.2104 mm
 ## Documents
 
 - [ ] Altera : Board Design Guidelines for LVDS Systems
@@ -73,9 +51,7 @@ Prepreg depth : 0.2104 mm
 - [x] The physical length of each trace between the transmitter outputs and the connector should be matched to within 5 mm of each other to reduce data skew.
 - [x] Isolate LVDS signals from TTL signals to reduce crosstalk (preferably on different layers). 
 - [x] Separate LVDS ground and supply planes.
-- [ ] Always use high-impedance, low-capacitance scope probes with a wide bandwidth scope.
 - [x] Keep stub lengths as short as possible.
 - [x] Multiple vias should be used to connect to power and ground planes.
 
 ## Calculs
-

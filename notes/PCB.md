@@ -40,6 +40,8 @@ https://support.xilinx.com/s/question/0D52E00006iI4K4SAK/lvds-invert?language=en
 
 -> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
 
+https://www.zuken.com/us/blog/how-to-calculate-trace-length-time-delay-value-high-speed-signals/
+
 ## Paramètres
 
 Distance entre pins NOIP : 1.016 mm

@@ -1,5 +1,5 @@
 
-[How to choose optical format](https://www.1stvision.com/machine-vision-solutions/2017/08/how-does-a-lens-optical-format-relate-to-machine-vision-cameras.html)
+[1stvision - How to choose optical format](https://www.1stvision.com/machine-vision-solutions/2017/08/how-does-a-lens-optical-format-relate-to-machine-vision-cameras.html)
 
 ## Choix / Mail 1
 

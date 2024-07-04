@@ -30,7 +30,7 @@ Une partie importante de notre design est de limiter le *skew* (décalage tempor
 
 - 2x capteur d'image PYTHON 1300 : [NOIP1SN1300A-QTI sur Mouser](https://www.mouser.fr/ProductDetail/onsemi/NOIP1SN1300A-QTI?qs=tCMd4XlZ%2FiCOUhJPH02UtA%3D%3D)
 - 2x résistances de 47k, taille 0603 en CMS : [ERA-3AED473V sur Mouser](https://eu.mouser.com/ProductDetail/Panasonic/ERA-3AED473V?qs=sGAEpiMZZMvdGkrng054t%252Bl8%252B9D8YbFNy%252B3GoZaZX5g%3D)
-- 6x capacités de découplage 100nF, taille 0603, diélectrique X7R, en CMS : [KEMET C0603C104K3RACTU sur Mouser](https://eu.mouser.com/ProductDetail/KEMET/C0603C104K3RACTU?qs=l5k%252BbMnNDklvfdneglCDAg%3D%3D) 
+- 22x capacités de découplage 100nF, taille 0603, diélectrique X7R, en CMS : [KEMET C0603C104K3RACTU sur Mouser](https://eu.mouser.com/ProductDetail/KEMET/C0603C104K3RACTU?qs=l5k%252BbMnNDklvfdneglCDAg%3D%3D) 
 - 2x interrupteurs analogiques NX3L0 : [Mouser](https://eu.mouser.com/ProductDetail/NXP-Semiconductors/NX3L4053PW118?qs=vbj%2FKoHZRAjvxbPUnPksgQ%3D%3D)
 - 1x régulateur de tension 1.8V MIC5504 : [Mouser](https://www.mouser.fr/ProductDetail/Microchip-Technology/MIC5504-1.8YM5-TR?qs=U6T8BxXiZAWcKt0MaB%252BQvA%3D%3D) 
 - et ses 2x capacités céramiques 1uF X7R : [Taiyo Yuden MAJCT168BB7105KTEA01 sur Mouser](https://www.mouser.fr/ProductDetail/TAIYO-YUDEN/MAJCT168BB7105KTEA01?qs=sGAEpiMZZMuMW9TJLBQkXrqaXnLRHqgMZrnx5TAccu0%3D)

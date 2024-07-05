@@ -1,13 +1,16 @@
 
 # Connecteurs
 
-Samtec ERM/F8 : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/ERM8-010-05.0-L-DV-TR?qs=%252BZP6%2F%252BtExtAMeP5vcDbIEQ%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/ERF8-010-05.0-L-DV-TR?qs=%252BZP6%2F%252BtExtAFtKZ6nNV%252Bhw%3D%3D)
-Q-Pairs 0.80 mm (QTE/QSE) : [Terminal](https://www.mouser.fr/ProductDetail/Samtec/QTE-014-01-F-D-DP-A?qs=rU5fayqh%252BE1NSHYxMYkTeg%3D%3D), [Socket](https://www.mouser.fr/ProductDetail/Samtec/QSE-014-01-F-D-DP-A?qs=rU5fayqh%252BE3zTnCaz4JuSw%3D%3D)
+Samtec ERM/F8 0.80 mm : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/ERM8-010-05.0-L-DV-TR?qs=%252BZP6%2F%252BtExtAMeP5vcDbIEQ%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/ERF8-010-05.0-L-DV-TR?qs=%252BZP6%2F%252BtExtAFtKZ6nNV%252Bhw%3D%3D) - mating height : 7mm
+Q-Pairs 0.80mm (QTE/QSE-DP) : [Terminal](https://www.mouser.fr/ProductDetail/Samtec/QTE-014-01-F-D-DP-A?qs=rU5fayqh%252BE1NSHYxMYkTeg%3D%3D), [Socket](https://www.mouser.fr/ProductDetail/Samtec/QSE-014-01-F-D-DP-A?qs=rU5fayqh%252BE3zTnCaz4JuSw%3D%3D) - mating height : 5mm
+Q-Strip 0.80mm (QTE/QSE) : [Terminal](https://www.mouser.fr/ProductDetail/Samtec/QTE-020-01-F-D-A?qs=vqM95g%252BRBex9jOE4cARdGA%3D%3D), [Socket](https://www.mouser.fr/ProductDetail/Samtec/QSE-020-01-F-D-A?qs=vqM95g%252BRBeyc%2FYkUuCQZYw%3D%3D) - mating height : 5mm
 TEM AMPMODU, 1mm, 1x12 : [Header](https://www.mouser.fr/ProductDetail/TE-Connectivity/1MM-HU-D06-VS-00-F-TBP?qs=e8oIoAS2J1TTqwk9gWlCkw%3D%3D), [Receptacle](https://www.mouser.fr/ProductDetail/TE-Connectivity/1MM-R-D06-VS-00-F-TBP?qs=e8oIoAS2J1SlM6Fb%252B86WlA%3D%3D) - no footprint
+
+Samtec TFML 10 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-110-02-L-D-LC?qs=%252BZP6%2F%252BtExtArmFs140CHrg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-110-02-L-D-LC?qs=PB6%2FjmICvI1i91F47u2EEQ%3D%3D)
+Samtec TFML 15 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-115-02-L-D-LC?qs=%252BZP6%2F%252BtExtDiOSDxCqjesg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-115-02-L-D-LC?qs=PB6%2FjmICvI3gR60PA8%2FbQg%3D%3D)
 # Design
 
 -> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
-
 
 
 ## List of design guidelines

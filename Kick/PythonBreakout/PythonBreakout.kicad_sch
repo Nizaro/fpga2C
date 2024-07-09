@@ -3071,20 +3071,12 @@
 		(uuid "73d56042-f19b-41a0-b1f5-619701f758f2")
 	)
 	(no_connect
-		(at 78.74 93.98)
-		(uuid "7c791070-1574-4fb1-ac59-b3c89b63ee2b")
-	)
-	(no_connect
 		(at 66.04 88.9)
 		(uuid "7fe7e23e-ffeb-4b0b-a3df-fe472cca0174")
 	)
 	(no_connect
 		(at 125.73 59.69)
 		(uuid "8dfad0b2-b702-4ce9-9c2d-ef5bfe2102ea")
-	)
-	(no_connect
-		(at 66.04 93.98)
-		(uuid "9fb9b2ea-924a-4efe-837d-92ca44e3d22e")
 	)
 	(no_connect
 		(at 125.73 39.37)
@@ -6901,6 +6893,73 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 66.04 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab5f6a27-5a39-4ca2-af53-22f4b616e8e6")
+		(property "Reference" "#PWR028"
+			(at 59.69 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 62.23 93.9799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 66.04 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "caae960f-d7c8-4e0c-95ca-1d13ccc3c36f")
+		)
+		(instances
+			(project "PythonBreakout"
+				(path "/277e05da-ccda-4679-9933-a39aa09eccc2"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 48.26 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7028,6 +7087,73 @@
 			(project ""
 				(path "/277e05da-ccda-4679-9933-a39aa09eccc2"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 93.98 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6d4d6f3-8869-40c4-9752-29f9301780cb")
+		(property "Reference" "#PWR029"
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 82.55 93.9799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e6b3dae-de35-468b-962f-e1cda80eadaa")
+		)
+		(instances
+			(project "PythonBreakout"
+				(path "/277e05da-ccda-4679-9933-a39aa09eccc2"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)

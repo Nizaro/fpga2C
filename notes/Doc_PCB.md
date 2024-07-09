@@ -24,7 +24,7 @@ On a choisi de router les pistes de l'interface SPI sur la couche du haut pour p
 Sur la face du bas, on dispose le régulateur de tension et les interrupteurs de façon symétrique, pour réduire la longueur des pistes et limiter les croisements. En cas de chevauchement inévitable, on privilégie de faire passer les pistes d'alimentation par le plan de masse - c'est une pratique courante qui permet une bonne dissipation thermique, et en général les signaux qui évoluent très lentement peuvent passer sans problème par le plan de masse interne.
 Une fois tout cela routé, il faut relier les plans de masse et d'alimentation entièrement avec de nombreux vias, et découpler les grands puits de courant avec des capacités.
 
-Une partie importante de notre design est de limiter le *skew* (décalage temporel) entre les signaux et leur horloge, voire entre certains signaux eux-mêmes. Comme l'impédance des pistes est constante sur tout le circuit, la vitesse des signaux est la même, et donc que pour faire arriver deux signaux au même moment, il faut rendre leurs longueurs de piste égales. L'outil de tuning de KiCad peut faire cela : il suffit de noter la longueur de la piste la plus longue (on ne peut pas facilement raccourcir des pistes), puis de rallonger les autres pistes avec l'outil, qui crée des "accordéons". Cette pratique permet de synchroniser toutes les paires LVDS et les signaux SPI avec leurs horloges, et de rentre les deux triggers simultanés pour permettre une prise de vue synchronisée chez les deux capteurs. 
+Une partie importante de notre design est de limiter le *skew* (décalage temporel) entre les signaux et leur horloge, voire entre certains signaux eux-mêmes. Comme l'impédance des pistes est constante sur tout le circuit, la vitesse des signaux est la même, et donc que pour faire arriver deux signaux au même moment, il faut rendre leurs longueurs de piste égales. L'outil de tuning de KiCad peut faire cela : il suffit de noter la longueur de la piste la plus longue (on ne peut pas facilement raccourcir des pistes), puis de rallonger les autres pistes avec l'outil, qui crée des "accordéons". Cette pratique permet de synchroniser toutes les paires LVDS et les signaux SPI avec leurs horloges, et de rendre les deux triggers simultanés pour permettre une prise de vue synchronisée chez les deux capteurs. 
 
 # BOM
 
@@ -34,7 +34,11 @@ Une partie importante de notre design est de limiter le *skew* (décalage tempor
 - 2x interrupteurs analogiques NX3L0 : [Mouser](https://eu.mouser.com/ProductDetail/NXP-Semiconductors/NX3L4053PW118?qs=vbj%2FKoHZRAjvxbPUnPksgQ%3D%3D)
 - 1x régulateur de tension 1.8V MIC5504 : [Mouser](https://www.mouser.fr/ProductDetail/Microchip-Technology/MIC5504-1.8YM5-TR?qs=U6T8BxXiZAWcKt0MaB%252BQvA%3D%3D) 
 - et ses 2x capacités céramiques 1uF X7R : [Taiyo Yuden MAJCT168BB7105KTEA01 sur Mouser](https://www.mouser.fr/ProductDetail/TAIYO-YUDEN/MAJCT168BB7105KTEA01?qs=sGAEpiMZZMuMW9TJLBQkXrqaXnLRHqgMZrnx5TAccu0%3D)
-- 2x connecteur Samtec 80 pins : [TFM-140-12-L-D-A sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/TFM-140-12-L-D-A?qs=Cqqh%252BS766wmcDd3GIeeEAw%3D%3D)
+- 2x connecteurs Samtec TFM 80 pins : [TFM-140-12-L-D-A sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/TFM-140-12-L-D-A?qs=Cqqh%252BS766wmcDd3GIeeEAw%3D%3D)
+- 2x connecteurs Samtec TFML 15 pins : [TFML-115-02-L-D-LC sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/TFML-115-02-L-D-LC?qs=%252BZP6%2F%252BtExtDiOSDxCqjesg%3D%3D)
+- 2x connecteurs Samtec SFML 15 pins : [SFML-115-02-L-D-LC sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/SFML-115-02-L-D-LC?qs=PB6%2FjmICvI3gR60PA8%2FbQg%3D%3D)
+- 2x connecteurs Samtec TFML 10 pins : [TFML-110-02-L-D-LC sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/TFML-110-02-L-D-LC?qs=%252BZP6%2F%252BtExtArmFs140CHrg%3D%3D)
+- 2x connecteurs Samtec SFML 10 pins : [SFML-110-02-L-D-LC sur Mouser](https://www.mouser.fr/ProductDetail/Samtec/SFML-110-02-L-D-LC?qs=PB6%2FjmICvI1i91F47u2EEQ%3D%3D)
 
 # Annexes
 

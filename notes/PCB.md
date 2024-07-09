@@ -6,13 +6,19 @@ Q-Pairs 0.80mm (QTE/QSE-DP) : [Terminal](https://www.mouser.fr/ProductDetail/Sam
 Q-Strip 0.80mm (QTE/QSE) : [Terminal](https://www.mouser.fr/ProductDetail/Samtec/QTE-020-01-F-D-A?qs=vqM95g%252BRBex9jOE4cARdGA%3D%3D), [Socket](https://www.mouser.fr/ProductDetail/Samtec/QSE-020-01-F-D-A?qs=vqM95g%252BRBeyc%2FYkUuCQZYw%3D%3D) - mating height : 5mm
 TEM AMPMODU, 1mm, 1x12 : [Header](https://www.mouser.fr/ProductDetail/TE-Connectivity/1MM-HU-D06-VS-00-F-TBP?qs=e8oIoAS2J1TTqwk9gWlCkw%3D%3D), [Receptacle](https://www.mouser.fr/ProductDetail/TE-Connectivity/1MM-R-D06-VS-00-F-TBP?qs=e8oIoAS2J1SlM6Fb%252B86WlA%3D%3D) - no footprint
 
-Samtec TFML 10 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-110-02-L-D-LC?qs=%252BZP6%2F%252BtExtArmFs140CHrg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-110-02-L-D-LC?qs=PB6%2FjmICvI1i91F47u2EEQ%3D%3D)
-Samtec TFML 15 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-115-02-L-D-LC?qs=%252BZP6%2F%252BtExtDiOSDxCqjesg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-115-02-L-D-LC?qs=PB6%2FjmICvI3gR60PA8%2FbQg%3D%3D)
+Samtec FML 10 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-110-02-L-D-LC?qs=%252BZP6%2F%252BtExtArmFs140CHrg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-110-02-L-D-LC?qs=PB6%2FjmICvI1i91F47u2EEQ%3D%3D)
+Samtec FML 15 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-115-02-L-D-LC?qs=%252BZP6%2F%252BtExtDiOSDxCqjesg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-115-02-L-D-LC?qs=PB6%2FjmICvI3gR60PA8%2FbQg%3D%3D)
 # Design
 
 -> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
 
+## Ordering Info
 
+Layers : 4
+MainBoard : 128.79 x 67 mm
+Breakout : 29 x 37.75 mm
+Impedance Control : Yes
+Layer Stackup : JLC04161H-7628 (la première option)
 ## List of design guidelines
 
 - [x] Space between the conductors should not be more than twice the width (S < 2W)

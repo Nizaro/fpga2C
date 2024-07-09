@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 25 14:45:48 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul  9 13:52:10 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -261,12 +261,22 @@
         <CONNECTION INSTANCE="noip_ctrl_0" PORT="mosi"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="noip_mosi1" SIGIS="undef" SIGNAME="noip_ctrl_0_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="noip_ctrl_0" PORT="mosi"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" LEFT="0" NAME="noip_rst_n" RIGHT="1" SIGIS="undef" SIGNAME="noip_ctrl_0_noip_reset_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="noip_ctrl_0" PORT="noip_reset_n"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="noip_sck" SIGIS="undef" SIGNAME="noip_ctrl_0_sck">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="noip_ctrl_0" PORT="sck"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="noip_sck1" SIGIS="undef" SIGNAME="noip_ctrl_0_sck">
       <CONNECTIONS>
         <CONNECTION INSTANCE="noip_ctrl_0" PORT="sck"/>
       </CONNECTIONS>
@@ -5421,6 +5431,29 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_0_concat_dout">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_data_0_inverter" PORT="Op1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/lvds_data_0_inverter" HWVERSION="2.0" INSTANCE="lvds_data_0_inverter" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_0_concat_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_data_0_concat" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_0_inverter_Res">
+          <CONNECTIONS>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="lvds_data"/>
           </CONNECTIONS>
         </PORT>
@@ -5585,6 +5618,29 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_1_concat_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_data_1_inverter" PORT="Op1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/lvds_data_1_inverter" HWVERSION="2.0" INSTANCE="lvds_data_1_inverter" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_lvds_data_0_inverter_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_1_concat_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_data_1_concat" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="lvds_data_1_inverter_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="lvds_data"/>
           </CONNECTIONS>
@@ -5982,7 +6038,7 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_sync_0_ibuf_IBUF_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="lvds_sync"/>
+            <CONNECTION INSTANCE="lvds_sync_0_inverter" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5996,6 +6052,29 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/lvds_sync_0_inverter" HWVERSION="2.0" INSTANCE="lvds_sync_0_inverter" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_lvds_sync_1_inverter_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="lvds_sync_0_ibuf_IBUF_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_sync_0_ibuf" PORT="IBUF_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="lvds_sync_0_inverter_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="lvds_sync"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="32" FULLNAME="/lvds_sync_1_ibuf" HWVERSION="2.2" INSTANCE="lvds_sync_1_ibuf" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
       <DOCUMENTS/>
@@ -6027,7 +6106,7 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_sync_1_ibuf_IBUF_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="lvds_sync"/>
+            <CONNECTION INSTANCE="lvds_sync_1_inverter" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6041,6 +6120,29 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/lvds_sync_1_inverter" HWVERSION="2.0" INSTANCE="lvds_sync_1_inverter" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_lvds_data_1_inverter_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="lvds_sync_1_ibuf_IBUF_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lvds_sync_1_ibuf" PORT="IBUF_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="lvds_sync_1_inverter_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="lvds_sync"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="4" FULLNAME="/monitor0_slice0" HWVERSION="1.0" INSTANCE="monitor0_slice0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
@@ -6175,6 +6277,7 @@
         <PORT DIR="O" NAME="mosi" SIGIS="undef" SIGNAME="noip_ctrl_0_mosi">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="noip_mosi"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="noip_mosi1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="noip_reset_n" RIGHT="1" SIGIS="undef" SIGNAME="noip_ctrl_0_noip_reset_n">
@@ -6290,6 +6393,7 @@
         <PORT DIR="O" NAME="sck" SIGIS="undef" SIGNAME="noip_ctrl_0_sck">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="noip_sck"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="noip_sck1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="ss_n" RIGHT="1" SIGIS="undef" SIGNAME="noip_ctrl_0_ss_n">
@@ -6401,14 +6505,14 @@
             <CONNECTION INSTANCE="lvds_clkin_0_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="lvds_data" RIGHT="3" SIGIS="undef" SIGNAME="lvds_data_0_concat_dout">
+        <PORT DIR="I" LEFT="0" NAME="lvds_data" RIGHT="3" SIGIS="undef" SIGNAME="lvds_data_0_inverter_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="lvds_data_0_concat" PORT="dout"/>
+            <CONNECTION INSTANCE="lvds_data_0_inverter" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="lvds_sync" SIGIS="undef" SIGNAME="lvds_sync_0_ibuf_IBUF_OUT">
+        <PORT DIR="I" NAME="lvds_sync" SIGIS="undef" SIGNAME="lvds_sync_0_inverter_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="lvds_sync_0_ibuf" PORT="IBUF_OUT"/>
+            <CONNECTION INSTANCE="lvds_sync_0_inverter" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
@@ -6569,14 +6673,14 @@
             <CONNECTION INSTANCE="lvds_clkin_1_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="lvds_data" RIGHT="3" SIGIS="undef" SIGNAME="lvds_data_1_concat_dout">
+        <PORT DIR="I" LEFT="0" NAME="lvds_data" RIGHT="3" SIGIS="undef" SIGNAME="lvds_data_1_inverter_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="lvds_data_1_concat" PORT="dout"/>
+            <CONNECTION INSTANCE="lvds_data_1_inverter" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="lvds_sync" SIGIS="undef" SIGNAME="lvds_sync_1_ibuf_IBUF_OUT">
+        <PORT DIR="I" NAME="lvds_sync" SIGIS="undef" SIGNAME="lvds_sync_1_inverter_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="lvds_sync_1_ibuf" PORT="IBUF_OUT"/>
+            <CONNECTION INSTANCE="lvds_sync_1_inverter" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">

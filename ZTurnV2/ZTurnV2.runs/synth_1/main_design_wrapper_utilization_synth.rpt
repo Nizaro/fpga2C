@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Tue Jun 25 14:49:24 2024
+| Date         : Tue Jul  9 14:01:57 2024
 | Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
 | Design       : main_design_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   24 |     0 |          0 |       125 | 19.20 |
+| Bonded IOB                  |   26 |     0 |          0 |       125 | 20.80 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,7 +149,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   19 |                  IO |
+| OBUF     |   21 |                  IO |
 | IBUF     |    5 |                  IO |
 +----------+------+---------------------+
 
@@ -164,12 +164,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | main_design_xbar_3                 |    1 |
 | main_design_xbar_2                 |    1 |
 | main_design_xbar_1                 |    1 |
+| main_design_util_vector_logic_0_0  |    1 |
 | main_design_util_ds_buf_0_2        |    1 |
 | main_design_processing_system7_0_0 |    1 |
 | main_design_proc_sys_reset_0_0     |    1 |
 | main_design_noip_lvds_stream_0_1   |    1 |
 | main_design_noip_lvds_stream_0_0   |    1 |
 | main_design_noip_ctrl_0_0          |    1 |
+| main_design_lvds_sync_1_inverter_0 |    1 |
 | main_design_lvds_sync_0_ibuf_1     |    1 |
 | main_design_lvds_sync_0_ibuf1_0    |    1 |
 | main_design_lvds_dout3_0_ibuf_1    |    1 |
@@ -179,6 +181,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | main_design_lvds_dout0_0_ibuf_3    |    1 |
 | main_design_lvds_dout0_0_ibuf_1    |    1 |
 | main_design_lvds_dout0_0_ibuf_0    |    1 |
+| main_design_lvds_data_1_inverter_0 |    1 |
+| main_design_lvds_data_0_inverter_0 |    1 |
 | main_design_lvds_clkin_0_ibuf_4    |    1 |
 | main_design_lvds_clkin_0_ibuf_1    |    1 |
 | main_design_axi_dma_0_0            |    1 |

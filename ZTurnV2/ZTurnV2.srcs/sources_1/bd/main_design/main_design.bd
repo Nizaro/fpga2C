@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEA9AAAC4BBE09F3A",
+      "boundary_crc": "0x4555924B1C06DD52",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
@@ -82,7 +82,11 @@
       "lvds_dout1_1_ibuf": "",
       "lvds_dout2_1_ibuf": "",
       "lvds_dout3_1_ibuf": "",
-      "lvds_sync_1_ibuf": ""
+      "lvds_sync_1_ibuf": "",
+      "lvds_data_0_inverter": "",
+      "lvds_data_1_inverter": "",
+      "lvds_sync_1_inverter": "",
+      "lvds_sync_0_inverter": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1031,6 +1035,12 @@
             "value_src": "default"
           }
         }
+      },
+      "noip_mosi1": {
+        "direction": "O"
+      },
+      "noip_sck1": {
+        "direction": "O"
       }
     },
     "components": {
@@ -3823,6 +3833,66 @@
             "value": "1"
           }
         }
+      },
+      "lvds_data_0_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "main_design_util_vector_logic_0_0",
+        "xci_path": "ip/main_design_util_vector_logic_0_0/main_design_util_vector_logic_0_0.xci",
+        "inst_hier_path": "lvds_data_0_inverter",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "4"
+          }
+        }
+      },
+      "lvds_data_1_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "main_design_lvds_data_0_inverter_0",
+        "xci_path": "ip/main_design_lvds_data_0_inverter_0/main_design_lvds_data_0_inverter_0.xci",
+        "inst_hier_path": "lvds_data_1_inverter",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "4"
+          }
+        }
+      },
+      "lvds_sync_1_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "main_design_lvds_data_1_inverter_0",
+        "xci_path": "ip/main_design_lvds_data_1_inverter_0/main_design_lvds_data_1_inverter_0.xci",
+        "inst_hier_path": "lvds_sync_1_inverter",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "lvds_sync_0_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "main_design_lvds_sync_1_inverter_0",
+        "xci_path": "ip/main_design_lvds_sync_1_inverter_0/main_design_lvds_sync_1_inverter_0.xci",
+        "inst_hier_path": "lvds_sync_0_inverter",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4029,12 +4099,18 @@
       "lvds_data_0_concat_dout": {
         "ports": [
           "lvds_data_0_concat/dout",
-          "noip_lvds_stream_0/lvds_data"
+          "lvds_data_0_inverter/Op1"
         ]
       },
-      "lvds_data_0_concat_dout1": {
+      "lvds_data_1_concat_dout": {
         "ports": [
           "lvds_data_1_concat/dout",
+          "lvds_data_1_inverter/Op1"
+        ]
+      },
+      "lvds_data_1_inverter_Res": {
+        "ports": [
+          "lvds_data_1_inverter/Res",
           "noip_lvds_stream_1/lvds_data"
         ]
       },
@@ -4134,15 +4210,27 @@
           "lvds_dout3_1_ibuf/IBUF_DS_P"
         ]
       },
-      "lvds_sync_0_ibuf1_IBUF_OUT": {
+      "lvds_sync_0_ibuf_IBUF_OUT": {
         "ports": [
           "lvds_sync_0_ibuf/IBUF_OUT",
+          "lvds_sync_0_inverter/Op1"
+        ]
+      },
+      "lvds_sync_0_inverter_Res": {
+        "ports": [
+          "lvds_sync_0_inverter/Res",
           "noip_lvds_stream_0/lvds_sync"
         ]
       },
-      "lvds_sync_0_ibuf1_IBUF_OUT1": {
+      "lvds_sync_1_ibuf_IBUF_OUT": {
         "ports": [
           "lvds_sync_1_ibuf/IBUF_OUT",
+          "lvds_sync_1_inverter/Op1"
+        ]
+      },
+      "lvds_sync_1_inverter_Res": {
+        "ports": [
+          "lvds_sync_1_inverter/Res",
           "noip_lvds_stream_1/lvds_sync"
         ]
       },
@@ -4167,7 +4255,8 @@
       "noip_ctrl_0_mosi": {
         "ports": [
           "noip_ctrl_0/mosi",
-          "noip_mosi"
+          "noip_mosi",
+          "noip_mosi1"
         ]
       },
       "noip_ctrl_0_noip_reset_n": {
@@ -4179,7 +4268,8 @@
       "noip_ctrl_0_sck": {
         "ports": [
           "noip_ctrl_0/sck",
-          "noip_sck"
+          "noip_sck",
+          "noip_sck1"
         ]
       },
       "noip_ctrl_0_ss_n": {
@@ -4324,6 +4414,12 @@
         "ports": [
           "trigger0_concat/dout",
           "noip_trigger"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "lvds_data_0_inverter/Res",
+          "noip_lvds_stream_0/lvds_data"
         ]
       },
       "xlslice_0_Dout": {

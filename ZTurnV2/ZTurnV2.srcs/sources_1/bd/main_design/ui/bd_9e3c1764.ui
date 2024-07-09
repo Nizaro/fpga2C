@@ -7,8 +7,8 @@
    "Color Coded_ScaleFactor":"0.905109",
    "Color Coded_TopLeft":"-122,2",
    "Default View_Layers":"/proc_sys_reset_0_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|/processing_system7_0_FCLK_CLK1:true|",
-   "Default View_ScaleFactor":"1.41421",
-   "Default View_TopLeft":"3533,1437",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"4042,1687",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -22,24 +22,26 @@
    "No Loops_TopLeft":"-142,3",
    "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 4260 -y 1470 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 4260 -y 1500 -defaultsOSRD
-preplace port port-id_noip_mosi -pg 1 -lvl 8 -x 4260 -y 1700 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 11 -x 4280 -y 1470 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 11 -x 4280 -y 1500 -defaultsOSRD
+preplace port port-id_noip_mosi -pg 1 -lvl 11 -x 4280 -y 1680 -defaultsOSRD
 preplace port port-id_noip_miso -pg 1 -lvl 0 -x 0 -y 1970 -defaultsOSRD
-preplace port port-id_noip_sck -pg 1 -lvl 8 -x 4260 -y 1730 -defaultsOSRD
-preplace port port-id_clk_test_port -pg 1 -lvl 8 -x 4260 -y 1570 -defaultsOSRD
+preplace port port-id_noip_sck -pg 1 -lvl 11 -x 4280 -y 1710 -defaultsOSRD
+preplace port port-id_clk_test_port -pg 1 -lvl 11 -x 4280 -y 1570 -defaultsOSRD
+preplace port port-id_noip_mosi1 -pg 1 -lvl 11 -x 4280 -y 2000 -defaultsOSRD
+preplace port port-id_noip_sck1 -pg 1 -lvl 11 -x 4280 -y 1950 -defaultsOSRD
 preplace portBus lvds_clk_0_p -pg 1 -lvl 0 -x 0 -y 1540 -defaultsOSRD
 preplace portBus lvds_clk_0_n -pg 1 -lvl 0 -x 0 -y 1570 -defaultsOSRD
-preplace portBus noip_ss -pg 1 -lvl 8 -x 4260 -y 1760 -defaultsOSRD
-preplace portBus noip_clk_pll -pg 1 -lvl 8 -x 4260 -y 1790 -defaultsOSRD
-preplace portBus noip_trigger -pg 1 -lvl 8 -x 4260 -y 2040 -defaultsOSRD
+preplace portBus noip_ss -pg 1 -lvl 11 -x 4280 -y 1740 -defaultsOSRD
+preplace portBus noip_clk_pll -pg 1 -lvl 11 -x 4280 -y 1770 -defaultsOSRD
+preplace portBus noip_trigger -pg 1 -lvl 11 -x 4280 -y 2040 -defaultsOSRD
 preplace portBus noip_monitor0 -pg 1 -lvl 0 -x 0 -y 1780 -defaultsOSRD
 preplace portBus noip_monitor1 -pg 1 -lvl 0 -x 0 -y 1810 -defaultsOSRD
-preplace portBus noip_rst_n -pg 1 -lvl 8 -x 4260 -y 1820 -defaultsOSRD
-preplace portBus vdd18_toggle -pg 1 -lvl 8 -x 4260 -y 1850 -defaultsOSRD
-preplace portBus vdd33_toggle -pg 1 -lvl 8 -x 4260 -y 1880 -defaultsOSRD
-preplace portBus vddpix_toggle -pg 1 -lvl 8 -x 4260 -y 1910 -defaultsOSRD
-preplace portBus sw_enable_n -pg 1 -lvl 8 -x 4260 -y 1940 -defaultsOSRD
+preplace portBus noip_rst_n -pg 1 -lvl 11 -x 4280 -y 1800 -defaultsOSRD
+preplace portBus vdd18_toggle -pg 1 -lvl 11 -x 4280 -y 1830 -defaultsOSRD
+preplace portBus vdd33_toggle -pg 1 -lvl 11 -x 4280 -y 1860 -defaultsOSRD
+preplace portBus vddpix_toggle -pg 1 -lvl 11 -x 4280 -y 1890 -defaultsOSRD
+preplace portBus sw_enable_n -pg 1 -lvl 11 -x 4280 -y 1920 -defaultsOSRD
 preplace portBus lvds_sync_0_p -pg 1 -lvl 0 -x 0 -y 1200 -defaultsOSRD
 preplace portBus lvds_sync_0_n -pg 1 -lvl 0 -x 0 -y 1230 -defaultsOSRD
 preplace portBus lvds_dout0_0_p -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
@@ -62,38 +64,42 @@ preplace portBus lvds_dout3_1_n -pg 1 -lvl 0 -x 0 -y 1090 -defaultsOSRD
 preplace portBus lvds_dout3_1_p -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
 preplace portBus lvds_sync_1_p -pg 1 -lvl 0 -x 0 -y 1890 -defaultsOSRD
 preplace portBus lvds_sync_1_n -pg 1 -lvl 0 -x 0 -y 1920 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 3980 -y 1520 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 210 -y 1380 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1390 -y 1770 -defaultsOSRD
-preplace inst lvds_clkin_0_ibuf -pg 1 -lvl 1 -x 210 -y 1540 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2240 -y 1512 -defaultsOSRD
-preplace inst noip_lvds_stream_0 -pg 1 -lvl 3 -x 990 -y 1370 -defaultsOSRD
-preplace inst noip_ctrl_0 -pg 1 -lvl 7 -x 3980 -y 1800 -defaultsOSRD
-preplace inst noip_lvds_stream_1 -pg 1 -lvl 3 -x 990 -y 1660 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1760 -y 1460 -defaultsOSRD
-preplace inst axis_interconnect_0 -pg 1 -lvl 2 -x 590 -y 1270 -defaultsOSRD
-preplace inst axis_interconnect_1 -pg 1 -lvl 4 -x 1390 -y 1430 -defaultsOSRD
-preplace inst trigger0_concat -pg 1 -lvl 7 -x 3980 -y 2040 -defaultsOSRD
-preplace inst monitor0_slice0 -pg 1 -lvl 2 -x 590 -y 1470 -defaultsOSRD
-preplace inst monitor0_slice1 -pg 1 -lvl 2 -x 590 -y 1730 -defaultsOSRD
-preplace inst monitor1_slice0 -pg 1 -lvl 2 -x 590 -y 1570 -defaultsOSRD
-preplace inst monitor1_slice1 -pg 1 -lvl 2 -x 590 -y 1830 -defaultsOSRD
-preplace inst lvds_sync_0_ibuf -pg 1 -lvl 1 -x 210 -y 1200 -defaultsOSRD
-preplace inst lvds_dout0_0_ibuf -pg 1 -lvl 1 -x 210 -y 80 -defaultsOSRD
-preplace inst lvds_dout1_0_ibuf -pg 1 -lvl 1 -x 210 -y 220 -defaultsOSRD
-preplace inst lvds_data_0_concat -pg 1 -lvl 2 -x 590 -y 350 -defaultsOSRD
-preplace inst lvds_dout2_0_ibuf -pg 1 -lvl 1 -x 210 -y 360 -defaultsOSRD
-preplace inst lvds_dout3_0_ibuf -pg 1 -lvl 1 -x 210 -y 500 -defaultsOSRD
-preplace inst lvds_clkin_1_ibuf -pg 1 -lvl 1 -x 210 -y 1700 -defaultsOSRD
-preplace inst lvds_data_1_concat -pg 1 -lvl 2 -x 590 -y 910 -defaultsOSRD
-preplace inst lvds_dout0_1_ibuf -pg 1 -lvl 1 -x 210 -y 640 -defaultsOSRD
-preplace inst lvds_dout1_1_ibuf -pg 1 -lvl 1 -x 210 -y 780 -defaultsOSRD
-preplace inst lvds_dout2_1_ibuf -pg 1 -lvl 1 -x 210 -y 920 -defaultsOSRD
-preplace inst lvds_dout3_1_ibuf -pg 1 -lvl 1 -x 210 -y 1060 -defaultsOSRD
-preplace inst lvds_sync_1_ibuf -pg 1 -lvl 1 -x 210 -y 1890 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 10 -x 4000 -y 1520 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 420 -y 1380 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -x 2490 -y 1770 -defaultsOSRD
+preplace inst lvds_clkin_0_ibuf -pg 1 -lvl 1 -x 420 -y 1540 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 9 -x 3190 -y 1512 -defaultsOSRD
+preplace inst noip_lvds_stream_0 -pg 1 -lvl 6 -x 2090 -y 1370 -defaultsOSRD
+preplace inst noip_ctrl_0 -pg 1 -lvl 10 -x 4000 -y 1800 -defaultsOSRD
+preplace inst noip_lvds_stream_1 -pg 1 -lvl 6 -x 2090 -y 1660 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 8 -x 2840 -y 1460 -defaultsOSRD
+preplace inst axis_interconnect_0 -pg 1 -lvl 4 -x 1400 -y 1270 -defaultsOSRD
+preplace inst axis_interconnect_1 -pg 1 -lvl 7 -x 2490 -y 1430 -defaultsOSRD
+preplace inst trigger0_concat -pg 1 -lvl 10 -x 4000 -y 2040 -defaultsOSRD
+preplace inst monitor0_slice0 -pg 1 -lvl 4 -x 1400 -y 1470 -defaultsOSRD
+preplace inst monitor0_slice1 -pg 1 -lvl 4 -x 1400 -y 1730 -defaultsOSRD
+preplace inst monitor1_slice0 -pg 1 -lvl 4 -x 1400 -y 1570 -defaultsOSRD
+preplace inst monitor1_slice1 -pg 1 -lvl 4 -x 1400 -y 1830 -defaultsOSRD
+preplace inst lvds_sync_0_ibuf -pg 1 -lvl 1 -x 420 -y 1200 -defaultsOSRD
+preplace inst lvds_dout0_0_ibuf -pg 1 -lvl 1 -x 420 -y 80 -defaultsOSRD
+preplace inst lvds_dout1_0_ibuf -pg 1 -lvl 1 -x 420 -y 220 -defaultsOSRD
+preplace inst lvds_data_0_concat -pg 1 -lvl 4 -x 1400 -y 350 -defaultsOSRD
+preplace inst lvds_dout2_0_ibuf -pg 1 -lvl 1 -x 420 -y 360 -defaultsOSRD
+preplace inst lvds_dout3_0_ibuf -pg 1 -lvl 1 -x 420 -y 500 -defaultsOSRD
+preplace inst lvds_clkin_1_ibuf -pg 1 -lvl 1 -x 420 -y 1700 -defaultsOSRD
+preplace inst lvds_data_1_concat -pg 1 -lvl 4 -x 1400 -y 910 -defaultsOSRD
+preplace inst lvds_dout0_1_ibuf -pg 1 -lvl 1 -x 420 -y 640 -defaultsOSRD
+preplace inst lvds_dout1_1_ibuf -pg 1 -lvl 1 -x 420 -y 780 -defaultsOSRD
+preplace inst lvds_dout2_1_ibuf -pg 1 -lvl 1 -x 420 -y 920 -defaultsOSRD
+preplace inst lvds_dout3_1_ibuf -pg 1 -lvl 1 -x 420 -y 1060 -defaultsOSRD
+preplace inst lvds_sync_1_ibuf -pg 1 -lvl 1 -x 420 -y 1890 -defaultsOSRD
+preplace inst lvds_data_0_inverter -pg 1 -lvl 5 -x 1720 -y 350 -defaultsOSRD
+preplace inst lvds_data_1_inverter -pg 1 -lvl 5 -x 1720 -y 910 -defaultsOSRD
+preplace inst lvds_sync_1_inverter -pg 1 -lvl 2 -x 750 -y 1900 -defaultsOSRD
+preplace inst lvds_sync_0_inverter -pg 1 -lvl 3 -x 1060 -y 1820 -defaultsOSRD
 preplace netloc IBUF_DS_N_0_1 1 0 1 20J 1560n
 preplace netloc IBUF_DS_N_0_2 1 0 1 30J 1220n
-preplace netloc IBUF_DS_N_0_3 1 0 1 20J 1720n
+preplace netloc IBUF_DS_N_0_3 1 0 1 30J 1720n
 preplace netloc IBUF_DS_N_0_4 1 0 1 20J 1910n
 preplace netloc IBUF_DS_N_1_1 1 0 1 30J 100n
 preplace netloc IBUF_DS_N_1_2 1 0 1 30J 380n
@@ -107,18 +113,19 @@ preplace netloc IBUF_DS_P_1_1 1 0 1 NJ 80
 preplace netloc IBUF_DS_P_1_2 1 0 1 NJ 360
 preplace netloc IBUF_DS_P_1_3 1 0 1 NJ 640
 preplace netloc IBUF_DS_P_1_4 1 0 1 NJ 920
-preplace netloc lvds_clkin_0_ibuf_IBUF_OUT 1 1 3 390 1630 770J 1530 1160
-preplace netloc lvds_clkin_0_ibuf_IBUF_OUT1 1 1 3 440J 1670 730J 1780 1150
-preplace netloc lvds_data_0_concat_dout 1 2 2 NJ 350 1180
-preplace netloc lvds_data_0_concat_dout1 1 2 2 N 910 1170
-preplace netloc lvds_dout0_0_ibuf_IBUF_OUT 1 1 1 440 80n
-preplace netloc lvds_dout0_0_ibuf_IBUF_OUT1 1 1 1 N 360
-preplace netloc lvds_dout0_0_ibuf_IBUF_OUT2 1 1 1 440 640n
-preplace netloc lvds_dout0_0_ibuf_IBUF_OUT3 1 1 1 N 920
-preplace netloc lvds_dout1_0_ibuf_IBUF_OUT 1 1 1 400 220n
-preplace netloc lvds_dout1_0_ibuf_IBUF_OUT1 1 1 1 440 380n
-preplace netloc lvds_dout1_0_ibuf_IBUF_OUT2 1 1 1 400 780n
-preplace netloc lvds_dout1_0_ibuf_IBUF_OUT3 1 1 1 440 940n
+preplace netloc lvds_clkin_0_ibuf_IBUF_OUT 1 1 6 N 1540 N 1540 1220 1630 1540J 1620 1900 1520 2260
+preplace netloc lvds_clkin_0_ibuf_IBUF_OUT1 1 1 6 NJ 1700 N 1700 1250 1670 1570J 1630 1920 1530 2240
+preplace netloc lvds_data_0_concat_dout 1 4 1 N 350
+preplace netloc lvds_data_1_concat_dout 1 4 1 N 910
+preplace netloc lvds_data_1_inverter_Res 1 5 2 NJ 910 2270
+preplace netloc lvds_dout0_0_ibuf_IBUF_OUT 1 1 3 N 80 N 80 1260
+preplace netloc lvds_dout0_0_ibuf_IBUF_OUT1 1 1 3 N 360 N 360 N
+preplace netloc lvds_dout0_0_ibuf_IBUF_OUT2 1 1 3 N 640 N 640 1260
+preplace netloc lvds_dout0_0_ibuf_IBUF_OUT3 1 1 3 N 920 N 920 N
+preplace netloc lvds_dout1_0_ibuf_IBUF_OUT 1 1 3 N 220 N 220 1250
+preplace netloc lvds_dout1_0_ibuf_IBUF_OUT1 1 1 3 600 380 N 380 N
+preplace netloc lvds_dout1_0_ibuf_IBUF_OUT2 1 1 3 N 780 N 780 1250
+preplace netloc lvds_dout1_0_ibuf_IBUF_OUT3 1 1 3 600 940 N 940 N
 preplace netloc lvds_dout1_0_n_1 1 0 1 30J 240n
 preplace netloc lvds_dout1_0_n_2 1 0 1 30J 520n
 preplace netloc lvds_dout1_0_n_3 1 0 1 30J 800n
@@ -127,48 +134,51 @@ preplace netloc lvds_dout1_0_p_1 1 0 1 NJ 220
 preplace netloc lvds_dout1_0_p_2 1 0 1 NJ 500
 preplace netloc lvds_dout1_0_p_3 1 0 1 NJ 780
 preplace netloc lvds_dout1_0_p_4 1 0 1 NJ 1060
-preplace netloc lvds_sync_0_ibuf1_IBUF_OUT 1 1 3 400 1640 820J 1540 1150
-preplace netloc lvds_sync_0_ibuf1_IBUF_OUT1 1 1 3 NJ 1890 NJ 1890 1140
-preplace netloc monitor1_slice0_Dout 1 2 1 750J 1350n
-preplace netloc monitor1_slice1_Dout 1 2 1 840J 1640n
-preplace netloc noip_ctrl_0_clk_pll_out 1 7 1 4230J 1790n
-preplace netloc noip_ctrl_0_mosi 1 7 1 4230J 1700n
-preplace netloc noip_ctrl_0_noip_reset_n 1 7 1 NJ 1820
-preplace netloc noip_ctrl_0_sck 1 7 1 4230J 1730n
-preplace netloc noip_ctrl_0_ss_n 1 7 1 4230J 1760n
-preplace netloc noip_ctrl_0_sw_enable_n 1 7 1 4210J 1900n
-preplace netloc noip_ctrl_0_vdd18_toggle 1 7 1 4230J 1840n
-preplace netloc noip_ctrl_0_vdd33_toggle 1 7 1 4230J 1860n
-preplace netloc noip_ctrl_0_vddpix_toggle 1 7 1 4220J 1880n
-preplace netloc noip_lvds_stream_0_trigger0 1 3 4 1210 1240 NJ 1240 NJ 1240 2410J
-preplace netloc noip_lvds_stream_1_trigger0 1 3 4 1180 1630 NJ 1630 1930J 1700 2390J
-preplace netloc noip_miso_1 1 0 8 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 4190
-preplace netloc noip_monitor0_1 1 0 2 NJ 1780 420
-preplace netloc noip_monitor1_1 1 0 2 NJ 1810 450
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 6 440 1650 810 1250 1190 1600 1590 1590 2070 1750 2400J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 1280 430 1660 800 1240 1200 1250 1570 1330 2080 1690 3760 1640 4190
-preplace netloc processing_system7_0_FCLK_CLK1 1 6 2 3770 1630 4230
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 30 1980 390J 1960 NJ 1960 NJ 1960 NJ 1960 NJ 1960 NJ 1960 4200
-preplace netloc trigger0_concat_dout 1 7 1 NJ 2040
-preplace netloc xlslice_0_Dout 1 2 1 740J 1330n
-preplace netloc xlslice_1_Dout 1 2 1 830J 1620n
-preplace netloc S00_AXIS_1 1 3 1 N 1320
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 5 450 1410 730J 1230 NJ 1230 NJ 1230 1930
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1940 1410n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1940 1430n
-preplace netloc axi_dma_0_M_AXI_SG 1 5 1 2090 1390n
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2390 1510n
-preplace netloc axis_interconnect_0_M00_AXIS 1 2 1 770 1260n
-preplace netloc axis_interconnect_0_M01_AXIS 1 2 1 760 1280n
-preplace netloc axis_interconnect_1_M00_AXIS 1 4 1 1550 1420n
-preplace netloc noip_lvds_stream_1_M00_AXIS 1 3 1 1220 1340n
-preplace netloc processing_system7_0_DDR 1 7 1 NJ 1470
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 4200J 1490n
-preplace netloc processing_system7_0_M_AXI_GP0 1 3 5 1230 1260 NJ 1260 NJ 1260 NJ 1260 4190
-preplace netloc ps7_0_axi_periph_M00_AXI 1 4 3 N 1760 NJ 1760 NJ
-preplace netloc ps7_0_axi_periph_M01_AXI 1 4 1 1580 1400n
-levelinfo -pg 1 0 210 590 990 1390 1760 2240 3980 4260
-pagesize -pg 1 -db -bbox -sgen -190 -10 4440 2390
+preplace netloc lvds_sync_0_ibuf_IBUF_OUT 1 1 2 NJ 1200 910
+preplace netloc lvds_sync_0_inverter_Res 1 3 4 1210 1890 NJ 1890 NJ 1890 2250
+preplace netloc lvds_sync_1_ibuf_IBUF_OUT 1 1 1 600 1890n
+preplace netloc lvds_sync_1_inverter_Res 1 2 5 N 1900 N 1900 NJ 1900 NJ 1900 2240
+preplace netloc monitor1_slice0_Dout 1 4 2 NJ 1570 1890
+preplace netloc monitor1_slice1_Dout 1 4 2 1570J 1700 1900
+preplace netloc noip_ctrl_0_clk_pll_out 1 10 1 4250J 1770n
+preplace netloc noip_ctrl_0_mosi 1 10 1 4240J 1680n
+preplace netloc noip_ctrl_0_noip_reset_n 1 10 1 4260J 1800n
+preplace netloc noip_ctrl_0_sck 1 10 1 4220J 1710n
+preplace netloc noip_ctrl_0_ss_n 1 10 1 4230J 1740n
+preplace netloc noip_ctrl_0_sw_enable_n 1 10 1 4230J 1900n
+preplace netloc noip_ctrl_0_vdd18_toggle 1 10 1 4260J 1830n
+preplace netloc noip_ctrl_0_vdd33_toggle 1 10 1 NJ 1860
+preplace netloc noip_ctrl_0_vddpix_toggle 1 10 1 4230J 1880n
+preplace netloc noip_lvds_stream_0_trigger0 1 6 4 2290 1250 NJ 1250 NJ 1250 3360J
+preplace netloc noip_lvds_stream_1_trigger0 1 6 4 2260 1630 NJ 1630 3010J 1750 3340J
+preplace netloc noip_miso_1 1 0 11 NJ 1970 NJ 1970 N 1970 N 1970 NJ 1970 N 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 4210
+preplace netloc noip_monitor0_1 1 0 4 NJ 1780 600 1760 N 1760 1230
+preplace netloc noip_monitor1_1 1 0 4 NJ 1810 N 1810 900 1880 1260
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 9 N 1420 N 1420 1250 1660 1540 1720 1930 1250 2280 1600 2670 1600 3040 1740 3350J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 11 240 1280 N 1280 N 1280 1240 1650 1550 1710 1910 1240 2320 1240 2670 1330 3030 1700 3780 1410 4210
+preplace netloc processing_system7_0_FCLK_CLK1 1 9 2 3790 1640 4240
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 11 240 1620 NJ 1620 N 1620 1210 1640 NJ 1640 1880 1540 2310J 1610 NJ 1610 3020J 1690 3370J 1630 4210
+preplace netloc trigger0_concat_dout 1 10 1 NJ 2040
+preplace netloc util_vector_logic_0_Res 1 5 2 NJ 350 2240
+preplace netloc xlslice_0_Dout 1 4 2 NJ 1470 1880
+preplace netloc xlslice_1_Dout 1 4 2 1560J 1690 1940
+preplace netloc S00_AXIS_1 1 6 1 N 1320
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 6 1260 1410 1540J 1300 1870 1230 NJ 1230 NJ 1230 3010
+preplace netloc axi_dma_0_M_AXI_MM2S 1 8 1 3040 1410n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 8 1 3020 1430n
+preplace netloc axi_dma_0_M_AXI_SG 1 8 1 3040 1390n
+preplace netloc axi_mem_intercon_M00_AXI 1 9 1 3340 1510n
+preplace netloc axis_interconnect_0_M00_AXIS 1 4 2 1570 1310 N
+preplace netloc axis_interconnect_0_M01_AXIS 1 4 2 1550 1330 1870
+preplace netloc axis_interconnect_1_M00_AXIS 1 7 1 2660 1420n
+preplace netloc noip_lvds_stream_1_M00_AXIS 1 6 1 2300 1340n
+preplace netloc processing_system7_0_DDR 1 10 1 NJ 1470
+preplace netloc processing_system7_0_FIXED_IO 1 10 1 4240J 1490n
+preplace netloc processing_system7_0_M_AXI_GP0 1 6 5 2330 1260 NJ 1260 NJ 1260 NJ 1260 4220
+preplace netloc ps7_0_axi_periph_M00_AXI 1 7 3 N 1760 NJ 1760 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 7 1 2650 1400n
+levelinfo -pg 1 0 420 750 1060 1400 1720 2090 2490 2840 3190 4000 4280
+pagesize -pg 1 -db -bbox -sgen -190 -60 4460 2390
 "
 }
 {

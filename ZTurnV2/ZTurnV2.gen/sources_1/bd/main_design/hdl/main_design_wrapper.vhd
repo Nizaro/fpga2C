@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Tue Jun 25 14:45:46 2024
+--Date        : Tue Jul  9 13:52:08 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -65,8 +65,10 @@ entity main_design_wrapper is
     noip_monitor0 : in STD_LOGIC_VECTOR ( 0 to 1 );
     noip_monitor1 : in STD_LOGIC_VECTOR ( 0 to 1 );
     noip_mosi : out STD_LOGIC;
+    noip_mosi1 : out STD_LOGIC;
     noip_rst_n : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_sck : out STD_LOGIC;
+    noip_sck1 : out STD_LOGIC;
     noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_trigger : out STD_LOGIC_VECTOR ( 1 downto 0 );
     sw_enable_n : out STD_LOGIC_VECTOR ( 0 to 1 );
@@ -137,7 +139,9 @@ architecture STRUCTURE of main_design_wrapper is
     lvds_dout3_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_sync_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_test_port : out STD_LOGIC
+    clk_test_port : out STD_LOGIC;
+    noip_mosi1 : out STD_LOGIC;
+    noip_sck1 : out STD_LOGIC
   );
   end component main_design;
 begin
@@ -194,8 +198,10 @@ main_design_i: component main_design
       noip_monitor0(0 to 1) => noip_monitor0(0 to 1),
       noip_monitor1(0 to 1) => noip_monitor1(0 to 1),
       noip_mosi => noip_mosi,
+      noip_mosi1 => noip_mosi1,
       noip_rst_n(0 to 1) => noip_rst_n(0 to 1),
       noip_sck => noip_sck,
+      noip_sck1 => noip_sck1,
       noip_ss(0 to 1) => noip_ss(0 to 1),
       noip_trigger(1 downto 0) => noip_trigger(1 downto 0),
       sw_enable_n(0 to 1) => sw_enable_n(0 to 1),

@@ -1,0 +1,12 @@
+sv xil_defaultlib -i "../../../../imports" --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../axi_vip_0_ex.gen/sources_1/bd/ex_sim/ipshared/ec67/hdl" \
+"../../../bd/ex_sim/ip/ex_sim_axi_vip_mst_0/sim/ex_sim_axi_vip_mst_0_pkg.sv" \
+"../../../bd/ex_sim/ip/ex_sim_axi_vip_mst_0/sim/ex_sim_axi_vip_mst_0.sv" \
+"/home/nothon/fpga2C/axi_vip_0_ex/axi_vip_0_ex.gen/sources_1/bd/ex_sim/ip/ex_sim_axi_vip_slv_0/sim/ex_sim_axi_vip_slv_0_pkg.sv" \
+"/home/nothon/fpga2C/axi_vip_0_ex/axi_vip_0_ex.gen/sources_1/bd/ex_sim/ip/ex_sim_axi_vip_slv_0/sim/ex_sim_axi_vip_slv_0.sv" \
+"/home/nothon/fpga2C/axi_vip_0_ex/axi_vip_0_ex.gen/sources_1/bd/ex_sim/ip/ex_sim_axi_vip_passthrough_0/sim/ex_sim_axi_vip_passthrough_0_pkg.sv" \
+"/home/nothon/fpga2C/axi_vip_0_ex/axi_vip_0_ex.gen/sources_1/bd/ex_sim/ip/ex_sim_axi_vip_passthrough_0/sim/ex_sim_axi_vip_passthrough_0.sv" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

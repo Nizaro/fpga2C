@@ -29,6 +29,8 @@ Generate bitstream
 
 https://support.xilinx.com/s/question/0D54U00007jzNEXSA2/vitis-20232-unable-to-create-platform-component-project-on-ubuntu?language=en_US
 
+[Simulating AXI Interfaces with the AXI Verification IP](https://support.xilinx.com/s/article/1053935?language=en_US)
+
 # Mémoire Swap
 
 https://support.xilinx.com/s/question/0D52E00006vFXkwSAG/is-there-a-workaround-for-vivado-rdiprog-crash-during-synth-while-running-20211-on-ubuntu-18046-lts?language=en_US

@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.8.0-35-generic")
+set(CMAKE_HOST_SYSTEM "Linux-6.8.0-38-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.8.0-35-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "6.8.0-38-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/nothon/fpga2C/zturnv2_platform/fpga2c/zynq_fsbl/zynq_fsbl_bsp/cortexa9_toolchain.cmake")

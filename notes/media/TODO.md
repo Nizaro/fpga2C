@@ -1,0 +1,3 @@
+- Vitis platform for SPI
+- PetaLinux 
+- VIP for AXI-Stream

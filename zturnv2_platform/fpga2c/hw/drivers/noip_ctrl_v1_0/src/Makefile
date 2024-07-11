@@ -6,7 +6,7 @@ EXTRA_COMPILER_FLAGS=
 LIB=libxil.a
 
 RELEASEDIR=../../../lib
-INCLUDEDIR=../../../include
+INCLUDEDIR=../../../sdt/include
 INCLUDES=-I./. -I${INCLUDEDIR}
 
 INCLUDEFILES=*.h

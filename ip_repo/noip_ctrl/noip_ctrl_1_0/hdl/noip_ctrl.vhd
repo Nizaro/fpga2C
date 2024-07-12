@@ -334,7 +334,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	with sck_en select sck <= clk_spi_in when '1',
 					          '0' when others;
 
-	flagprocess : process(s00_axi_aresetn, readyflag,powerdownflag,spiflag)
+	flagprocess : process(s00_axi_aresetn, readyflag, powerdownflag,spiflag)
 	begin
 		if(s00_axi_aresetn = '1') then
 			send_data <= (others => '0');

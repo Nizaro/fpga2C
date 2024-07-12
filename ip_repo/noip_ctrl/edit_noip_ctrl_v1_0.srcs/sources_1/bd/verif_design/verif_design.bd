@@ -1,0 +1,322 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x56A6FCE191FF3401",
+      "device": "xc7z020clg400-2",
+      "gen_directory": "../../../../edit_noip_ctrl_v1_0.gen/sources_1/bd/verif_design",
+      "name": "verif_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "noip_ctrl_0": "",
+      "axi_vip_0": "",
+      "clk_wiz": "",
+      "rst_clk_wiz_100M": ""
+    },
+    "interface_ports": {
+      "noip_spi_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:spi:1.0",
+        "vlnv": "xilinx.com:interface:spi_rtl:1.0",
+        "port_maps": {
+          "IO1_O": {
+            "physical_name": "noip_spi_0_io1_o",
+            "direction": "O"
+          },
+          "SCK_O": {
+            "physical_name": "noip_spi_0_sck_o",
+            "direction": "O"
+          },
+          "IO1_I": {
+            "physical_name": "noip_spi_0_io1_i",
+            "direction": "I"
+          },
+          "SS_O": {
+            "physical_name": "noip_spi_0_ss_o",
+            "direction": "O",
+            "left": "0",
+            "right": "1"
+          }
+        }
+      }
+    },
+    "ports": {
+      "sw_enable_n_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "vddpix_toggle_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "vdd33_toggle_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "vdd18_toggle_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "noip_reset_n_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "clk_pll_out_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "1"
+      },
+      "clk_72M_pll_0": {
+        "direction": "I"
+      },
+      "clk_spi_in_0": {
+        "direction": "I"
+      },
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "verif_design_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "noip_ctrl_0": {
+        "vlnv": "user.org:user:noip_ctrl:1.0",
+        "ip_revision": "2",
+        "xci_name": "verif_design_noip_ctrl_0_0",
+        "xci_path": "ip/verif_design_noip_ctrl_0_0/verif_design_noip_ctrl_0_0.xci",
+        "inst_hier_path": "noip_ctrl_0"
+      },
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "ip_revision": "17",
+        "xci_name": "verif_design_axi_vip_0_0",
+        "xci_path": "ip/verif_design_axi_vip_0_0/verif_design_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "14",
+        "xci_name": "verif_design_clk_wiz_2",
+        "xci_path": "ip/verif_design_clk_wiz_2/verif_design_clk_wiz_2.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "15",
+        "xci_name": "verif_design_rst_clk_wiz_100M_2",
+        "xci_path": "ip/verif_design_rst_clk_wiz_100M_2/verif_design_rst_clk_wiz_100M_2.xci",
+        "inst_hier_path": "rst_clk_wiz_100M"
+      }
+    },
+    "interface_nets": {
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "noip_ctrl_0/S00_AXI"
+        ]
+      },
+      "noip_ctrl_0_noip_spi": {
+        "interface_ports": [
+          "noip_spi_0",
+          "noip_ctrl_0/noip_spi"
+        ]
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "noip_ctrl_0/s00_axi_aclk",
+          "axi_vip_0/aclk",
+          "rst_clk_wiz_100M/slowest_sync_clk"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_wiz/clk_in1"
+        ]
+      },
+      "clk_72M_pll_0_1": {
+        "ports": [
+          "clk_72M_pll_0",
+          "noip_ctrl_0/clk_72M_pll"
+        ]
+      },
+      "clk_spi_in_0_1": {
+        "ports": [
+          "clk_spi_in_0",
+          "noip_ctrl_0/clk_spi_in"
+        ]
+      },
+      "clk_wiz_locked": {
+        "ports": [
+          "clk_wiz/locked",
+          "rst_clk_wiz_100M/dcm_locked"
+        ]
+      },
+      "noip_ctrl_0_clk_pll_out": {
+        "ports": [
+          "noip_ctrl_0/clk_pll_out",
+          "clk_pll_out_0"
+        ]
+      },
+      "noip_ctrl_0_noip_reset_n": {
+        "ports": [
+          "noip_ctrl_0/noip_reset_n",
+          "noip_reset_n_0"
+        ]
+      },
+      "noip_ctrl_0_sw_enable_n": {
+        "ports": [
+          "noip_ctrl_0/sw_enable_n",
+          "sw_enable_n_0"
+        ]
+      },
+      "noip_ctrl_0_vdd18_toggle": {
+        "ports": [
+          "noip_ctrl_0/vdd18_toggle",
+          "vdd18_toggle_0"
+        ]
+      },
+      "noip_ctrl_0_vdd33_toggle": {
+        "ports": [
+          "noip_ctrl_0/vdd33_toggle",
+          "vdd33_toggle_0"
+        ]
+      },
+      "noip_ctrl_0_vddpix_toggle": {
+        "ports": [
+          "noip_ctrl_0/vddpix_toggle",
+          "vddpix_toggle_0"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset_rtl_0",
+          "clk_wiz/reset",
+          "rst_clk_wiz_100M/ext_reset_in"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_100M/peripheral_aresetn",
+          "noip_ctrl_0/s00_axi_aresetn",
+          "axi_vip_0/aresetn"
+        ]
+      }
+    },
+    "addressing": {
+      "/axi_vip_0": {
+        "address_spaces": {
+          "Master_AXI": {
+            "segments": {
+              "SEG_noip_ctrl_0_S00_AXI_reg": {
+                "address_block": "/noip_ctrl_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x44A00000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

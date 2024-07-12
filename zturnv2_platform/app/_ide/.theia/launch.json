@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "app_hw_1",
+      "debugType": "emb-linux",
+      "attachToRunningProcessOptions": {
+        "linuxTargetMode": "standalone",
+        "attachToPid": []
+      },
+      "target": {
+        "targetConnectionId": "Linux Agent",
+        "peersIniPath": "../../../.wsdata/.peers.ini",
+        "file": "/home/nothon/fpga2C/zturnv2_platform/app/build/app.elf",
+        "remoteFilePath": "/run/media/mmcblk0p1/app.elf"
+      },
+      "env": {},
+      "pathMap": [],
+      "replaceNativeEnv": false,
+      "arguments": "",
+      "workingDirectory": "/run/media/mmcblk0p1",
+      "stopAtMain": true,
+      "stopAtProgramEntry": false,
+      "autoAttachProcessChildren": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

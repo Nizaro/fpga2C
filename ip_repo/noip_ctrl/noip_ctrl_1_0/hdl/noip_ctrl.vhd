@@ -96,6 +96,12 @@ architecture arch_imp of noip_ctrl is
 	end component noip_ctrl_slave_lite_v1_0_S00_AXI;
 
 	-- user signals start here
+
+	signal busy : std_logic;
+	signal startup_busy : std_logic;
+	signal spi_busy : std_logic;
+	signal wready : std_logic;
+
 	-- GENERIC DATA-RELATED
 	signal rec_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal send_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
@@ -140,7 +146,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 		S_AXI_WDATA	=> s00_axi_wdata,
 		S_AXI_WSTRB	=> s00_axi_wstrb,
 		S_AXI_WVALID	=> s00_axi_wvalid,
-		S_AXI_WREADY	=> s00_axi_wready,
+		S_AXI_WREADY	=> wready,
 		S_AXI_BRESP	=> s00_axi_bresp,
 		S_AXI_BVALID	=> s00_axi_bvalid,
 		S_AXI_BREADY	=> s00_axi_bready,
@@ -159,6 +165,16 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	opcode <= rec_data(1 downto 0);
 	sensor_id <= rec_data(3 downto 2);
 	spi_addr <= rec_data(12 downto 4);
+
+	with StartupState select startup_busy <= '0' when IDLE,
+											 '1' when others;
+
+	with SPIState select spi_busy <= '0' when IDLE,
+									 '1' when others;
+
+	busy <= spi_busy or startup_busy;
+
+	s00_axi_wready <= wready and not busy;
 
 	startup_process : process(s00_axi_aclk, s00_axi_aresetn) 
 		variable id : integer := 0;
@@ -182,6 +198,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 													1 when others;
 						sw_enable_n(id) <= '0';
 						StartupState <= ON18;
+					elsif(s00_axi_bvalid = '1' and opcode = "00") then -- shutdown
+						StartupState <= OFFRSTN;
 					end if;
 
 				when ON18 =>
@@ -207,12 +225,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 				when SEND_RDY =>
 					readyflag <= '1';
 
-					StartupState <= READY;
-
-				when READY =>
-					if(s00_axi_bvalid = '1' and opcode = "00") then -- shutdown
-						
-					end if;
+					StartupState <= IDLE;
 
 				when OFFRSTN =>
 					noip_reset_n(id) <= '1';

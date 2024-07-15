@@ -127,7 +127,9 @@ begin
             wait until S_AXI_ACLK= '0';
                 S_AXI_AWVALID<='1';
                 S_AXI_WVALID<='1';
-            -- wait until (S_AXI_AWREADY and S_AXI_WREADY) = '1';  --Client ready to read address/data        
+            if ((S_AXI_AWREADY and S_AXI_WREADY) = '0') then
+                wait until (S_AXI_AWREADY and S_AXI_WREADY) = '1';  --Client ready to read address/data
+            end if;    
                 S_AXI_BREADY<='1';
             wait until S_AXI_BVALID = '1';  -- Write result valid
                 assert S_AXI_BRESP = "00" report "AXI data not written" severity failure;

@@ -8,7 +8,7 @@ noip_ctrl permet de contrôler les deux capteurs PYTHON1300 : les allumer, les �
 ## Interface AXI
 
 Le contrôleur NOIP communique avec le processeur à travers son interface AXI4-Lite, en tant que *slave*.
-Chaque mot AXI (de 32 bits) envoyé depuis le processeur correspond à une commande, selon la spécification qui suit :
+Chaque mot AXI (de 32 bits) envoyé depuis le processeur vers le registre 0 correspond à une commande, selon la spécification qui suit :
 
 Bits 31~16 : **SPI Data** (laisser à zéro si l'opération n'est pas de type SPI)
 Bits 15~13 : "000"
@@ -20,7 +20,7 @@ Bits 1~0 : **OpCode**
 - "01" pour "read SPI"
 - "11" pour "startup"
 
-La réponse du noip_ctrl est de la forme suivante :
+La réponse du noip_ctrl est stockée dans le registre 1, de la forme suivante :
 
 Bits 31~16 : **SPI Data** (à zéro si l'opération n'est pas de type SPI)
 Bits 15~4 : "000"

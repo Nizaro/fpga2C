@@ -1210,3 +1210,310 @@ Time: 63 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
   File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
 
 HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:281
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+ERROR: [VRFC 10-8825] cannot update object 's00_axi_bready' of mode 'in' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:178]
+ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:63]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8791.676 ; gain = 16.980 ; free physical = 1044 ; free virtual = 20819
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8827.707 ; gain = 0.000 ; free physical = 1163 ; free virtual = 20669
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8835.711 ; gain = 0.000 ; free physical = 1010 ; free virtual = 20574
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:205]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:209]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:213]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:217]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:221]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:225]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:230]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:234]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:238]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:242]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:246]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:251]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:254]
+ERROR: [VRFC 10-4982] syntax error near 'case' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:257]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:275]
+ERROR: [VRFC 10-4982] syntax error near 'elsif' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:278]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:285]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:296]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:297]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+ERROR: [VRFC 10-4982] syntax error near 'if' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:201]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:205]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:209]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:213]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:217]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:221]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:225]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:230]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:234]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:238]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:242]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:246]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:251]
+ERROR: [VRFC 10-4982] syntax error near 'when' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:254]
+ERROR: [VRFC 10-4982] syntax error near 'case' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:257]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:275]
+ERROR: [VRFC 10-4982] syntax error near 'elsif' [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:278]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:285]
+ERROR: [VRFC 10-2989] 'mode' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:296]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 9039.738 ; gain = 45.812 ; free physical = 911 ; free virtual = 20583
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 9040.742 ; gain = 0.000 ; free physical = 632 ; free virtual = 20460
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 15 11:48:29 2024...

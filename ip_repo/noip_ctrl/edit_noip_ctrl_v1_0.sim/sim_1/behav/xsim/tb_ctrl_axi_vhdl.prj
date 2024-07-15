@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../../noip_ctrl_1_0/hdl/noip_ctrl.vhd" \
+"../../../../edit_noip_ctrl_v1_0.ip_user_files/bd/verif_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../../edit_noip_ctrl_v1_0.ip_user_files/bd/verif_design/ipshared/6bcd/hdl/noip_ctrl.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../edit_noip_ctrl_v1_0.ip_user_files/bd/verif_design/ip/verif_design_noip_ctrl_0_0/sim/verif_design_noip_ctrl_0_0.vhd" \
+"../../../../edit_noip_ctrl_v1_0.ip_user_files/bd/verif_design/ip/verif_design_rst_clk_wiz_100M_2/sim/verif_design_rst_clk_wiz_100M_2.vhd" \
+"../../../../edit_noip_ctrl_v1_0.ip_user_files/bd/verif_design/sim/verif_design.vhd" \
+"../../../../edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl.vhd" \
+"../../../../edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" \
+
+# Do not sort compile order
+nosort

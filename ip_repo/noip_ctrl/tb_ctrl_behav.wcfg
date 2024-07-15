@@ -3,148 +3,49 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_ctrl_behav.wdb" id="1">
+      <db_ref path="tb_ctrl_axi_behav.wdb" id="1">
          <top_modules>
-            <top_module name="tb_ctrl" />
+            <top_module name="glbl" />
+            <top_module name="tb_ctrl_axi" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="28.201 ns"></ZoomEndTime>
-      <Cursor1Time time="2.950 ns"></Cursor1Time>
+      <ZoomEndTime time="28.401 ns"></ZoomEndTime>
+      <Cursor1Time time="16.800 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="115"></ValueColumnWidth>
+      <ValueColumnWidth column_width="111"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
-   <wvobject type="logic" fp_name="/tb_ctrl/clk_72M_pll">
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_WDATA">
+      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/StartupState">
+      <obj_property name="ElementShortName">StartupState</obj_property>
+      <obj_property name="ObjectShortName">StartupState</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/SPIState">
+      <obj_property name="ElementShortName">SPIState</obj_property>
+      <obj_property name="ObjectShortName">SPIState</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/clk_72M_pll">
       <obj_property name="ElementShortName">clk_72M_pll</obj_property>
       <obj_property name="ObjectShortName">clk_72M_pll</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/clk_pll_out">
-      <obj_property name="ElementShortName">clk_pll_out[0:1]</obj_property>
-      <obj_property name="ObjectShortName">clk_pll_out[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/noip_reset_n">
-      <obj_property name="ElementShortName">noip_reset_n[0:1]</obj_property>
-      <obj_property name="ObjectShortName">noip_reset_n[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/vdd18_toggle">
-      <obj_property name="ElementShortName">vdd18_toggle[0:1]</obj_property>
-      <obj_property name="ObjectShortName">vdd18_toggle[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/vdd33_toggle">
-      <obj_property name="ElementShortName">vdd33_toggle[0:1]</obj_property>
-      <obj_property name="ObjectShortName">vdd33_toggle[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/vddpix_toggle">
-      <obj_property name="ElementShortName">vddpix_toggle[0:1]</obj_property>
-      <obj_property name="ObjectShortName">vddpix_toggle[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/sw_enable_n">
-      <obj_property name="ElementShortName">sw_enable_n[0:1]</obj_property>
-      <obj_property name="ObjectShortName">sw_enable_n[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/clk_spi_in">
-      <obj_property name="ElementShortName">clk_spi_in</obj_property>
-      <obj_property name="ObjectShortName">clk_spi_in</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/miso">
-      <obj_property name="ElementShortName">miso</obj_property>
-      <obj_property name="ObjectShortName">miso</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/mosi">
-      <obj_property name="ElementShortName">mosi</obj_property>
-      <obj_property name="ObjectShortName">mosi</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/sck">
-      <obj_property name="ElementShortName">sck</obj_property>
-      <obj_property name="ObjectShortName">sck</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/ss_n">
-      <obj_property name="ElementShortName">ss_n[0:1]</obj_property>
-      <obj_property name="ObjectShortName">ss_n[0:1]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_aclk">
-      <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_aresetn">
-      <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_awaddr">
-      <obj_property name="ElementShortName">s00_axi_awaddr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_awaddr[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_awprot">
-      <obj_property name="ElementShortName">s00_axi_awprot[2:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_awprot[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_awvalid">
-      <obj_property name="ElementShortName">s00_axi_awvalid</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_awvalid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_awready">
-      <obj_property name="ElementShortName">s00_axi_awready</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_awready</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_wdata">
-      <obj_property name="ElementShortName">s00_axi_wdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_wdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_wstrb">
-      <obj_property name="ElementShortName">s00_axi_wstrb[3:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_wstrb[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_wvalid">
-      <obj_property name="ElementShortName">s00_axi_wvalid</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_wvalid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_wready">
-      <obj_property name="ElementShortName">s00_axi_wready</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_wready</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_bresp">
-      <obj_property name="ElementShortName">s00_axi_bresp[1:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_bresp[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_bvalid">
-      <obj_property name="ElementShortName">s00_axi_bvalid</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_bvalid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_bready">
-      <obj_property name="ElementShortName">s00_axi_bready</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_bready</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_araddr">
-      <obj_property name="ElementShortName">s00_axi_araddr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_araddr[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_arvalid">
-      <obj_property name="ElementShortName">s00_axi_arvalid</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_arvalid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_arready">
-      <obj_property name="ElementShortName">s00_axi_arready</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_arready</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_rdata">
-      <obj_property name="ElementShortName">s00_axi_rdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_rdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl/s00_axi_rresp">
-      <obj_property name="ElementShortName">s00_axi_rresp[1:0]</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_rresp[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_rvalid">
-      <obj_property name="ElementShortName">s00_axi_rvalid</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_rvalid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl/s00_axi_rready">
-      <obj_property name="ElementShortName">s00_axi_rready</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_rready</obj_property>
    </wvobject>
 </wave_config>

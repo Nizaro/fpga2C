@@ -1,18 +1,9 @@
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_behav xil_defaultlib.tb_ctrl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L lib_cdc_v1_0_3 -L proc_sys_reset_v5_0_15 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
-Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
-Compiling architecture tb of entity xil_defaultlib.tb_ctrl
-Built simulation snapshot tb_ctrl_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

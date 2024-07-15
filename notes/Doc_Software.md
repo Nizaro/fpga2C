@@ -10,37 +10,36 @@ Sur une architecture comme le Zynq-7020, il est possible d'utiliser le "Block De
 
 L'objectif principal de notre design sur FPGA est d'assurer une bonne acquisition de l'image depuis les capteurs. Il y a plusieurs considérations à prendre en compte : déjà, il faudra réaliser une IP matérielle personnalisée à notre cas d'usage, qui pourra faire l'interface entre les capteurs et le processeur. Le choix de l'interface entre les deux est également important : Xilinx propose le bus AXI et ses sous types pour une interface rapide entre toute IP et le processeur . Le capteur PYTHON1300 a un débit idéal maximal de 720 Mb/s : nous choisirons donc l'interface AXI-Stream, adaptée au *streaming* continu de données à haut débit.
 L'utilisation du bus AXI-Stream nécessite l'utilisation d'une IP de Xilinx importante : le DMA (Direct Memory Access). Cela veut dire que toutes les données l'IP `noip_lvds`se situent dans "le domaine mémoire", et que le bus AXI-Stream les rapatrie vers "le domaine logique".
-# Les IPs personnalisées
 
-## noip_lvds_stream
+# Vitis
 
-**Note sur les horloges** : l'IP utilise deux entrées d'horloge : l'horloge AXI (la même sur les ports `s00_axis_aclk` et `m00_axis_aclk`) et l'horloge `lvds_clk`. Ces deux horloges contrôlent des logiques indépendantes : l'horloge AXI permet de recevoir et d'envoyer des données périodiquement depuis les interfaces AXI-Stream, tandis que l'horloge LVDS permet de se synchroniser aux arrivées de données sur les ports data ou sync, qui sont lues dans un processus qui les stocke dans une mémoire asynchrone.
-## noip_ctrl
+## Fonctionnement de Vitis
 
-noip_ctrl permet de contrôler les deux capteurs PYTHON1300 : les allumer, les éteindre, et les configurer en utilisant l'interface SPI.
+Tout design utilisant une IP de processeur Xilinx (dans notre cas, le Zynq Processing System, mais pour les cartes UltraScale c'est le processeur MicroBlaze) peut être programmée à travers l'IDE Vitis. Il permet de programmer le processeur avec du code en C ou en C++, et aussi de faire du HLS (*High Level Synthesis*).
+Un workspace Vitis contient différents éléments
+Une **plateforme** est la partie "hardware" du projet, 
+Une **application**
 
-### Interface AXI
+## Workflow
 
-Le contrôleur NOIP communique avec le processeur à travers son interface AXI4-Lite, en tant que *slave*.
-Chaque mot AXI (de 32 bits) envoyé depuis le processeur correspond à une commande, selon la spécification qui suit :
+Dans notre cas, l'utilisation de Vitis est essentielle, car il est difficile de programmer la Z-Turn v2 sans utiliser le processeur intégré - cela nécessiterait un câble JTAG à 14 pins bien précis, difficile à trouver, et certainement cher. La méthode de programmation utilisée ici est de créer une carte SD bootable, qui contiendrait le hardware à programmer sur FPGA et le code pour processeur, de préférence avec un OS embarqué dessus. C'est le cas de la carte SD livrée dans la Z-Turn V2 (son contenu est dans `/sd_backup`): elle contient un Linux basique et un hardware par défaut.
 
-Bits 31~16 : **SPI Data** (laisser à zéro si l'opération n'est pas de type SPI)
-Bits 15~13 : "000"
-Bits 12~4 : **SPI Address** (laisser à zéro si l'opération n'est pas de type SPI)
-Bits 3~2 - **Sensor ID** ("00" ou "01")
-Bits 1~0 : **OpCode** 
-- "00" pour "shutdown"
-- "10" pour "write SPI"
-- "01" pour "read SPI"
-- "11" pour "startup"
+Le workflow serait donc :
+1. Modifier le hardware principal ou une des IPs sur Vivado.
+2. Compiler entièrement le projet ZTurnV2 (*Generate Block Design* puis *Generate Bitstream*, ce qui normalement lancera la synthèse et l'implémentation).
+3. Exporter le hardware (*File -> Export -> Export Hardware*) et écraser le fichier **main_design_wrapper.xsa** (ou le sauvegarder dans un autre xsa).
+4. Ouvrir Vitis et le workspace **zturnv2_platform**.
+5. Resélectionner le hardware dans **fpga2c (Platform)/Settings/vitis-comp.json** -> *Switch XSA*.
+6. Compiler **fpga2c** (*Build* dans la fenêtre *FLOW*).
+7. Puis compiler l'application **app** en prêtant attention aux outputs dans le terminal.
 
-La réponse du noip_ctrl est de la forme suivante :
+# Sources
 
-Bits 31~16 : **SPI Data** (à zéro si l'opération n'est pas de type SPI)
-Bits 15~4 : "000"
-Bits 3~2 - **Sensor ID** ("00" ou "01")
-Bits 1~0 : **ResCode** 
-- "00" pour "shutdown OK"
-- "10" pour "busy"
-- "01" pour "read SPI"
-- "11" pour "startup OK"
+[How to Install Vitis and Petalinux 2024.1](https://www.fpgadeveloper.com/how-to-install-vitis-and-petalinux-2024.1/)
+[Vitis Docs - Zynq-7000 Embedded Design Tutorial](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2023.1/build/html/docs/Introduction/Zynq7000-EDT/Zynq7000-EDT.html)
+
+## Pour une installation des outils Xilinx sur Ubuntu
+
+[Installing Vivado 2020.x on Ubuntu 20.04](https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/) - fonctionne pour toutes les versions post-2020.
+`source /tools/Xilinx/Vivado/2024.1/settings64.sh` puis `vivado`. Fonctionne également avec Vitis.
+**Attention !** sur un système Linux il est très conseillé de [créer un fichier de mémoire swap](https://linuxize.com/post/create-a-linux-swap-file/) pour éviter que Vivado ne crashe pendant la synthèse - 10 à 16 GB supplémentaires suffisent.

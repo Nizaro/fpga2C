@@ -1,4 +1,4 @@
-onsemi
+*onsemi
 NOIP1SN1300A-QTI
 "1.3 Megapixel, Monochrome, LVDS Output, Protective Foil"
 

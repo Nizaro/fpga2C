@@ -20,23 +20,23 @@ preplace inst noip_ctrl_0 -pg 1 -lvl 2 -x 390 -y 10 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 70 -y -30 -defaultsOSRD
 preplace inst clk_wiz -pg 1 -lvl 1 -x 70 -y 220 -defaultsOSRD
 preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 390 -y 230 -defaultsOSRD
-preplace netloc noip_ctrl_0_sw_enable_n 1 2 1 580 70n
-preplace netloc noip_ctrl_0_vddpix_toggle 1 2 1 590 50n
-preplace netloc noip_ctrl_0_vdd33_toggle 1 2 1 600 30n
-preplace netloc noip_ctrl_0_vdd18_toggle 1 2 1 610 10n
-preplace netloc noip_ctrl_0_noip_reset_n 1 2 1 620 -10n
-preplace netloc noip_ctrl_0_clk_pll_out 1 2 1 620 -30n
 preplace netloc Net 1 0 2 -30 40 200
+preplace netloc clk_100MHz_1 1 0 1 NJ 230
 preplace netloc clk_72M_pll_0_1 1 0 2 NJ 60 170J
 preplace netloc clk_spi_in_0_1 1 0 2 NJ 90 180J
 preplace netloc clk_wiz_locked 1 1 1 170 230n
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 0 3 -40 50 190 130 570
-preplace netloc clk_100MHz_1 1 0 1 NJ 230
+preplace netloc noip_ctrl_0_clk_pll_out 1 2 1 620 -30n
+preplace netloc noip_ctrl_0_noip_reset_n 1 2 1 620 -10n
+preplace netloc noip_ctrl_0_sw_enable_n 1 2 1 580 70n
+preplace netloc noip_ctrl_0_vdd18_toggle 1 2 1 610 10n
+preplace netloc noip_ctrl_0_vdd33_toggle 1 2 1 600 30n
+preplace netloc noip_ctrl_0_vddpix_toggle 1 2 1 590 50n
 preplace netloc reset_rtl_0_1 1 0 2 -30 150 210
-preplace netloc noip_ctrl_0_noip_spi 1 2 1 N -50
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 0 3 -40 50 190 130 570
 preplace netloc axi_vip_0_M_AXI 1 1 1 N -30
+preplace netloc noip_ctrl_0_noip_spi 1 2 1 N -50
 levelinfo -pg 1 -80 70 390 640
-pagesize -pg 1 -db -bbox -sgen -220 -330 850 790
+pagesize -pg 1 -db -bbox -sgen -230 -330 850 790
 "
 }
 {

@@ -221,9 +221,9 @@
       "Net": {
         "ports": [
           "clk_wiz/clk_out1",
-          "noip_ctrl_0/s00_axi_aclk",
           "axi_vip_0/aclk",
-          "rst_clk_wiz_100M/slowest_sync_clk"
+          "rst_clk_wiz_100M/slowest_sync_clk",
+          "noip_ctrl_0/s00_axi_aclk"
         ]
       },
       "clk_100MHz_1": {
@@ -296,8 +296,8 @@
       "rst_clk_wiz_100M_peripheral_aresetn": {
         "ports": [
           "rst_clk_wiz_100M/peripheral_aresetn",
-          "noip_ctrl_0/s00_axi_aresetn",
-          "axi_vip_0/aresetn"
+          "axi_vip_0/aresetn",
+          "noip_ctrl_0/s00_axi_aresetn"
         ]
       }
     },

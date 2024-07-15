@@ -1,1 +1,0 @@
-vopt -64 -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xilinx_vip -L xpm -L lib_cdc_v1_0_3 -L proc_sys_reset_v5_0_15 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.verif_design xil_defaultlib.glbl -o verif_design_opt

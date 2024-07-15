@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 15 10:00:35 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 15 10:20:18 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="verif_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -905,9 +905,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="axi_vip_0" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
@@ -1207,8 +1207,8 @@
         <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_vip_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

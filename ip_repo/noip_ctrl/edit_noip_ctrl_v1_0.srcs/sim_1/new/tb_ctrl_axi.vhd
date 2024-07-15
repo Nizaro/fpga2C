@@ -127,7 +127,7 @@ begin
             wait until S_AXI_ACLK= '0';
                 S_AXI_AWVALID<='1';
                 S_AXI_WVALID<='1';
-            wait until (S_AXI_AWREADY and S_AXI_WREADY) = '1';  --Client ready to read address/data        
+            -- wait until (S_AXI_AWREADY and S_AXI_WREADY) = '1';  --Client ready to read address/data        
                 S_AXI_BREADY<='1';
             wait until S_AXI_BVALID = '1';  -- Write result valid
                 assert S_AXI_BRESP = "00" report "AXI data not written" severity failure;
@@ -165,11 +165,13 @@ begin
     BEGIN
             S_AXI_ARESETN<='0';
             sendIt<='0';
-        wait for 15 ns;
+        wait for 10 ns;
             S_AXI_ARESETN<='1';
 
+        wait for 5 ns;
+
             S_AXI_AWADDR<=x"0";
-            S_AXI_WDATA<=x"00000000";
+            S_AXI_WDATA<=x"00000003";
             S_AXI_WSTRB<=b"1111";
             sendIt<='1';                --Start AXI Write to Slave
             wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
@@ -178,7 +180,7 @@ begin
             S_AXI_WSTRB<=b"0000";
                 
             S_AXI_AWADDR<=x"0";
-            S_AXI_WDATA<=x"00000001";
+            S_AXI_WDATA<=x"00000007";
             S_AXI_WSTRB<=b"1111";
             sendIt<='1';                --Start AXI Write to Slave
             wait for 1 ns; sendIt<='0'; --Clear Start Send Flag

@@ -12,6 +12,7 @@ generic
 end tb_ctrl_axi;
 
 architecture Behavioral of tb_ctrl_axi is
+
     -- STARTUP-RELATED
     signal clk_72M_pll :  std_logic := '0';
     signal clk_pll_out :  std_logic_vector(0 to 1);
@@ -58,10 +59,21 @@ architecture Behavioral of tb_ctrl_axi is
     signal sendIt : std_logic := '0';
     signal readIt : std_logic := '0';
 
+    signal ctrl_read : std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+
 begin
 
     clk_spi_in <= not clk_spi_in after 1 ns;
     clk_72M_pll <= not clk_72M_pll after 1389 ps;
+    
+    misoproc : process(S_AXI_ARESETN, clk_spi_in)
+    begin
+        if(S_AXI_ARESETN = '0') then
+            miso <= '0';
+        elsif(rising_edge(clk_spi_in)) then
+            miso <= not miso;
+        end if;
+    end process;
 
   -- instance "led_controller_v1_0_1"
     workctrl : entity work.noip_ctrl(arch_imp)
@@ -161,6 +173,7 @@ begin
                 assert S_AXI_RRESP = "00" report "AXI data not read" severity failure;
                 S_AXI_ARVALID<='0';
                 S_AXI_RREADY<='0';
+                ctrl_read <= S_AXI_RDATA;
         end loop;
     END PROCESS read;
 
@@ -176,7 +189,7 @@ begin
         wait for 5 ns;
 
             S_AXI_AWADDR<=x"0";
-            S_AXI_WDATA<=x"00000003";
+            S_AXI_WDATA<=x"00000003";   -- Power Up Sensor 0
             S_AXI_WSTRB<=b"1111";
             sendIt<='1';                --Start AXI Write to Slave
             wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
@@ -184,50 +197,79 @@ begin
         wait until S_AXI_BVALID = '0';  --AXI Write finished
             S_AXI_WSTRB<=b"0000";
 
-            S_AXI_ARADDR<="0100";
+            S_AXI_ARADDR<="0100";       -- Read CTRL Status Reg
             readIt<='1';                --Start AXI Read from Slave
             wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
         wait until S_AXI_RVALID = '1';
         wait until S_AXI_RVALID = '0'; -- AXI Read finished
+
+        while (S_AXI_RDATA(1 downto 0) = "11") loop -- HOLD UNTIL IDLE
+
+            S_AXI_ARADDR<="0100";       -- Read CTRL Status Reg
+            readIt<='1';                --Start AXI Read from Slave
+            wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
+        wait until S_AXI_RVALID = '1';
+        wait until S_AXI_RVALID = '0'; -- AXI Read finished
+
+        end loop; 
                 
             S_AXI_AWADDR<=x"0";
-            S_AXI_WDATA<=x"00000007";
+            S_AXI_WDATA<=x"000300F2"; -- Enable PLL : Write 0x3 @16 (0xF) on Sensor 0
             S_AXI_WSTRB<=b"1111";
             sendIt<='1';                --Start AXI Write to Slave
             wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
         wait until S_AXI_BVALID = '1';
         wait until S_AXI_BVALID = '0';  --AXI Write finished
             S_AXI_WSTRB<=b"0000";
-            
-            S_AXI_AWADDR<=x"0";
-            S_AXI_WDATA<=x"00000002";
-            S_AXI_WSTRB<=b"1111";
-            sendIt<='1';                --Start AXI Write to Slave
-            wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
-        wait until S_AXI_BVALID = '1';
-        wait until S_AXI_BVALID = '0';  --AXI Write finished
-            S_AXI_WSTRB<=b"0000";
-            
-            S_AXI_AWADDR<=x"4";
-            S_AXI_WDATA<=x"A5A5A5A5";
-            S_AXI_WSTRB<=b"1111";
-            sendIt<='1';                --Start AXI Write to Slave
-            wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
-        wait until S_AXI_BVALID = '1';
-        wait until S_AXI_BVALID = '0';  --AXI Write finished
-            S_AXI_WSTRB<=b"0000";
-            
-            S_AXI_ARADDR<=x"0";
+
+        while (S_AXI_RDATA(1 downto 0) = "11") loop -- HOLD UNTIL IDLE
+
+            S_AXI_ARADDR<="0100";       -- Read CTRL Status Reg
             readIt<='1';                --Start AXI Read from Slave
             wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
         wait until S_AXI_RVALID = '1';
         wait until S_AXI_RVALID = '0'; -- AXI Read finished
 
-            S_AXI_ARADDR<=x"4";
+        end loop; 
+
+            S_AXI_AWADDR<=x"0";
+            S_AXI_WDATA<=x"00001001"; -- Read ROI X info : SPI read @256 (0x100) on Sensor 0
+            S_AXI_WSTRB<=b"1111";
+            sendIt<='1';                --Start AXI Write to Slave
+            wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
+        wait until S_AXI_BVALID = '1';
+        wait until S_AXI_BVALID = '0';  --AXI Write finished
+            S_AXI_WSTRB<=b"0000";
+
+        while (S_AXI_RDATA(1 downto 0) = "11") loop -- HOLD UNTIL IDLE
+
+            S_AXI_ARADDR<="0100";       -- Read CTRL Status Reg
             readIt<='1';                --Start AXI Read from Slave
             wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
         wait until S_AXI_RVALID = '1';
-        wait until S_AXI_RVALID = '0';
+        wait until S_AXI_RVALID = '0'; -- AXI Read finished
+
+        end loop; 
+
+            S_AXI_AWADDR<=x"0";
+            S_AXI_WDATA<=x"00000000"; -- Shutdown Sensor 0
+            S_AXI_WSTRB<=b"1111";
+            sendIt<='1';                --Start AXI Write to Slave
+            wait for 1 ns; sendIt<='0'; --Clear Start Send Flag
+        wait until S_AXI_BVALID = '1';
+        wait until S_AXI_BVALID = '0';  --AXI Write finished
+            S_AXI_WSTRB<=b"0000";
+
+        while (S_AXI_RDATA(1 downto 0) = "11") loop -- HOLD UNTIL IDLE
+
+            S_AXI_ARADDR<="0100";       -- Read CTRL Status Reg
+            readIt<='1';                --Start AXI Read from Slave
+            wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
+        wait until S_AXI_RVALID = '1';
+        wait until S_AXI_RVALID = '0'; -- AXI Read finished
+
+        end loop; 
+        
             
         wait; -- will wait forever
     END PROCESS tb;

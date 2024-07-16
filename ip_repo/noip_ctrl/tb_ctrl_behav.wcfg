@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="21.806 ns"></ZoomStartTime>
-      <ZoomEndTime time="50.607 ns"></ZoomEndTime>
-      <Cursor1Time time="37.500 ns"></Cursor1Time>
+      <ZoomStartTime time="40.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,192.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
       <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="37" />
    <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -68,6 +68,14 @@
       <obj_property name="ElementShortName">reg0[31:0]</obj_property>
       <obj_property name="ObjectShortName">reg0[31:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/state_write">
+      <obj_property name="ElementShortName">state_write[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_write[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/workctrl/busy">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
    <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/StartupState">
       <obj_property name="ElementShortName">StartupState</obj_property>
       <obj_property name="ObjectShortName">StartupState</obj_property>
@@ -76,13 +84,45 @@
       <obj_property name="ElementShortName">SPIState</obj_property>
       <obj_property name="ObjectShortName">SPIState</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/ss_n">
+      <obj_property name="ElementShortName">ss_n[0:1]</obj_property>
+      <obj_property name="ObjectShortName">ss_n[0:1]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/workctrl/sck">
+      <obj_property name="ElementShortName">sck</obj_property>
+      <obj_property name="ObjectShortName">sck</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/workctrl/miso">
+      <obj_property name="ElementShortName">miso</obj_property>
+      <obj_property name="ObjectShortName">miso</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/workctrl/mosi">
+      <obj_property name="ElementShortName">mosi</obj_property>
+      <obj_property name="ObjectShortName">mosi</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/addr_ctr">
+      <obj_property name="ElementShortName">addr_ctr</obj_property>
+      <obj_property name="ObjectShortName">addr_ctr</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/write_data_ctr">
+      <obj_property name="ElementShortName">write_data_ctr</obj_property>
+      <obj_property name="ObjectShortName">write_data_ctr</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/read_data_ctr">
+      <obj_property name="ElementShortName">read_data_ctr</obj_property>
+      <obj_property name="ObjectShortName">read_data_ctr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/read_spi_data">
+      <obj_property name="ElementShortName">read_spi_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">read_spi_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/workctrl/spiflag">
+      <obj_property name="ElementShortName">spiflag</obj_property>
+      <obj_property name="ObjectShortName">spiflag</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/tb_ctrl_axi/clk_72M_pll">
       <obj_property name="ElementShortName">clk_72M_pll</obj_property>
       <obj_property name="ObjectShortName">clk_72M_pll</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/state_write">
-      <obj_property name="ElementShortName">state_write[1:0]</obj_property>
-      <obj_property name="ObjectShortName">state_write[1:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg1">
       <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
@@ -123,5 +163,9 @@
    <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_RDATA">
       <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/ctrl_read">
+      <obj_property name="ElementShortName">ctrl_read[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_read[31:0]</obj_property>
    </wvobject>
 </wave_config>

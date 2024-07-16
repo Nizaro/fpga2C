@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="38.406 ns"></ZoomEndTime>
-      <Cursor1Time time="21.485 ns"></Cursor1Time>
+      <ZoomStartTime time="21.806 ns"></ZoomStartTime>
+      <ZoomEndTime time="50.607 ns"></ZoomEndTime>
+      <Cursor1Time time="37.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="26" />
    <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -30,10 +30,6 @@
    <wvobject type="logic" fp_name="/tb_ctrl_axi/sendIt">
       <obj_property name="ElementShortName">sendIt</obj_property>
       <obj_property name="ObjectShortName">sendIt</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_ctrl_axi/readIt">
-      <obj_property name="ElementShortName">readIt</obj_property>
-      <obj_property name="ObjectShortName">readIt</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_AWVALID">
       <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
@@ -68,9 +64,9 @@
       <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_RDATA">
-      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/reg0">
+      <obj_property name="ElementShortName">reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg0[31:0]</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/tb_ctrl_axi/workctrl/StartupState">
       <obj_property name="ElementShortName">StartupState</obj_property>
@@ -87,5 +83,45 @@
    <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/state_write">
       <obj_property name="ElementShortName">state_write[1:0]</obj_property>
       <obj_property name="ObjectShortName">state_write[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/slv_reg1">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/workctrl/noip_ctrl_slave_lite_v1_0_S00_AXI_inst/state_read">
+      <obj_property name="ElementShortName">state_read[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_read[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/readIt">
+      <obj_property name="ElementShortName">readIt</obj_property>
+      <obj_property name="ObjectShortName">readIt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_ARADDR">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ARVALID">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_ARREADY">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_RREADY">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ctrl_axi/S_AXI_RVALID">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_RRESP">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ctrl_axi/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
    </wvobject>
 </wave_config>

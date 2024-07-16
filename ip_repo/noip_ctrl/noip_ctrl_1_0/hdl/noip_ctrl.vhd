@@ -69,8 +69,8 @@ architecture arch_imp of noip_ctrl is
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
 		);
 		port (
-		rec_data : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-		send_data : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg0 : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg1 : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -100,10 +100,10 @@ architecture arch_imp of noip_ctrl is
 	signal busy : std_logic;
 	signal startup_busy : std_logic;
 	signal spi_busy : std_logic;
-	signal wready : std_logic;
 
 	-- GENERIC DATA-RELATED
-	signal rec_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal reg0 : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal reg1 : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal send_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal opcode : std_logic_vector(1 downto 0);
 	signal sensor_id : std_logic_vector(1 downto 0);
@@ -135,8 +135,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
 	)
 	port map (
-		rec_data => rec_data,
-		send_data => send_data,
+		reg0 => reg0,
+		reg1 => reg1,
 		S_AXI_ACLK	=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
@@ -146,7 +146,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 		S_AXI_WDATA	=> s00_axi_wdata,
 		S_AXI_WSTRB	=> s00_axi_wstrb,
 		S_AXI_WVALID	=> s00_axi_wvalid,
-		S_AXI_WREADY	=> wready,
+		S_AXI_WREADY	=> s00_axi_wready,
 		S_AXI_BRESP	=> s00_axi_bresp,
 		S_AXI_BVALID	=> s00_axi_bvalid,
 		S_AXI_BREADY	=> s00_axi_bready,
@@ -162,9 +162,9 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 
 	-- Add user logic here
 
-	opcode <= rec_data(1 downto 0);
-	sensor_id <= rec_data(3 downto 2);
-	spi_addr <= rec_data(12 downto 4);
+	opcode <= reg0(1 downto 0);
+	sensor_id <= reg0(3 downto 2);
+	spi_addr <= reg0(12 downto 4);
 
 	with StartupState select startup_busy <= '0' when IDLE,
 											 '1' when others;
@@ -174,7 +174,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 
 	busy <= spi_busy or startup_busy;
 
-	s00_axi_wready <= wready and not busy;
+	reg1 <= x"EEEE4444";
 
 	startup_process : process(s00_axi_aclk, s00_axi_aresetn) 
 		variable id : integer := 0;
@@ -309,7 +309,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 					end if;
 
 				when W_DATA =>
-					mosi <= rec_data(write_data_ctr+16);
+					mosi <= reg0(write_data_ctr+16);
 					if(write_data_ctr = 0) then
 						sck_en <= '0';
 						SPIState <= SEND_RD_DATA;

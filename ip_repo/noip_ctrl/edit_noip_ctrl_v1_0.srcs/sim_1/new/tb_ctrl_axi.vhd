@@ -153,9 +153,12 @@ begin
             wait until readIt = '1';
             wait until S_AXI_ACLK= '0';
                 S_AXI_ARVALID<='1';
+            if (S_AXI_ARREADY = '0') then
+                wait until S_AXI_ARREADY = '1';
+            end if;   
                 S_AXI_RREADY<='1';
-            wait until (S_AXI_RVALID and S_AXI_ARREADY) = '1';  --Client provided data
-                assert S_AXI_RRESP = "00" report "AXI data not written" severity failure;
+            wait until (S_AXI_RVALID = '0');  --Client provided data
+                assert S_AXI_RRESP = "00" report "AXI data not read" severity failure;
                 S_AXI_ARVALID<='0';
                 S_AXI_RREADY<='0';
         end loop;
@@ -180,6 +183,12 @@ begin
         wait until S_AXI_BVALID = '1';
         wait until S_AXI_BVALID = '0';  --AXI Write finished
             S_AXI_WSTRB<=b"0000";
+
+            S_AXI_ARADDR<="0100";
+            readIt<='1';                --Start AXI Read from Slave
+            wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
+        wait until S_AXI_RVALID = '1';
+        wait until S_AXI_RVALID = '0'; -- AXI Read finished
                 
             S_AXI_AWADDR<=x"0";
             S_AXI_WDATA<=x"00000007";
@@ -212,7 +221,8 @@ begin
             readIt<='1';                --Start AXI Read from Slave
             wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag
         wait until S_AXI_RVALID = '1';
-        wait until S_AXI_RVALID = '0';
+        wait until S_AXI_RVALID = '0'; -- AXI Read finished
+
             S_AXI_ARADDR<=x"4";
             readIt<='1';                --Start AXI Read from Slave
             wait for 1 ns; readIt<='0'; --Clear "Start Read" Flag

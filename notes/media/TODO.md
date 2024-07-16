@@ -1,3 +1,3 @@
 
 - PetaLinux 
-- VIP for AXI-Stream
+- License info for Xil IPs

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Jul 15 14:33:56 2024
-# Process ID: 71482
+# Start of session at: Tue Jul 16 08:52:13 2024
+# Process ID: 13097
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,13 +13,13 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3145.019 MHz
+# CPU Frequency     :3376.093 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :20557 MB
+# Available Virtual :26316 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part tul.com.tw:pynqzu:part0:1.1 available at /home/nothon/.Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store/XilinxBoardStore/Vivado/2024.1/boards/TUL/pynqzu/1.1/1.1/board.xml as part xczu5eg-sfvc784-1-e specified in board_part file is either invalid or not available
@@ -116,3 +116,1522 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/nothon/fpga2C/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/nothon/fpga2C/ip_repo/noip_ctrl'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ctrl_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ctrl_axi_behav -key {Behavioral:sim_1:Functional:tb_ctrl_axi} -tclbatch {tb_ctrl_axi.tcl} -view {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg
+source tb_ctrl_axi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ctrl_axi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 7847.836 ; gain = 74.688 ; free physical = 513 ; free virtual = 24092
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ctrl_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+ERROR: [VRFC 10-719] formal port/generic <reg0> is not declared in <noip_ctrl_slave_lite_v1_0_s00_axi> [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:138]
+ERROR: [VRFC 10-3353] formal port 'send_data' has no actual or default value [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:132]
+ERROR: [VRFC 10-2989] 'rec_data' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:311]
+ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:63]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8135.887 ; gain = 45.820 ; free physical = 515 ; free virtual = 23744
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8162.676 ; gain = 9.000 ; free physical = 567 ; free virtual = 23796
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8178.688 ; gain = 0.000 ; free physical = 526 ; free virtual = 23716
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 63 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:289
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8227.688 ; gain = 31.988 ; free physical = 697 ; free virtual = 23681
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+ERROR: [VRFC 10-2989] 'c_s_axi_data_width' is not declared [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:106]
+ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:63]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl_slave_lite_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 63 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8437.727 ; gain = 60.000 ; free physical = 1083 ; free virtual = 23567
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8485.730 ; gain = 40.992 ; free physical = 1649 ; free virtual = 23652
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+add_bp {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} 159
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+remove_bps -file {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} -line 159
+add_bp {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} 156
+add_bp {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} 157
+remove_bps -file {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} -line 156
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Stopped at time : 30 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 157
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 64
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 30558 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 63
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 269
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 278
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 279
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 281
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 282
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 283
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 284
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 333
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 335
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 347
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 347
+step
+Stopped at time : 31 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 347
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 64
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 31947 ps : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 262
+step
+Stopped at time : 32 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 63
+step
+Stopped at time : 32 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 269
+step
+Stopped at time : 32 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 278
+step
+Stopped at time : 32 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 333
+step
+Stopped at time : 32 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd" Line 335
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Stopped at time : 30 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 157
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Stopped at time : 30 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 157
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Stopped at time : 30 ns : File "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" Line 157
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+remove_bps -file {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} -line 157
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8551.359 ; gain = 0.000 ; free physical = 775 ; free virtual = 22903
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 8580.766 ; gain = 0.000 ; free physical = 874 ; free virtual = 22891
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+add_bp {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} 158
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+remove_bps -file {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} -line 158
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8586.777 ; gain = 0.000 ; free physical = 756 ; free virtual = 22822
+add_bp {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} 157
+remove_bps -file {/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd} -line 157
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 8588.770 ; gain = 1.961 ; free physical = 661 ; free virtual = 22737
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8616.809 ; gain = 0.000 ; free physical = 663 ; free virtual = 22789
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8634.801 ; gain = 0.000 ; free physical = 681 ; free virtual = 22759
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8668.797 ; gain = 0.000 ; free physical = 676 ; free virtual = 22674
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8732.801 ; gain = 1.973 ; free physical = 697 ; free virtual = 22664
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8738.805 ; gain = 5.969 ; free physical = 739 ; free virtual = 22717
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8772.852 ; gain = 0.000 ; free physical = 735 ; free virtual = 22711
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8785.812 ; gain = 3.992 ; free physical = 553 ; free virtual = 22553
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_ctrl_axi_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ctrl_axi'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_ctrl_axi'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ctrl_axi_behav xil_defaultlib.tb_ctrl_axi -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl_slave_lite_v1_0_S00_AXI [noip_ctrl_slave_lite_v1_0_s00_ax...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_ctrl [noip_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ctrl_axi
+Built simulation snapshot tb_ctrl_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 8 downto 0
+Time: 73 ns  Iteration: 0  Process: /tb_ctrl_axi/workctrl/rising_spi_process
+  File: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd
+
+HDL Line: /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:294
+relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8795.812 ; gain = 0.000 ; free physical = 411 ; free virtual = 22487
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_ctrl/tb_ctrl_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/hdl/noip_ctrl.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.srcs/sim_1/new/tb_ctrl_axi.vhd:]

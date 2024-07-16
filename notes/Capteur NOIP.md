@@ -55,6 +55,10 @@ Du moins fin/fspi >= 6, comme fin_pll = 72M, f_spi <= 12 M.
 - Exposure / Frame Rate : @195-203
 - ROI0 config : @256
 
+# Monitor Pins (p34)
+
+0x1 : monitor0 = Integration Time, monitor1 = ROT
+
 # Interface LVDS (p35)
 
 4 canaux de sortie LVDS + 1 sortie clock (pour synchro "mésochrone") + 1 canal sync (metadata) = **6 paires LVDS** (24 paires sur la Bank 35 : 4 capteurs synchrones max)

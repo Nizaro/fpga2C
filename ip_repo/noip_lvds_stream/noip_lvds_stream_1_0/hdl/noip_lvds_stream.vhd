@@ -86,7 +86,7 @@ architecture arch_imp of noip_lvds_stream is
 	-- user signals start here
 
 	-- FSM for the driver itself
-	type driver_state is (IDLE, WAIT_FS, WAIT_LS, WAIT_FE, WAIT_LE, REC_BLACK, REC_CRC, REC_IMG);
+	type driver_state is (ALIGNING, IDLE, WAIT_FS, WAIT_LS, WAIT_FE, WAIT_LE, REC_BLACK, REC_CRC, REC_IMG);
 	signal DState : driver_state;
 
 	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
@@ -110,11 +110,30 @@ architecture arch_imp of noip_lvds_stream is
 
 	signal im_line : integer := 1024;
 	signal im_column : integer := 1;
+	signal i : integer := 0;
+	signal bitslip : integer := 0;
 
 	type t_ligne is array (1 to 1280) of pixel;
 	type t_image is array(1 to 1024) of t_ligne;
-	signal image : t_image;
+	-- signal image : t_image;
 	-- user signals end here
+
+	function findbitslip (pat : pixel := TR) return integer is
+		variable shift : integer := 0;
+		variable sd_pat : pixel;
+	begin
+		sd_pat := pat;
+		if(sd_pat = TR) then
+			return 0;
+		end if;
+		for s in 1 to 9 loop
+			sd_pat := sd_pat(8 downto 0) & sd_pat(9);
+			if(sd_pat = TR) then
+				shift := s;
+			end if;
+		end loop;
+		return shift;
+	end function;
 
 begin
 
@@ -152,42 +171,60 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 	-- Add user logic here
 	
 	lvds_read_process : process(lvds_clk, s00_axis_aresetn)
-		variable i : integer := 0;
+		variable temp_sync_word : pixel;
+		variable temp_data_words : t_ldw;
 	begin
 		if(s00_axis_aresetn = '0') then
-			i := 0;
+			i <= 0;
 			lvds_sync_word <= (others => '0');
 			lvds_data_words <= (others => (others => '0'));
 			lvds_word_ready <= '0';
 		elsif(rising_edge(lvds_clk)) then
-			if(i = SENSOR_BIT_LENGTH) then
-				i := 0;
-				lvds_word_ready <= '1';
-			else
-				lvds_word_ready <= '0';
-			end if;
 
-			lvds_sync_word(i) <= lvds_sync;
+			temp_sync_word(i) := lvds_sync;
 
 			for c in 0 to 3 loop
-				lvds_data_words(c)(i) <= lvds_data(c);	
+				temp_data_words(c)(i) := lvds_data(c);	
 			end loop;
 
-			i := i+1;
-
+			if(i = SENSOR_BIT_LENGTH-1) then
+				i <= 0;
+				lvds_word_ready <= '1';
+				if(bitslip > 0 and bitslip < 9) then
+					lvds_sync_word <= temp_sync_word(9-bitslip downto 0) & temp_sync_word(9 downto 9-bitslip+1);
+					for c in 0 to 3 loop
+						lvds_data_words(c) <= temp_data_words(c)(9-bitslip downto 0) & temp_data_words(c)(9 downto 9-bitslip+1);
+					end loop;
+				else
+					lvds_sync_word <= temp_sync_word;
+					lvds_data_words <= temp_data_words;
+				end if;
+			else
+				lvds_word_ready <= '0';
+				i <= i+1;
+			end if;
+			
 		end if;
 	end process;
 
 	lvds_fsm : process(lvds_word_ready, s00_axis_aresetn) 
 	begin
 		if(s00_axis_aresetn = '0') then
-			DState <= IDLE;
+			DState <= ALIGNING;
 			nb_kernel <= 0;
 			pixel_polarity <= 0;
 			im_line <= 1280;
 			im_column <= 1;
+			bitslip <= 0;
 		elsif(rising_edge(lvds_word_ready)) then
 			case DState is
+				when ALIGNING =>
+					if(lvds_sync_word = TR and lvds_data_words(0) = TR) then -- training pattern found : alignment done.
+						DState <= IDLE;
+					else
+						bitslip <= findbitslip(lvds_sync_word);
+					end if;
+					
 				when IDLE => -- during training. Waiting for FS.
 					if(lvds_sync_word = FRAME_START) then
 						DState <= WAIT_FS;
@@ -243,7 +280,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					DState <= IDLE;
 
 				when others => -- one shouldn't be there.
-					DState <= IDLE;
+					DState <= ALIGNING;
 
 			end case; 
 		end if;

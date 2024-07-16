@@ -63,6 +63,23 @@ architecture tb of tb_lvds_stream is
 	signal	m00_axis_tlast	:  std_logic := '0';
 	signal	m00_axis_tready	: std_logic := '0';
 
+	-- tb signals
+	subtype pixel is std_logic_vector(9 downto 0);
+	signal sync_word : pixel;
+	type t_ldw is array(0 to 3) of pixel;
+	signal data_words : t_ldw;
+	signal i_lvds : integer := 0;
+
+	-- constants and patterns of sync channel
+	constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
+	constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";
+	constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
+	constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
+	constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
+	constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
+	constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
+	constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
+
 begin
 
 workLVDS_stream : entity work.noip_lvds_stream(arch_imp) 
@@ -97,6 +114,36 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 
     lvds_clk <= not lvds_clk after 1 ns;
 
-    s00_axis_aresetn <= '1' after 2 ns;
+    s00_axis_aresetn <= '1' after 1 ns;
+
+	lvds_process : process(lvds_clk, s00_axis_aresetn)
+	begin
+		if(s00_axis_aresetn = '0') then
+			lvds_sync <= '0';
+			lvds_data <= (others => '0');
+			i_lvds <= 7;
+		elsif(falling_edge(lvds_clk)) then
+			lvds_sync <= sync_word(i_lvds);
+			for c in 0 to 3 loop
+				lvds_data(c) <= data_words(c)(i_lvds);	
+			end loop;
+			
+			if(i_lvds > 8) then
+				i_lvds <= 0;
+			else
+				i_lvds <= i_lvds + 1;
+			end if;
+		end if;
+	end process;
+
+
+	tb : process
+	begin
+
+		sync_word <= TR; -- training
+		data_words <= (others => TR);
+
+		wait;
+	end process;
 
 end tb;

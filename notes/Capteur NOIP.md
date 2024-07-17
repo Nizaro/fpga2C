@@ -1,4 +1,4 @@
-*onsemi
+onsemi
 NOIP1SN1300A-QTI
 "1.3 Megapixel, Monochrome, LVDS Output, Protective Foil"
 
@@ -77,3 +77,8 @@ https://stackoverflow.com/questions/27241973/creating-large-dual-port-ram-in-vhd
 # Data Order (p40)
 
 Mode 4 canaux : 1 canal = 2 pixels du kernel de 1x8
+
+# Examples
+
+[Xilinx Forums - Petalinux VDMA s2mm mm2s + Python1300](https://support.xilinx.com/s/question/0D52E00006iHu6WSAS/petalinux-vdma-s2mm-mm2s-python1300?language=en_US)
+[How to perform channel alignment based on PYTHON1300?](https://community.onsemi.com/s/question/0D54V00007gHJrrSAG/how-to-perform-channel-alignment-based-on-python1300)

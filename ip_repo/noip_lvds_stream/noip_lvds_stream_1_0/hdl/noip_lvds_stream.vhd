@@ -119,7 +119,6 @@ architecture arch_imp of noip_lvds_stream is
 	-- user signals end here
 
 	function findbitslip (pat : pixel := TR) return integer is
-		variable shift : integer := 0;
 		variable sd_pat : pixel;
 	begin
 		sd_pat := pat;
@@ -129,10 +128,10 @@ architecture arch_imp of noip_lvds_stream is
 		for s in 1 to 9 loop
 			sd_pat := sd_pat(8 downto 0) & sd_pat(9);
 			if(sd_pat = TR) then
-				shift := s;
+				return s;
 			end if;
 		end loop;
-		return shift;
+		return -1;
 	end function;
 
 begin

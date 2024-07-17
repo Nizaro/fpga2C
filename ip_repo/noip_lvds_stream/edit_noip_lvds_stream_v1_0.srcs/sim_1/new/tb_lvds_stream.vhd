@@ -121,7 +121,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		if(s00_axis_aresetn = '0') then
 			lvds_sync <= '0';
 			lvds_data <= (others => '0');
-			i_lvds <= 7;
+			i_lvds <= 0;
 		elsif(falling_edge(lvds_clk)) then
 			lvds_sync <= sync_word(i_lvds);
 			for c in 0 to 3 loop

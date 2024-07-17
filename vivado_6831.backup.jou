@@ -72,3 +72,44 @@ ipx::check_integrity [ipx::current_core]
 ipx::save_core [ipx::current_core]
 update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo
 ipx::unload_core /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+step
+restart
+run 2 us
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+restart
+run 2 us
+relaunch_sim
+relaunch_sim

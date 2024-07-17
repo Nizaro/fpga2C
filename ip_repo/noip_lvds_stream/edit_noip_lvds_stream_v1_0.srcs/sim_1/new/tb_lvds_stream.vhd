@@ -75,10 +75,103 @@ architecture tb of tb_lvds_stream is
 	constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";
 	constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
 	constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
-	constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
-	constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
-	constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
-	constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
+	constant BLACK_LINE : std_logic_vector(9 downto 0) := "00" & x"15";
+	constant IMAGE : std_logic_vector(9 downto 0) := "00" & x"35";
+	constant CRC_PATT : std_logic_vector(9 downto 0) := "00" & x"59";
+	constant TRAINING : std_logic_vector(9 downto 0) := "11" & x"A6";
+	type t_pattern is (FS,FE,LS,LE,BL,IMG,CRC,TR,ID);
+	signal Pattern : t_pattern;
+
+	-- functions
+	
+	procedure p_training(signal sw : inout pixel;
+						signal dws : inout t_ldw) is
+	begin
+		wait until i_lvds = 0;
+		sw <= TRAINING;
+		dws <= (others => TRAINING);
+
+	end procedure;
+
+
+	procedure blackline(signal sw : inout pixel;
+						signal dws : inout t_ldw) is
+	begin
+		wait until i_lvds = 0;
+		sw <= LINE_START;
+		dws <= (others => (others => '0'));
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- blank
+		wait until i_lvds = 0;
+		sw <= BLACK_LINE;
+		wait for 100 ns;
+		wait until i_lvds = 0;
+		sw <= LINE_END;
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- blank
+		wait until i_lvds = 0;
+		sw <= CRC_PATT;
+
+	end procedure;
+
+	procedure img_line(signal sw : inout pixel;
+					   signal dws : inout t_ldw) is
+	begin
+		wait until i_lvds = 0;
+		sw <= LINE_START;
+		dws <= (others => (others => '0'));
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= IMAGE;
+		wait for 100 ns;
+		wait until i_lvds = 0;
+		sw <= LINE_END;
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= CRC_PATT;
+
+	end procedure;
+
+	procedure frame(signal sw : inout pixel;
+					signal dws : inout t_ldw) is
+	begin
+		wait until i_lvds = 0;
+		sw <= FRAME_START;
+		dws <= (others => (others => '0'));
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= IMAGE;
+		wait for 100 ns;
+		wait until i_lvds = 0;
+		sw <= LINE_END;
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= CRC_PATT;
+		for l in 0 to 4 loop
+			img_line(sw,dws);
+			p_training(sw,dws);
+			wait for 15 ns;
+		end loop;
+		wait until i_lvds = 0;
+		sw <= LINE_START;
+		dws <= (others => (others => '0'));
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= IMAGE;
+		wait for 100 ns;
+		wait until i_lvds = 0;
+		sw <= FRAME_END;
+		wait until i_lvds = 0;
+		sw <= (others => '0'); -- ID
+		wait until i_lvds = 0;
+		sw <= CRC_PATT;
+
+	end procedure;
 
 begin
 
@@ -140,10 +233,34 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 	tb : process
 	begin
 
-		sync_word <= TR; -- training
-		data_words <= (others => TR);
+		monitor0 <= '0';
+		monitor1 <= '0';
+		sync_word <= (others => '0');
+		data_words <= (others => (others => '0'));
+
+		p_training(sync_word,data_words);
+
+		wait for 60 ns;
+		
+		blackline(sync_word,data_words);
+		p_training(sync_word,data_words);
+
+		wait for 15 ns;
+
+		frame(sync_word, data_words);
+		p_training(sync_word,data_words);
 
 		wait;
 	end process;
+
+	with sync_word select Pattern <= FS when FRAME_START,
+									 FE when FRAME_END,
+									 LS when LINE_START,
+									 LE when LINE_END,
+									 BL when BLACK_LINE,
+									 IMG when IMAGE,
+									 CRC when CRC_PATT,
+									 TR when TRAINING,
+									 ID when others;
 
 end tb;

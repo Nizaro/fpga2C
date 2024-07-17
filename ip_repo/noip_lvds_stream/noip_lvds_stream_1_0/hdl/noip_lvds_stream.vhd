@@ -86,7 +86,7 @@ architecture arch_imp of noip_lvds_stream is
 	-- user signals start here
 
 	-- FSM for the driver itself
-	type driver_state is (ALIGNING, IDLE, WAIT_FS, WAIT_LS, WAIT_FE, WAIT_LE, REC_BLACK, REC_CRC, REC_IMG);
+	type driver_state is (ALIGNING, IDLE, WAIT_BLACK, REC_BLACK, END_BLACK, REC_ID, REC_IMG, WAIT_LS, AFTER_FE);
 	signal DState : driver_state;
 
 	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
@@ -224,29 +224,31 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 						bitslip <= findbitslip(lvds_sync_word);
 					end if;
 					
-				when IDLE => -- during training. Waiting for FS.
-					if(lvds_sync_word = FRAME_START) then
-						DState <= WAIT_FS;
+				when IDLE => -- during training or FOT. Waiting for black lines or a frame.
+					if(lvds_sync_word = LINE_START) then
+						DState <= WAIT_BLACK;
 					end if;
 
-				when WAIT_FS => -- receiving window ID, and ignoring it.
-					DState <= REC_BLACK;
+				when WAIT_BLACK => -- waiting out the first timeslot, to receive the first black line.
+					if(lvds_sync_word = BL) then
+						DState <= REC_BLACK;
+					end if;
 
 				when REC_BLACK => -- receiving a black line, waiting for LE.
 					if(lvds_sync_word = LINE_END) then
-						DState <= WAIT_LE;
-					end if;
-				
-				when WAIT_LE => -- receiving window ID, CRC, and training. Waiting for next LS.
-					nb_kernel <= 0;
-					im_column <= 1;
-					im_line <= im_line + 1;
-					if(lvds_sync_word = LINE_START) then
-						DState <= WAIT_LS;
+						DState <= END_BLACK;
 					end if;
 
-				when WAIT_LS => -- receiving window ID, and ignoring it.
-					DState <= REC_IMG;
+				when END_BLACK => -- waiting for FS after receiving a black line. Expecting ID, CRC, and training.
+					if(lvds_sync_word = FRAME_START) then
+						nb_kernel <= 0;
+						im_column <= 1;
+						im_line <= 0;
+						Dstate <= REC_ID;
+					end if;
+
+				when REC_ID => -- receiving window ID ignoring it.
+					Dstate <= REC_IMG;
 
 				when REC_IMG => -- receiving pixels and storing them. 
 					-- if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
@@ -270,12 +272,20 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					end if;
 
 					if(lvds_sync_word = LINE_END) then
-						DState <= WAIT_LE;
+						DState <= WAIT_LS;
 					elsif(lvds_sync_word = FRAME_END) then
-						DState <= WAIT_FE;
+						DState <= AFTER_FE;
 					end if;
 
-				when WAIT_FE => -- finished receiving frame, sending it. Going back to training (IDLE).
+				when WAIT_LS => -- receiving CRC and ROT : waiting for the next line start.
+					nb_kernel <= 0;
+					im_column <= 1;
+					if(lvds_sync_word = LINE_START) then
+						im_line <= im_line + 1;
+						DState <= REC_ID;
+					end if;
+
+				when AFTER_FE => -- finished receiving frame, sending it. After that, back to training (IDLE).
 					DState <= IDLE;
 
 				when others => -- one shouldn't be there.

@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-// Date        : Tue Jun 25 10:10:34 2024
+// Date        : Wed Jul 17 09:39:31 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0_stub.v
@@ -22,10 +22,9 @@ module main_design_noip_ctrl_0_0(clk_72M_pll, clk_pll_out, noip_reset_n,
   s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, s00_axi_araddr, s00_axi_arprot, 
   s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, 
   s00_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="clk_72M_pll,clk_pll_out[0:1],noip_reset_n[0:1],vdd18_toggle[0:1],vdd33_toggle[0:1],vddpix_toggle[0:1],sw_enable_n[0:1],miso,mosi,sck,ss_n[0:1],s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */
+/* synthesis syn_black_box black_box_pad_pin="clk_72M_pll,clk_pll_out[0:1],noip_reset_n[0:1],vdd18_toggle[0:1],vdd33_toggle[0:1],vddpix_toggle[0:1],sw_enable_n[0:1],miso,mosi,sck,ss_n[0:1],s00_axi_aresetn,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */
 /* synthesis syn_force_seq_prim="clk_spi_in" */
-/* synthesis syn_force_seq_prim="s00_axi_aclk" */
-/* synthesis syn_force_seq_prim="s00_axi_aresetn" */;
+/* synthesis syn_force_seq_prim="s00_axi_aclk" */;
   input clk_72M_pll;
   output [0:1]clk_pll_out;
   output [0:1]noip_reset_n;
@@ -39,7 +38,7 @@ module main_design_noip_ctrl_0_0(clk_72M_pll, clk_pll_out, noip_reset_n,
   output sck;
   output [0:1]ss_n;
   input s00_axi_aclk /* synthesis syn_isclock = 1 */;
-  input s00_axi_aresetn /* synthesis syn_isclock = 1 */;
+  input s00_axi_aresetn;
   input [3:0]s00_axi_awaddr;
   input [2:0]s00_axi_awprot;
   input s00_axi_awvalid;

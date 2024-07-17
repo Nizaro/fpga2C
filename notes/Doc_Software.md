@@ -9,7 +9,16 @@ Sur une architecture comme le Zynq-7020, il est possible d'utiliser le "Block De
 ## Le design
 
 L'objectif principal de notre design sur FPGA est d'assurer une bonne acquisition de l'image depuis les capteurs. Il y a plusieurs considérations à prendre en compte : déjà, il faudra réaliser une IP matérielle personnalisée à notre cas d'usage, qui pourra faire l'interface entre les capteurs et le processeur. Le choix de l'interface entre les deux est également important : Xilinx propose le bus AXI et ses sous types pour une interface rapide entre toute IP et le processeur . Le capteur PYTHON1300 a un débit idéal maximal de 720 Mb/s : nous choisirons donc l'interface AXI-Stream, adaptée au *streaming* continu de données à haut débit.
-L'utilisation du bus AXI-Stream nécessite l'utilisation d'une IP de Xilinx importante : le DMA (Direct Memory Access). Cela veut dire que toutes les données l'IP `noip_lvds`se situent dans "le domaine mémoire", et que le bus AXI-Stream les rapatrie vers "le domaine logique".
+L'utilisation du bus AXI-Stream nécessite l'utilisation d'une IP de Xilinx importante : le DMA (Direct Memory Access). Cela veut dire que toutes les données l'IP `noip_lvds_stream`se situent dans "le domaine mémoire", et que le bus AXI-Stream les rapatrie vers "le domaine logique".
+
+Le design principal (le processeur et nos IPs) est entouré d'IPs qui
+
+Note : il se peut que les inverseurs (IP "Utility Vector Logic") donnent cette erreur à la génération du Block Design :
+```
+[BD 41-1273] Error running propagate TCL procedure: unexpected operator ":" without preceding "?"
+    ::xilinx.com_ip_util_vector_logic_2.0::propagate Line 24
+```
+Elle est complètement à ignorer : leur synthèse fonctionne normalement.
 
 # Vitis
 
@@ -25,8 +34,8 @@ Une **application**
 Dans notre cas, l'utilisation de Vitis est essentielle, car il est difficile de programmer la Z-Turn v2 sans utiliser le processeur intégré - cela nécessiterait un câble JTAG à 14 pins bien précis, difficile à trouver, et certainement cher. La méthode de programmation utilisée ici est de créer une carte SD bootable, qui contiendrait le hardware à programmer sur FPGA et le code pour processeur, de préférence avec un OS embarqué dessus. C'est le cas de la carte SD livrée dans la Z-Turn V2 (son contenu est dans `/sd_backup`): elle contient un Linux basique et un hardware par défaut.
 
 Le workflow serait donc :
-1. Modifier le hardware principal ou une des IPs sur Vivado.
-2. Compiler entièrement le projet ZTurnV2 (*Generate Block Design* puis *Generate Bitstream*, ce qui normalement lancera la synthèse et l'implémentation).
+1. Modifier le hardware principal ou une des IPs sur Vivado. Si une des IPs est modifiée (puis en général testée dans son projet `edit_<nom de l'IP>_v1_0`), ne pas oublier de la mettre à jour dans le catalogue à travers *Edit Packaged IP* -> *Ports and Interfaces* -> *Merge Changes* puis *Review and Package* -> *Re-Package IP*. 
+2. Compiler entièrement le projet ZTurnV2 (*Generate Block Design* puis *Generate Bitstream*, ce qui normalement lancera la synthèse et l'implémentation). Si une IP a été modifiée, ne pas oublier de la mettre à jour dans le Block Design avec *Refresh IP Catalog* puis *Upgrade IP* dans l'onglet *IP Status* qu s'ouvre. Normalement, les changements sont détectés automatiquement à l'ouverture du BD.
 3. Exporter le hardware (*File -> Export -> Export Hardware*) et écraser le fichier **main_design_wrapper.xsa** (ou le sauvegarder dans un autre xsa).
 4. Ouvrir Vitis et le workspace **zturnv2_platform**.
 5. Resélectionner le hardware dans **fpga2c (Platform)/Settings/vitis-comp.json** -> *Switch XSA*.

@@ -93,3 +93,5 @@ set_property PACKAGE_PIN Y9 [get_ports noip_mosi]
 set_property PACKAGE_PIN T15 [get_ports noip_mosi1]
 set_property PACKAGE_PIN V13 [get_ports noip_sck]
 set_property PACKAGE_PIN Y17 [get_ports noip_sck1]
+
+set_operating_conditions -grade extended

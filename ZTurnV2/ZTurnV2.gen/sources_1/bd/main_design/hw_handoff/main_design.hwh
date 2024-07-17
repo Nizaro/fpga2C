@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jul 11 08:50:22 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 17 09:38:17 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -6240,7 +6240,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/noip_ctrl_0" HWVERSION="1.0" INSTANCE="noip_ctrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_ctrl" VLNV="user.org:user:noip_ctrl:1.0">
+    <MODULE COREREVISION="4" FULLNAME="/noip_ctrl_0" HWVERSION="1.0" INSTANCE="noip_ctrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_ctrl" VLNV="user.org:user:noip_ctrl:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -6489,7 +6489,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/noip_lvds_stream_0" HWVERSION="1.0" INSTANCE="noip_lvds_stream_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
+    <MODULE COREREVISION="3" FULLNAME="/noip_lvds_stream_0" HWVERSION="1.0" INSTANCE="noip_lvds_stream_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -6657,7 +6657,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/noip_lvds_stream_1" HWVERSION="1.0" INSTANCE="noip_lvds_stream_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
+    <MODULE COREREVISION="3" FULLNAME="/noip_lvds_stream_1" HWVERSION="1.0" INSTANCE="noip_lvds_stream_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -6877,11 +6877,11 @@
             <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_k" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aresetn"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7952,18 +7952,18 @@
             <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_k" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aclk"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_spi_in"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aclk"/>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_spi_in"/>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="72000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_72M_pll"/>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_test_port"/>
+            <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_72M_pll"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">

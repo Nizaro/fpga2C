@@ -22,3 +22,73 @@
 # Available Virtual :25344 MB
 #-----------------------------------------------------------
 start_gui
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+report_ip_status -name ip_status 
+report_clock_networks -name {network_1}
+report_utilization -name utilization_1
+close_design
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_reduced_logic:2.0 util_reduced_logic_0
+endgroup
+set_property CONFIG.C_OPERATION {xor} [get_bd_cells util_reduced_logic_0]
+undo
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_idelay_ctrl:1.0 util_idelay_ctrl_0
+endgroup
+undo
+save_bd_design
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {main_design_noip_lvds_stream_0_1 main_design_noip_lvds_stream_0_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+close_bd_design [get_bd_designs main_design]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+set_operating_conditions -grade extended
+report_power -name {power_1}
+save_constraints
+close_design
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+write_hw_platform -fixed -include_bit -force -file /home/nothon/fpga2C/ZTurnV2/main_design_wrapper.xsa

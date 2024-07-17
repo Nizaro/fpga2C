@@ -69,8 +69,8 @@ architecture arch_imp of noip_ctrl is
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
 		);
 		port (
-		rec_data : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-		send_data : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg0 : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg1 : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -96,24 +96,28 @@ architecture arch_imp of noip_ctrl is
 	end component noip_ctrl_slave_lite_v1_0_S00_AXI;
 
 	-- user signals start here
+
+	signal busy : std_logic;
+	signal startup_busy : std_logic;
+	signal spi_busy : std_logic;
+
 	-- GENERIC DATA-RELATED
-	signal rec_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-	signal send_data : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal reg0 : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal reg1 : std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal opcode : std_logic_vector(1 downto 0);
 	signal sensor_id : std_logic_vector(1 downto 0);
 
     -- STARTUP-RELATED
     signal pll_clk_en : std_logic_vector(0 to 1);
-	type t_StartupState is (IDLE, ON18, ON33, ONPIX, ONCLK, ONRSTN, SEND_RDY, READY, OFFRSTN, OFFCLK, OFFPIX, OFF33, OFF18, SEND_POWEROFF);
+	type t_StartupState is (IDLE, ON18, ON33, ONPIX, ONCLK, ONRSTN, READY, OFFRSTN, OFFCLK, OFFPIX, OFF33, OFF18);
 	signal StartupState : t_StartupState := IDLE;
-	signal readyflag, powerdownflag : std_logic;
 
 	-- SPI-RELATED
 	signal sck_en : std_logic;
 	type t_SPIState is (IDLE, S_ADDR, R_DATA, W_DATA, SEND_RD_DATA);
 	signal SPIState : t_SPIState := IDLE;
 	signal spi_addr : std_logic_vector(8 downto 0);
-	signal spi_data : std_logic_vector(15 downto 0);
+	signal read_spi_data : std_logic_vector(15 downto 0);
 	signal spiflag : std_logic;
 	signal read_data_ctr : integer := 15;
 	signal addr_ctr : integer := 8; -- MSB FIRST
@@ -129,8 +133,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
 	)
 	port map (
-		rec_data => rec_data,
-		send_data => send_data,
+		reg0 => reg0,
+		reg1 => reg1,
 		S_AXI_ACLK	=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
@@ -156,9 +160,17 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 
 	-- Add user logic here
 
-	opcode <= rec_data(1 downto 0);
-	sensor_id <= rec_data(3 downto 2);
-	spi_addr <= rec_data(12 downto 4);
+	opcode <= reg0(1 downto 0);
+	sensor_id <= reg0(3 downto 2);
+	spi_addr <= reg0(12 downto 4);
+
+	with StartupState select startup_busy <= '0' when IDLE,
+											 '1' when others;
+
+	with SPIState select spi_busy <= '0' when IDLE,
+									 '1' when others;
+
+	busy <= spi_busy or startup_busy;
 
 	startup_process : process(s00_axi_aclk, s00_axi_aresetn) 
 		variable id : integer := 0;
@@ -171,8 +183,6 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
         	vddpix_toggle <= (others => '0');
         	sw_enable_n <= (others => '1');
 			id := 0;
-			readyflag <= '0';
-			powerdownflag <= '0';
 			StartupState <= IDLE;
 		elsif(rising_edge(s00_axi_aclk)) then
 			case StartupState is
@@ -182,6 +192,8 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 													1 when others;
 						sw_enable_n(id) <= '0';
 						StartupState <= ON18;
+					elsif(s00_axi_bvalid = '1' and opcode = "00") then -- shutdown
+						StartupState <= OFFRSTN;
 					end if;
 
 				when ON18 =>
@@ -202,17 +214,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 
 				when ONRSTN =>
 					noip_reset_n(id) <= '0';
-					StartupState <= SEND_RDY;
-
-				when SEND_RDY =>
-					readyflag <= '1';
-
-					StartupState <= READY;
-
-				when READY =>
-					if(s00_axi_bvalid = '1' and opcode = "00") then -- shutdown
-						
-					end if;
+					StartupState <= IDLE;
 
 				when OFFRSTN =>
 					noip_reset_n(id) <= '1';
@@ -233,9 +235,6 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 				when OFF18 =>
 					vdd18_toggle(id) <= '0';
 					sw_enable_n(id) <= '1';
-					StartupState <= SEND_POWEROFF;
-				
-				when SEND_POWEROFF =>
 					StartupState <= IDLE;
 
 				when others =>
@@ -268,6 +267,7 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 					addr_ctr <= 8;
 					write_data_ctr <= 15;
 					ss_n <= "11";
+					spiflag <= '0';
 					if((s00_axi_bvalid = '1') and ((opcode = "10") or (opcode = "01"))) then -- got a packet incoming
 						with opcode select mode := '0' when "01", -- "01" = read, "10" = write
 												'1' when others;
@@ -278,7 +278,6 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 
 				when S_ADDR =>
 					sck_en <= '1';
-					mosi <= spi_addr(addr_ctr);
 					if(addr_ctr = -1) then -- write mode and be done with address
 						mosi <= mode;
 						if(mode = '0') then
@@ -286,26 +285,30 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 						else 
 							SPIState <= W_DATA;			
 						end if;
+					else
+						mosi <= spi_addr(addr_ctr);
 					end if;
 					addr_ctr <= addr_ctr - 1;
 
 				when R_DATA =>
 					if(read_data_ctr = 0) then
 						sck_en <= '0';
-						SPIState <= IDLE;
+						spiflag <= '1';
+						SPIState <= SEND_RD_DATA;
 					end if;
 
 				when W_DATA =>
-					mosi <= rec_data(write_data_ctr+16);
+					mosi <= reg0(write_data_ctr+16);
 					if(write_data_ctr = 0) then
 						sck_en <= '0';
-						SPIState <= SEND_RD_DATA;
+						SPIState <= IDLE;
 					end if;
 					write_data_ctr <= write_data_ctr - 1;
 
 				when SEND_RD_DATA =>
-					spiflag <= '1';
-					SPIState <= IDLE;
+					if(s00_axi_rvalid = '1') then -- data in reg1 has been read
+						SPIState <= IDLE;
+					end if;
 
 				when others =>
 					SPIState <= IDLE;
@@ -319,10 +322,11 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	begin
 		if(s00_axi_aresetn = '0') then
 			read_data_ctr <= 15;
+			read_spi_data <= (others => '0');
 		elsif(falling_edge(clk_spi_in)) then -- NOIP Doc p23 : "The miso pin must be sampled by the system on the falling edge of sck"
 			case SPIState is
 				when R_DATA =>
-					spi_data(read_data_ctr) <= miso;
+					read_spi_data(read_data_ctr) <= miso;
 					read_data_ctr <= read_data_ctr - 1;
 
 				when others =>
@@ -334,24 +338,18 @@ noip_ctrl_slave_lite_v1_0_S00_AXI_inst : noip_ctrl_slave_lite_v1_0_S00_AXI
 	with sck_en select sck <= clk_spi_in when '1',
 					          '0' when others;
 
-	flagprocess : process(s00_axi_aresetn, readyflag,powerdownflag,spiflag)
+	flagprocess : process(s00_axi_aresetn, busy, spiflag)
 	begin
-		if(s00_axi_aresetn = '1') then
-			send_data <= (others => '0');
+		if(s00_axi_aresetn = '0') then
+			reg1 <= (others => '0');
 		else
-			send_data(3 downto 2) <= sensor_id;
-			if(readyflag = '1') then
-				send_data(1 downto 0) <= "11";
-				send_data(31 downto 4) <= (others => '0');
-			elsif(powerdownflag = '1') then
-				send_data(1 downto 0) <= "00";
-				send_data(31 downto 4) <= (others => '0');
-			elsif(spiflag = '1') then
-				send_data(1 downto 0) <= "01";
-				send_data(31 downto 16) <= spi_data;
-				send_data(31 downto 4) <= (others => '0');
+			if(spiflag = '1') then
+				reg1(31 downto 16) <= read_spi_data;
+				reg1(12 downto 4) <= spi_addr;
+				reg1(3 downto 2) <= sensor_id;
+				reg1(1 downto 0) <= "01";
 			else
-				send_data <= send_data;
+				reg1 <= (0 => busy, 1 => busy, others => '0');
 			end if;
 		end if;
 

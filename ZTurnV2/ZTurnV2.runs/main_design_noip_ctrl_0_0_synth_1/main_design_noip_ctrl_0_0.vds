@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Jun 25 10:09:52 2024
-# Process ID: 39072
+# Start of session at: Wed Jul 17 09:38:45 2024
+# Process ID: 31071
 # Current directory: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1
 # Command line: vivado -log main_design_noip_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_noip_ctrl_0_0.tcl
 # Log file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/main_design_noip_ctrl_0_0.vds
@@ -19,10 +19,10 @@
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :18619 MB
+# Available Virtual :20878 MB
 #-----------------------------------------------------------
 source main_design_noip_ctrl_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.246 ; gain = 0.027 ; free physical = 198 ; free virtual = 17247
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1394.855 ; gain = 0.027 ; free physical = 163 ; free virtual = 19230
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
@@ -36,82 +36,71 @@ INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 39219
+INFO: [Synth 8-7075] Helper process launched with PID 31166
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2137.461 ; gain = 413.746 ; free physical = 253 ; free virtual = 16013
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2143.008 ; gain = 415.652 ; free physical = 177 ; free virtual = 16904
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:94]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'noip_ctrl' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:5' bound to instance 'U0' of component 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:174]
-INFO: [Synth 8-638] synthesizing module 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:63]
+INFO: [Synth 8-3491] module 'noip_ctrl' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:5' bound to instance 'U0' of component 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'noip_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:63]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'noip_ctrl_slave_lite_v1_0_S00_AXI' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'noip_ctrl_slave_lite_v1_0_S00_AXI_inst' of component 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:126]
-INFO: [Synth 8-638] synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
-INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:219]
-INFO: [Synth 8-256] done synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
-WARNING: [Synth 8-614] signal 'sensor_id' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:337]
-WARNING: [Synth 8-614] signal 'spi_data' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:337]
-WARNING: [Synth 8-614] signal 'send_data' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:337]
-INFO: [Synth 8-256] done synthesizing module 'noip_ctrl' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:63]
+INFO: [Synth 8-3491] module 'noip_ctrl_slave_lite_v1_0_S00_AXI' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'noip_ctrl_slave_lite_v1_0_S00_AXI_inst' of component 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'noip_ctrl_slave_lite_v1_0_S00_AXI' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:87]
+WARNING: [Synth 8-614] signal 'read_spi_data' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:341]
+WARNING: [Synth 8-614] signal 'spi_addr' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:341]
+WARNING: [Synth 8-614] signal 'sensor_id' is read in the process but is not in the sensitivity list [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:341]
+INFO: [Synth 8-256] done synthesizing module 'noip_ctrl' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:63]
 INFO: [Synth 8-256] done synthesizing module 'main_design_noip_ctrl_0_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/synth/main_design_noip_ctrl_0_0.vhd:94]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:214]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:215]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:216]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd:286]
-WARNING: [Synth 8-6014] Unused sequential element spi_data_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:325]
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARADDR[3] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARADDR[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARADDR[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARADDR[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module noip_ctrl_slave_lite_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port miso in module noip_ctrl is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2222.430 ; gain = 498.715 ; free physical = 178 ; free virtual = 15812
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2226.977 ; gain = 499.621 ; free physical = 264 ; free virtual = 16712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2237.273 ; gain = 513.559 ; free physical = 178 ; free virtual = 15812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2241.820 ; gain = 514.465 ; free physical = 259 ; free virtual = 16707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2237.273 ; gain = 513.559 ; free physical = 178 ; free virtual = 15812
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2241.820 ; gain = 514.465 ; free physical = 258 ; free virtual = 16706
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2237.273 ; gain = 0.000 ; free physical = 176 ; free virtual = 15811
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2241.820 ; gain = 0.000 ; free physical = 255 ; free virtual = 16704
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2388.023 ; gain = 0.000 ; free physical = 200 ; free virtual = 15863
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2394.570 ; gain = 0.000 ; free physical = 186 ; free virtual = 16664
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2388.023 ; gain = 0.000 ; free physical = 195 ; free virtual = 15858
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2394.570 ; gain = 0.000 ; free physical = 186 ; free virtual = 16664
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2388.023 ; gain = 664.309 ; free physical = 203 ; free virtual = 15720
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2394.570 ; gain = 667.215 ; free physical = 172 ; free virtual = 16579
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 203 ; free virtual = 15720
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 172 ; free virtual = 16579
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 203 ; free virtual = 15720
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 172 ; free virtual = 16579
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
 INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'noip_ctrl_slave_lite_v1_0_S00_AXI'
@@ -136,30 +125,32 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using enco
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                              000 |                             0000
-                    on18 |                              001 |                             0001
-                    on33 |                              010 |                             0010
-                   onpix |                              011 |                             0011
-                   onclk |                              100 |                             0100
-                  onrstn |                              101 |                             0101
-                send_rdy |                              110 |                             0110
-                   ready |                              111 |                             0111
+                    idle |                      00000000001 |                             0000
+                    on18 |                      00000000010 |                             0001
+                    on33 |                      00000000100 |                             0010
+                   onpix |                      00000001000 |                             0011
+                   onclk |                      00000010000 |                             0100
+                  onrstn |                      00000100000 |                             0101
+                 offrstn |                      00001000000 |                             0111
+                  offclk |                      00010000000 |                             1000
+                  offpix |                      00100000000 |                             1001
+                   off33 |                      01000000000 |                             1010
+                   off18 |                      10000000000 |                             1011
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'StartupState_reg' using encoding 'sequential' in module 'noip_ctrl'
+INFO: [Synth 8-3354] encoded FSM with state register 'StartupState_reg' using encoding 'one-hot' in module 'noip_ctrl'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                     idle |                            00001 |                              000
                   s_addr |                            00010 |                              001
                   r_data |                            00100 |                              010
-                  w_data |                            01000 |                              011
-            send_rd_data |                            10000 |                              100
+            send_rd_data |                            01000 |                              100
+                  w_data |                            10000 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'SPIState_reg' using encoding 'one-hot' in module 'noip_ctrl'
-WARNING: [Synth 8-327] inferring latch for variable 'send_data_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:133]
-WARNING: [Synth 8-327] inferring latch for variable 'powerdownflag_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd:175]
+WARNING: [Synth 8-327] inferring latch for variable 'reg1_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd:137]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 191 ; free virtual = 15720
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 168 ; free virtual = 16576
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -168,26 +159,29 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 4     
-	                4 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 8     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
-	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 4     
 	   5 Input   32 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
 	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 3     
-	   8 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 5     
 	   3 Input    2 Bit        Muxes := 2     
-	   8 Input    2 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 5     
-	   3 Input    1 Bit        Muxes := 11    
-	   8 Input    1 Bit        Muxes := 3     
-	   5 Input    1 Bit        Muxes := 7     
+	  11 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 12    
+	  11 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -204,38 +198,33 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port miso in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s00_axi_araddr[3] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s00_axi_araddr[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s00_axi_araddr[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s00_axi_araddr[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module main_design_noip_ctrl_0_0 is either unconnected or has no load
-INFO: [Synth 8-3332] Sequential element (U0/send_data_reg[31]) is unused and will be removed from module main_design_noip_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/reg1_reg[15]) is unused and will be removed from module main_design_noip_ctrl_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 215 ; free virtual = 15696
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 202 ; free virtual = 16468
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 154 ; free virtual = 15632
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 193 ; free virtual = 16437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 154 ; free virtual = 15633
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 193 ; free virtual = 16437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 154 ; free virtual = 15633
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 193 ; free virtual = 16437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -253,37 +242,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 460 ; free virtual = 16790
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 460 ; free virtual = 16790
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 459 ; free virtual = 16789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 459 ; free virtual = 16789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 459 ; free virtual = 16789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 460 ; free virtual = 16790
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -301,49 +290,47 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    24|
 |2     |LUT1   |    95|
-|3     |LUT2   |    77|
-|4     |LUT3   |    12|
-|5     |LUT4   |    26|
-|6     |LUT5   |    22|
-|7     |LUT6   |    30|
+|3     |LUT2   |    98|
+|4     |LUT3   |    11|
+|5     |LUT4   |    35|
+|6     |LUT5   |    30|
+|7     |LUT6   |    83|
 |8     |MUXF7  |     4|
-|9     |FDCE   |   108|
-|10    |FDPE   |    14|
-|11    |FDRE   |    43|
+|9     |FDCE   |   132|
+|10    |FDPE   |    15|
+|11    |FDRE   |   109|
 |12    |FDSE   |     1|
-|13    |LD     |     1|
-|14    |LDC    |     4|
+|13    |LDC    |    29|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.027 ; gain = 672.312 ; free physical = 170 ; free virtual = 15627
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.574 ; gain = 675.219 ; free physical = 460 ; free virtual = 16790
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2396.027 ; gain = 521.562 ; free physical = 171 ; free virtual = 15627
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2396.035 ; gain = 672.312 ; free physical = 171 ; free virtual = 15627
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2402.574 ; gain = 522.469 ; free physical = 443 ; free virtual = 16785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2402.582 ; gain = 675.219 ; free physical = 443 ; free virtual = 16785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2396.035 ; gain = 0.000 ; free physical = 426 ; free virtual = 15886
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2402.582 ; gain = 0.000 ; free physical = 720 ; free virtual = 17063
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2452.055 ; gain = 0.000 ; free physical = 379 ; free virtual = 15906
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.602 ; gain = 0.000 ; free physical = 798 ; free virtual = 17084
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5 instances were transformed.
-  LD => LDCE (inverted pins: G): 1 instance 
-  LDC => LDCE: 4 instances
+  A total of 29 instances were transformed.
+  LDC => LDCE: 29 instances
 
-Synth Design complete | Checksum: 36aedf2d
+Synth Design complete | Checksum: 3fc9ba06
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+38 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 2452.055 ; gain = 1078.809 ; free physical = 379 ; free virtual = 15906
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2055.826; main = 1747.594; forked = 433.327
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3429.484; main = 2452.059; forked = 1033.453
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.066 ; gain = 0.000 ; free physical = 379 ; free virtual = 15906
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2458.602 ; gain = 1063.746 ; free physical = 800 ; free virtual = 17086
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1670.955; main = 1360.470; forked = 364.749
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3436.031; main = 2458.605; forked = 1033.453
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.613 ; gain = 0.000 ; free physical = 800 ; free virtual = 17087
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/main_design_noip_ctrl_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_noip_ctrl_0_0, cache-ID = 871c61c597f8fd5d
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_noip_ctrl_0_0, cache-ID = 1528b73dc1bfa75a
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.066 ; gain = 0.000 ; free physical = 364 ; free virtual = 15893
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.613 ; gain = 0.000 ; free physical = 774 ; free virtual = 17062
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/main_design_noip_ctrl_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_noip_ctrl_0_0_utilization_synth.rpt -pb main_design_noip_ctrl_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun 25 10:10:34 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 17 09:39:31 2024...

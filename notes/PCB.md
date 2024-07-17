@@ -10,7 +10,7 @@ Samtec FML 10 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-110
 Samtec FML 15 pins : [Mâle](https://www.mouser.fr/ProductDetail/Samtec/TFML-115-02-L-D-LC?qs=%252BZP6%2F%252BtExtDiOSDxCqjesg%3D%3D), [Femelle](https://www.mouser.fr/ProductDetail/Samtec/SFML-115-02-L-D-LC?qs=PB6%2FjmICvI3gR60PA8%2FbQg%3D%3D)
 # Design
 
--> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
+LVDS PAIR INVERSION -> LOGICAL INVERSION OF THE DATA PINS **AND** EDGE INVERSION OF LVDS_CLK
 
 ## Ordering Info
 

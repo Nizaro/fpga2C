@@ -16,8 +16,8 @@ entity noip_ctrl_slave_lite_v1_0_S00_AXI is
 	);
 	port (
 		-- Users to add ports here
-		rec_data : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-		send_data : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg0 : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		reg1 : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -211,7 +211,7 @@ begin
 	  if rising_edge(S_AXI_ACLK) then 
 	    if S_AXI_ARESETN = '0' then
 	      slv_reg0 <= (others => '0');
-	      slv_reg1 <= (others => '0');
+	    --   slv_reg1 <= (others => '0');
 	      slv_reg2 <= (others => '0');
 	      slv_reg3 <= (others => '0');
 	    else
@@ -225,14 +225,14 @@ begin
 	                slv_reg0(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
-	          when b"01" =>
-	            for byte_index in 0 to (C_S_AXI_DATA_WIDTH/8-1) loop
-	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
-	                -- Respective byte enables are asserted as per write strobes                   
-	                -- slave registor 1
-	                slv_reg1(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
-	              end if;
-	            end loop;
+	        --   when b"01" =>
+	        --     for byte_index in 0 to (C_S_AXI_DATA_WIDTH/8-1) loop
+	        --       if ( S_AXI_WSTRB(byte_index) = '1' ) then
+	        --         -- Respective byte enables are asserted as per write strobes                   
+	        --         -- slave registor 1
+	        --         slv_reg1(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+	        --       end if;
+	        --     end loop;
 	          when b"10" =>
 	            for byte_index in 0 to (C_S_AXI_DATA_WIDTH/8-1) loop
 	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
@@ -251,7 +251,7 @@ begin
 	            end loop;
 	          when others =>
 	            slv_reg0 <= slv_reg0;
-	            slv_reg1 <= slv_reg1;
+	            -- slv_reg1 <= slv_reg1;
 	            slv_reg2 <= slv_reg2;
 	            slv_reg3 <= slv_reg3;
 	        end case;
@@ -303,16 +303,15 @@ begin
 	       end if;                                                   
 	  end process;                                          
 	-- Implement memory mapped register select and read logic generation
-	--  S_AXI_RDATA <= slv_reg0 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "00") else 
-	--  slv_reg1 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "01") else 
-	--  slv_reg2 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "10") else
-	--  slv_reg3 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "11") else
-	--  (others => '0');
-	S_AXI_RDATA <= send_data;
+	 S_AXI_RDATA <= slv_reg0 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "00") else 
+	 slv_reg1 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "01") else 
+	 slv_reg2 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "10") else
+	 slv_reg3 when (axi_araddr(ADDR_LSB+OPT_MEM_ADDR_BITS downto ADDR_LSB) = "11") else
+	 (others => '0');
 
 	-- Add user logic here
-	rec_data <= slv_reg0;
-
+	reg0 <= slv_reg0;
+	slv_reg1 <= reg1;
 	-- User logic ends
 
 end arch_imp;

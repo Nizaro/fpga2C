@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Fri Jun 21 09:24:16 2024
+-- Date        : Wed Jul 17 09:39:29 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top main_design_noip_lvds_stream_0_1 -prefix
 --               main_design_noip_lvds_stream_0_1_ main_design_noip_lvds_stream_0_0_stub.vhdl

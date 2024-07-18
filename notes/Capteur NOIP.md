@@ -29,7 +29,7 @@ reset_n pull down, puis clk, puis vdd_pix, puis vdd_33, puis vdd_18.
 # Interface SPI (p23)
 
 The PYTHON 1300 image sensor uses **9−bit addresses** and **16−bit data words**.
-**FUCK YOU ONSEMI !!!!!!!!**
+WHY???
 
 io0_o = sensor's mosi
 io1_i = sensor's miso

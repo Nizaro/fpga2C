@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul 18 12:05:14 2024
+# Process ID: 58894
+# Current directory: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/vivado.log
+# Journal file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3500.000 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :18717 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/sol_data.json outdir=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip srcdir=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/misc
+INFO: Copied 92 verilog file(s) to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/hdl/verilog
+INFO: Copied 83 vhdl file(s) to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1400.027 ; gain = 9.934 ; free physical = 161 ; free virtual = 17505
+INFO: Import ports from HDL: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/hdl/vhdl/main_design_v_mix_0_0_v_mix.vhd (main_design_v_mix_0_0_v_mix)
+INFO: Add axi4lite interface s_axi_CTRL
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add axi4stream interface s_axis_video
+INFO: Add axi4stream interface s_axis_video1
+INFO: Add axi4stream interface s_axis_video2
+INFO: Add data interface layerAlpha_0
+INFO: Add data interface layerStartX_0
+INFO: Add data interface layerStartY_0
+INFO: Add data interface layerWidth_0
+INFO: Add data interface layerHeight_0
+INFO: Add data interface layerScaleFactor_0
+INFO: Add data interface layerVideoFormat_address0
+INFO: Add data interface layerVideoFormat_d0
+INFO: Add data interface layerVideoFormat_q0
+INFO: Add data interface layerVideoFormat_address1
+INFO: Add data interface layerVideoFormat_d1
+INFO: Add data interface layerVideoFormat_q1
+INFO: Add data interface layerStride_0
+INFO: Add data interface K11
+INFO: Add data interface K12
+INFO: Add data interface K13
+INFO: Add data interface K21
+INFO: Add data interface K22
+INFO: Add data interface K23
+INFO: Add data interface K31
+INFO: Add data interface K32
+INFO: Add data interface K33
+INFO: Add data interface ROffset
+INFO: Add data interface GOffset
+INFO: Add data interface BOffset
+INFO: Add data interface K11_2
+INFO: Add data interface K12_2
+INFO: Add data interface K13_2
+INFO: Add data interface K21_2
+INFO: Add data interface K22_2
+INFO: Add data interface K23_2
+INFO: Add data interface K31_2
+INFO: Add data interface K32_2
+INFO: Add data interface K33_2
+INFO: Add data interface YOffset
+INFO: Add data interface UOffset
+INFO: Add data interface VOffset
+INFO: Add axi4stream interface m_axis_video
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/component.xml
+INFO: Created IP archive /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/impl/ip/xilinx_com_ip_v_mix_5_2.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 18 12:05:50 2024...

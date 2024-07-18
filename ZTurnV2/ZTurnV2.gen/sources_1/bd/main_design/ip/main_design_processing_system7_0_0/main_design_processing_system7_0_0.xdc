@@ -29,6 +29,20 @@ set_input_jitter clk_fpga_1 0.41664
 # I/O STANDARDS and Location Constraints                                   #
 ############################################################################
 
+#  UART 1 / rx / MIO[49]
+set_property iostandard "LVCMOS33" [get_ports "MIO[49]"]
+set_property PACKAGE_PIN "C12" [get_ports "MIO[49]"]
+set_property slew "slow" [get_ports "MIO[49]"]
+set_property drive "8" [get_ports "MIO[49]"]
+set_property pullup "TRUE" [get_ports "MIO[49]"]
+set_property PIO_DIRECTION "INPUT" [get_ports "MIO[49]"]
+#  UART 1 / tx / MIO[48]
+set_property iostandard "LVCMOS33" [get_ports "MIO[48]"]
+set_property PACKAGE_PIN "B12" [get_ports "MIO[48]"]
+set_property slew "slow" [get_ports "MIO[48]"]
+set_property drive "8" [get_ports "MIO[48]"]
+set_property pullup "TRUE" [get_ports "MIO[48]"]
+set_property PIO_DIRECTION "OUTPUT" [get_ports "MIO[48]"]
 set_property iostandard "SSTL15_T_DCI" [get_ports "DDR_VRP"]
 set_property PACKAGE_PIN "H5" [get_ports "DDR_VRP"]
 set_property slew "FAST" [get_ports "DDR_VRP"]

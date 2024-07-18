@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_mix_core_alpha_false_false_10'
+================================================================
+* Date:           Thu Jul 18 12:04:22 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.522 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |   max   |   Type  |
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |     4418|  8305202|  44.180 us|  83.052 ms|  4418|  8305202|       no|
+    +---------+---------+-----------+-----------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+-----------+-----+------+-----------------------------------------------+
+        |                                                                      |                                                           |  Latency (cycles) |  Latency (absolute)  |  Interval  |                    Pipeline                   |
+        |                               Instance                               |                           Module                          |   min   |   max   |    min   |    max    | min |  max |                      Type                     |
+        +----------------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+-----------+-----+------+-----------------------------------------------+
+        |grp_v_mix_core_alpha_false_false_10_Pipeline_VITIS_LOOP_465_3_fu_132  |v_mix_core_alpha_false_false_10_Pipeline_VITIS_LOOP_465_3  |       67|     3843|  0.670 us|  38.430 us|   65|  3841|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +----------------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+-----------+-----+------+-----------------------------------------------+
+
+        * Loop: 
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration |  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency  |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_463_2  |     4416|  8305200|  69 ~ 3845|          -|          -|  64 ~ 2160|        no|
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    164|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      67|    145|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    129|    -|
+|Register         |        -|    -|     120|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     187|    438|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+----+-----+-----+
+    |                               Instance                               |                           Module                          | BRAM_18K| DSP| FF | LUT | URAM|
+    +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+----+-----+-----+
+    |grp_v_mix_core_alpha_false_false_10_Pipeline_VITIS_LOOP_465_3_fu_132  |v_mix_core_alpha_false_false_10_Pipeline_VITIS_LOOP_465_3  |        0|   0|  67|  145|    0|
+    +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                                 |                                                           |        0|   0|  67|  145|    0|
+    +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add60_fu_187_p2       |         +|   0|  0|  17|          17|          17|
+    |add71_fu_199_p2       |         +|   0|  0|  17|          17|          17|
+    |add_ln463_fu_213_p2   |         +|   0|  0|  12|          12|           1|
+    |icmp_ln463_fu_208_p2  |      icmp|   0|  0|  12|          12|          12|
+    |notrhs_fu_239_p2      |      icmp|   0|  0|  17|          17|          17|
+    |ult_fu_227_p2         |      icmp|   0|  0|  16|          16|          16|
+    |ap_block_state1       |        or|   0|  0|   1|           1|           1|
+    |shl_ln449_fu_152_p2   |       shl|   0|  0|  35|          16|          16|
+    |shl_ln450_fu_162_p2   |       shl|   0|  0|  35|          16|          16|
+    |rev12_fu_232_p2       |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 164|         125|         115|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  21|          5|    1|          5|
+    |ap_done               |   9|          2|    1|          2|
+    |hwReg_10_2_val_blk_n  |   9|          2|    1|          2|
+    |hwReg_11_2_val_blk_n  |   9|          2|    1|          2|
+    |hwReg_12_2_val_blk_n  |   9|          2|    1|          2|
+    |hwReg_13_2_val_blk_n  |   9|          2|    1|          2|
+    |hwReg_6_val_blk_n     |   9|          2|    1|          2|
+    |hwReg_9_2_val_blk_n   |   9|          2|    1|          2|
+    |outLayer1_read        |   9|          2|    1|          2|
+    |outLayer2_write       |   9|          2|    1|          2|
+    |real_start            |   9|          2|    1|          2|
+    |srcLayer2x_read       |   9|          2|    1|          2|
+    |y_fu_80               |   9|          2|   12|         24|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 129|         29|   24|         51|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                        Name                                       | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add60_reg_294                                                                      |  17|   0|   17|          0|
+    |add71_reg_299                                                                      |  17|   0|   17|          0|
+    |ap_CS_fsm                                                                          |   4|   0|    4|          0|
+    |ap_done_reg                                                                        |   1|   0|    1|          0|
+    |grp_v_mix_core_alpha_false_false_10_Pipeline_VITIS_LOOP_465_3_fu_132_ap_start_reg  |   1|   0|    1|          0|
+    |layerStartX_reg_263                                                                |  16|   0|   16|          0|
+    |layerStartY_reg_257                                                                |  16|   0|   16|          0|
+    |notrhs_reg_312                                                                     |   1|   0|    1|          0|
+    |rev12_reg_307                                                                      |   1|   0|    1|          0|
+    |shl_ln449_reg_269                                                                  |  16|   0|   16|          0|
+    |shl_ln450_reg_274                                                                  |  16|   0|   16|          0|
+    |start_once_reg                                                                     |   1|   0|    1|          0|
+    |tmp_5_reg_279                                                                      |   1|   0|    1|          0|
+    |y_fu_80                                                                            |  12|   0|   12|          0|
+    +-----------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                              | 120|   0|  120|          0|
+    +-----------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|start_full_n                   |   in|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|start_out                      |  out|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|start_write                    |  out|    1|  ap_ctrl_hs|  v_mix_core_alpha<false, false>.10|  return value|
+|outLayer1_dout                 |   in|   24|     ap_fifo|                          outLayer1|       pointer|
+|outLayer1_num_data_valid       |   in|    3|     ap_fifo|                          outLayer1|       pointer|
+|outLayer1_fifo_cap             |   in|    3|     ap_fifo|                          outLayer1|       pointer|
+|outLayer1_empty_n              |   in|    1|     ap_fifo|                          outLayer1|       pointer|
+|outLayer1_read                 |  out|    1|     ap_fifo|                          outLayer1|       pointer|
+|srcLayer2x_dout                |   in|   24|     ap_fifo|                         srcLayer2x|       pointer|
+|srcLayer2x_num_data_valid      |   in|    3|     ap_fifo|                         srcLayer2x|       pointer|
+|srcLayer2x_fifo_cap            |   in|    3|     ap_fifo|                         srcLayer2x|       pointer|
+|srcLayer2x_empty_n             |   in|    1|     ap_fifo|                         srcLayer2x|       pointer|
+|srcLayer2x_read                |  out|    1|     ap_fifo|                         srcLayer2x|       pointer|
+|hwReg_0_val                    |   in|   12|   ap_stable|                        hwReg_0_val|        scalar|
+|hwReg_1_val                    |   in|   12|   ap_stable|                        hwReg_1_val|        scalar|
+|hwReg_6_val_dout               |   in|    3|     ap_fifo|                        hwReg_6_val|       pointer|
+|hwReg_6_val_num_data_valid     |   in|    3|     ap_fifo|                        hwReg_6_val|       pointer|
+|hwReg_6_val_fifo_cap           |   in|    3|     ap_fifo|                        hwReg_6_val|       pointer|
+|hwReg_6_val_empty_n            |   in|    1|     ap_fifo|                        hwReg_6_val|       pointer|
+|hwReg_6_val_read               |  out|    1|     ap_fifo|                        hwReg_6_val|       pointer|
+|hwReg_9_2_val_dout             |   in|   16|     ap_fifo|                      hwReg_9_2_val|       pointer|
+|hwReg_9_2_val_num_data_valid   |   in|    4|     ap_fifo|                      hwReg_9_2_val|       pointer|
+|hwReg_9_2_val_fifo_cap         |   in|    4|     ap_fifo|                      hwReg_9_2_val|       pointer|
+|hwReg_9_2_val_empty_n          |   in|    1|     ap_fifo|                      hwReg_9_2_val|       pointer|
+|hwReg_9_2_val_read             |  out|    1|     ap_fifo|                      hwReg_9_2_val|       pointer|
+|hwReg_10_2_val_dout            |   in|   16|     ap_fifo|                     hwReg_10_2_val|       pointer|
+|hwReg_10_2_val_num_data_valid  |   in|    4|     ap_fifo|                     hwReg_10_2_val|       pointer|
+|hwReg_10_2_val_fifo_cap        |   in|    4|     ap_fifo|                     hwReg_10_2_val|       pointer|
+|hwReg_10_2_val_empty_n         |   in|    1|     ap_fifo|                     hwReg_10_2_val|       pointer|
+|hwReg_10_2_val_read            |  out|    1|     ap_fifo|                     hwReg_10_2_val|       pointer|
+|hwReg_11_2_val_dout            |   in|   16|     ap_fifo|                     hwReg_11_2_val|       pointer|
+|hwReg_11_2_val_num_data_valid  |   in|    3|     ap_fifo|                     hwReg_11_2_val|       pointer|
+|hwReg_11_2_val_fifo_cap        |   in|    3|     ap_fifo|                     hwReg_11_2_val|       pointer|
+|hwReg_11_2_val_empty_n         |   in|    1|     ap_fifo|                     hwReg_11_2_val|       pointer|
+|hwReg_11_2_val_read            |  out|    1|     ap_fifo|                     hwReg_11_2_val|       pointer|
+|hwReg_12_2_val_dout            |   in|   16|     ap_fifo|                     hwReg_12_2_val|       pointer|
+|hwReg_12_2_val_num_data_valid  |   in|    3|     ap_fifo|                     hwReg_12_2_val|       pointer|
+|hwReg_12_2_val_fifo_cap        |   in|    3|     ap_fifo|                     hwReg_12_2_val|       pointer|
+|hwReg_12_2_val_empty_n         |   in|    1|     ap_fifo|                     hwReg_12_2_val|       pointer|
+|hwReg_12_2_val_read            |  out|    1|     ap_fifo|                     hwReg_12_2_val|       pointer|
+|hwReg_13_2_val_dout            |   in|    8|     ap_fifo|                     hwReg_13_2_val|       pointer|
+|hwReg_13_2_val_num_data_valid  |   in|    4|     ap_fifo|                     hwReg_13_2_val|       pointer|
+|hwReg_13_2_val_fifo_cap        |   in|    4|     ap_fifo|                     hwReg_13_2_val|       pointer|
+|hwReg_13_2_val_empty_n         |   in|    1|     ap_fifo|                     hwReg_13_2_val|       pointer|
+|hwReg_13_2_val_read            |  out|    1|     ap_fifo|                     hwReg_13_2_val|       pointer|
+|outLayer2_din                  |  out|   24|     ap_fifo|                          outLayer2|       pointer|
+|outLayer2_num_data_valid       |   in|    3|     ap_fifo|                          outLayer2|       pointer|
+|outLayer2_fifo_cap             |   in|    3|     ap_fifo|                          outLayer2|       pointer|
+|outLayer2_full_n               |   in|    1|     ap_fifo|                          outLayer2|       pointer|
+|outLayer2_write                |  out|    1|     ap_fifo|                          outLayer2|       pointer|
++-------------------------------+-----+-----+------------+-----------------------------------+--------------+
+

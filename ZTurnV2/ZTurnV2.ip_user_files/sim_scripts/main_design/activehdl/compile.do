@@ -40,7 +40,7 @@ vcom -work xpm -  \
 "/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xil_defaultlib -  \
-"../../../bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_sim_netlist.vhdl" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_sim_netlist.vhdl" \
 
 vcom -work lib_cdc_v1_0_3 -  \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -50,18 +50,18 @@ vcom -work proc_sys_reset_v5_0_15 -  \
 
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd" \
-"../../../bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_util_ds_buf_0_2/util_ds_buf.vhd" \
 "../../../bd/main_design/ip/main_design_util_ds_buf_0_2/sim/main_design_util_ds_buf_0_2.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/7fc5/hdl/noip_lvds_stream.vhd" \
+"../../../bd/main_design/ipshared/1de0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/1de0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/1de0/hdl/noip_lvds_stream.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -2008  \
-"../../../bd/main_design/ipshared/6bcd/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
-"../../../bd/main_design/ipshared/6bcd/hdl/noip_ctrl.vhd" \
+"../../../bd/main_design/ipshared/dc1a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd" \
 
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_noip_ctrl_0_0/sim/main_design_noip_ctrl_0_0.vhd" \
@@ -107,11 +107,13 @@ vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_lvds_dout2_0_ibuf_1/sim/main_design_lvds_dout2_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_dout3_0_ibuf_1/sim/main_design_lvds_dout3_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_sync_0_ibuf_1/sim/main_design_lvds_sync_0_ibuf_1.vhd" \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_util_vector_logic_0_0/main_design_util_vector_logic_0_0_sim_netlist.vhdl" \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_inverter_0/main_design_lvds_data_0_inverter_0_sim_netlist.vhdl" \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_1_inverter_0/main_design_lvds_data_1_inverter_0_sim_netlist.vhdl" \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_1_inverter_0/main_design_lvds_sync_1_inverter_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_util_vector_logic_0_0/main_design_util_vector_logic_0_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_lvds_data_0_inverter_0/main_design_lvds_data_0_inverter_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_lvds_data_1_inverter_0/main_design_lvds_data_1_inverter_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_lvds_sync_1_inverter_0/main_design_lvds_sync_1_inverter_0_sim_netlist.vhdl" \
 "../../../bd/main_design/sim/main_design.vhd" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_v_axi4s_vid_out_0_2/main_design_v_axi4s_vid_out_0_2_sim_netlist.vhdl" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_v_mix_0_0/main_design_v_mix_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_1/main_design_auto_us_1_sim_netlist.vhdl" \

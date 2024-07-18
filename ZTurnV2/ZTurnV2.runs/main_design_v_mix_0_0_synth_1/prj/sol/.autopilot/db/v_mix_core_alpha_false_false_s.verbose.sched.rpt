@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_mix_core_alpha_false_false_s'
+================================================================
+* Date:           Thu Jul 18 12:04:17 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.681 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |   max   |   Type  |
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |     4418|  8305202|  44.180 us|  83.052 ms|  4418|  8305202|       no|
+    +---------+---------+-----------+-----------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration |  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency  |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_463_2  |     4416|  8305200|  69 ~ 3845|          -|          -|  64 ~ 2160|        no|
+        +--------------------+---------+---------+-----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.68>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%y = alloca i32 1" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:440->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 5 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (3.28ns)   --->   "%HwReg_layerScaleFactor_1_val25_read = read i8 @_ssdm_op_Read.ap_fifo.i8P0A, i8 %HwReg_layerScaleFactor_1_val25"   --->   Operation 6 'read' 'HwReg_layerScaleFactor_1_val25_read' <Predicate = true> <Delay = 3.28> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.28> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 7> <FIFO>
+ST_1 : Operation 7 [1/1] (3.40ns)   --->   "%HwReg_layerHeight_1_val_read = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %HwReg_layerHeight_1_val"   --->   Operation 7 'read' 'HwReg_layerHeight_1_val_read' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (3.40ns)   --->   "%HwReg_layerWidth_1_val_read = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %HwReg_layerWidth_1_val"   --->   Operation 8 'read' 'HwReg_layerWidth_1_val_read' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (3.28ns)   --->   "%layerStartY = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %HwReg_layerStartY_1_val19"   --->   Operation 9 'read' 'layerStartY' <Predicate = true> <Delay = 3.28> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.28> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 7> <FIFO>
+ST_1 : Operation 10 [1/1] (3.28ns)   --->   "%layerStartX = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %HwReg_layerStartX_1_val17"   --->   Operation 10 'read' 'layerStartX' <Predicate = true> <Delay = 3.28> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.28> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 7> <FIFO>
+ST_1 : Operation 11 [1/1] (3.28ns)   --->   "%HwReg_layerEnable_val16_read = read i3 @_ssdm_op_Read.ap_fifo.i3P0A, i3 %HwReg_layerEnable_val16"   --->   Operation 11 'read' 'HwReg_layerEnable_val16_read' <Predicate = true> <Delay = 3.28> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.28> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 3> <Depth = 7> <FIFO>
+ST_1 : Operation 12 [1/1] (3.40ns)   --->   "%write_ln445 = write void @_ssdm_op_Write.ap_fifo.i3P0A, i3 %HwReg_layerEnable_val16_c, i3 %HwReg_layerEnable_val16_read" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:445->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 12 'write' 'write_ln445' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 3> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty = trunc i3 %HwReg_layerEnable_val16_read"   --->   Operation 13 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%HwReg_layerScaleFactor_1_val25_readcast = zext i8 %HwReg_layerScaleFactor_1_val25_read" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 14 'zext' 'HwReg_layerScaleFactor_1_val25_readcast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (3.12ns)   --->   "%shl_ln449 = shl i16 %HwReg_layerHeight_1_val_read, i16 %HwReg_layerScaleFactor_1_val25_readcast" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 15 'shl' 'shl_ln449' <Predicate = true> <Delay = 3.12> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.12> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%HwReg_layerScaleFactor_1_val25_readcast19 = zext i8 %HwReg_layerScaleFactor_1_val25_read" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 16 'zext' 'HwReg_layerScaleFactor_1_val25_readcast19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (3.12ns)   --->   "%shl_ln450 = shl i16 %HwReg_layerWidth_1_val_read, i16 %HwReg_layerScaleFactor_1_val25_readcast19" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 17 'shl' 'shl_ln450' <Predicate = true> <Delay = 3.12> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.12> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i3.i32, i3 %HwReg_layerEnable_val16_read, i32 1"   --->   Operation 18 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.29ns)   --->   "%store_ln440 = store i12 0, i12 %y" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:440->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 19 'store' 'store_ln440' <Predicate = true> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 1.54>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %HwReg_layerScaleFactor_1_val25, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%HwReg_background_V_B_val14_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %HwReg_background_V_B_val14"   --->   Operation 21 'read' 'HwReg_background_V_B_val14_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%HwReg_background_U_G_val13_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %HwReg_background_U_G_val13"   --->   Operation 22 'read' 'HwReg_background_U_G_val13_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%HwReg_background_Y_R_val12_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %HwReg_background_Y_R_val12"   --->   Operation 23 'read' 'HwReg_background_Y_R_val12_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%HwReg_height_val_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %HwReg_height_val"   --->   Operation 24 'read' 'HwReg_height_val_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%HwReg_width_val_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %HwReg_width_val"   --->   Operation 25 'read' 'HwReg_width_val_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %HwReg_layerHeight_1_val, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %HwReg_layerWidth_1_val, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %HwReg_layerStartY_1_val19, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %HwReg_layerStartX_1_val17, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i3 %HwReg_layerEnable_val16, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i3 %HwReg_layerEnable_val16_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %HwReg_background_V_B_val14, void "   --->   Operation 32 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %HwReg_background_U_G_val13, void "   --->   Operation 33 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %HwReg_background_Y_R_val12, void "   --->   Operation 34 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i12 %HwReg_height_val, void "   --->   Operation 35 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i12 %HwReg_width_val, void "   --->   Operation 36 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %outLayer1, void @empty_17, i32 0, i32 0, void @empty_48, i32 0, i32 0, void @empty_48, void @empty_48, void @empty_48, i32 0, i32 0, i32 0, i32 0, void @empty_48, void @empty_48, i32 4294967295, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %srcLayer1x, void @empty_17, i32 0, i32 0, void @empty_48, i32 0, i32 0, void @empty_48, void @empty_48, void @empty_48, i32 0, i32 0, i32 0, i32 0, void @empty_48, void @empty_48, i32 4294967295, i32 0, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %outLayer0, void @empty_17, i32 0, i32 0, void @empty_48, i32 0, i32 0, void @empty_48, void @empty_48, void @empty_48, i32 0, i32 0, i32 0, i32 0, void @empty_48, void @empty_48, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%hwReg_10_1_val_cast_i = zext i16 %layerStartY"   --->   Operation 40 'zext' 'hwReg_10_1_val_cast_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%layerHeight_cast_i = zext i16 %shl_ln449" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 41 'zext' 'layerHeight_cast_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (1.54ns)   --->   "%add60_i = add i17 %layerHeight_cast_i, i17 %hwReg_10_1_val_cast_i" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 42 'add' 'add60_i' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%hwReg_9_1_val_cast_i = zext i16 %layerStartX"   --->   Operation 43 'zext' 'hwReg_9_1_val_cast_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%layerWidth_cast_i = zext i16 %shl_ln450" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 44 'zext' 'layerWidth_cast_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (1.54ns)   --->   "%add71_i = add i17 %layerWidth_cast_i, i17 %hwReg_9_1_val_cast_i" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 45 'add' 'add71_i' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln463 = br void %VITIS_LOOP_465_3.i" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 46 'br' 'br_ln463' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.18>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%y_14 = load i12 %y" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 47 'load' 'y_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.54ns)   --->   "%icmp_ln463 = icmp_eq  i12 %y_14, i12 %HwReg_height_val_read" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 48 'icmp' 'icmp_ln463' <Predicate = true> <Delay = 1.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 2160, i64 0"   --->   Operation 49 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (1.54ns)   --->   "%add_ln463 = add i12 %y_14, i12 1" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 50 'add' 'add_ln463' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln463 = br i1 %icmp_ln463, void %VITIS_LOOP_465_3.split.i, void %v_mix_core_alpha<false, false>.exit" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 51 'br' 'br_ln463' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln463 = zext i12 %y_14" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 52 'zext' 'zext_ln463' <Predicate = (!icmp_ln463)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln463_2 = zext i12 %y_14" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 53 'zext' 'zext_ln463_2' <Predicate = (!icmp_ln463)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (1.54ns)   --->   "%ult = icmp_ult  i16 %zext_ln463_2, i16 %layerStartY" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 54 'icmp' 'ult' <Predicate = (!icmp_ln463)> <Delay = 1.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.80ns)   --->   "%rev18 = xor i1 %ult, i1 1" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 55 'xor' 'rev18' <Predicate = (!icmp_ln463)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (1.55ns)   --->   "%notrhs_i = icmp_ugt  i17 %add60_i, i17 %zext_ln463" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 56 'icmp' 'notrhs_i' <Predicate = (!icmp_ln463)> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%empty_77 = wait i32 @_ssdm_op_Wait"   --->   Operation 57 'wait' 'empty_77' <Predicate = (!icmp_ln463)> <Delay = 0.00>
+ST_3 : Operation 58 [2/2] (2.84ns)   --->   "%call_ln450 = call void @v_mix_core_alpha<false, false>_Pipeline_VITIS_LOOP_465_3, i12 %HwReg_width_val_read, i24 %outLayer1, i24 %srcLayer1x, i8 %HwReg_background_V_B_val14_read, i8 %HwReg_background_U_G_val13_read, i8 %HwReg_background_Y_R_val12_read, i16 %layerStartX, i17 %add71_i, i1 %notrhs_i, i1 %rev18, i1 %tmp_7, i1 %empty, i24 %outLayer0" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 58 'call' 'call_ln450' <Predicate = (!icmp_ln463)> <Delay = 2.84> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 59 [1/1] (1.29ns)   --->   "%store_ln440 = store i12 %add_ln463, i12 %y" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:440->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 59 'store' 'store_ln440' <Predicate = (!icmp_ln463)> <Delay = 1.29>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%ret_ln717 = ret" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 60 'ret' 'ret_ln717' <Predicate = (icmp_ln463)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%specloopname_ln463 = specloopname void @_ssdm_op_SpecLoopName, void @empty_42" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 61 'specloopname' 'specloopname_ln463' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/2] (0.00ns)   --->   "%call_ln450 = call void @v_mix_core_alpha<false, false>_Pipeline_VITIS_LOOP_465_3, i12 %HwReg_width_val_read, i24 %outLayer1, i24 %srcLayer1x, i8 %HwReg_background_V_B_val14_read, i8 %HwReg_background_U_G_val13_read, i8 %HwReg_background_Y_R_val12_read, i16 %layerStartX, i17 %add71_i, i1 %notrhs_i, i1 %rev18, i1 %tmp_7, i1 %empty, i24 %outLayer0" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 62 'call' 'call_ln450' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln463 = br void %VITIS_LOOP_465_3.i" [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717]   --->   Operation 63 'br' 'br_ln463' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.681ns
+The critical path consists of the following:
+	fifo read operation ('HwReg_layerEnable_val16_read') on port 'HwReg_layerEnable_val16' [33]  (3.280 ns)
+	fifo write operation ('write_ln445', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:445->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) on port 'HwReg_layerEnable_val16_c' (/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:445->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) [35]  (3.401 ns)
+
+ <State 2>: 1.545ns
+The critical path consists of the following:
+	'add' operation 17 bit ('add60_i', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:449->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) [51]  (1.545 ns)
+
+ <State 3>: 5.189ns
+The critical path consists of the following:
+	'load' operation 12 bit ('y', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) on local variable 'y', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:440->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717 [59]  (0.000 ns)
+	'icmp' operation 1 bit ('ult', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) [68]  (1.545 ns)
+	'xor' operation 1 bit ('rev18', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:463->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) [69]  (0.800 ns)
+	'call' operation 0 bit ('call_ln450', /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:450->/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:717) to 'v_mix_core_alpha<false, false>_Pipeline_VITIS_LOOP_465_3' [72]  (2.844 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

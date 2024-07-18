@@ -271,6 +271,6 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 									 TR when TRAINING,
 									 ID when others;
 
-	image <= (others => (others => ))
+	line <= (others => "1100100011");
 
 end tb;

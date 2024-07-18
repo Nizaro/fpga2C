@@ -22,7 +22,6 @@ Nécessite LVDS_25 ou BLVDS_25, alimentation 2.5V
 
 ~~JTAG 14 pins~~
 
-
 [Xilinx Forums - How do I program Z turn board without a JTAG Cable ?](https://support.xilinx.com/s/question/0D52E00006hpjD9SAI/how-do-i-program-z-turn-board-without-a-jtag-cable-?language=en_US)
 [Xilinx Forums - booting from SD-Card](https://support.xilinx.com/s/question/0D52E00006hpY1gSAE/booting-from-sdcard?language=en_US)
 
@@ -36,10 +35,24 @@ Needed :
 D25 (blue) : powered (from VDD_33)
 D7 (red) : FPGA_INIT_DONE
 D29 and D30 (green) : user leds
+D34 (RGB) : user status led
 
+# Interfaces
 
-## Add
+# HDMI
 
-- HDMI
-- Ethernet?
-- paramétrage par USB
+p11
+SIL9022A
+
+Xilinx Video Format : 24 bit
+Zturn used pins : 16 bit (5 pins RED, 6 pins GREEN, 5 pins BLUE) -> ?????
+-> conversion : doc SIL9 p42
+
+[Xilinx Video Mixer](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841850/Video+Mixer)
+# Ethernet
+
+p10
+YT8531SC
+# USB
+
+UART1 intégré au Zynq, sur les pins MIO48 et 49 - ports TXD et RXD du CP2103-GM (U22)

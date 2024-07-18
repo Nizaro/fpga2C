@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "main_design_xbar_1_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

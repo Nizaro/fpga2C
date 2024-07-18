@@ -75,3 +75,5 @@ set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V13 [get_ports noip_sck]
 set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y17 [get_ports noip_sck1]
+set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ} [current_design]
+set_operating_conditions -grade extended

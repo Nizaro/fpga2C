@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 -- Date        : Fri Jun 21 11:56:18 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_design_xbar_4 -prefix
+--               main_design_xbar_4_ main_design_xbar_4_sim_netlist.vhdl
 -- Design      : main_design_xbar_4
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -40,8 +40,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_arb_rr is
     s_axis_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axis_tlast : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_arb_rr : entity is "axis_switch_v1_1_31_arb_rr";
 end main_design_xbar_4_axis_switch_v1_1_31_arb_rr;
 
 architecture STRUCTURE of main_design_xbar_4_axis_switch_v1_1_31_arb_rr is
@@ -729,8 +727,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_axisc_arb_responder is
     areset : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_axisc_arb_responder : entity is "axis_switch_v1_1_31_axisc_arb_responder";
 end main_design_xbar_4_axis_switch_v1_1_31_axisc_arb_responder;
 
 architecture STRUCTURE of main_design_xbar_4_axis_switch_v1_1_31_axisc_arb_responder is
@@ -793,8 +789,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_axisc_decoder is
     s_axis_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     arb_gnt_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_axisc_decoder : entity is "axis_switch_v1_1_31_axisc_decoder";
 end main_design_xbar_4_axis_switch_v1_1_31_axisc_decoder;
 
 architecture STRUCTURE of main_design_xbar_4_axis_switch_v1_1_31_axisc_decoder is
@@ -909,8 +903,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_axis_switch_arbiter is
     s_axis_tlast : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_axis_switch_arbiter : entity is "axis_switch_v1_1_31_axis_switch_arbiter";
 end main_design_xbar_4_axis_switch_v1_1_31_axis_switch_arbiter;
 
 architecture STRUCTURE of main_design_xbar_4_axis_switch_v1_1_31_axis_switch_arbiter is
@@ -972,8 +964,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_axisc_transfer_mux is
     areset : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_axisc_transfer_mux : entity is "axis_switch_v1_1_31_axisc_transfer_mux";
 end main_design_xbar_4_axis_switch_v1_1_31_axisc_transfer_mux;
 
 architecture STRUCTURE of main_design_xbar_4_axis_switch_v1_1_31_axisc_transfer_mux is
@@ -1135,8 +1125,6 @@ entity main_design_xbar_4_axis_switch_v1_1_31_axis_switch is
   attribute LP_MERGEDOWN_MUX of main_design_xbar_4_axis_switch_v1_1_31_axis_switch : entity is 0;
   attribute LP_NUM_SYNCHRONIZER_STAGES : integer;
   attribute LP_NUM_SYNCHRONIZER_STAGES of main_design_xbar_4_axis_switch_v1_1_31_axis_switch : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_4_axis_switch_v1_1_31_axis_switch : entity is "axis_switch_v1_1_31_axis_switch";
   attribute P_DECODER_CONNECTIVITY_ARRAY : string;
   attribute P_DECODER_CONNECTIVITY_ARRAY of main_design_xbar_4_axis_switch_v1_1_31_axis_switch : entity is "2'b11";
   attribute P_SINGLE_SLAVE_CONNECTIVITY_ARRAY : string;

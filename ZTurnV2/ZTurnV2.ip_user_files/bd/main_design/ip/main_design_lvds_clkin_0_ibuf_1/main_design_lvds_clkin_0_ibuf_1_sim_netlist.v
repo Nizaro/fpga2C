@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 // Date        : Thu Jun 20 17:26:34 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/main_design_lvds_clkin_0_ibuf_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top main_design_lvds_clkin_0_ibuf_1 -prefix
+//               main_design_lvds_clkin_0_ibuf_1_ main_design_lvds_clkin_0_ibuf_1_sim_netlist.v
 // Design      : main_design_lvds_clkin_0_ibuf_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -193,7 +193,7 @@ endmodule
 
 (* C_BUFGCE_DIV = "1" *) (* C_BUFG_GT_SYNC = "0" *) (* C_BUF_TYPE = "IBUFDS" *) 
 (* C_MODE = "PERFORMANCE" *) (* C_OBUFDS_GTE5_ADV = "2'b00" *) (* C_REFCLK_ICNTL_TX = "5'b00000" *) 
-(* C_SIM_DEVICE = "VERSAL_AI_CORE_ES1" *) (* C_SIZE = "1" *) (* ORIG_REF_NAME = "util_ds_buf" *) 
+(* C_SIM_DEVICE = "VERSAL_AI_CORE_ES1" *) (* C_SIZE = "1" *) 
 module main_design_lvds_clkin_0_ibuf_1_util_ds_buf
    (IBUF_DS_P,
     IBUF_DS_N,

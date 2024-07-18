@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Wed Jul 17 09:39:29 2024
+-- Date        : Thu Jul 18 15:07:15 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode funcsim -rename_top main_design_noip_lvds_stream_0_1 -prefix
 --               main_design_noip_lvds_stream_0_1_ main_design_noip_lvds_stream_0_0_sim_netlist.vhdl
@@ -516,7 +516,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_1 is
   signal \<const1>\ : STD_LOGIC;
   signal \^m00_axis_tdata\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute x_interface_info : string;
-  attribute x_interface_info of lvds_clk : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK";
+  attribute x_interface_info of lvds_clk : signal is "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of lvds_clk : signal is "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute x_interface_info of lvds_sync : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync";

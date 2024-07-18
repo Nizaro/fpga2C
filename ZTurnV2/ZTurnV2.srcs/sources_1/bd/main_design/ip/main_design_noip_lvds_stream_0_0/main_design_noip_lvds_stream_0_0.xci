@@ -4,7 +4,7 @@
     "xci_name": "main_design_noip_lvds_stream_0_0",
     "cell_name": "noip_lvds_stream_0",
     "component_reference": "user.org:user:noip_lvds_stream:1.0",
-    "ip_revision": "3",
+    "ip_revision": "4",
     "gen_directory": "../../../../../../ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0",
     "parameters": {
       "component_parameters": {
@@ -12,13 +12,17 @@
         "C_M00_AXIS_START_COUNT": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_S00_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "Component_Name": [ { "value": "main_design_noip_lvds_stream_0_0", "resolve_type": "user", "usage": "all" } ],
-        "SENSOR_BIT_LENGTH": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ]
+        "SENSOR_BIT_LENGTH": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "IM_WIDTH": [ { "value": "1280", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "IM_HEIGHT": [ { "value": "1024", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
         "C_M00_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M00_AXIS_START_COUNT": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S00_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "SENSOR_BIT_LENGTH": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "SENSOR_BIT_LENGTH": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "IM_WIDTH": [ { "value": "1280", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "IM_HEIGHT": [ { "value": "1024", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -36,7 +40,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "3" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

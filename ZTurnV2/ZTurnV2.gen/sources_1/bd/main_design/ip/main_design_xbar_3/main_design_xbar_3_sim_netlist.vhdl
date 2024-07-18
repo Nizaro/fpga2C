@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Fri Jun 21 11:56:13 2024
+-- Date        : Fri Jun 21 11:56:12 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_design_xbar_3 -prefix
+--               main_design_xbar_3_ main_design_xbar_3_sim_netlist.vhdl
 -- Design      : main_design_xbar_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -30,8 +30,6 @@ entity main_design_xbar_3_axis_register_slice_v1_1_31_axisc_register_slice is
     s_axis_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 37 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_3_axis_register_slice_v1_1_31_axisc_register_slice : entity is "axis_register_slice_v1_1_31_axisc_register_slice";
 end main_design_xbar_3_axis_register_slice_v1_1_31_axisc_register_slice;
 
 architecture STRUCTURE of main_design_xbar_3_axis_register_slice_v1_1_31_axisc_register_slice is
@@ -1485,8 +1483,6 @@ entity main_design_xbar_3_axis_switch_v1_1_31_axisc_decoder is
     s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 36 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_3_axis_switch_v1_1_31_axisc_decoder : entity is "axis_switch_v1_1_31_axisc_decoder";
 end main_design_xbar_3_axis_switch_v1_1_31_axisc_decoder;
 
 architecture STRUCTURE of main_design_xbar_3_axis_switch_v1_1_31_axisc_decoder is
@@ -1683,8 +1679,6 @@ entity main_design_xbar_3_axis_switch_v1_1_31_axis_switch is
   attribute LP_MERGEDOWN_MUX of main_design_xbar_3_axis_switch_v1_1_31_axis_switch : entity is 0;
   attribute LP_NUM_SYNCHRONIZER_STAGES : integer;
   attribute LP_NUM_SYNCHRONIZER_STAGES of main_design_xbar_3_axis_switch_v1_1_31_axis_switch : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_xbar_3_axis_switch_v1_1_31_axis_switch : entity is "axis_switch_v1_1_31_axis_switch";
   attribute P_DECODER_CONNECTIVITY_ARRAY : string;
   attribute P_DECODER_CONNECTIVITY_ARRAY of main_design_xbar_3_axis_switch_v1_1_31_axis_switch : entity is "2'b11";
   attribute P_SINGLE_SLAVE_CONNECTIVITY_ARRAY : string;

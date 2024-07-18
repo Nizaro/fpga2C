@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Thu Jul 18 12:25:53 2024
+--Date        : Thu Jul 18 15:37:07 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -36,6 +36,12 @@ entity main_design_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     clk_test_port : out STD_LOGIC;
+    hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    hdmi_de : out STD_LOGIC;
+    hdmi_hsync : out STD_LOGIC;
+    hdmi_int : inout STD_LOGIC;
+    hdmi_pclk : out STD_LOGIC;
+    hdmi_vsync : out STD_LOGIC;
     lvds_clk_0_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_0_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_clk_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -141,7 +147,13 @@ architecture STRUCTURE of main_design_wrapper is
     lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk_test_port : out STD_LOGIC;
     noip_mosi1 : out STD_LOGIC;
-    noip_sck1 : out STD_LOGIC
+    noip_sck1 : out STD_LOGIC;
+    hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    hdmi_vsync : out STD_LOGIC;
+    hdmi_hsync : out STD_LOGIC;
+    hdmi_de : out STD_LOGIC;
+    hdmi_pclk : out STD_LOGIC;
+    hdmi_int : inout STD_LOGIC
   );
   end component main_design;
 begin
@@ -169,6 +181,12 @@ main_design_i: component main_design
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       clk_test_port => clk_test_port,
+      hdmi_data(15 downto 0) => hdmi_data(15 downto 0),
+      hdmi_de => hdmi_de,
+      hdmi_hsync => hdmi_hsync,
+      hdmi_int => hdmi_int,
+      hdmi_pclk => hdmi_pclk,
+      hdmi_vsync => hdmi_vsync,
       lvds_clk_0_n(0) => lvds_clk_0_n(0),
       lvds_clk_0_p(0) => lvds_clk_0_p(0),
       lvds_clk_1_n(0) => lvds_clk_1_n(0),

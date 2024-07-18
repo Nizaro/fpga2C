@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:noip_lvds_stream:1.0
--- IP Revision: 3
+-- IP Revision: 4
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -86,7 +86,9 @@ ARCHITECTURE main_design_noip_lvds_stream_0_0_arch OF main_design_noip_lvds_stre
       C_M00_AXIS_TDATA_WIDTH : INTEGER;
       C_M00_AXIS_START_COUNT : INTEGER;
       C_S00_AXIS_TDATA_WIDTH : INTEGER;
-      SENSOR_BIT_LENGTH : INTEGER
+      SENSOR_BIT_LENGTH : INTEGER;
+      IM_WIDTH : INTEGER;
+      IM_HEIGHT : INTEGER
     );
     PORT (
       lvds_clk : IN STD_LOGIC;
@@ -118,7 +120,7 @@ ARCHITECTURE main_design_noip_lvds_stream_0_0_arch OF main_design_noip_lvds_stre
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF lvds_clk: SIGNAL IS "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF lvds_clk: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF lvds_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock";
   ATTRIBUTE X_INTERFACE_INFO OF lvds_data: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_data";
   ATTRIBUTE X_INTERFACE_INFO OF lvds_sync: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync";
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_aclk: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
@@ -147,7 +149,9 @@ BEGIN
       C_M00_AXIS_TDATA_WIDTH => 32,
       C_M00_AXIS_START_COUNT => 32,
       C_S00_AXIS_TDATA_WIDTH => 32,
-      SENSOR_BIT_LENGTH => 10
+      SENSOR_BIT_LENGTH => 10,
+      IM_WIDTH => 1280,
+      IM_HEIGHT => 1024
     )
     PORT MAP (
       lvds_clk => lvds_clk,

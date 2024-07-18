@@ -50,6 +50,8 @@ Xilinx Video Format : 24 bit
 Zturn used pins : 16 bit (5 pins RED, 6 pins GREEN, 5 pins BLUE) -> ?????
 -> conversion : doc SIL9 p42
 
+f_MCLK = 12 MHz
+
 [Xilinx Video Mixer](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841850/Video+Mixer)
 # Ethernet
 

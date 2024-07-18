@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 -- Date        : Tue Jul  9 11:22:00 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_inverter_0/main_design_lvds_data_0_inverter_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_design_lvds_data_0_inverter_0 -prefix
+--               main_design_lvds_data_0_inverter_0_ main_design_lvds_data_0_inverter_0_sim_netlist.vhdl
 -- Design      : main_design_lvds_data_0_inverter_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity main_design_lvds_data_0_inverter_0_util_vector_logic_v2_0_4_util_vector_l
     Res : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Op1 : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_lvds_data_0_inverter_0_util_vector_logic_v2_0_4_util_vector_logic : entity is "util_vector_logic_v2_0_4_util_vector_logic";
 end main_design_lvds_data_0_inverter_0_util_vector_logic_v2_0_4_util_vector_logic;
 
 architecture STRUCTURE of main_design_lvds_data_0_inverter_0_util_vector_logic_v2_0_4_util_vector_logic is

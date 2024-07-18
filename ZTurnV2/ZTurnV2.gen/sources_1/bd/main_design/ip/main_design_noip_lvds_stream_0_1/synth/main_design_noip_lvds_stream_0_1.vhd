@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:noip_lvds_stream:1.0
--- IP Revision: 3
+-- IP Revision: 4
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -86,7 +86,9 @@ ARCHITECTURE main_design_noip_lvds_stream_0_1_arch OF main_design_noip_lvds_stre
       C_M00_AXIS_TDATA_WIDTH : INTEGER;
       C_M00_AXIS_START_COUNT : INTEGER;
       C_S00_AXIS_TDATA_WIDTH : INTEGER;
-      SENSOR_BIT_LENGTH : INTEGER
+      SENSOR_BIT_LENGTH : INTEGER;
+      IM_WIDTH : INTEGER;
+      IM_HEIGHT : INTEGER
     );
     PORT (
       lvds_clk : IN STD_LOGIC;
@@ -147,7 +149,9 @@ BEGIN
       C_M00_AXIS_TDATA_WIDTH => 32,
       C_M00_AXIS_START_COUNT => 32,
       C_S00_AXIS_TDATA_WIDTH => 32,
-      SENSOR_BIT_LENGTH => 10
+      SENSOR_BIT_LENGTH => 10,
+      IM_WIDTH => 1280,
+      IM_HEIGHT => 1024
     )
     PORT MAP (
       lvds_clk => lvds_clk,

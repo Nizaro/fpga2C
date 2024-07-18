@@ -704,11 +704,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 17 07:39:50 UTC 2024</spirit:value>
+            <spirit:value>Thu Jul 18 13:07:48 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:df00e8b0</spirit:value>
+            <spirit:value>9:fc651da3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -719,7 +719,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:df00e8b0</spirit:value>
+            <spirit:value>9:fc651da3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -735,11 +735,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 17 07:38:15 UTC 2024</spirit:value>
+            <spirit:value>Thu Jul 18 13:05:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b0b0f5b</spirit:value>
+            <spirit:value>9:4eec87e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -755,11 +755,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 17 07:38:15 UTC 2024</spirit:value>
+            <spirit:value>Thu Jul 18 13:05:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b0b0f5b</spirit:value>
+            <spirit:value>9:4eec87e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -775,11 +775,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 17 07:38:15 UTC 2024</spirit:value>
+            <spirit:value>Thu Jul 18 13:05:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:df00e8b0</spirit:value>
+            <spirit:value>9:fc651da3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -795,11 +795,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 17 07:38:15 UTC 2024</spirit:value>
+            <spirit:value>Thu Jul 18 13:05:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:df00e8b0</spirit:value>
+            <spirit:value>9:fc651da3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1110,6 +1110,16 @@
         <spirit:displayName>Sensor Bit Length</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SENSOR_BIT_LENGTH">10</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>IM_WIDTH</spirit:name>
+        <spirit:displayName>Im Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IM_WIDTH">1280</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>IM_HEIGHT</spirit:name>
+        <spirit:displayName>Im Height</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IM_HEIGHT">1024</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -1168,15 +1178,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1191,15 +1201,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1de0/hdl/noip_lvds_stream.vhd</spirit:name>
+        <spirit:name>../../ipshared/5c45/hdl/noip_lvds_stream.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1255,11 +1265,21 @@
       <spirit:displayName>Sensor Bit Length</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SENSOR_BIT_LENGTH" spirit:choiceRef="choice_list_291d2966">10</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>IM_WIDTH</spirit:name>
+      <spirit:displayName>Image Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.IM_WIDTH">1280</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>IM_HEIGHT</spirit:name>
+      <spirit:displayName>Image Height</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.IM_HEIGHT">1024</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>noip_lvds_stream_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_CLK.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
@@ -1315,10 +1335,10 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f9aa0c29"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="41bb1fd7"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5b00d7c4"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ed949e7c"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bb52412a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d748bd44"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bb868148"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="89038201"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

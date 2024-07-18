@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 -- Date        : Wed Jul 17 09:39:31 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_design_noip_ctrl_0_0 -prefix
+--               main_design_noip_ctrl_0_0_ main_design_noip_ctrl_0_0_sim_netlist.vhdl
 -- Design      : main_design_noip_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -63,8 +63,6 @@ entity main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI : entity is "noip_ctrl_slave_lite_v1_0_S00_AXI";
 end main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI;
 
 architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI is
@@ -2295,8 +2293,6 @@ entity main_design_noip_ctrl_0_0_noip_ctrl is
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_design_noip_ctrl_0_0_noip_ctrl : entity is "noip_ctrl";
 end main_design_noip_ctrl_0_0_noip_ctrl;
 
 architecture STRUCTURE of main_design_noip_ctrl_0_0_noip_ctrl is

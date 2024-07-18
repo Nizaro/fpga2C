@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 // Date        : Wed Jul 17 09:39:31 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top main_design_noip_ctrl_0_0 -prefix
+//               main_design_noip_ctrl_0_0_ main_design_noip_ctrl_0_0_sim_netlist.v
 // Design      : main_design_noip_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -152,7 +152,6 @@ module main_design_noip_ctrl_0_0
         .vddpix_toggle(vddpix_toggle));
 endmodule
 
-(* ORIG_REF_NAME = "noip_ctrl" *) 
 module main_design_noip_ctrl_0_0_noip_ctrl
    (axi_awready_reg,
     axi_arready_reg,
@@ -4190,7 +4189,6 @@ module main_design_noip_ctrl_0_0_noip_ctrl
         .Q(write_data_ctr[9]));
 endmodule
 
-(* ORIG_REF_NAME = "noip_ctrl_slave_lite_v1_0_S00_AXI" *) 
 module main_design_noip_ctrl_0_0_noip_ctrl_slave_lite_v1_0_S00_AXI
    (axi_awready_reg_0,
     s00_axi_aresetn_0,

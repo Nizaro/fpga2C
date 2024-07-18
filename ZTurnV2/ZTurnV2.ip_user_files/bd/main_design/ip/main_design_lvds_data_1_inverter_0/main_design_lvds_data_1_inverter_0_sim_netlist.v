@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-// Date        : Tue Jul  9 11:22:00 2024
+// Date        : Tue Jul  9 11:21:59 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_1_inverter_0/main_design_lvds_data_1_inverter_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top main_design_lvds_data_1_inverter_0 -prefix
+//               main_design_lvds_data_1_inverter_0_ main_design_lvds_data_1_inverter_0_sim_netlist.v
 // Design      : main_design_lvds_data_1_inverter_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

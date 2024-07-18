@@ -37,3 +37,9 @@ D25 (blue) : powered (from VDD_33)
 D7 (red) : FPGA_INIT_DONE
 D29 and D30 (green) : user leds
 
+
+## Add
+
+- HDMI
+- Ethernet?
+- paramétrage par USB

@@ -69,6 +69,14 @@ architecture tb of tb_lvds_stream is
 	type t_ldw is array(0 to 3) of pixel;
 	signal data_words : t_ldw;
 	signal i_lvds : integer := 0;
+	constant ROI_width_kernels : integer := 4;
+	constant ROI_height : integer := 4;
+
+	-- image
+	type t_line is array (1 to ROI_width_kernels*8) of pixel;
+	type t_image is array(1 to ROI_height) of t_line;
+	signal line : t_line;
+
 
 	-- constants and patterns of sync channel
 	constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
@@ -90,6 +98,7 @@ architecture tb of tb_lvds_stream is
 		wait until i_lvds = 0;
 		sw <= TRAINING;
 		dws <= (others => TRAINING);
+		wait for 100 ns;
 
 	end procedure;
 
@@ -151,10 +160,9 @@ architecture tb of tb_lvds_stream is
 		sw <= (others => '0'); -- ID
 		wait until i_lvds = 0;
 		sw <= CRC_PATT;
-		for l in 0 to 4 loop
+		for l in 0 to ROI_height loop
 			img_line(sw,dws);
 			p_training(sw,dws);
-			wait for 15 ns;
 		end loop;
 		wait until i_lvds = 0;
 		sw <= LINE_START;
@@ -178,6 +186,8 @@ begin
 workLVDS_stream : entity work.noip_lvds_stream(arch_imp) 
     generic map (
         SENSOR_BIT_LENGTH => 10,
+		IM_WIDTH => ROI_width_kernels*8,
+		IM_HEIGHT => ROI_height,
 		C_S00_AXIS_TDATA_WIDTH => 32,
 		C_M00_AXIS_TDATA_WIDTH	=> 32,
 		C_M00_AXIS_START_COUNT	=> 32
@@ -204,10 +214,6 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		m00_axis_tlast => m00_axis_tlast,	
 		m00_axis_tready => m00_axis_tready
     );
-
-    lvds_clk <= not lvds_clk after 1 ns;
-
-    s00_axis_aresetn <= '1' after 1 ns;
 
 	lvds_process : process(lvds_clk, s00_axis_aresetn)
 	begin
@@ -239,19 +245,21 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		data_words <= (others => (others => '0'));
 
 		p_training(sync_word,data_words);
-
-		wait for 60 ns;
 		
 		blackline(sync_word,data_words);
 		p_training(sync_word,data_words);
-
-		wait for 15 ns;
 
 		frame(sync_word, data_words);
 		p_training(sync_word,data_words);
 
 		wait;
 	end process;
+
+	lvds_clk <= not lvds_clk after 2.778 ns;
+	s00_axis_aclk <= not s00_axis_aclk after 10 ns;
+	m00_axis_aclk <= s00_axis_aclk;
+    s00_axis_aresetn <= '1' after 1 ns;
+	m00_axis_aresetn <= s00_axis_aresetn;
 
 	with sync_word select Pattern <= FS when FRAME_START,
 									 FE when FRAME_END,
@@ -262,5 +270,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 									 CRC when CRC_PATT,
 									 TR when TRAINING,
 									 ID when others;
+
+	image <= (others => (others => ))
 
 end tb;

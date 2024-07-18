@@ -6,6 +6,8 @@ entity noip_lvds_stream is
 	generic (
 		-- Users to add parameters here
 		SENSOR_BIT_LENGTH : integer := 10;
+		IM_WIDTH : integer;
+		IM_HEIGHT : integer;
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
 
@@ -89,12 +91,6 @@ architecture arch_imp of noip_lvds_stream is
 	type driver_state is (ALIGNING, IDLE, WAIT_BLACK, REC_BLACK, END_BLACK, REC_ID, REC_IMG, WAIT_LS, AFTER_FE);
 	signal DState : driver_state;
 
-	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
-	signal lvds_sync_word : pixel;
-	type t_ldw is array(0 to 3) of pixel;
-	signal lvds_data_words : t_ldw;
-	signal lvds_word_ready : std_logic;
-
 	-- lvds_sync words values
 	constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
 	constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";
@@ -105,16 +101,27 @@ architecture arch_imp of noip_lvds_stream is
 	constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
 	constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
 
+	-- image signals
+	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
+	signal lvds_sync_word : pixel;
+	type t_ldw is array(0 to 3) of pixel;
+	signal lvds_data_words : t_ldw;
+	signal lvds_word_ready : std_logic;
+
 	signal nb_kernel : integer := 0;
 	signal pixel_polarity : integer := 0;
 
-	signal im_line : integer := 1024;
+	signal im_line : integer := IM_HEIGHT;
 	signal im_column : integer := 1;
 	signal i : integer := 0;
 	signal bitslip : integer := 0;
+	
+	-- type t_kernel is array (0 to 7) of pixel;
+	-- type t_line is array(0 to IM_WIDTH/8) of t_kernel;
+	type t_line is array (1 to IM_WIDTH) of pixel;
+	type t_image is array(1 to IM_HEIGHT) of t_line;
+	signal line : t_line;
 
-	type t_ligne is array (1 to 1280) of pixel;
-	type t_image is array(1 to 1024) of t_ligne;
 	-- signal image : t_image;
 	-- user signals end here
 
@@ -212,9 +219,10 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			DState <= ALIGNING;
 			nb_kernel <= 0;
 			pixel_polarity <= 0;
-			im_line <= 1280;
+			im_line <= IM_HEIGHT;
 			im_column <= 1;
 			bitslip <= 0;
+			line <= (others => (others => '0'));
 		elsif(rising_edge(lvds_word_ready)) then
 			case DState is
 				when ALIGNING =>
@@ -251,22 +259,34 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					Dstate <= REC_IMG;
 
 				when REC_IMG => -- receiving pixels and storing them. 
-					-- if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
-					-- 	image(im_line)(im_column+pixel_polarity) <= lvds_data_words(0);
-					-- 	image(im_line)(im_column+pixel_polarity+2) <= lvds_data_words(1);
-					-- 	image(im_line)(im_column+pixel_polarity+4) <= lvds_data_words(2);
-					-- 	image(im_line)(im_column+pixel_polarity+6) <= lvds_data_words(3);
-					-- else 								 -- odd kernel : pixels read out descending
-					-- 	image(im_line)(im_column-pixel_polarity+7) <= lvds_data_words(0);
-					-- 	image(im_line)(im_column-pixel_polarity+5) <= lvds_data_words(1);
-					-- 	image(im_line)(im_column-pixel_polarity+3) <= lvds_data_words(2);
-					-- 	image(im_line)(im_column-pixel_polarity+1) <= lvds_data_words(3);
-					-- end if; 
+					if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
+						line(im_column+pixel_polarity) <= lvds_data_words(0);
+						line(im_column+pixel_polarity+2) <= lvds_data_words(1);
+						line(im_column+pixel_polarity+4) <= lvds_data_words(2);
+						line(im_column+pixel_polarity+6) <= lvds_data_words(3);
+					else 								 -- odd kernel : pixels read out descending
+						line(im_column-pixel_polarity+7) <= lvds_data_words(0);
+						line(im_column-pixel_polarity+5) <= lvds_data_words(1);
+						line(im_column-pixel_polarity+3) <= lvds_data_words(2);
+						line(im_column-pixel_polarity+1) <= lvds_data_words(3);
+					end if; 
+
+					-- if((nb_kernel rem 2) = 0) then -- even kernel : pixels read out ascending
+					-- 	line(nb_kernel)(pixel_polarity) <= lvds_data_words(0);
+					-- 	line(nb_kernel)(2+pixel_polarity) <= lvds_data_words(1);
+					-- 	line(nb_kernel)(4+pixel_polarity) <= lvds_data_words(2);
+					-- 	line(nb_kernel)(6+pixel_polarity) <= lvds_data_words(3);
+					-- else							-- odd kernel : pixels read out descending
+					-- 	line(nb_kernel)(7+pixel_polarity) <= lvds_data_words(0);
+					-- 	line(nb_kernel)(5+pixel_polarity) <= lvds_data_words(1);
+					-- 	line(nb_kernel)(3+pixel_polarity) <= lvds_data_words(2);
+					-- 	line(nb_kernel)(1+pixel_polarity) <= lvds_data_words(3);
+					-- end if;
 
 					if(pixel_polarity = 1) then -- we received all the pixels for this kernel
 						nb_kernel <= nb_kernel + 1;
 						pixel_polarity <= 0;
-						im_column <= im_column + 8;
+						im_column <= im_column + 8; -- advance by one kernel
 					else -- waiting for the second half of pixels
 						pixel_polarity <= 1;
 					end if;

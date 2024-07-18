@@ -4,6 +4,8 @@ NOIP1SN1300A-QTI
 
 14.22mm de côté
 
+1280 (horizontal, 160 kernels) x 1024 (vertical)
+
 Pinout p66
 
 Clock input (p11) : either 360 MHz LVDS, 100 Ohm-terminated if the PLL is bypassed, or 72 MHz through the PLL - **FCLK_CLK1**
@@ -72,6 +74,8 @@ Valeurs de SYNC :
 - IMG (Valid pixel) : 0x035
 - CRC : 0x059
 - TR (Training pattern) : 0x3A6
+
+lvds_clk : 360 MHz
 
 https://stackoverflow.com/questions/27241973/creating-large-dual-port-ram-in-vhdl
 # Data Order (p40)

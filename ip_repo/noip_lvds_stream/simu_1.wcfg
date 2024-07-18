@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="114.401 ns"></ZoomEndTime>
-      <Cursor1Time time="28.800 ns"></Cursor1Time>
+      <ZoomStartTime time="46.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,190.667 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
       <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="11" />
    <wvobject type="logic" fp_name="/tb_lvds_stream/lvds_clk">
       <obj_property name="ElementShortName">lvds_clk</obj_property>
       <obj_property name="ObjectShortName">lvds_clk</obj_property>
@@ -60,5 +60,10 @@
    <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/bitslip">
       <obj_property name="ElementShortName">bitslip</obj_property>
       <obj_property name="ObjectShortName">bitslip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_lvds_stream/workLVDS_stream/line">
+      <obj_property name="ElementShortName">line[0:4][0:7][9:0]</obj_property>
+      <obj_property name="ObjectShortName">line[0:4][0:7][9:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

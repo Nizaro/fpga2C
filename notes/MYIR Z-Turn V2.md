@@ -41,6 +41,8 @@ D34 (RGB) : user status led
 
 # HDMI
 
+Monochrome ! 
+
 p11
 SIL9022A
 

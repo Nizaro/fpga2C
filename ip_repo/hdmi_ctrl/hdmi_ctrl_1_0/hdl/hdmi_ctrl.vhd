@@ -122,14 +122,14 @@ hdmi_ctrl_slave_stream_v1_0_S01_AXIS_inst : hdmi_ctrl_slave_stream_v1_0_S01_AXIS
 
 	-- Add user logic here
 
-	hdmi_send_process: process(s00_axis_aresetn, s00_axis_aclk) 
+	hdmi_send_process: process(s00_axis_aresetn, s00_axis_aclk) -- sync'd with axis_aclk (100 MHz)
 	begin
 		if(s00_axis_aresetn = '0') then
 			red <= (others => '0');
 			green <= (others => '0');
 			blue <= (others => '0');
 		elsif(rising_edge(s00_axis_aclk)) then
-
+			
 		end if;
 	end process;
 

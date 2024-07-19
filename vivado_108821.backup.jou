@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul 18 15:18:24 2024
+# Process ID: 108821
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3023.879 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :16280 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+ipx::edit_ip_in_project -upgrade true -name edit_hdmi_ctrl_v1_0 -directory /home/nothon/fpga2C/ip_repo/hdmi_ctrl/edit_hdmi_ctrl_v1_0 /home/nothon/fpga2C/ip_repo/hdmi_ctrl/hdmi_ctrl_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project edit_noip_lvds_stream_v1_0
+close_project
+ipx::add_bus_interface hdmi_rtl [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:hdmi_rtl:1.0 [ipx::get_bus_interfaces hdmi_rtl -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:hdmi:1.0 [ipx::get_bus_interfaces hdmi_rtl -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces hdmi_rtl -of_objects [ipx::current_core]]
+ipx::remove_bus_interface hdmi_rtl [ipx::current_core]
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::add_bus_interface HDMI [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:hdmi_rtl:1.0 [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:hdmi:1.0 [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+ipx::add_port_map DE [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property physical_name hdmi_de [ipx::get_port_maps DE -of_objects [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]]
+ipx::add_port_map CLK [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property physical_name hdmi_pclk [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]]
+ipx::add_port_map VSYNC [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property physical_name hdmi_vsync [ipx::get_port_maps VSYNC -of_objects [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]]
+ipx::add_port_map DATA [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property physical_name hdmi_data [ipx::get_port_maps DATA -of_objects [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]]
+ipx::add_port_map HSYNC [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]
+set_property physical_name hdmi_hsync [ipx::get_port_maps HSYNC -of_objects [ipx::get_bus_interfaces HDMI -of_objects [ipx::current_core]]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+ipx::edit_ip_in_project -upgrade true -name edit_hdmi_ctrl_v1_0 -directory /home/nothon/fpga2C/ip_repo/hdmi_ctrl/edit_hdmi_ctrl_v1_0 /home/nothon/fpga2C/ip_repo/hdmi_ctrl/hdmi_ctrl_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project edit_noip_lvds_stream_v1_0
+ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+close_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+launch_simulation
+source hdmi_ctrl.tcl
+close_sim

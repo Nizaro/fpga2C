@@ -11,7 +11,8 @@ https://support.xilinx.com/s/question/0D54U00005ZMzumSAD/how-to-correctly-connec
 
 https://support.xilinx.com/s/question/0D54U00007jzNEXSA2/vitis-20232-unable-to-create-platform-component-project-on-ubuntu?language=en_US
 
-
+ps7_ethernet_0 : 0xe000b000 ~ 0xe000bfff
+ps7_i2c_0 : 0xe0004000 ~ 0xe0004fff
 ## Workflow for updating hardware 
 
 Dans vitis_comp.json (fpga2c -> Settings), trouver **Switch XSA** et sélectionner le dernier **main_design_wrapper.xsa**.

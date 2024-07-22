@@ -1,0 +1,8 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]<fsbl.elf>
+  <bitstream>
+  [load=0x00100000] <dtb,system.dtb>
+  <uboot,u-boot.elf>
+}

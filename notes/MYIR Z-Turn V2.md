@@ -60,7 +60,8 @@ f_MCLK = 12 MHz
 p10
 YT8531SC (U23)
 Interface ENET0 intégrée au Zynq : pins MIO16-27 (Bank 500)
-- [PS7-6] LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+-> [PS7-6] LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO. -> ???
+Driver : emacps v3.20 - [doc](https://xilinx.github.io/embeddedsw.github.io/emacps/doc/html/api/index.html)
 
 # USB
 

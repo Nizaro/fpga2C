@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Thu Jul 18 15:37:07 2024
+--Date        : Mon Jul 22 09:15:07 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4098,6 +4098,8 @@ entity main_design is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    I2C0_SCL : inout STD_LOGIC;
+    I2C0_SDA : inout STD_LOGIC;
     clk_test_port : out STD_LOGIC;
     hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
     hdmi_de : out STD_LOGIC;
@@ -4146,7 +4148,7 @@ entity main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=47,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=6,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=66,numReposBlks=49,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=6,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main_design : entity is "main_design.hwdef";
 end main_design;
@@ -4154,6 +4156,12 @@ end main_design;
 architecture STRUCTURE of main_design is
   component main_design_processing_system7_0_0 is
   port (
+    I2C0_SDA_I : in STD_LOGIC;
+    I2C0_SDA_O : out STD_LOGIC;
+    I2C0_SDA_T : out STD_LOGIC;
+    I2C0_SCL_I : in STD_LOGIC;
+    I2C0_SCL_O : out STD_LOGIC;
+    I2C0_SCL_T : out STD_LOGIC;
     M_AXI_GP0_ARVALID : out STD_LOGIC;
     M_AXI_GP0_AWVALID : out STD_LOGIC;
     M_AXI_GP0_BREADY : out STD_LOGIC;
@@ -4641,6 +4649,22 @@ architecture STRUCTURE of main_design is
     s01_axis_tvalid : in STD_LOGIC
   );
   end component main_design_hdmi_ctrl_0_0;
+  component main_design_my_iobuf_0_0 is
+  port (
+    IO : inout STD_LOGIC;
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC
+  );
+  end component main_design_my_iobuf_0_0;
+  component main_design_iobuf_I2C0_SDA_0 is
+  port (
+    IO : inout STD_LOGIC;
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC
+  );
+  end component main_design_iobuf_I2C0_SDA_0;
   signal IBUF_DS_N_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4658,6 +4682,8 @@ architecture STRUCTURE of main_design is
   signal IBUF_DS_P_1_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_1_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Net : STD_LOGIC;
+  signal Net1 : STD_LOGIC;
+  signal Net2 : STD_LOGIC;
   signal S00_AXIS_1_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal S00_AXIS_1_TLAST : STD_LOGIC;
   signal S00_AXIS_1_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4784,6 +4810,7 @@ architecture STRUCTURE of main_design is
   signal hdmi_ctrl_0_hdmi_hsync : STD_LOGIC;
   signal hdmi_ctrl_0_hdmi_pcl : STD_LOGIC;
   signal hdmi_ctrl_0_hdmi_vsync : STD_LOGIC;
+  signal iobuf_I2C0_SCL_O : STD_LOGIC;
   signal lvds_clkin_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_data_0_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -4811,6 +4838,7 @@ architecture STRUCTURE of main_design is
   signal lvds_sync_1_inverter_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal monitor1_slice0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal monitor1_slice1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal my_iobuf_0_O : STD_LOGIC;
   signal noip_ctrl_0_clk_pll_out : STD_LOGIC_VECTOR ( 0 to 1 );
   signal noip_ctrl_0_mosi : STD_LOGIC;
   signal noip_ctrl_0_noip_reset_n : STD_LOGIC_VECTOR ( 0 to 1 );
@@ -4855,6 +4883,10 @@ architecture STRUCTURE of main_design is
   signal processing_system7_0_FIXED_IO_PS_CLK : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_PS_PORB : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_PS_SRSTB : STD_LOGIC;
+  signal processing_system7_0_I2C0_SCL_O : STD_LOGIC;
+  signal processing_system7_0_I2C0_SCL_T : STD_LOGIC;
+  signal processing_system7_0_I2C0_SDA_O : STD_LOGIC;
+  signal processing_system7_0_I2C0_SDA_T : STD_LOGIC;
   signal processing_system7_0_M_AXI_GP0_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_M_AXI_GP0_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal processing_system7_0_M_AXI_GP0_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -4964,9 +4996,9 @@ architecture STRUCTURE of main_design is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
   attribute X_INTERFACE_INFO of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
-  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 72000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of hdmi_pclk : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_PCLK CLK";
-  attribute X_INTERFACE_PARAMETER of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -5355,6 +5387,20 @@ hdmi_ctrl_0: component main_design_hdmi_ctrl_0_0
       s01_axis_tstrb(3 downto 0) => B"1111",
       s01_axis_tvalid => '0'
     );
+iobuf_I2C0_SCL: component main_design_iobuf_I2C0_SDA_0
+     port map (
+      I => processing_system7_0_I2C0_SCL_O,
+      IO => I2C0_SCL,
+      O => iobuf_I2C0_SCL_O,
+      T => processing_system7_0_I2C0_SCL_T
+    );
+iobuf_I2C0_SDA: component main_design_my_iobuf_0_0
+     port map (
+      I => processing_system7_0_I2C0_SDA_O,
+      IO => I2C0_SDA,
+      O => my_iobuf_0_O,
+      T => processing_system7_0_I2C0_SDA_T
+    );
 lvds_clkin_0_ibuf: component main_design_util_ds_buf_0_2
      port map (
       IBUF_DS_N(0) => IBUF_DS_N_0_1(0),
@@ -5610,6 +5656,12 @@ processing_system7_0: component main_design_processing_system7_0_0
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
+      I2C0_SCL_I => iobuf_I2C0_SCL_O,
+      I2C0_SCL_O => processing_system7_0_I2C0_SCL_O,
+      I2C0_SCL_T => processing_system7_0_I2C0_SCL_T,
+      I2C0_SDA_I => my_iobuf_0_O,
+      I2C0_SDA_O => processing_system7_0_I2C0_SDA_O,
+      I2C0_SDA_T => processing_system7_0_I2C0_SDA_T,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),

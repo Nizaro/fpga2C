@@ -134,3 +134,14 @@ set_property PACKAGE_PIN R16 [get_ports hdmi_de]
 
 set_property PACKAGE_PIN R17 [get_ports hdmi_pclk]
 set_property PACKAGE_PIN W19 [get_ports hdmi_int]
+
+set_property IOSTANDARD LVCMOS33 [get_ports hdmi_int]
+set_property IOSTANDARD LVCMOS33 [get_ports hdmi_pclk]
+set_property PACKAGE_PIN P16 [get_ports I2C0_SCL]
+set_property IOSTANDARD LVCMOS33 [get_ports I2C0_SCL]
+set_property IOSTANDARD LVCMOS33 [get_ports I2C0_SDA]
+set_property PACKAGE_PIN P15 [get_ports I2C0_SDA]
+
+set_property IOSTANDARD LVCMOS33 [get_ports hdmi_de]
+set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hsync]
+set_property IOSTANDARD LVCMOS33 [get_ports hdmi_vsync]

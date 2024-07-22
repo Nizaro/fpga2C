@@ -58,6 +58,12 @@ M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_
 1,C_GP1_EN_MODIFIABLE_TXN=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module main_design_processing_system7_0_0 (
+  I2C0_SDA_I,
+  I2C0_SDA_O,
+  I2C0_SDA_T,
+  I2C0_SCL_I,
+  I2C0_SCL_O,
+  I2C0_SCL_T,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -168,6 +174,18 @@ module main_design_processing_system7_0_0 (
   PS_PORB
 );
 
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_I" *)
+input wire I2C0_SDA_I;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_O" *)
+output wire I2C0_SDA_O;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_T" *)
+output wire I2C0_SDA_T;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_I" *)
+input wire I2C0_SCL_I;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_O" *)
+output wire I2C0_SCL_O;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_T" *)
+output wire I2C0_SCL_T;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARVALID" *)
 output wire M_AXI_GP0_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWVALID" *)
@@ -345,7 +363,7 @@ input wire [7 : 0] S_AXI_HP0_WSTRB;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output wire FCLK_CLK0;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK1, FREQ_HZ 72000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK1 CLK" *)
 output wire FCLK_CLK1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -511,12 +529,12 @@ inout wire PS_PORB;
     .GPIO_I(64'B0),
     .GPIO_O(),
     .GPIO_T(),
-    .I2C0_SDA_I(1'B0),
-    .I2C0_SDA_O(),
-    .I2C0_SDA_T(),
-    .I2C0_SCL_I(1'B0),
-    .I2C0_SCL_O(),
-    .I2C0_SCL_T(),
+    .I2C0_SDA_I(I2C0_SDA_I),
+    .I2C0_SDA_O(I2C0_SDA_O),
+    .I2C0_SDA_T(I2C0_SDA_T),
+    .I2C0_SCL_I(I2C0_SCL_I),
+    .I2C0_SCL_O(I2C0_SCL_O),
+    .I2C0_SCL_T(I2C0_SCL_T),
     .I2C1_SDA_I(1'B0),
     .I2C1_SDA_O(),
     .I2C1_SDA_T(),

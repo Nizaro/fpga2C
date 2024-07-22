@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Thu Jul 18 15:37:07 2024
+--Date        : Mon Jul 22 09:15:07 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -35,6 +35,8 @@ entity main_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    I2C0_SCL : inout STD_LOGIC;
+    I2C0_SDA : inout STD_LOGIC;
     clk_test_port : out STD_LOGIC;
     hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
     hdmi_de : out STD_LOGIC;
@@ -153,7 +155,9 @@ architecture STRUCTURE of main_design_wrapper is
     hdmi_hsync : out STD_LOGIC;
     hdmi_de : out STD_LOGIC;
     hdmi_pclk : out STD_LOGIC;
-    hdmi_int : inout STD_LOGIC
+    hdmi_int : inout STD_LOGIC;
+    I2C0_SDA : inout STD_LOGIC;
+    I2C0_SCL : inout STD_LOGIC
   );
   end component main_design;
 begin
@@ -180,6 +184,8 @@ main_design_i: component main_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      I2C0_SCL => I2C0_SCL,
+      I2C0_SDA => I2C0_SDA,
       clk_test_port => clk_test_port,
       hdmi_data(15 downto 0) => hdmi_data(15 downto 0),
       hdmi_de => hdmi_de,

@@ -133,8 +133,10 @@ architecture tb of tb_lvds_stream is
 		sw <= (others => '0'); -- ID
 		wait until i_lvds = 0;
 		sw <= IMAGE;
-		wait for 100 ns;
-		wait until i_lvds = 0;
+		for p in 0 to ROI_width_kernels*8 loop
+			dws <= (others => line(0));
+			wait until i_lvds = 0;
+		end loop;
 		sw <= LINE_END;
 		wait until i_lvds = 0;
 		sw <= (others => '0'); -- ID

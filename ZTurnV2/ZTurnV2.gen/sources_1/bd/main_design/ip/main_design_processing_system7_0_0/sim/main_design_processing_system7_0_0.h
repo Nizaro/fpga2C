@@ -80,6 +80,12 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > I2C0_SDA_I;
+  sc_core::sc_out< bool > I2C0_SDA_O;
+  sc_core::sc_out< bool > I2C0_SDA_T;
+  sc_core::sc_in< bool > I2C0_SCL_I;
+  sc_core::sc_out< bool > I2C0_SCL_O;
+  sc_core::sc_out< bool > I2C0_SCL_T;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -235,6 +241,12 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > I2C0_SDA_I;
+  sc_core::sc_out< bool > I2C0_SDA_O;
+  sc_core::sc_out< bool > I2C0_SDA_T;
+  sc_core::sc_in< bool > I2C0_SCL_I;
+  sc_core::sc_out< bool > I2C0_SCL_O;
+  sc_core::sc_out< bool > I2C0_SCL_T;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -390,6 +402,12 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > I2C0_SDA_I;
+  sc_core::sc_out< bool > I2C0_SDA_O;
+  sc_core::sc_out< bool > I2C0_SDA_T;
+  sc_core::sc_in< bool > I2C0_SCL_I;
+  sc_core::sc_out< bool > I2C0_SCL_O;
+  sc_core::sc_out< bool > I2C0_SCL_T;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -549,6 +567,12 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > I2C0_SDA_I;
+  sc_core::sc_out< bool > I2C0_SDA_O;
+  sc_core::sc_out< bool > I2C0_SDA_T;
+  sc_core::sc_in< bool > I2C0_SCL_I;
+  sc_core::sc_out< bool > I2C0_SCL_O;
+  sc_core::sc_out< bool > I2C0_SCL_T;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -716,6 +740,12 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > I2C0_SDA_I;
+  sc_core::sc_out< bool > I2C0_SDA_O;
+  sc_core::sc_out< bool > I2C0_SDA_T;
+  sc_core::sc_in< bool > I2C0_SCL_I;
+  sc_core::sc_out< bool > I2C0_SCL_O;
+  sc_core::sc_out< bool > I2C0_SCL_T;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;

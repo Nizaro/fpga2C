@@ -50,13 +50,20 @@ Xilinx Video Format : 24 bit
 Zturn used pins : 16 bit (5 pins RED, 6 pins GREEN, 5 pins BLUE) -> ?????
 -> conversion : doc SIL9 p42
 
+Et Interface I2C0 (sortie EMIO, routée vers la Bank 34)
+
 f_MCLK = 12 MHz
 
 [Xilinx Video Mixer](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841850/Video+Mixer)
 # Ethernet
 
 p10
-YT8531SC
+YT8531SC (U23)
+Interface ENET0 intégrée au Zynq : pins MIO16-27 (Bank 500)
+- [PS7-6] LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+
 # USB
 
-UART1 intégré au Zynq, sur les pins MIO48 et 49 - ports TXD et RXD du CP2103-GM (U22)
+p17
+CP2103-GM (U22)
+UART1 intégré au Zynq, sur les pins MIO48 et 49 (Bank 500)

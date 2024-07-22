@@ -6,7 +6,7 @@ current_instance main_design_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_1 0.41664
+set_input_jitter clk_fpga_1 0.42
 current_instance
 current_instance main_design_i/proc_sys_reset_0/U0
 set_property src_info {type:SCOPED_XDC file:2 line:50 export:INPUT save:INPUT read:READ} [current_design]

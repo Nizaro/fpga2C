@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7A97C6421AEA5956",
+      "boundary_crc": "0x8152EF12B7922C10",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
@@ -87,7 +87,9 @@
       "lvds_data_1_inverter": "",
       "lvds_sync_1_inverter": "",
       "lvds_sync_0_inverter": "",
-      "hdmi_ctrl_0": ""
+      "hdmi_ctrl_0": "",
+      "iobuf_I2C0_SDA": "",
+      "iobuf_I2C0_SCL": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1020,7 +1022,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "72000000",
+            "value": "71428566",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -1061,10 +1063,6 @@
         "type": "clk",
         "direction": "O",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "main_design_processing_system7_0_0_FCLK_CLK0",
-            "value_src": "default_prop"
-          },
           "FREQ_HZ": {
             "value": "100000000",
             "value_src": "default"
@@ -1084,6 +1082,12 @@
         }
       },
       "hdmi_int": {
+        "direction": "IO"
+      },
+      "I2C0_SDA": {
+        "direction": "IO"
+      },
+      "I2C0_SCL": {
         "direction": "IO"
       }
     },
@@ -1105,7 +1109,7 @@
             "value": "10.158730"
           },
           "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "125.000000"
           },
           "PCW_ACT_ENET1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -1114,7 +1118,7 @@
             "value": "100.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "72.000000"
+            "value": "71.428566"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -1168,7 +1172,7 @@
             "value": "100000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "72000000"
+            "value": "71428566"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -1179,11 +1183,44 @@
           "PCW_DDR_RAM_HIGHADDR": {
             "value": "0x1FFFFFFF"
           },
+          "PCW_ENET0_ENET0_IO": {
+            "value": "MIO 16 .. 27"
+          },
+          "PCW_ENET0_GRP_MDIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_ENET0_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_ENET0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_ENET0_PERIPHERAL_FREQMHZ": {
+            "value": "1000 Mbps"
+          },
           "PCW_EN_CLK1_PORT": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_ENET0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_GPIO": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_I2C0": {
             "value": "1"
           },
           "PCW_EN_EMIO_SPI0": {
             "value": "0"
+          },
+          "PCW_EN_ENET0": {
+            "value": "1"
+          },
+          "PCW_EN_GPIO": {
+            "value": "0"
+          },
+          "PCW_EN_I2C0": {
+            "value": "1"
           },
           "PCW_EN_SPI0": {
             "value": "0"
@@ -1209,6 +1246,129 @@
           "PCW_FPGA_FCLK1_ENABLE": {
             "value": "1"
           },
+          "PCW_GPIO_EMIO_GPIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_GPIO_MIO_GPIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_I2C0_I2C0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_I2C0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_I2C_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_MIO_16_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_16_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_16_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_17_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_17_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_17_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_18_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_18_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_18_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_19_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_19_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_19_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_20_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_20_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_20_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_21_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_21_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_21_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_22_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_22_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_22_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_23_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_23_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_23_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_24_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_24_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_24_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_25_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_25_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_25_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_26_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_26_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_26_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_27_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_27_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_27_SLEW": {
+            "value": "slow"
+          },
           "PCW_MIO_48_IOTYPE": {
             "value": "LVCMOS 3.3V"
           },
@@ -1229,12 +1389,14 @@
           },
           "PCW_MIO_TREE_PERIPHERALS": {
             "value": [
-              "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#UART",
+              "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#Enet 0#Enet 0#Enet",
+              "0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet",
+              "0#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#UART",
               "1#UART 1#unassigned#unassigned#unassigned#unassigned"
             ]
           },
           "PCW_MIO_TREE_SIGNALS": {
-            "value": "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#tx#rx#unassigned#unassigned#unassigned#unassigned"
+            "value": "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#tx#rx#unassigned#unassigned#unassigned#unassigned"
           },
           "PCW_SPI0_PERIPHERAL_ENABLE": {
             "value": "0"
@@ -4036,10 +4198,62 @@
       },
       "hdmi_ctrl_0": {
         "vlnv": "user.org:user:hdmi_ctrl:1.0",
-        "ip_revision": "4",
+        "ip_revision": "5",
         "xci_name": "main_design_hdmi_ctrl_0_0",
         "xci_path": "ip/main_design_hdmi_ctrl_0_0/main_design_hdmi_ctrl_0_0.xci",
         "inst_hier_path": "hdmi_ctrl_0"
+      },
+      "iobuf_I2C0_SDA": {
+        "vlnv": "xilinx.com:module_ref:my_iobuf:1.0",
+        "ip_revision": "1",
+        "xci_name": "main_design_my_iobuf_0_0",
+        "xci_path": "ip/main_design_my_iobuf_0_0/main_design_my_iobuf_0_0.xci",
+        "inst_hier_path": "iobuf_I2C0_SDA",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "my_iobuf",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "IO": {
+            "direction": "IO"
+          },
+          "I": {
+            "direction": "I"
+          },
+          "O": {
+            "direction": "O"
+          },
+          "T": {
+            "direction": "I"
+          }
+        }
+      },
+      "iobuf_I2C0_SCL": {
+        "vlnv": "xilinx.com:module_ref:my_iobuf:1.0",
+        "ip_revision": "1",
+        "xci_name": "main_design_iobuf_I2C0_SDA_0",
+        "xci_path": "ip/main_design_iobuf_I2C0_SDA_0/main_design_iobuf_I2C0_SDA_0.xci",
+        "inst_hier_path": "iobuf_I2C0_SCL",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "my_iobuf",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "IO": {
+            "direction": "IO"
+          },
+          "I": {
+            "direction": "I"
+          },
+          "O": {
+            "direction": "O"
+          },
+          "T": {
+            "direction": "I"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4237,6 +4451,18 @@
           "hdmi_ctrl_0/hdmi_int"
         ]
       },
+      "Net1": {
+        "ports": [
+          "I2C0_SDA",
+          "iobuf_I2C0_SDA/IO"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "I2C0_SCL",
+          "iobuf_I2C0_SCL/IO"
+        ]
+      },
       "hdmi_ctrl_0_hdmi_data": {
         "ports": [
           "hdmi_ctrl_0/hdmi_data",
@@ -4265,6 +4491,12 @@
         "ports": [
           "hdmi_ctrl_0/hdmi_vsync",
           "hdmi_vsync"
+        ]
+      },
+      "iobuf_I2C0_SCL_O": {
+        "ports": [
+          "iobuf_I2C0_SCL/O",
+          "processing_system7_0/I2C0_SCL_I"
         ]
       },
       "lvds_clkin_0_ibuf_IBUF_OUT": {
@@ -4427,6 +4659,12 @@
         "ports": [
           "monitor1_slice1/Dout",
           "noip_lvds_stream_1/monitor1"
+        ]
+      },
+      "my_iobuf_0_O": {
+        "ports": [
+          "iobuf_I2C0_SDA/O",
+          "processing_system7_0/I2C0_SDA_I"
         ]
       },
       "noip_ctrl_0_clk_pll_out": {
@@ -4595,6 +4833,30 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "processing_system7_0_I2C0_SCL_O": {
+        "ports": [
+          "processing_system7_0/I2C0_SCL_O",
+          "iobuf_I2C0_SCL/I"
+        ]
+      },
+      "processing_system7_0_I2C0_SCL_T": {
+        "ports": [
+          "processing_system7_0/I2C0_SCL_T",
+          "iobuf_I2C0_SCL/T"
+        ]
+      },
+      "processing_system7_0_I2C0_SDA_O": {
+        "ports": [
+          "processing_system7_0/I2C0_SDA_O",
+          "iobuf_I2C0_SDA/I"
+        ]
+      },
+      "processing_system7_0_I2C0_SDA_T": {
+        "ports": [
+          "processing_system7_0/I2C0_SDA_T",
+          "iobuf_I2C0_SDA/T"
         ]
       },
       "trigger0_concat_dout": {

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Jul 18 15:33:58 2024
-# Process ID: 114183
+# Start of session at: Mon Jul 22 09:15:40 2024
+# Process ID: 16849
 # Current directory: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_hdmi_ctrl_0_0_synth_1
 # Command line: vivado -log main_design_hdmi_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_hdmi_ctrl_0_0.tcl
 # Log file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_hdmi_ctrl_0_0_synth_1/main_design_hdmi_ctrl_0_0.vds
@@ -13,16 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :2800.000 MHz
+# CPU Frequency     :2669.533 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :15684 MB
+# Available Virtual :23305 MB
 #-----------------------------------------------------------
 source main_design_hdmi_ctrl_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1409.910 ; gain = 0.027 ; free physical = 252 ; free virtual = 14461
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1363.383 ; gain = 0.027 ; free physical = 230 ; free virtual = 20431
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
@@ -36,40 +36,40 @@ INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 114338
+INFO: [Synth 8-7075] Helper process launched with PID 17023
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2141.039 ; gain = 413.629 ; free physical = 167 ; free virtual = 13329
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2149.379 ; gain = 412.715 ; free physical = 221 ; free virtual = 15569
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main_design_hdmi_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_hdmi_ctrl_0_0/synth/main_design_hdmi_ctrl_0_0.vhd:81]
 	Parameter C_S01_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'hdmi_ctrl' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:5' bound to instance 'U0' of component 'hdmi_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_hdmi_ctrl_0_0/synth/main_design_hdmi_ctrl_0_0.vhd:144]
-INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:51]
+INFO: [Synth 8-3491] module 'hdmi_ctrl' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:5' bound to instance 'U0' of component 'hdmi_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_hdmi_ctrl_0_0/synth/main_design_hdmi_ctrl_0_0.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:51]
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:5' bound to instance 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS_inst' of component 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:38]
-INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:38]
+INFO: [Synth 8-3491] module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:5' bound to instance 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS_inst' of component 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:38]
+INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S00_AXIS' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:38]
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:5' bound to instance 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS_inst' of component 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:109]
-INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:38]
-INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:51]
+INFO: [Synth 8-3491] module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:5' bound to instance 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS_inst' of component 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:38]
+INFO: [Synth 8-226] default block is never used [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl_slave_stream_v1_0_S01_AXIS' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_ctrl' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'main_design_hdmi_ctrl_0_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_hdmi_ctrl_0_0/synth/main_design_hdmi_ctrl_0_0.vhd:81]
-WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S00_AXIS.vhd:133]
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[0].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[1].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[2].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[3].stream_data_fifo_reg was removed. 
-WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl_slave_stream_v1_0_S01_AXIS.vhd:133]
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[0].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[1].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[2].stream_data_fifo_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element FIFO_GEN[3].stream_data_fifo_reg was removed. 
-WARNING: [Synth 8-3848] Net hdmi_vsync in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:23]
-WARNING: [Synth 8-3848] Net hdmi_hsync in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:24]
-WARNING: [Synth 8-3848] Net hdmi_de in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:25]
+WARNING: [Synth 8-3848] Net hdmi_vsync in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:23]
+WARNING: [Synth 8-3848] Net hdmi_hsync in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:24]
+WARNING: [Synth 8-3848] Net hdmi_de in module/entity hdmi_ctrl does not have driver. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:25]
 WARNING: [Synth 8-7129] Port S_AXIS_TDATA[31] in module hdmi_ctrl_slave_stream_v1_0_S01_AXIS is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXIS_TDATA[30] in module hdmi_ctrl_slave_stream_v1_0_S01_AXIS is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXIS_TDATA[29] in module hdmi_ctrl_slave_stream_v1_0_S01_AXIS is either unconnected or has no load
@@ -147,50 +147,50 @@ WARNING: [Synth 8-7129] Port hdmi_hsync in module hdmi_ctrl is either unconnecte
 WARNING: [Synth 8-7129] Port hdmi_de in module hdmi_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port hdmi_int in module hdmi_ctrl is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2222.008 ; gain = 494.598 ; free physical = 233 ; free virtual = 13244
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2230.348 ; gain = 493.684 ; free physical = 155 ; free virtual = 15073
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2236.852 ; gain = 509.441 ; free physical = 228 ; free virtual = 13240
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2245.191 ; gain = 508.527 ; free physical = 138 ; free virtual = 15060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2236.852 ; gain = 509.441 ; free physical = 228 ; free virtual = 13240
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2245.191 ; gain = 508.527 ; free physical = 138 ; free virtual = 15060
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2236.852 ; gain = 0.000 ; free physical = 225 ; free virtual = 13237
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.191 ; gain = 0.000 ; free physical = 131 ; free virtual = 15056
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2351.602 ; gain = 0.000 ; free physical = 179 ; free virtual = 13209
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2355.941 ; gain = 0.000 ; free physical = 131 ; free virtual = 14994
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2351.602 ; gain = 0.000 ; free physical = 179 ; free virtual = 13210
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2355.941 ; gain = 0.000 ; free physical = 129 ; free virtual = 14996
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2351.602 ; gain = 624.191 ; free physical = 218 ; free virtual = 13249
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2355.941 ; gain = 619.277 ; free physical = 140 ; free virtual = 14957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 218 ; free virtual = 13249
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 139 ; free virtual = 14957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 218 ; free virtual = 13249
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 139 ; free virtual = 14956
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'red_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:128]
-WARNING: [Synth 8-327] inferring latch for variable 'green_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/848e/hdl/hdmi_ctrl.vhd:129]
+WARNING: [Synth 8-327] inferring latch for variable 'red_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:128]
+WARNING: [Synth 8-327] inferring latch for variable 'green_reg' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/bedd/hdl/hdmi_ctrl.vhd:129]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 287 ; free virtual = 13260
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 124 ; free virtual = 14949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -242,25 +242,25 @@ WARNING: [Synth 8-7129] Port s00_axis_tdata[13] in module main_design_hdmi_ctrl_
 WARNING: [Synth 8-7129] Port s00_axis_tdata[12] in module main_design_hdmi_ctrl_0_0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 238 ; free virtual = 13217
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 151 ; free virtual = 14903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 281 ; free virtual = 13244
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 186 ; free virtual = 14737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 281 ; free virtual = 13244
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 186 ; free virtual = 14737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 280 ; free virtual = 13242
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 187 ; free virtual = 14738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -278,37 +278,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,18 +331,18 @@ Report Cell Usage:
 |5     |LD   |     1|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.605 ; gain = 632.195 ; free physical = 248 ; free virtual = 13226
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.945 ; gain = 627.281 ; free physical = 203 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2359.605 ; gain = 517.445 ; free physical = 247 ; free virtual = 13224
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2359.613 ; gain = 632.195 ; free physical = 247 ; free virtual = 13224
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2363.945 ; gain = 516.531 ; free physical = 181 ; free virtual = 14601
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2363.953 ; gain = 627.281 ; free physical = 181 ; free virtual = 14601
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2359.613 ; gain = 0.000 ; free physical = 395 ; free virtual = 13375
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2363.953 ; gain = 0.000 ; free physical = 220 ; free virtual = 14600
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2415.633 ; gain = 0.000 ; free physical = 585 ; free virtual = 13574
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2419.973 ; gain = 0.000 ; free physical = 1038 ; free virtual = 15555
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   LD => LDCE (inverted pins: G): 1 instance 
@@ -351,14 +351,14 @@ Synth Design complete | Checksum: a2942dda
 INFO: [Common 17-83] Releasing license: Synthesis
 35 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:47 . Memory (MB): peak = 2415.633 ; gain = 1005.723 ; free physical = 581 ; free virtual = 13575
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2040.963; main = 1681.586; forked = 464.778
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3456.449; main = 2415.637; forked = 1096.840
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2439.645 ; gain = 0.000 ; free physical = 580 ; free virtual = 13574
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:42 . Memory (MB): peak = 2419.973 ; gain = 1040.746 ; free physical = 1023 ; free virtual = 15542
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1455.520; main = 1167.786; forked = 287.733
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3396.434; main = 2419.977; forked = 1032.484
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2443.984 ; gain = 0.000 ; free physical = 1004 ; free virtual = 15534
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_hdmi_ctrl_0_0_synth_1/main_design_hdmi_ctrl_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_hdmi_ctrl_0_0, cache-ID = 2f23e068b9e6ce71
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_hdmi_ctrl_0_0, cache-ID = 6d483431ca074058
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2439.645 ; gain = 0.000 ; free physical = 574 ; free virtual = 13571
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2443.984 ; gain = 0.000 ; free physical = 1218 ; free virtual = 15799
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_hdmi_ctrl_0_0_synth_1/main_design_hdmi_ctrl_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_hdmi_ctrl_0_0_utilization_synth.rpt -pb main_design_hdmi_ctrl_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 18 15:34:58 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 22 09:16:37 2024...

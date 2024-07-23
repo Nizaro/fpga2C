@@ -241,11 +241,14 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 	tb : process
 	begin
 
-		monitor0 <= '0';
-		monitor1 <= '0';
 		sync_word <= (others => '0');
 		data_words <= (others => (others => '0'));
+		monitor0 <= '0';
+		monitor1 <= '0';
 
+		wait until s00_axis_aresetn = '1';
+
+		p_training(sync_word,data_words);
 		p_training(sync_word,data_words);
 		
 		blackline(sync_word,data_words);
@@ -260,7 +263,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 	lvds_clk <= not lvds_clk after 2.778 ns;
 	s00_axis_aclk <= not s00_axis_aclk after 10 ns;
 	m00_axis_aclk <= s00_axis_aclk;
-    s00_axis_aresetn <= '1' after 1 ns;
+    s00_axis_aresetn <= '1' after 17 ns;
 	m00_axis_aresetn <= s00_axis_aresetn;
 
 	with sync_word select Pattern <= FS when FRAME_START,

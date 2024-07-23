@@ -196,7 +196,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			if(i = SENSOR_BIT_LENGTH-1) then
 				i <= 0;
 				lvds_word_ready <= '1';
-				if(bitslip > 0 and bitslip < 9) then
+				if(bitslip > 0 and bitslip < 10) then
 					lvds_sync_word <= temp_sync_word(9-bitslip downto 0) & temp_sync_word(9 downto 9-bitslip+1);
 					for c in 0 to 3 loop
 						lvds_data_words(c) <= temp_data_words(c)(9-bitslip downto 0) & temp_data_words(c)(9 downto 9-bitslip+1);

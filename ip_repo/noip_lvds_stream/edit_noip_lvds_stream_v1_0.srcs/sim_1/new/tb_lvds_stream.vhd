@@ -44,6 +44,12 @@ architecture tb of tb_lvds_stream is
 	signal	trigger0 :  std_logic := '0';
 	signal	monitor0 : std_logic := '0';
 	signal	monitor1 : std_logic := '0';
+	signal 	fifo_srst : std_logic := '0';
+	signal 	fifo_full : std_logic := '0';
+	signal 	fifo_din : out std_logic_vector(7 downto 0) := x"0";
+	signal 	fifo_wr_en : out std_logic := '0';
+	signal 	fifo_empty : in std_logic := '0';
+	signal 	fifo_dout : in std_logic_vector(31 downto 0) := x"0000";
 
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
@@ -63,8 +69,11 @@ architecture tb of tb_lvds_stream is
 	signal	m00_axis_tlast	:  std_logic := '0';
 	signal	m00_axis_tready	: std_logic := '0';
 
+	-- !
+	constant SENSOR_BIT_LENGTH := 8;
+
 	-- tb signals
-	subtype pixel is std_logic_vector(9 downto 0);
+	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH downto 0);
 	signal sync_word : pixel;
 	type t_ldw is array(0 to 3) of pixel;
 	signal data_words : t_ldw;
@@ -78,15 +87,7 @@ architecture tb of tb_lvds_stream is
 	signal line : t_line;
 
 
-	-- constants and patterns of sync channel
-	constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
-	constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";
-	constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
-	constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
-	constant BLACK_LINE : std_logic_vector(9 downto 0) := "00" & x"15";
-	constant IMAGE : std_logic_vector(9 downto 0) := "00" & x"35";
-	constant CRC_PATT : std_logic_vector(9 downto 0) := "00" & x"59";
-	constant TRAINING : std_logic_vector(9 downto 0) := "11" & x"A6";
+	-- patterns of sync channel
 	type t_pattern is (FS,FE,LS,LE,BL,IMG,CRC,TR,ID);
 	signal Pattern : t_pattern;
 
@@ -172,9 +173,32 @@ architecture tb of tb_lvds_stream is
 
 begin
 
+	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
+		constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
+		constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";  
+		constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
+		constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
+		constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
+		constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
+		constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
+		constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
+
+	end generate;
+
+	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
+		constant FRAME_START : std_logic_vector(9 downto 0) := x"5A";
+		constant FRAME_END : std_logic_vector(9 downto 0) := x"6A";
+		constant LINE_START : std_logic_vector(9 downto 0) := x"1A";
+		constant LINE_END : std_logic_vector(9 downto 0) := x"2A";
+		constant BL : std_logic_vector(9 downto 0) := x"05";
+		constant IMG : std_logic_vector(9 downto 0) := x"0D";
+		constant CRC : std_logic_vector(9 downto 0) := x"16";
+		constant TR : std_logic_vector(9 downto 0) := x"E9";
+	end generate;
+
 workLVDS_stream : entity work.noip_lvds_stream(arch_imp) 
     generic map (
-        SENSOR_BIT_LENGTH => 10,
+        SENSOR_BIT_LENGTH => SENSOR_BIT_LENGTH,
 		IM_WIDTH => ROI_width_kernels*8,
 		IM_HEIGHT => ROI_height,
 		C_S00_AXIS_TDATA_WIDTH => 32,
@@ -188,6 +212,12 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		trigger0 => trigger0, 
 		monitor0 => monitor0,
 		monitor1 => monitor1, 
+		fifo_srst => fifo_srst 
+		fifo_full => fifo_full 
+		fifo_din => fifo_din 
+		fifo_wr_en => fifo_wr_en 
+		fifo_empty => fifo_empty 
+		fifo_dout => fifo_dout 
 		s00_axis_aclk => s00_axis_aclk,	
 		s00_axis_aresetn => s00_axis_aresetn,	
 		s00_axis_tready => s00_axis_tready,	

@@ -1,0 +1,41 @@
+srcscan starts
+=============== Using vdb files for VHDL std libs ===========
+INFO: VHDL library search path for library "std" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/std" (VHDL-1505)
+INFO: VHDL library search path for library "synopsys" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/synopsys" (VHDL-1505)
+INFO: VHDL library search path for library "ieee" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/ieee" (VHDL-1505)
+INFO: VHDL library search path for library "unimacro" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/unimacro" (VHDL-1505)
+INFO: VHDL library search path for library "unisim" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/unisim" (VHDL-1505)
+INFO: VHDL library search path for library "vl" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/vl" (VHDL-1505)
+INFO: VHDL library search path for library "xpm" is now "/tools/Xilinx/Vivado/2024.1/data/precomp_hsv/vhdl/xpm" (VHDL-1505)
+-- Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib (VHDL-9003)
+INFO: analyzing entity 'noip_lvds_stream' (VHDL-1012)
+INFO: analyzing architecture 'arch_imp' of entity 'noip_lvds_stream' (VHDL-9006)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(124): ERROR: 'tr' is not declared (VHDL-1241)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(128): ERROR: 'tr' is not declared (VHDL-1241)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(128): ERROR: found '0' definitions of operator "=", cannot determine exact overloaded matching definition for "=" (VHDL-1052)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(133): ERROR: 'tr' is not declared (VHDL-1241)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(133): ERROR: found '0' definitions of operator "=", cannot determine exact overloaded matching definition for "=" (VHDL-1052)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(185): WARNING: syntax error near 'end' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(197): WARNING: syntax error near 'end' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(333): WARNING: syntax error near 'generate' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(334): WARNING: syntax error near '=' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(334): ERROR: 'p' is not declared (VHDL-1241)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(334): ERROR: indexed name is not a ' void' (VHDL-1120)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(334): ERROR: 'kernel' is not a subprogram (VHDL-1237)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(120): INFO: 'kernel' is declared here
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(335): WARNING: syntax error near 'generate' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(337): WARNING: syntax error near 'else' (VHDL-1261)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(341): WARNING: syntax error near 'if' (VHDL-1261)
+-- Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib (VHDL-9003)
+INFO: analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS' (VHDL-1012)
+INFO: analyzing architecture 'implementation' of entity 'noip_lvds_stream_master_stream_v1_0_m00_axis' (VHDL-9006)
+-- Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib (VHDL-9003)
+INFO: analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS' (VHDL-1012)
+INFO: analyzing architecture 'arch_imp' of entity 'noip_lvds_stream_slave_stream_v1_0_s00_axis' (VHDL-9006)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(9): ERROR: formal generic 'im_width' has no actual or default value (VHDL-1769)
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(10): ERROR: formal generic 'im_height' has no actual or default value (VHDL-1769)
+Listing tops:
+VHDLTop: library:xil_defaultlib entity:noip_lvds_stream arch:
+VHDLTop: library:xil_defaultlib entity:noip_lvds_stream arch:
+END of tops
+/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd(5): INFO: processing 'noip_lvds_stream_default(arch_imp)' (VHDL-1067)

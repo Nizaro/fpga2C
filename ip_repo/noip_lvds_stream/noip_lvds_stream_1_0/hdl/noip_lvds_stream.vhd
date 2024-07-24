@@ -27,6 +27,15 @@ entity noip_lvds_stream is
 		trigger0 : out std_logic;
 		monitor0 : in std_logic;
 		monitor1 : in std_logic;
+
+		-- 		FIFO Ports
+		fifo_srst : out std_logic;
+		fifo_full : in std_logic;
+		fifo_din : out std_logic_vector((8*SENSOR_BIT_LENGTH)-1 downto 0);
+		fifo_wr_en : out std_logic;
+		fifo_empty : in std_logic;
+		fifo_dout : in std_logic_vector(31 downto 0);
+
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -91,17 +100,8 @@ architecture arch_imp of noip_lvds_stream is
 	type driver_state is (ALIGNING, IDLE, WAIT_BLACK, REC_BLACK, END_BLACK, REC_ID, REC_IMG, WAIT_LS, AFTER_FE);
 	signal DState : driver_state;
 
-	-- lvds_sync words values
-	constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
-	constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";
-	constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
-	constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
-	constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
-	constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
-	constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
-	constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
-
 	-- image signals
+
 	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
 	signal lvds_sync_word : pixel;
 	type t_ldw is array(0 to 3) of pixel;
@@ -116,13 +116,9 @@ architecture arch_imp of noip_lvds_stream is
 	signal i : integer := 0;
 	signal bitslip : integer := 0;
 	
-	-- type t_kernel is array (0 to 7) of pixel;
-	-- type t_line is array(0 to IM_WIDTH/8) of t_kernel;
-	type t_line is array (1 to IM_WIDTH) of pixel;
-	type t_image is array(1 to IM_HEIGHT) of t_line;
-	signal line : t_line;
+	type t_kernel is array (0 to 7) of pixel;
+	signal kernel : t_kernel;
 
-	-- signal image : t_image;
 	-- user signals end here
 
 	function findbitslip (pat : pixel := TR) return integer is
@@ -132,8 +128,8 @@ architecture arch_imp of noip_lvds_stream is
 		if(sd_pat = TR) then
 			return 0;
 		end if;
-		for s in 1 to 9 loop
-			sd_pat := sd_pat(8 downto 0) & sd_pat(9);
+		for s in 1 to SENSOR_BIT_LENGTH-1 loop
+			sd_pat := sd_pat(SENSOR_BIT_LENGTH-2 downto 0) & sd_pat(SENSOR_BIT_LENGTH-1);
 			if(sd_pat = TR) then
 				return s;
 			end if;
@@ -175,6 +171,28 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 	);
 
 	-- Add user logic here
+
+	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
+		constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
+		constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";  
+		constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
+		constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
+		constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
+		constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
+		constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
+		constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
+	end generate;
+
+	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
+		constant FRAME_START : std_logic_vector(9 downto 0) := x"5A";
+		constant FRAME_END : std_logic_vector(9 downto 0) := x"6A";
+		constant LINE_START : std_logic_vector(9 downto 0) := x"1A";
+		constant LINE_END : std_logic_vector(9 downto 0) := x"2A";
+		constant BL : std_logic_vector(9 downto 0) := x"05";
+		constant IMG : std_logic_vector(9 downto 0) := x"0D";
+		constant CRC : std_logic_vector(9 downto 0) := x"16";
+		constant TR : std_logic_vector(9 downto 0) := x"E9";
+	end generate;
 	
 	lvds_read_process : process(lvds_clk, s00_axis_aresetn)
 		variable temp_sync_word : pixel;
@@ -196,10 +214,10 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			if(i = SENSOR_BIT_LENGTH-1) then
 				i <= 0;
 				lvds_word_ready <= '1';
-				if(bitslip > 0 and bitslip < 10) then
-					lvds_sync_word <= temp_sync_word(9-bitslip downto 0) & temp_sync_word(9 downto 9-bitslip+1);
+				if(bitslip > 0 and bitslip < SENSOR_BIT_LENGTH) then
+					lvds_sync_word <= temp_sync_word(SENSOR_BIT_LENGTH-bitslip downto 0) & temp_sync_word(SENSOR_BIT_LENGTH downto SENSOR_BIT_LENGTH-bitslip+1);
 					for c in 0 to 3 loop
-						lvds_data_words(c) <= temp_data_words(c)(9-bitslip downto 0) & temp_data_words(c)(9 downto 9-bitslip+1);
+						lvds_data_words(c) <= temp_data_words(c)(SENSOR_BIT_LENGTH-bitslip downto 0) & temp_data_words(c)(SENSOR_BIT_LENGTH downto SENSOR_BIT_LENGTH-bitslip+1);
 					end loop;
 				else
 					lvds_sync_word <= temp_sync_word;
@@ -222,7 +240,10 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			im_line <= IM_HEIGHT;
 			im_column <= 1;
 			bitslip <= 0;
-			line <= (others => (others => '0'));
+			-- line <= (others => (others => '0'));
+			kernel <= (others => (others => '0'));
+			fifo_din <= (others => '0');
+			fifo_wr_en <= '0';
 		elsif(rising_edge(lvds_word_ready)) then
 			case DState is
 				when ALIGNING =>
@@ -236,6 +257,8 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					if(lvds_sync_word = LINE_START) then
 						DState <= WAIT_BLACK;
 					end if;
+					fifo_din <= (others => '0');
+					fifo_wr_en <= '0';
 
 				when WAIT_BLACK => -- waiting out the first timeslot, to receive the first black line.
 					if(lvds_sync_word = BL) then
@@ -266,16 +289,28 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 						DState <= AFTER_FE;
 					else
 						if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
-							line(im_column+pixel_polarity) <= lvds_data_words(0);
-							line(im_column+pixel_polarity+2) <= lvds_data_words(1);
-							line(im_column+pixel_polarity+4) <= lvds_data_words(2);
-							line(im_column+pixel_polarity+6) <= lvds_data_words(3);
+							kernel(pixel_polarity) <= lvds_data_words(0);
+							kernel(pixel_polarity+2) <= lvds_data_words(1);
+							kernel(pixel_polarity+4) <= lvds_data_words(2);
+							kernel(pixel_polarity+6) <= lvds_data_words(3);
 						else 								 -- odd kernel : pixels read out descending
-							line(im_column-pixel_polarity+7) <= lvds_data_words(0);
-							line(im_column-pixel_polarity+5) <= lvds_data_words(1);
-							line(im_column-pixel_polarity+3) <= lvds_data_words(2);
-							line(im_column-pixel_polarity+1) <= lvds_data_words(3);
+							kernel(7-pixel_polarity) <= lvds_data_words(0);
+							kernel(5-pixel_polarity) <= lvds_data_words(1);
+							kernel(3-pixel_polarity) <= lvds_data_words(2);
+							kernel(1-pixel_polarity) <= lvds_data_words(3);
 						end if; 
+
+						-- if((nb_kernel rem 2) = 0) then	 	 -- even kernel : pixels read out ascending
+						-- 	line(im_column+pixel_polarity) <= lvds_data_words(0);
+						-- 	line(im_column+pixel_polarity+2) <= lvds_data_words(1);
+						-- 	line(im_column+pixel_polarity+4) <= lvds_data_words(2);
+						-- 	line(im_column+pixel_polarity+6) <= lvds_data_words(3);
+						-- else 								 -- odd kernel : pixels read out descending
+						-- 	line(im_column-pixel_polarity+7) <= lvds_data_words(0);
+						-- 	line(im_column-pixel_polarity+5) <= lvds_data_words(1);
+						-- 	line(im_column-pixel_polarity+3) <= lvds_data_words(2);
+						-- 	line(im_column-pixel_polarity+1) <= lvds_data_words(3);
+						-- end if; 
 
 						-- if((nb_kernel rem 2) = 0) then -- even kernel : pixels read out ascending
 						-- 	line(nb_kernel)(pixel_polarity) <= lvds_data_words(0);
@@ -293,8 +328,13 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 							nb_kernel <= nb_kernel + 1;
 							pixel_polarity <= 0;
 							im_column <= im_column + 8; -- advance by one kernel
+							for p in 0 to 7 generate
+								fifo_wr_en(8*p to (8*(p+1))-1) = kernel(p); -- flatten kernel into sequential pixels
+							end generate;
+							fifo_wr_en <= '1'; -- write current kernel to fifo
 						else -- waiting for the second half of pixels
 							pixel_polarity <= 1;
+							fifo_wr_en <= '0';
 						end if;
 					end if;
 
@@ -302,6 +342,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					nb_kernel <= 0;
 					im_column <= 1;
 					pixel_polarity <= 0;
+					fifo_wr_en <= '0';
 					if(lvds_sync_word = LINE_START) then
 						im_line <= im_line + 1;
 						DState <= REC_ID;
@@ -316,6 +357,8 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			end case; 
 		end if;
 	end process;
+
+	fifo_srst <= not s00_axis_aresetn;
 
 	-- User logic ends
 

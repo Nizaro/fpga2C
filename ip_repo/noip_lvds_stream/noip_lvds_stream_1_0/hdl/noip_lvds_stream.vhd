@@ -121,16 +121,16 @@ architecture arch_imp of noip_lvds_stream is
 
 	-- user signals end here
 
-	function findbitslip (pat : pixel := TR) return integer is
+	function findbitslip (pat : pixel; comp : pixel) return integer is
 		variable sd_pat : pixel;
 	begin
 		sd_pat := pat;
-		if(sd_pat = TR) then
+		if(sd_pat = comp) then
 			return 0;
 		end if;
 		for s in 1 to SENSOR_BIT_LENGTH-1 loop
 			sd_pat := sd_pat(SENSOR_BIT_LENGTH-2 downto 0) & sd_pat(SENSOR_BIT_LENGTH-1);
-			if(sd_pat = TR) then
+			if(sd_pat = comp) then
 				return s;
 			end if;
 		end loop;
@@ -173,25 +173,25 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 	-- Add user logic here
 
 	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
-		constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
-		constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";  
-		constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
-		constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
-		constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
-		constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
-		constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
-		constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
+		constant FRAME_START : pixel := "10" & x"AA";
+		constant FRAME_END : pixel := "11" & x"2A";  
+		constant LINE_START : pixel := "00" & x"AA";
+		constant LINE_END : pixel := "10" & x"2A";
+		constant BL : pixel := "00" & x"15";
+		constant IMG : pixel := "00" & x"35";
+		constant CRC : pixel := "00" & x"59";
+		constant TR : pixel := "11" & x"A6";
 	end generate;
 
 	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
-		constant FRAME_START : std_logic_vector(9 downto 0) := x"5A";
-		constant FRAME_END : std_logic_vector(9 downto 0) := x"6A";
-		constant LINE_START : std_logic_vector(9 downto 0) := x"1A";
-		constant LINE_END : std_logic_vector(9 downto 0) := x"2A";
-		constant BL : std_logic_vector(9 downto 0) := x"05";
-		constant IMG : std_logic_vector(9 downto 0) := x"0D";
-		constant CRC : std_logic_vector(9 downto 0) := x"16";
-		constant TR : std_logic_vector(9 downto 0) := x"E9";
+		constant FRAME_START : pixel := x"5A";
+		constant FRAME_END : pixel := x"6A";
+		constant LINE_START : pixel := x"1A";
+		constant LINE_END : pixel := x"2A";
+		constant BL : pixel := x"05";
+		constant IMG : pixel := x"0D";
+		constant CRC : pixel := x"16";
+		constant TR : pixel := x"E9";
 	end generate;
 	
 	lvds_read_process : process(lvds_clk, s00_axis_aresetn)
@@ -250,7 +250,7 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					if(lvds_sync_word = TR and lvds_data_words(0) = TR) then -- training pattern found : alignment done.
 						DState <= IDLE;
 					else
-						bitslip <= findbitslip(lvds_sync_word);
+						bitslip <= findbitslip(lvds_sync_word,TR);
 					end if;
 					
 				when IDLE => -- during training or FOT. Waiting for black lines or a frame.
@@ -328,9 +328,9 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 							nb_kernel <= nb_kernel + 1;
 							pixel_polarity <= 0;
 							im_column <= im_column + 8; -- advance by one kernel
-							for p in 0 to 7 generate
-								fifo_wr_en(8*p to (8*(p+1))-1) = kernel(p); -- flatten kernel into sequential pixels
-							end generate;
+							for p in 0 to 7 loop
+								fifo_din((8*(p+1))-1 downto 8*p) <= kernel(p); -- flatten kernel into sequential pixels
+							end loop;
 							fifo_wr_en <= '1'; -- write current kernel to fifo
 						else -- waiting for the second half of pixels
 							pixel_polarity <= 1;

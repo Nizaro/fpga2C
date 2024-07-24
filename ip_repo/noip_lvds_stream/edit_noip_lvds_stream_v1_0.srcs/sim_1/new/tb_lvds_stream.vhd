@@ -46,10 +46,10 @@ architecture tb of tb_lvds_stream is
 	signal	monitor1 : std_logic := '0';
 	signal 	fifo_srst : std_logic := '0';
 	signal 	fifo_full : std_logic := '0';
-	signal 	fifo_din : out std_logic_vector(7 downto 0) := x"0";
-	signal 	fifo_wr_en : out std_logic := '0';
-	signal 	fifo_empty : in std_logic := '0';
-	signal 	fifo_dout : in std_logic_vector(31 downto 0) := x"0000";
+	signal 	fifo_din : std_logic_vector(7 downto 0) := x"0";
+	signal 	fifo_wr_en : std_logic := '0';
+	signal 	fifo_empty : std_logic := '0';
+	signal 	fifo_dout : std_logic_vector(31 downto 0) := x"0000";
 
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
@@ -70,7 +70,7 @@ architecture tb of tb_lvds_stream is
 	signal	m00_axis_tready	: std_logic := '0';
 
 	-- !
-	constant SENSOR_BIT_LENGTH := 8;
+	constant SENSOR_BIT_LENGTH : integer := 8;
 
 	-- tb signals
 	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH downto 0);
@@ -174,26 +174,25 @@ architecture tb of tb_lvds_stream is
 begin
 
 	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
-		constant FRAME_START : std_logic_vector(9 downto 0) := "10" & x"AA";
-		constant FRAME_END : std_logic_vector(9 downto 0) := "11" & x"2A";  
-		constant LINE_START : std_logic_vector(9 downto 0) := "00" & x"AA";
-		constant LINE_END : std_logic_vector(9 downto 0) := "10" & x"2A";
-		constant BL : std_logic_vector(9 downto 0) := "00" & x"15";
-		constant IMG : std_logic_vector(9 downto 0) := "00" & x"35";
-		constant CRC : std_logic_vector(9 downto 0) := "00" & x"59";
-		constant TR : std_logic_vector(9 downto 0) := "11" & x"A6";
-
+		constant FRAME_START : pixel := "10" & x"AA";
+		constant FRAME_END : pixel := "11" & x"2A";  
+		constant LINE_START : pixel := "00" & x"AA";
+		constant LINE_END : pixel := "10" & x"2A";
+		constant BL : pixel := "00" & x"15";
+		constant IMG : pixel := "00" & x"35";
+		constant CRC : pixel := "00" & x"59";
+		constant TR : pixel := "11" & x"A6";
 	end generate;
 
 	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
-		constant FRAME_START : std_logic_vector(9 downto 0) := x"5A";
-		constant FRAME_END : std_logic_vector(9 downto 0) := x"6A";
-		constant LINE_START : std_logic_vector(9 downto 0) := x"1A";
-		constant LINE_END : std_logic_vector(9 downto 0) := x"2A";
-		constant BL : std_logic_vector(9 downto 0) := x"05";
-		constant IMG : std_logic_vector(9 downto 0) := x"0D";
-		constant CRC : std_logic_vector(9 downto 0) := x"16";
-		constant TR : std_logic_vector(9 downto 0) := x"E9";
+		constant FRAME_START : pixel := x"5A";
+		constant FRAME_END : pixel := x"6A";
+		constant LINE_START : pixel := x"1A";
+		constant LINE_END : pixel := x"2A";
+		constant BL : pixel := x"05";
+		constant IMG : pixel := x"0D";
+		constant CRC : pixel := x"16";
+		constant TR : pixel := x"E9";
 	end generate;
 
 workLVDS_stream : entity work.noip_lvds_stream(arch_imp) 
@@ -212,12 +211,12 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		trigger0 => trigger0, 
 		monitor0 => monitor0,
 		monitor1 => monitor1, 
-		fifo_srst => fifo_srst 
-		fifo_full => fifo_full 
-		fifo_din => fifo_din 
-		fifo_wr_en => fifo_wr_en 
-		fifo_empty => fifo_empty 
-		fifo_dout => fifo_dout 
+		fifo_srst => fifo_srst, 
+		fifo_full => fifo_full, 
+		fifo_din => fifo_din, 
+		fifo_wr_en => fifo_wr_en, 
+		fifo_empty => fifo_empty, 
+		fifo_dout => fifo_dout, 
 		s00_axis_aclk => s00_axis_aclk,	
 		s00_axis_aresetn => s00_axis_aresetn,	
 		s00_axis_tready => s00_axis_tready,	

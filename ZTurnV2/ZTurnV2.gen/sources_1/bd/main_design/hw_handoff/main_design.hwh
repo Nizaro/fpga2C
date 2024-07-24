@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 09:15:26 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 24 10:11:06 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -6717,7 +6717,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/noip_lvds_stream_0" HWVERSION="1.0" INSTANCE="noip_lvds_stream_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/noip_lvds_stream_0" HWVERSION="1.0" INSTANCE="noip_lvds_stream_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -6887,7 +6887,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/noip_lvds_stream_1" HWVERSION="1.0" INSTANCE="noip_lvds_stream_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/noip_lvds_stream_1" HWVERSION="1.0" INSTANCE="noip_lvds_stream_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="noip_lvds_stream" VLNV="user.org:user:noip_lvds_stream:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -7110,12 +7110,12 @@
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_k" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aresetn"/>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s01_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s00_axis_aresetn"/>
-            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s01_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -8188,12 +8188,12 @@
             <CONNECTION INSTANCE="axis_interconnect_1_m00_couplers_auto_ss_slidr" PORT="aclk"/>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="clk_spi_in"/>
             <CONNECTION INSTANCE="noip_ctrl_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s01_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="m00_axis_aclk"/>
-            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="s01_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="71428566" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">

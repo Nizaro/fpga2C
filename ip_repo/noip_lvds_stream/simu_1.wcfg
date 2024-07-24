@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="576.001 ns"></ZoomEndTime>
-      <Cursor1Time time="77.784 ns"></Cursor1Time>
+      <ZoomStartTime time="1,364.628 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,480.629 ns"></ZoomEndTime>
+      <Cursor1Time time="1,461.228 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="14" />
    <wvobject type="logic" fp_name="/tb_lvds_stream/lvds_clk">
       <obj_property name="ElementShortName">lvds_clk</obj_property>
       <obj_property name="ObjectShortName">lvds_clk</obj_property>
@@ -31,30 +31,14 @@
       <obj_property name="ElementShortName">Pattern</obj_property>
       <obj_property name="ObjectShortName">Pattern</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_lvds_stream/sync_word">
-      <obj_property name="ElementShortName">sync_word[9:0]</obj_property>
-      <obj_property name="ObjectShortName">sync_word[9:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/tb_lvds_stream/data_words">
       <obj_property name="ElementShortName">data_words[0:3][9:0]</obj_property>
       <obj_property name="ObjectShortName">data_words[0:3][9:0]</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/tb_lvds_stream/i_lvds">
-      <obj_property name="ElementShortName">i_lvds</obj_property>
-      <obj_property name="ObjectShortName">i_lvds</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_lvds_stream/lvds_sync">
-      <obj_property name="ElementShortName">lvds_sync</obj_property>
-      <obj_property name="ObjectShortName">lvds_sync</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_lvds_stream/lvds_data">
       <obj_property name="ElementShortName">lvds_data[0:3]</obj_property>
       <obj_property name="ObjectShortName">lvds_data[0:3]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/i">
-      <obj_property name="ElementShortName">i</obj_property>
-      <obj_property name="ObjectShortName">i</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_lvds_stream/workLVDS_stream/lvds_word_ready">
       <obj_property name="ElementShortName">lvds_word_ready</obj_property>
@@ -81,10 +65,17 @@
       <obj_property name="ElementShortName">line[1:32][9:0]</obj_property>
       <obj_property name="ObjectShortName">line[1:32][9:0]</obj_property>
    </wvobject>
+   <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/im_line">
+      <obj_property name="ElementShortName">im_line</obj_property>
+      <obj_property name="ObjectShortName">im_line</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/im_column">
+      <obj_property name="ElementShortName">im_column</obj_property>
+      <obj_property name="ObjectShortName">im_column</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group49">
       <obj_property name="label">AXIS_MASTER</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/tb_lvds_stream/workLVDS_stream/noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/M_AXIS_ACLK">
          <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
          <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>

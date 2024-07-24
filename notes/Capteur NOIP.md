@@ -5,6 +5,7 @@ NOIP1SN1300A-QTI
 14.22mm de côté
 
 1280 (horizontal, 160 kernels) x 1024 (vertical)
+Taille de l'image complète : 1638400 octets
 
 Pinout p66
 

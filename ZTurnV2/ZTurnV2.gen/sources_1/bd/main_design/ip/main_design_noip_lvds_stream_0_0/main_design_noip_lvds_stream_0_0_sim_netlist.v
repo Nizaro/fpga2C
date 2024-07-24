@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-// Date        : Thu Jul 18 15:07:15 2024
+// Date        : Wed Jul 24 10:13:56 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0_sim_netlist.v
@@ -36,7 +36,7 @@ module main_design_noip_lvds_stream_0_0
     m00_axis_tstrb,
     m00_axis_tlast,
     m00_axis_tready);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock" *) (* x_interface_parameter = "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input lvds_clk;
+  (* x_interface_info = "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input lvds_clk;
   (* x_interface_info = "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync" *) input lvds_sync;
   (* x_interface_info = "onsemi:user:noip_lvds:1.0 noip_lvds lvds_data" *) input [0:3]lvds_data;
   output trigger0;
@@ -131,10 +131,10 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream
     s00_axis_tready,
     m00_axis_aclk,
     m00_axis_tready,
-    m00_axis_aresetn,
     s00_axis_tvalid,
     s00_axis_aresetn,
     s00_axis_tlast,
+    m00_axis_aresetn,
     s00_axis_aclk);
   output m00_axis_tvalid;
   output [3:0]m00_axis_tdata;
@@ -142,10 +142,10 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream
   output s00_axis_tready;
   input m00_axis_aclk;
   input m00_axis_tready;
-  input m00_axis_aresetn;
   input s00_axis_tvalid;
   input s00_axis_aresetn;
   input s00_axis_tlast;
+  input m00_axis_aresetn;
   input s00_axis_aclk;
 
   wire m00_axis_aclk;
@@ -181,22 +181,30 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
     m00_axis_tlast,
     m00_axis_tdata,
     m00_axis_aclk,
-    m00_axis_tready,
-    m00_axis_aresetn);
+    m00_axis_aresetn,
+    m00_axis_tready);
   output m00_axis_tvalid;
   output m00_axis_tlast;
   output [3:0]m00_axis_tdata;
   input m00_axis_aclk;
-  input m00_axis_tready;
   input m00_axis_aresetn;
+  input m00_axis_tready;
 
   wire \FSM_sequential_mst_exec_state[1]_i_2_n_0 ;
   wire axis_tlast__0;
+  wire axis_tvalid;
   wire axis_tvalid_delay_i_1_n_0;
-  wire axis_tvalid_delay_i_2_n_0;
   wire count;
+  wire \count[0]_i_1_n_0 ;
+  wire \count[1]_i_1_n_0 ;
   wire \count[2]_i_1_n_0 ;
-  wire [4:0]count_reg;
+  wire \count[3]_i_1_n_0 ;
+  wire \count[4]_i_2_n_0 ;
+  wire \count_reg_n_0_[0] ;
+  wire \count_reg_n_0_[1] ;
+  wire \count_reg_n_0_[2] ;
+  wire \count_reg_n_0_[3] ;
+  wire \count_reg_n_0_[4] ;
   wire m00_axis_aclk;
   wire m00_axis_aresetn;
   wire [3:0]m00_axis_tdata;
@@ -205,7 +213,6 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
   wire m00_axis_tvalid;
   wire [1:0]mst_exec_state;
   wire [1:0]mst_exec_state__0;
-  wire [4:0]plusOp;
   wire [2:0]read_pointer;
   wire \stream_data_out[0]_i_1_n_0 ;
   wire \stream_data_out[1]_i_1_n_0 ;
@@ -213,31 +220,32 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
   wire \stream_data_out[3]_i_2_n_0 ;
   wire tx_en;
 
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h15)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h00DF)) 
     \FSM_sequential_mst_exec_state[0]_i_1 
-       (.I0(mst_exec_state[1]),
+       (.I0(mst_exec_state[0]),
         .I1(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ),
-        .I2(mst_exec_state[0]),
+        .I2(\count_reg_n_0_[4] ),
+        .I3(mst_exec_state[1]),
         .O(mst_exec_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h38)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h2622)) 
     \FSM_sequential_mst_exec_state[1]_i_1 
-       (.I0(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ),
+       (.I0(mst_exec_state[1]),
         .I1(mst_exec_state[0]),
-        .I2(mst_exec_state[1]),
+        .I2(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ),
+        .I3(\count_reg_n_0_[4] ),
         .O(mst_exec_state__0[1]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h80000000)) 
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     \FSM_sequential_mst_exec_state[1]_i_2 
-       (.I0(count_reg[3]),
-        .I1(count_reg[1]),
-        .I2(count_reg[0]),
-        .I3(count_reg[4]),
-        .I4(count_reg[2]),
+       (.I0(\count_reg_n_0_[2] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[1] ),
+        .I3(\count_reg_n_0_[3] ),
         .O(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ));
   (* FSM_ENCODED_STATES = "init_counter:01,send_stream:10,idle:00" *) 
   FDRE #(
@@ -257,7 +265,7 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
         .D(mst_exec_state__0[1]),
         .Q(mst_exec_state[1]),
         .R(axis_tvalid_delay_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h80)) 
     axis_tlast
@@ -281,89 +289,90 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
     axis_tvalid_delay_i_2
        (.I0(mst_exec_state[1]),
         .I1(mst_exec_state[0]),
-        .O(axis_tvalid_delay_i_2_n_0));
+        .O(axis_tvalid));
   FDRE axis_tvalid_delay_reg
        (.C(m00_axis_aclk),
         .CE(1'b1),
-        .D(axis_tvalid_delay_i_2_n_0),
+        .D(axis_tvalid),
         .Q(m00_axis_tvalid),
         .R(axis_tvalid_delay_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count[0]_i_1 
-       (.I0(count_reg[0]),
-        .O(plusOp[0]));
+       (.I0(\count_reg_n_0_[0] ),
+        .O(\count[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count[1]_i_1 
-       (.I0(count_reg[0]),
-        .I1(count_reg[1]),
-        .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+       (.I0(\count_reg_n_0_[0] ),
+        .I1(\count_reg_n_0_[1] ),
+        .O(\count[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count[2]_i_1 
-       (.I0(count_reg[0]),
-        .I1(count_reg[1]),
-        .I2(count_reg[2]),
+       (.I0(\count_reg_n_0_[0] ),
+        .I1(\count_reg_n_0_[1] ),
+        .I2(\count_reg_n_0_[2] ),
         .O(\count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count[3]_i_1 
-       (.I0(count_reg[1]),
-        .I1(count_reg[0]),
-        .I2(count_reg[2]),
-        .I3(count_reg[3]),
-        .O(plusOp[3]));
-  LUT3 #(
-    .INIT(8'h04)) 
+       (.I0(\count_reg_n_0_[1] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[2] ),
+        .I3(\count_reg_n_0_[3] ),
+        .O(\count[3]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h4404)) 
     \count[4]_i_1 
        (.I0(mst_exec_state[1]),
         .I1(mst_exec_state[0]),
-        .I2(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ),
+        .I2(\count_reg_n_0_[4] ),
+        .I3(\FSM_sequential_mst_exec_state[1]_i_2_n_0 ),
         .O(count));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count[4]_i_2 
-       (.I0(count_reg[2]),
-        .I1(count_reg[0]),
-        .I2(count_reg[1]),
-        .I3(count_reg[3]),
-        .I4(count_reg[4]),
-        .O(plusOp[4]));
+       (.I0(\count_reg_n_0_[2] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[1] ),
+        .I3(\count_reg_n_0_[3] ),
+        .I4(\count_reg_n_0_[4] ),
+        .O(\count[4]_i_2_n_0 ));
   FDRE \count_reg[0] 
        (.C(m00_axis_aclk),
         .CE(count),
-        .D(plusOp[0]),
-        .Q(count_reg[0]),
+        .D(\count[0]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[0] ),
         .R(axis_tvalid_delay_i_1_n_0));
   FDRE \count_reg[1] 
        (.C(m00_axis_aclk),
         .CE(count),
-        .D(plusOp[1]),
-        .Q(count_reg[1]),
+        .D(\count[1]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[1] ),
         .R(axis_tvalid_delay_i_1_n_0));
   FDRE \count_reg[2] 
        (.C(m00_axis_aclk),
         .CE(count),
         .D(\count[2]_i_1_n_0 ),
-        .Q(count_reg[2]),
+        .Q(\count_reg_n_0_[2] ),
         .R(axis_tvalid_delay_i_1_n_0));
   FDRE \count_reg[3] 
        (.C(m00_axis_aclk),
         .CE(count),
-        .D(plusOp[3]),
-        .Q(count_reg[3]),
+        .D(\count[3]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[3] ),
         .R(axis_tvalid_delay_i_1_n_0));
   FDRE \count_reg[4] 
        (.C(m00_axis_aclk),
         .CE(count),
-        .D(plusOp[4]),
-        .Q(count_reg[4]),
+        .D(\count[4]_i_2_n_0 ),
+        .Q(\count_reg_n_0_[4] ),
         .R(axis_tvalid_delay_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -394,14 +403,14 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
     \stream_data_out[0]_i_1 
        (.I0(read_pointer[0]),
         .O(\stream_data_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \stream_data_out[1]_i_1 
        (.I0(read_pointer[0]),
         .I1(read_pointer[1]),
         .O(\stream_data_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \stream_data_out[2]_i_1 
@@ -410,13 +419,13 @@ module main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
         .I2(read_pointer[2]),
         .O(\stream_data_out[2]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h08)) 
     \stream_data_out[3]_i_1 
        (.I0(m00_axis_tready),
-        .I1(mst_exec_state[0]),
-        .I2(mst_exec_state[1]),
+        .I1(mst_exec_state[1]),
+        .I2(mst_exec_state[0]),
         .O(tx_en));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \stream_data_out[3]_i_2 

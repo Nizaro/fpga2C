@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Thu Jul 18 15:07:15 2024
+-- Date        : Wed Jul 24 10:13:56 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0_sim_netlist.vhdl
@@ -21,8 +21,8 @@ entity main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_
     m00_axis_tlast : out STD_LOGIC;
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m00_axis_aclk : in STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC;
-    m00_axis_aresetn : in STD_LOGIC
+    m00_axis_aresetn : in STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_AXIS : entity is "noip_lvds_stream_master_stream_v1_0_M00_AXIS";
@@ -31,14 +31,21 @@ end main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_AXI
 architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream_master_stream_v1_0_M00_AXIS is
   signal \FSM_sequential_mst_exec_state[1]_i_2_n_0\ : STD_LOGIC;
   signal \axis_tlast__0\ : STD_LOGIC;
+  signal axis_tvalid : STD_LOGIC;
   signal axis_tvalid_delay_i_1_n_0 : STD_LOGIC;
-  signal axis_tvalid_delay_i_2_n_0 : STD_LOGIC;
   signal count : STD_LOGIC;
+  signal \count[0]_i_1_n_0\ : STD_LOGIC;
+  signal \count[1]_i_1_n_0\ : STD_LOGIC;
   signal \count[2]_i_1_n_0\ : STD_LOGIC;
-  signal count_reg : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal \count[3]_i_1_n_0\ : STD_LOGIC;
+  signal \count[4]_i_2_n_0\ : STD_LOGIC;
+  signal \count_reg_n_0_[0]\ : STD_LOGIC;
+  signal \count_reg_n_0_[1]\ : STD_LOGIC;
+  signal \count_reg_n_0_[2]\ : STD_LOGIC;
+  signal \count_reg_n_0_[3]\ : STD_LOGIC;
+  signal \count_reg_n_0_[4]\ : STD_LOGIC;
   signal mst_exec_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \mst_exec_state__0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal plusOp : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal read_pointer : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \stream_data_out[0]_i_1_n_0\ : STD_LOGIC;
   signal \stream_data_out[1]_i_1_n_0\ : STD_LOGIC;
@@ -46,52 +53,53 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream_mast
   signal \stream_data_out[3]_i_2_n_0\ : STD_LOGIC;
   signal tx_en : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[1]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[1]_i_2\ : label is "soft_lutpair0";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_mst_exec_state_reg[0]\ : label is "init_counter:01,send_stream:10,idle:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_mst_exec_state_reg[1]\ : label is "init_counter:01,send_stream:10,idle:00";
-  attribute SOFT_HLUTNM of axis_tlast : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axis_tlast : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \count[0]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \count[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \count[2]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \count[3]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \count[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \count[3]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \count[4]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \stream_data_out[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \stream_data_out[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \stream_data_out[3]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \stream_data_out[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \stream_data_out[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \stream_data_out[3]_i_2\ : label is "soft_lutpair3";
 begin
-\FSM_sequential_mst_exec_state[0]_i_1\: unisim.vcomponents.LUT3
+\FSM_sequential_mst_exec_state[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"15"
+      INIT => X"00DF"
+    )
+        port map (
+      I0 => mst_exec_state(0),
+      I1 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
+      I2 => \count_reg_n_0_[4]\,
+      I3 => mst_exec_state(1),
+      O => \mst_exec_state__0\(0)
+    );
+\FSM_sequential_mst_exec_state[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2622"
     )
         port map (
       I0 => mst_exec_state(1),
-      I1 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
-      I2 => mst_exec_state(0),
-      O => \mst_exec_state__0\(0)
-    );
-\FSM_sequential_mst_exec_state[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"38"
-    )
-        port map (
-      I0 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
       I1 => mst_exec_state(0),
-      I2 => mst_exec_state(1),
+      I2 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
+      I3 => \count_reg_n_0_[4]\,
       O => \mst_exec_state__0\(1)
     );
-\FSM_sequential_mst_exec_state[1]_i_2\: unisim.vcomponents.LUT5
+\FSM_sequential_mst_exec_state[1]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"80000000"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => count_reg(3),
-      I1 => count_reg(1),
-      I2 => count_reg(0),
-      I3 => count_reg(4),
-      I4 => count_reg(2),
+      I0 => \count_reg_n_0_[2]\,
+      I1 => \count_reg_n_0_[0]\,
+      I2 => \count_reg_n_0_[1]\,
+      I3 => \count_reg_n_0_[3]\,
       O => \FSM_sequential_mst_exec_state[1]_i_2_n_0\
     );
 \FSM_sequential_mst_exec_state_reg[0]\: unisim.vcomponents.FDRE
@@ -149,13 +157,13 @@ axis_tvalid_delay_i_2: unisim.vcomponents.LUT2
         port map (
       I0 => mst_exec_state(1),
       I1 => mst_exec_state(0),
-      O => axis_tvalid_delay_i_2_n_0
+      O => axis_tvalid
     );
 axis_tvalid_delay_reg: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => '1',
-      D => axis_tvalid_delay_i_2_n_0,
+      D => axis_tvalid,
       Q => m00_axis_tvalid,
       R => axis_tvalid_delay_i_1_n_0
     );
@@ -164,26 +172,26 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       INIT => X"1"
     )
         port map (
-      I0 => count_reg(0),
-      O => plusOp(0)
+      I0 => \count_reg_n_0_[0]\,
+      O => \count[0]_i_1_n_0\
     );
 \count[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => count_reg(0),
-      I1 => count_reg(1),
-      O => plusOp(1)
+      I0 => \count_reg_n_0_[0]\,
+      I1 => \count_reg_n_0_[1]\,
+      O => \count[1]_i_1_n_0\
     );
 \count[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"78"
     )
         port map (
-      I0 => count_reg(0),
-      I1 => count_reg(1),
-      I2 => count_reg(2),
+      I0 => \count_reg_n_0_[0]\,
+      I1 => \count_reg_n_0_[1]\,
+      I2 => \count_reg_n_0_[2]\,
       O => \count[2]_i_1_n_0\
     );
 \count[3]_i_1\: unisim.vcomponents.LUT4
@@ -191,20 +199,21 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       INIT => X"7F80"
     )
         port map (
-      I0 => count_reg(1),
-      I1 => count_reg(0),
-      I2 => count_reg(2),
-      I3 => count_reg(3),
-      O => plusOp(3)
+      I0 => \count_reg_n_0_[1]\,
+      I1 => \count_reg_n_0_[0]\,
+      I2 => \count_reg_n_0_[2]\,
+      I3 => \count_reg_n_0_[3]\,
+      O => \count[3]_i_1_n_0\
     );
-\count[4]_i_1\: unisim.vcomponents.LUT3
+\count[4]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"04"
+      INIT => X"4404"
     )
         port map (
       I0 => mst_exec_state(1),
       I1 => mst_exec_state(0),
-      I2 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
+      I2 => \count_reg_n_0_[4]\,
+      I3 => \FSM_sequential_mst_exec_state[1]_i_2_n_0\,
       O => count
     );
 \count[4]_i_2\: unisim.vcomponents.LUT5
@@ -212,27 +221,27 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       INIT => X"7FFF8000"
     )
         port map (
-      I0 => count_reg(2),
-      I1 => count_reg(0),
-      I2 => count_reg(1),
-      I3 => count_reg(3),
-      I4 => count_reg(4),
-      O => plusOp(4)
+      I0 => \count_reg_n_0_[2]\,
+      I1 => \count_reg_n_0_[0]\,
+      I2 => \count_reg_n_0_[1]\,
+      I3 => \count_reg_n_0_[3]\,
+      I4 => \count_reg_n_0_[4]\,
+      O => \count[4]_i_2_n_0\
     );
 \count_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => count,
-      D => plusOp(0),
-      Q => count_reg(0),
+      D => \count[0]_i_1_n_0\,
+      Q => \count_reg_n_0_[0]\,
       R => axis_tvalid_delay_i_1_n_0
     );
 \count_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => count,
-      D => plusOp(1),
-      Q => count_reg(1),
+      D => \count[1]_i_1_n_0\,
+      Q => \count_reg_n_0_[1]\,
       R => axis_tvalid_delay_i_1_n_0
     );
 \count_reg[2]\: unisim.vcomponents.FDRE
@@ -240,23 +249,23 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       C => m00_axis_aclk,
       CE => count,
       D => \count[2]_i_1_n_0\,
-      Q => count_reg(2),
+      Q => \count_reg_n_0_[2]\,
       R => axis_tvalid_delay_i_1_n_0
     );
 \count_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => count,
-      D => plusOp(3),
-      Q => count_reg(3),
+      D => \count[3]_i_1_n_0\,
+      Q => \count_reg_n_0_[3]\,
       R => axis_tvalid_delay_i_1_n_0
     );
 \count_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => count,
-      D => plusOp(4),
-      Q => count_reg(4),
+      D => \count[4]_i_2_n_0\,
+      Q => \count_reg_n_0_[4]\,
       R => axis_tvalid_delay_i_1_n_0
     );
 \read_pointer_reg[0]\: unisim.vcomponents.FDRE
@@ -321,12 +330,12 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
     );
 \stream_data_out[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"20"
+      INIT => X"08"
     )
         port map (
       I0 => m00_axis_tready,
-      I1 => mst_exec_state(0),
-      I2 => mst_exec_state(1),
+      I1 => mst_exec_state(1),
+      I2 => mst_exec_state(0),
       O => tx_en
     );
 \stream_data_out[3]_i_2\: unisim.vcomponents.LUT3
@@ -450,10 +459,10 @@ entity main_design_noip_lvds_stream_0_0_noip_lvds_stream is
     s00_axis_tready : out STD_LOGIC;
     m00_axis_aclk : in STD_LOGIC;
     m00_axis_tready : in STD_LOGIC;
-    m00_axis_aresetn : in STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     s00_axis_tlast : in STD_LOGIC;
+    m00_axis_aresetn : in STD_LOGIC;
     s00_axis_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -522,7 +531,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0 is
   signal \<const1>\ : STD_LOGIC;
   signal \^m00_axis_tdata\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute x_interface_info : string;
-  attribute x_interface_info of lvds_clk : signal is "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock";
+  attribute x_interface_info of lvds_clk : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of lvds_clk : signal is "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute x_interface_info of lvds_sync : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync";

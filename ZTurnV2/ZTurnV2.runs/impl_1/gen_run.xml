@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1721633095">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1721808986">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="main_design_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="main_design_wrapper_routed.rqs"/>
@@ -150,10 +150,22 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_iobuf_I2C0_SDA_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_my_iobuf_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_hdmi_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slid_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_2"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_iobuf_I2C0_SDA_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_my_iobuf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_hdmi_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_2"/>
 </GenRun>

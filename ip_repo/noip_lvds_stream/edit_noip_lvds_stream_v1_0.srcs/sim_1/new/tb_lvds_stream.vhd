@@ -48,7 +48,7 @@ architecture tb of tb_lvds_stream is
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
 	signal	s00_axis_aresetn	: std_logic := '0';
-	signal	s00_axis_tready	:  std_logic := '0';
+	signal	s00_axis_tready	:  std_logic := '0' ;
 	signal	s00_axis_tdata	: std_logic_vector(31 downto 0);
 	signal	s00_axis_tstrb	: std_logic_vector(3 downto 0);
 	signal	s00_axis_tlast	: std_logic := '0';
@@ -57,7 +57,7 @@ architecture tb of tb_lvds_stream is
     -- Ports of Axi Master Bus Interface M00_AXIS
 	signal	m00_axis_aclk	: std_logic := '0';
 	signal	m00_axis_aresetn	: std_logic := '0';
-	signal	m00_axis_tvalid	:  std_logic := '0';
+	signal	m00_axis_tvalid	:  std_logic;
 	signal	m00_axis_tdata	:  std_logic_vector(31 downto 0);
 	signal	m00_axis_tstrb	:  std_logic_vector(3 downto 0);
 	signal	m00_axis_tlast	:  std_logic := '0';
@@ -123,25 +123,35 @@ architecture tb of tb_lvds_stream is
 
 	end procedure;
 
-	procedure img_line(signal sw : inout pixel;
+	procedure img_line(mode : in std_logic_vector(1 downto 0) := "00"; -- "00" for normal line, "10" for first line, "01" for last line
+					   signal sw : inout pixel;
 					   signal dws : inout t_ldw) is
 	begin
 		wait until i_lvds = 0;
-		sw <= LINE_START;
+		if(mode(1) = '1') then
+			sw <= FRAME_START;
+		else
+			sw <= LINE_START;
+		end if;
 		dws <= (others => (others => '0'));
 		wait until i_lvds = 0;
 		sw <= (others => '0'); -- ID
 		wait until i_lvds = 0;
 		sw <= IMAGE;
-		for p in 0 to ROI_width_kernels*8 loop
+		for p in 1 to (ROI_width_kernels*2) loop
 			dws <= (others => line(0));
 			wait until i_lvds = 0;
 		end loop;
-		sw <= LINE_END;
+		if(mode(0) = '1') then
+			sw <= FRAME_END;
+		else
+			sw <= LINE_END;
+		end if;
 		wait until i_lvds = 0;
 		sw <= (others => '0'); -- ID
 		wait until i_lvds = 0;
 		sw <= CRC_PATT;
+		wait until i_lvds = 0;
 
 	end procedure;
 
@@ -149,37 +159,14 @@ architecture tb of tb_lvds_stream is
 					signal dws : inout t_ldw) is
 	begin
 		wait until i_lvds = 0;
-		sw <= FRAME_START;
-		dws <= (others => (others => '0'));
-		wait until i_lvds = 0;
-		sw <= (others => '0'); -- ID
-		wait until i_lvds = 0;
-		sw <= IMAGE;
-		wait for 100 ns;
-		wait until i_lvds = 0;
-		sw <= LINE_END;
-		wait until i_lvds = 0;
-		sw <= (others => '0'); -- ID
-		wait until i_lvds = 0;
-		sw <= CRC_PATT;
+		img_line("10",sw,dws);
 		for l in 0 to ROI_height loop
-			img_line(sw,dws);
 			p_training(sw,dws);
+			img_line("00",sw,dws);
 		end loop;
+		p_training(sw,dws);
 		wait until i_lvds = 0;
-		sw <= LINE_START;
-		dws <= (others => (others => '0'));
-		wait until i_lvds = 0;
-		sw <= (others => '0'); -- ID
-		wait until i_lvds = 0;
-		sw <= IMAGE;
-		wait for 100 ns;
-		wait until i_lvds = 0;
-		sw <= FRAME_END;
-		wait until i_lvds = 0;
-		sw <= (others => '0'); -- ID
-		wait until i_lvds = 0;
-		sw <= CRC_PATT;
+		img_line("01",sw,dws);
 
 	end procedure;
 
@@ -233,6 +220,19 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 				i_lvds <= 0;
 			else
 				i_lvds <= i_lvds + 1;
+			end if;
+		end if;
+	end process;
+
+	axi_rec_process : process(m00_axis_aclk, m00_axis_aresetn) 
+	begin
+		if(m00_axis_aresetn = '0') then
+			m00_axis_tready <= '0';
+		elsif(falling_edge(m00_axis_aclk)) then
+			if(m00_axis_tvalid = '1') then
+				m00_axis_tready <= '1';
+			else
+				m00_axis_tready <= '0';
 			end if;
 		end if;
 	end process;

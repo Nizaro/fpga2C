@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Jul 24 15:11:43 2024
-# Process ID: 9326
+# Start of session at: Thu Jul 25 09:19:13 2024
+# Process ID: 32299
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,17 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3317.547 MHz
+# CPU Frequency     :3654.177 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :25505 MB
+# Available Virtual :23838 MB
 #-----------------------------------------------------------
 start_gui
-open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
-WARNING: [Board 49-26] cannot add Board Part tul.com.tw:pynqzu:part0:1.1 available at /home/nothon/.Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store/XilinxBoardStore/Vivado/2024.1/boards/TUL/pynqzu/1.1/1.1/board.xml as part xczu5eg-sfvc784-1-e specified in board_part file is either invalid or not available
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
@@ -112,315 +111,10 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 avail
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/nothon/fpga2C/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/nothon/fpga2C/ip_repo/noip_lvds_stream'.)
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 7921.586 ; gain = 424.023 ; free physical = 704 ; free virtual = 23379
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-2989] 'tr' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:124]
-ERROR: [VRFC 10-2989] 'tr' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:128]
-ERROR: [VRFC 10-2989] 'tr' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:133]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-3464] indexed name prefix type 'std_logic' is not an array type [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:332]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near ',' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:124]
-ERROR: [VRFC 10-4982] syntax error near ':=' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:127]
-ERROR: [VRFC 10-1471] type error near pat ; current type pixel; expected type  void [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:127]
-ERROR: [VRFC 10-4982] syntax error near 'then' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:128]
-ERROR: [VRFC 10-4982] syntax error near '&' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:132]
-ERROR: [VRFC 10-3462] indexed name is not a ' void' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:132]
-ERROR: [VRFC 10-4982] syntax error near 'if' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:133]
-ERROR: [VRFC 10-2989] 's' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:134]
-ERROR: [VRFC 10-4982] syntax error near 'if' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:135]
-ERROR: [VRFC 10-2989] 'noip_lvds_stream_slave_stream_v1_0_s00_axis' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:143]
-ERROR: [VRFC 10-2989] 'noip_lvds_stream_master_stream_v1_0_m00_axis' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:158]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-2989] 'findbitslip' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:253]
-ERROR: [VRFC 10-3464] indexed name prefix type 'std_logic' is not an array type [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:332]
-ERROR: [VRFC 10-3156] cannot assign signal 'fifo_srst' from within a subprogram [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:361]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-3464] indexed name prefix type 'std_logic' is not an array type [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:332]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-3464] indexed name prefix type 'std_logic' is not an array type [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:332]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-3464] indexed name prefix type 'std_logic' is not an array type [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:332]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'gen10bit' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:111]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:112]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:113]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:114]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:115]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:116]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:117]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:118]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:119]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:120]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:123]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:124]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:125]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:126]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:127]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:128]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:129]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:130]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:131]
-INFO: [#UNDEF] Sorry, too many errors..
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'gen10bit' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:111]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:112]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:113]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:114]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:115]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:116]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:117]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:118]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:119]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:120]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:123]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:124]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:125]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:126]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:127]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:128]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:129]
-ERROR: [VRFC 10-2989] 'pixel' is not declared [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:130]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:131]
-INFO: [#UNDEF] Sorry, too many errors..
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:184]
-ERROR: [VRFC 10-4982] syntax error near 'end' [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:195]
-ERROR: [VRFC 10-9458] unit 'arch_imp' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd:63]
-INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd' is ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 8322.500 ; gain = 838.719 ; free physical = 157 ; free virtual = 21554
+update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 24 15:43:48 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 25 09:20:08 2024...

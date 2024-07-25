@@ -46,10 +46,10 @@ architecture tb of tb_lvds_stream is
 	signal	monitor1 : std_logic := '0';
 	signal 	fifo_srst : std_logic := '0';
 	signal 	fifo_full : std_logic := '0';
-	signal 	fifo_din : std_logic_vector(7 downto 0) := x"0";
+	signal 	fifo_din : std_logic_vector(63 downto 0) := x"0000000000000000";
 	signal 	fifo_wr_en : std_logic := '0';
 	signal 	fifo_empty : std_logic := '0';
-	signal 	fifo_dout : std_logic_vector(31 downto 0) := x"0000";
+	signal 	fifo_dout : std_logic_vector(31 downto 0) := x"00000000";
 
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
@@ -73,7 +73,7 @@ architecture tb of tb_lvds_stream is
 	constant SENSOR_BIT_LENGTH : integer := 8;
 
 	-- tb signals
-	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH downto 0);
+	subtype pixel is std_logic_vector(SENSOR_BIT_LENGTH-1 downto 0);
 	signal sync_word : pixel;
 	type t_ldw is array(0 to 3) of pixel;
 	signal data_words : t_ldw;
@@ -87,7 +87,78 @@ architecture tb of tb_lvds_stream is
 	signal line : t_line;
 
 
-	-- patterns of sync channel
+	-- constants and patterns of sync channel
+
+	function init_constant(const : integer) return pixel is
+	begin
+		case const is 
+			when 0 => -- FRAME_START
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"5A";
+				else
+					return ("10" & x"AA");
+				end if;
+
+			when 1 => -- FRAME_END
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"6A";
+				else
+					return ("11" & x"2A");
+				end if;
+
+			when 2 => -- LINE_START
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"1A";
+				else
+					return ("00" & x"AA");
+				end if;
+
+			when 3 => -- LINE_END
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"2A";
+				else
+					return ("10" & x"2A");
+				end if;
+
+			when 4 => -- BL
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"05";
+				else
+					return ("00" & x"15");
+				end if;
+
+			when 5 => -- IMG
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"0D";
+				else
+					return ("00" & x"35");
+				end if;
+
+			when 6 => -- CRC
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"16";
+				else
+					return ("00" & x"59");
+				end if;
+
+			when others => -- TR
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"E9";
+				else
+					return ("11" & x"A6");
+				end if;
+
+		end case;
+	end function;
+
+	constant FRAME_START : pixel := init_constant(0);
+	constant FRAME_END : pixel := init_constant(1);
+	constant LINE_START : pixel := init_constant(2);
+	constant LINE_END : pixel := init_constant(3);
+	constant BLACK_LINE : pixel := init_constant(4);
+	constant IMAGE : pixel := init_constant(5);
+	constant CRC_PATT : pixel := init_constant(6);
+	constant TRAINING : pixel := init_constant(7);
 	type t_pattern is (FS,FE,LS,LE,BL,IMG,CRC,TR,ID);
 	signal Pattern : t_pattern;
 
@@ -140,7 +211,7 @@ architecture tb of tb_lvds_stream is
 		wait until i_lvds = 0;
 		sw <= IMAGE;
 		for p in 1 to (ROI_width_kernels*2) loop
-			dws <= (others => line(0));
+			dws <= (others => line(1));
 			wait until i_lvds = 0;
 		end loop;
 		if(mode(0) = '1') then
@@ -173,27 +244,6 @@ architecture tb of tb_lvds_stream is
 
 begin
 
-	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
-		constant FRAME_START : pixel := "10" & x"AA";
-		constant FRAME_END : pixel := "11" & x"2A";  
-		constant LINE_START : pixel := "00" & x"AA";
-		constant LINE_END : pixel := "10" & x"2A";
-		constant BL : pixel := "00" & x"15";
-		constant IMG : pixel := "00" & x"35";
-		constant CRC : pixel := "00" & x"59";
-		constant TR : pixel := "11" & x"A6";
-	end generate;
-
-	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
-		constant FRAME_START : pixel := x"5A";
-		constant FRAME_END : pixel := x"6A";
-		constant LINE_START : pixel := x"1A";
-		constant LINE_END : pixel := x"2A";
-		constant BL : pixel := x"05";
-		constant IMG : pixel := x"0D";
-		constant CRC : pixel := x"16";
-		constant TR : pixel := x"E9";
-	end generate;
 
 workLVDS_stream : entity work.noip_lvds_stream(arch_imp) 
     generic map (
@@ -245,7 +295,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 				lvds_data(c) <= data_words(c)(i_lvds);	
 			end loop;
 			
-			if(i_lvds > 8) then
+			if(i_lvds > SENSOR_BIT_LENGTH-2) then
 				i_lvds <= 0;
 			else
 				i_lvds <= i_lvds + 1;
@@ -305,6 +355,6 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 									 TR when TRAINING,
 									 ID when others;
 
-	line <= (others => "1100100011");
+	line <= (others => "11001000");
 
 end tb;

@@ -11,7 +11,6 @@ entity noip_lvds_stream is
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
 
-
 		-- Parameters of Axi Slave Bus Interface S00_AXIS
 		C_S00_AXIS_TDATA_WIDTH	: integer	:= 32;
 
@@ -121,6 +120,79 @@ architecture arch_imp of noip_lvds_stream is
 
 	-- user signals end here
 
+	function init_constant(const : integer) return pixel is
+	begin
+		case const is 
+			when 0 => -- FRAME_START
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"5A";
+				else
+					return ("10" & x"AA");
+				end if;
+
+			when 1 => -- FRAME_END
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"6A";
+				else
+					return ("11" & x"2A");
+				end if;
+
+			when 2 => -- LINE_START
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"1A";
+				else
+					return ("00" & x"AA");
+				end if;
+
+			when 3 => -- LINE_END
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"2A";
+				else
+					return ("10" & x"2A");
+				end if;
+
+			when 4 => -- BL
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"05";
+				else
+					return ("00" & x"15");
+				end if;
+
+			when 5 => -- IMG
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"0D";
+				else
+					return ("00" & x"35");
+				end if;
+
+			when 6 => -- CRC
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"16";
+				else
+					return ("00" & x"59");
+				end if;
+
+			when others => -- TR
+				if(SENSOR_BIT_LENGTH = 8) then
+					return x"E9";
+				else
+					return ("11" & x"A6");
+				end if;
+
+		end case;
+	end function;
+
+	-- constants
+
+	constant FRAME_START : pixel := init_constant(0);
+	constant FRAME_END : pixel := init_constant(1);
+	constant LINE_START : pixel := init_constant(2);
+	constant LINE_END : pixel := init_constant(3);
+	constant BL : pixel := init_constant(4);
+	constant IMG : pixel := init_constant(5);
+	constant CRC : pixel := init_constant(6);
+	constant TR : pixel := init_constant(7);
+
 	function findbitslip (pat : pixel; comp : pixel) return integer is
 		variable sd_pat : pixel;
 	begin
@@ -172,27 +244,6 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 
 	-- Add user logic here
 
-	gen10bit : if(SENSOR_BIT_LENGTH = 10) generate
-		constant FRAME_START : pixel := "10" & x"AA";
-		constant FRAME_END : pixel := "11" & x"2A";  
-		constant LINE_START : pixel := "00" & x"AA";
-		constant LINE_END : pixel := "10" & x"2A";
-		constant BL : pixel := "00" & x"15";
-		constant IMG : pixel := "00" & x"35";
-		constant CRC : pixel := "00" & x"59";
-		constant TR : pixel := "11" & x"A6";
-	end generate;
-
-	gen8bit : if(SENSOR_BIT_LENGTH = 8) generate
-		constant FRAME_START : pixel := x"5A";
-		constant FRAME_END : pixel := x"6A";
-		constant LINE_START : pixel := x"1A";
-		constant LINE_END : pixel := x"2A";
-		constant BL : pixel := x"05";
-		constant IMG : pixel := x"0D";
-		constant CRC : pixel := x"16";
-		constant TR : pixel := x"E9";
-	end generate;
 	
 	lvds_read_process : process(lvds_clk, s00_axis_aresetn)
 		variable temp_sync_word : pixel;

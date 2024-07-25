@@ -15,8 +15,7 @@ entity noip_lvds_stream is
 		C_S00_AXIS_TDATA_WIDTH	: integer	:= 32;
 
 		-- Parameters of Axi Master Bus Interface M00_AXIS
-		C_M00_AXIS_TDATA_WIDTH	: integer	:= 32;
-		C_M00_AXIS_START_COUNT	: integer	:= 32
+		C_M00_AXIS_TDATA_WIDTH	: integer	:= 32
 	);
 	port (
 		-- Users to add ports here
@@ -34,6 +33,7 @@ entity noip_lvds_stream is
 		fifo_wr_en : out std_logic;
 		fifo_empty : in std_logic;
 		fifo_dout : in std_logic_vector(31 downto 0);
+		fifo_rd_en : out std_logic;
 
 		-- User ports ends
 		-- Do not modify the ports beyond this line
@@ -79,10 +79,14 @@ architecture arch_imp of noip_lvds_stream is
 
 	component noip_lvds_stream_master_stream_v1_0_M00_AXIS is
 		generic (
-		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
-		C_M_START_COUNT	: integer	:= 32
+		C_M_AXIS_TDATA_WIDTH	: integer	:= 32
 		);
 		port (
+		image_start : in std_logic;
+		image_end : in std_logic;
+		fifo_empty : in std_logic;
+		fifo_dout : in std_logic_vector(31 downto 0);
+		fifo_rd_en : out std_logic;
 		M_AXIS_ACLK	: in std_logic;
 		M_AXIS_ARESETN	: in std_logic;
 		M_AXIS_TVALID	: out std_logic;
@@ -117,6 +121,11 @@ architecture arch_imp of noip_lvds_stream is
 	
 	type t_kernel is array (0 to 7) of pixel;
 	signal kernel : t_kernel;
+
+	-- other signals
+
+	signal image_start : std_logic;
+	signal image_end : std_logic;
 
 	-- user signals end here
 
@@ -229,8 +238,7 @@ noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst : noip_lvds_stream_slave_stream
 -- Instantiation of Axi Bus Interface M00_AXIS
 noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stream_v1_0_M00_AXIS
 	generic map (
-		C_M_AXIS_TDATA_WIDTH	=> C_M00_AXIS_TDATA_WIDTH,
-		C_M_START_COUNT	=> C_M00_AXIS_START_COUNT
+		C_M_AXIS_TDATA_WIDTH	=> C_M00_AXIS_TDATA_WIDTH
 	)
 	port map (
 		M_AXIS_ACLK	=> m00_axis_aclk,
@@ -239,7 +247,12 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 		M_AXIS_TDATA	=> m00_axis_tdata,
 		M_AXIS_TSTRB	=> m00_axis_tstrb,
 		M_AXIS_TLAST	=> m00_axis_tlast,
-		M_AXIS_TREADY	=> m00_axis_tready
+		M_AXIS_TREADY	=> m00_axis_tready,
+		image_start => '0',
+		image_end => '0',
+		fifo_empty => fifo_empty, 
+		fifo_dout => fifo_dout, 
+		fifo_rd_en => fifo_rd_en
 	);
 
 	-- Add user logic here
@@ -295,6 +308,8 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 			kernel <= (others => (others => '0'));
 			fifo_din <= (others => '0');
 			fifo_wr_en <= '0';
+			image_start <= '0';
+			image_end <= '0';
 		elsif(rising_edge(lvds_word_ready)) then
 			case DState is
 				when ALIGNING =>
@@ -305,6 +320,8 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 					end if;
 					
 				when IDLE => -- during training or FOT. Waiting for black lines or a frame.
+					image_start <= '0';
+					image_end <= '0';
 					if(lvds_sync_word = LINE_START) then
 						DState <= WAIT_BLACK;
 					end if;
@@ -326,11 +343,13 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 						nb_kernel <= 0;
 						im_column <= 1;
 						im_line <= 0;
+						image_start <= '1';
 						Dstate <= REC_ID;
 					end if;
 
 				when REC_ID => -- receiving window ID ignoring it.
 					Dstate <= REC_IMG;
+					image_start <= '0';
 
 				when REC_IMG => -- receiving pixels and storing them. 
 
@@ -399,7 +418,8 @@ noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst : noip_lvds_stream_master_stre
 						DState <= REC_ID;
 					end if;
 
-				when AFTER_FE => -- finished receiving frame, sending it. After that, back to training (IDLE).
+				when AFTER_FE => -- finished receiving frame, back to training (IDLE).
+					image_end <= '1';
 					DState <= IDLE;
 
 				when others => -- one shouldn't be there.

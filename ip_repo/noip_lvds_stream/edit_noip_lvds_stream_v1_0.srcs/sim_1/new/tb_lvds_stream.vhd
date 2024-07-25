@@ -50,6 +50,7 @@ architecture tb of tb_lvds_stream is
 	signal 	fifo_wr_en : std_logic := '0';
 	signal 	fifo_empty : std_logic := '0';
 	signal 	fifo_dout : std_logic_vector(31 downto 0) := x"00000000";
+	signal	fifo_rd_en : std_logic := '0';
 
 	-- Ports of Axi Slave Bus Interface S00_AXIS
 	signal	s00_axis_aclk	: std_logic := '0';
@@ -251,8 +252,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		IM_WIDTH => ROI_width_kernels*8,
 		IM_HEIGHT => ROI_height,
 		C_S00_AXIS_TDATA_WIDTH => 32,
-		C_M00_AXIS_TDATA_WIDTH	=> 32,
-		C_M00_AXIS_START_COUNT	=> 32
+		C_M00_AXIS_TDATA_WIDTH	=> 32
     )
     port map(
 		lvds_clk => lvds_clk, 
@@ -267,6 +267,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		fifo_wr_en => fifo_wr_en, 
 		fifo_empty => fifo_empty, 
 		fifo_dout => fifo_dout, 
+		fifo_rd_en => fifo_rd_en,
 		s00_axis_aclk => s00_axis_aclk,	
 		s00_axis_aresetn => s00_axis_aresetn,	
 		s00_axis_tready => s00_axis_tready,	

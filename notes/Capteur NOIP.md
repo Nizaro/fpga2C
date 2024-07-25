@@ -43,13 +43,14 @@ Du moins fin/fspi >= 6, comme fin_pll = 72M, f_spi <= 12 M.
 
 - Monochrome and LVDS : 0x3 @2
 - PLL Operational and enabled : 0x3 @16
-- Clock Generator - enable all clocks, use PLL, and divide by 5 : 0x5 @32
+- Clock Generator - enable all clocks, use PLL, and divide by 4 (8-bit mode) : 0xD @32
 - General Logic enabled : 0x1 @34
 - Image core - enable power, mux, and bias : 0x7 @40
 - AFE (Analog Front End) - powered on, 0x1 @48
 - Bias powered up : 0x1 @64
 - LVDS I/O - clock, sync and data on : 0x7 @ 112
 - Sync Words : untouched @116
+- Enable 8 bit mode in general config : 0x2001 @129 
 - AEC - ??? : @160
 - Sequencer - disabled by default : @192
 - Monitor select : @192[13:11]

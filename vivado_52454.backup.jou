@@ -1,0 +1,168 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul 25 11:14:32 2024
+# Process ID: 52454
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3500.000 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :16371 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg
+source tb_lvds_stream.tcl
+close_sim
+create_bd_design "design_1"
+export_ip_user_files -of_objects  [get_files /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/design_1
+file delete -force /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.gen/sources_1/bd/design_1
+create_bd_design "simu_fifo_design"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0
+endgroup
+set_property -dict [list \
+  CONFIG.Input_Data_Width {64} \
+  CONFIG.Output_Data_Width {32} \
+] [get_bd_cells fifo_generator_0]
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:noip_lvds_stream:1.0 noip_lvds_stream_0
+endgroup
+set_property location {0.5 -53 50} [get_bd_cells noip_lvds_stream_0]
+connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/fifo_read] [get_bd_intf_pins fifo_generator_0/FIFO_READ]
+connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/fifo_write] [get_bd_intf_pins fifo_generator_0/FIFO_WRITE]
+connect_bd_net [get_bd_pins fifo_generator_0/srst] [get_bd_pins noip_lvds_stream_0/fifo_srst]
+startgroup
+make_bd_pins_external  [get_bd_cells fifo_generator_0] [get_bd_cells noip_lvds_stream_0]
+make_bd_intf_pins_external  [get_bd_cells fifo_generator_0] [get_bd_cells noip_lvds_stream_0]
+endgroup
+set_property name clk [get_bd_ports clk_0]
+set_property name monitor0 [get_bd_ports monitor0_0]
+set_property name S00_AXIS [get_bd_intf_ports S00_AXIS_0]
+delete_bd_objs [get_bd_intf_nets S00_AXIS_0_1]
+delete_bd_objs [get_bd_intf_ports S00_AXIS]
+delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_noip_lvds] [get_bd_intf_ports noip_lvds_0]
+delete_bd_objs [get_bd_intf_nets noip_lvds_stream_0_M00_AXIS] [get_bd_intf_ports M00_AXIS_0]
+startgroup
+make_bd_pins_external  [get_bd_pins fifo_generator_0/rd_en] [get_bd_pins fifo_generator_0/dout] [get_bd_pins fifo_generator_0/empty]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins fifo_generator_0/din] [get_bd_pins fifo_generator_0/full]
+endgroup
+undo
+undo
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/m00_axis_tdata] [get_bd_pins noip_lvds_stream_0/m00_axis_tready] [get_bd_pins noip_lvds_stream_0/m00_axis_tvalid] [get_bd_pins noip_lvds_stream_0/m00_axis_tlast] [get_bd_pins noip_lvds_stream_0/m00_axis_tstrb]
+endgroup
+set_property name m00_axis_tdata [get_bd_ports m00_axis_tdata_0]
+set_property name m00_axis_tstrb [get_bd_ports m00_axis_tstrb_0]
+set_property name m00_axis_tready [get_bd_ports m00_axis_tready_0]
+set_property name m00_axis_tlast [get_bd_ports m00_axis_tlast_0]
+set_property name m00_axis_aresetn [get_bd_ports m00_axis_aresetn_0]
+set_property name m00_axis_aclk [get_bd_ports m00_axis_aclk_0]
+set_property name m00_axis_tvalid [get_bd_ports m00_axis_tvalid_0]
+set_property name trigger0 [get_bd_ports trigger0_0]
+set_property name s00_axis_aresetn [get_bd_ports s00_axis_aresetn_0]
+set_property name s00_axis_aclk [get_bd_ports s00_axis_aclk_0]
+set_property name monitor1 [get_bd_ports monitor1_0]
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/s00_axis_tready] [get_bd_pins noip_lvds_stream_0/s00_axis_tvalid] [get_bd_pins noip_lvds_stream_0/s00_axis_tlast] [get_bd_pins noip_lvds_stream_0/s00_axis_tstrb] [get_bd_pins noip_lvds_stream_0/s00_axis_tdata]
+endgroup
+set_property name s00_axis_tdata [get_bd_ports s00_axis_tdata_0]
+set_property name s00_axis_tlast [get_bd_ports s00_axis_tlast_0]
+set_property name s00_axis_tready [get_bd_ports s00_axis_tready_0]
+set_property name s00_axis_tstrb [get_bd_ports s00_axis_tstrb_0]
+set_property name s00_axis_tvalid [get_bd_ports s00_axis_tvalid_0]
+save_bd_design
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/lvds_data] [get_bd_pins noip_lvds_stream_0/lvds_sync] [get_bd_pins noip_lvds_stream_0/lvds_clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/fifo_rd_en] [get_bd_pins noip_lvds_stream_0/fifo_empty] [get_bd_pins noip_lvds_stream_0/fifo_dout]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/fifo_full] [get_bd_pins noip_lvds_stream_0/fifo_wr_en] [get_bd_pins noip_lvds_stream_0/fifo_din]
+endgroup
+set_property name fifo_din [get_bd_ports fifo_din_0]
+set_property name fifo_dout [get_bd_ports fifo_dout_0]
+delete_bd_objs [get_bd_nets clk_0_1] [get_bd_ports clk]
+connect_bd_net [get_bd_ports m00_axis_aclk] [get_bd_pins fifo_generator_0/clk]
+set_property name fifo_dout [get_bd_nets fifo_dout_0_1]
+set_property name fifo_empty_ [get_bd_nets fifo_empty_0_1]
+set_property name fifo_empty [get_bd_nets fifo_empty_0_1]
+set_property name fifo_full [get_bd_nets fifo_full_0_1]
+set_property name lvds_clk [get_bd_nets lvds_clk_0_1]
+set_property name lvds_data_ [get_bd_nets lvds_data_0_1]
+set_property name lvds_data [get_bd_nets lvds_data_0_1]
+set_property name lvds_sync [get_bd_nets lvds_sync_0_1]
+set_property name m00_axis_aclk_ [get_bd_nets m00_axis_aclk_0_1]
+set_property name m00_axis_aclk [get_bd_nets m00_axis_aclk_0_1]
+set_property name m00_axis_aresetn [get_bd_nets m00_axis_aresetn_0_1]
+set_property name m00_axis_tready [get_bd_nets m00_axis_tready_0_1]
+set_property name monitor0 [get_bd_nets monitor0_0_1]
+set_property name monitor1 [get_bd_nets monitor1_0_1]
+set_property name fifo_empty [get_bd_ports fifo_empty_0]
+set_property name fifo_full [get_bd_ports fifo_full_0]
+set_property name fifo_rd_en [get_bd_ports fifo_rd_en_0]
+set_property name fifo_wr_en [get_bd_ports fifo_wr_en_0]
+set_property name lvds_clk [get_bd_ports lvds_clk_0]
+set_property name lvds_data [get_bd_ports lvds_data_0]
+set_property name lvds_synC [get_bd_ports lvds_sync_0]
+set_property name lvds_syn [get_bd_ports lvds_synC]
+set_property name lvds_synx [get_bd_ports lvds_syn]
+set_property name lvds_sync [get_bd_ports lvds_synx]
+save_bd_design
+validate_bd_design
+save_bd_design
+close_bd_design [get_bd_designs simu_fifo_design]
+make_wrapper -files [get_files /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd] -fileset [get_filesets sources_1] -inst_template
+make_wrapper -files [get_files /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd] -top
+add_files -norecurse /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.gen/sources_1/bd/simu_fifo_design/hdl/simu_fifo_design_wrapper.vhd
+open_bd_design {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd}
+startgroup
+set_property CONFIG.SENSOR_BIT_LENGTH {8} [get_bd_cells noip_lvds_stream_0]
+endgroup
+save_bd_design
+delete_bd_objs [get_bd_nets noip_lvds_stream_0_fifo_din] [get_bd_ports fifo_din]
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/fifo_din]
+endgroup
+set_property name fifo_din [get_bd_ports fifo_din_0]
+save_bd_design
+close_bd_design [get_bd_designs simu_fifo_design]
+generate_target all [get_files  /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd]
+catch { config_ip_cache -export [get_ips -all simu_fifo_design_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all simu_fifo_design_noip_lvds_stream_0_0] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd]
+launch_runs simu_fifo_design_fifo_generator_0_0_synth_1 simu_fifo_design_noip_lvds_stream_0_0_synth_1
+wait_on_run simu_fifo_design_fifo_generator_0_0_synth_1
+wait_on_run simu_fifo_design_noip_lvds_stream_0_0_synth_1
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sources_1/bd/simu_fifo_design/simu_fifo_design.bd] -directory /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet

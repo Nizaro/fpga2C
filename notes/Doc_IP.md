@@ -9,6 +9,10 @@ Interface AXIS : 100 MHz, 32 bits par coup d'horloge : 3.2 Gbps. -> pour une lig
 Interface LVDS : 360 MHz, 4 bits par coup d'horloge (4 pixels par 10 coups d'horloge / 1 kernel par 2 coups d'horloge)
 -> A la résolution maximale : ligne de 1280 pixels  = 160 kernels = 320 coups d'horloge LVDS = 889 ns / ligne (= 0.91 ms par image, sans compter FOT et ROT)
 Temps AXIS pour une ligne de 1280 pixels, profondeur 10-bits : 12800 / 32 = 400 coups d'horloge AXIS (409600 coups d'horloge pour une image complète, 4.1 ms)
+
+## Considérations de mémoire
+
+En plus du problème de la vitesse de transfert de l'image vers le processeur, la taille de l'image complète est également à considérer.
 # noip_ctrl
 
 noip_ctrl permet de contrôler les deux capteurs PYTHON1300 : les allumer, les éteindre, et les configurer en utilisant l'interface SPI.

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Jul 25 09:19:13 2024
-# Process ID: 32299
+# Start of session at: Thu Jul 25 14:34:57 2024
+# Process ID: 78341
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,14 +13,40 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3654.177 MHz
+# CPU Frequency     :3043.040 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :23838 MB
+# Available Virtual :21996 MB
 #-----------------------------------------------------------
 start_gui
-open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
-update_compile_order -fileset sources_1
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg
+source tb_lvds_stream.tcl
+close_sim
+launch_simulation
+open_wave_config /home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg
+source tb_lvds_stream.tcl
+run 2 us
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+relaunch_sim
+run 2 us
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+run 2 us
+relaunch_sim
+run 2 us
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}
+relaunch_sim
+run 2 us
+save_wave_config {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg}

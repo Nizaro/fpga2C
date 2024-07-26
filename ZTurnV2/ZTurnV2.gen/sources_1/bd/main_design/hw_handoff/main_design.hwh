@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 11:41:51 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 15:24:17 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -154,22 +154,22 @@
         <CONNECTION INSTANCE="hdmi_ctrl_0" PORT="hdmi_vsync"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="lvds_clk_0_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_n">
+    <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="lvds_clk_0_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="lvds_clkin_0_ibuf" PORT="IBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="lvds_clk_0_p" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_p">
+    <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="lvds_clk_0_p" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_p">
       <CONNECTIONS>
         <CONNECTION INSTANCE="lvds_clkin_0_ibuf" PORT="IBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="lvds_clk_1_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_n">
+    <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="lvds_clk_1_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="lvds_clkin_1_ibuf" PORT="IBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="lvds_clk_1_p" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_p">
+    <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="lvds_clk_1_p" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_p">
       <CONNECTIONS>
         <CONNECTION INSTANCE="lvds_clkin_1_ibuf" PORT="IBUF_DS_P"/>
       </CONNECTIONS>
@@ -5599,7 +5599,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lvds_clkin_0_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>
@@ -6034,7 +6034,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lvds_clkin_1_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>
@@ -6291,24 +6291,24 @@
         <PARAMETER NAME="C_SIM_DEVICE" VALUE="VERSAL_AI_CORE_ES1"/>
         <PARAMETER NAME="C_SIZE" VALUE="1"/>
         <PARAMETER NAME="BOARD_PARAMETER"/>
-        <PARAMETER NAME="Component_Name" VALUE="main_design_util_ds_buf_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_lvds_clkin_1_ibuf_0"/>
         <PARAMETER NAME="DIFF_CLK_IN_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_n">
+        <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="lvds_clk_0_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_p">
+        <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_0_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="lvds_clk_0_p"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="noip_lvds_stream_0" PORT="lvds_clk"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="clk"/>
@@ -6344,17 +6344,17 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_n">
+        <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="lvds_clk_1_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_p">
+        <PORT CLKFREQUENCY="360000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_lvds_clk_1_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="lvds_clk_1_p"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="noip_lvds_stream_1" PORT="lvds_clk"/>
             <CONNECTION INSTANCE="fifo_generator_1" PORT="clk"/>
@@ -7636,7 +7636,7 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="lvds_clk" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="I" NAME="lvds_clk" SIGIS="clk" SIGNAME="lvds_clkin_0_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lvds_clkin_0_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>
@@ -7854,7 +7854,7 @@
             <CONNECTION INSTANCE="fifo_generator_1" PORT="wr_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="lvds_clk" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
+        <PORT CLKFREQUENCY="360000000" DIR="I" NAME="lvds_clk" SIGIS="clk" SIGNAME="lvds_clkin_1_ibuf_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lvds_clkin_1_ibuf" PORT="IBUF_OUT"/>
           </CONNECTIONS>

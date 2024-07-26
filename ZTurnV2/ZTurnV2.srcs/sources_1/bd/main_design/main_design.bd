@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8152EF12B7922C10",
+      "boundary_crc": "0x8152EF12DC77F76C",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
@@ -21,7 +21,6 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "lvds_clkin_0_ibuf": "",
       "axi_mem_intercon": {
         "xbar": "",
         "s00_couplers": {
@@ -91,7 +90,8 @@
       "iobuf_I2C0_SDA": "",
       "iobuf_I2C0_SCL": "",
       "fifo_generator_0": "",
-      "fifo_generator_1": ""
+      "fifo_generator_1": "",
+      "lvds_clkin_0_ibuf": ""
     },
     "interface_ports": {
       "DDR": {
@@ -284,8 +284,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "360000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -312,8 +311,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "360000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -690,8 +688,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "360000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -718,8 +715,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "360000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -1982,21 +1978,6 @@
               "m00_couplers/S_ARESETN",
               "m01_couplers/S_ARESETN"
             ]
-          }
-        }
-      },
-      "lvds_clkin_0_ibuf": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "ip_revision": "32",
-        "xci_name": "main_design_util_ds_buf_0_2",
-        "xci_path": "ip/main_design_util_ds_buf_0_2/main_design_util_ds_buf_0_2.xci",
-        "inst_hier_path": "lvds_clkin_0_ibuf",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "IBUFDS"
-          },
-          "C_SIZE": {
-            "value": "1"
           }
         }
       },
@@ -4320,6 +4301,21 @@
             "value": "32"
           }
         }
+      },
+      "lvds_clkin_0_ibuf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "32",
+        "xci_name": "main_design_lvds_clkin_1_ibuf_0",
+        "xci_path": "ip/main_design_lvds_clkin_1_ibuf_0/main_design_lvds_clkin_1_ibuf_0.xci",
+        "inst_hier_path": "lvds_clkin_0_ibuf",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "IBUFDS"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4439,12 +4435,6 @@
       }
     },
     "nets": {
-      "IBUF_DS_N_0_1": {
-        "ports": [
-          "lvds_clk_0_n",
-          "lvds_clkin_0_ibuf/IBUF_DS_N"
-        ]
-      },
       "IBUF_DS_N_0_2": {
         "ports": [
           "lvds_sync_0_n",
@@ -4485,12 +4475,6 @@
         "ports": [
           "lvds_dout2_1_n",
           "lvds_dout2_1_ibuf/IBUF_DS_N"
-        ]
-      },
-      "IBUF_DS_P_0_1": {
-        "ports": [
-          "lvds_clk_0_p",
-          "lvds_clkin_0_ibuf/IBUF_DS_P"
         ]
       },
       "IBUF_DS_P_0_2": {
@@ -4587,6 +4571,18 @@
         "ports": [
           "iobuf_I2C0_SCL/O",
           "processing_system7_0/I2C0_SCL_I"
+        ]
+      },
+      "lvds_clk_0_n_1": {
+        "ports": [
+          "lvds_clk_0_n",
+          "lvds_clkin_0_ibuf/IBUF_DS_N"
+        ]
+      },
+      "lvds_clk_0_p_1": {
+        "ports": [
+          "lvds_clk_0_p",
+          "lvds_clkin_0_ibuf/IBUF_DS_P"
         ]
       },
       "lvds_clkin_0_ibuf_IBUF_OUT": {

@@ -51,8 +51,6 @@ vcom -work proc_sys_reset_v5_0_15 -93  -incr \
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_util_ds_buf_0_2/util_ds_buf.vhd" \
-"../../../bd/main_design/ip/main_design_util_ds_buf_0_2/sim/main_design_util_ds_buf_0_2.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
 "../../../bd/main_design/ipshared/8b31/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
 "../../../bd/main_design/ipshared/8b31/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
@@ -86,6 +84,7 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_
 "../../../bd/main_design/ip/main_design_monitor0_slice1_1/sim/main_design_monitor0_slice1_1.v" \
 
 vcom -work xil_defaultlib -93  -incr \
+"../../../bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/util_ds_buf.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_clkin_0_ibuf_1/sim/main_design_lvds_clkin_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/sim/main_design_lvds_sync_0_ibuf1_0.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/sim/main_design_lvds_dout0_0_ibuf_0.vhd" \
@@ -120,6 +119,7 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
 "../../../bd/main_design/sim/main_design.vhd" \
+"../../../bd/main_design/ip/main_design_lvds_clkin_1_ibuf_0/sim/main_design_lvds_clkin_1_ibuf_0.vhd" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \

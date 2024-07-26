@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Fri Jul 26 11:41:49 2024
+--Date        : Fri Jul 26 15:24:14 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4148,7 +4148,7 @@ entity main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=6,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main_design : entity is "main_design.hwdef";
 end main_design;
@@ -4286,13 +4286,6 @@ architecture STRUCTURE of main_design is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_proc_sys_reset_0_0;
-  component main_design_util_ds_buf_0_2 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_util_ds_buf_0_2;
   component main_design_noip_lvds_stream_0_0 is
   port (
     lvds_clk : in STD_LOGIC;
@@ -4703,7 +4696,13 @@ architecture STRUCTURE of main_design is
     empty : out STD_LOGIC
   );
   end component main_design_fifo_generator_0_1;
-  signal IBUF_DS_N_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  component main_design_lvds_clkin_1_ibuf_0 is
+  port (
+    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
+    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
+    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component main_design_lvds_clkin_1_ibuf_0;
   signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4711,7 +4710,6 @@ architecture STRUCTURE of main_design is
   signal IBUF_DS_N_1_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4849,6 +4847,8 @@ architecture STRUCTURE of main_design is
   signal hdmi_ctrl_0_hdmi_pcl : STD_LOGIC;
   signal hdmi_ctrl_0_hdmi_vsync : STD_LOGIC;
   signal iobuf_I2C0_SCL_O : STD_LOGIC;
+  signal lvds_clk_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_clk_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_data_0_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5060,13 +5060,13 @@ architecture STRUCTURE of main_design is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
   attribute X_INTERFACE_INFO of lvds_clk_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_N, CLK_DOMAIN main_design_lvds_clk_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of lvds_clk_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_N, CLK_DOMAIN main_design_lvds_clk_0_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of lvds_clk_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_P, CLK_DOMAIN main_design_lvds_clk_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of lvds_clk_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_P, CLK_DOMAIN main_design_lvds_clk_0_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of lvds_clk_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_N, CLK_DOMAIN main_design_lvds_clk_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of lvds_clk_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_N, CLK_DOMAIN main_design_lvds_clk_1_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of lvds_clk_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_P, CLK_DOMAIN main_design_lvds_clk_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of lvds_clk_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_P, CLK_DOMAIN main_design_lvds_clk_1_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of lvds_dout0_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_N CLK";
   attribute X_INTERFACE_PARAMETER of lvds_dout0_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_0_N, CLK_DOMAIN main_design_lvds_dout0_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of lvds_dout0_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_P CLK";
@@ -5112,7 +5112,6 @@ architecture STRUCTURE of main_design is
   attribute X_INTERFACE_INFO of noip_monitor1 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR1 DATA";
   attribute X_INTERFACE_PARAMETER of noip_monitor1 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR1, LAYERED_METADATA undef";
 begin
-  IBUF_DS_N_0_1(0) <= lvds_clk_0_n(0);
   IBUF_DS_N_0_2(0) <= lvds_sync_0_n(0);
   IBUF_DS_N_0_3(0) <= lvds_clk_1_n(0);
   IBUF_DS_N_0_4(0) <= lvds_sync_1_n(0);
@@ -5120,7 +5119,6 @@ begin
   IBUF_DS_N_1_2(0) <= lvds_dout2_0_n(0);
   IBUF_DS_N_1_3(0) <= lvds_dout0_1_n(0);
   IBUF_DS_N_1_4(0) <= lvds_dout2_1_n(0);
-  IBUF_DS_P_0_1(0) <= lvds_clk_0_p(0);
   IBUF_DS_P_0_2(0) <= lvds_sync_0_p(0);
   IBUF_DS_P_0_3(0) <= lvds_clk_1_p(0);
   IBUF_DS_P_0_4(0) <= lvds_sync_1_p(0);
@@ -5134,6 +5132,8 @@ begin
   hdmi_hsync <= hdmi_ctrl_0_hdmi_hsync;
   hdmi_pclk <= hdmi_ctrl_0_hdmi_pcl;
   hdmi_vsync <= hdmi_ctrl_0_hdmi_vsync;
+  lvds_clk_0_n_1(0) <= lvds_clk_0_n(0);
+  lvds_clk_0_p_1(0) <= lvds_clk_0_p(0);
   lvds_dout1_0_n_1(0) <= lvds_dout1_0_n(0);
   lvds_dout1_0_n_2(0) <= lvds_dout3_0_n(0);
   lvds_dout1_0_n_3(0) <= lvds_dout1_1_n(0);
@@ -5475,10 +5475,10 @@ iobuf_I2C0_SDA: component main_design_my_iobuf_0_0
       O => my_iobuf_0_O,
       T => processing_system7_0_I2C0_SDA_T
     );
-lvds_clkin_0_ibuf: component main_design_util_ds_buf_0_2
+lvds_clkin_0_ibuf: component main_design_lvds_clkin_1_ibuf_0
      port map (
-      IBUF_DS_N(0) => IBUF_DS_N_0_1(0),
-      IBUF_DS_P(0) => IBUF_DS_P_0_1(0),
+      IBUF_DS_N(0) => lvds_clk_0_n_1(0),
+      IBUF_DS_P(0) => lvds_clk_0_p_1(0),
       IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT(0)
     );
 lvds_clkin_1_ibuf: component main_design_lvds_clkin_0_ibuf_4

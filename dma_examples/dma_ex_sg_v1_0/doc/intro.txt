@@ -1,0 +1,62 @@
+// ****************************************************
+// * Introduction for dma_ex_sg
+// ****************************************************
+//
+//   By now, you should be well acquainted with the AXI
+// DMA core and how it can be utilized in register
+// direct mode, both using interrupts and polling. If
+// you are unaware, you should refer to the previous
+// two designs first (dma_ex_polled and
+// dma_ex_interrupt). Register direct mode will satisfy
+// the needs of many designs where you can afford to
+// work with a single dedicated buffer. This becomes
+// cumbersome, however, if you need to manage multiple
+// buffers with your DMA engine. In such cases, the
+// scatter gather engine of the AXI DMA can improve
+// efficiency and convenience. A system, for example,
+// may dynamically allocate main memory resulting
+// in fragmented portions of free memory available
+// for use. In this case, the scatter gather engine
+// can be used to transfer data to memory while keeping
+// track of the location of each fragmented section
+// of data.
+//
+//   While the scatter gather engine provides the user
+// with more flexibility, it is also much more complex
+// to use then register direct mode. When scatter
+// gather mode is enabled, a separate AXI4 interface
+// is exposed which is used for fetching buffer
+// descriptors. Buffer descriptors are nodes in a 
+// singly linked circular list (referred to as a
+// buffer descriptor ring). Each node contains a 
+// pointer to the actual data payload. The software is
+// responsible for creating and maintaining buffer
+// descriptors.
+//
+//   The hardware datapath of this project is similar
+// to the datapath in the first two parts. The scatter
+// gather engine is enabled in hardware and its AXI4
+// interface is connected to the main memory
+// interconnect because this is where the buffer
+// descriptors are being stored in this example. Refer
+// to dma_ex_sg.bmp for block diagram illustration of
+// the design.
+//
+//   The tutorials have been tested on the ZC702 and
+// the Zedboard. However, it should be easily ported
+// to any other Zynq platform due to the fact that
+// no external pins are used.
+//
+// Next time: Multi-Channel mode!
+//
+// ****************************************************
+//
+// References: 
+//   - Zynq-7000 All Programmable SoC Technical Reference Manual 
+//       http://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-7000-TRM.pdf
+//   - AXI Reference Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/ug761_axi_reference_guide.pdf
+//   - AXI DMA Product Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/axi_dma/v7_0/pg021_axi_dma.pdf
+//
+// ****************************************************

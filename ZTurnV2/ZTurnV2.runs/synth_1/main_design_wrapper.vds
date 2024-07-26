@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Jul 24 10:16:30 2024
-# Process ID: 33254
+# Start of session at: Fri Jul 26 11:49:37 2024
+# Process ID: 68920
 # Current directory: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1
 # Command line: vivado -log main_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_wrapper.tcl
 # Log file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.vds
@@ -13,16 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3097.409 MHz
+# CPU Frequency     :3500.000 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :18999 MB
+# Available Virtual :16585 MB
 #-----------------------------------------------------------
 source main_design_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1414.945 ; gain = 126.793 ; free physical = 445 ; free virtual = 17750
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1352.324 ; gain = 66.379 ; free physical = 422 ; free virtual = 15494
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
@@ -40,62 +40,62 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33317
+INFO: [Synth 8-7075] Helper process launched with PID 68984
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2178.129 ; gain = 414.684 ; free physical = 163 ; free virtual = 16588
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2181.148 ; gain = 414.715 ; free physical = 172 ; free virtual = 14209
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main_design_wrapper' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd:89]
 INFO: [Synth 8-3491] module 'main_design' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4078' bound to instance 'main_design_i' of component 'main_design' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd:164]
 INFO: [Synth 8-638] synthesizing module 'main_design' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4156]
-WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4381]
-INFO: [Synth 8-3491] module 'main_design_axi_dma_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'main_design_axi_dma_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5108]
-INFO: [Synth 8-638] synthesizing module 'main_design_axi_dma_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_axi_dma_0_0_stub.vhdl:106]
+WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4395]
+INFO: [Synth 8-3491] module 'main_design_axi_dma_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'main_design_axi_dma_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5160]
+INFO: [Synth 8-638] synthesizing module 'main_design_axi_dma_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_axi_dma_0_0_stub.vhdl:106]
 INFO: [Synth 8-638] synthesizing module 'main_design_axi_mem_intercon_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2366]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_PEI69B' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:348]
-INFO: [Synth 8-3491] module 'main_design_auto_pc_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'main_design_auto_pc_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:591]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_pc_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_pc_1_stub.vhdl:91]
+INFO: [Synth 8-3491] module 'main_design_auto_pc_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'main_design_auto_pc_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:591]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_pc_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_pc_1_stub.vhdl:91]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_PEI69B' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:348]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1EXEZPB' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1397]
-INFO: [Synth 8-3491] module 'main_design_auto_us_df_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_0_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1609]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_0_stub.vhdl:84]
+INFO: [Synth 8-3491] module 'main_design_auto_us_df_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_0_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1609]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_0_stub.vhdl:84]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1EXEZPB' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1397]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_B6XWV5' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1894]
-INFO: [Synth 8-3491] module 'main_design_auto_us_df_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_1_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1999]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_1_stub.vhdl:46]
+INFO: [Synth 8-3491] module 'main_design_auto_us_df_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_1_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1999]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_1_stub.vhdl:46]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_B6XWV5' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1894]
 INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_N3W2MA' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2084]
-INFO: [Synth 8-3491] module 'main_design_auto_us_df_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_2_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2207]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_2_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'main_design_auto_us_df_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_2_stub.vhdl:6' bound to instance 'auto_us_df' of component 'main_design_auto_us_df_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2207]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_us_df_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_us_df_2_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_N3W2MA' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2084]
-INFO: [Synth 8-3491] module 'main_design_xbar_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_2_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2991]
-INFO: [Synth 8-638] synthesizing module 'main_design_xbar_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_2_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'main_design_xbar_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_2_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2991]
+INFO: [Synth 8-638] synthesizing module 'main_design_xbar_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_2_stub.vhdl:90]
 INFO: [Synth 8-256] done synthesizing module 'main_design_axi_mem_intercon_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:2366]
 INFO: [Synth 8-638] synthesizing module 'main_design_axis_interconnect_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3171]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_EKPNVQ' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:157]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_k_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_0_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:225]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_0_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_k_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_0_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_0_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_0_stub.vhdl:24]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_EKPNVQ' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:157]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1BJPNLK' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:809]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_k_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_1_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:877]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_1_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_1_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:894]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_1_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_k_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_1_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:877]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_1_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_1_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:894]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_1_stub.vhdl:24]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1BJPNLK' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:809]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1O2T2YE' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1709]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_slid_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slid_0_stub.vhdl:6' bound to instance 'auto_ss_slid' of component 'main_design_auto_ss_slid_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1754]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slid_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slid_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_slid_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slid_0_stub.vhdl:6' bound to instance 'auto_ss_slid' of component 'main_design_auto_ss_slid_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1754]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slid_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slid_0_stub.vhdl:25]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1O2T2YE' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1709]
-INFO: [Synth 8-3491] module 'main_design_xbar_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_3_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3299]
-INFO: [Synth 8-638] synthesizing module 'main_design_xbar_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_3_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'main_design_xbar_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_3_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3299]
+INFO: [Synth 8-638] synthesizing module 'main_design_xbar_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_3_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'main_design_axis_interconnect_0_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3171]
 INFO: [Synth 8-638] synthesizing module 'main_design_axis_interconnect_1_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3358]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_148UC6G' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:34]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_k_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_2_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_2_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_2_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:116]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_2_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_k_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_2_stub.vhdl:6' bound to instance 'auto_ss_k' of component 'main_design_auto_ss_k_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_k_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_k_2_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'main_design_auto_ss_slidr_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_2_stub.vhdl:6' bound to instance 'auto_ss_slidr' of component 'main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_ss_slidr_2_stub.vhdl:25]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_148UC6G' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:34]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_YP4UUW' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1794]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_YP4UUW' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1794]
@@ -106,94 +106,98 @@ INFO: [Synth 8-6157] synthesizing module 'main_design_s_arb_req_suppress_concat_
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_s_arb_req_suppress_concat_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_s_arb_req_suppress_concat_0/synth/main_design_s_arb_req_suppress_concat_0.v:53]
-INFO: [Synth 8-3491] module 'main_design_xbar_4' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_4_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3497]
-INFO: [Synth 8-638] synthesizing module 'main_design_xbar_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_4_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'main_design_xbar_4' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_4_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3497]
+INFO: [Synth 8-638] synthesizing module 'main_design_xbar_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_4_stub.vhdl:26]
 INFO: [Synth 8-256] done synthesizing module 'main_design_axis_interconnect_1_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3358]
-INFO: [Synth 8-3491] module 'main_design_hdmi_ctrl_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_hdmi_ctrl_0_0_stub.vhdl:6' bound to instance 'hdmi_ctrl_0' of component 'main_design_hdmi_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5367]
-INFO: [Synth 8-638] synthesizing module 'main_design_hdmi_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_hdmi_ctrl_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'main_design_iobuf_I2C0_SDA_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_iobuf_I2C0_SDA_0_stub.vhdl:6' bound to instance 'iobuf_I2C0_SCL' of component 'main_design_iobuf_I2C0_SDA_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5390]
-INFO: [Synth 8-638] synthesizing module 'main_design_iobuf_I2C0_SDA_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_iobuf_I2C0_SDA_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'main_design_my_iobuf_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_my_iobuf_0_0_stub.vhdl:6' bound to instance 'iobuf_I2C0_SDA' of component 'main_design_my_iobuf_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5397]
-INFO: [Synth 8-638] synthesizing module 'main_design_my_iobuf_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_my_iobuf_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'main_design_util_ds_buf_0_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_util_ds_buf_0_2_stub.vhdl:6' bound to instance 'lvds_clkin_0_ibuf' of component 'main_design_util_ds_buf_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5404]
-INFO: [Synth 8-638] synthesizing module 'main_design_util_ds_buf_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_util_ds_buf_0_2_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_clkin_0_ibuf_4' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_4_stub.vhdl:6' bound to instance 'lvds_clkin_1_ibuf' of component 'main_design_lvds_clkin_0_ibuf_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5410]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_clkin_0_ibuf_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_4_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_xlconcat_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_1/synth/main_design_xlconcat_0_1.v:53' bound to instance 'lvds_data_0_concat' of component 'main_design_xlconcat_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5416]
+INFO: [Synth 8-3491] module 'main_design_fifo_generator_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_fifo_generator_0_0_stub.vhdl:6' bound to instance 'fifo_generator_0' of component 'main_design_fifo_generator_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5419]
+INFO: [Synth 8-638] synthesizing module 'main_design_fifo_generator_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_fifo_generator_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'main_design_fifo_generator_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_fifo_generator_0_1_stub.vhdl:6' bound to instance 'fifo_generator_1' of component 'main_design_fifo_generator_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5430]
+INFO: [Synth 8-638] synthesizing module 'main_design_fifo_generator_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_fifo_generator_0_1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'main_design_hdmi_ctrl_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_hdmi_ctrl_0_0_stub.vhdl:6' bound to instance 'hdmi_ctrl_0' of component 'main_design_hdmi_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5441]
+INFO: [Synth 8-638] synthesizing module 'main_design_hdmi_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_hdmi_ctrl_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'main_design_iobuf_I2C0_SDA_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_iobuf_I2C0_SDA_0_stub.vhdl:6' bound to instance 'iobuf_I2C0_SCL' of component 'main_design_iobuf_I2C0_SDA_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5464]
+INFO: [Synth 8-638] synthesizing module 'main_design_iobuf_I2C0_SDA_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_iobuf_I2C0_SDA_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'main_design_my_iobuf_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_my_iobuf_0_0_stub.vhdl:6' bound to instance 'iobuf_I2C0_SDA' of component 'main_design_my_iobuf_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5471]
+INFO: [Synth 8-638] synthesizing module 'main_design_my_iobuf_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_my_iobuf_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'main_design_util_ds_buf_0_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_util_ds_buf_0_2_stub.vhdl:6' bound to instance 'lvds_clkin_0_ibuf' of component 'main_design_util_ds_buf_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5478]
+INFO: [Synth 8-638] synthesizing module 'main_design_util_ds_buf_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_util_ds_buf_0_2_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_clkin_0_ibuf_4' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_4_stub.vhdl:6' bound to instance 'lvds_clkin_1_ibuf' of component 'main_design_lvds_clkin_0_ibuf_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5484]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_clkin_0_ibuf_4' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_4_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_xlconcat_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_1/synth/main_design_xlconcat_0_1.v:53' bound to instance 'lvds_data_0_concat' of component 'main_design_xlconcat_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5490]
 INFO: [Synth 8-6157] synthesizing module 'main_design_xlconcat_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_1/synth/main_design_xlconcat_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_xlconcat_0_1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_1/synth/main_design_xlconcat_0_1.v:53]
-INFO: [Synth 8-3491] module 'main_design_util_vector_logic_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'lvds_data_0_inverter' of component 'main_design_util_vector_logic_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5424]
-INFO: [Synth 8-638] synthesizing module 'main_design_util_vector_logic_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_util_vector_logic_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'main_design_lvds_data_0_concat_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_concat_1/synth/main_design_lvds_data_0_concat_1.v:53' bound to instance 'lvds_data_1_concat' of component 'main_design_lvds_data_0_concat_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5429]
+INFO: [Synth 8-3491] module 'main_design_util_vector_logic_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'lvds_data_0_inverter' of component 'main_design_util_vector_logic_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5498]
+INFO: [Synth 8-638] synthesizing module 'main_design_util_vector_logic_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_util_vector_logic_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'main_design_lvds_data_0_concat_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_concat_1/synth/main_design_lvds_data_0_concat_1.v:53' bound to instance 'lvds_data_1_concat' of component 'main_design_lvds_data_0_concat_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5503]
 INFO: [Synth 8-6157] synthesizing module 'main_design_lvds_data_0_concat_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_concat_1/synth/main_design_lvds_data_0_concat_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_lvds_data_0_concat_1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_data_0_concat_1/synth/main_design_lvds_data_0_concat_1.v:53]
-INFO: [Synth 8-3491] module 'main_design_lvds_data_0_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_data_0_inverter_0_stub.vhdl:6' bound to instance 'lvds_data_1_inverter' of component 'main_design_lvds_data_0_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5437]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_data_0_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_data_0_inverter_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'main_design_lvds_sync_0_ibuf1_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf1_0_stub.vhdl:6' bound to instance 'lvds_dout0_0_ibuf' of component 'main_design_lvds_sync_0_ibuf1_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5442]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_0_ibuf1_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf1_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_3_stub.vhdl:6' bound to instance 'lvds_dout0_1_ibuf' of component 'main_design_lvds_dout0_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5448]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_3_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_0_stub.vhdl:6' bound to instance 'lvds_dout1_0_ibuf' of component 'main_design_lvds_dout0_0_ibuf_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5454]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout1_0_ibuf_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_3_stub.vhdl:6' bound to instance 'lvds_dout1_1_ibuf' of component 'main_design_lvds_dout1_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5460]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout1_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_3_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout2_0_ibuf' of component 'main_design_lvds_dout0_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5466]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout2_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout2_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout2_1_ibuf' of component 'main_design_lvds_dout2_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5472]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout2_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout2_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout1_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout3_0_ibuf' of component 'main_design_lvds_dout1_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5478]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout1_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_dout3_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout3_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout3_1_ibuf' of component 'main_design_lvds_dout3_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5484]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout3_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_dout3_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_clkin_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_sync_0_ibuf' of component 'main_design_lvds_clkin_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5490]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_clkin_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_sync_1_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_1_inverter_0_stub.vhdl:6' bound to instance 'lvds_sync_0_inverter' of component 'main_design_lvds_sync_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5496]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_1_inverter_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'main_design_lvds_sync_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_sync_1_ibuf' of component 'main_design_lvds_sync_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5501]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'main_design_lvds_data_1_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_data_1_inverter_0_stub.vhdl:6' bound to instance 'lvds_sync_1_inverter' of component 'main_design_lvds_data_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5507]
-INFO: [Synth 8-638] synthesizing module 'main_design_lvds_data_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_lvds_data_1_inverter_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'main_design_xlslice_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_1/synth/main_design_xlslice_0_1.v:53' bound to instance 'monitor0_slice0' of component 'main_design_xlslice_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5512]
+INFO: [Synth 8-3491] module 'main_design_lvds_data_0_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_data_0_inverter_0_stub.vhdl:6' bound to instance 'lvds_data_1_inverter' of component 'main_design_lvds_data_0_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5511]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_data_0_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_data_0_inverter_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'main_design_lvds_sync_0_ibuf1_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf1_0_stub.vhdl:6' bound to instance 'lvds_dout0_0_ibuf' of component 'main_design_lvds_sync_0_ibuf1_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5516]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_0_ibuf1_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_3_stub.vhdl:6' bound to instance 'lvds_dout0_1_ibuf' of component 'main_design_lvds_dout0_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5522]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_3_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_0_stub.vhdl:6' bound to instance 'lvds_dout1_0_ibuf' of component 'main_design_lvds_dout0_0_ibuf_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5528]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout1_0_ibuf_3' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_3_stub.vhdl:6' bound to instance 'lvds_dout1_1_ibuf' of component 'main_design_lvds_dout1_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5534]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout1_0_ibuf_3' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_3_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout0_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout2_0_ibuf' of component 'main_design_lvds_dout0_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5540]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout0_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout0_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout2_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout2_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout2_1_ibuf' of component 'main_design_lvds_dout2_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5546]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout2_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout2_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout1_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout3_0_ibuf' of component 'main_design_lvds_dout1_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5552]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout1_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout1_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_dout3_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout3_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_dout3_1_ibuf' of component 'main_design_lvds_dout3_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5558]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_dout3_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_dout3_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_clkin_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_sync_0_ibuf' of component 'main_design_lvds_clkin_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5564]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_clkin_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_clkin_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_sync_1_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_1_inverter_0_stub.vhdl:6' bound to instance 'lvds_sync_0_inverter' of component 'main_design_lvds_sync_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5570]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_1_inverter_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'main_design_lvds_sync_0_ibuf_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf_1_stub.vhdl:6' bound to instance 'lvds_sync_1_ibuf' of component 'main_design_lvds_sync_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5575]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_sync_0_ibuf_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_sync_0_ibuf_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'main_design_lvds_data_1_inverter_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_data_1_inverter_0_stub.vhdl:6' bound to instance 'lvds_sync_1_inverter' of component 'main_design_lvds_data_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5581]
+INFO: [Synth 8-638] synthesizing module 'main_design_lvds_data_1_inverter_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_lvds_data_1_inverter_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'main_design_xlslice_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_1/synth/main_design_xlslice_0_1.v:53' bound to instance 'monitor0_slice0' of component 'main_design_xlslice_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5586]
 INFO: [Synth 8-6157] synthesizing module 'main_design_xlslice_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_1/synth/main_design_xlslice_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_xlslice_0_1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_1/synth/main_design_xlslice_0_1.v:53]
-INFO: [Synth 8-3491] module 'main_design_xlslice_0_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_2/synth/main_design_xlslice_0_2.v:53' bound to instance 'monitor0_slice1' of component 'main_design_xlslice_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5518]
+INFO: [Synth 8-3491] module 'main_design_xlslice_0_2' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_2/synth/main_design_xlslice_0_2.v:53' bound to instance 'monitor0_slice1' of component 'main_design_xlslice_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5592]
 INFO: [Synth 8-6157] synthesizing module 'main_design_xlslice_0_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_2/synth/main_design_xlslice_0_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_xlslice_0_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlslice_0_2/synth/main_design_xlslice_0_2.v:53]
-INFO: [Synth 8-3491] module 'main_design_monitor0_slice0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice0_1/synth/main_design_monitor0_slice0_1.v:53' bound to instance 'monitor1_slice0' of component 'main_design_monitor0_slice0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5524]
+INFO: [Synth 8-3491] module 'main_design_monitor0_slice0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice0_1/synth/main_design_monitor0_slice0_1.v:53' bound to instance 'monitor1_slice0' of component 'main_design_monitor0_slice0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5598]
 INFO: [Synth 8-6157] synthesizing module 'main_design_monitor0_slice0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice0_1/synth/main_design_monitor0_slice0_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_monitor0_slice0_1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice0_1/synth/main_design_monitor0_slice0_1.v:53]
-INFO: [Synth 8-3491] module 'main_design_monitor0_slice1_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice1_1/synth/main_design_monitor0_slice1_1.v:53' bound to instance 'monitor1_slice1' of component 'main_design_monitor0_slice1_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5530]
+INFO: [Synth 8-3491] module 'main_design_monitor0_slice1_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice1_1/synth/main_design_monitor0_slice1_1.v:53' bound to instance 'monitor1_slice1' of component 'main_design_monitor0_slice1_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5604]
 INFO: [Synth 8-6157] synthesizing module 'main_design_monitor0_slice1_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice1_1/synth/main_design_monitor0_slice1_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_monitor0_slice1_1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_monitor0_slice1_1/synth/main_design_monitor0_slice1_1.v:53]
-INFO: [Synth 8-3491] module 'main_design_noip_ctrl_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_ctrl_0_0_stub.vhdl:6' bound to instance 'noip_ctrl_0' of component 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5536]
-INFO: [Synth 8-638] synthesizing module 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_ctrl_0_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'main_design_noip_lvds_stream_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_0_stub.vhdl:6' bound to instance 'noip_lvds_stream_0' of component 'main_design_noip_lvds_stream_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5572]
-INFO: [Synth 8-638] synthesizing module 'main_design_noip_lvds_stream_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'main_design_noip_lvds_stream_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_1_stub.vhdl:6' bound to instance 'noip_lvds_stream_1' of component 'main_design_noip_lvds_stream_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5598]
-INFO: [Synth 8-638] synthesizing module 'main_design_noip_lvds_stream_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_1_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'main_design_proc_sys_reset_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'main_design_proc_sys_reset_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5624]
-INFO: [Synth 8-638] synthesizing module 'main_design_proc_sys_reset_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_proc_sys_reset_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'main_design_processing_system7_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'main_design_processing_system7_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5637]
-INFO: [Synth 8-638] synthesizing module 'main_design_processing_system7_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_processing_system7_0_0_stub.vhdl:126]
+INFO: [Synth 8-3491] module 'main_design_noip_ctrl_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_ctrl_0_0_stub.vhdl:6' bound to instance 'noip_ctrl_0' of component 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5610]
+INFO: [Synth 8-638] synthesizing module 'main_design_noip_ctrl_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_ctrl_0_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'main_design_noip_lvds_stream_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_0_stub.vhdl:6' bound to instance 'noip_lvds_stream_0' of component 'main_design_noip_lvds_stream_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5646]
+INFO: [Synth 8-638] synthesizing module 'main_design_noip_lvds_stream_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'main_design_noip_lvds_stream_0_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_1_stub.vhdl:6' bound to instance 'noip_lvds_stream_1' of component 'main_design_noip_lvds_stream_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5679]
+INFO: [Synth 8-638] synthesizing module 'main_design_noip_lvds_stream_0_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_noip_lvds_stream_0_1_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'main_design_proc_sys_reset_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'main_design_proc_sys_reset_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5712]
+INFO: [Synth 8-638] synthesizing module 'main_design_proc_sys_reset_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_proc_sys_reset_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'main_design_processing_system7_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'main_design_processing_system7_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5725]
+INFO: [Synth 8-638] synthesizing module 'main_design_processing_system7_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_processing_system7_0_0_stub.vhdl:126]
 INFO: [Synth 8-638] synthesizing module 'main_design_ps7_0_axi_periph_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3610]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_XM9VZQ' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:725]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_XM9VZQ' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:725]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1S2SH48' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:955]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1S2SH48' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:955]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_15E0VTY' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1076]
-INFO: [Synth 8-3491] module 'main_design_auto_pc_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'main_design_auto_pc_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1259]
-INFO: [Synth 8-638] synthesizing module 'main_design_auto_pc_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'main_design_auto_pc_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'main_design_auto_pc_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1259]
+INFO: [Synth 8-638] synthesizing module 'main_design_auto_pc_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_15E0VTY' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:1076]
-INFO: [Synth 8-3491] module 'main_design_xbar_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_1_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4011]
-INFO: [Synth 8-638] synthesizing module 'main_design_xbar_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-33254-nothon-Swift-SF314-57/realtime/main_design_xbar_1_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'main_design_xbar_1' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_1_stub.vhdl:6' bound to instance 'xbar' of component 'main_design_xbar_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4011]
+INFO: [Synth 8-638] synthesizing module 'main_design_xbar_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/.Xil/Vivado-68920-nothon-Swift-SF314-57/realtime/main_design_xbar_1_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 'main_design_ps7_0_axi_periph_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:3610]
-INFO: [Synth 8-3491] module 'main_design_xlconcat_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_0/synth/main_design_xlconcat_0_0.v:53' bound to instance 'trigger0_concat' of component 'main_design_xlconcat_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5841]
+INFO: [Synth 8-3491] module 'main_design_xlconcat_0_0' declared at '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_0/synth/main_design_xlconcat_0_0.v:53' bound to instance 'trigger0_concat' of component 'main_design_xlconcat_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:5929]
 INFO: [Synth 8-6157] synthesizing module 'main_design_xlconcat_0_0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_0/synth/main_design_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_xlconcat_0_0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xlconcat_0_0/synth/main_design_xlconcat_0_0.v:53]
 INFO: [Synth 8-256] done synthesizing module 'main_design' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd:4156]
@@ -300,18 +304,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_6_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2285.098 ; gain = 521.652 ; free physical = 146 ; free virtual = 16422
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2288.117 ; gain = 521.684 ; free physical = 148 ; free virtual = 14016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2296.973 ; gain = 533.527 ; free physical = 142 ; free virtual = 16422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2299.992 ; gain = 533.559 ; free physical = 144 ; free virtual = 14013
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2296.973 ; gain = 533.527 ; free physical = 142 ; free virtual = 16422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2299.992 ; gain = 533.559 ; free physical = 144 ; free virtual = 14013
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2296.973 ; gain = 0.000 ; free physical = 143 ; free virtual = 16424
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2299.992 ; gain = 0.000 ; free physical = 145 ; free virtual = 14013
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -398,30 +402,40 @@ Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_desi
 Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_my_iobuf_0_0/main_design_my_iobuf_0_0/main_design_my_iobuf_0_0_in_context.xdc] for cell 'main_design_i/iobuf_I2C0_SDA'
 Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_iobuf_I2C0_SDA_0/main_design_iobuf_I2C0_SDA_0/main_design_iobuf_I2C0_SDA_0_in_context.xdc] for cell 'main_design_i/iobuf_I2C0_SCL'
 Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_iobuf_I2C0_SDA_0/main_design_iobuf_I2C0_SDA_0/main_design_iobuf_I2C0_SDA_0_in_context.xdc] for cell 'main_design_i/iobuf_I2C0_SCL'
+Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_in_context.xdc] for cell 'main_design_i/fifo_generator_0'
+Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_in_context.xdc] for cell 'main_design_i/fifo_generator_0'
+Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1/main_design_fifo_generator_0_0_in_context.xdc] for cell 'main_design_i/fifo_generator_1'
+Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1/main_design_fifo_generator_0_0_in_context.xdc] for cell 'main_design_i/fifo_generator_1'
 Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc]
+WARNING: [Vivado 12-508] No pins matched 'main_design_i/noip_lvds_stream_0/U0/lvds_word_ready_reg/Q'. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc:151]
+WARNING: [Vivado 12-508] No pins matched 'main_design_i/noip_lvds_stream_0/U0/lvds_word_ready_reg/Q'. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc:151]
+WARNING: [Vivado 12-507] No nets matched 'main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT[0]'. [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc:153]
 Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_design_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/constrs_1/new/elab_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2366.941 ; gain = 0.000 ; free physical = 243 ; free virtual = 16418
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2369.961 ; gain = 0.000 ; free physical = 231 ; free virtual = 13945
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2366.941 ; gain = 0.000 ; free physical = 243 ; free virtual = 16418
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2369.961 ; gain = 0.000 ; free physical = 231 ; free virtual = 13945
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'main_design_i/lvds_clkin_0_ibuf' at clock pin 'IBUF_DS_P[0]' is different from the actual clock period '2.778', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'main_design_i/lvds_clkin_1_ibuf' at clock pin 'IBUF_DS_P[0]' is different from the actual clock period '2.778', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2366.941 ; gain = 603.496 ; free physical = 241 ; free virtual = 16417
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2369.961 ; gain = 603.527 ; free physical = 186 ; free virtual = 13953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 241 ; free virtual = 16417
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 186 ; free virtual = 13953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -792,11 +806,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/lvds_sync_0_inverte
 Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/hdmi_ctrl_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/iobuf_I2C0_SDA. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/iobuf_I2C0_SCL. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/fifo_generator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/fifo_generator_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 241 ; free virtual = 16417
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 191 ; free virtual = 13958
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 234 ; free virtual = 16411
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 189 ; free virtual = 13958
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -819,25 +835,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 235 ; free virtual = 16417
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 201 ; free virtual = 13975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 205 ; free virtual = 16427
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 224 ; free virtual = 13999
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 205 ; free virtual = 16426
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 224 ; free virtual = 13999
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 206 ; free virtual = 16428
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 224 ; free virtual = 13999
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -855,37 +871,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -912,30 +928,32 @@ Report BlackBoxes:
 |15    |main_design_xbar_1                 |         1|
 |16    |main_design_auto_pc_0              |         1|
 |17    |main_design_axi_dma_0_0            |         1|
-|18    |main_design_hdmi_ctrl_0_0          |         1|
-|19    |main_design_iobuf_I2C0_SDA_0       |         1|
-|20    |main_design_my_iobuf_0_0           |         1|
-|21    |main_design_util_ds_buf_0_2        |         1|
-|22    |main_design_lvds_clkin_0_ibuf_4    |         1|
-|23    |main_design_util_vector_logic_0_0  |         1|
-|24    |main_design_lvds_data_0_inverter_0 |         1|
-|25    |main_design_lvds_sync_0_ibuf1_0    |         1|
-|26    |main_design_lvds_dout0_0_ibuf_3    |         1|
-|27    |main_design_lvds_dout0_0_ibuf_0    |         1|
-|28    |main_design_lvds_dout1_0_ibuf_3    |         1|
-|29    |main_design_lvds_dout0_0_ibuf_1    |         1|
-|30    |main_design_lvds_dout2_0_ibuf_1    |         1|
-|31    |main_design_lvds_dout1_0_ibuf_1    |         1|
-|32    |main_design_lvds_dout3_0_ibuf_1    |         1|
-|33    |main_design_lvds_clkin_0_ibuf_1    |         1|
-|34    |main_design_lvds_sync_1_inverter_0 |         1|
-|35    |main_design_lvds_sync_0_ibuf_1     |         1|
-|36    |main_design_lvds_data_1_inverter_0 |         1|
-|37    |main_design_noip_ctrl_0_0          |         1|
-|38    |main_design_noip_lvds_stream_0_0   |         1|
-|39    |main_design_noip_lvds_stream_0_1   |         1|
-|40    |main_design_proc_sys_reset_0_0     |         1|
-|41    |main_design_processing_system7_0_0 |         1|
+|18    |main_design_fifo_generator_0_0     |         1|
+|19    |main_design_fifo_generator_0_1     |         1|
+|20    |main_design_hdmi_ctrl_0_0          |         1|
+|21    |main_design_iobuf_I2C0_SDA_0       |         1|
+|22    |main_design_my_iobuf_0_0           |         1|
+|23    |main_design_util_ds_buf_0_2        |         1|
+|24    |main_design_lvds_clkin_0_ibuf_4    |         1|
+|25    |main_design_util_vector_logic_0_0  |         1|
+|26    |main_design_lvds_data_0_inverter_0 |         1|
+|27    |main_design_lvds_sync_0_ibuf1_0    |         1|
+|28    |main_design_lvds_dout0_0_ibuf_3    |         1|
+|29    |main_design_lvds_dout0_0_ibuf_0    |         1|
+|30    |main_design_lvds_dout1_0_ibuf_3    |         1|
+|31    |main_design_lvds_dout0_0_ibuf_1    |         1|
+|32    |main_design_lvds_dout2_0_ibuf_1    |         1|
+|33    |main_design_lvds_dout1_0_ibuf_1    |         1|
+|34    |main_design_lvds_dout3_0_ibuf_1    |         1|
+|35    |main_design_lvds_clkin_0_ibuf_1    |         1|
+|36    |main_design_lvds_sync_1_inverter_0 |         1|
+|37    |main_design_lvds_sync_0_ibuf_1     |         1|
+|38    |main_design_lvds_data_1_inverter_0 |         1|
+|39    |main_design_noip_ctrl_0_0          |         1|
+|40    |main_design_noip_lvds_stream_0_0   |         1|
+|41    |main_design_noip_lvds_stream_0_1   |         1|
+|42    |main_design_proc_sys_reset_0_0     |         1|
+|43    |main_design_processing_system7_0_0 |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
@@ -955,59 +973,61 @@ Report Cell Usage:
 |11    |main_design_auto_us_df_1_bbox           |     1|
 |12    |main_design_auto_us_df_2_bbox           |     1|
 |13    |main_design_axi_dma_0_0_bbox            |     1|
-|14    |main_design_hdmi_ctrl_0_0_bbox          |     1|
-|15    |main_design_iobuf_I2C0_SDA_0_bbox       |     1|
-|16    |main_design_lvds_clkin_0_ibuf_1_bbox    |     1|
-|17    |main_design_lvds_clkin_0_ibuf_4_bbox    |     1|
-|18    |main_design_lvds_data_0_inverter_0_bbox |     1|
-|19    |main_design_lvds_data_1_inverter_0_bbox |     1|
-|20    |main_design_lvds_dout0_0_ibuf_0_bbox    |     1|
-|21    |main_design_lvds_dout0_0_ibuf_1_bbox    |     1|
-|22    |main_design_lvds_dout0_0_ibuf_3_bbox    |     1|
-|23    |main_design_lvds_dout1_0_ibuf_1_bbox    |     1|
-|24    |main_design_lvds_dout1_0_ibuf_3_bbox    |     1|
-|25    |main_design_lvds_dout2_0_ibuf_1_bbox    |     1|
-|26    |main_design_lvds_dout3_0_ibuf_1_bbox    |     1|
-|27    |main_design_lvds_sync_0_ibuf1_0_bbox    |     1|
-|28    |main_design_lvds_sync_0_ibuf_1_bbox     |     1|
-|29    |main_design_lvds_sync_1_inverter_0_bbox |     1|
-|30    |main_design_my_iobuf_0_0_bbox           |     1|
-|31    |main_design_noip_ctrl_0_0_bbox          |     1|
-|32    |main_design_noip_lvds_stream_0_0_bbox   |     1|
-|33    |main_design_noip_lvds_stream_0_1_bbox   |     1|
-|34    |main_design_proc_sys_reset_0_0_bbox     |     1|
-|35    |main_design_processing_system7_0_0_bbox |     1|
-|36    |main_design_util_ds_buf_0_2_bbox        |     1|
-|37    |main_design_util_vector_logic_0_0_bbox  |     1|
-|38    |main_design_xbar_1_bbox                 |     1|
-|39    |main_design_xbar_2_bbox                 |     1|
-|40    |main_design_xbar_3_bbox                 |     1|
-|41    |main_design_xbar_4_bbox                 |     1|
-|42    |IBUF                                    |     5|
-|43    |OBUF                                    |    41|
+|14    |main_design_fifo_generator_0_0_bbox     |     1|
+|15    |main_design_fifo_generator_0_1_bbox     |     1|
+|16    |main_design_hdmi_ctrl_0_0_bbox          |     1|
+|17    |main_design_iobuf_I2C0_SDA_0_bbox       |     1|
+|18    |main_design_lvds_clkin_0_ibuf_1_bbox    |     1|
+|19    |main_design_lvds_clkin_0_ibuf_4_bbox    |     1|
+|20    |main_design_lvds_data_0_inverter_0_bbox |     1|
+|21    |main_design_lvds_data_1_inverter_0_bbox |     1|
+|22    |main_design_lvds_dout0_0_ibuf_0_bbox    |     1|
+|23    |main_design_lvds_dout0_0_ibuf_1_bbox    |     1|
+|24    |main_design_lvds_dout0_0_ibuf_3_bbox    |     1|
+|25    |main_design_lvds_dout1_0_ibuf_1_bbox    |     1|
+|26    |main_design_lvds_dout1_0_ibuf_3_bbox    |     1|
+|27    |main_design_lvds_dout2_0_ibuf_1_bbox    |     1|
+|28    |main_design_lvds_dout3_0_ibuf_1_bbox    |     1|
+|29    |main_design_lvds_sync_0_ibuf1_0_bbox    |     1|
+|30    |main_design_lvds_sync_0_ibuf_1_bbox     |     1|
+|31    |main_design_lvds_sync_1_inverter_0_bbox |     1|
+|32    |main_design_my_iobuf_0_0_bbox           |     1|
+|33    |main_design_noip_ctrl_0_0_bbox          |     1|
+|34    |main_design_noip_lvds_stream_0_0_bbox   |     1|
+|35    |main_design_noip_lvds_stream_0_1_bbox   |     1|
+|36    |main_design_proc_sys_reset_0_0_bbox     |     1|
+|37    |main_design_processing_system7_0_0_bbox |     1|
+|38    |main_design_util_ds_buf_0_2_bbox        |     1|
+|39    |main_design_util_vector_logic_0_0_bbox  |     1|
+|40    |main_design_xbar_1_bbox                 |     1|
+|41    |main_design_xbar_2_bbox                 |     1|
+|42    |main_design_xbar_3_bbox                 |     1|
+|43    |main_design_xbar_4_bbox                 |     1|
+|44    |IBUF                                    |     5|
+|45    |OBUF                                    |    41|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.945 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.965 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 39 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2374.945 ; gain = 541.531 ; free physical = 208 ; free virtual = 16430
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2374.953 ; gain = 611.500 ; free physical = 208 ; free virtual = 16430
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2377.965 ; gain = 541.562 ; free physical = 231 ; free virtual = 14006
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2377.973 ; gain = 611.531 ; free physical = 231 ; free virtual = 14006
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2374.953 ; gain = 0.000 ; free physical = 537 ; free virtual = 16761
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2377.973 ; gain = 0.000 ; free physical = 526 ; free virtual = 14306
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.953 ; gain = 0.000 ; free physical = 534 ; free virtual = 16759
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2377.973 ; gain = 0.000 ; free physical = 526 ; free virtual = 14307
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 4feb9721
+Synth Design complete | Checksum: a175b813
 INFO: [Common 17-83] Releasing license: Synthesis
-178 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+182 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 2374.953 ; gain = 960.008 ; free physical = 534 ; free virtual = 16759
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2068.556; main = 1709.159; forked = 465.280
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3471.789; main = 2374.949; forked = 1096.840
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2398.957 ; gain = 0.000 ; free physical = 534 ; free virtual = 16758
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 2377.973 ; gain = 968.977 ; free physical = 526 ; free virtual = 14307
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2073.627; main = 1766.188; forked = 426.029
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3411.426; main = 2377.969; forked = 1033.457
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2401.977 ; gain = 0.000 ; free physical = 525 ; free virtual = 14306
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 24 10:17:11 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 11:50:16 2024...

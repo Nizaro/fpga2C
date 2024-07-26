@@ -1,0 +1,78 @@
+// ****************************************************
+// * Tutorial for dma_sim
+// ****************************************************
+//
+// ****************************************************
+//
+// Contents:
+//   1) Prerequisites
+//   2) Tutorial - Running the simulation
+//   3) Known Issues
+//   4) Misc
+//
+// ****************************************************
+// 
+// 1) Prerequisites
+//
+//    - Install Vivado 2013.2
+//    - Obtain and install a license for the AXI BFM IP
+//    - Read the AXI Reference Guide - 
+//        http://www.xilinx.com/support/documentation/ip_documentation/ug761_axi_reference_guide.pdf
+//    - Read the AXI DMA Product Guide - 
+//        http://www.xilinx.com/support/documentation/ip_documentation/axi_dma/v7_0/pg021_axi_dma.pdf
+//    - Read the AXI BFM Product Guide - 
+//        http://www.xilinx.com/support/documentation/ip_documentation/cdn_axi_bfm/v4_1/pg129-cdn-axi-bfm.pdf
+//
+// ****************************************************
+//
+// 2) Tutorial - Running the simulation
+//
+//     a. Launch Vivado 2013.2 and navigate to the 
+//        ./dma_sim_v1_0/tcl directory in the tcl
+//        console.
+//     b. Execute this command from the tcl console:
+//          source dma_sim_v1_0.tcl
+//        This will create and open a new Vivado 
+//        project for you.
+//     c. Launch Modelsim by executing this command
+//        from the tcl console:
+//          vsim
+//     c. When Modelsim launches, navigate to the
+//        ./dma_sim_v1_0/sim directory in the console.
+//     d. Execute these commands from the Modelsim
+//        console:
+//          do com.do
+//          do sim.do
+//
+// ****************************************************
+//
+// 3) Known Issues
+//
+//    - load_bit.tcl may fail for 32-bit machines... I
+//      haven't tested it
+//
+// ****************************************************
+//
+// 4) Misc
+//
+//    - Before running step d. above, make sure that
+//      your libraries are properly mapped otherwise
+//      you will get an error like this:
+//        "Library unisim not found."
+//
+//    - If you receive an error like this:
+//        # ** Error: (vsim-3193) Load of
+//          "C:/Xilinx/Vivado/2013.2/ids_lite/ISE/lib/nt64/libxil_vsim.dll"
+//          failed: DLL dependent library not found.
+//        # ** Error: (vsim-PLI-3002) Failed to load
+//          PLI object file
+//          "C:/Xilinx/Vivado/2013.2/ids_lite/ISE/lib/nt64/libxil_vsim.dll".
+//      it means that your $XILINX environment variable
+//      is not properly set up. Make sure to launch
+//      Modelsim from a Xilinx command prompt with the
+//      same architecture (32 or 64 bit) that was used
+//      to generate the Vivado project
+//
+//
+//
+// ****************************************************

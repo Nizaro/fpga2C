@@ -1,0 +1,185 @@
+// ****************************************************
+// * Introduction for dma_ex_polled
+// ****************************************************
+//
+//   The Zynq All Programable SoC provides ultimate
+// flexibility for the embedded system designer. It
+// enables the design of high complexity and high
+// performance systems through tight integration
+// of custom hardware with a processor system. With
+// this flexibility comes added complexity which
+// requires hardware and software engineers to work 
+// closely together to properly design the interface
+// between the custom hardware and the processor
+// system.
+//
+//   In order to take full advantage of the Zynq
+// platform, you need to be able to move data between
+// the custom hardware (PL) and the processor system
+// (PS). A common question for designers new to the
+// platform is simply: What is the best way to move
+// high-throughput data from my custom peripheral
+// to DDR? Of course, with such a simple question
+// comes a simple answer: It depends! (The engineer's
+// favorite answer!)
+//
+//   Taking a first high-level look at the Zynq
+// architecture, the system designer is often inclined
+// to utilize the PS DMA Controller for high-throughput
+// data transfer between PL and PS. After all, its free
+// and would save some PL resources, right? While that
+// is true, the 'subtle' assumption here is that there
+// is a high-throughput path from PL to PS that is
+// accessible from the DMAC. As it turns out, this is
+// not the case.
+//
+//   Looking closer at the system block diagram for the
+// Zynq device, it becomes apparent that there are
+// really 3 main interfaces between the PL and the PS:
+// GP, HP, and ACP ports. For the purposes of this
+// discussion, we will focus only on the GP and HP
+// ports. Take a hard look at the Interconnect Block
+// Diagram (Figure 5-1 in UG585 from June 28, 2013).
+// In particular, note the flow of data from HP ports
+// to DDR. Now find the DMA Controller and realize that
+// it is a master on the Central Interconnect. Finally,
+// follow the datapath from the GP ports to DDR. See
+// the problem?
+//
+//   There are a few notable bottlenecks on the path
+// from the GP ports to DDR (when compared to the path
+// from the HP ports to DDR). First, you should notice
+// that the HP path only has one interconnect to go
+// through but the GP has two. You should also notice
+// that the Memory Interconnect has two separate ports
+// that can master on the memory controller whereas
+// the Central Interconnect only has one. See how the
+// Master Interconnect is only 32-bits wide? That's
+// another bottleneck. The HP path also has FIFOs on
+// each of the HP ports to queue up commands.
+//
+//   Get the picture? If you don't understand why any
+// of those things present a bottleneck, please study
+// the AXI Reference Guide (UG761).
+//
+//   The last thing to note is that, since the DMAC is
+// only a master on the Central Interconnect, it cannot
+// control data from the HP ports (there are no HP
+// slave ports anyway!)
+//
+//   Hopefully by now you understand why the DMA
+// Controller is not the best choice for 
+// high-throughput data transfer from PL to PS. That is
+// not to say that the PS DMAC is useless... it's
+// simply lower performance.
+//
+//   Now that we've presented the problems with using
+// the DMAC, lets take a look at the solution: fabric
+// DMA controllers.
+//
+//   At this point, it is clear that we need to use
+// the HP ports to get the most performance. This means
+// we will need to use a DMA controller in the fabric
+// to access DDR via the HP ports. Fortunately, Xilinx
+// provides several IP cores for this purpose. The
+// question now becomes: Which one do I use?! Looking
+// at the Xilinx IP offering, I see several options:
+// AXI DMA, AXI CDMA, AXI VDMA, AXI Datamover and AXI
+// Streaming FIFO. Which one is the best for my
+// application? Once again... it depends!
+//
+//   Rather than forcing you to read the lengthy
+// documentation on each of these cores, I'll give a
+// brief synopsis of each core to point you in the
+// right direction.
+//
+//   The AXI Datamover and the AXI Streaming FIFO are
+// the simplest cores. The former should be used for
+// applications requiring hardware control over the
+// DMA requests and/or custom DMA controllers with
+// specific needs. This will allow you the most control,
+// but will require the most work to set up and use. It
+// should only be considered for expert users. The AXI
+// Streaming FIFO is simply a FIFO with an AXI Stream
+// interface on one side and an AXI (or AXI Lite)
+// interface on the other. The software will need to
+// initiate every single request. This is probably
+// also not going to be the best choice for
+// high-performance applications because it will
+// require quite a lot of processor intervention which
+// will degrade overall system performance.
+//
+//   The AXI DMA and AXI CDMA will be the most useful
+// for the majority of high-performance applications
+// (with the exception of video/imaging). The main
+// difference between these two cores is that the AXI
+// DMA has an AXI Streaming interface whereas the AXI
+// CDMA has an AXI interface. Therefore, the AXI DMA
+// would be preferable in applications with large
+// amounts of streaming-type data such as ADC/DAC
+// interfaces, ethernet, etc. The CDMA is commonly used
+// in PCIe systems, for example, because the PCIe to
+// AXI Bridge provides an AXI Interface.
+//
+//   Finally, if you are using video/imaging data,
+// the AXI VDMA is what you want. This core allows the
+// user to easily transfer two-dimensional data.
+//
+//   The most commonly used cores would be the AXI DMA,
+// CDMA, and VDMA. The latter two are well covered in
+// a variety of application notes and documentation.
+// Therefore, the purpose of this design is to present
+// a starting point for a design utilizing the AXI DMA
+// core.
+//
+//   This design provides an example of interfacing
+// IP cores and custom logic with the AXI DMA core
+// and transferring data to/from memory over the HP
+// ports. Note that this design itself is not intended
+// to showcase maximum memory/interconnect bandwidth.
+// However, it is instead useful for the designer new
+// to Xilinx, Zynq, AXI, ARM, DMA, etc. who is learning
+// how to bring up and use this core in their system.
+//
+//   The design uses a simple counter to drive the
+// S2MM channel of the AXI DMA. Counter data is sent
+// into and then read out of memory, and is finally
+// sent out the MM2S channel to an AXI Streaming FIFO.
+// The data received by the AXI Streaming FIFO is
+// verified against the counter data. The ARM controls
+// DMA transfers via GP ports by accessing the AXI DMA
+// core through its AXI Lite interface. It uses simple
+// polling of the status register to manage DMA
+// transfers. Refer to bd_polled.bmp for block diagram
+// illustration of the design.
+// 
+//   This design comes with two tutorials. Tutorial 1
+// shows how to use a pre-canned bitstream and elf
+// file to program the device and run the application.
+// It will likely only be useful for verifying hardware
+// setup. Tutorial 2 first steps you through creating
+// the Vivado hardware project and generating a
+// bitstream. It then shows you how to export this to
+// SDK, create the software project, and compile the
+// elf binary. Finally, you are shown how to configure
+// the PL with the bitstream and load the elf into
+// memory for execution by the processor.
+//
+//   The tutorials have been tested on the ZC702 and
+// the Zedboard. However, it should be easily ported
+// to any other Zynq platform due to the fact that
+// no external pins are used.
+//
+// Next time: adding interrupts!
+//
+// ****************************************************
+//
+// References: 
+//   - Zynq-7000 All Programmable SoC Technical Reference Manual 
+//       http://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-7000-TRM.pdf
+//   - AXI Reference Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/ug761_axi_reference_guide.pdf
+//   - AXI DMA Product Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/axi_dma/v7_0/pg021_axi_dma.pdf
+//
+// ****************************************************

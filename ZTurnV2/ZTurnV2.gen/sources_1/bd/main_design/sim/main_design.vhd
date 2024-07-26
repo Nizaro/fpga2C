@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Wed Jul 24 10:11:04 2024
+--Date        : Fri Jul 26 11:41:49 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4148,7 +4148,7 @@ entity main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=66,numReposBlks=49,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=6,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=6,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main_design : entity is "main_design.hwdef";
 end main_design;
@@ -4301,6 +4301,13 @@ architecture STRUCTURE of main_design is
     trigger0 : out STD_LOGIC;
     monitor0 : in STD_LOGIC;
     monitor1 : in STD_LOGIC;
+    fifo_srst : out STD_LOGIC;
+    fifo_full : in STD_LOGIC;
+    fifo_din : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    fifo_wr_en : out STD_LOGIC;
+    fifo_empty : in STD_LOGIC;
+    fifo_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    fifo_rd_en : out STD_LOGIC;
     s00_axis_aclk : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     s00_axis_tready : out STD_LOGIC;
@@ -4362,6 +4369,13 @@ architecture STRUCTURE of main_design is
     trigger0 : out STD_LOGIC;
     monitor0 : in STD_LOGIC;
     monitor1 : in STD_LOGIC;
+    fifo_srst : out STD_LOGIC;
+    fifo_full : in STD_LOGIC;
+    fifo_din : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    fifo_wr_en : out STD_LOGIC;
+    fifo_empty : in STD_LOGIC;
+    fifo_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    fifo_rd_en : out STD_LOGIC;
     s00_axis_aclk : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     s00_axis_tready : out STD_LOGIC;
@@ -4665,6 +4679,30 @@ architecture STRUCTURE of main_design is
     T : in STD_LOGIC
   );
   end component main_design_iobuf_I2C0_SDA_0;
+  component main_design_fifo_generator_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    srst : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    wr_en : in STD_LOGIC;
+    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    full : out STD_LOGIC;
+    empty : out STD_LOGIC
+  );
+  end component main_design_fifo_generator_0_0;
+  component main_design_fifo_generator_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    srst : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    wr_en : in STD_LOGIC;
+    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    full : out STD_LOGIC;
+    empty : out STD_LOGIC
+  );
+  end component main_design_fifo_generator_0_1;
   signal IBUF_DS_N_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4848,12 +4886,26 @@ architecture STRUCTURE of main_design is
   signal noip_ctrl_0_vdd18_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
   signal noip_ctrl_0_vdd33_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
   signal noip_ctrl_0_vddpix_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
+  signal noip_lvds_stream_0_fifo_read_EMPTY : STD_LOGIC;
+  signal noip_lvds_stream_0_fifo_read_RD_DATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal noip_lvds_stream_0_fifo_read_RD_EN : STD_LOGIC;
+  signal noip_lvds_stream_0_fifo_srst : STD_LOGIC;
+  signal noip_lvds_stream_0_fifo_write_FULL : STD_LOGIC;
+  signal noip_lvds_stream_0_fifo_write_WR_DATA : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal noip_lvds_stream_0_fifo_write_WR_EN : STD_LOGIC;
   signal noip_lvds_stream_0_trigger0 : STD_LOGIC;
   signal noip_lvds_stream_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal noip_lvds_stream_1_M00_AXIS_TLAST : STD_LOGIC;
   signal noip_lvds_stream_1_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal noip_lvds_stream_1_M00_AXIS_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal noip_lvds_stream_1_M00_AXIS_TVALID : STD_LOGIC;
+  signal noip_lvds_stream_1_fifo_read_EMPTY : STD_LOGIC;
+  signal noip_lvds_stream_1_fifo_read_RD_DATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal noip_lvds_stream_1_fifo_read_RD_EN : STD_LOGIC;
+  signal noip_lvds_stream_1_fifo_srst : STD_LOGIC;
+  signal noip_lvds_stream_1_fifo_write_FULL : STD_LOGIC;
+  signal noip_lvds_stream_1_fifo_write_WR_DATA : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal noip_lvds_stream_1_fifo_write_WR_EN : STD_LOGIC;
   signal noip_lvds_stream_1_trigger0 : STD_LOGIC;
   signal noip_miso_1 : STD_LOGIC;
   signal noip_monitor0_1 : STD_LOGIC_VECTOR ( 0 to 1 );
@@ -5364,6 +5416,28 @@ axis_interconnect_1: entity work.main_design_axis_interconnect_1_0
       S01_AXIS_tstrb(3 downto 0) => noip_lvds_stream_1_M00_AXIS_TSTRB(3 downto 0),
       S01_AXIS_tvalid(0) => noip_lvds_stream_1_M00_AXIS_TVALID
     );
+fifo_generator_0: component main_design_fifo_generator_0_0
+     port map (
+      clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
+      din(63 downto 0) => noip_lvds_stream_0_fifo_write_WR_DATA(63 downto 0),
+      dout(31 downto 0) => noip_lvds_stream_0_fifo_read_RD_DATA(31 downto 0),
+      empty => noip_lvds_stream_0_fifo_read_EMPTY,
+      full => noip_lvds_stream_0_fifo_write_FULL,
+      rd_en => noip_lvds_stream_0_fifo_read_RD_EN,
+      srst => noip_lvds_stream_0_fifo_srst,
+      wr_en => noip_lvds_stream_0_fifo_write_WR_EN
+    );
+fifo_generator_1: component main_design_fifo_generator_0_1
+     port map (
+      clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
+      din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
+      dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
+      empty => noip_lvds_stream_1_fifo_read_EMPTY,
+      full => noip_lvds_stream_1_fifo_write_FULL,
+      rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
+      srst => noip_lvds_stream_1_fifo_srst,
+      wr_en => noip_lvds_stream_1_fifo_write_WR_EN
+    );
 hdmi_ctrl_0: component main_design_hdmi_ctrl_0_0
      port map (
       hdmi_data(15 downto 0) => hdmi_ctrl_0_hdmi_data(15 downto 0),
@@ -5571,6 +5645,13 @@ noip_ctrl_0: component main_design_noip_ctrl_0_0
     );
 noip_lvds_stream_0: component main_design_noip_lvds_stream_0_0
      port map (
+      fifo_din(63 downto 0) => noip_lvds_stream_0_fifo_write_WR_DATA(63 downto 0),
+      fifo_dout(31 downto 0) => noip_lvds_stream_0_fifo_read_RD_DATA(31 downto 0),
+      fifo_empty => noip_lvds_stream_0_fifo_read_EMPTY,
+      fifo_full => noip_lvds_stream_0_fifo_write_FULL,
+      fifo_rd_en => noip_lvds_stream_0_fifo_read_RD_EN,
+      fifo_srst => noip_lvds_stream_0_fifo_srst,
+      fifo_wr_en => noip_lvds_stream_0_fifo_write_WR_EN,
       lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
       lvds_data(0) => util_vector_logic_0_Res(3),
       lvds_data(1) => util_vector_logic_0_Res(2),
@@ -5597,6 +5678,13 @@ noip_lvds_stream_0: component main_design_noip_lvds_stream_0_0
     );
 noip_lvds_stream_1: component main_design_noip_lvds_stream_0_1
      port map (
+      fifo_din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
+      fifo_dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
+      fifo_empty => noip_lvds_stream_1_fifo_read_EMPTY,
+      fifo_full => noip_lvds_stream_1_fifo_write_FULL,
+      fifo_rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
+      fifo_srst => noip_lvds_stream_1_fifo_srst,
+      fifo_wr_en => noip_lvds_stream_1_fifo_write_WR_EN,
       lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
       lvds_data(0) => lvds_data_1_inverter_Res(3),
       lvds_data(1) => lvds_data_1_inverter_Res(2),

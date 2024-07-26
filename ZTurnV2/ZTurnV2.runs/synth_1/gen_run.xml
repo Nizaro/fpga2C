@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1721808986" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="main_design_wrapper_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1721987374" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main_design.dcp">
   <File Type="RDS-DCP" Name="main_design_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="main_design_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="main_design_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="main_design_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="main_design_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="main_design_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="main_design_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="main_design_wrapper.tcl"/>
+  <File Type="RDS-UTIL" Name="main_design_wrapper_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="main_design_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="main_design_wrapper.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/my_iobuf.v">
@@ -67,22 +64,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slid_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_k_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_iobuf_I2C0_SDA_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_my_iobuf_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_ss_slidr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_hdmi_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_auto_us_df_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_iobuf_I2C0_SDA_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_fifo_generator_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_my_iobuf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_fifo_generator_0_0"/>
 </GenRun>

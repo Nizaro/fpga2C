@@ -1,0 +1,110 @@
+// ****************************************************
+// * Release Notes for dma_ex_sg
+// ****************************************************
+//
+// ****************************************************
+//
+// Contents:
+//   1) Revision History
+//   2) Directory Structure
+//   3) Known Issues
+//   4) Misc
+//
+// ****************************************************
+//
+// 1) Revision History
+//
+//    - v1_0 - 17 October 2013
+//      * Initial Release
+//      * Hardware verification on Zedboard
+//
+// ****************************************************
+//
+// 2) Directory Structure
+//
+//    dma_ex_sg_v1_0 - Project root directory
+//     |
+//     |
+//     +-- bin - Pre-canned binaries
+//     |    |
+//     |    |
+//     |    +-- dma_ex_sg.elf - PS software executable
+//     |    |
+//     |    |
+//     |    +-- system.bit - PL hardware bitstream
+//     |
+//     |
+//     +-- doc - Documentation for project
+//     |    |
+//     |    |
+//     |    +-- bd_sg.bmp - Block diagram of design
+//     |    |
+//     |    |
+//     |    +-- intro.txt - Introduction to the design
+//     |    |
+//     |    |
+//     |    +-- tutorial.txt - Tutorial for using the design
+//     |
+//     |
+//     +-- proj - Vivado project
+//     |
+//     |
+//     +-- src
+//     |    |
+//     |    |
+//     |    +-- dma_ex_sg_v1_0_top.v - Top level wrapper and implementation of counter
+//     |
+//     |
+//     +-- sw
+//     |    |
+//     |    |
+//     |    +-- dma.c - Source for DMA initialization and operations
+//     |    |
+//     |    |
+//     |    +-- dma.h - Header for DMA initialization and operations
+//     |    |
+//     |    |
+//     |    +-- hello_world.c - Main source for software application
+//     |    |
+//     |    |
+//     |    +-- isr.c - Source for interrupt service routines
+//     |    |
+//     |    |
+//     |    +-- isr.h - Header for interrupt service routines
+//     |
+//     |
+//     +-- tcl
+//     |    |
+//     |    |
+//     |    +-- bd.tcl - TCL for the IPI block diagram
+//     |    |
+//     |    |
+//     |    +-- create_archive.tcl - Cleanup extraneous files and create archive of project
+//     |    |
+//     |    |
+//     |    +-- dma_ex_sg_v1_0.tcl - Create Vivado project for dma_ex_sg design
+//     |    |
+//     |    |
+//     |    +-- load_bit.tcl - Load the pre-canned bitstream into the PL
+//     |    |
+//     |    |
+//     |    +-- ps7_init.tcl - Configuration of the PS
+//     |
+//     |
+//     +-- release_notes.txt - This file
+//
+// ****************************************************
+//
+// 3) Known Issues
+//
+//    - Create_archive.tcl doesn't cleanup files
+/       correctly. It also doesn't create archive with
+//      the correct directory structure.
+//    - load_bit.tcl may fail for 32-bit machines... I
+//      haven't tested it.
+//
+// ****************************************************
+//
+// 4) Misc
+//
+// ****************************************************

@@ -1,0 +1,95 @@
+// ****************************************************
+// * Release Notes for dma_sim
+// ****************************************************
+//
+// ****************************************************
+//
+// Contents:
+//   1) Revision History
+//   2) Directory Structure
+//   3) Known Issues
+//   4) Misc
+//
+// ****************************************************
+//
+// 1) Revision History
+//
+//    - v1_0 - 24 September 2013
+//      * Initial Release
+//      * Simulation verification using Modelsim
+//
+// ****************************************************
+//
+// 2) Directory Structure
+//
+//    dma_sim_v1_0 - Project root directory
+//     |
+//     |
+//     +-- doc - Documentation for project
+//     |    |
+//     |    |
+//     |    +-- bd_sim.bmp - Block diagram of design
+//     |    |
+//     |    |
+//     |    +-- intro.txt - Introduction to the design
+//     |    |
+//     |    |
+//     |    +-- tutorial.txt - Tutorial for using the design
+//     |
+//     |
+//     +-- proj - Vivado project
+//     |
+//     |
+//     +-- sim
+//     |    |
+//     |    |
+//     |    +-- com.do - Modelsim compilation script
+//     |    |
+//     |    |
+//     |    +-- sim.do - Modelsim simulation script
+//     |    |
+//     |    |
+//     |    +-- wave.do - Modelsim waveform script
+//     |
+//     |
+//     +-- src
+//     |    |
+//     |    |
+//     |    +-- dma_sim_v1_0_top.v - Top level wrapper
+//     |
+//     |
+//     +-- tb
+//     |    |
+//     |    |
+//     |    +-- dma_sim_v1_0_top_tb.v - Testbench for simulation of top level
+//     |
+//     |
+//     +-- tcl
+//     |    |
+//     |    |
+//     |    +-- bd.tcl - TCL for the IPI block diagram
+//     |    |
+//     |    |
+//     |    +-- create_archive.tcl - Cleanup extraneous files and create archive of project
+//     |    |
+//     |    |
+//     |    +-- dma_sim_v1_0.tcl - Create Vivado project for dma_sim design
+//     |
+//     |
+//     +-- release_notes.txt - This file
+//
+// ****************************************************
+//
+// 3) Known Issues
+//
+//    - Create_archive.tcl doesn't cleanup files
+/       correctly. It also doesn't create archive with
+//      the correct directory structure.
+//    - load_bit.tcl may fail for 32-bit machines... I
+//      haven't tested it.
+//
+// ****************************************************
+//
+// 4) Misc
+//
+// ****************************************************

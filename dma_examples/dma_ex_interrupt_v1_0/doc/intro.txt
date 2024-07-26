@@ -1,0 +1,48 @@
+// ****************************************************
+// * Introduction for dma_ex_interrupt
+// ****************************************************
+//
+//   Having gone through the first part of this
+// project (the dma_ex_polled example design... if you
+// haven't, go do that one first!), you should now
+// understand the motivation for using the AXI DMA
+// controller in your Zynq design. You should also now
+// be familiar with some of the basics of setting up
+// and using the core in a simple design that
+// interfaces to custom logic and other IP cores. At
+// this point, we are ready to take the next step
+// towards making this design more practical for real
+// systems: add interrupts!
+//
+//   The first part of this project used simple
+// processor polling to manage the DMA transfers.
+// That's great for small testcases and for learning,
+// but is very wasteful for any practical system
+// and degrades overall system performance. 
+//
+//   The second part of the project builds upon the
+// first part, adding interrupt-based control of the
+// DMA controller. The datapath is identical to the
+// first part, but it now shows you how to set up the
+// hardware for interrupt control and how to use the
+// software API. Refer to bd_interrupt.bmp for block
+// diagram illustration of the design.
+//
+//   The tutorials have been tested on the ZC702 and
+// the Zedboard. However, it should be easily ported
+// to any other Zynq platform due to the fact that
+// no external pins are used.
+//
+// Next time: Scatter Gather mode!
+//
+// ****************************************************
+//
+// References: 
+//   - Zynq-7000 All Programmable SoC Technical Reference Manual 
+//       http://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-7000-TRM.pdf
+//   - AXI Reference Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/ug761_axi_reference_guide.pdf
+//   - AXI DMA Product Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/axi_dma/v7_0/pg021_axi_dma.pdf
+//
+// ****************************************************

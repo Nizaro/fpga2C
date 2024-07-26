@@ -40,7 +40,7 @@ vcom -work xpm -  \
 "/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xil_defaultlib -  \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_sim_netlist.vhdl" \
 
 vcom -work lib_cdc_v1_0_3 -  \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -54,9 +54,9 @@ vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_util_ds_buf_0_2/util_ds_buf.vhd" \
 "../../../bd/main_design/ip/main_design_util_ds_buf_0_2/sim/main_design_util_ds_buf_0_2.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ipshared/5c45/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/5c45/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/5c45/hdl/noip_lvds_stream.vhd" \
+"../../../bd/main_design/ipshared/8b31/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/8b31/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/8b31/hdl/noip_lvds_stream.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -2008  \
@@ -117,6 +117,9 @@ vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_hdmi_ctrl_0_0/sim/main_design_hdmi_ctrl_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_my_iobuf_0_0/sim/main_design_my_iobuf_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_iobuf_I2C0_SDA_0/sim/main_design_iobuf_I2C0_SDA_0.vhd" \
+"../../../bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
+"../../../bd/main_design/sim/main_design.vhd" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \
@@ -134,7 +137,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/m
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl" \
-"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

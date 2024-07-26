@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="814.409 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,108.410 ns"></ZoomEndTime>
-      <Cursor1Time time="1,038.972 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="596.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="20" />
    <wvobject type="logic" fp_name="/tb_lvds_stream/lvds_clk">
@@ -39,6 +39,10 @@
       <obj_property name="ElementShortName">lvds_data[0:3]</obj_property>
       <obj_property name="ObjectShortName">lvds_data[0:3]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/bitslip">
+      <obj_property name="ElementShortName">bitslip</obj_property>
+      <obj_property name="ObjectShortName">bitslip</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_lvds_stream/workLVDS_stream/lvds_word_ready">
       <obj_property name="ElementShortName">lvds_word_ready</obj_property>
@@ -68,10 +72,6 @@
    <wvobject type="array" fp_name="/tb_lvds_stream/fifo_din">
       <obj_property name="ElementShortName">fifo_din[63:0]</obj_property>
       <obj_property name="ObjectShortName">fifo_din[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/bitslip">
-      <obj_property name="ElementShortName">bitslip</obj_property>
-      <obj_property name="ObjectShortName">bitslip</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/tb_lvds_stream/workLVDS_stream/im_line">
       <obj_property name="ElementShortName">im_line</obj_property>

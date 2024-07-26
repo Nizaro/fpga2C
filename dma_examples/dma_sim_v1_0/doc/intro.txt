@@ -1,0 +1,50 @@
+// ****************************************************
+// * Introduction for dma_sim
+// ****************************************************
+//
+//   The first step that a hardware designer typically
+// wants to take when designing with a new piece of IP
+// is to simulate it. For embedded IP, it is common to
+// use a processor system to control or configure the
+// core. This presents a challenge for the hardware
+// designer because HDL simulation of processor systems
+// can take unreasonably long due to inherent overhead
+// such as processor boot, memory calibration and
+// initialization, etc.
+// 
+//   To solve this problem, the designer can remove
+// the processor system and replace it with some
+// simpler module for configuring the IP or otherwise
+// responding to the system. This will involve writing
+// HDL code that models the bus transactions of
+// interest.
+//
+//   Fortunately, Xilinx provides AXI Bus Functional
+// Model (BFM) IP which can be used for exactly this
+// purpose. The AXI BFMs are capable as acting as 
+// AXI4, AXI4 Lite, or AXI4 Stream masters or slaves.
+// Therefore, they can either drive or respond to
+// the system behavior. They provide a simple API
+// that a hardware designer can use in his testbench
+// to initiate or consume different types of AXI
+// transactions.
+// 
+//   In this example design, AXI BFM IP are used
+// for two purposes: 1) Generating AXI Lite requests
+// to configure the AXI DMA to begin transfers to
+// memory and 2) Consuming DMA memory-mapped requests,
+// essentially acting as a pseudo memory model.
+//
+// Note: The AXI BFM cores require a license.
+//
+// ****************************************************
+//
+// References: 
+//   - AXI Reference Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/ug761_axi_reference_guide.pdf
+//   - AXI DMA Product Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/axi_dma/v7_0/pg021_axi_dma.pdf
+//   - AXI BFM Product Guide
+//       http://www.xilinx.com/support/documentation/ip_documentation/cdn_axi_bfm/v4_1/pg129-cdn-axi-bfm.pdf
+//
+// ****************************************************

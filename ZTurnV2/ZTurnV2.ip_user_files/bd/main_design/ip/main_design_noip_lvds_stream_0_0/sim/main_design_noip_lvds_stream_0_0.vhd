@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:noip_lvds_stream:1.0
--- IP Revision: 4
+-- IP Revision: 16
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -61,6 +61,13 @@ ENTITY main_design_noip_lvds_stream_0_0 IS
     trigger0 : OUT STD_LOGIC;
     monitor0 : IN STD_LOGIC;
     monitor1 : IN STD_LOGIC;
+    fifo_srst : OUT STD_LOGIC;
+    fifo_full : IN STD_LOGIC;
+    fifo_din : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+    fifo_wr_en : OUT STD_LOGIC;
+    fifo_empty : IN STD_LOGIC;
+    fifo_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    fifo_rd_en : OUT STD_LOGIC;
     s00_axis_aclk : IN STD_LOGIC;
     s00_axis_aresetn : IN STD_LOGIC;
     s00_axis_tready : OUT STD_LOGIC;
@@ -84,7 +91,6 @@ ARCHITECTURE main_design_noip_lvds_stream_0_0_arch OF main_design_noip_lvds_stre
   COMPONENT noip_lvds_stream IS
     GENERIC (
       C_M00_AXIS_TDATA_WIDTH : INTEGER;
-      C_M00_AXIS_START_COUNT : INTEGER;
       C_S00_AXIS_TDATA_WIDTH : INTEGER;
       SENSOR_BIT_LENGTH : INTEGER;
       IM_WIDTH : INTEGER;
@@ -97,6 +103,13 @@ ARCHITECTURE main_design_noip_lvds_stream_0_0_arch OF main_design_noip_lvds_stre
       trigger0 : OUT STD_LOGIC;
       monitor0 : IN STD_LOGIC;
       monitor1 : IN STD_LOGIC;
+      fifo_srst : OUT STD_LOGIC;
+      fifo_full : IN STD_LOGIC;
+      fifo_din : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+      fifo_wr_en : OUT STD_LOGIC;
+      fifo_empty : IN STD_LOGIC;
+      fifo_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      fifo_rd_en : OUT STD_LOGIC;
       s00_axis_aclk : IN STD_LOGIC;
       s00_axis_aresetn : IN STD_LOGIC;
       s00_axis_tready : OUT STD_LOGIC;
@@ -115,8 +128,14 @@ ARCHITECTURE main_design_noip_lvds_stream_0_0_arch OF main_design_noip_lvds_stre
   END COMPONENT noip_lvds_stream;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_din: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 fifo_write WR_DATA";
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_dout: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 fifo_read RD_DATA";
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_empty: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 fifo_read EMPTY";
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_full: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 fifo_write FULL";
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_rd_en: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 fifo_read RD_EN";
+  ATTRIBUTE X_INTERFACE_INFO OF fifo_wr_en: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 fifo_write WR_EN";
   ATTRIBUTE X_INTERFACE_PARAMETER OF lvds_clk: SIGNAL IS "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF lvds_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock";
+  ATTRIBUTE X_INTERFACE_INFO OF lvds_clk: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF lvds_data: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_data";
   ATTRIBUTE X_INTERFACE_INFO OF lvds_sync: SIGNAL IS "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync";
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_aclk: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
@@ -143,9 +162,8 @@ BEGIN
   U0 : noip_lvds_stream
     GENERIC MAP (
       C_M00_AXIS_TDATA_WIDTH => 32,
-      C_M00_AXIS_START_COUNT => 32,
       C_S00_AXIS_TDATA_WIDTH => 32,
-      SENSOR_BIT_LENGTH => 10,
+      SENSOR_BIT_LENGTH => 8,
       IM_WIDTH => 1280,
       IM_HEIGHT => 1024
     )
@@ -156,6 +174,13 @@ BEGIN
       trigger0 => trigger0,
       monitor0 => monitor0,
       monitor1 => monitor1,
+      fifo_srst => fifo_srst,
+      fifo_full => fifo_full,
+      fifo_din => fifo_din,
+      fifo_wr_en => fifo_wr_en,
+      fifo_empty => fifo_empty,
+      fifo_dout => fifo_dout,
+      fifo_rd_en => fifo_rd_en,
       s00_axis_aclk => s00_axis_aclk,
       s00_axis_aresetn => s00_axis_aresetn,
       s00_axis_tready => s00_axis_tready,

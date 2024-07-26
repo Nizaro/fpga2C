@@ -78,6 +78,7 @@ architecture tb of tb_lvds_stream is
 	signal sync_word : pixel;
 	type t_ldw is array(0 to 3) of pixel;
 	signal data_words : t_ldw;
+	signal tb_wdready : std_logic := '0';
 	signal i_lvds : integer := 0;
 	constant ROI_width_kernels : integer := 4;
 	constant ROI_height : integer := 4;
@@ -290,6 +291,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 			lvds_sync <= '0';
 			lvds_data <= (others => '0');
 			i_lvds <= 0;
+			tb_wdready <= '0';
 		elsif(falling_edge(lvds_clk)) then
 			lvds_sync <= sync_word(i_lvds);
 			for c in 0 to 3 loop
@@ -298,7 +300,9 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 			
 			if(i_lvds > SENSOR_BIT_LENGTH-2) then
 				i_lvds <= 0;
+				tb_wdready <= '1';
 			else
+				tb_wdready <= '0';
 				i_lvds <= i_lvds + 1;
 			end if;
 		end if;

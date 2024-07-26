@@ -5,3 +5,4 @@
 - status color LED
 - settings in flash
 - ILA?
+- MIO reset (for ENET)?

@@ -148,6 +148,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports hdmi_vsync]
 create_clock -period 2.778 -name lvds_clk_0 -waveform {0.000 1.389} [get_ports {lvds_clk_0_p[0]}]
 create_clock -period 2.778 -name lvds_clk_1 -waveform {0.000 1.389} [get_ports {lvds_clk_1_p[0]}]
 
-create_generated_clock -name lvds_word_ready_0 -source [get_pins main_design_i/noip_lvds_stream_0/U0/lvds_word_ready_reg/Q] -divide_by 8 -add -master_clock [get_clocks lvds_clk_0] [get_pins main_design_i/noip_lvds_stream_0/U0/lvds_word_ready_reg/Q]
-
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT[0]]

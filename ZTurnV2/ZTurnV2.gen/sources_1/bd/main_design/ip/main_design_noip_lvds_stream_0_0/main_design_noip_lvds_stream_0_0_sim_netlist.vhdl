@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Fri Jul 26 10:54:18 2024
+-- Date        : Mon Jul 29 09:08:38 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0_sim_netlist.vhdl
@@ -107,6 +107,12 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \FSM_onehot_DState[8]_i_11_n_0\ : STD_LOGIC;
   signal \FSM_onehot_DState[8]_i_12_n_0\ : STD_LOGIC;
   signal \FSM_onehot_DState[8]_i_13_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_14_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_15_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_16_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_17_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_18_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_DState[8]_i_19_n_0\ : STD_LOGIC;
   signal \FSM_onehot_DState[8]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_DState[8]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_DState[8]_i_3_n_0\ : STD_LOGIC;
@@ -125,7 +131,6 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \FSM_onehot_DState_reg_n_0_[6]\ : STD_LOGIC;
   signal \FSM_onehot_DState_reg_n_0_[7]\ : STD_LOGIC;
   signal \FSM_onehot_DState_reg_n_0_[8]\ : STD_LOGIC;
-  signal bitslip : STD_LOGIC;
   signal \bitslip[0]_i_2_n_0\ : STD_LOGIC;
   signal \bitslip[0]_i_3_n_0\ : STD_LOGIC;
   signal \bitslip[0]_i_4_n_0\ : STD_LOGIC;
@@ -134,16 +139,14 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \bitslip[2]_i_2_n_0\ : STD_LOGIC;
   signal \bitslip[2]_i_3_n_0\ : STD_LOGIC;
   signal \bitslip[2]_i_4_n_0\ : STD_LOGIC;
+  signal \bitslip[3]_i_1_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_3_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_4_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_5_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_6_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_7_n_0\ : STD_LOGIC;
   signal \bitslip[3]_i_8_n_0\ : STD_LOGIC;
-  signal \bitslip_reg_n_0_[0]\ : STD_LOGIC;
-  signal \bitslip_reg_n_0_[1]\ : STD_LOGIC;
-  signal \bitslip_reg_n_0_[2]\ : STD_LOGIC;
-  signal \bitslip_reg_n_0_[3]\ : STD_LOGIC;
+  signal \bitslip__0\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal data0 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \fifo_din[0]_i_1_n_0\ : STD_LOGIC;
   signal \fifo_din[10]_i_1_n_0\ : STD_LOGIC;
@@ -207,7 +210,6 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \fifo_din[63]_i_1_n_0\ : STD_LOGIC;
   signal \fifo_din[63]_i_2_n_0\ : STD_LOGIC;
   signal \fifo_din[63]_i_3_n_0\ : STD_LOGIC;
-  signal \fifo_din[63]_i_4_n_0\ : STD_LOGIC;
   signal \fifo_din[6]_i_1_n_0\ : STD_LOGIC;
   signal \fifo_din[7]_i_1_n_0\ : STD_LOGIC;
   signal \fifo_din[8]_i_1_n_0\ : STD_LOGIC;
@@ -215,6 +217,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \^fifo_srst\ : STD_LOGIC;
   signal \^fifo_wr_en\ : STD_LOGIC;
   signal fifo_wr_en_i_1_n_0 : STD_LOGIC;
+  signal fifo_wr_en_i_2_n_0 : STD_LOGIC;
   signal findbitslip : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal i : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \i[0]_i_2_n_0\ : STD_LOGIC;
@@ -318,7 +321,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \i_reg_n_0_[7]\ : STD_LOGIC;
   signal \i_reg_n_0_[8]\ : STD_LOGIC;
   signal \i_reg_n_0_[9]\ : STD_LOGIC;
-  signal in19 : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal in20 : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal \kernel[0][0]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[0][1]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[0][2]_i_1_n_0\ : STD_LOGIC;
@@ -326,6 +329,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \kernel[0][4]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[0][5]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[0][6]_i_1_n_0\ : STD_LOGIC;
+  signal \kernel[0][7]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[0][7]_i_2_n_0\ : STD_LOGIC;
   signal \kernel[1][0]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[1][1]_i_1_n_0\ : STD_LOGIC;
@@ -334,6 +338,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \kernel[1][4]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[1][5]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[1][6]_i_1_n_0\ : STD_LOGIC;
+  signal \kernel[1][7]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[1][7]_i_2_n_0\ : STD_LOGIC;
   signal \kernel[2][0]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[2][1]_i_1_n_0\ : STD_LOGIC;
@@ -375,7 +380,6 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \kernel[6][5]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[6][6]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[6][7]_i_1_n_0\ : STD_LOGIC;
-  signal \kernel[6]_7\ : STD_LOGIC;
   signal \kernel[7][0]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[7][1]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[7][2]_i_1_n_0\ : STD_LOGIC;
@@ -384,7 +388,6 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \kernel[7][5]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[7][6]_i_1_n_0\ : STD_LOGIC;
   signal \kernel[7][7]_i_1_n_0\ : STD_LOGIC;
-  signal \kernel[7]_8\ : STD_LOGIC;
   signal \lvds_data_words_reg[1]_6\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \lvds_data_words_reg[2]_5\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \lvds_data_words_reg[3]_4\ : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -447,15 +450,15 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal \lvds_sync_word[4]_i_2_n_0\ : STD_LOGIC;
   signal \lvds_sync_word[5]_i_2_n_0\ : STD_LOGIC;
   signal \lvds_sync_word[6]_i_2_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_10_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_3_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_4_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_5_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_6_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_7_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_8_n_0\ : STD_LOGIC;
+  signal \lvds_sync_word[7]_i_9_n_0\ : STD_LOGIC;
   signal lvds_word_ready : STD_LOGIC;
-  signal lvds_word_ready_i_2_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_3_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_4_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_5_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_6_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_7_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_8_n_0 : STD_LOGIC;
-  signal lvds_word_ready_i_9_n_0 : STD_LOGIC;
   signal lvds_word_ready_reg_n_0 : STD_LOGIC;
   signal mux10_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal mux16_out : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -464,23 +467,25 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   signal mux7_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \nb_kernel[0]_i_1_n_0\ : STD_LOGIC;
   signal \nb_kernel[0]_i_2_n_0\ : STD_LOGIC;
+  signal \nb_kernel[0]_i_3_n_0\ : STD_LOGIC;
   signal \nb_kernel_reg_n_0_[0]\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 0 to 0 );
   signal pixel_polarity : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \pixel_polarity[0]_i_1_n_0\ : STD_LOGIC;
-  signal temp_sync_word32_in : STD_LOGIC;
+  signal temp_sync_word33_in : STD_LOGIC;
   signal \temp_sync_word3_inferred__0/i__carry_n_3\ : STD_LOGIC;
   signal \NLW_i_reg[31]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_i_reg[31]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_temp_sync_word3_inferred__0/i__carry_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_temp_sync_word3_inferred__0/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[5]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[7]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_10\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_11\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_2\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_9\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_12\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_14\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_16\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_17\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_6\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_7\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \FSM_onehot_DState[8]_i_8\ : label is "soft_lutpair26";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_DState_reg[0]\ : label is "rec_black:000001000,end_black:000010000,wait_black:000000100,idle:000000010,aligning:000000001,wait_ls:010000000,after_fe:100000000,rec_img:001000000,rec_id:000100000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_DState_reg[1]\ : label is "rec_black:000001000,end_black:000010000,wait_black:000000100,idle:000000010,aligning:000000001,wait_ls:010000000,after_fe:100000000,rec_img:001000000,rec_id:000100000";
@@ -491,108 +496,107 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   attribute FSM_ENCODED_STATES of \FSM_onehot_DState_reg[6]\ : label is "rec_black:000001000,end_black:000010000,wait_black:000000100,idle:000000010,aligning:000000001,wait_ls:010000000,after_fe:100000000,rec_img:001000000,rec_id:000100000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_DState_reg[7]\ : label is "rec_black:000001000,end_black:000010000,wait_black:000000100,idle:000000010,aligning:000000001,wait_ls:010000000,after_fe:100000000,rec_img:001000000,rec_id:000100000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_DState_reg[8]\ : label is "rec_black:000001000,end_black:000010000,wait_black:000000100,idle:000000010,aligning:000000001,wait_ls:010000000,after_fe:100000000,rec_img:001000000,rec_id:000100000";
-  attribute SOFT_HLUTNM of \bitslip[0]_i_3\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \bitslip[1]_i_3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \bitslip[0]_i_3\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bitslip[1]_i_3\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \bitslip[3]_i_4\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \bitslip[3]_i_5\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \bitslip[3]_i_6\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \fifo_din[0]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \fifo_din[10]_i_1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \fifo_din[11]_i_1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \fifo_din[12]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \fifo_din[13]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \fifo_din[14]_i_1\ : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \fifo_din[15]_i_1\ : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \fifo_din[16]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \fifo_din[17]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \fifo_din[18]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \fifo_din[19]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \fifo_din[1]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \fifo_din[20]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \fifo_din[21]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \fifo_din[22]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \fifo_din[23]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \fifo_din[24]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \fifo_din[25]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \fifo_din[26]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \fifo_din[27]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \fifo_din[28]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \fifo_din[29]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \fifo_din[2]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \fifo_din[30]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \fifo_din[31]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \fifo_din[32]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \fifo_din[33]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \fifo_din[34]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \fifo_din[35]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \fifo_din[36]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \fifo_din[37]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \fifo_din[38]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \fifo_din[39]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \fifo_din[3]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \fifo_din[40]_i_1\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \fifo_din[41]_i_1\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \fifo_din[42]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \fifo_din[43]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \fifo_din[44]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \fifo_din[45]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \fifo_din[46]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \fifo_din[47]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \fifo_din[48]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \fifo_din[49]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \fifo_din[4]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \fifo_din[50]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \fifo_din[51]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \fifo_din[52]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \fifo_din[53]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \fifo_din[54]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \fifo_din[55]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \fifo_din[56]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \fifo_din[57]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \fifo_din[58]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \fifo_din[59]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \fifo_din[5]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \fifo_din[60]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \fifo_din[61]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \fifo_din[62]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \fifo_din[63]_i_2\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \fifo_din[63]_i_4\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \fifo_din[6]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \fifo_din[7]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \fifo_din[8]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \fifo_din[9]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \i[0]_i_2\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \i[10]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \i[11]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \i[12]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \i[13]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \i[14]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \i[15]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \i[16]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \i[17]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \i[18]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \i[19]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \i[1]_i_2\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \i[20]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \i[21]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \i[22]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \i[23]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \i[24]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \i[25]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \i[26]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \i[27]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \i[28]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \i[29]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \i[2]_i_3\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \i[30]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \i[31]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \i[3]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \i[4]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \i[5]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \i[6]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \i[7]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \i[8]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \i[9]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \bitslip[3]_i_6\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \fifo_din[10]_i_1\ : label is "soft_lutpair106";
+  attribute SOFT_HLUTNM of \fifo_din[11]_i_1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \fifo_din[12]_i_1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \fifo_din[13]_i_1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \fifo_din[14]_i_1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \fifo_din[15]_i_1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \fifo_din[16]_i_1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \fifo_din[17]_i_1\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \fifo_din[18]_i_1\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \fifo_din[19]_i_1\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \fifo_din[1]_i_1\ : label is "soft_lutpair110";
+  attribute SOFT_HLUTNM of \fifo_din[20]_i_1\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \fifo_din[21]_i_1\ : label is "soft_lutpair100";
+  attribute SOFT_HLUTNM of \fifo_din[22]_i_1\ : label is "soft_lutpair100";
+  attribute SOFT_HLUTNM of \fifo_din[23]_i_1\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \fifo_din[24]_i_1\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \fifo_din[25]_i_1\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \fifo_din[26]_i_1\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \fifo_din[27]_i_1\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \fifo_din[28]_i_1\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \fifo_din[29]_i_1\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \fifo_din[2]_i_1\ : label is "soft_lutpair110";
+  attribute SOFT_HLUTNM of \fifo_din[30]_i_1\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \fifo_din[31]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \fifo_din[32]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \fifo_din[33]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \fifo_din[34]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \fifo_din[35]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \fifo_din[36]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \fifo_din[37]_i_1\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \fifo_din[38]_i_1\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \fifo_din[39]_i_1\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \fifo_din[3]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \fifo_din[40]_i_1\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \fifo_din[41]_i_1\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \fifo_din[42]_i_1\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \fifo_din[43]_i_1\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \fifo_din[44]_i_1\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \fifo_din[45]_i_1\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \fifo_din[46]_i_1\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \fifo_din[47]_i_1\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \fifo_din[48]_i_1\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \fifo_din[49]_i_1\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \fifo_din[4]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \fifo_din[50]_i_1\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \fifo_din[51]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \fifo_din[52]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \fifo_din[53]_i_1\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of \fifo_din[54]_i_1\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of \fifo_din[55]_i_1\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \fifo_din[56]_i_1\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \fifo_din[57]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \fifo_din[58]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \fifo_din[59]_i_1\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \fifo_din[5]_i_1\ : label is "soft_lutpair108";
+  attribute SOFT_HLUTNM of \fifo_din[60]_i_1\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \fifo_din[61]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \fifo_din[62]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \fifo_din[63]_i_2\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \fifo_din[6]_i_1\ : label is "soft_lutpair108";
+  attribute SOFT_HLUTNM of \fifo_din[7]_i_1\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \fifo_din[8]_i_1\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \fifo_din[9]_i_1\ : label is "soft_lutpair106";
+  attribute SOFT_HLUTNM of fifo_wr_en_i_2 : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \i[0]_i_2\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \i[10]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \i[11]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \i[12]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \i[13]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \i[14]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \i[15]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \i[16]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \i[17]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \i[18]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \i[19]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \i[1]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \i[20]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \i[21]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \i[22]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \i[23]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \i[24]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \i[25]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \i[26]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \i[27]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \i[28]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \i[29]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \i[2]_i_3\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \i[30]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \i[31]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \i[3]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \i[4]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \i[5]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \i[6]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \i[7]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \i[8]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \i[9]_i_1\ : label is "soft_lutpair68";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \i_reg[12]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \i_reg[16]_i_2\ : label is 35;
@@ -602,116 +606,118 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0_noip_lvds_stream is
   attribute ADDER_THRESHOLD of \i_reg[31]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \i_reg[4]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \i_reg[8]_i_2\ : label is 35;
-  attribute SOFT_HLUTNM of \kernel[0][0]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \kernel[0][1]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \kernel[0][2]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \kernel[0][3]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \kernel[0][4]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \kernel[0][5]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \kernel[0][6]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \kernel[0][7]_i_2\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \kernel[1][0]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \kernel[1][1]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \kernel[1][2]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \kernel[1][3]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \kernel[1][4]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \kernel[1][5]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \kernel[1][6]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \kernel[1][7]_i_2\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \kernel[2][0]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \kernel[2][1]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \kernel[2][2]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \kernel[2][3]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \kernel[2][4]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \kernel[2][5]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \kernel[2][6]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \kernel[2][7]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \kernel[3][0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \kernel[3][1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \kernel[3][2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \kernel[3][3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \kernel[3][4]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \kernel[3][5]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \kernel[3][6]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \kernel[3][7]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \kernel[4][0]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \kernel[4][1]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \kernel[4][2]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \kernel[4][3]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \kernel[4][4]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \kernel[4][5]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \kernel[4][6]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \kernel[4][7]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \kernel[5][0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \kernel[5][1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \kernel[5][2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \kernel[5][3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \kernel[5][4]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \kernel[5][5]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \kernel[5][6]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \kernel[5][7]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \kernel[6][0]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \kernel[6][1]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \kernel[6][2]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \kernel[6][3]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \kernel[6][4]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \kernel[6][5]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \kernel[6][6]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \kernel[6][7]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \kernel[7][0]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \kernel[7][1]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \kernel[7][2]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \kernel[7][3]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \kernel[7][4]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \kernel[7][5]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \kernel[7][6]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \kernel[7][7]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][0]_i_2\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][1]_i_2\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][2]_i_2\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][3]_i_2\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][4]_i_2\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][5]_i_2\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][6]_i_2\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][7]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][0]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][1]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][2]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][3]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][4]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][5]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][6]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][7]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][0]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][1]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][2]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][3]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][4]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][5]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][6]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][7]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][0]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][1]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][2]_i_1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][3]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][4]_i_1\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][5]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][6]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][7]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[0]_i_2\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[2]_i_3\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[3]_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \kernel[0][0]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \kernel[0][1]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \kernel[0][2]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \kernel[0][3]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \kernel[0][4]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \kernel[0][5]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \kernel[0][6]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \kernel[0][7]_i_2\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \kernel[1][0]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \kernel[1][1]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \kernel[1][2]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \kernel[1][3]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \kernel[1][4]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \kernel[1][5]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \kernel[1][6]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \kernel[1][7]_i_2\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \kernel[2][0]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \kernel[2][1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \kernel[2][2]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \kernel[2][3]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \kernel[2][4]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \kernel[2][5]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \kernel[2][6]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \kernel[2][7]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \kernel[3][0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \kernel[3][1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \kernel[3][2]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \kernel[3][3]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \kernel[3][4]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \kernel[3][5]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \kernel[3][6]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \kernel[3][7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \kernel[4][0]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \kernel[4][1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \kernel[4][2]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \kernel[4][3]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \kernel[4][4]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \kernel[4][5]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \kernel[4][6]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \kernel[4][7]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \kernel[5][0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \kernel[5][1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \kernel[5][2]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \kernel[5][3]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \kernel[5][4]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \kernel[5][5]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \kernel[5][6]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \kernel[5][7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \kernel[6][0]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \kernel[6][1]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \kernel[6][2]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \kernel[6][3]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \kernel[6][4]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \kernel[6][5]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \kernel[6][6]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \kernel[6][7]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \kernel[7][0]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \kernel[7][1]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \kernel[7][2]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \kernel[7][3]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \kernel[7][4]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \kernel[7][5]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \kernel[7][6]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \kernel[7][7]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][0]_i_2\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][1]_i_2\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][2]_i_2\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][3]_i_2\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][4]_i_2\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][5]_i_2\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][6]_i_2\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[0][7]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][0]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][1]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][2]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][3]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][4]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][5]_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][6]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[1][7]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][0]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][1]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][2]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][3]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][4]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][5]_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][6]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[2][7]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][0]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][1]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][2]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][3]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][4]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][5]_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][6]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_data_words[3][7]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[0]_i_2\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[2]_i_3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[3]_i_2\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[4]_i_3\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[6]_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[6]_i_2\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \lvds_read_process.temp_sync_word[7]_i_3\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \lvds_sync_word[0]_i_2\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \lvds_sync_word[2]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \lvds_sync_word[3]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \lvds_sync_word[4]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \lvds_sync_word[5]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \lvds_sync_word[5]_i_2\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \lvds_sync_word[6]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \lvds_sync_word[7]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \lvds_sync_word[0]_i_2\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \lvds_sync_word[2]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \lvds_sync_word[3]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \lvds_sync_word[4]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \lvds_sync_word[5]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \lvds_sync_word[5]_i_2\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \lvds_sync_word[6]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \lvds_sync_word[7]_i_2\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \nb_kernel[0]_i_3\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \pixel_polarity[0]_i_1\ : label is "soft_lutpair21";
 begin
   fifo_srst <= \^fifo_srst\;
   fifo_wr_en <= \^fifo_wr_en\;
@@ -733,133 +739,68 @@ begin
       I1 => \FSM_onehot_DState_reg_n_0_[7]\,
       O => \FSM_onehot_DState[5]_i_1_n_0\
     );
-\FSM_onehot_DState[7]_i_1\: unisim.vcomponents.LUT3
+\FSM_onehot_DState[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"04"
+      INIT => X"0000000000000200"
     )
         port map (
-      I0 => data0(0),
-      I1 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I2 => \fifo_din[63]_i_3_n_0\,
+      I0 => \FSM_onehot_DState_reg_n_0_[6]\,
+      I1 => data0(0),
+      I2 => \FSM_onehot_DState[8]_i_7_n_0\,
+      I3 => data0(7),
+      I4 => data0(4),
+      I5 => data0(6),
       O => \FSM_onehot_DState[7]_i_1_n_0\
     );
-\FSM_onehot_DState[8]_i_1\: unisim.vcomponents.LUT5
+\FSM_onehot_DState[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFAE"
+      INIT => X"FFFFFFFFEEEEFEEE"
     )
         port map (
       I0 => \FSM_onehot_DState[8]_i_3_n_0\,
-      I1 => \FSM_onehot_DState_reg_n_0_[0]\,
-      I2 => \FSM_onehot_DState[8]_i_4_n_0\,
-      I3 => \FSM_onehot_DState_reg_n_0_[5]\,
+      I1 => \FSM_onehot_DState[8]_i_4_n_0\,
+      I2 => lvds_word_ready_reg_n_0,
+      I3 => \FSM_onehot_DState_reg_n_0_[0]\,
       I4 => \FSM_onehot_DState[8]_i_5_n_0\,
+      I5 => \FSM_onehot_DState[8]_i_6_n_0\,
       O => \FSM_onehot_DState[8]_i_1_n_0\
     );
-\FSM_onehot_DState[8]_i_10\: unisim.vcomponents.LUT4
+\FSM_onehot_DState[8]_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF7"
+      INIT => X"FFFFFFFFFFFFFFEF"
+    )
+        port map (
+      I0 => data0(6),
+      I1 => data0(4),
+      I2 => data0(7),
+      I3 => \FSM_onehot_DState[8]_i_16_n_0\,
+      I4 => \FSM_onehot_DState[8]_i_17_n_0\,
+      I5 => data0(0),
+      O => \FSM_onehot_DState[8]_i_10_n_0\
+    );
+\FSM_onehot_DState[8]_i_11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000010"
     )
         port map (
       I0 => data0(5),
-      I1 => data0(3),
-      I2 => p_0_in(0),
-      I3 => data0(2),
-      O => \FSM_onehot_DState[8]_i_10_n_0\
+      I1 => data0(6),
+      I2 => \FSM_onehot_DState_reg_n_0_[2]\,
+      I3 => data0(3),
+      I4 => data0(0),
+      I5 => data0(7),
+      O => \FSM_onehot_DState[8]_i_11_n_0\
     );
-\FSM_onehot_DState[8]_i_11\: unisim.vcomponents.LUT2
+\FSM_onehot_DState[8]_i_12\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
         port map (
       I0 => p_0_in(0),
       I1 => data0(2),
-      O => \FSM_onehot_DState[8]_i_11_n_0\
-    );
-\FSM_onehot_DState[8]_i_12\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFEFF"
-    )
-        port map (
-      I0 => \FSM_onehot_DState[8]_i_13_n_0\,
-      I1 => \bitslip_reg_n_0_[0]\,
-      I2 => \bitslip_reg_n_0_[1]\,
-      I3 => data0(7),
-      I4 => data0(4),
-      I5 => data0(6),
       O => \FSM_onehot_DState[8]_i_12_n_0\
     );
-\FSM_onehot_DState[8]_i_13\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \bitslip_reg_n_0_[2]\,
-      I1 => \bitslip_reg_n_0_[3]\,
-      O => \FSM_onehot_DState[8]_i_13_n_0\
-    );
-\FSM_onehot_DState[8]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"C8"
-    )
-        port map (
-      I0 => data0(0),
-      I1 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I2 => \fifo_din[63]_i_3_n_0\,
-      O => \FSM_onehot_DState[8]_i_2_n_0\
-    );
-\FSM_onehot_DState[8]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAEAFFEAEA"
-    )
-        port map (
-      I0 => \FSM_onehot_DState_reg_n_0_[8]\,
-      I1 => data0(4),
-      I2 => \FSM_onehot_DState[8]_i_6_n_0\,
-      I3 => \fifo_din[63]_i_3_n_0\,
-      I4 => \FSM_onehot_DState_reg_n_0_[3]\,
-      I5 => data0(0),
-      O => \FSM_onehot_DState[8]_i_3_n_0\
-    );
-\FSM_onehot_DState[8]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \FSM_onehot_DState[8]_i_7_n_0\,
-      I1 => \FSM_onehot_DState[8]_i_8_n_0\,
-      I2 => \lvds_data_words_reg_n_0_[0][3]\,
-      I3 => \lvds_data_words_reg_n_0_[0][4]\,
-      I4 => \lvds_data_words_reg_n_0_[0][6]\,
-      I5 => \lvds_data_words_reg_n_0_[0][5]\,
-      O => \FSM_onehot_DState[8]_i_4_n_0\
-    );
-\FSM_onehot_DState[8]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000000C0A00"
-    )
-        port map (
-      I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => \FSM_onehot_DState[8]_i_9_n_0\,
-      I2 => data0(4),
-      I3 => data0(7),
-      I4 => data0(6),
-      I5 => \FSM_onehot_DState[8]_i_10_n_0\,
-      O => \FSM_onehot_DState[8]_i_5_n_0\
-    );
-\FSM_onehot_DState[8]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000100"
-    )
-        port map (
-      I0 => \FSM_onehot_DState[8]_i_11_n_0\,
-      I1 => data0(6),
-      I2 => data0(7),
-      I3 => \FSM_onehot_DState_reg_n_0_[2]\,
-      I4 => data0(3),
-      I5 => data0(5),
-      O => \FSM_onehot_DState[8]_i_6_n_0\
-    );
-\FSM_onehot_DState[8]_i_7\: unisim.vcomponents.LUT6
+\FSM_onehot_DState[8]_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFEFFFFFFF"
     )
@@ -869,10 +810,10 @@ begin
       I2 => p_0_in(0),
       I3 => data0(2),
       I4 => \lvds_data_words_reg_n_0_[0][0]\,
-      I5 => \FSM_onehot_DState[8]_i_12_n_0\,
-      O => \FSM_onehot_DState[8]_i_7_n_0\
+      I5 => \FSM_onehot_DState[8]_i_18_n_0\,
+      O => \FSM_onehot_DState[8]_i_13_n_0\
     );
-\FSM_onehot_DState[8]_i_8\: unisim.vcomponents.LUT4
+\FSM_onehot_DState[8]_i_14\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"DFFF"
     )
@@ -881,9 +822,136 @@ begin
       I1 => data0(3),
       I2 => data0(0),
       I3 => data0(5),
-      O => \FSM_onehot_DState[8]_i_8_n_0\
+      O => \FSM_onehot_DState[8]_i_14_n_0\
     );
-\FSM_onehot_DState[8]_i_9\: unisim.vcomponents.LUT4
+\FSM_onehot_DState[8]_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFBFFF"
+    )
+        port map (
+      I0 => \FSM_onehot_DState[8]_i_17_n_0\,
+      I1 => data0(3),
+      I2 => data0(5),
+      I3 => data0(7),
+      I4 => data0(4),
+      I5 => data0(6),
+      O => \FSM_onehot_DState[8]_i_15_n_0\
+    );
+\FSM_onehot_DState[8]_i_16\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => data0(3),
+      I1 => data0(5),
+      O => \FSM_onehot_DState[8]_i_16_n_0\
+    );
+\FSM_onehot_DState[8]_i_17\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => data0(2),
+      I1 => p_0_in(0),
+      O => \FSM_onehot_DState[8]_i_17_n_0\
+    );
+\FSM_onehot_DState[8]_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFEFF"
+    )
+        port map (
+      I0 => \FSM_onehot_DState[8]_i_19_n_0\,
+      I1 => \bitslip__0\(0),
+      I2 => \bitslip__0\(1),
+      I3 => data0(7),
+      I4 => data0(4),
+      I5 => data0(6),
+      O => \FSM_onehot_DState[8]_i_18_n_0\
+    );
+\FSM_onehot_DState[8]_i_19\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \bitslip__0\(2),
+      I1 => \bitslip__0\(3),
+      O => \FSM_onehot_DState[8]_i_19_n_0\
+    );
+\FSM_onehot_DState[8]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFEF00000000"
+    )
+        port map (
+      I0 => data0(0),
+      I1 => \FSM_onehot_DState[8]_i_7_n_0\,
+      I2 => data0(7),
+      I3 => data0(4),
+      I4 => data0(6),
+      I5 => \FSM_onehot_DState_reg_n_0_[6]\,
+      O => \FSM_onehot_DState[8]_i_2_n_0\
+    );
+\FSM_onehot_DState[8]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AA00AA00AA00AE00"
+    )
+        port map (
+      I0 => \FSM_onehot_DState_reg_n_0_[8]\,
+      I1 => \FSM_onehot_DState[8]_i_8_n_0\,
+      I2 => \FSM_onehot_DState[8]_i_9_n_0\,
+      I3 => lvds_word_ready_reg_n_0,
+      I4 => data0(4),
+      I5 => \FSM_onehot_DState[8]_i_7_n_0\,
+      O => \FSM_onehot_DState[8]_i_3_n_0\
+    );
+\FSM_onehot_DState[8]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"44440000F4440000"
+    )
+        port map (
+      I0 => \FSM_onehot_DState[8]_i_10_n_0\,
+      I1 => \FSM_onehot_DState_reg_n_0_[3]\,
+      I2 => \FSM_onehot_DState[8]_i_11_n_0\,
+      I3 => data0(4),
+      I4 => lvds_word_ready_reg_n_0,
+      I5 => \FSM_onehot_DState[8]_i_12_n_0\,
+      O => \FSM_onehot_DState[8]_i_4_n_0\
+    );
+\FSM_onehot_DState[8]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \FSM_onehot_DState[8]_i_13_n_0\,
+      I1 => \FSM_onehot_DState[8]_i_14_n_0\,
+      I2 => \lvds_data_words_reg_n_0_[0][3]\,
+      I3 => \lvds_data_words_reg_n_0_[0][4]\,
+      I4 => \lvds_data_words_reg_n_0_[0][6]\,
+      I5 => \lvds_data_words_reg_n_0_[0][5]\,
+      O => \FSM_onehot_DState[8]_i_5_n_0\
+    );
+\FSM_onehot_DState[8]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BA00"
+    )
+        port map (
+      I0 => \FSM_onehot_DState_reg_n_0_[5]\,
+      I1 => \FSM_onehot_DState[8]_i_15_n_0\,
+      I2 => \FSM_onehot_DState_reg_n_0_[6]\,
+      I3 => lvds_word_ready_reg_n_0,
+      O => \FSM_onehot_DState[8]_i_6_n_0\
+    );
+\FSM_onehot_DState[8]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFF7"
+    )
+        port map (
+      I0 => data0(5),
+      I1 => data0(3),
+      I2 => p_0_in(0),
+      I3 => data0(2),
+      O => \FSM_onehot_DState[8]_i_7_n_0\
+    );
+\FSM_onehot_DState[8]_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"BBB8"
     )
@@ -892,6 +960,15 @@ begin
       I1 => data0(0),
       I2 => \FSM_onehot_DState_reg_n_0_[1]\,
       I3 => \FSM_onehot_DState_reg_n_0_[7]\,
+      O => \FSM_onehot_DState[8]_i_8_n_0\
+    );
+\FSM_onehot_DState[8]_i_9\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => data0(7),
+      I1 => data0(6),
       O => \FSM_onehot_DState[8]_i_9_n_0\
     );
 \FSM_onehot_DState_reg[0]\: unisim.vcomponents.FDPE
@@ -899,7 +976,7 @@ begin
       INIT => '1'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       D => '0',
       PRE => \^fifo_srst\,
@@ -910,7 +987,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState[1]_i_1_n_0\,
@@ -921,7 +998,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState_reg_n_0_[1]\,
@@ -932,7 +1009,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState_reg_n_0_[2]\,
@@ -943,7 +1020,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState_reg_n_0_[3]\,
@@ -954,7 +1031,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState[5]_i_1_n_0\,
@@ -965,7 +1042,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState_reg_n_0_[5]\,
@@ -976,7 +1053,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState[7]_i_1_n_0\,
@@ -987,7 +1064,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \FSM_onehot_DState[8]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \FSM_onehot_DState[8]_i_2_n_0\,
@@ -1127,14 +1204,15 @@ begin
       I5 => data0(5),
       O => \bitslip[2]_i_4_n_0\
     );
-\bitslip[3]_i_1\: unisim.vcomponents.LUT2
+\bitslip[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"80"
     )
         port map (
-      I0 => \FSM_onehot_DState[8]_i_4_n_0\,
-      I1 => \FSM_onehot_DState_reg_n_0_[0]\,
-      O => bitslip
+      I0 => \FSM_onehot_DState[8]_i_5_n_0\,
+      I1 => lvds_word_ready_reg_n_0,
+      I2 => \FSM_onehot_DState_reg_n_0_[0]\,
+      O => \bitslip[3]_i_1_n_0\
     );
 \bitslip[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -1226,44 +1304,44 @@ begin
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => bitslip,
+      C => lvds_clk,
+      CE => \bitslip[3]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => findbitslip(0),
-      Q => \bitslip_reg_n_0_[0]\
+      Q => \bitslip__0\(0)
     );
 \bitslip_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => bitslip,
+      C => lvds_clk,
+      CE => \bitslip[3]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => findbitslip(1),
-      Q => \bitslip_reg_n_0_[1]\
+      Q => \bitslip__0\(1)
     );
 \bitslip_reg[2]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => bitslip,
+      C => lvds_clk,
+      CE => \bitslip[3]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => findbitslip(2),
-      Q => \bitslip_reg_n_0_[2]\
+      Q => \bitslip__0\(2)
     );
 \bitslip_reg[3]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => bitslip,
+      C => lvds_clk,
+      CE => \bitslip[3]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => findbitslip(3),
-      Q => \bitslip_reg_n_0_[3]\
+      Q => \bitslip__0\(3)
     );
 \fifo_din[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1271,7 +1349,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(0),
+      I1 => in20(0),
       O => \fifo_din[0]_i_1_n_0\
     );
 \fifo_din[10]_i_1\: unisim.vcomponents.LUT2
@@ -1280,7 +1358,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(10),
+      I1 => in20(10),
       O => \fifo_din[10]_i_1_n_0\
     );
 \fifo_din[11]_i_1\: unisim.vcomponents.LUT2
@@ -1289,7 +1367,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(11),
+      I1 => in20(11),
       O => \fifo_din[11]_i_1_n_0\
     );
 \fifo_din[12]_i_1\: unisim.vcomponents.LUT2
@@ -1298,7 +1376,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(12),
+      I1 => in20(12),
       O => \fifo_din[12]_i_1_n_0\
     );
 \fifo_din[13]_i_1\: unisim.vcomponents.LUT2
@@ -1307,7 +1385,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(13),
+      I1 => in20(13),
       O => \fifo_din[13]_i_1_n_0\
     );
 \fifo_din[14]_i_1\: unisim.vcomponents.LUT2
@@ -1316,7 +1394,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(14),
+      I1 => in20(14),
       O => \fifo_din[14]_i_1_n_0\
     );
 \fifo_din[15]_i_1\: unisim.vcomponents.LUT2
@@ -1325,7 +1403,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(15),
+      I1 => in20(15),
       O => \fifo_din[15]_i_1_n_0\
     );
 \fifo_din[16]_i_1\: unisim.vcomponents.LUT2
@@ -1334,7 +1412,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(16),
+      I1 => in20(16),
       O => \fifo_din[16]_i_1_n_0\
     );
 \fifo_din[17]_i_1\: unisim.vcomponents.LUT2
@@ -1343,7 +1421,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(17),
+      I1 => in20(17),
       O => \fifo_din[17]_i_1_n_0\
     );
 \fifo_din[18]_i_1\: unisim.vcomponents.LUT2
@@ -1352,7 +1430,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(18),
+      I1 => in20(18),
       O => \fifo_din[18]_i_1_n_0\
     );
 \fifo_din[19]_i_1\: unisim.vcomponents.LUT2
@@ -1361,7 +1439,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(19),
+      I1 => in20(19),
       O => \fifo_din[19]_i_1_n_0\
     );
 \fifo_din[1]_i_1\: unisim.vcomponents.LUT2
@@ -1370,7 +1448,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(1),
+      I1 => in20(1),
       O => \fifo_din[1]_i_1_n_0\
     );
 \fifo_din[20]_i_1\: unisim.vcomponents.LUT2
@@ -1379,7 +1457,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(20),
+      I1 => in20(20),
       O => \fifo_din[20]_i_1_n_0\
     );
 \fifo_din[21]_i_1\: unisim.vcomponents.LUT2
@@ -1388,7 +1466,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(21),
+      I1 => in20(21),
       O => \fifo_din[21]_i_1_n_0\
     );
 \fifo_din[22]_i_1\: unisim.vcomponents.LUT2
@@ -1397,7 +1475,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(22),
+      I1 => in20(22),
       O => \fifo_din[22]_i_1_n_0\
     );
 \fifo_din[23]_i_1\: unisim.vcomponents.LUT2
@@ -1406,7 +1484,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(23),
+      I1 => in20(23),
       O => \fifo_din[23]_i_1_n_0\
     );
 \fifo_din[24]_i_1\: unisim.vcomponents.LUT2
@@ -1415,7 +1493,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(24),
+      I1 => in20(24),
       O => \fifo_din[24]_i_1_n_0\
     );
 \fifo_din[25]_i_1\: unisim.vcomponents.LUT2
@@ -1424,7 +1502,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(25),
+      I1 => in20(25),
       O => \fifo_din[25]_i_1_n_0\
     );
 \fifo_din[26]_i_1\: unisim.vcomponents.LUT2
@@ -1433,7 +1511,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(26),
+      I1 => in20(26),
       O => \fifo_din[26]_i_1_n_0\
     );
 \fifo_din[27]_i_1\: unisim.vcomponents.LUT2
@@ -1442,7 +1520,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(27),
+      I1 => in20(27),
       O => \fifo_din[27]_i_1_n_0\
     );
 \fifo_din[28]_i_1\: unisim.vcomponents.LUT2
@@ -1451,7 +1529,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(28),
+      I1 => in20(28),
       O => \fifo_din[28]_i_1_n_0\
     );
 \fifo_din[29]_i_1\: unisim.vcomponents.LUT2
@@ -1460,7 +1538,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(29),
+      I1 => in20(29),
       O => \fifo_din[29]_i_1_n_0\
     );
 \fifo_din[2]_i_1\: unisim.vcomponents.LUT2
@@ -1469,7 +1547,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(2),
+      I1 => in20(2),
       O => \fifo_din[2]_i_1_n_0\
     );
 \fifo_din[30]_i_1\: unisim.vcomponents.LUT2
@@ -1478,7 +1556,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(30),
+      I1 => in20(30),
       O => \fifo_din[30]_i_1_n_0\
     );
 \fifo_din[31]_i_1\: unisim.vcomponents.LUT2
@@ -1487,7 +1565,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(31),
+      I1 => in20(31),
       O => \fifo_din[31]_i_1_n_0\
     );
 \fifo_din[32]_i_1\: unisim.vcomponents.LUT2
@@ -1496,7 +1574,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(32),
+      I1 => in20(32),
       O => \fifo_din[32]_i_1_n_0\
     );
 \fifo_din[33]_i_1\: unisim.vcomponents.LUT2
@@ -1505,7 +1583,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(33),
+      I1 => in20(33),
       O => \fifo_din[33]_i_1_n_0\
     );
 \fifo_din[34]_i_1\: unisim.vcomponents.LUT2
@@ -1514,7 +1592,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(34),
+      I1 => in20(34),
       O => \fifo_din[34]_i_1_n_0\
     );
 \fifo_din[35]_i_1\: unisim.vcomponents.LUT2
@@ -1523,7 +1601,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(35),
+      I1 => in20(35),
       O => \fifo_din[35]_i_1_n_0\
     );
 \fifo_din[36]_i_1\: unisim.vcomponents.LUT2
@@ -1532,7 +1610,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(36),
+      I1 => in20(36),
       O => \fifo_din[36]_i_1_n_0\
     );
 \fifo_din[37]_i_1\: unisim.vcomponents.LUT2
@@ -1541,7 +1619,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(37),
+      I1 => in20(37),
       O => \fifo_din[37]_i_1_n_0\
     );
 \fifo_din[38]_i_1\: unisim.vcomponents.LUT2
@@ -1550,7 +1628,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(38),
+      I1 => in20(38),
       O => \fifo_din[38]_i_1_n_0\
     );
 \fifo_din[39]_i_1\: unisim.vcomponents.LUT2
@@ -1559,7 +1637,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(39),
+      I1 => in20(39),
       O => \fifo_din[39]_i_1_n_0\
     );
 \fifo_din[3]_i_1\: unisim.vcomponents.LUT2
@@ -1568,7 +1646,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(3),
+      I1 => in20(3),
       O => \fifo_din[3]_i_1_n_0\
     );
 \fifo_din[40]_i_1\: unisim.vcomponents.LUT2
@@ -1577,7 +1655,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(40),
+      I1 => in20(40),
       O => \fifo_din[40]_i_1_n_0\
     );
 \fifo_din[41]_i_1\: unisim.vcomponents.LUT2
@@ -1586,7 +1664,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(41),
+      I1 => in20(41),
       O => \fifo_din[41]_i_1_n_0\
     );
 \fifo_din[42]_i_1\: unisim.vcomponents.LUT2
@@ -1595,7 +1673,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(42),
+      I1 => in20(42),
       O => \fifo_din[42]_i_1_n_0\
     );
 \fifo_din[43]_i_1\: unisim.vcomponents.LUT2
@@ -1604,7 +1682,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(43),
+      I1 => in20(43),
       O => \fifo_din[43]_i_1_n_0\
     );
 \fifo_din[44]_i_1\: unisim.vcomponents.LUT2
@@ -1613,7 +1691,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(44),
+      I1 => in20(44),
       O => \fifo_din[44]_i_1_n_0\
     );
 \fifo_din[45]_i_1\: unisim.vcomponents.LUT2
@@ -1622,7 +1700,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(45),
+      I1 => in20(45),
       O => \fifo_din[45]_i_1_n_0\
     );
 \fifo_din[46]_i_1\: unisim.vcomponents.LUT2
@@ -1631,7 +1709,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(46),
+      I1 => in20(46),
       O => \fifo_din[46]_i_1_n_0\
     );
 \fifo_din[47]_i_1\: unisim.vcomponents.LUT2
@@ -1640,7 +1718,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(47),
+      I1 => in20(47),
       O => \fifo_din[47]_i_1_n_0\
     );
 \fifo_din[48]_i_1\: unisim.vcomponents.LUT2
@@ -1649,7 +1727,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(48),
+      I1 => in20(48),
       O => \fifo_din[48]_i_1_n_0\
     );
 \fifo_din[49]_i_1\: unisim.vcomponents.LUT2
@@ -1658,7 +1736,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(49),
+      I1 => in20(49),
       O => \fifo_din[49]_i_1_n_0\
     );
 \fifo_din[4]_i_1\: unisim.vcomponents.LUT2
@@ -1667,7 +1745,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(4),
+      I1 => in20(4),
       O => \fifo_din[4]_i_1_n_0\
     );
 \fifo_din[50]_i_1\: unisim.vcomponents.LUT2
@@ -1676,7 +1754,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(50),
+      I1 => in20(50),
       O => \fifo_din[50]_i_1_n_0\
     );
 \fifo_din[51]_i_1\: unisim.vcomponents.LUT2
@@ -1685,7 +1763,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(51),
+      I1 => in20(51),
       O => \fifo_din[51]_i_1_n_0\
     );
 \fifo_din[52]_i_1\: unisim.vcomponents.LUT2
@@ -1694,7 +1772,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(52),
+      I1 => in20(52),
       O => \fifo_din[52]_i_1_n_0\
     );
 \fifo_din[53]_i_1\: unisim.vcomponents.LUT2
@@ -1703,7 +1781,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(53),
+      I1 => in20(53),
       O => \fifo_din[53]_i_1_n_0\
     );
 \fifo_din[54]_i_1\: unisim.vcomponents.LUT2
@@ -1712,7 +1790,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(54),
+      I1 => in20(54),
       O => \fifo_din[54]_i_1_n_0\
     );
 \fifo_din[55]_i_1\: unisim.vcomponents.LUT2
@@ -1721,7 +1799,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(55),
+      I1 => in20(55),
       O => \fifo_din[55]_i_1_n_0\
     );
 \fifo_din[56]_i_1\: unisim.vcomponents.LUT2
@@ -1730,7 +1808,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(56),
+      I1 => in20(56),
       O => \fifo_din[56]_i_1_n_0\
     );
 \fifo_din[57]_i_1\: unisim.vcomponents.LUT2
@@ -1739,7 +1817,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(57),
+      I1 => in20(57),
       O => \fifo_din[57]_i_1_n_0\
     );
 \fifo_din[58]_i_1\: unisim.vcomponents.LUT2
@@ -1748,7 +1826,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(58),
+      I1 => in20(58),
       O => \fifo_din[58]_i_1_n_0\
     );
 \fifo_din[59]_i_1\: unisim.vcomponents.LUT2
@@ -1757,7 +1835,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(59),
+      I1 => in20(59),
       O => \fifo_din[59]_i_1_n_0\
     );
 \fifo_din[5]_i_1\: unisim.vcomponents.LUT2
@@ -1766,7 +1844,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(5),
+      I1 => in20(5),
       O => \fifo_din[5]_i_1_n_0\
     );
 \fifo_din[60]_i_1\: unisim.vcomponents.LUT2
@@ -1775,7 +1853,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(60),
+      I1 => in20(60),
       O => \fifo_din[60]_i_1_n_0\
     );
 \fifo_din[61]_i_1\: unisim.vcomponents.LUT2
@@ -1784,7 +1862,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(61),
+      I1 => in20(61),
       O => \fifo_din[61]_i_1_n_0\
     );
 \fifo_din[62]_i_1\: unisim.vcomponents.LUT2
@@ -1793,18 +1871,18 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(62),
+      I1 => in20(62),
       O => \fifo_din[62]_i_1_n_0\
     );
 \fifo_din[63]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FF80"
+      INIT => X"F888"
     )
         port map (
-      I0 => pixel_polarity(0),
-      I1 => \fifo_din[63]_i_3_n_0\,
-      I2 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I3 => \FSM_onehot_DState_reg_n_0_[1]\,
+      I0 => lvds_word_ready_reg_n_0,
+      I1 => \FSM_onehot_DState_reg_n_0_[1]\,
+      I2 => pixel_polarity(0),
+      I3 => \fifo_din[63]_i_3_n_0\,
       O => \fifo_din[63]_i_1_n_0\
     );
 \fifo_din[63]_i_2\: unisim.vcomponents.LUT2
@@ -1813,30 +1891,21 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(63),
+      I1 => in20(63),
       O => \fifo_din[63]_i_2_n_0\
     );
 \fifo_din[63]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFDFFFFFFFFFFFF"
+      INIT => X"FFEF000000000000"
     )
         port map (
-      I0 => data0(7),
+      I0 => data0(6),
       I1 => data0(4),
-      I2 => data0(6),
-      I3 => \fifo_din[63]_i_4_n_0\,
-      I4 => data0(3),
-      I5 => data0(5),
+      I2 => data0(7),
+      I3 => \FSM_onehot_DState[8]_i_7_n_0\,
+      I4 => lvds_word_ready_reg_n_0,
+      I5 => \FSM_onehot_DState_reg_n_0_[6]\,
       O => \fifo_din[63]_i_3_n_0\
-    );
-\fifo_din[63]_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => data0(2),
-      I1 => p_0_in(0),
-      O => \fifo_din[63]_i_4_n_0\
     );
 \fifo_din[6]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1844,7 +1913,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(6),
+      I1 => in20(6),
       O => \fifo_din[6]_i_1_n_0\
     );
 \fifo_din[7]_i_1\: unisim.vcomponents.LUT2
@@ -1853,7 +1922,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(7),
+      I1 => in20(7),
       O => \fifo_din[7]_i_1_n_0\
     );
 \fifo_din[8]_i_1\: unisim.vcomponents.LUT2
@@ -1862,7 +1931,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(8),
+      I1 => in20(8),
       O => \fifo_din[8]_i_1_n_0\
     );
 \fifo_din[9]_i_1\: unisim.vcomponents.LUT2
@@ -1871,12 +1940,12 @@ begin
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => in19(9),
+      I1 => in20(9),
       O => \fifo_din[9]_i_1_n_0\
     );
 \fifo_din_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[0]_i_1_n_0\,
@@ -1884,7 +1953,7 @@ begin
     );
 \fifo_din_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[10]_i_1_n_0\,
@@ -1892,7 +1961,7 @@ begin
     );
 \fifo_din_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[11]_i_1_n_0\,
@@ -1900,7 +1969,7 @@ begin
     );
 \fifo_din_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[12]_i_1_n_0\,
@@ -1908,7 +1977,7 @@ begin
     );
 \fifo_din_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[13]_i_1_n_0\,
@@ -1916,7 +1985,7 @@ begin
     );
 \fifo_din_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[14]_i_1_n_0\,
@@ -1924,7 +1993,7 @@ begin
     );
 \fifo_din_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[15]_i_1_n_0\,
@@ -1932,7 +2001,7 @@ begin
     );
 \fifo_din_reg[16]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[16]_i_1_n_0\,
@@ -1940,7 +2009,7 @@ begin
     );
 \fifo_din_reg[17]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[17]_i_1_n_0\,
@@ -1948,7 +2017,7 @@ begin
     );
 \fifo_din_reg[18]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[18]_i_1_n_0\,
@@ -1956,7 +2025,7 @@ begin
     );
 \fifo_din_reg[19]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[19]_i_1_n_0\,
@@ -1964,7 +2033,7 @@ begin
     );
 \fifo_din_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[1]_i_1_n_0\,
@@ -1972,7 +2041,7 @@ begin
     );
 \fifo_din_reg[20]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[20]_i_1_n_0\,
@@ -1980,7 +2049,7 @@ begin
     );
 \fifo_din_reg[21]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[21]_i_1_n_0\,
@@ -1988,7 +2057,7 @@ begin
     );
 \fifo_din_reg[22]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[22]_i_1_n_0\,
@@ -1996,7 +2065,7 @@ begin
     );
 \fifo_din_reg[23]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[23]_i_1_n_0\,
@@ -2004,7 +2073,7 @@ begin
     );
 \fifo_din_reg[24]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[24]_i_1_n_0\,
@@ -2012,7 +2081,7 @@ begin
     );
 \fifo_din_reg[25]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[25]_i_1_n_0\,
@@ -2020,7 +2089,7 @@ begin
     );
 \fifo_din_reg[26]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[26]_i_1_n_0\,
@@ -2028,7 +2097,7 @@ begin
     );
 \fifo_din_reg[27]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[27]_i_1_n_0\,
@@ -2036,7 +2105,7 @@ begin
     );
 \fifo_din_reg[28]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[28]_i_1_n_0\,
@@ -2044,7 +2113,7 @@ begin
     );
 \fifo_din_reg[29]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[29]_i_1_n_0\,
@@ -2052,7 +2121,7 @@ begin
     );
 \fifo_din_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[2]_i_1_n_0\,
@@ -2060,7 +2129,7 @@ begin
     );
 \fifo_din_reg[30]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[30]_i_1_n_0\,
@@ -2068,7 +2137,7 @@ begin
     );
 \fifo_din_reg[31]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[31]_i_1_n_0\,
@@ -2076,7 +2145,7 @@ begin
     );
 \fifo_din_reg[32]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[32]_i_1_n_0\,
@@ -2084,7 +2153,7 @@ begin
     );
 \fifo_din_reg[33]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[33]_i_1_n_0\,
@@ -2092,7 +2161,7 @@ begin
     );
 \fifo_din_reg[34]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[34]_i_1_n_0\,
@@ -2100,7 +2169,7 @@ begin
     );
 \fifo_din_reg[35]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[35]_i_1_n_0\,
@@ -2108,7 +2177,7 @@ begin
     );
 \fifo_din_reg[36]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[36]_i_1_n_0\,
@@ -2116,7 +2185,7 @@ begin
     );
 \fifo_din_reg[37]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[37]_i_1_n_0\,
@@ -2124,7 +2193,7 @@ begin
     );
 \fifo_din_reg[38]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[38]_i_1_n_0\,
@@ -2132,7 +2201,7 @@ begin
     );
 \fifo_din_reg[39]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[39]_i_1_n_0\,
@@ -2140,7 +2209,7 @@ begin
     );
 \fifo_din_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[3]_i_1_n_0\,
@@ -2148,7 +2217,7 @@ begin
     );
 \fifo_din_reg[40]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[40]_i_1_n_0\,
@@ -2156,7 +2225,7 @@ begin
     );
 \fifo_din_reg[41]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[41]_i_1_n_0\,
@@ -2164,7 +2233,7 @@ begin
     );
 \fifo_din_reg[42]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[42]_i_1_n_0\,
@@ -2172,7 +2241,7 @@ begin
     );
 \fifo_din_reg[43]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[43]_i_1_n_0\,
@@ -2180,7 +2249,7 @@ begin
     );
 \fifo_din_reg[44]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[44]_i_1_n_0\,
@@ -2188,7 +2257,7 @@ begin
     );
 \fifo_din_reg[45]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[45]_i_1_n_0\,
@@ -2196,7 +2265,7 @@ begin
     );
 \fifo_din_reg[46]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[46]_i_1_n_0\,
@@ -2204,7 +2273,7 @@ begin
     );
 \fifo_din_reg[47]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[47]_i_1_n_0\,
@@ -2212,7 +2281,7 @@ begin
     );
 \fifo_din_reg[48]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[48]_i_1_n_0\,
@@ -2220,7 +2289,7 @@ begin
     );
 \fifo_din_reg[49]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[49]_i_1_n_0\,
@@ -2228,7 +2297,7 @@ begin
     );
 \fifo_din_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[4]_i_1_n_0\,
@@ -2236,7 +2305,7 @@ begin
     );
 \fifo_din_reg[50]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[50]_i_1_n_0\,
@@ -2244,7 +2313,7 @@ begin
     );
 \fifo_din_reg[51]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[51]_i_1_n_0\,
@@ -2252,7 +2321,7 @@ begin
     );
 \fifo_din_reg[52]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[52]_i_1_n_0\,
@@ -2260,7 +2329,7 @@ begin
     );
 \fifo_din_reg[53]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[53]_i_1_n_0\,
@@ -2268,7 +2337,7 @@ begin
     );
 \fifo_din_reg[54]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[54]_i_1_n_0\,
@@ -2276,7 +2345,7 @@ begin
     );
 \fifo_din_reg[55]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[55]_i_1_n_0\,
@@ -2284,7 +2353,7 @@ begin
     );
 \fifo_din_reg[56]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[56]_i_1_n_0\,
@@ -2292,7 +2361,7 @@ begin
     );
 \fifo_din_reg[57]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[57]_i_1_n_0\,
@@ -2300,7 +2369,7 @@ begin
     );
 \fifo_din_reg[58]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[58]_i_1_n_0\,
@@ -2308,7 +2377,7 @@ begin
     );
 \fifo_din_reg[59]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[59]_i_1_n_0\,
@@ -2316,7 +2385,7 @@ begin
     );
 \fifo_din_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[5]_i_1_n_0\,
@@ -2324,7 +2393,7 @@ begin
     );
 \fifo_din_reg[60]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[60]_i_1_n_0\,
@@ -2332,7 +2401,7 @@ begin
     );
 \fifo_din_reg[61]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[61]_i_1_n_0\,
@@ -2340,7 +2409,7 @@ begin
     );
 \fifo_din_reg[62]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[62]_i_1_n_0\,
@@ -2348,7 +2417,7 @@ begin
     );
 \fifo_din_reg[63]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[63]_i_2_n_0\,
@@ -2356,7 +2425,7 @@ begin
     );
 \fifo_din_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[6]_i_1_n_0\,
@@ -2364,7 +2433,7 @@ begin
     );
 \fifo_din_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[7]_i_1_n_0\,
@@ -2372,7 +2441,7 @@ begin
     );
 \fifo_din_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[8]_i_1_n_0\,
@@ -2380,7 +2449,7 @@ begin
     );
 \fifo_din_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => \fifo_din[63]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \fifo_din[9]_i_1_n_0\,
@@ -2396,20 +2465,29 @@ fifo_srst_INST_0: unisim.vcomponents.LUT1
     );
 fifo_wr_en_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"888888BF88888880"
+      INIT => X"88888FFF88888000"
     )
         port map (
-      I0 => pixel_polarity(0),
-      I1 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I2 => \fifo_din[63]_i_3_n_0\,
-      I3 => \FSM_onehot_DState_reg_n_0_[7]\,
-      I4 => \FSM_onehot_DState_reg_n_0_[1]\,
+      I0 => \FSM_onehot_DState_reg_n_0_[6]\,
+      I1 => pixel_polarity(0),
+      I2 => lvds_word_ready_reg_n_0,
+      I3 => fifo_wr_en_i_2_n_0,
+      I4 => \fifo_din[63]_i_3_n_0\,
       I5 => \^fifo_wr_en\,
       O => fifo_wr_en_i_1_n_0
     );
+fifo_wr_en_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \FSM_onehot_DState_reg_n_0_[1]\,
+      I1 => \FSM_onehot_DState_reg_n_0_[7]\,
+      O => fifo_wr_en_i_2_n_0
+    );
 fifo_wr_en_reg: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => '1',
       CLR => \^fifo_srst\,
       D => fifo_wr_en_i_1_n_0,
@@ -2423,7 +2501,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       I0 => \i[0]_i_2_n_0\,
       I1 => \i_reg_n_0_[1]\,
       I2 => \i[1]_i_2_n_0\,
-      I3 => \bitslip_reg_n_0_[0]\,
+      I3 => \bitslip__0\(0),
       I4 => \i[2]_i_2_n_0\,
       I5 => \i_reg_n_0_[0]\,
       O => i(0)
@@ -2433,9 +2511,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"FEFF"
     )
         port map (
-      I0 => lvds_word_ready_i_3_n_0,
-      I1 => lvds_word_ready_i_4_n_0,
-      I2 => lvds_word_ready_i_5_n_0,
+      I0 => \lvds_sync_word[7]_i_4_n_0\,
+      I1 => \lvds_sync_word[7]_i_5_n_0\,
+      I2 => \lvds_sync_word[7]_i_6_n_0\,
       I3 => \i_reg_n_0_[2]\,
       O => \i[0]_i_2_n_0\
     );
@@ -2444,7 +2522,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[12]_i_2_n_6\,
       O => i(10)
     );
@@ -2453,7 +2531,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[12]_i_2_n_5\,
       O => i(11)
     );
@@ -2462,7 +2540,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[12]_i_2_n_4\,
       O => i(12)
     );
@@ -2471,7 +2549,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[16]_i_2_n_7\,
       O => i(13)
     );
@@ -2480,7 +2558,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[16]_i_2_n_6\,
       O => i(14)
     );
@@ -2489,7 +2567,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[16]_i_2_n_5\,
       O => i(15)
     );
@@ -2498,7 +2576,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[16]_i_2_n_4\,
       O => i(16)
     );
@@ -2507,7 +2585,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[20]_i_2_n_7\,
       O => i(17)
     );
@@ -2516,7 +2594,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[20]_i_2_n_6\,
       O => i(18)
     );
@@ -2525,7 +2603,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[20]_i_2_n_5\,
       O => i(19)
     );
@@ -2536,9 +2614,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
         port map (
       I0 => \i_reg[4]_i_2_n_7\,
       I1 => \i[2]_i_2_n_0\,
-      I2 => lvds_word_ready_i_2_n_0,
+      I2 => \lvds_sync_word[7]_i_3_n_0\,
       I3 => \i[1]_i_2_n_0\,
-      I4 => \bitslip_reg_n_0_[1]\,
+      I4 => \bitslip__0\(1),
       O => i(1)
     );
 \i[1]_i_2\: unisim.vcomponents.LUT2
@@ -2546,8 +2624,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"D"
     )
         port map (
-      I0 => temp_sync_word32_in,
-      I1 => \bitslip_reg_n_0_[3]\,
+      I0 => temp_sync_word33_in,
+      I1 => \bitslip__0\(3),
       O => \i[1]_i_2_n_0\
     );
 \i[20]_i_1\: unisim.vcomponents.LUT2
@@ -2555,7 +2633,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[20]_i_2_n_4\,
       O => i(20)
     );
@@ -2564,7 +2642,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[24]_i_2_n_7\,
       O => i(21)
     );
@@ -2573,7 +2651,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[24]_i_2_n_6\,
       O => i(22)
     );
@@ -2582,7 +2660,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[24]_i_2_n_5\,
       O => i(23)
     );
@@ -2591,7 +2669,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[24]_i_2_n_4\,
       O => i(24)
     );
@@ -2600,7 +2678,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[28]_i_2_n_7\,
       O => i(25)
     );
@@ -2609,7 +2687,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[28]_i_2_n_6\,
       O => i(26)
     );
@@ -2618,7 +2696,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[28]_i_2_n_5\,
       O => i(27)
     );
@@ -2627,7 +2705,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[28]_i_2_n_4\,
       O => i(28)
     );
@@ -2636,7 +2714,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[31]_i_2_n_7\,
       O => i(29)
     );
@@ -2646,10 +2724,10 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg[4]_i_2_n_6\,
-      I1 => \bitslip_reg_n_0_[2]\,
-      I2 => \bitslip_reg_n_0_[3]\,
-      I3 => temp_sync_word32_in,
-      I4 => lvds_word_ready_i_2_n_0,
+      I1 => \bitslip__0\(2),
+      I2 => \bitslip__0\(3),
+      I3 => temp_sync_word33_in,
+      I4 => \lvds_sync_word[7]_i_3_n_0\,
       I5 => \i[2]_i_2_n_0\,
       O => i(2)
     );
@@ -2681,7 +2759,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[31]_i_2_n_6\,
       O => i(30)
     );
@@ -2690,7 +2768,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[31]_i_2_n_5\,
       O => i(31)
     );
@@ -2700,7 +2778,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg[4]_i_2_n_5\,
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       O => i(3)
     );
 \i[4]_i_1\: unisim.vcomponents.LUT2
@@ -2708,7 +2786,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[4]_i_2_n_4\,
       O => i(4)
     );
@@ -2717,7 +2795,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[8]_i_2_n_7\,
       O => i(5)
     );
@@ -2726,7 +2804,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[8]_i_2_n_6\,
       O => i(6)
     );
@@ -2735,7 +2813,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[8]_i_2_n_5\,
       O => i(7)
     );
@@ -2744,7 +2822,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[8]_i_2_n_4\,
       O => i(8)
     );
@@ -2753,7 +2831,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"8"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
       I1 => \i_reg[12]_i_2_n_7\,
       O => i(9)
     );
@@ -2762,8 +2840,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"E"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[2]\,
-      I1 => \bitslip_reg_n_0_[3]\,
+      I0 => \bitslip__0\(2),
+      I1 => \bitslip__0\(3),
       O => \i__carry_i_1_n_0\
     );
 \i__carry_i_2\: unisim.vcomponents.LUT2
@@ -2771,8 +2849,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"E"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[0]\,
-      I1 => \bitslip_reg_n_0_[1]\,
+      I0 => \bitslip__0\(0),
+      I1 => \bitslip__0\(1),
       O => \i__carry_i_2_n_0\
     );
 \i__carry_i_3\: unisim.vcomponents.LUT2
@@ -2780,8 +2858,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"1"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[3]\,
-      I1 => \bitslip_reg_n_0_[2]\,
+      I0 => \bitslip__0\(3),
+      I1 => \bitslip__0\(2),
       O => \i__carry_i_3_n_0\
     );
 \i__carry_i_4\: unisim.vcomponents.LUT2
@@ -2789,8 +2867,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"1"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[1]\,
-      I1 => \bitslip_reg_n_0_[0]\,
+      I0 => \bitslip__0\(1),
+      I1 => \bitslip__0\(0),
       O => \i__carry_i_4_n_0\
     );
 \i_reg[0]\: unisim.vcomponents.FDCE
@@ -3365,16 +3443,15 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       I3 => \lvds_data_words_reg[3]_4\(6),
       O => \kernel[0][6]_i_1_n_0\
     );
-\kernel[0][7]_i_1\: unisim.vcomponents.LUT4
+\kernel[0][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"9000"
+      INIT => X"82"
     )
         port map (
-      I0 => \nb_kernel_reg_n_0_[0]\,
+      I0 => \fifo_din[63]_i_3_n_0\,
       I1 => pixel_polarity(0),
-      I2 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I3 => \fifo_din[63]_i_3_n_0\,
-      O => \kernel[6]_7\
+      I2 => \nb_kernel_reg_n_0_[0]\,
+      O => \kernel[0][7]_i_1_n_0\
     );
 \kernel[0][7]_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -3464,16 +3541,15 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       I3 => \lvds_data_words_reg[3]_4\(6),
       O => \kernel[1][6]_i_1_n_0\
     );
-\kernel[1][7]_i_1\: unisim.vcomponents.LUT4
+\kernel[1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"2800"
+      INIT => X"28"
     )
         port map (
-      I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => \nb_kernel_reg_n_0_[0]\,
-      I2 => pixel_polarity(0),
-      I3 => \fifo_din[63]_i_3_n_0\,
-      O => \kernel[7]_8\
+      I0 => \fifo_din[63]_i_3_n_0\,
+      I1 => pixel_polarity(0),
+      I2 => \nb_kernel_reg_n_0_[0]\,
+      O => \kernel[1][7]_i_1_n_0\
     );
 \kernel[1][7]_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -4048,515 +4124,515 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     );
 \kernel_reg[0][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][0]_i_1_n_0\,
-      Q => in19(0)
+      Q => in20(0)
     );
 \kernel_reg[0][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][1]_i_1_n_0\,
-      Q => in19(1)
+      Q => in20(1)
     );
 \kernel_reg[0][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][2]_i_1_n_0\,
-      Q => in19(2)
+      Q => in20(2)
     );
 \kernel_reg[0][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][3]_i_1_n_0\,
-      Q => in19(3)
+      Q => in20(3)
     );
 \kernel_reg[0][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][4]_i_1_n_0\,
-      Q => in19(4)
+      Q => in20(4)
     );
 \kernel_reg[0][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][5]_i_1_n_0\,
-      Q => in19(5)
+      Q => in20(5)
     );
 \kernel_reg[0][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][6]_i_1_n_0\,
-      Q => in19(6)
+      Q => in20(6)
     );
 \kernel_reg[0][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[0][7]_i_2_n_0\,
-      Q => in19(7)
+      Q => in20(7)
     );
 \kernel_reg[1][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][0]_i_1_n_0\,
-      Q => in19(8)
+      Q => in20(8)
     );
 \kernel_reg[1][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][1]_i_1_n_0\,
-      Q => in19(9)
+      Q => in20(9)
     );
 \kernel_reg[1][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][2]_i_1_n_0\,
-      Q => in19(10)
+      Q => in20(10)
     );
 \kernel_reg[1][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][3]_i_1_n_0\,
-      Q => in19(11)
+      Q => in20(11)
     );
 \kernel_reg[1][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][4]_i_1_n_0\,
-      Q => in19(12)
+      Q => in20(12)
     );
 \kernel_reg[1][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][5]_i_1_n_0\,
-      Q => in19(13)
+      Q => in20(13)
     );
 \kernel_reg[1][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][6]_i_1_n_0\,
-      Q => in19(14)
+      Q => in20(14)
     );
 \kernel_reg[1][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[1][7]_i_2_n_0\,
-      Q => in19(15)
+      Q => in20(15)
     );
 \kernel_reg[2][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][0]_i_1_n_0\,
-      Q => in19(16)
+      Q => in20(16)
     );
 \kernel_reg[2][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][1]_i_1_n_0\,
-      Q => in19(17)
+      Q => in20(17)
     );
 \kernel_reg[2][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][2]_i_1_n_0\,
-      Q => in19(18)
+      Q => in20(18)
     );
 \kernel_reg[2][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][3]_i_1_n_0\,
-      Q => in19(19)
+      Q => in20(19)
     );
 \kernel_reg[2][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][4]_i_1_n_0\,
-      Q => in19(20)
+      Q => in20(20)
     );
 \kernel_reg[2][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][5]_i_1_n_0\,
-      Q => in19(21)
+      Q => in20(21)
     );
 \kernel_reg[2][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][6]_i_1_n_0\,
-      Q => in19(22)
+      Q => in20(22)
     );
 \kernel_reg[2][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[2][7]_i_1_n_0\,
-      Q => in19(23)
+      Q => in20(23)
     );
 \kernel_reg[3][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][0]_i_1_n_0\,
-      Q => in19(24)
+      Q => in20(24)
     );
 \kernel_reg[3][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][1]_i_1_n_0\,
-      Q => in19(25)
+      Q => in20(25)
     );
 \kernel_reg[3][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][2]_i_1_n_0\,
-      Q => in19(26)
+      Q => in20(26)
     );
 \kernel_reg[3][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][3]_i_1_n_0\,
-      Q => in19(27)
+      Q => in20(27)
     );
 \kernel_reg[3][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][4]_i_1_n_0\,
-      Q => in19(28)
+      Q => in20(28)
     );
 \kernel_reg[3][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][5]_i_1_n_0\,
-      Q => in19(29)
+      Q => in20(29)
     );
 \kernel_reg[3][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][6]_i_1_n_0\,
-      Q => in19(30)
+      Q => in20(30)
     );
 \kernel_reg[3][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[3][7]_i_1_n_0\,
-      Q => in19(31)
+      Q => in20(31)
     );
 \kernel_reg[4][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][0]_i_1_n_0\,
-      Q => in19(32)
+      Q => in20(32)
     );
 \kernel_reg[4][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][1]_i_1_n_0\,
-      Q => in19(33)
+      Q => in20(33)
     );
 \kernel_reg[4][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][2]_i_1_n_0\,
-      Q => in19(34)
+      Q => in20(34)
     );
 \kernel_reg[4][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][3]_i_1_n_0\,
-      Q => in19(35)
+      Q => in20(35)
     );
 \kernel_reg[4][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][4]_i_1_n_0\,
-      Q => in19(36)
+      Q => in20(36)
     );
 \kernel_reg[4][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][5]_i_1_n_0\,
-      Q => in19(37)
+      Q => in20(37)
     );
 \kernel_reg[4][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][6]_i_1_n_0\,
-      Q => in19(38)
+      Q => in20(38)
     );
 \kernel_reg[4][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[4][7]_i_1_n_0\,
-      Q => in19(39)
+      Q => in20(39)
     );
 \kernel_reg[5][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][0]_i_1_n_0\,
-      Q => in19(40)
+      Q => in20(40)
     );
 \kernel_reg[5][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][1]_i_1_n_0\,
-      Q => in19(41)
+      Q => in20(41)
     );
 \kernel_reg[5][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][2]_i_1_n_0\,
-      Q => in19(42)
+      Q => in20(42)
     );
 \kernel_reg[5][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][3]_i_1_n_0\,
-      Q => in19(43)
+      Q => in20(43)
     );
 \kernel_reg[5][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][4]_i_1_n_0\,
-      Q => in19(44)
+      Q => in20(44)
     );
 \kernel_reg[5][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][5]_i_1_n_0\,
-      Q => in19(45)
+      Q => in20(45)
     );
 \kernel_reg[5][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][6]_i_1_n_0\,
-      Q => in19(46)
+      Q => in20(46)
     );
 \kernel_reg[5][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[5][7]_i_1_n_0\,
-      Q => in19(47)
+      Q => in20(47)
     );
 \kernel_reg[6][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][0]_i_1_n_0\,
-      Q => in19(48)
+      Q => in20(48)
     );
 \kernel_reg[6][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][1]_i_1_n_0\,
-      Q => in19(49)
+      Q => in20(49)
     );
 \kernel_reg[6][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][2]_i_1_n_0\,
-      Q => in19(50)
+      Q => in20(50)
     );
 \kernel_reg[6][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][3]_i_1_n_0\,
-      Q => in19(51)
+      Q => in20(51)
     );
 \kernel_reg[6][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][4]_i_1_n_0\,
-      Q => in19(52)
+      Q => in20(52)
     );
 \kernel_reg[6][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][5]_i_1_n_0\,
-      Q => in19(53)
+      Q => in20(53)
     );
 \kernel_reg[6][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][6]_i_1_n_0\,
-      Q => in19(54)
+      Q => in20(54)
     );
 \kernel_reg[6][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[6]_7\,
+      C => lvds_clk,
+      CE => \kernel[0][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[6][7]_i_1_n_0\,
-      Q => in19(55)
+      Q => in20(55)
     );
 \kernel_reg[7][0]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][0]_i_1_n_0\,
-      Q => in19(56)
+      Q => in20(56)
     );
 \kernel_reg[7][1]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][1]_i_1_n_0\,
-      Q => in19(57)
+      Q => in20(57)
     );
 \kernel_reg[7][2]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][2]_i_1_n_0\,
-      Q => in19(58)
+      Q => in20(58)
     );
 \kernel_reg[7][3]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][3]_i_1_n_0\,
-      Q => in19(59)
+      Q => in20(59)
     );
 \kernel_reg[7][4]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][4]_i_1_n_0\,
-      Q => in19(60)
+      Q => in20(60)
     );
 \kernel_reg[7][5]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][5]_i_1_n_0\,
-      Q => in19(61)
+      Q => in20(61)
     );
 \kernel_reg[7][6]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][6]_i_1_n_0\,
-      Q => in19(62)
+      Q => in20(62)
     );
 \kernel_reg[7][7]\: unisim.vcomponents.FDCE
      port map (
-      C => lvds_word_ready_reg_n_0,
-      CE => \kernel[7]_8\,
+      C => lvds_clk,
+      CE => \kernel[1][7]_i_1_n_0\,
       CLR => \^fifo_srst\,
       D => \kernel[7][7]_i_1_n_0\,
-      Q => in19(63)
+      Q => in20(63)
     );
 \lvds_data_words_reg[0][0]\: unisim.vcomponents.FDCE
      port map (
@@ -4958,7 +5034,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \lvds_read_process.temp_data_words_reg[0]_0\(7),
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       I2 => lvds_data(0),
       O => mux10_out(7)
     );
@@ -5038,7 +5114,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \lvds_read_process.temp_data_words_reg[1]_3\(7),
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       I2 => lvds_data(1),
       O => mux7_out(7)
     );
@@ -5118,7 +5194,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \lvds_read_process.temp_data_words_reg[2]_2\(7),
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       I2 => lvds_data(2),
       O => mux4_out(7)
     );
@@ -5198,7 +5274,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \lvds_read_process.temp_data_words_reg[3]_1\(7),
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       I2 => lvds_data(3),
       O => mux1_out(7)
     );
@@ -5514,11 +5590,11 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg_n_0_[2]\,
-      I1 => temp_sync_word32_in,
-      I2 => \bitslip_reg_n_0_[2]\,
-      I3 => \bitslip_reg_n_0_[3]\,
-      I4 => \bitslip_reg_n_0_[0]\,
-      I5 => \bitslip_reg_n_0_[1]\,
+      I1 => temp_sync_word33_in,
+      I2 => \bitslip__0\(2),
+      I3 => \bitslip__0\(3),
+      I4 => \bitslip__0\(0),
+      I5 => \bitslip__0\(1),
       O => \lvds_read_process.temp_sync_word[1]_i_3_n_0\
     );
 \lvds_read_process.temp_sync_word[2]_i_1\: unisim.vcomponents.LUT6
@@ -5552,11 +5628,11 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"FF3FFF7F"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[1]\,
+      I0 => \bitslip__0\(1),
       I1 => \i_reg_n_0_[2]\,
-      I2 => temp_sync_word32_in,
-      I3 => \bitslip_reg_n_0_[3]\,
-      I4 => \bitslip_reg_n_0_[2]\,
+      I2 => temp_sync_word33_in,
+      I3 => \bitslip__0\(3),
+      I4 => \bitslip__0\(2),
       O => \lvds_read_process.temp_sync_word[2]_i_3_n_0\
     );
 \lvds_read_process.temp_sync_word[3]_i_1\: unisim.vcomponents.LUT6
@@ -5566,7 +5642,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
         port map (
       I0 => mux16_out(3),
       I1 => \lvds_read_process.temp_sync_word[3]_i_2_n_0\,
-      I2 => \bitslip_reg_n_0_[0]\,
+      I2 => \bitslip__0\(0),
       I3 => \lvds_read_process.temp_sync_word[6]_i_2_n_0\,
       I4 => \lvds_read_process.temp_sync_word[3]_i_3_n_0\,
       I5 => \lvds_read_process.temp_sync_word_reg_n_0_[3]\,
@@ -5577,10 +5653,10 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"0400"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
-      I1 => temp_sync_word32_in,
-      I2 => \bitslip_reg_n_0_[3]\,
-      I3 => \bitslip_reg_n_0_[2]\,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
+      I1 => temp_sync_word33_in,
+      I2 => \bitslip__0\(3),
+      I3 => \bitslip__0\(2),
       O => \lvds_read_process.temp_sync_word[3]_i_2_n_0\
     );
 \lvds_read_process.temp_sync_word[3]_i_3\: unisim.vcomponents.LUT6
@@ -5601,8 +5677,8 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"20000000"
     )
         port map (
-      I0 => temp_sync_word32_in,
-      I1 => \bitslip_reg_n_0_[3]\,
+      I0 => temp_sync_word33_in,
+      I1 => \bitslip__0\(3),
       I2 => \i_reg_n_0_[0]\,
       I3 => s00_axis_aresetn,
       I4 => \i[2]_i_2_n_0\,
@@ -5640,9 +5716,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
         port map (
       I0 => s00_axis_aresetn,
       I1 => \i[2]_i_2_n_0\,
-      I2 => lvds_word_ready_i_2_n_0,
-      I3 => temp_sync_word32_in,
-      I4 => \bitslip_reg_n_0_[3]\,
+      I2 => \lvds_sync_word[7]_i_3_n_0\,
+      I3 => temp_sync_word33_in,
+      I4 => \bitslip__0\(3),
       O => \lvds_read_process.temp_sync_word[4]_i_3_n_0\
     );
 \lvds_read_process.temp_sync_word[4]_i_4\: unisim.vcomponents.LUT6
@@ -5650,9 +5726,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"DF00DF00FF000000"
     )
         port map (
-      I0 => temp_sync_word32_in,
-      I1 => \bitslip_reg_n_0_[3]\,
-      I2 => \bitslip_reg_n_0_[2]\,
+      I0 => temp_sync_word33_in,
+      I1 => \bitslip__0\(3),
+      I2 => \bitslip__0\(2),
       I3 => \lvds_read_process.temp_sync_word_reg_n_0_[4]\,
       I4 => \i_reg_n_0_[1]\,
       I5 => \i_reg_n_0_[0]\,
@@ -5675,12 +5751,12 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"00000E0000000000"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[0]\,
-      I1 => \bitslip_reg_n_0_[1]\,
-      I2 => lvds_word_ready_i_2_n_0,
-      I3 => temp_sync_word32_in,
-      I4 => \bitslip_reg_n_0_[3]\,
-      I5 => \bitslip_reg_n_0_[2]\,
+      I0 => \bitslip__0\(0),
+      I1 => \bitslip__0\(1),
+      I2 => \lvds_sync_word[7]_i_3_n_0\,
+      I3 => temp_sync_word33_in,
+      I4 => \bitslip__0\(3),
+      I5 => \bitslip__0\(2),
       O => \lvds_read_process.temp_sync_word[5]_i_2_n_0\
     );
 \lvds_read_process.temp_sync_word[5]_i_3\: unisim.vcomponents.LUT6
@@ -5704,7 +5780,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       I0 => \lvds_read_process.temp_sync_word_reg_n_0_[6]\,
       I1 => \lvds_sync_word[6]_i_2_n_0\,
       I2 => lvds_sync,
-      I3 => \bitslip_reg_n_0_[2]\,
+      I3 => \bitslip__0\(2),
       I4 => \lvds_read_process.temp_sync_word[6]_i_2_n_0\,
       I5 => \lvds_read_process.temp_sync_word[6]_i_3_n_0\,
       O => \lvds_read_process.temp_sync_word[6]_i_1_n_0\
@@ -5714,10 +5790,10 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"0400"
     )
         port map (
-      I0 => lvds_word_ready_i_2_n_0,
-      I1 => temp_sync_word32_in,
-      I2 => \bitslip_reg_n_0_[3]\,
-      I3 => \bitslip_reg_n_0_[1]\,
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
+      I1 => temp_sync_word33_in,
+      I2 => \bitslip__0\(3),
+      I3 => \bitslip__0\(1),
       O => \lvds_read_process.temp_sync_word[6]_i_2_n_0\
     );
 \lvds_read_process.temp_sync_word[6]_i_3\: unisim.vcomponents.LUT6
@@ -5739,7 +5815,7 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => s00_axis_aresetn,
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       O => \lvds_read_process.temp_sync_word[7]_i_1_n_0\
     );
 \lvds_read_process.temp_sync_word[7]_i_2\: unisim.vcomponents.LUT6
@@ -5747,12 +5823,12 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"FCECECECECECECEC"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[3]\,
+      I0 => \bitslip__0\(3),
       I1 => mux16_out(7),
       I2 => \lvds_read_process.temp_sync_word[7]_i_3_n_0\,
-      I3 => \bitslip_reg_n_0_[1]\,
-      I4 => \bitslip_reg_n_0_[0]\,
-      I5 => \bitslip_reg_n_0_[2]\,
+      I3 => \bitslip__0\(1),
+      I4 => \bitslip__0\(0),
+      I5 => \bitslip__0\(2),
       O => \lvds_read_process.temp_sync_word[7]_i_2_n_0\
     );
 \lvds_read_process.temp_sync_word[7]_i_3\: unisim.vcomponents.LUT3
@@ -5760,9 +5836,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"04"
     )
         port map (
-      I0 => \bitslip_reg_n_0_[3]\,
-      I1 => temp_sync_word32_in,
-      I2 => lvds_word_ready_i_2_n_0,
+      I0 => \bitslip__0\(3),
+      I1 => temp_sync_word33_in,
+      I2 => \lvds_sync_word[7]_i_3_n_0\,
       O => \lvds_read_process.temp_sync_word[7]_i_3_n_0\
     );
 \lvds_read_process.temp_sync_word_reg[0]\: unisim.vcomponents.FDRE
@@ -5847,9 +5923,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       INIT => X"FE"
     )
         port map (
-      I0 => lvds_word_ready_i_5_n_0,
-      I1 => lvds_word_ready_i_4_n_0,
-      I2 => lvds_word_ready_i_3_n_0,
+      I0 => \lvds_sync_word[7]_i_6_n_0\,
+      I1 => \lvds_sync_word[7]_i_5_n_0\,
+      I2 => \lvds_sync_word[7]_i_4_n_0\,
       O => \lvds_sync_word[0]_i_2_n_0\
     );
 \lvds_sync_word[1]_i_1\: unisim.vcomponents.LUT3
@@ -5870,9 +5946,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       I0 => \i_reg_n_0_[0]\,
       I1 => \i_reg_n_0_[1]\,
       I2 => \i_reg_n_0_[2]\,
-      I3 => lvds_word_ready_i_5_n_0,
-      I4 => lvds_word_ready_i_4_n_0,
-      I5 => lvds_word_ready_i_3_n_0,
+      I3 => \lvds_sync_word[7]_i_6_n_0\,
+      I4 => \lvds_sync_word[7]_i_5_n_0\,
+      I5 => \lvds_sync_word[7]_i_4_n_0\,
       O => \lvds_sync_word[1]_i_2_n_0\
     );
 \lvds_sync_word[2]_i_1\: unisim.vcomponents.LUT3
@@ -5891,9 +5967,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg_n_0_[1]\,
-      I1 => lvds_word_ready_i_3_n_0,
-      I2 => lvds_word_ready_i_4_n_0,
-      I3 => lvds_word_ready_i_5_n_0,
+      I1 => \lvds_sync_word[7]_i_4_n_0\,
+      I2 => \lvds_sync_word[7]_i_5_n_0\,
+      I3 => \lvds_sync_word[7]_i_6_n_0\,
       I4 => \i_reg_n_0_[2]\,
       I5 => \i_reg_n_0_[0]\,
       O => \lvds_sync_word[2]_i_2_n_0\
@@ -5914,9 +5990,9 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg_n_0_[1]\,
-      I1 => lvds_word_ready_i_3_n_0,
-      I2 => lvds_word_ready_i_4_n_0,
-      I3 => lvds_word_ready_i_5_n_0,
+      I1 => \lvds_sync_word[7]_i_4_n_0\,
+      I2 => \lvds_sync_word[7]_i_5_n_0\,
+      I3 => \lvds_sync_word[7]_i_6_n_0\,
       I4 => \i_reg_n_0_[2]\,
       I5 => \i_reg_n_0_[0]\,
       O => \lvds_sync_word[3]_i_2_n_0\
@@ -5977,22 +6053,125 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \i_reg_n_0_[1]\,
-      I1 => lvds_word_ready_i_3_n_0,
-      I2 => lvds_word_ready_i_4_n_0,
-      I3 => lvds_word_ready_i_5_n_0,
+      I1 => \lvds_sync_word[7]_i_4_n_0\,
+      I2 => \lvds_sync_word[7]_i_5_n_0\,
+      I3 => \lvds_sync_word[7]_i_6_n_0\,
       I4 => \i_reg_n_0_[2]\,
       I5 => \i_reg_n_0_[0]\,
       O => \lvds_sync_word[6]_i_2_n_0\
     );
-\lvds_sync_word[7]_i_1\: unisim.vcomponents.LUT3
+\lvds_sync_word[7]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \lvds_sync_word[7]_i_3_n_0\,
+      O => lvds_word_ready
+    );
+\lvds_sync_word[7]_i_10\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[19]\,
+      I1 => \i_reg_n_0_[18]\,
+      I2 => \i_reg_n_0_[21]\,
+      I3 => \i_reg_n_0_[20]\,
+      O => \lvds_sync_word[7]_i_10_n_0\
+    );
+\lvds_sync_word[7]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
         port map (
       I0 => \lvds_read_process.temp_sync_word_reg_n_0_[7]\,
-      I1 => lvds_word_ready_i_2_n_0,
+      I1 => \lvds_sync_word[7]_i_3_n_0\,
       I2 => lvds_sync,
       O => mux16_out(7)
+    );
+\lvds_sync_word[7]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFDFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \i_reg_n_0_[1]\,
+      I1 => \lvds_sync_word[7]_i_4_n_0\,
+      I2 => \lvds_sync_word[7]_i_5_n_0\,
+      I3 => \lvds_sync_word[7]_i_6_n_0\,
+      I4 => \i_reg_n_0_[2]\,
+      I5 => \i_reg_n_0_[0]\,
+      O => \lvds_sync_word[7]_i_3_n_0\
+    );
+\lvds_sync_word[7]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => \lvds_sync_word[7]_i_7_n_0\,
+      I1 => \i_reg_n_0_[23]\,
+      I2 => \i_reg_n_0_[22]\,
+      I3 => \i_reg_n_0_[25]\,
+      I4 => \i_reg_n_0_[24]\,
+      I5 => \lvds_sync_word[7]_i_8_n_0\,
+      O => \lvds_sync_word[7]_i_4_n_0\
+    );
+\lvds_sync_word[7]_i_5\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[8]\,
+      I1 => \i_reg_n_0_[9]\,
+      I2 => \i_reg_n_0_[6]\,
+      I3 => \i_reg_n_0_[7]\,
+      I4 => \lvds_sync_word[7]_i_9_n_0\,
+      O => \lvds_sync_word[7]_i_5_n_0\
+    );
+\lvds_sync_word[7]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[16]\,
+      I1 => \i_reg_n_0_[17]\,
+      I2 => \i_reg_n_0_[14]\,
+      I3 => \i_reg_n_0_[15]\,
+      I4 => \lvds_sync_word[7]_i_10_n_0\,
+      O => \lvds_sync_word[7]_i_6_n_0\
+    );
+\lvds_sync_word[7]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[27]\,
+      I1 => \i_reg_n_0_[26]\,
+      I2 => \i_reg_n_0_[29]\,
+      I3 => \i_reg_n_0_[28]\,
+      O => \lvds_sync_word[7]_i_7_n_0\
+    );
+\lvds_sync_word[7]_i_8\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[3]\,
+      I1 => \i_reg_n_0_[30]\,
+      I2 => \i_reg_n_0_[31]\,
+      I3 => \i_reg_n_0_[5]\,
+      I4 => \i_reg_n_0_[4]\,
+      O => \lvds_sync_word[7]_i_8_n_0\
+    );
+\lvds_sync_word[7]_i_9\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \i_reg_n_0_[11]\,
+      I1 => \i_reg_n_0_[10]\,
+      I2 => \i_reg_n_0_[13]\,
+      I3 => \i_reg_n_0_[12]\,
+      O => \lvds_sync_word[7]_i_9_n_0\
     );
 \lvds_sync_word_reg[0]\: unisim.vcomponents.FDCE
      port map (
@@ -6058,109 +6237,6 @@ fifo_wr_en_reg: unisim.vcomponents.FDCE
       D => mux16_out(7),
       Q => p_0_in(0)
     );
-lvds_word_ready_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => lvds_word_ready_i_2_n_0,
-      O => lvds_word_ready
-    );
-lvds_word_ready_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFDFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \i_reg_n_0_[1]\,
-      I1 => lvds_word_ready_i_3_n_0,
-      I2 => lvds_word_ready_i_4_n_0,
-      I3 => lvds_word_ready_i_5_n_0,
-      I4 => \i_reg_n_0_[2]\,
-      I5 => \i_reg_n_0_[0]\,
-      O => lvds_word_ready_i_2_n_0
-    );
-lvds_word_ready_i_3: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => lvds_word_ready_i_6_n_0,
-      I1 => \i_reg_n_0_[23]\,
-      I2 => \i_reg_n_0_[22]\,
-      I3 => \i_reg_n_0_[25]\,
-      I4 => \i_reg_n_0_[24]\,
-      I5 => lvds_word_ready_i_7_n_0,
-      O => lvds_word_ready_i_3_n_0
-    );
-lvds_word_ready_i_4: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[8]\,
-      I1 => \i_reg_n_0_[9]\,
-      I2 => \i_reg_n_0_[6]\,
-      I3 => \i_reg_n_0_[7]\,
-      I4 => lvds_word_ready_i_8_n_0,
-      O => lvds_word_ready_i_4_n_0
-    );
-lvds_word_ready_i_5: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[16]\,
-      I1 => \i_reg_n_0_[17]\,
-      I2 => \i_reg_n_0_[14]\,
-      I3 => \i_reg_n_0_[15]\,
-      I4 => lvds_word_ready_i_9_n_0,
-      O => lvds_word_ready_i_5_n_0
-    );
-lvds_word_ready_i_6: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[27]\,
-      I1 => \i_reg_n_0_[26]\,
-      I2 => \i_reg_n_0_[29]\,
-      I3 => \i_reg_n_0_[28]\,
-      O => lvds_word_ready_i_6_n_0
-    );
-lvds_word_ready_i_7: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[3]\,
-      I1 => \i_reg_n_0_[30]\,
-      I2 => \i_reg_n_0_[31]\,
-      I3 => \i_reg_n_0_[5]\,
-      I4 => \i_reg_n_0_[4]\,
-      O => lvds_word_ready_i_7_n_0
-    );
-lvds_word_ready_i_8: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[11]\,
-      I1 => \i_reg_n_0_[10]\,
-      I2 => \i_reg_n_0_[13]\,
-      I3 => \i_reg_n_0_[12]\,
-      O => lvds_word_ready_i_8_n_0
-    );
-lvds_word_ready_i_9: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \i_reg_n_0_[19]\,
-      I1 => \i_reg_n_0_[18]\,
-      I2 => \i_reg_n_0_[21]\,
-      I3 => \i_reg_n_0_[20]\,
-      O => lvds_word_ready_i_9_n_0
-    );
 lvds_word_ready_reg: unisim.vcomponents.FDCE
      port map (
       C => lvds_clk,
@@ -6171,36 +6247,45 @@ lvds_word_ready_reg: unisim.vcomponents.FDCE
     );
 \nb_kernel[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000007FF0F0F080"
+      INIT => X"00000333AAAAA888"
     )
         port map (
-      I0 => pixel_polarity(0),
-      I1 => \fifo_din[63]_i_3_n_0\,
-      I2 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I3 => \FSM_onehot_DState_reg_n_0_[7]\,
-      I4 => \nb_kernel[0]_i_2_n_0\,
+      I0 => \FSM_onehot_DState_reg_n_0_[6]\,
+      I1 => \nb_kernel[0]_i_2_n_0\,
+      I2 => \FSM_onehot_DState_reg_n_0_[7]\,
+      I3 => lvds_word_ready_reg_n_0,
+      I4 => \nb_kernel[0]_i_3_n_0\,
       I5 => \nb_kernel_reg_n_0_[0]\,
       O => \nb_kernel[0]_i_1_n_0\
     );
 \nb_kernel[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000004000000"
+      INIT => X"0000000010000000"
     )
         port map (
-      I0 => data0(7),
-      I1 => data0(6),
-      I2 => data0(4),
-      I3 => data0(0),
-      I4 => \FSM_onehot_DState_reg_n_0_[4]\,
-      I5 => \FSM_onehot_DState[8]_i_10_n_0\,
+      I0 => \FSM_onehot_DState[8]_i_9_n_0\,
+      I1 => data0(4),
+      I2 => \FSM_onehot_DState_reg_n_0_[4]\,
+      I3 => lvds_word_ready_reg_n_0,
+      I4 => data0(0),
+      I5 => \FSM_onehot_DState[8]_i_7_n_0\,
       O => \nb_kernel[0]_i_2_n_0\
+    );
+\nb_kernel[0]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \fifo_din[63]_i_3_n_0\,
+      I1 => pixel_polarity(0),
+      O => \nb_kernel[0]_i_3_n_0\
     );
 \nb_kernel_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => '1',
       CLR => \^fifo_srst\,
       D => \nb_kernel[0]_i_1_n_0\,
@@ -6214,15 +6299,16 @@ noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst: entity work.main_design_noip_l
       s00_axis_tready => s00_axis_tready,
       s00_axis_tvalid => s00_axis_tvalid
     );
-\pixel_polarity[0]_i_1\: unisim.vcomponents.LUT4
+\pixel_polarity[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"07A8"
+      INIT => X"003FAA80"
     )
         port map (
       I0 => \FSM_onehot_DState_reg_n_0_[6]\,
-      I1 => \fifo_din[63]_i_3_n_0\,
+      I1 => lvds_word_ready_reg_n_0,
       I2 => \FSM_onehot_DState_reg_n_0_[7]\,
-      I3 => pixel_polarity(0),
+      I3 => \fifo_din[63]_i_3_n_0\,
+      I4 => pixel_polarity(0),
       O => \pixel_polarity[0]_i_1_n_0\
     );
 \pixel_polarity_reg[0]\: unisim.vcomponents.FDCE
@@ -6230,7 +6316,7 @@ noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst: entity work.main_design_noip_l
       INIT => '0'
     )
         port map (
-      C => lvds_word_ready_reg_n_0,
+      C => lvds_clk,
       CE => '1',
       CLR => \^fifo_srst\,
       D => \pixel_polarity[0]_i_1_n_0\,
@@ -6240,7 +6326,7 @@ noip_lvds_stream_slave_stream_v1_0_S00_AXIS_inst: entity work.main_design_noip_l
      port map (
       CI => '0',
       CO(3 downto 2) => \NLW_temp_sync_word3_inferred__0/i__carry_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => temp_sync_word32_in,
+      CO(1) => temp_sync_word33_in,
       CO(0) => \temp_sync_word3_inferred__0/i__carry_n_3\,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
@@ -6304,7 +6390,7 @@ architecture STRUCTURE of main_design_noip_lvds_stream_0_0 is
   attribute x_interface_info of fifo_full : signal is "xilinx.com:interface:fifo_write:1.0 fifo_write FULL";
   attribute x_interface_info of fifo_rd_en : signal is "xilinx.com:interface:fifo_read:1.0 fifo_read RD_EN";
   attribute x_interface_info of fifo_wr_en : signal is "xilinx.com:interface:fifo_write:1.0 fifo_write WR_EN";
-  attribute x_interface_info of lvds_clk : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock, xilinx.com:signal:clock:1.0 lvds_clk CLK";
+  attribute x_interface_info of lvds_clk : signal is "xilinx.com:signal:clock:1.0 lvds_clk CLK, onsemi:user:noip_lvds:1.0 noip_lvds lvds_clock";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of lvds_clk : signal is "XIL_INTERFACENAME lvds_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute x_interface_info of lvds_sync : signal is "onsemi:user:noip_lvds:1.0 noip_lvds lvds_sync";

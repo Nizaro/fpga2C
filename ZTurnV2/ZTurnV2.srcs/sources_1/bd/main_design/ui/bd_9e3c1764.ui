@@ -8,7 +8,7 @@
    "Color Coded_TopLeft":"-122,2",
    "Default View_Layers":"/proc_sys_reset_0_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|/processing_system7_0_FCLK_CLK1:true|",
    "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"-182,1385",
+   "Default View_TopLeft":"-182,1386",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -133,6 +133,8 @@ preplace netloc hdmi_ctrl_0_hdmi_hsync 1 8 6 4660J 1140 NJ 1140 NJ 1140 NJ 1140 
 preplace netloc hdmi_ctrl_0_hdmi_pcl 1 8 6 4620J 1150 NJ 1150 NJ 1150 NJ 1150 N 1150 6850
 preplace netloc hdmi_ctrl_0_hdmi_vsync 1 8 6 4650J 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 6930
 preplace netloc iobuf_I2C0_SCL_O 1 12 2 6510 1600 6850
+preplace netloc lvds_clk_0_n_1 1 0 1 30 1540n
+preplace netloc lvds_clk_0_p_1 1 0 1 20 1580n
 preplace netloc lvds_clkin_0_ibuf_IBUF_OUT 1 1 6 730 1310 N 1310 N 1310 N 1310 N 1310 3630
 preplace netloc lvds_clkin_0_ibuf_IBUF_OUT1 1 1 6 NJ 1770 1110 1760 1590 1830 NJ 1830 3310 1780 3700
 preplace netloc lvds_data_0_concat_dout 1 4 1 N 650
@@ -180,6 +182,7 @@ preplace netloc noip_monitor1_1 1 0 4 40J 1850 N 1850 1110 1880 1980
 preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 11 N 1420 N 1420 1910 1610 2260 1680 3260 1500 3680 1570 4310 1570 4660 1570 5020 1640 5420 2110 5760J
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 13 360 1480 NJ 1480 NJ 1480 1950 1320 NJ 1320 3290 1320 N 1320 4300 1320 4630 1490 5030 1650 5440 1500 6050 1630 6480
 preplace netloc processing_system7_0_FCLK_CLK1 1 11 3 6060 1640 6500 1610 6940
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 13 370 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 5790J 1270 6490
 preplace netloc processing_system7_0_I2C0_SCL_O 1 12 1 6520 1470n
 preplace netloc processing_system7_0_I2C0_SCL_T 1 12 1 6500 1490n
 preplace netloc processing_system7_0_I2C0_SDA_O 1 12 1 6520 1400n
@@ -188,9 +191,6 @@ preplace netloc trigger0_concat_dout 1 12 2 NJ 2430 6940
 preplace netloc util_vector_logic_0_Res 1 5 2 NJ 650 3610
 preplace netloc xlslice_0_Dout 1 4 2 NJ 1670 2920
 preplace netloc xlslice_1_Dout 1 4 2 NJ 1930 3300
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 13 370 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 5790J 1270 6490
-preplace netloc lvds_clk_0_n_1 1 0 1 30 1540n
-preplace netloc lvds_clk_0_p_1 1 0 1 20 1580n
 preplace netloc S00_AXIS_1 1 6 3 3660 1580 N 1580 4650
 preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 8 1980 1330 NJ 1330 N 1330 NJ 1330 N 1330 N 1330 NJ 1330 5370
 preplace netloc axi_dma_0_M_AXI_MM2S 1 10 1 5390 1460n

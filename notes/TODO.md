@@ -8,3 +8,4 @@
 - MIO reset (for ENET)?
 - SelectIO?
 - C bootup sequence
+- check MRCC / SRCC

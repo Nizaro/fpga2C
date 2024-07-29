@@ -2680,7 +2680,7 @@
       },
       "noip_lvds_stream_0": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "16",
+        "ip_revision": "19",
         "xci_name": "main_design_noip_lvds_stream_0_0",
         "xci_path": "ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci",
         "inst_hier_path": "noip_lvds_stream_0",
@@ -2705,7 +2705,7 @@
       },
       "noip_lvds_stream_1": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "16",
+        "ip_revision": "19",
         "xci_name": "main_design_noip_lvds_stream_0_1",
         "xci_path": "ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci",
         "inst_hier_path": "noip_lvds_stream_1",
@@ -4588,15 +4588,15 @@
       "lvds_clkin_0_ibuf_IBUF_OUT": {
         "ports": [
           "lvds_clkin_0_ibuf/IBUF_OUT",
-          "noip_lvds_stream_0/lvds_clk",
-          "fifo_generator_0/clk"
+          "fifo_generator_0/clk",
+          "noip_lvds_stream_0/lvds_clk"
         ]
       },
       "lvds_clkin_0_ibuf_IBUF_OUT1": {
         "ports": [
           "lvds_clkin_1_ibuf/IBUF_OUT",
-          "noip_lvds_stream_1/lvds_clk",
-          "fifo_generator_1/clk"
+          "fifo_generator_1/clk",
+          "noip_lvds_stream_1/lvds_clk"
         ]
       },
       "lvds_data_0_concat_dout": {

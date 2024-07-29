@@ -1,0 +1,614 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 80742
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Jul 29 13:16:13 CEST 2024
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-39-generic
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: Ubuntu 24.04 LTS
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 66, y = 32, width = 1854, height = 1048
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	nothon
+User home directory: /home/nothon
+User working directory: /home/nothon/fpga2C
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/nothon/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/nothon/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/nothon/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/nothon/fpga2C/vivado.log
+Vivado journal file: 	/home/nothon/fpga2C/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-80742-nothon-Swift-SF314-57
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2024.1/bin:/tools/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/nothon/fpga2C:nothon-Swift-SF314-57_1722251756_80673
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2024.1
+XILINX_SDK: /tools/Xilinx/Vitis/2024.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2024.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,409 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,456 MB. GUI used memory: 68 MB. Current time: 7/29/24, 1:16:14 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 79 MB (+80791kb) [00:00:17]
+// [Engine Memory]: 1,568 MB (+1492507kb) [00:00:17]
+// [GUI Memory]: 95 MB (+12022kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  2218 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'. 
+// Project name: edit_noip_lvds_stream_v1_0; location: /home/nothon/fpga2C/ip_repo/noip_lvds_stream; part: xc7z020clg400-1
+// [GUI Memory]: 149 MB (+52159kb) [00:00:19]
+dismissDialog("Open Project"); // bj (Open Project Progress)
+// [Engine Memory]: 1,650 MB (+3774kb) [00:00:20]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "OK", "Run Simulation"); // JButton (OptionPane.button)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,678 MB. GUI used memory: 74 MB. Current time: 7/29/24, 1:16:29 PM CEST
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog0)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 24s
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,700 MB. GUI used memory: 73 MB. Current time: 7/29/24, 1:16:49 PM CEST
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK", "Run Simulation"); // JButton (OptionPane.button)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog1)
+// Elapsed Time for: 'L.f': 32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 36s
+// Elapsed Time for: 'L.f': 40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 44s
+// Elapsed Time for: 'L.f': 48s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,737 MB. GUI used memory: 75 MB. Current time: 7/29/24, 1:17:09 PM CEST
+// [Engine Memory]: 1,737 MB (+4848kb) [00:01:19]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Elapsed Time for: 'L.f': 01m:18s
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'tb_lvds_stream' INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'tb_lvds_stream' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj tb_lvds_stream_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream' INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_lvds_stream' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_lvds_stream_behav xil_defaultlib.tb_lvds_stream -log elaborate.log 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,766 MB. GUI used memory: 74 MB. Current time: 7/29/24, 1:17:44 PM CEST
+// Tcl Message: Vivado Simulator v2024.1 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved. Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_lvds_stream_behav xil_defaultlib.tb_lvds_stream -log elaborate.log  Using 8 slave threads. 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot tb_lvds_stream_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_lvds_stream_behav -key {Behavioral:sim_1:Functional:tb_lvds_stream} -tclbatch {tb_lvds_stream.tcl} -view {/home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config /home/nothon/fpga2C/ip_repo/noip_lvds_stream/simu_1.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 83 MB. Current time: 7/29/24, 1:17:50 PM CEST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source tb_lvds_stream.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_lvds_stream_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 7951.848 ; gain = 122.266 ; free physical = 426 ; free virtual = 15634 
+// 'd' command handler elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+// Elapsed Time for: 'L.f': 01m:30s
+// [Engine Memory]: 1,853 MB (+31073kb) [00:01:48]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,856 MB. GUI used memory: 80 MB. Current time: 7/29/24, 1:17:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, "simulation_live_run_for_time"); // B (PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run 2 us 
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 280, 240); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform Viewer_viewer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/********** leftMouseClick (1567, 473, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform Viewer_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,836 MB. GUI used memory: 80 MB. Current time: 7/29/24, 1:17:56 PM CEST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 373, 124); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform Viewer_viewer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/********** leftMouseClick (1661, 357, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform Viewer_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,880 MB (+979259kb) [00:01:59]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Edit Packaged IP]", 5, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // bj (Open Project Manager Progress)
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("IP Packager"); // bj (IP Packager Progress)
+// Elapsed Time for: 'L.f': 01m:46s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization GUI Wizard"); // g (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes ports [ipx::current_core] 
+// Elapsed Time for: 'L.f': 01m:50s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - noip_lvds_stream"); // H (PAResourceOtoP.PAViews_PACKAGE_IP, PlanAheadTabPackage IP - noip_lvds_stream)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("OptionPane.button", "Yes", "Save Changes in IP Packager"); // JButton (OptionPane.button)
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/nothon/fpga2C/ip_repo' 
+// Tcl Message: ipx::unload_core /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml 
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Edit Packaged IP]", 5, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // bj (Open Project Manager Progress)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml 
+// Tcl Message: ERROR: [IP_Flow 19-3461] Value '0' is out of the range for parameter 'Sensor Bit Length(SENSOR_BIT_LENGTH)' for IP 'noip_lvds_stream_0' . Valid values are - 8, 10 
+// Tcl Message: ERROR: [Common 17-39] 'ipx::open_ipxact_file' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'ipx::open_ipxact_file' failed due to earlier errors.  
+dismissDialog("IP Packager"); // bj (IP Packager Progress)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,935 MB. GUI used memory: 95 MB. Current time: 7/29/24, 1:18:19 PM CEST
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02m:22s
+// Elapsed time: 24 seconds
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE, "IP has been modified."); // g (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE)
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02m:26s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // g (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// Elapsed Time for: 'L.f': 02m:38s
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // g (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1800 ms.
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Elapsed Time for: 'L.f': 02m:40s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// [GUI Memory]: 165 MB (+8066kb) [00:02:59]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 20 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: ERROR: [IP_Flow 19-344] User Parameter 'SENSOR_BIT_LENGTH (Sensor Bit Length)': Value '0' is not in the validation list '8, 10' 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: ERROR: [Ipptcl 7-1485] check_integrity: Integrity check failed. 
+// Tcl Message: ERROR: [Common 17-39] 'ipx::check_integrity' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'ipx::check_integrity' failed due to earlier errors.  
+dismissDialog("Package IP"); // bj (Package IP Progress)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog2)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// Elapsed Time for: 'L.f': 02m:56s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // g (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1287 ms.
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Elapsed Time for: 'L.f': 02m:58s
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "Hidden Parameters ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "C_M00_AXIS_TDATA_WIDTH ; Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH. ; C M00 AXIS TDATA WIDTH ; 32 ; 0 ; long ; default ; 32 ;  ; ", 2, "C_M00_AXIS_TDATA_WIDTH", 0, false, true, false, false, false, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Shift Key
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "C_S00_AXIS_TDATA_WIDTH ; AXI4Stream sink: Data Width ; C S00 AXIS TDATA WIDTH ; 32 ; 0 ; long ; default ; 32 ;  ; ", 3, "C_S00_AXIS_TDATA_WIDTH", 0, false, false, false, false, true, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Popup Trigger
+selectMenuItem(PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER, "Edit Parameter..."); // ap (PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER)
+setText(PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE, "0"); // R (PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Edit IP Parameter"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Edit IP Parameter"); // K (dialog3)
+applyEscape(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, (String) null); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false, false, false, false, false, true); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Double Click
+setText(PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE, "0"); // R (PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Edit IP Parameter"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Edit IP Parameter"); // K (dialog4)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SENSOR_BIT_LENGTH ;  ; Sensor Bit Length ; 0 ; 0 ; long ; default ; 8 10 ;  ; ", 4, "Sensor Bit Length", 3, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SENSOR_BIT_LENGTH ;  ; Sensor Bit Length ; 0 ; 0 ; long ; default ; 8 10 ;  ; ", 4); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SENSOR_BIT_LENGTH ;  ; Sensor Bit Length ; 0 ; 0 ; long ; default ; 8 10 ;  ; ", 4, "Sensor Bit Length", 3, false, false, false, false, false, true); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Double Click
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Edit IP Parameter"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Edit IP Parameter"); // K (dialog5)
+dismissDialog("Edit IP Parameter"); // K (dialog5)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SENSOR_BIT_LENGTH ;  ; Sensor Bit Length ; 0 ; 0 ; long ; default ; 8 10 ;  ; ", 4, "Sensor Bit Length", 3, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SENSOR_BIT_LENGTH ;  ; Sensor Bit Length ; 0 ; 0 ; long ; default ; 8 10 ;  ; ", 4, "Sensor Bit Length", 3, false, false, false, false, true, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Popup Trigger
+selectMenuItem(PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER, "Edit Parameter..."); // ap (PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER)
+selectCheckBox(PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI, "Visible in Customization GUI", true); // f (PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// Tcl Message: set_property value 8 [ipx::get_user_parameters SENSOR_BIT_LENGTH -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 8 [ipx::get_hdl_parameters SENSOR_BIT_LENGTH -of_objects [ipx::current_core]] 
+// Tcl Message: ipgui::add_param -name {SENSOR_BIT_LENGTH} -component [ipx::current_core] -display_name {Sensor Bit Length} -show_label {true} -show_range {true} -widget {comboBox} 
+dismissDialog("Edit IP Parameter"); // K (dialog6)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 799, 20); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+// [GUI Memory]: 187 MB (+15056kb) [00:03:44]
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_WIDTH ;  ; Image Width ; 0 ; 0 ; long ; default ;  ;  ; ", 5, "IM_WIDTH", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_WIDTH ;  ; Image Width ; 0 ; 0 ; long ; default ;  ;  ; ", 5, "IM_WIDTH", 0, false, false, false, false, true, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Popup Trigger
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectMenuItem(PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER, "Edit Parameter..."); // ap (PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER)
+selectCheckBox(PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI, "Visible in Customization GUI", true); // f (PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// Tcl Message: ipgui::add_param -name {IM_WIDTH} -component [ipx::current_core] -display_name {Image Width} -show_label {true} -show_range {true} -widget {} 
+dismissDialog("Edit IP Parameter"); // K (dialog7)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 0 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false, false, false, false, true, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Popup Trigger
+selectMenuItem(PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER, "Edit Parameter..."); // ap (PAResourceOtoP.ParameterFacetTable_EDIT_PARAMETER)
+selectCheckBox(PAResourceEtoH.EditParameterDialog_SPECIFY_RANGE, "Specify Range", true); // f (PAResourceEtoH.EditParameterDialog_SPECIFY_RANGE): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// HOptionPane Error: 'Default range list cannot be empty. Please provide a valid value to continue. (Invalid Default Value)'
+selectButton("OptionPane.button", "OK", "Invalid Default Value"); // JButton (OptionPane.button)
+selectCheckBox(PAResourceEtoH.EditParameterDialog_SPECIFY_RANGE, "Specify Range", false); // f (PAResourceEtoH.EditParameterDialog_SPECIFY_RANGE): FALSE
+setText(PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE, "1024"); // R (PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property value 1024 [ipx::get_user_parameters IM_HEIGHT -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 1024 [ipx::get_hdl_parameters IM_HEIGHT -of_objects [ipx::current_core]] 
+dismissDialog("Edit IP Parameter"); // K (dialog8)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_WIDTH ;  ; Image Width ; 0 ; 0 ; long ; default ;  ;  ; ", 2, "IM_WIDTH", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_WIDTH ;  ; Image Width ; 0 ; 0 ; long ; default ;  ;  ; ", 2); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_WIDTH ;  ; Image Width ; 0 ; 0 ; long ; default ;  ;  ; ", 2, "IM_WIDTH", 0, false, false, false, false, false, true); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Double Click
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE, "1280", true); // R (PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// Tcl Message: set_property widget {textEdit} [ipgui::get_guiparamspec -name "IM_WIDTH" -component [ipx::current_core] ] 
+// Tcl Message: set_property value 1280 [ipx::get_user_parameters IM_WIDTH -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 1280 [ipx::get_hdl_parameters IM_WIDTH -of_objects [ipx::current_core]] 
+dismissDialog("Edit IP Parameter"); // K (dialog9)
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 1024 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 1024 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 1024 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 1024 ; 0 ; long ; default ;  ;  ; ", 6); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "IM_HEIGHT ;  ; Image Height ; 1024 ; 0 ; long ; default ;  ;  ; ", 6, "IM_HEIGHT", 0, false, false, false, false, false, true); // w (PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE) - Double Click
+selectCheckBox(PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI, "Visible in Customization GUI", true); // f (PAResourceEtoH.EditParameterDialog_VISIBLE_IN_CUSTOMIZATION_GUI): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit IP Parameter"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// Tcl Message: ipgui::add_param -name {IM_HEIGHT} -component [ipx::current_core] -display_name {Image Height} -show_label {true} -show_range {true} -widget {} 
+dismissDialog("Edit IP Parameter"); // K (dialog10)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 21 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed. 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/nothon/fpga2C/ip_repo' 
+dismissDialog("Package IP"); // bj (Package IP Progress)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog11)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Package IP"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Package IP"); // aq (dialog12)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceOtoP.PackagerStepContentPanel_MESSAGES, "2"); // g (PAResourceOtoP.PackagerStepContentPanel_MESSAGES)
+// [GUI Memory]: 202 MB (+5269kb) [00:07:33]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,069 MB. GUI used memory: 121 MB. Current time: 7/29/24, 1:58:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 2816 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)

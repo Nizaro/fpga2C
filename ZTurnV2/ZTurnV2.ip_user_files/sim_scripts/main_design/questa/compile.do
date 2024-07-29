@@ -49,9 +49,9 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ipshared/1ab3/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/1ab3/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/1ab3/hdl/noip_lvds_stream.vhd" \
+"../../../bd/main_design/ipshared/41ed/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/41ed/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/41ed/hdl/noip_lvds_stream.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -64 -2008  \

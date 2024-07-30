@@ -1114,7 +1114,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "200.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "71.428566"
@@ -1168,7 +1168,7 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "100000000"
+            "value": "200000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "71428566"
@@ -1233,6 +1233,9 @@
           "PCW_EN_WDT": {
             "value": "0"
           },
+          "PCW_FCLK0_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
           "PCW_FCLK1_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
@@ -1240,7 +1243,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "200"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "72"
@@ -2681,7 +2684,7 @@
       },
       "noip_lvds_stream_0": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "21",
+        "ip_revision": "22",
         "xci_name": "main_design_noip_lvds_stream_0_0",
         "xci_path": "ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci",
         "inst_hier_path": "noip_lvds_stream_0",
@@ -2706,7 +2709,7 @@
       },
       "noip_lvds_stream_1": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "21",
+        "ip_revision": "22",
         "xci_name": "main_design_noip_lvds_stream_0_1",
         "xci_path": "ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci",
         "inst_hier_path": "noip_lvds_stream_1",
@@ -4311,58 +4314,67 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKIN1_JITTER_PS": {
-            "value": "27.770000000000003"
+            "value": "34.72"
           },
           "CLKOUT1_JITTER": {
-            "value": "77.809"
+            "value": "87.471"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "80.292"
+            "value": "104.350"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT3_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT4_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT5_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT6_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "CLKOUT7_REQUESTED_OUT_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
+          },
+          "JITTER_SEL": {
+            "value": "No_Jitter"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "2.750"
+            "value": "2.125"
           },
           "MMCM_CLKIN1_PERIOD": {
-            "value": "2.778"
+            "value": "3.472"
           },
           "MMCM_CLKIN2_PERIOD": {
             "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "2.750"
+            "value": "2.125"
+          },
+          "MMCM_CLKOUT0_DUTY_CYCLE": {
+            "value": "0.5"
           },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "1"
           },
           "PRIM_IN_FREQ": {
-            "value": "360.000"
+            "value": "288.000"
           },
           "PRIM_SOURCE": {
             "value": "Differential_clock_capable_pin"
           },
           "USE_FREQ_SYNTH": {
             "value": "false"
+          },
+          "USE_MIN_POWER": {
+            "value": "true"
           }
         }
       },

@@ -2,43 +2,16 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-// Date        : Fri Jun 21 11:50:40 2024
+// Date        : Tue Jul 30 15:57:04 2024
 // Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top main_design_auto_ss_k_1 -prefix
-//               main_design_auto_ss_k_1_ main_design_auto_ss_k_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.v
 // Design      : main_design_auto_ss_k_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
-
-module main_design_auto_ss_k_1_axis_subset_converter_v1_1_31_core
-   (sparse_tkeep_removed,
-    s_axis_tvalid,
-    s_axis_tkeep,
-    m_axis_tready);
-  output sparse_tkeep_removed;
-  input s_axis_tvalid;
-  input [3:0]s_axis_tkeep;
-  input m_axis_tready;
-
-  wire m_axis_tready;
-  wire [3:0]s_axis_tkeep;
-  wire s_axis_tvalid;
-  wire sparse_tkeep_removed;
-
-  LUT6 #(
-    .INIT(64'h2AAAAAAA00000000)) 
-    sparse_tkeep_removed_INST_0
-       (.I0(s_axis_tvalid),
-        .I1(s_axis_tkeep[1]),
-        .I2(s_axis_tkeep[0]),
-        .I3(s_axis_tkeep[3]),
-        .I4(s_axis_tkeep[2]),
-        .I5(m_axis_tready),
-        .O(sparse_tkeep_removed));
-endmodule
 
 (* CHECK_LICENSE_TYPE = "main_design_auto_ss_k_1,top_main_design_auto_ss_k_1,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "top_main_design_auto_ss_k_1,Vivado 2024.1" *) 
 (* NotValidForBitStream *)
@@ -57,19 +30,19 @@ module main_design_auto_ss_k_1
     m_axis_tlast,
     m_axis_tdest,
     sparse_tkeep_removed);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTIF RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input s_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]s_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *) input [3:0]s_axis_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *) input s_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [0:0]s_axis_tdest;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [0:0]s_axis_tdest;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input m_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [31:0]m_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) output m_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) output [0:0]m_axis_tdest;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 1, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) output [0:0]m_axis_tdest;
   output sparse_tkeep_removed;
 
   wire [31:0]m_axis_tdata;
@@ -147,6 +120,34 @@ module main_design_auto_ss_k_1
         .transfer_dropped(NLW_inst_transfer_dropped_UNCONNECTED));
 endmodule
 
+(* ORIG_REF_NAME = "axis_subset_converter_v1_1_31_core" *) 
+module main_design_auto_ss_k_1_axis_subset_converter_v1_1_31_core
+   (sparse_tkeep_removed,
+    s_axis_tvalid,
+    s_axis_tkeep,
+    m_axis_tready);
+  output sparse_tkeep_removed;
+  input s_axis_tvalid;
+  input [3:0]s_axis_tkeep;
+  input m_axis_tready;
+
+  wire m_axis_tready;
+  wire [3:0]s_axis_tkeep;
+  wire s_axis_tvalid;
+  wire sparse_tkeep_removed;
+
+  LUT6 #(
+    .INIT(64'h2AAAAAAA00000000)) 
+    sparse_tkeep_removed_INST_0
+       (.I0(s_axis_tvalid),
+        .I1(s_axis_tkeep[1]),
+        .I2(s_axis_tkeep[0]),
+        .I3(s_axis_tkeep[3]),
+        .I4(s_axis_tkeep[2]),
+        .I5(m_axis_tready),
+        .O(sparse_tkeep_removed));
+endmodule
+
 (* C_DEFAULT_TLAST = "0" *) (* C_FAMILY = "zynq" *) (* C_M_AXIS_SIGNAL_SET = "83" *) 
 (* C_M_AXIS_TDATA_WIDTH = "32" *) (* C_M_AXIS_TDEST_WIDTH = "1" *) (* C_M_AXIS_TID_WIDTH = "1" *) 
 (* C_M_AXIS_TUSER_WIDTH = "1" *) (* C_S_AXIS_SIGNAL_SET = "91" *) (* C_S_AXIS_TDATA_WIDTH = "32" *) 
@@ -157,7 +158,7 @@ endmodule
 (* G_MASK_SS_TDEST = "64" *) (* G_MASK_SS_TID = "32" *) (* G_MASK_SS_TKEEP = "8" *) 
 (* G_MASK_SS_TLAST = "16" *) (* G_MASK_SS_TREADY = "1" *) (* G_MASK_SS_TSTRB = "4" *) 
 (* G_MASK_SS_TUSER = "128" *) (* G_TASK_SEVERITY_ERR = "2" *) (* G_TASK_SEVERITY_INFO = "0" *) 
-(* G_TASK_SEVERITY_WARNING = "1" *) 
+(* G_TASK_SEVERITY_WARNING = "1" *) (* ORIG_REF_NAME = "top_main_design_auto_ss_k_1" *) 
 module main_design_auto_ss_k_1_top_main_design_auto_ss_k_1
    (aclk,
     aresetn,

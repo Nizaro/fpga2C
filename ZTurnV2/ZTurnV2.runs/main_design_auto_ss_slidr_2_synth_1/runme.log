@@ -1,0 +1,332 @@
+
+*** Running vivado
+    with args -log main_design_auto_ss_slidr_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_auto_ss_slidr_2.tcl
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jul 30 15:59:07 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main_design_auto_ss_slidr_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1352.500 ; gain = 13.902 ; free physical = 1256 ; free virtual = 12197
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_2
+Command: synth_design -top main_design_auto_ss_slidr_2 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 396391
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2141.465 ; gain = 413.715 ; free physical = 259 ; free virtual = 10023
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/synth/main_design_auto_ss_slidr_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/top_main_design_auto_ss_slidr_2.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_subset_converter_v1_1_31_core' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/4bab/hdl/axis_subset_converter_v1_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'axis_subset_converter_v1_1_31_core' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/4bab/hdl/axis_subset_converter_v1_1_vl_rfs.v:61]
+INFO: [Synth 8-6157] synthesizing module 'tdata_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tdata_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdata_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tdata_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tuser_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tuser_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tuser_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tuser_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tid_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tid_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tid_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tid_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tdest_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tdest_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdest_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tdest_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tstrb_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tstrb_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tstrb_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tstrb_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tkeep_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tkeep_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tkeep_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tkeep_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tlast_main_design_auto_ss_slidr_2' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tlast_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tlast_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/tlast_main_design_auto_ss_slidr_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'top_main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/hdl/top_main_design_auto_ss_slidr_2.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ss_slidr_2' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/synth/main_design_auto_ss_slidr_2.v:53]
+WARNING: [Synth 8-7129] Port tid[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[31] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[30] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[29] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[28] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[27] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[26] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[25] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[24] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[3] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[2] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[1] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[3] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tlast_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[31] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[30] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[29] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[28] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[27] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[26] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[25] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[24] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tid[0] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[3] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlast in module tkeep_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[31] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[30] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[29] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[28] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[27] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[26] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[25] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[24] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tstrb_main_design_auto_ss_slidr_2 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2224.434 ; gain = 496.684 ; free physical = 184 ; free virtual = 9448
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2236.309 ; gain = 508.559 ; free physical = 200 ; free virtual = 9437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2236.309 ; gain = 508.559 ; free physical = 201 ; free virtual = 9437
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2236.309 ; gain = 0.000 ; free physical = 211 ; free virtual = 9343
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2309.246 ; gain = 0.000 ; free physical = 178 ; free virtual = 8102
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2309.246 ; gain = 0.000 ; free physical = 163 ; free virtual = 8068
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2309.246 ; gain = 581.496 ; free physical = 135 ; free virtual = 7383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 135 ; free virtual = 7383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 126 ; free virtual = 7375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 159 ; free virtual = 7361
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 187 ; free virtual = 7229
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 326 ; free virtual = 7164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 326 ; free virtual = 7164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 326 ; free virtual = 7165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 165 ; free virtual = 7150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 165 ; free virtual = 7150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 165 ; free virtual = 7151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 165 ; free virtual = 7151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 165 ; free virtual = 7151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 164 ; free virtual = 7150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2317.250 ; gain = 589.500 ; free physical = 164 ; free virtual = 7150
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2317.250 ; gain = 516.562 ; free physical = 162 ; free virtual = 7144
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 2317.258 ; gain = 589.500 ; free physical = 163 ; free virtual = 7145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2317.258 ; gain = 0.000 ; free physical = 157 ; free virtual = 7145
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2317.258 ; gain = 0.000 ; free physical = 360 ; free virtual = 7422
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5c0c947c
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 2317.258 ; gain = 944.945 ; free physical = 339 ; free virtual = 7417
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1338.675; main = 965.250; forked = 373.425
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3350.711; main = 2317.254; forked = 1033.457
+INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/main_design_auto_ss_slidr_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_auto_ss_slidr_2, cache-ID = fab9f1adb4f8c519
+INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/main_design_auto_ss_slidr_2.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_auto_ss_slidr_2_utilization_synth.rpt -pb main_design_auto_ss_slidr_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 30 16:00:31 2024...

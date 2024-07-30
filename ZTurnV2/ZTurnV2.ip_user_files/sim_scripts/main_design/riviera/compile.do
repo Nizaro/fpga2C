@@ -31,7 +31,7 @@ vlog -work xilinx_vip  -incr -l axi_vip_v1_1_17 -l processing_system7_vip_v1_0_1
 "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xpm  -incr -l axi_vip_v1_1_17 -l processing_system7_vip_v1_0_19 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xpm  -incr -l axi_vip_v1_1_17 -l processing_system7_vip_v1_0_19 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
@@ -68,16 +68,16 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_sim_netlist.vhdl" \
 
-vlog -work xlconcat_v2_1_6  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xlconcat_v2_1_6  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_xlconcat_0_0/sim/main_design_xlconcat_0_0.v" \
 
-vlog -work xlslice_v1_0_4  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xlslice_v1_0_4  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_xlslice_0_1/sim/main_design_xlslice_0_1.v" \
 "../../../bd/main_design/ip/main_design_xlslice_0_2/sim/main_design_xlslice_0_2.v" \
 "../../../bd/main_design/ip/main_design_monitor0_slice0_1/sim/main_design_monitor0_slice0_1.v" \
@@ -89,15 +89,14 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_lvds_sync_0_ibuf1_0/sim/main_design_lvds_sync_0_ibuf1_0.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_dout0_0_ibuf_0/sim/main_design_lvds_dout0_0_ibuf_0.vhd" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_xlconcat_0_1/sim/main_design_xlconcat_0_1.v" \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_lvds_dout0_0_ibuf_1/sim/main_design_lvds_dout0_0_ibuf_1.vhd" \
 "../../../bd/main_design/ip/main_design_lvds_dout1_0_ibuf_1/sim/main_design_lvds_dout1_0_ibuf_1.vhd" \
-"../../../bd/main_design/ip/main_design_lvds_clkin_0_ibuf_4/sim/main_design_lvds_clkin_0_ibuf_4.vhd" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_lvds_data_0_concat_1/sim/main_design_lvds_data_0_concat_1.v" \
 
 vcom -work xil_defaultlib -93  -incr \
@@ -119,6 +118,9 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_lvds_clkin_1_ibuf_0/sim/main_design_lvds_clkin_1_ibuf_0.vhd" \
+"../../../bd/main_design/sim/main_design.vhd" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_clk_wiz_0_1/main_design_clk_wiz_0_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_util_vector_logic_0_1/main_design_util_vector_logic_0_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \
@@ -130,13 +132,12 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl" \
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/3242" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_s_arb_req_suppress_concat_0/sim/main_design_s_arb_req_suppress_concat_0.v" \
 
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl" \
-"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

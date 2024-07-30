@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Mon Jul 29 14:02:12 2024
+| Date         : Tue Jul 30 14:01:24 2024
 | Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_drc -file main_design_wrapper_drc_opted.rpt -pb main_design_wrapper_drc_opted.pb -rpx main_design_wrapper_drc_opted.rpx
 | Design       : main_design_wrapper
@@ -24,11 +24,10 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 11
+             Violations found: 10
 +-----------+----------+----------------------------+------------+
 | Rule      | Severity | Description                | Violations |
 +-----------+----------+----------------------------+------------+
-| PLCK-12   | Warning  | Clock Placer Checks        | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check | 2          |
 | REQP-165  | Advisory | writefirst                 | 4          |
 | REQP-181  | Advisory | writefirst                 | 4          |
@@ -36,17 +35,6 @@ Table of Contents
 
 2. REPORT DETAILS
 -----------------
-PLCK-12#1 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
-	main_design_i/lvds_clkin_0_ibuf/U0/USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I (IBUFDS.O) is locked to B19
-	main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT[0]_BUFG_inst (BUFG.I) cannot be placed
-
-Related violations: <none>
-
 REQP-1839#1 Warning
 RAMB36 async control check  
 The RAMB36E1 main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/enb) which is driven by a register (main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.

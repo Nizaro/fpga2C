@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Jul 30 09:23:33 2024
+# Process ID: 177616
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :399.695 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :23362 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+create_peripheral user.org user rgb_led_ctrl 1.0 -dir /home/nothon/fpga2C/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:rgb_led_ctrl:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:rgb_led_ctrl:1.0]
+write_peripheral [ipx::find_open_core user.org:user:rgb_led_ctrl:1.0]
+set_property  ip_repo_paths  {/home/nothon/fpga2C/ip_repo/rgb_led_ctrl_1_0 /home/nothon/fpga2C/ip_repo /home/nothon/fpga2C/interface_repo} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_rgb_led_ctrl_v1_0 -directory /home/nothon/fpga2C/ip_repo /home/nothon/fpga2C/ip_repo/rgb_led_ctrl_1_0/component.xml
+current_project edit_noip_lvds_stream_v1_0
+set_property  ip_repo_paths  {/home/nothon/fpga2C/ip_repo /home/nothon/fpga2C/interface_repo} [current_project]
+update_ip_catalog
+close_project

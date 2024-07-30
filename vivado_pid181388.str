@@ -1,0 +1,1416 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 181388
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Jul 30 09:42:20 CEST 2024
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-39-generic
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: Ubuntu 24.04 LTS
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 66, y = 32, width = 1854, height = 1048
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: true
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	root
+User home directory: /root
+User working directory: /home/nothon/fpga2C
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /root/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /root/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /root/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/nothon/fpga2C/vivado.log
+Vivado journal file: 	/home/nothon/fpga2C/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-181388-nothon-Swift-SF314-57
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2024.1/bin:/tools/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/nothon/fpga2C:nothon-Swift-SF314-57_1722325326_181319
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2024.1
+XILINX_SDK: /tools/Xilinx/Vitis/2024.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2024.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,429 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,454 MB. GUI used memory: 68 MB. Current time: 7/30/24, 9:42:21 AM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 103 MB (+105401kb) [00:13:24]
+// [Engine Memory]: 1,571 MB (+1496328kb) [00:13:24]
+// [GUI Memory]: 134 MB (+26935kb) [00:13:25]
+// [Engine Memory]: 1,858 MB (+218401kb) [00:13:25]
+// [GUI Memory]: 141 MB (+300kb) [00:13:25]
+// WARNING: HEventQueue.dispatchEvent() is taking  2300 ms.
+// Tcl Message: open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,880 MB. GUI used memory: 78 MB. Current time: 7/30/24, 9:55:37 AM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 7976.023 ; gain = 461.656 ; free physical = 347 ; free virtual = 21028 
+// Project name: ZTurnV2; location: /home/nothon/fpga2C/ZTurnV2; part: xc7z020clg400-2
+dismissDialog("Open Project"); // bj (Open Project Progress)
+// [GUI Memory]: 152 MB (+4404kb) [00:13:31]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; route_design Complete, Failed Timing! ; -2.7138710021972656 ; -565.3264770507812 ; 0.02668987214565277 ; 0.0 ;  ; 0.0 ; 1.817800521850586 ; 0 ; 6 CW, 119 Warn ;  ;  ; 4967 ; 6696 ; 6.0 ; 0 ; 0 ; Mon Jul 29 16:05:32 CEST 2024 ; 00:03:52 ; Vivado Implementation Defaults (Vivado Implementation 2024) ; Vivado Implementation Default Reports (Vivado Implementation 2024) ; xc7z020clg400-2 ; nothon-Swift-SF314-57 ; Default settings for Implementation.", 1, "impl_1", 0, false); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+// [Engine Memory]: 1,962 MB (+11352kb) [00:13:32]
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.5s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; route_design Complete, Failed Timing! ; -2.7138710021972656 ; -565.3264770507812 ; 0.02668987214565277 ; 0.0 ;  ; 0.0 ; 1.817800521850586 ; 0 ; 6 CW, 119 Warn ;  ;  ; 4967 ; 6696 ; 6.0 ; 0 ; 0 ; Mon Jul 29 16:05:32 CEST 2024 ; 00:03:52 ; Vivado Implementation Defaults (Vivado Implementation 2024) ; Vivado Implementation Default Reports (Vivado Implementation 2024) ; xc7z020clg400-2 ; nothon-Swift-SF314-57 ; Default settings for Implementation.", 1, "impl_1", 0, false, false, false, false, false, true); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE) - Double Click
+// Tcl Message: open_run impl_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,550 MB. GUI used memory: 83 MB. Current time: 7/30/24, 9:55:56 AM CEST
+// [Engine Memory]: 2,592 MB (+557152kb) [00:13:45]
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// [Engine Memory]: 3,048 MB (+342266kb) [00:13:50]
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,052 MB. GUI used memory: 83 MB. Current time: 7/30/24, 9:56:03 AM CEST
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /home/nothon/fpga2C/./.Xil/Vivado-181388-nothon-Swift-SF314-57/xc7z020_detail.xgd_3EF67E03 elapsed time: 0.9s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.1s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1s
+// [GUI Memory]: 172 MB (+12935kb) [00:13:54]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  2811 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-2 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library. 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.18 . Memory (MB): peak = 8700.281 ; gain = 0.000 ; free physical = 300 ; free virtual = 20537 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2024.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8700.281 ; gain = 0.000 ; free physical = 219 ; free virtual = 20477 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
+// Tcl Message: Reading placement. 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9064.086 ; gain = 0.000 ; free physical = 173 ; free virtual = 19949 
+// Tcl Message: Reading placer database... 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9064.086 ; gain = 0.000 ; free physical = 173 ; free virtual = 19949 Read PlaceDB: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.49 . Memory (MB): peak = 9070.086 ; gain = 6.000 ; free physical = 158 ; free virtual = 19936 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9070.086 ; gain = 0.000 ; free physical = 158 ; free virtual = 19936 
+// Tcl Message: Reading routing. 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9077.086 ; gain = 7.000 ; free physical = 191 ; free virtual = 19903 Read Physdb Files: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.59 . Memory (MB): peak = 9077.086 ; gain = 13.000 ; free physical = 191 ; free virtual = 19903 
+// Tcl Message: Restored from archive | CPU: 0.790000 secs | Memory: 13.753876 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.59 . Memory (MB): peak = 9077.086 ; gain = 13.000 ; free physical = 191 ; free virtual = 19903 Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9607.340 ; gain = 0.000 ; free physical = 451 ; free virtual = 19892 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 91 instances were transformed.   IOBUF => IOBUF (IBUF, OBUFT): 2 instances   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances   RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances   RAM64M => RAM64M (RAMD64E(x4)): 16 instances   SRLC32E => SRL16E: 4 instances  
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:01:02 ; elapsed = 00:00:23 . Memory (MB): peak = 9607.340 ; gain = 1532.148 ; free physical = 272 ; free virtual = 19732 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 182 MB (+1102kb) [00:13:58]
+// [GUI Memory]: 193 MB (+1983kb) [00:13:58]
+// [GUI Memory]: 204 MB (+1410kb) [00:13:58]
+// [GUI Memory]: 214 MB (+477kb) [00:13:59]
+// WARNING: HEventQueue.dispatchEvent() is taking  1666 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [Engine Memory]: 3,201 MB (+1545kb) [00:13:59]
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1226 ms.
+// Elapsed Time for: 'x': 28s
+// Elapsed time: 28 seconds
+dismissDialog("Open Implemented Design"); // bj (Open Implemented Design Progress)
+// [Engine Memory]: 3,461 MB (+104728kb) [00:14:02]
+// Elapsed Time for: 'L.f': 36s
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 232 MB (+7161kb) [00:14:02]
+selectComboBox(RDIResource.LayoutComboBox_SELECT_OR_SAVE_WINDOW_LAYOUT, "Timing Analysis", 3); // b (RDIResource.LayoutComboBox_SELECT_OR_SAVE_WINDOW_LAYOUT)
+// WARNING: HEventQueue.dispatchEvent() is taking  1243 ms.
+selectTab((HResource) null, (HResource) null, "Implementation Run Properties", 2); // aa
+closeFrame(RDIResource.RDIViews_PROPERTIES, "Implementation Run Properties"); // R (RDIResource.RDIViews_PROPERTIES, Properties)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Inter-Clock Paths]", 7); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Inter-Clock Paths, clk_fpga_0 to lvds_clk_0]", 8); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Inter-Clock Paths, clk_fpga_0 to lvds_clk_0, Setup -2.578 ns]", 9, false); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Inter-Clock Paths, clk_fpga_0 to lvds_clk_0, Setup -2.578 ns]", 9, false, false, false, false, false, true); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE) - Double Click
+collapseTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Inter-Clock Paths, clk_fpga_0 to lvds_clk_0]", 8); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 5, true); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE) - Node
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 5, true); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE) - Node
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Methodology Summary]", 4, false, false, false, false, false, true); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE) - Double Click
+// [GUI Memory]: 244 MB (+989kb) [00:27:52]
+// Elapsed time: 1026 seconds
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 6); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_0]", 9); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_0, Setup -0.904 ns]", 10, false); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+// PAPropertyPanels.initPanels (Path 21) elapsed time: 0.4s
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -0.904 ; 5 ; 8 ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/C ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word_reg[6]/D ; 3.6507614 ; 0.90400004 ; 2.746763 ; 2.778 ; lvds_clk_0 ; lvds_clk_0 ;  ; 0.03535534", 0, "Path 21", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,491 MB. GUI used memory: 151 MB. Current time: 7/30/24, 10:13:38 AM CEST
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -0.904 ; 5 ; 8 ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/C ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word_reg[6]/D ; 3.6507614 ; 0.90400004 ; 2.746763 ; 2.778 ; lvds_clk_0 ; lvds_clk_0 ;  ; 0.03535534", 0, "Path 21", 0, false, false, false, false, true); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE) - Double Click
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, " ; (r) 0.000 ; 0.000 ; Site: L16 ; lvds_clk_0_p[0] ;  ; lvds_clk_0_p[0]", 1, "(r) 0.000", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Incr (ns)", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Incr (ns)", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Delay Type", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 257 MB (+503kb) [00:31:41]
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Delay Type", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Delay Type", 0, false, false, false, false, true); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Double Click
+// [GUI Memory]: 271 MB (+587kb) [00:31:46]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.000 ; 8.251 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[6]_i_1_n_0", 11, "8.251", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.000 ; 8.251 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[6]_i_1_n_0", 11, "8.251", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 285 MB (+465kb) [00:31:49]
+// [Engine Memory]: 4,230 MB (+624438kb) [00:31:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,230 MB. GUI used memory: 162 MB. Current time: 7/30/24, 10:14:01 AM CEST
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=8, routed) ; 0.392 ; 7.373 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[4]_i_2_n_0", 7, "7.373", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.668 ; 8.146 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_data_words[0][6]_i_1_n_0", 9, "8.146", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.000 ; 8.251 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[6]_i_1_n_0", 11, "8.251", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.000 ; 8.251 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[6]_i_1_n_0", 11, "8.251", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.000 ; 8.251 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[6]_i_1_n_0", 11, "8.251", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=8, routed) ; 0.392 ; 7.373 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[4]_i_2_n_0", 7, "7.373", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.352 ; 6.099 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[7]_i_12_n_0", 3, "6.099", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE ;  ;  ; Site: SLICE_X45Y96 ; C ; i_reg[10] (FDCE) ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/C", 7, (String) null, 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE ;  ;  ; Site: SLICE_X45Y96 ; C ; i_reg[10] (FDCE) ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/C", 7, (String) null, 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Path (ns)", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "5.642", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=6, routed) ; 0.672 ; 6.876 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[7]_i_8_n_0", 5, "6.876", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.352 ; 6.099 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word[7]_i_12_n_0", 3, "6.099", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "net (fo=2, routed)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 300 MB (+693kb) [00:32:06]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "net (fo=2, routed)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "0.662", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, null, -1, null, -1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 315 MB (+268kb) [00:32:09]
+// [GUI Memory]: 331 MB (+110kb) [00:32:11]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.668 ; 8.146 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/lvds_data_words[0][6]_i_1_n_0", 9, "0.668", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 348 MB (+669kb) [00:32:17]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "0.662", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE (Prop_fdce_C_Q) ; (f) 0.379 ; 4.980 ; Site: SLICE_X45Y96 ; Q ; i_reg[10] (FDCE) ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/Q", 0, "FDCE (Prop_fdce_C_Q)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 366 MB (+602kb) [00:32:19]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, (String) null, 4); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 384 MB (+46kb) [00:32:21]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "net (fo=2, routed)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE (Prop_fdce_C_Q) ; (f) 0.379 ; 4.980 ; Site: SLICE_X45Y96 ; Q ; i_reg[10] (FDCE) ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/Q", 0, "main_design_i/noip_lvds_stream_0/U0/i_reg[10]/Q", 6); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 6); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 404 MB (+955kb) [00:32:23]
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 6, false, false, false, false, true); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Double Click
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 6, false, false, false, true, false); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Popup Trigger
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, "main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 6, false, false, false, true, false); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Popup Trigger
+selectMenu(RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, "Elide Setting"); // o.c (RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, Elide Setting)
+selectMenu(PAResourceOtoP.PathReportTableView_FLOORPLANNING, "Floorplanning"); // am (PAResourceOtoP.PathReportTableView_FLOORPLANNING, Floorplanning)
+selectMenu(PAResourceOtoP.PathReportTableView_SELECT, "Select"); // am (PAResourceOtoP.PathReportTableView_SELECT, Select)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenu(PAResourceOtoP.PathReportTableView_SELECT, "Select"); // am (PAResourceOtoP.PathReportTableView_SELECT, Select)
+// [GUI Memory]: 425 MB (+27kb) [00:32:29]
+selectMenu(RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, "Elide Setting"); // o.c (RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, Elide Setting)
+selectMenu(PAResourceOtoP.PathReportTableView_FLOORPLANNING, "Floorplanning"); // am (PAResourceOtoP.PathReportTableView_FLOORPLANNING, Floorplanning)
+selectMenu(PAResourceOtoP.PathReportTableView_SELECT, "Select"); // am (PAResourceOtoP.PathReportTableView_SELECT, Select)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenuItem((HResource) null, "Color 15"); // ap (Color 15)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.662 ; 5.642 ;  ;  ;  ; main_design_i/noip_lvds_stream_0/U0/i_reg_n_0_[10]", 1, (String) null, 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -0.904 ; 5 ; 8 ; main_design_i/noip_lvds_stream_0/U0/i_reg[10]/C ; main_design_i/noip_lvds_stream_0/U0/lvds_sync_word_reg[6]/D ; 3.6507614 ; 0.90400004 ; 2.746763 ; 2.778 ; lvds_clk_0 ; lvds_clk_0 ;  ; 0.03535534", 0, "Path 21", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+// Device view-level: 0.3
+// [GUI Memory]: 456 MB (+10619kb) [00:32:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,020 MB. GUI used memory: 195 MB. Current time: 7/30/24, 10:14:48 AM CEST
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,377 MB. GUI used memory: 160 MB. Current time: 7/30/24, 10:14:49 AM CEST
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,269 MB. GUI used memory: 153 MB. Current time: 7/30/24, 10:14:50 AM CEST
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 3,255 MB. GUI used memory: 153 MB. Current time: 7/30/24, 10:44:52 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,242 MB. GUI used memory: 133 MB. Current time: 7/30/24, 11:14:52 AM CEST
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 132 MB. Current time: 7/30/24, 11:38:34 AM CEST
+// Device view-level: 0.6
+// Device view-level: 1.2
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 138 MB. Current time: 7/30/24, 11:38:36 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 133 MB. Current time: 7/30/24, 11:38:36 AM CEST
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 134 MB. Current time: 7/30/24, 11:38:37 AM CEST
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 139 MB. Current time: 7/30/24, 11:38:39 AM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1018 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1464 ms.
+// Elapsed time: 6364 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 521109, 91190); // t (PAResourceOtoP.PAViews_DEVICE, PlanAheadTabDevice_editor)
+/********** leftMouseClick (1617, 300, true); // t (PAResourceOtoP.PAViews_DEVICE, PlanAheadTabDevice_editor) **********/
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 136 MB. Current time: 7/30/24, 12:00:53 PM CEST
+// Elapsed time: 959 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Path 21 - main_design_wrapper_timing_summary_routed", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 134 MB. Current time: 7/30/24, 12:30:57 PM CEST
+// Elapsed time: 1351 seconds
+collapseTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_0]", 9); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_1]", 10); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_1, Setup -0.786 ns]", 11, false); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+// PAPropertyPanels.initPanels (Path 41) elapsed time: 0.2s
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 41 ; -0.786 ; 5 ; 8 ; main_design_i/noip_lvds_stream_1/U0/i_reg[4]/C ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word_reg[2]/D ; 3.503123 ; 1.01 ; 2.493123 ; 2.778 ; lvds_clk_1 ; lvds_clk_1 ;  ; 0.03535534", 0, "Path 41", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 41 ; -0.786 ; 5 ; 8 ; main_design_i/noip_lvds_stream_1/U0/i_reg[4]/C ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word_reg[2]/D ; 3.503123 ; 1.01 ; 2.493123 ; 2.778 ; lvds_clk_1 ; lvds_clk_1 ;  ; 0.03535534", 0, "Path 41", 0, false, false, false, false, true); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE) - Double Click
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE ;  ;  ; Site: SLICE_X44Y105 ; C ; i_reg[4] (FDCE) ; main_design_i/noip_lvds_stream_1/U0/i_reg[4]/C", 7, "FDCE", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Delay Type", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=2, routed) ; 0.645 ; 5.675 ;  ;  ;  ; main_design_i/noip_lvds_stream_1/U0/i_reg_n_0_[4]", 1, "net (fo=2, routed)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTableHeader(PAResourceOtoP.PathReportTableView_DESCRIPTION, "Delay Type", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "BUFG (Prop_bufg_I_O) ; (r) 0.086 ; 3.122 ; Site: BUFGCTRL_X0Y19 ; O ; IBUF_OUT[0]_BUFG_inst (BUFG) ; main_design_i/lvds_clkin_1_ibuf/U0/IBUF_OUT[0]_BUFG_inst/O", 5, "BUFG (Prop_bufg_I_O)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// Elapsed time: 16 seconds
+closeView(PAResourceOtoP.PAViews_PATH_TABLE, "Path Table"); // h (PAResourceOtoP.PAViews_PATH_TABLE, PlanAheadTabPath Table)
+// Elapsed time: 51 seconds
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "FDCE (Prop_fdce_C_Q) ; (f) 0.348 ; 5.030 ; Site: SLICE_X44Y105 ; Q ; i_reg[4] (FDCE) ; main_design_i/noip_lvds_stream_1/U0/i_reg[4]/Q", 0, "5.030", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT6 (Prop_lut6_I5_O) ; (f) 0.105 ; 6.262 ; Site: SLICE_X43Y104 ; O ; lvds_sync_word[7]_i_7 (LUT6) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[7]_i_7/O", 4, "lvds_sync_word[7]_i_7 (LUT6)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT4 (Prop_lut4_I0_O) ; (f) 0.105 ; 6.966 ; Site: SLICE_X42Y104 ; O ; lvds_sync_word[1]_i_3 (LUT4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[1]_i_3/O", 6, "lvds_sync_word[1]_i_3 (LUT4)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT3 (Prop_lut3_I1_O) ; (r) 0.105 ; 7.391 ; Site: SLICE_X44Y103 ; O ; lvds_data_words[0][2]_i_1 (LUT3) ; main_design_i/noip_lvds_stream_1/U0/lvds_data_words[0][2]_i_1/O", 8, "lvds_data_words[0][2]_i_1 (LUT3)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT4 (Prop_lut4_I0_O) ; (f) 0.105 ; 6.966 ; Site: SLICE_X42Y104 ; O ; lvds_sync_word[1]_i_3 (LUT4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[1]_i_3/O", 6, "lvds_sync_word[1]_i_3 (LUT4)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT3 (Prop_lut3_I1_O) ; (r) 0.105 ; 7.391 ; Site: SLICE_X44Y103 ; O ; lvds_data_words[0][2]_i_1 (LUT3) ; main_design_i/noip_lvds_stream_1/U0/lvds_data_words[0][2]_i_1/O", 8, "lvds_data_words[0][2]_i_1 (LUT3)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, " ; (r) 0.000 ; 2.778 ; Site: J18 ; lvds_clk_1_p[0] ;  ; lvds_clk_1_p[0]", 1, "2.778", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "IBUFDS (Prop_ibufds_I_O) ; (r) 0.837 ; 3.615 ; Site: J18 ; O ; USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I (IBUFDS) ; main_design_i/lvds_clkin_1_ibuf/U0/USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I/O", 3, "3.615", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=0) ; 0.000 ; 0.000 ;  ;  ;  ; main_design_i/lvds_clkin_1_ibuf/U0/IBUF_DS_P[0]", 2, "0.000", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT6 (Prop_lut6_I5_O) ; (f) 0.105 ; 6.262 ; Site: SLICE_X43Y104 ; O ; lvds_sync_word[7]_i_7 (LUT6) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[7]_i_7/O", 4, "Site: SLICE_X43Y104", 3); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT5 (Prop_lut5_I4_O) ; (f) 0.242 ; 5.917 ; Site: SLICE_X44Y104 ; O ; lvds_sync_word[7]_i_11 (LUT5) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[7]_i_11/O", 2, "(f) 0.242", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT5 (Prop_lut5_I4_O) ; (f) 0.242 ; 5.917 ; Site: SLICE_X44Y104 ; O ; lvds_sync_word[7]_i_11 (LUT5) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[7]_i_11/O", 2, "lvds_sync_word[7]_i_11 (LUT5)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 479 MB (+162kb) [02:59:03]
+// [GUI Memory]: 503 MB (+537kb) [02:59:06]
+// [GUI Memory]: 529 MB (+661kb) [02:59:15]
+// Elapsed time: 25 seconds
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "IBUFDS (Prop_ibufds_I_O) ; (r) 0.876 ; 0.876 ; Site: J18 ; O ; USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I (IBUFDS) ; main_design_i/lvds_clkin_1_ibuf/U0/USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I/O", 3, "(r) 0.876", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// [GUI Memory]: 556 MB (+753kb) [02:59:39]
+// Elapsed time: 21 seconds
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "IBUFDS (Prop_ibufds_I_O) ; (r) 0.876 ; 0.876 ; Site: J18 ; O ; USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I (IBUFDS) ; main_design_i/lvds_clkin_1_ibuf/U0/USE_IBUFDS.GEN_IBUFDS[0].IBUFDS_I/O", 3, "Site: J18", 3); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,844 MB. GUI used memory: 133 MB. Current time: 7/30/24, 1:00:57 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,237 MB. GUI used memory: 133 MB. Current time: 7/30/24, 1:30:57 PM CEST
+// Elapsed time: 4012 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Implementation", "Implemented Design", "DesignTask.RESULTS_ANALYSIS");
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Confirm Close"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Confirm Close"); // t (dialog0)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,247 MB. GUI used memory: 105 MB. Current time: 7/30/24, 1:48:46 PM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,247 MB. GUI used memory: 107 MB. Current time: 7/30/24, 1:48:47 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2649 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 9607.340 ; gain = 0.000 ; free physical = 194 ; free virtual = 15191 
+// Elapsed time: 10 seconds
+dismissDialog("Close"); // bj (Close Progress)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd} 
+// Tcl Message: Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// Tcl Message: INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1 
+// Tcl Message: INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clkin_0_ibuf Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1347 ms.
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// 'bJ' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // bj (Open Block Design Progress)
+// WARNING: HTimer (Open addressing views timer) is taking 441ms to process. Increasing delay to 1300 ms.
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /lvds_clkin_1_ibuf]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets IBUF_DS_N_0_3] [get_bd_nets IBUF_DS_P_0_3] [get_bd_cells lvds_clkin_1_ibuf] 
+// Elapsed Time for: 'L.f': 03h:53m:34s
+// TclEventType: DG_GRAPH_STALE
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+// Elapsed Time for: 'L.f': 03h:53m:36s
+// Elapsed Time for: 'L.f': 03h:53m:39s
+// Elapsed time: 46 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clock"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Clock Converter", 1, "AXI4-Stream Clock Converter", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Audio Clock Recovery Unit", 0, "Audio Clock Recovery Unit", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 3, "Clocking Wizard", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clock Verification IP", 4, "Clock Verification IP", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 3, "Clocking Wizard", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 3); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 3, "Clocking Wizard", 0, false, false, false, false, false, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Double Click
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bj (Add IP Progress)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 03h:54m:29s
+// Tcl Command: 'set_property location {1 131 1713} [get_bd_cells clk_wiz_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 131 1713} [get_bd_cells clk_wiz_0] 
+// Elapsed Time for: 'L.f': 03h:54m:31s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /clk_wiz_0/locked]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
+// Elapsed time: 14 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 19 seconds
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null, "Re-customize IP"); // v (PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER): TRUE
+setText("PRIM IN FREQ", "360", true); // w (PRIM IN FREQ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Re-customize IP"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Re-customize IP"); // m (dialog1)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells clk_wiz_0] 
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 03h:55m:27s
+// Elapsed Time for: 'L.f': 03h:55m:30s
+// Elapsed Time for: 'L.f': 03h:55m:33s
+// Elapsed time: 26 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g (PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION)
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Run Connection Automation"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Run Connection Automation"); // G (dialog2)
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+// Elapsed time: 13 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clocking"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 
+// Tcl Message: endgroup 
+// Elapsed Time for: 'L.f': 03h:56m:11s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 03h:56m:13s
+// Tcl Command: 'set_property location {1 140 1709} [get_bd_cells clk_wiz_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 140 1709} [get_bd_cells clk_wiz_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null, "Re-customize IP"); // v (PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER): TRUE
+setText("PRIM IN FREQ", "360.000"); // w (PRIM IN FREQ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+setText("CLKOUT1 REQUESTED OUT FREQ", (String) null); // w (CLKOUT1 REQUESTED OUT FREQ)
+setText("CLKOUT1 REQUESTED OUT FREQ", "360", true); // w (CLKOUT1 REQUESTED OUT FREQ)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog3)
+// Tcl Command: 'set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.CLKIN1_JITTER_PS {27.770000000000003} \   CONFIG.CLKOUT1_JITTER {77.809} \   CONFIG.CLKOUT1_PHASE_ERROR {80.292} \   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {360} \   CONFIG.MMCM_CLKFBOUT_MULT_F {2.750} \   CONFIG.MMCM_CLKIN1_PERIOD {2.778} \   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \   CONFIG.MMCM_CLKOUT0_DIVIDE_F {2.750} \   CONFIG.MMCM_DIVCLK_DIVIDE {1} \   CONFIG.PRIM_IN_FREQ {360.000} \   CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} \ ] [get_bd_cells clk_wiz_0] 
+dismissDialog("Customize IP"); // bj (Customize IP Progress)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports lvds_clk_1_n] [get_bd_pins clk_wiz_0/clk_in1_n] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports lvds_clk_1_p] [get_bd_pins clk_wiz_0/clk_in1_p] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: save_bd_design 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// Elapsed time: 10 seconds
+dismissDialog("Save Design"); // bj (Save Design Progress)
+// Elapsed Time for: 'L.f': 03h:56m:57s
+// Elapsed Time for: 'L.f': 03h:56m:59s
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins fifo_generator_1/clk] 
+// Elapsed time: 15 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /clk_wiz_0/locked]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 358, 216, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /clk_wiz_0/locked]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /clk_wiz_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
+selectCheckBox((HResource) null, "Frequency Synthesis", false); // f: FALSE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+// Elapsed time: 11 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog4)
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list \   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {360.000} \   CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {360.000} \   CONFIG.USE_FREQ_SYNTH {false} \ ] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "logic"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 
+// Tcl Message: endgroup 
+// Elapsed Time for: 'L.f': 03h:57m:57s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /util_vector_logic_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'L.f': 03h:57m:59s
+// Tcl Command: 'set_property location {1 118 1767} [get_bd_cells util_vector_logic_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 118 1767} [get_bd_cells util_vector_logic_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /util_vector_logic_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /util_vector_logic_0]"); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectRadioButton((HResource) null, "not"); // aM
+setText("C_SIZE", "1", true); // w (C_SIZE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog5)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.C_OPERATION {not} \   CONFIG.C_SIZE {1} \ ] [get_bd_cells util_vector_logic_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins clk_wiz_0/reset] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins processing_system7_0/FCLK_RESET0_N] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui>  
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 03h:58m:21s
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 615, 293, 1152, 530, false, false, false, true, false); // fU (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+// Elapsed Time for: 'L.f': 03h:58m:24s
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenuItem(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "Validate Design"); // ap (PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, validate_bd_design_rsb_menu)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: RSB_VALIDATE_DIAGRAM
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: unexpected operator ":" without preceding "?" in expression "0.0:0.0:0.0:0.0 + 180" 
+// Tcl Message: ERROR: [BD 41-1273] Error running propagate TCL procedure: unexpected operator ":" without preceding "?"     ::xilinx.com_ip_util_vector_logic_2.0::propagate Line 24 
+// Tcl Message: unexpected operator ":" without preceding "?" in expression "0.0:0.0:0.0:0.0 + 180" unexpected operator ":" without preceding "?" in expression "0.0:0.0:0.0:0.0 + 180" unexpected operator ":" without preceding "?" in expression "0.0:0.0:0.0:0.0 + 180" 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate 
+dismissDialog("Validate Design"); // bj (Validate Design Progress)
+// Elapsed Time for: 'L.f': 03h:58m:29s
+// Elapsed Time for: 'L.f': 03h:58m:31s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // dL.a (dialog6)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: save_bd_design 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>  
+dismissDialog("Save Design"); // bj (Save Design Progress)
+// Elapsed Time for: 'L.f': 03h:58m:35s
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Generate Block Design]", 8, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_RSB_DESIGN
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // a (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] 
+// Tcl Message: INFO: [BD 41-1662] The design 'main_design.bd' is already validated. Therefore parameter propagation will not be re-run. 
+// Tcl Message: VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd 
+// Tcl Message: VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df . 
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us_df . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr . 
+// Tcl Message: Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_clk_wiz_0_1] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_clk_wiz_0_1 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_util_vector_logic_0_1] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] } 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/b/e/bef69a52d42f1f26/main_design_auto_us_df_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl. INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_0, cache-ID = bef69a52d42f1f26; cache size = 54.169 MB. 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] } 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] } 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] 
+// Tcl Message: launch_runs main_design_clk_wiz_0_1_synth_1 -jobs 4 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_clk_wiz_0_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jul 30 13:54:25 2024] Launched main_design_clk_wiz_0_1_synth_1... Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_clk_wiz_0_1_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed Time for: 'W.b': 21s
+// 'bz' command handler elapsed time: 22 seconds
+// Elapsed time: 21 seconds
+dismissDialog("Managing Output Products"); // bj (Managing Output Products Progress)
+// Elapsed Time for: 'L.f': 03h:59m:00s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog8)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 281 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // t (dialog9)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/utils_1/imports/synth_1/main_design.dcp with file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog10)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Tue Jul 30 13:59:22 2024] Launched synth_1... Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/runme.log [Tue Jul 30 13:59:22 2024] Launched impl_1... Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bj (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 820ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 303 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Completed"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// Tcl Message: open_run impl_1 
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,834 MB. GUI used memory: 138 MB. Current time: 7/30/24, 2:04:46 PM CEST
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /home/nothon/fpga2C/./.Xil/Vivado-181388-nothon-Swift-SF314-57/xc7z020_detail.xgd_4BDA0363 elapsed time: 2s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 2.3s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.5s
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  4286 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.25 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 200 ; free virtual = 11184 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2024.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 131 ; free virtual = 11086 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
+// Tcl Message: Reading placement. 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1905 ; free virtual = 14538 
+// Tcl Message: Reading placer database... 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1905 ; free virtual = 14538 Read PlaceDB: Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.78 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1922 ; free virtual = 14552 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1922 ; free virtual = 14552 
+// Tcl Message: Reading routing. 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1917 ; free virtual = 14551 Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1917 ; free virtual = 14551 
+// Tcl Message: Restored from archive | CPU: 1.080000 secs | Memory: 13.855965 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1917 ; free virtual = 14551 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1913 ; free virtual = 14551 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 91 instances were transformed.   IOBUF => IOBUF (IBUF, OBUFT): 2 instances   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances   RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances   RAM64M => RAM64M (RAMD64E(x4)): 16 instances   SRLC32E => SRL16E: 4 instances  
+// TclEventType: CURR_DESIGN_SET
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 10254.098 ; gain = 0.000 ; free physical = 1137 ; free virtual = 13998 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2269 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 4,139 MB. GUI used memory: 188 MB. Current time: 7/30/24, 2:04:57 PM CEST
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2424 ms.
+// Elapsed Time for: 'o.a': 33s
+// [Engine Memory]: 4,727 MB (+298822kb) [04:22:48]
+// 'dQ' command handler elapsed time: 35 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  2448 ms.
+// Elapsed time: 35 seconds
+dismissDialog("Open Implemented Design"); // bj (Open Implemented Design Progress)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Methodology Violations"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Methodology Violations"); // aH (dialog12)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // J (dialog13)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 6); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_1]", 12); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+collapseTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, lvds_clk_1]", 12); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_out1_main_design_clk_wiz_0_1_1]", 9); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_out1_main_design_clk_wiz_0_1_1, Setup -1.604 ns]", 10, false); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+// PAPropertyPanels.initPanels (Path 21) elapsed time: 0.3s
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -1.604 ; 5 ; 11 ; main_design_i/noip_lvds_stream_1/U0/bitslip_reg[1]/C ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word_reg[2]/D ; 4.332747 ; 1.406 ; 2.9267468 ; 2.778 ; clk_out1_main_design_clk_wiz_0_1_1 ; clk_out1_main_design_clk_wiz_0_1_1 ;  ; 0.05249737", 0, "Path 21", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_out1_main_design_clk_wiz_0_1_1, Setup -1.604 ns]", 10, false); // a (PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE)
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,720 MB. GUI used memory: 204 MB. Current time: 7/30/24, 2:05:39 PM CEST
+// Device view-level: 0.9
+// Device view-level: 0.6
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -1.604 ; 5 ; 11 ; main_design_i/noip_lvds_stream_1/U0/bitslip_reg[1]/C ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word_reg[2]/D ; 4.332747 ; 1.406 ; 2.9267468 ; 2.778 ; clk_out1_main_design_clk_wiz_0_1_1 ; clk_out1_main_design_clk_wiz_0_1_1 ;  ; 0.05249737", 0, "Path 21", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 21 ; -1.604 ; 5 ; 11 ; main_design_i/noip_lvds_stream_1/U0/bitslip_reg[1]/C ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word_reg[2]/D ; 4.332747 ; 1.406 ; 2.9267468 ; 2.778 ; clk_out1_main_design_clk_wiz_0_1_1 ; clk_out1_main_design_clk_wiz_0_1_1 ;  ; 0.05249737", 0, "Path 21", 0, false, false, false, false, true); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE) - Double Click
+// Elapsed time: 12 seconds
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0) ; (r) -6.567 ; -4.581 ; Site: MMCME2_ADV_X1Y2 ; CLKOUT0 ; mmcm_adv_inst (MMCME2_ADV) ; main_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0", 5, "(r) -6.567", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+// Elapsed time: 10 seconds
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT6 (Prop_lut6_I3_O) ; (r) 0.105 ; 2.193 ; Site: SLICE_X46Y88 ; O ; lvds_sync_word[2]_i_4 (LUT6) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_4/O", 8, "LUT6 (Prop_lut6_I3_O)", 0); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "(f) 0.381", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0) ; (r) -6.527 ; -1.909 ; Site: MMCME2_ADV_X1Y2 ; CLKOUT0 ; mmcm_adv_inst (MMCME2_ADV) ; main_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0", 5, "(r) -6.527", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT2 (Prop_lut2_I0_O) ; (r) 0.105 ; 0.485 ; Site: SLICE_X46Y92 ; O ; i__carry_i_4 (LUT2) ; main_design_i/noip_lvds_stream_1/U0/i__carry_i_4/O", 2, "(r) 0.105", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "(f) 0.381", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT2 (Prop_lut2_I0_O) ; (r) 0.277 ; 1.703 ; Site: SLICE_X47Y91 ; O ; lvds_sync_word[7]_i_5 (LUT2) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[7]_i_5/O", 6, "Site: SLICE_X47Y91", 3); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "lvds_sync_word3_inferred__0/i__carry (CARRY4)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "lvds_sync_word3_inferred__0/i__carry (CARRY4)", 5, false, false, false, true, false); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Popup Trigger
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "lvds_sync_word3_inferred__0/i__carry (CARRY4)", 5, false, false, false, true, false); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION) - Popup Trigger
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "lvds_sync_word3_inferred__0/i__carry (CARRY4)", 5); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTab((HResource) null, (HResource) null, "Methodology", 6); // aa
+// HMemoryUtils.trashcanNow. Engine heap size: 4,842 MB. GUI used memory: 236 MB. Current time: 7/30/24, 2:06:27 PM CEST
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "LUTAR #1 ; Warning ; LUT cell main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[4]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[1]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR.  (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.", 159, "LUT cell main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[4]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[1]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[2]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,. main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR.  (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.", 2, false); // A.c (PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE)
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "LATCH #1 ; Advisory ; There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 168, "There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 2, false); // A.c (PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE)
+expandTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "LATCH #1 ; Advisory ; There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 168); // A.c (PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE)
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "LATCH #1 ; Advisory ; There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 168, "There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 2, false, false, false, false, false, true); // A.c (PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE) - Double Click
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "LATCH #1 ; Advisory ; There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 168, "There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.", 2, false); // A.c (PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "CARRY4 (Prop_carry4_S[0]_CO[1]) ; (f) 0.381 ; 0.866 ; Site: SLICE_X46Y92 ; CO[1] ; lvds_sync_word3_inferred__0/i__carry (CARRY4) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word3_inferred__0/i__carry/CO[1]", 4, "(f) 0.381", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "net (fo=1, routed) ; 0.813 ; 3.006 ;  ;  ;  ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_4_n_0", 9, (String) null, 3); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT6 (Prop_lut6_I3_O) ; (r) 0.105 ; 2.193 ; Site: SLICE_X46Y88 ; O ; lvds_sync_word[2]_i_4 (LUT6) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_4/O", 8, "main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_4/O", 6); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "LUT6 (Prop_lut6_I2_O) ; (r) 0.105 ; 3.111 ; Site: SLICE_X40Y91 ; O ; lvds_sync_word[2]_i_1 (LUT6) ; main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_1/O", 10, "main_design_i/noip_lvds_stream_1/U0/lvds_sync_word[2]_i_1/O", 6); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0) ; (r) -6.527 ; -1.909 ; Site: MMCME2_ADV_X1Y2 ; CLKOUT0 ; mmcm_adv_inst (MMCME2_ADV) ; main_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0", 5, "-1.909", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0) ; (r) -6.527 ; -1.909 ; Site: MMCME2_ADV_X1Y2 ; CLKOUT0 ; mmcm_adv_inst (MMCME2_ADV) ; main_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0", 5, "(r) -6.527", 1); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)
+selectTable(PAResourceOtoP.PathReportTableView_DESCRIPTION, "MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0) ; (r) -6.527 ; -1.909 ; Site: MMCME2_ADV_X1Y2 ; CLKOUT0 ; mmcm_adv_inst (MMCME2_ADV) ; main_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0", 5, "-1.909", 2); // p (PAResourceOtoP.PathReportTableView_DESCRIPTION)

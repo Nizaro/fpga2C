@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Mon Jul 29 13:25:45 2024
+--Date        : Tue Jul 30 13:54:14 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4147,10 +4147,10 @@ entity main_design is
     vdd33_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of main_design : entity is "main_design.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=69,numReposBlks=52,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of main_design : entity is "main_design.hwdef";
 end main_design;
 
 architecture STRUCTURE of main_design is
@@ -4557,13 +4557,6 @@ architecture STRUCTURE of main_design is
     IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_lvds_dout1_0_ibuf_1;
-  component main_design_lvds_clkin_0_ibuf_4 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_clkin_0_ibuf_4;
   component main_design_lvds_data_0_concat_1 is
   port (
     In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4703,15 +4696,28 @@ architecture STRUCTURE of main_design is
     IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_lvds_clkin_1_ibuf_0;
+  component main_design_clk_wiz_0_1 is
+  port (
+    clk_in1_p : in STD_LOGIC;
+    clk_in1_n : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    clk_out1 : out STD_LOGIC;
+    locked : out STD_LOGIC
+  );
+  end component main_design_clk_wiz_0_1;
+  component main_design_util_vector_logic_0_1 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component main_design_util_vector_logic_0_1;
   signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_N_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_0_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_1_2 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4849,8 +4855,10 @@ architecture STRUCTURE of main_design is
   signal iobuf_I2C0_SCL_O : STD_LOGIC;
   signal lvds_clk_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_clk_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_clk_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC;
   signal lvds_data_0_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal lvds_data_1_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal lvds_data_1_inverter_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5014,12 +5022,14 @@ architecture STRUCTURE of main_design is
   signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC;
   signal trigger0_concat_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal util_vector_logic_0_Res1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_mm2s_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
+  signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s00_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s01_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -5030,97 +5040,95 @@ architecture STRUCTURE of main_design is
   signal NLW_processing_system7_0_S_AXI_HP0_RCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_WACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_WCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
-  attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
-  attribute X_INTERFACE_INFO of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
-  attribute X_INTERFACE_INFO of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
-  attribute X_INTERFACE_INFO of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
-  attribute X_INTERFACE_INFO of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
-  attribute X_INTERFACE_INFO of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
-  attribute X_INTERFACE_INFO of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
-  attribute X_INTERFACE_INFO of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
-  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of hdmi_pclk : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_PCLK CLK";
-  attribute X_INTERFACE_PARAMETER of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
-  attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
-  attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
-  attribute X_INTERFACE_INFO of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
-  attribute X_INTERFACE_INFO of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
-  attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
-  attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
-  attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of lvds_clk_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_N, CLK_DOMAIN main_design_lvds_clk_0_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_clk_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_P, CLK_DOMAIN main_design_lvds_clk_0_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_clk_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_N, CLK_DOMAIN main_design_lvds_clk_1_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_clk_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_clk_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_P, CLK_DOMAIN main_design_lvds_clk_1_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout0_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout0_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_0_N, CLK_DOMAIN main_design_lvds_dout0_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout0_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout0_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_0_P, CLK_DOMAIN main_design_lvds_dout0_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout0_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout0_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_1_N, CLK_DOMAIN main_design_lvds_dout0_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout0_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout0_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_1_P, CLK_DOMAIN main_design_lvds_dout0_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout1_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout1_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_0_N, CLK_DOMAIN main_design_lvds_dout1_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout1_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout1_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_0_P, CLK_DOMAIN main_design_lvds_dout1_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout1_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout1_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_1_N, CLK_DOMAIN main_design_lvds_dout1_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout1_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout1_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_1_P, CLK_DOMAIN main_design_lvds_dout1_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout2_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout2_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_0_N, CLK_DOMAIN main_design_lvds_dout2_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout2_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout2_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_0_P, CLK_DOMAIN main_design_lvds_dout2_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout2_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout2_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_1_N, CLK_DOMAIN main_design_lvds_dout2_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout2_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout2_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_1_P, CLK_DOMAIN main_design_lvds_dout2_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout3_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout3_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_0_N, CLK_DOMAIN main_design_lvds_dout3_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout3_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout3_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_0_P, CLK_DOMAIN main_design_lvds_dout3_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout3_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout3_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_1_N, CLK_DOMAIN main_design_lvds_dout3_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_dout3_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_dout3_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_1_P, CLK_DOMAIN main_design_lvds_dout3_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_sync_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_0_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_sync_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_0_N, CLK_DOMAIN main_design_lvds_sync_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_sync_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_0_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_sync_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_0_P, CLK_DOMAIN main_design_lvds_sync_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_sync_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_1_N CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_sync_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_1_N, CLK_DOMAIN main_design_lvds_sync_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of lvds_sync_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_1_P CLK";
-  attribute X_INTERFACE_PARAMETER of lvds_sync_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_1_P, CLK_DOMAIN main_design_lvds_sync_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of noip_monitor0 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR0 DATA";
-  attribute X_INTERFACE_PARAMETER of noip_monitor0 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR0, LAYERED_METADATA undef";
-  attribute X_INTERFACE_INFO of noip_monitor1 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR1 DATA";
-  attribute X_INTERFACE_PARAMETER of noip_monitor1 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR1, LAYERED_METADATA undef";
+  attribute x_interface_info : string;
+  attribute x_interface_info of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
+  attribute x_interface_info of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
+  attribute x_interface_info of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
+  attribute x_interface_info of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
+  attribute x_interface_info of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
+  attribute x_interface_info of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
+  attribute x_interface_info of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
+  attribute x_interface_info of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
+  attribute x_interface_info of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
+  attribute x_interface_info of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
+  attribute x_interface_info of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
+  attribute x_interface_info of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
+  attribute x_interface_info of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
+  attribute x_interface_info of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute x_interface_info of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
+  attribute x_interface_parameter of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of hdmi_pclk : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_PCLK CLK";
+  attribute x_interface_parameter of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
+  attribute x_interface_parameter of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
+  attribute x_interface_info of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
+  attribute x_interface_info of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
+  attribute x_interface_info of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
+  attribute x_interface_info of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
+  attribute x_interface_info of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
+  attribute x_interface_info of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
+  attribute x_interface_info of lvds_clk_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_N CLK";
+  attribute x_interface_parameter of lvds_clk_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_N, CLK_DOMAIN main_design_lvds_clk_0_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_clk_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_0_P CLK";
+  attribute x_interface_parameter of lvds_clk_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_0_P, CLK_DOMAIN main_design_lvds_clk_0_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_clk_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_N CLK";
+  attribute x_interface_parameter of lvds_clk_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_N, CLK_DOMAIN main_design_lvds_clk_1_n, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_clk_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_CLK_1_P CLK";
+  attribute x_interface_parameter of lvds_clk_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_CLK_1_P, CLK_DOMAIN main_design_lvds_clk_1_p, FREQ_HZ 360000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout0_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_N CLK";
+  attribute x_interface_parameter of lvds_dout0_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_0_N, CLK_DOMAIN main_design_lvds_dout0_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout0_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_0_P CLK";
+  attribute x_interface_parameter of lvds_dout0_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_0_P, CLK_DOMAIN main_design_lvds_dout0_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout0_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_1_N CLK";
+  attribute x_interface_parameter of lvds_dout0_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_1_N, CLK_DOMAIN main_design_lvds_dout0_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout0_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT0_1_P CLK";
+  attribute x_interface_parameter of lvds_dout0_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT0_1_P, CLK_DOMAIN main_design_lvds_dout0_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout1_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_0_N CLK";
+  attribute x_interface_parameter of lvds_dout1_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_0_N, CLK_DOMAIN main_design_lvds_dout1_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout1_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_0_P CLK";
+  attribute x_interface_parameter of lvds_dout1_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_0_P, CLK_DOMAIN main_design_lvds_dout1_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout1_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_1_N CLK";
+  attribute x_interface_parameter of lvds_dout1_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_1_N, CLK_DOMAIN main_design_lvds_dout1_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout1_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT1_1_P CLK";
+  attribute x_interface_parameter of lvds_dout1_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT1_1_P, CLK_DOMAIN main_design_lvds_dout1_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout2_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_0_N CLK";
+  attribute x_interface_parameter of lvds_dout2_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_0_N, CLK_DOMAIN main_design_lvds_dout2_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout2_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_0_P CLK";
+  attribute x_interface_parameter of lvds_dout2_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_0_P, CLK_DOMAIN main_design_lvds_dout2_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout2_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_1_N CLK";
+  attribute x_interface_parameter of lvds_dout2_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_1_N, CLK_DOMAIN main_design_lvds_dout2_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout2_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT2_1_P CLK";
+  attribute x_interface_parameter of lvds_dout2_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT2_1_P, CLK_DOMAIN main_design_lvds_dout2_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout3_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_0_N CLK";
+  attribute x_interface_parameter of lvds_dout3_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_0_N, CLK_DOMAIN main_design_lvds_dout3_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout3_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_0_P CLK";
+  attribute x_interface_parameter of lvds_dout3_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_0_P, CLK_DOMAIN main_design_lvds_dout3_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout3_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_1_N CLK";
+  attribute x_interface_parameter of lvds_dout3_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_1_N, CLK_DOMAIN main_design_lvds_dout3_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_dout3_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_DOUT3_1_P CLK";
+  attribute x_interface_parameter of lvds_dout3_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_DOUT3_1_P, CLK_DOMAIN main_design_lvds_dout3_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_sync_0_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_0_N CLK";
+  attribute x_interface_parameter of lvds_sync_0_n : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_0_N, CLK_DOMAIN main_design_lvds_sync_0_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_sync_0_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_0_P CLK";
+  attribute x_interface_parameter of lvds_sync_0_p : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_0_P, CLK_DOMAIN main_design_lvds_sync_0_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_sync_1_n : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_1_N CLK";
+  attribute x_interface_parameter of lvds_sync_1_n : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_1_N, CLK_DOMAIN main_design_lvds_sync_1_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of lvds_sync_1_p : signal is "xilinx.com:signal:clock:1.0 CLK.LVDS_SYNC_1_P CLK";
+  attribute x_interface_parameter of lvds_sync_1_p : signal is "XIL_INTERFACENAME CLK.LVDS_SYNC_1_P, CLK_DOMAIN main_design_lvds_sync_1_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of noip_monitor0 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR0 DATA";
+  attribute x_interface_parameter of noip_monitor0 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR0, LAYERED_METADATA undef";
+  attribute x_interface_info of noip_monitor1 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR1 DATA";
+  attribute x_interface_parameter of noip_monitor1 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR1, LAYERED_METADATA undef";
 begin
   IBUF_DS_N_0_2(0) <= lvds_sync_0_n(0);
-  IBUF_DS_N_0_3(0) <= lvds_clk_1_n(0);
   IBUF_DS_N_0_4(0) <= lvds_sync_1_n(0);
   IBUF_DS_N_1_1(0) <= lvds_dout0_0_n(0);
   IBUF_DS_N_1_2(0) <= lvds_dout2_0_n(0);
   IBUF_DS_N_1_3(0) <= lvds_dout0_1_n(0);
   IBUF_DS_N_1_4(0) <= lvds_dout2_1_n(0);
   IBUF_DS_P_0_2(0) <= lvds_sync_0_p(0);
-  IBUF_DS_P_0_3(0) <= lvds_clk_1_p(0);
   IBUF_DS_P_0_4(0) <= lvds_sync_1_p(0);
   IBUF_DS_P_1_1(0) <= lvds_dout0_0_p(0);
   IBUF_DS_P_1_2(0) <= lvds_dout2_0_p(0);
@@ -5134,6 +5142,8 @@ begin
   hdmi_vsync <= hdmi_ctrl_0_hdmi_vsync;
   lvds_clk_0_n_1(0) <= lvds_clk_0_n(0);
   lvds_clk_0_p_1(0) <= lvds_clk_0_p(0);
+  lvds_clk_1_n_1(0) <= lvds_clk_1_n(0);
+  lvds_clk_1_p_1(0) <= lvds_clk_1_p(0);
   lvds_dout1_0_n_1(0) <= lvds_dout1_0_n(0);
   lvds_dout1_0_n_2(0) <= lvds_dout3_0_n(0);
   lvds_dout1_0_n_3(0) <= lvds_dout1_1_n(0);
@@ -5416,6 +5426,14 @@ axis_interconnect_1: entity work.main_design_axis_interconnect_1_0
       S01_AXIS_tstrb(3 downto 0) => noip_lvds_stream_1_M00_AXIS_TSTRB(3 downto 0),
       S01_AXIS_tvalid(0) => noip_lvds_stream_1_M00_AXIS_TVALID
     );
+clk_wiz_0: component main_design_clk_wiz_0_1
+     port map (
+      clk_in1_n => lvds_clk_1_n_1(0),
+      clk_in1_p => lvds_clk_1_p_1(0),
+      clk_out1 => lvds_clkin_0_ibuf_IBUF_OUT1,
+      locked => NLW_clk_wiz_0_locked_UNCONNECTED,
+      reset => util_vector_logic_0_Res1(0)
+    );
 fifo_generator_0: component main_design_fifo_generator_0_0
      port map (
       clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
@@ -5429,7 +5447,7 @@ fifo_generator_0: component main_design_fifo_generator_0_0
     );
 fifo_generator_1: component main_design_fifo_generator_0_1
      port map (
-      clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
+      clk => lvds_clkin_0_ibuf_IBUF_OUT1,
       din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
       dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
       empty => noip_lvds_stream_1_fifo_read_EMPTY,
@@ -5480,12 +5498,6 @@ lvds_clkin_0_ibuf: component main_design_lvds_clkin_1_ibuf_0
       IBUF_DS_N(0) => lvds_clk_0_n_1(0),
       IBUF_DS_P(0) => lvds_clk_0_p_1(0),
       IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT(0)
-    );
-lvds_clkin_1_ibuf: component main_design_lvds_clkin_0_ibuf_4
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_0_3(0),
-      IBUF_DS_P(0) => IBUF_DS_P_0_3(0),
-      IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT1(0)
     );
 lvds_data_0_concat: component main_design_xlconcat_0_1
      port map (
@@ -5685,7 +5697,7 @@ noip_lvds_stream_1: component main_design_noip_lvds_stream_0_1
       fifo_rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
       fifo_srst => noip_lvds_stream_1_fifo_srst,
       fifo_wr_en => noip_lvds_stream_1_fifo_write_WR_EN,
-      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
+      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1,
       lvds_data(0) => lvds_data_1_inverter_Res(3),
       lvds_data(1) => lvds_data_1_inverter_Res(2),
       lvds_data(2) => lvds_data_1_inverter_Res(1),
@@ -5931,5 +5943,10 @@ trigger0_concat: component main_design_xlconcat_0_0
       In0(0) => noip_lvds_stream_0_trigger0,
       In1(0) => noip_lvds_stream_1_trigger0,
       dout(1 downto 0) => trigger0_concat_dout(1 downto 0)
+    );
+util_vector_logic_0: component main_design_util_vector_logic_0_1
+     port map (
+      Op1(0) => processing_system7_0_FCLK_RESET0_N,
+      Res(0) => util_vector_logic_0_Res1(0)
     );
 end STRUCTURE;

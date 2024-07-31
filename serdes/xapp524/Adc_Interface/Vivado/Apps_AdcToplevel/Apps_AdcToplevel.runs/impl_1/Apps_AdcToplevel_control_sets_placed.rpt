@@ -1,0 +1,114 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Feb 15 16:02:22 2018
+| Host         : XBEDEFOSSEZ31 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Apps_AdcToplevel_control_sets_placed.rpt
+| Design       : Apps_AdcToplevel
+| Device       : xc7k325t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    44 |
+| Unused register locations in slices containing registers |   206 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |              31 |           14 |
+| No           | Yes                   | No                     |               9 |            9 |
+| Yes          | No                    | No                     |               1 |            1 |
+| Yes          | No                    | Yes                    |             368 |          117 |
+| Yes          | Yes                   | No                     |              21 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                               Clock Signal                              |                                                    Enable Signal                                                   |                                                Set/Reset Signal                                               | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcBulkMem_1/IntBulkMemFull_1                                                              |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk0_BUFG                         | Apps_AdcToplevel_I_AppsClock/Mmcm_Locked                                                                           | IntSysRst                                                                                                     |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcBulkMem_0/IntBulkMemEmpty_0                                                             |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcBulkMem_0/IntBulkMemFull_0                                                              |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcBulkMem_1/IntBulkMemEmpty_1                                                             |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/LocalRstEna_I_Fdre_Ena/EnaOut         | Apps_AdcToplevel_I_AdcToplevel/IntRst                                                                         |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/IntEna                                                                              | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/IntFrmSlipCntTc_d                                            | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/CLR                                                     |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/Gen_2[0].AdcToplevel_I_AdcMem/AdcMem_I_WrAddrCnt/Flags[3]                      |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/Gen_2[1].AdcToplevel_I_AdcMem/AdcMem_I_WrAddrCnt/Flags[3]                      |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/CE                                    |                                                                                                               |                1 |              1 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/LocalRstEna_I_Srlc32e_Dly_i_1_n_0     |                                                                                                               |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/Gen_2[0].AdcToplevel_I_AdcMem/AdcMem_I_WrAddrCnt/Flags[0]                      |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/Gen_2[1].AdcToplevel_I_AdcMem/AdcMem_I_WrAddrCnt/Flags[0]                      |                1 |              1 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_Fdce_FrmMsbAllZero_d_i_1_n_0                      | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                1 |              2 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/IntFrmMsbAllZero_d                                      |                1 |              3 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         |                                                                                                                    |                                                                                                               |                3 |              3 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/IntRst                                                                         |                2 |              3 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                2 |              3 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         |                                                                                                                    | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                2 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/IntFrmEvntCntTc_d                                            | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                1 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/IntNumIncDecIdly[3]_i_1_n_0                                  | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                1 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/IntTimeOutCnt                                                | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                2 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/IntProceedCnt0                                               | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                1 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/IntStepCnt                                                   | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                1 |              4 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/State[3]_i_1_n_0                                             | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                2 |              4 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk0_BUFG                         | Apps_AdcToplevel_I_AppsClock/Mmcm_Locked                                                                           |                                                                                                               |                2 |              5 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/FrmClkLsbRegEna                                              | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                1 |              8 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/IntEna                                                                              | Apps_AdcToplevel_I_AdcToplevel/IntRst                                                                         |                5 |             10 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/IntFrmBitSlip[0]_i_1_n_0                                     | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                2 |             11 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         | Apps_AdcToplevel_I_AdcBulkMem_1/AdcBulkMem_I_CntElevenBit/CntElevenBit_I_CntFourBit_Lsb/Gen_CntFour[0].CntFourFf_0 | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                3 |             13 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         | Apps_AdcToplevel_I_AdcBulkMem_0/AdcBulkMem_I_CntElevenBit/CntElevenBit_I_CntFourBit_Lsb/CntFourTcFf_0              | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                2 |             13 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         | Apps_AdcToplevel_I_AdcBulkMem_1/AdcBulkMem_I_CntTwelveBit/CntTwelveBit_I_CntFourBit_Lsb/Gen_CntFour[0].CntFourFf_0 | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                4 |             14 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         | Apps_AdcToplevel_I_AdcBulkMem_0/AdcBulkMem_I_CntTwelveBit/CntTwelveBit_I_CntFourBit_Lsb/Gen_CntFour[0].CntFourFf_0 | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |                4 |             14 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/CE1                                                          | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |                3 |             16 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/RST                                                     |                6 |             17 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/Gen_2[0].AdcToplevel_I_AdcData/CE                                                   | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |               11 |             32 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/Gen_2[1].AdcToplevel_I_AdcData/CE                                                   | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |               11 |             32 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/FrmClkMsbRegEna                                              | Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcFrame/AdcFrame_I_GenPulse_1/GenPulse_I_Fdcr_1/FrmClkReSyncOut |               10 |             40 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk3_BUFG                         | IntAdcMemEna                                                                                                       | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |               12 |             42 |
+|  Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/BitClk_RefClkOut |                                                                                                                    |                                                                                                               |                9 |             66 |
+|  Apps_AdcToplevel_I_AppsClock/Mmcm_SysClk1_BUFG                         | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/LocalRstEna_I_Fdre_Ena/EnaOut         | Apps_AdcToplevel_I_AppsClock/MmcmClock_I_AppsRstEna/AppsRstEna_I_LocalRstEna/RstOut                           |               46 |            114 |
++-------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    16 |
+| 2      |                     1 |
+| 3      |                     4 |
+| 4      |                     7 |
+| 5      |                     1 |
+| 8      |                     1 |
+| 10     |                     1 |
+| 11     |                     1 |
+| 13     |                     2 |
+| 14     |                     2 |
+| 16+    |                     8 |
++--------+-----------------------+
+
+

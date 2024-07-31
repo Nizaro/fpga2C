@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1518706799">
+  <File Type="PA-TCL" Name="Apps_AdcToplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Apps_AdcToplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Apps_AdcToplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Apps_AdcToplevel.vds"/>
+  <File Type="RDS-UTIL" Name="Apps_AdcToplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Apps_AdcToplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Apps_AdcToplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Apps_AdcToplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Apps_AdcToplevel_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Libraries/AdcBulkMem_Lib/Vhdl/CntFourBit.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcBulkMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcBulkMem_Lib/Vhdl/CntTwelveBit.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcBulkMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcBulkMem_Lib/Vhdl/CntThreeBit.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcBulkMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcBulkMem_Lib/Vhdl/CntElevenBit.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcBulkMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcBulkMem_Lib/Vhdl/AdcBulkMem_18b.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcBulkMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcClock_Lib/Vhdl/AdcClock.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcClock_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcData_Lib/Vhdl/AdcData.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcData_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/AppsRst.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/Fdcr.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/LocalRstEna.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/AppsRstEna.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/GenPulse.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/Cnt_5b_Bin.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/Fdrse.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/LifeIndicator.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/Common/Vhdl/TimeTickCnt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Common"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcFrame_Lib/Vhdl/DoubleNibbleDetect.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcFrame_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcFrame_Lib/Vhdl/AdcFrame.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcFrame_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Vhdl/AdcIo.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Adc_Interface"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/AdcMem_Lib/Vhdl/AdcMem.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="AdcMem_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Vhdl/AdcToplevel.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="Adc_Interface"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Libraries/MmcmClock_Lib/Vhdl/MmcmClock.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="MmcmClock_Lib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Vhdl/Apps_AdcToplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Apps_AdcToplevel"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../Constraints/KC705_Apps_AdcToplevel.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

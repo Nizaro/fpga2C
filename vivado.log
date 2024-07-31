@@ -3289,3 +3289,319 @@ open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 11
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 report_clock_networks -name {network_1}
 show_objects -name find_1 [get_sites "*BUFG*" ]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_0_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_0_inverter
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_0_ibuf
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+close_bd_design [get_bd_designs main_design]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_0_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_0_inverter
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_0_ibuf
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+close_bd_design [get_bd_designs main_design]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_0_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_0_inverter
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_0_ibuf
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+close_bd_design [get_bd_designs main_design]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+report_clock_networks -name {network_2}
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_0_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_0_inverter
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_0_ibuf
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+close_bd_design [get_bd_designs main_design]
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+show_objects -name find_1 [get_sites "*SERDES*" ]
+WARNING: [Vivado 12-3731] No sites matched '*SERDES*'
+WARNING: [Coretcl 2-1122] No objects found.
+show_objects -name find_1 [get_sites "*SERDE*" ]
+WARNING: [Vivado 12-3731] No sites matched '*SERDE*'
+WARNING: [Coretcl 2-1122] No objects found.
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_0_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_0_ibuf
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout0_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout1_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout2_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_dout3_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_sync_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_0_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_data_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_1_inverter
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - lvds_sync_0_inverter
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_1Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_1_ibuf
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - lvds_clk_0_ibuf
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>

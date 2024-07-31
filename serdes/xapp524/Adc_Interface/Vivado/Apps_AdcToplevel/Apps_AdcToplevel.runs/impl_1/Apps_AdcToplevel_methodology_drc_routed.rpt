@@ -1,0 +1,124 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Feb 15 16:03:03 2018
+| Host         : XBEDEFOSSEZ31 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Apps_AdcToplevel_methodology_drc_routed.rpt -pb Apps_AdcToplevel_methodology_drc_routed.pb -rpx Apps_AdcToplevel_methodology_drc_routed.rpx
+| Design       : Apps_AdcToplevel
+| Device       : xc7k325tffg900-2
+| Speed File   : -2
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_Apps_AdcToplevel
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 17
++-----------+----------+------------------------------------------------------+------------+
+| Rule      | Severity | Description                                          | Violations |
++-----------+----------+------------------------------------------------------+------------+
+| TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                     | 1          |
+| TIMING-18 | Warning  | Missing input or output delay                        | 10         |
+| TIMING-28 | Warning  | Auto-derived clock referenced by a timing constraint | 4          |
+| REQP-1959 | Advisory | connects_SERDES_RST_driver_not_FF                    | 1          |
++-----------+----------+------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_0_0_n_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_0_0_p_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_1_0_n_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_1_0_p_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_2_0_n_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_2_0_p_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_3_0_n_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on Adc_DI_3_0_p_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on Adc_FCLK_0_n_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on Adc_FCLK_0_p_pin relative to clock(s) AdcBitClk
+Related violations: <none>
+
+TIMING-28#1 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock IntMmcm_SysClk1 is referenced by name inside timing constraint (see constraint position 10 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins Apps_AdcToplevel_I_AppsClock/MmcmClock_I_Mmcm_Adv/CLKOUT1]
+Related violations: <none>
+
+TIMING-28#2 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock IntMmcm_SysClk1 is referenced by name inside timing constraint (see constraint position 9 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins Apps_AdcToplevel_I_AppsClock/MmcmClock_I_Mmcm_Adv/CLKOUT1]
+Related violations: <none>
+
+TIMING-28#3 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock IntMmcm_SysClk3 is referenced by name inside timing constraint (see constraint position 7 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins Apps_AdcToplevel_I_AppsClock/MmcmClock_I_Mmcm_Adv/CLKOUT3]
+Related violations: <none>
+
+TIMING-28#4 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock IntMmcm_SysClk3 is referenced by name inside timing constraint (see constraint position 8 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins Apps_AdcToplevel_I_AppsClock/MmcmClock_I_Mmcm_Adv/CLKOUT3]
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+Apps_AdcToplevel_I_AdcToplevel/AdcToplevel_I_AdcClock/AdcClock_I_Isrds_Master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

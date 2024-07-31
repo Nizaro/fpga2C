@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Tue Jul 30 15:55:07 2024
+--Date        : Wed Jul 31 10:03:22 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4148,7 +4148,7 @@ entity main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   attribute core_generation_info : string;
-  attribute core_generation_info of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=69,numReposBlks=52,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=20,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute core_generation_info of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=22,da_ps7_cnt=1,synth_mode=Hierarchical}";
   attribute hw_handoff : string;
   attribute hw_handoff of main_design : entity is "main_design.hwdef";
 end main_design;
@@ -4689,28 +4689,20 @@ architecture STRUCTURE of main_design is
     empty : out STD_LOGIC
   );
   end component main_design_fifo_generator_0_1;
-  component main_design_lvds_clkin_1_ibuf_0 is
+  component main_design_lvds_sync_1_ibuf_0 is
   port (
     IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
     IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
     IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  end component main_design_lvds_clkin_1_ibuf_0;
-  component main_design_clk_wiz_0_1 is
+  end component main_design_lvds_sync_1_ibuf_0;
+  component main_design_lvds_clk_1_ibuf_0 is
   port (
-    clk_in1_p : in STD_LOGIC;
-    clk_in1_n : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC
+    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
+    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
+    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  end component main_design_clk_wiz_0_1;
-  component main_design_util_vector_logic_0_1 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_util_vector_logic_0_1;
+  end component main_design_lvds_clk_1_ibuf_0;
   signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_N_1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4858,7 +4850,7 @@ architecture STRUCTURE of main_design is
   signal lvds_clk_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC;
+  signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_data_0_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal lvds_data_1_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal lvds_data_1_inverter_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5022,14 +5014,12 @@ architecture STRUCTURE of main_design is
   signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC;
   signal trigger0_concat_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal util_vector_logic_0_Res1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_mm2s_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
-  signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s00_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s01_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -5426,14 +5416,6 @@ axis_interconnect_1: entity work.main_design_axis_interconnect_1_0
       S01_AXIS_tstrb(3 downto 0) => noip_lvds_stream_1_M00_AXIS_TSTRB(3 downto 0),
       S01_AXIS_tvalid(0) => noip_lvds_stream_1_M00_AXIS_TVALID
     );
-clk_wiz_0: component main_design_clk_wiz_0_1
-     port map (
-      clk_in1_n => lvds_clk_1_n_1(0),
-      clk_in1_p => lvds_clk_1_p_1(0),
-      clk_out1 => lvds_clkin_0_ibuf_IBUF_OUT1,
-      locked => NLW_clk_wiz_0_locked_UNCONNECTED,
-      reset => util_vector_logic_0_Res1(0)
-    );
 fifo_generator_0: component main_design_fifo_generator_0_0
      port map (
       clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
@@ -5447,7 +5429,7 @@ fifo_generator_0: component main_design_fifo_generator_0_0
     );
 fifo_generator_1: component main_design_fifo_generator_0_1
      port map (
-      clk => lvds_clkin_0_ibuf_IBUF_OUT1,
+      clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
       din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
       dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
       empty => noip_lvds_stream_1_fifo_read_EMPTY,
@@ -5493,11 +5475,17 @@ iobuf_I2C0_SDA: component main_design_my_iobuf_0_0
       O => my_iobuf_0_O,
       T => processing_system7_0_I2C0_SDA_T
     );
-lvds_clkin_0_ibuf: component main_design_lvds_clkin_1_ibuf_0
+lvds_clk_0_ibuf: component main_design_lvds_clk_1_ibuf_0
      port map (
       IBUF_DS_N(0) => lvds_clk_0_n_1(0),
       IBUF_DS_P(0) => lvds_clk_0_p_1(0),
       IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT(0)
+    );
+lvds_clk_1_ibuf: component main_design_lvds_sync_1_ibuf_0
+     port map (
+      IBUF_DS_N(0) => lvds_clk_1_n_1(0),
+      IBUF_DS_P(0) => lvds_clk_1_p_1(0),
+      IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT1(0)
     );
 lvds_data_0_concat: component main_design_xlconcat_0_1
      port map (
@@ -5697,7 +5685,7 @@ noip_lvds_stream_1: component main_design_noip_lvds_stream_0_1
       fifo_rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
       fifo_srst => noip_lvds_stream_1_fifo_srst,
       fifo_wr_en => noip_lvds_stream_1_fifo_write_WR_EN,
-      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1,
+      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
       lvds_data(0) => lvds_data_1_inverter_Res(3),
       lvds_data(1) => lvds_data_1_inverter_Res(2),
       lvds_data(2) => lvds_data_1_inverter_Res(1),
@@ -5943,10 +5931,5 @@ trigger0_concat: component main_design_xlconcat_0_0
       In0(0) => noip_lvds_stream_0_trigger0,
       In1(0) => noip_lvds_stream_1_trigger0,
       dout(1 downto 0) => trigger0_concat_dout(1 downto 0)
-    );
-util_vector_logic_0: component main_design_util_vector_logic_0_1
-     port map (
-      Op1(0) => processing_system7_0_FCLK_RESET0_N,
-      Res(0) => util_vector_logic_0_Res1(0)
     );
 end STRUCTURE;

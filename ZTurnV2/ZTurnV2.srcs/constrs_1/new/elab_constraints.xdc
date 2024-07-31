@@ -8,7 +8,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {noip_ss[0]}]
 
 set_property IOSTANDARD LVDS_25 [get_ports {lvds_clk_0_p[0]}]
 set_property IOSTANDARD LVDS_25 [get_ports {lvds_clk_0_n[0]}]
-set_property PACKAGE_PIN L16 [get_ports {lvds_clk_0_p[0]}]
+set_property PACKAGE_PIN H16 [get_ports {lvds_clk_0_p[0]}]
 set_property PACKAGE_PIN Y16 [get_ports {noip_ss[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {noip_ss[1]}]
 
@@ -145,8 +145,15 @@ set_property IOSTANDARD LVCMOS33 [get_ports hdmi_de]
 set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hsync]
 set_property IOSTANDARD LVCMOS33 [get_ports hdmi_vsync]
 
-create_clock -period 3.472 -name lvds_clk_0 -waveform {0.000 1.389} [get_ports {lvds_clk_0_p[0]}]
+#create_clock -period 3.472 -name lvds_clk_0 -waveform {0.000 1.389} [get_ports {lvds_clk_0_p[0]}]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT_BUFG[0]}]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT[0]}]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT_BUFG[0]}]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {main_design_i/lvds_clkin_0_ibuf/U0/IBUF_OUT[0]}]
 
+
+
+
+
+
+create_clock -period 3.472 -name lvds_clk_0 -waveform {0.000 1.736} -add [get_ports {lvds_clk_0_p[0]}]
+create_clock -period 3.472 -name lvds_clk_1 -waveform {0.000 1.736} -add [get_ports {lvds_clk_1_p[0]}]

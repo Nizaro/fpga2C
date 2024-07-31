@@ -3,7 +3,7 @@ set_property SRC_FILE_INFO {cfile:/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/source
 set_property SRC_FILE_INFO {cfile:/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xdc rfile:../ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xdc id:3 order:EARLY scoped_inst:main_design_i/proc_sys_reset_0/U0} [current_design]
 current_instance main_design_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.3
+set_input_jitter clk_fpga_0 0.15
 set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_1 0.42
 current_instance

@@ -56,7 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
+set_param synth.enableIncremental 0
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
 
@@ -116,11 +120,10 @@ set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZT
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_0/main_design_fifo_generator_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_1_ibuf_0/main_design_lvds_clkin_1_ibuf_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clkin_1_ibuf_0/main_design_lvds_clkin_1_ibuf_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_clk_wiz_0_1/main_design_clk_wiz_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_clk_wiz_0_1/main_design_clk_wiz_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_clk_wiz_0_1/main_design_clk_wiz_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_1_ibuf_0/main_design_lvds_sync_1_ibuf_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_sync_1_ibuf_0/main_design_lvds_sync_1_ibuf_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clk_1_ibuf_0/main_design_lvds_clk_1_ibuf_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_clk_1_ibuf_0/main_design_lvds_clk_1_ibuf_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_clocks.xdc]

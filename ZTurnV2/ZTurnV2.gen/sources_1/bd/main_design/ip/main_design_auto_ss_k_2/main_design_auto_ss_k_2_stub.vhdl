@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 -- Date        : Tue Jul 30 15:58:47 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top main_design_auto_ss_k_2 -prefix
+--               main_design_auto_ss_k_2_ main_design_auto_ss_k_2_stub.vhdl
 -- Design      : main_design_auto_ss_k_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2

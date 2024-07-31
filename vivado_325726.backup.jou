@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Jul 30 14:59:51 2024
+# Process ID: 325726
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3248.941 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :15248 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo
+ipx::unload_core /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+set_property value 8 [ipx::get_user_parameters SENSOR_BIT_LENGTH -of_objects [ipx::current_core]]
+set_property value 8 [ipx::get_hdl_parameters SENSOR_BIT_LENGTH -of_objects [ipx::current_core]]
+ipgui::add_param -name {SENSOR_BIT_LENGTH} -component [ipx::current_core] -display_name {Sensor Bit Length} -show_label {true} -show_range {true} -widget {comboBox}
+ipgui::add_param -name {IM_HEIGHT} -component [ipx::current_core] -display_name {Image Height} -show_label {true} -show_range {true} -widget {}
+ipgui::add_param -name {IM_WIDTH} -component [ipx::current_core] -display_name {Image Width} -show_label {true} -show_range {true} -widget {}
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo
+ipx::unload_core /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
+set_property core_revision 22 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo

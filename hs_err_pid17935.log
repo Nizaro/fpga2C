@@ -1,0 +1,17 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/lib//server/libjvm.so(+0xe4f55c) [0x79da4064f55c]
+/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/lib//server/libjvm.so(JVM_handle_linux_signal+0x23e) [0x79da4065002e]
+/lib/x86_64-linux-gnu/libc.so.6(+0x45320) [0x79da83e45320]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_device.so(HDDXTable::getForwardNeighbors(HDDMPin const&, HDDXEdge const&, std::vector<HDDMPin, std::allocator<HDDMPin> >&) const+0x20) [0x79da6a68ea30]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_device.so(HDDXTable::getNeighbors(HDDMPin const&, std::vector<HDDMPin, std::allocator<HDDMPin> >&) const+0xa1) [0x79da6a68ed91]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_device.so(HDDXTable::getDirectConnectedPin(HDDMPin const&, std::vector<HDDMPin, std::allocator<HDDMPin> >&, bool) const+0x36b) [0x79da6a68fc3b]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_device.so(HDDXConDB::getDirectConnectedPin(HDDMPin const&, std::vector<HDDMPin, std::allocator<HDDMPin> >&, bool) const+0x9a) [0x79da6a64e46a]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_constraints.so(PYRouteStorageAnalyzer::CheckNetlistWorker::checkInstTerms(unsigned int)+0x1142) [0x79da71d17e42]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_constraints.so(PYRouteStorageAnalyzer::CheckNetlistWorker::siteRangeChecker()+0xe5) [0x79da71d18035]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/librdi_constraints.so(PYRouteStorageAnalyzer::CheckNetlistWorker::operator()()+0x9) [0x79da71d18bd9]
+/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu/libstdc++.so.6(+0xbadff) [0x79da848badff]
+/lib/x86_64-linux-gnu/libc.so.6(+0x9ca94) [0x79da83e9ca94]
+/lib/x86_64-linux-gnu/libc.so.6(+0x129c3c) [0x79da83f29c3c]

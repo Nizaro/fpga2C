@@ -1,0 +1,358 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Jul 31 09:31:31 2024
+# Process ID: 31191
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3227.670 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :22217 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_bd_design [get_bd_designs main_design]
+open_run synth_1 -name synth_1
+place_ports {lvds_clk_0_p[0]} L16
+save_constraints
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+opt_design
+close_design
+open_run synth_1 -name synth_1
+opt_design
+place_ports
+close_design
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+delete_bd_objs [get_bd_nets lvds_clk_0_p_1] [get_bd_nets lvds_clk_0_n_1] [get_bd_cells lvds_clk_0_wiz]
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res1] [get_bd_cells wiz_logic_reset_not]
+delete_bd_objs [get_bd_nets lvds_clk_1_p_1] [get_bd_nets lvds_clk_1_n_1] [get_bd_cells lvds_clk_1_wiz]
+copy_bd_objs /  [get_bd_cells {lvds_sync_1_ibuf}]
+set_property location {0.5 142 1713} [get_bd_cells lvds_sync_1_ibuf1]
+set_property name lvds_clk_1_ibuf [get_bd_cells lvds_sync_1_ibuf1]
+copy_bd_objs /  [get_bd_cells {lvds_clk_1_ibuf}]
+set_property location {1 104 1560} [get_bd_cells lvds_clk_1_ibuf1]
+set_property name lvds_clk_0_ibuf [get_bd_cells lvds_clk_1_ibuf1]
+connect_bd_net [get_bd_ports lvds_clk_0_n] [get_bd_pins lvds_clk_0_ibuf/IBUF_DS_N]
+connect_bd_net [get_bd_ports lvds_clk_0_p] [get_bd_pins lvds_clk_0_ibuf/IBUF_DS_P]
+connect_bd_net [get_bd_ports lvds_clk_1_p] [get_bd_pins lvds_clk_1_ibuf/IBUF_DS_P]
+connect_bd_net [get_bd_ports lvds_clk_1_n] [get_bd_pins lvds_clk_1_ibuf/IBUF_DS_N]
+set_property location {1 190 1711} [get_bd_cells lvds_clk_1_ibuf]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/lvds_clk_0_ibuf/IBUF_OUT (100 MHz)} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins fifo_generator_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/lvds_clk_1_ibuf/IBUF_OUT (100 MHz)} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins fifo_generator_1/clk]
+endgroup
+save_bd_design
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+catch { config_ip_cache -export [get_ips -all main_design_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_fifo_generator_0_1] }
+catch { [ delete_ip_run [get_ips -all main_design_fifo_generator_0_1] ] }
+catch { config_ip_cache -export [get_ips -all main_design_lvds_sync_1_ibuf_0] }
+catch { config_ip_cache -export [get_ips -all main_design_lvds_clk_1_ibuf_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+place_ports {lvds_clk_0_p[0]} B19
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+close_bd_design [get_bd_designs main_design]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+place_ports {lvds_clk_0_p[0]} H16
+save_constraints
+close_design
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+report_clock_networks -name {network_1}
+create_clock -period 3.472 -name lvds_clk_0_p -waveform {0.000 1.736} -add [get_ports {lvds_clk_0_p[0]}]
+report_clock_networks -name {network_1}
+create_clock -period 3.472 -name lvds_clk_1 -waveform {0.000 1.736} -add [get_ports {lvds_clk_1_p[0]}]
+report_clock_networks -name {network_1}
+report_clock_networks -name {network_1}
+save_constraints
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+report_clock_networks -name {network_1}
+show_objects -name find_1 [get_sites "*BUFG*" ]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+close_bd_design [get_bd_designs main_design]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+close_bd_design [get_bd_designs main_design]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+close_bd_design [get_bd_designs main_design]
+report_clock_networks -name {network_2}
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+close_bd_design [get_bd_designs main_design]
+show_objects -name find_1 [get_sites "*SERDES*" ]
+show_objects -name find_1 [get_sites "*SERDE*" ]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:selectio_wiz:5.1 selectio_wiz_0
+endgroup
+set_property location {6 2816 1133} [get_bd_cells selectio_wiz_0]
+delete_bd_objs [get_bd_cells selectio_wiz_0]
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:selectio_wiz:5.1 selectio_wiz_0
+endgroup
+delete_bd_objs [get_bd_cells selectio_wiz_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_0
+endgroup
+delete_bd_objs [get_bd_cells util_ds_buf_0]
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_0
+endgroup
+delete_bd_objs [get_bd_cells iomodule_0]
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:oddr:1.0 oddr_0
+endgroup
+delete_bd_objs [get_bd_cells oddr_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0
+endgroup
+delete_bd_objs [get_bd_cells vio_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_0
+endgroup
+delete_bd_objs [get_bd_cells util_ds_buf_0]
+save_bd_design
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:selectio_wiz:5.1 selectio_wiz_0
+endgroup
+set_property -dict [list \
+  CONFIG.BUS_DIR {INPUTS} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_ACTIVE_EDGE {SDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {NONE} \
+  CONFIG.SELIO_CLK_BUF {BUFIO} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SERIALIZATION_FACTOR {4} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.USE_SERIALIZATION {false} \
+  CONFIG.USE_TEMPLATE {Custom} \
+] [get_bd_cells selectio_wiz_0]
+set_property -dict [list \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.USE_SERIALIZATION {true} \
+] [get_bd_cells selectio_wiz_0]
+set_property CONFIG.SYSTEM_DATA_WIDTH {4} [get_bd_cells selectio_wiz_0]
+set_property -dict [list \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {4} \
+] [get_bd_cells selectio_wiz_0]
+save_bd_design
+set_property location {1 178 1420} [get_bd_cells selectio_wiz_0]
+set_property name lvds_selectio_0 [get_bd_cells selectio_wiz_0]
+set_property location {1 288 1396} [get_bd_cells lvds_selectio_0]
+delete_bd_objs [get_bd_nets lvds_clk_0_p_1] [get_bd_nets lvds_clk_0_n_1] [get_bd_cells lvds_clk_0_ibuf]
+set_property location {1 272 1518} [get_bd_cells lvds_selectio_0]
+connect_bd_net [get_bd_ports lvds_clk_0_n] [get_bd_pins lvds_selectio_0/clk_in_n]
+connect_bd_net [get_bd_ports lvds_clk_0_p] [get_bd_pins lvds_selectio_0/clk_in_p]
+delete_bd_objs [get_bd_nets lvds_clk_0_p_1]
+delete_bd_objs [get_bd_nets lvds_clk_0_n_1]
+connect_bd_net [get_bd_ports lvds_clk_0_n] [get_bd_pins lvds_selectio_0/data_in_from_pins_p]
+connect_bd_net [get_bd_ports lvds_clk_0_p] [get_bd_pins lvds_selectio_0/data_in_from_pins_n]
+save_bd_design
+set_property location {1 317 1522} [get_bd_cells lvds_selectio_0]
+set_property location {1 285 1540} [get_bd_cells lvds_selectio_0]
+set_property location {1 192 1534} [get_bd_cells lvds_selectio_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property -dict [list \
+  CONFIG.CONST_VAL {0} \
+  CONFIG.CONST_WIDTH {4} \
+] [get_bd_cells xlconstant_0]
+set_property location {1 52 1604} [get_bd_cells xlconstant_0]
+set_property name zero_bitslip_const [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins zero_bitslip_const/dout] [get_bd_pins lvds_selectio_0/bitslip]
+delete_bd_objs [get_bd_nets lvds_clk_0_n_1]
+delete_bd_objs [get_bd_nets lvds_clk_0_p_1]
+connect_bd_net [get_bd_ports lvds_clk_0_n] [get_bd_pins lvds_selectio_0/clk_in_n]
+connect_bd_net [get_bd_ports lvds_clk_0_p] [get_bd_pins lvds_selectio_0/clk_in_p]
+save_bd_design
+startgroup
+delete_bd_objs [get_bd_nets IBUF_DS_N_0_2] [get_bd_nets IBUF_DS_N_1_1] [get_bd_nets IBUF_DS_N_1_2] [get_bd_nets IBUF_DS_N_1_3] [get_bd_nets IBUF_DS_N_1_4] [get_bd_nets IBUF_DS_P_0_2] [get_bd_nets IBUF_DS_P_1_1] [get_bd_nets IBUF_DS_P_1_2] [get_bd_nets IBUF_DS_P_1_3] [get_bd_nets IBUF_DS_P_1_4] [get_bd_nets lvds_data_0_concat_dout] [get_bd_nets lvds_data_1_concat_dout] [get_bd_nets lvds_data_1_inverter_Res] [get_bd_nets lvds_dout0_0_ibuf_IBUF_OUT] [get_bd_nets lvds_dout0_0_ibuf_IBUF_OUT1] [get_bd_nets lvds_dout0_0_ibuf_IBUF_OUT2] [get_bd_nets lvds_dout0_0_ibuf_IBUF_OUT3] [get_bd_nets lvds_dout1_0_ibuf_IBUF_OUT] [get_bd_nets lvds_dout1_0_ibuf_IBUF_OUT1] [get_bd_nets lvds_dout1_0_ibuf_IBUF_OUT2] [get_bd_nets lvds_dout1_0_ibuf_IBUF_OUT3] [get_bd_nets lvds_dout1_0_n_1] [get_bd_nets lvds_dout1_0_n_2] [get_bd_nets lvds_dout1_0_n_3] [get_bd_nets lvds_dout1_0_n_4] [get_bd_nets lvds_dout1_0_p_1] [get_bd_nets lvds_dout1_0_p_2] [get_bd_nets lvds_dout1_0_p_3] [get_bd_nets lvds_dout1_0_p_4] [get_bd_nets lvds_sync_0_ibuf_IBUF_OUT] [get_bd_nets util_vector_logic_0_Res]
+delete_bd_objs [get_bd_cells lvds_data_0_concat] [get_bd_cells lvds_data_0_inverter] [get_bd_cells lvds_data_1_inverter] [get_bd_cells lvds_dout0_0_ibuf] [get_bd_cells lvds_dout0_1_ibuf] [get_bd_cells lvds_dout1_0_ibuf] [get_bd_cells lvds_dout1_1_ibuf] [get_bd_cells lvds_dout2_0_ibuf] [get_bd_cells lvds_dout2_1_ibuf] [get_bd_cells lvds_dout3_0_ibuf] [get_bd_cells lvds_dout3_1_ibuf]
+endgroup
+delete_bd_objs [get_bd_cells lvds_sync_0_ibuf]
+delete_bd_objs [get_bd_nets lvds_sync_0_inverter_Res] [get_bd_cells lvds_sync_0_inverter]
+delete_bd_objs [get_bd_cells lvds_data_1_concat]
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property name lvds_pins_0_n [get_bd_cells xlconcat_0]
+copy_bd_objs /  [get_bd_cells {lvds_pins_0_n}]
+set_property name lvds_pins_0_p [get_bd_cells lvds_pins_0_n1]
+set_property location {1 107 493} [get_bd_cells lvds_pins_0_n]
+set_property CONFIG.NUM_PORTS {5} [get_bd_cells lvds_pins_0_p]
+set_property name lvds_selectio_data_0 [get_bd_cells lvds_selectio_0]
+copy_bd_objs /  [get_bd_cells {lvds_selectio_data_0}]
+set_property location {3 754 1377} [get_bd_cells lvds_selectio_data_1]
+set_property location {3 763 1605} [get_bd_cells lvds_selectio_data_0]
+connect_bd_net [get_bd_pins lvds_selectio_data_1/bitslip] [get_bd_pins zero_bitslip_const/dout]
+connect_bd_net [get_bd_ports lvds_clk_0_n] [get_bd_pins lvds_selectio_data_1/clk_in_n]
+connect_bd_net [get_bd_ports lvds_clk_0_p] [get_bd_pins lvds_selectio_data_1/clk_in_p]
+save_bd_design
+set_property name lvds_selectio_sync_0 [get_bd_cells lvds_selectio_data_1]
+startgroup
+set_property CONFIG.SYSTEM_DATA_WIDTH {1} [get_bd_cells lvds_selectio_sync_0]
+endgroup
+set_property name lvds_data_0_concat_p [get_bd_cells lvds_pins_0_p]
+set_property name lvds_data_0_concat_n [get_bd_cells lvds_pins_0_n]
+set_property CONFIG.NUM_PORTS {4} [get_bd_cells lvds_data_0_concat_p]
+set_property CONFIG.NUM_PORTS {4} [get_bd_cells lvds_data_0_concat_n]
+connect_bd_net [get_bd_ports lvds_sync_0_n] [get_bd_pins lvds_selectio_sync_0/data_in_from_pins_n]
+connect_bd_net [get_bd_ports lvds_sync_0_p] [get_bd_pins lvds_selectio_sync_0/data_in_from_pins_p]
+save_bd_design
+delete_bd_objs [get_bd_nets lvds_sync_0_n_1]
+delete_bd_objs [get_bd_nets lvds_sync_0_p_1]
+connect_bd_net [get_bd_ports lvds_sync_0_p] [get_bd_pins lvds_selectio_sync_0/data_in_from_pins_n]
+connect_bd_net [get_bd_ports lvds_sync_0_n] [get_bd_pins lvds_selectio_sync_0/data_in_from_pins_p]
+save_bd_design
+set_property location {3 759 1085} [get_bd_cells lvds_selectio_data_0]
+set_property location {2 335 366} [get_bd_cells lvds_data_0_concat_p]
+set_property location {2 344 542} [get_bd_cells lvds_data_0_concat_n]
+connect_bd_net [get_bd_ports lvds_dout0_0_p] [get_bd_pins lvds_data_0_concat_p/In0]
+connect_bd_net [get_bd_ports lvds_dout1_0_p] [get_bd_pins lvds_data_0_concat_p/In1]
+connect_bd_net [get_bd_ports lvds_dout2_0_p] [get_bd_pins lvds_data_0_concat_p/In2]
+connect_bd_net [get_bd_ports lvds_dout3_0_p] [get_bd_pins lvds_data_0_concat_p/In3]
+connect_bd_net [get_bd_ports lvds_dout2_0_n] [get_bd_pins lvds_data_0_concat_n/In0]
+delete_bd_objs [get_bd_nets lvds_dout2_0_n_1]
+connect_bd_net [get_bd_ports lvds_dout0_0_n] [get_bd_pins lvds_data_0_concat_n/In0]
+connect_bd_net [get_bd_ports lvds_dout1_0_n] [get_bd_pins lvds_data_0_concat_n/In1]
+connect_bd_net [get_bd_ports lvds_dout2_0_n] [get_bd_pins lvds_data_0_concat_n/In2]
+connect_bd_net [get_bd_ports lvds_dout3_0_n] [get_bd_pins lvds_data_0_concat_n/In3]
+connect_bd_net [get_bd_pins lvds_data_0_concat_p/dout] [get_bd_pins lvds_selectio_data_0/data_in_from_pins_n]
+connect_bd_net [get_bd_pins lvds_data_0_concat_n/dout] [get_bd_pins lvds_selectio_data_0/data_in_from_pins_p]
+connect_bd_net [get_bd_pins lvds_selectio_data_0/clk_reset] [get_bd_pins lvds_selectio_sync_0/clk_reset]
+connect_bd_net [get_bd_pins lvds_selectio_sync_0/io_reset] [get_bd_pins lvds_selectio_data_0/io_reset]
+save_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (200 MHz)} Freq {200} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fifo_generator_0/clk]
+copy_bd_objs /  [get_bd_cells {lvds_sync_1_inverter}]
+set_property name selectio_reset_inverter [get_bd_cells lvds_sync_1_inverter1]
+connect_bd_net [get_bd_pins selectio_reset_inverter/Res] [get_bd_pins lvds_selectio_sync_0/io_reset]
+connect_bd_net [get_bd_pins selectio_reset_inverter/Op1] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+save_bd_design
+validate_bd_design
+connect_bd_net [get_bd_pins lvds_selectio_data_0/clk_reset] [get_bd_pins selectio_reset_inverter/Res]
+save_bd_design
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+catch { config_ip_cache -export [get_ips -all main_design_proc_sys_reset_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_xbar_1] }
+catch { config_ip_cache -export [get_ips -all main_design_xbar_2] }
+catch { config_ip_cache -export [get_ips -all main_design_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_xbar_3] }
+catch { config_ip_cache -export [get_ips -all main_design_xbar_4] }
+catch { config_ip_cache -export [get_ips -all main_design_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_selectio_wiz_0_2] }
+catch { config_ip_cache -export [get_ips -all main_design_lvds_selectio_data_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_lvds_sync_1_inverter_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+launch_runs main_design_auto_pc_0_synth_1 main_design_auto_pc_1_synth_1 main_design_auto_ss_k_0_synth_1 main_design_auto_ss_k_1_synth_1 main_design_auto_ss_k_2_synth_1 main_design_auto_ss_slid_0_synth_1 main_design_auto_ss_slidr_0_synth_1 main_design_auto_ss_slidr_1_synth_1 main_design_auto_ss_slidr_2_synth_1 main_design_auto_us_df_0_synth_1 main_design_auto_us_df_1_synth_1 main_design_auto_us_df_2_synth_1 main_design_axi_dma_0_0_synth_1 main_design_fifo_generator_0_0_synth_1 main_design_lvds_selectio_data_0_0_synth_1 main_design_proc_sys_reset_0_0_synth_1 main_design_processing_system7_0_0_synth_1 main_design_selectio_wiz_0_2_synth_1 main_design_xbar_1_synth_1 main_design_xbar_2_synth_1 main_design_xbar_3_synth_1 main_design_xbar_4_synth_1 -jobs 4
+wait_on_run main_design_auto_pc_0_synth_1
+wait_on_run main_design_auto_pc_1_synth_1
+wait_on_run main_design_auto_ss_k_0_synth_1
+wait_on_run main_design_auto_ss_k_1_synth_1
+wait_on_run main_design_auto_ss_k_2_synth_1
+wait_on_run main_design_auto_ss_slid_0_synth_1
+wait_on_run main_design_auto_ss_slidr_0_synth_1
+wait_on_run main_design_auto_ss_slidr_1_synth_1
+wait_on_run main_design_auto_ss_slidr_2_synth_1
+wait_on_run main_design_auto_us_df_0_synth_1
+wait_on_run main_design_auto_us_df_1_synth_1
+wait_on_run main_design_auto_us_df_2_synth_1
+wait_on_run main_design_axi_dma_0_0_synth_1
+wait_on_run main_design_fifo_generator_0_0_synth_1
+wait_on_run main_design_lvds_selectio_data_0_0_synth_1
+wait_on_run main_design_proc_sys_reset_0_0_synth_1
+wait_on_run main_design_processing_system7_0_0_synth_1
+wait_on_run main_design_selectio_wiz_0_2_synth_1
+wait_on_run main_design_xbar_1_synth_1
+wait_on_run main_design_xbar_2_synth_1
+wait_on_run main_design_xbar_3_synth_1
+wait_on_run main_design_xbar_4_synth_1
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+refresh_design
+close_design

@@ -1,4 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'tb_lvds_stream'
+ERROR: [VRFC 10-719] formal port/generic <lvds_clk> is not declared in <noip_lvds_stream> [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd:259]
+ERROR: [VRFC 10-3353] formal port 'lvds_clk_div' has no actual or default value [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd:250]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd:38]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.srcs/sim_1/new/tb_lvds_stream.vhd' is ignored due to errors

@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Wed Jul 31 10:03:22 2024
+--Date        : Thu Aug  1 13:51:24 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4148,7 +4148,7 @@ entity main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 )
   );
   attribute core_generation_info : string;
-  attribute core_generation_info of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=68,numReposBlks=51,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=22,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute core_generation_info of main_design : entity is "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=55,numReposBlks=38,numNonXlnxBlks=4,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_clkrst_cnt=23,da_ps7_cnt=1,synth_mode=Hierarchical}";
   attribute hw_handoff : string;
   attribute hw_handoff of main_design : entity is "main_design.hwdef";
 end main_design;
@@ -4288,19 +4288,12 @@ architecture STRUCTURE of main_design is
   end component main_design_proc_sys_reset_0_0;
   component main_design_noip_lvds_stream_0_0 is
   port (
-    lvds_clk : in STD_LOGIC;
-    lvds_sync : in STD_LOGIC;
-    lvds_data : in STD_LOGIC_VECTOR ( 0 to 3 );
+    lvds_clk_div : in STD_LOGIC;
+    lvds_deserialized : in STD_LOGIC_VECTOR ( 39 downto 0 );
     trigger0 : out STD_LOGIC;
     monitor0 : in STD_LOGIC;
     monitor1 : in STD_LOGIC;
-    fifo_srst : out STD_LOGIC;
-    fifo_full : in STD_LOGIC;
-    fifo_din : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    fifo_wr_en : out STD_LOGIC;
-    fifo_empty : in STD_LOGIC;
-    fifo_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    fifo_rd_en : out STD_LOGIC;
+    bitslip : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axis_aclk : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     s00_axis_tready : out STD_LOGIC;
@@ -4356,19 +4349,12 @@ architecture STRUCTURE of main_design is
   end component main_design_noip_ctrl_0_0;
   component main_design_noip_lvds_stream_0_1 is
   port (
-    lvds_clk : in STD_LOGIC;
-    lvds_sync : in STD_LOGIC;
-    lvds_data : in STD_LOGIC_VECTOR ( 0 to 3 );
+    lvds_clk_div : in STD_LOGIC;
+    lvds_deserialized : in STD_LOGIC_VECTOR ( 39 downto 0 );
     trigger0 : out STD_LOGIC;
     monitor0 : in STD_LOGIC;
     monitor1 : in STD_LOGIC;
-    fifo_srst : out STD_LOGIC;
-    fifo_full : in STD_LOGIC;
-    fifo_din : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    fifo_wr_en : out STD_LOGIC;
-    fifo_empty : in STD_LOGIC;
-    fifo_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    fifo_rd_en : out STD_LOGIC;
+    bitslip : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axis_aclk : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     s00_axis_tready : out STD_LOGIC;
@@ -4513,87 +4499,6 @@ architecture STRUCTURE of main_design is
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_monitor0_slice1_1;
-  component main_design_lvds_clkin_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_clkin_0_ibuf_1;
-  component main_design_lvds_sync_0_ibuf1_0 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_sync_0_ibuf1_0;
-  component main_design_lvds_dout0_0_ibuf_0 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout0_0_ibuf_0;
-  component main_design_xlconcat_0_1 is
-  port (
-    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component main_design_xlconcat_0_1;
-  component main_design_lvds_dout0_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout0_0_ibuf_1;
-  component main_design_lvds_dout1_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout1_0_ibuf_1;
-  component main_design_lvds_data_0_concat_1 is
-  port (
-    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component main_design_lvds_data_0_concat_1;
-  component main_design_lvds_dout0_0_ibuf_3 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout0_0_ibuf_3;
-  component main_design_lvds_dout1_0_ibuf_3 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout1_0_ibuf_3;
-  component main_design_lvds_dout2_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout2_0_ibuf_1;
-  component main_design_lvds_dout3_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_dout3_0_ibuf_1;
   component main_design_lvds_sync_0_ibuf_1 is
   port (
     IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4601,30 +4506,12 @@ architecture STRUCTURE of main_design is
     IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_lvds_sync_0_ibuf_1;
-  component main_design_util_vector_logic_0_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    Res : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component main_design_util_vector_logic_0_0;
-  component main_design_lvds_data_0_inverter_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    Res : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component main_design_lvds_data_0_inverter_0;
   component main_design_lvds_data_1_inverter_0 is
   port (
     Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     Res : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_lvds_data_1_inverter_0;
-  component main_design_lvds_sync_1_inverter_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_sync_1_inverter_0;
   component main_design_hdmi_ctrl_0_0 is
   port (
     hdmi_pclk : out STD_LOGIC;
@@ -4665,30 +4552,6 @@ architecture STRUCTURE of main_design is
     T : in STD_LOGIC
   );
   end component main_design_iobuf_I2C0_SDA_0;
-  component main_design_fifo_generator_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    wr_en : in STD_LOGIC;
-    rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    full : out STD_LOGIC;
-    empty : out STD_LOGIC
-  );
-  end component main_design_fifo_generator_0_0;
-  component main_design_fifo_generator_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    wr_en : in STD_LOGIC;
-    rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    full : out STD_LOGIC;
-    empty : out STD_LOGIC
-  );
-  end component main_design_fifo_generator_0_1;
   component main_design_lvds_sync_1_ibuf_0 is
   port (
     IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4696,28 +4559,51 @@ architecture STRUCTURE of main_design is
     IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_lvds_sync_1_ibuf_0;
-  component main_design_lvds_clk_1_ibuf_0 is
+  component main_design_xlconcat_0_2 is
   port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  end component main_design_lvds_clk_1_ibuf_0;
-  signal IBUF_DS_N_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
+  end component main_design_xlconcat_0_2;
+  component main_design_lvds_pins_0_n_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
+  );
+  end component main_design_lvds_pins_0_n_0;
+  component main_design_lvds_sync_1_inverter_1 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component main_design_lvds_sync_1_inverter_1;
+  component main_design_selectio_wiz_0_2 is
+  port (
+    data_in_from_pins_p : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    data_in_from_pins_n : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    clk_in_p : in STD_LOGIC;
+    clk_in_n : in STD_LOGIC;
+    clk_reset : in STD_LOGIC;
+    io_reset : in STD_LOGIC;
+    bitslip : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    clk_div_out : out STD_LOGIC;
+    data_in_to_device : out STD_LOGIC_VECTOR ( 39 downto 0 )
+  );
+  end component main_design_selectio_wiz_0_2;
   signal IBUF_DS_N_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_N_1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_N_1_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_N_1_3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_N_1_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_0_2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal IBUF_DS_P_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_1_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_1_3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_1_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal Net2 : STD_LOGIC;
+  signal Net4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal S00_AXIS_1_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal S00_AXIS_1_TLAST : STD_LOGIC;
   signal S00_AXIS_1_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4849,29 +4735,20 @@ architecture STRUCTURE of main_design is
   signal lvds_clk_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_clkin_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_data_0_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal lvds_data_1_concat_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal lvds_data_1_inverter_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal lvds_dout0_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout0_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout0_0_ibuf_IBUF_OUT2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout0_0_ibuf_IBUF_OUT3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_ibuf_IBUF_OUT2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_ibuf_IBUF_OUT3 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_data_0_concat_n_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal lvds_data_0_concat_p_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal lvds_dout0_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout0_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout1_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_n_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_n_3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_n_4 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout1_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_p_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_p_3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_dout1_0_p_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_sync_0_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_sync_0_inverter_Res : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout2_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout2_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout3_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout3_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_selectio_data_0_clk_div_out : STD_LOGIC;
+  signal lvds_sync_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_sync_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_sync_1_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_sync_1_inverter_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal monitor1_slice0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4886,26 +4763,13 @@ architecture STRUCTURE of main_design is
   signal noip_ctrl_0_vdd18_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
   signal noip_ctrl_0_vdd33_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
   signal noip_ctrl_0_vddpix_toggle : STD_LOGIC_VECTOR ( 0 to 1 );
-  signal noip_lvds_stream_0_fifo_read_EMPTY : STD_LOGIC;
-  signal noip_lvds_stream_0_fifo_read_RD_DATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal noip_lvds_stream_0_fifo_read_RD_EN : STD_LOGIC;
-  signal noip_lvds_stream_0_fifo_srst : STD_LOGIC;
-  signal noip_lvds_stream_0_fifo_write_FULL : STD_LOGIC;
-  signal noip_lvds_stream_0_fifo_write_WR_DATA : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal noip_lvds_stream_0_fifo_write_WR_EN : STD_LOGIC;
+  signal noip_lvds_stream_0_bitslip : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal noip_lvds_stream_0_trigger0 : STD_LOGIC;
   signal noip_lvds_stream_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal noip_lvds_stream_1_M00_AXIS_TLAST : STD_LOGIC;
   signal noip_lvds_stream_1_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal noip_lvds_stream_1_M00_AXIS_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal noip_lvds_stream_1_M00_AXIS_TVALID : STD_LOGIC;
-  signal noip_lvds_stream_1_fifo_read_EMPTY : STD_LOGIC;
-  signal noip_lvds_stream_1_fifo_read_RD_DATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal noip_lvds_stream_1_fifo_read_RD_EN : STD_LOGIC;
-  signal noip_lvds_stream_1_fifo_srst : STD_LOGIC;
-  signal noip_lvds_stream_1_fifo_write_FULL : STD_LOGIC;
-  signal noip_lvds_stream_1_fifo_write_WR_DATA : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal noip_lvds_stream_1_fifo_write_WR_EN : STD_LOGIC;
   signal noip_lvds_stream_1_trigger0 : STD_LOGIC;
   signal noip_miso_1 : STD_LOGIC;
   signal noip_monitor0_1 : STD_LOGIC_VECTOR ( 0 to 1 );
@@ -5013,7 +4877,6 @@ architecture STRUCTURE of main_design is
   signal ps7_0_axi_periph_M01_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC;
   signal trigger0_concat_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
@@ -5022,6 +4885,8 @@ architecture STRUCTURE of main_design is
   signal NLW_axi_dma_0_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s00_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_hdmi_ctrl_0_s01_axis_tready_UNCONNECTED : STD_LOGIC;
+  signal NLW_lvds_selectio_data_0_data_in_to_device_UNCONNECTED : STD_LOGIC_VECTOR ( 39 downto 0 );
+  signal NLW_noip_lvds_stream_1_bitslip_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5048,7 +4913,7 @@ architecture STRUCTURE of main_design is
   attribute x_interface_info of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute x_interface_info of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
   attribute x_interface_info of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
-  attribute x_interface_parameter of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_parameter of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 7.14286e+07, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute x_interface_info of hdmi_pclk : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_PCLK CLK";
   attribute x_interface_parameter of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute x_interface_info of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
@@ -5112,18 +4977,8 @@ architecture STRUCTURE of main_design is
   attribute x_interface_info of noip_monitor1 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR1 DATA";
   attribute x_interface_parameter of noip_monitor1 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR1, LAYERED_METADATA undef";
 begin
-  IBUF_DS_N_0_2(0) <= lvds_sync_0_n(0);
   IBUF_DS_N_0_4(0) <= lvds_sync_1_n(0);
-  IBUF_DS_N_1_1(0) <= lvds_dout0_0_n(0);
-  IBUF_DS_N_1_2(0) <= lvds_dout2_0_n(0);
-  IBUF_DS_N_1_3(0) <= lvds_dout0_1_n(0);
-  IBUF_DS_N_1_4(0) <= lvds_dout2_1_n(0);
-  IBUF_DS_P_0_2(0) <= lvds_sync_0_p(0);
   IBUF_DS_P_0_4(0) <= lvds_sync_1_p(0);
-  IBUF_DS_P_1_1(0) <= lvds_dout0_0_p(0);
-  IBUF_DS_P_1_2(0) <= lvds_dout2_0_p(0);
-  IBUF_DS_P_1_3(0) <= lvds_dout0_1_p(0);
-  IBUF_DS_P_1_4(0) <= lvds_dout2_1_p(0);
   clk_test_port <= processing_system7_0_FCLK_CLK1;
   hdmi_data(15 downto 0) <= hdmi_ctrl_0_hdmi_data(15 downto 0);
   hdmi_de <= hdmi_ctrl_0_hdmi_de;
@@ -5134,14 +4989,16 @@ begin
   lvds_clk_0_p_1(0) <= lvds_clk_0_p(0);
   lvds_clk_1_n_1(0) <= lvds_clk_1_n(0);
   lvds_clk_1_p_1(0) <= lvds_clk_1_p(0);
+  lvds_dout0_0_n_1(0) <= lvds_dout0_0_n(0);
+  lvds_dout0_0_p_1(0) <= lvds_dout0_0_p(0);
   lvds_dout1_0_n_1(0) <= lvds_dout1_0_n(0);
-  lvds_dout1_0_n_2(0) <= lvds_dout3_0_n(0);
-  lvds_dout1_0_n_3(0) <= lvds_dout1_1_n(0);
-  lvds_dout1_0_n_4(0) <= lvds_dout3_1_n(0);
   lvds_dout1_0_p_1(0) <= lvds_dout1_0_p(0);
-  lvds_dout1_0_p_2(0) <= lvds_dout3_0_p(0);
-  lvds_dout1_0_p_3(0) <= lvds_dout1_1_p(0);
-  lvds_dout1_0_p_4(0) <= lvds_dout3_1_p(0);
+  lvds_dout2_0_n_1(0) <= lvds_dout2_0_n(0);
+  lvds_dout2_0_p_1(0) <= lvds_dout2_0_p(0);
+  lvds_dout3_0_n_1(0) <= lvds_dout3_0_n(0);
+  lvds_dout3_0_p_1(0) <= lvds_dout3_0_p(0);
+  lvds_sync_0_n_1(0) <= lvds_sync_0_n(0);
+  lvds_sync_0_p_1(0) <= lvds_sync_0_p(0);
   noip_clk_pll(0 to 1) <= noip_ctrl_0_clk_pll_out(0 to 1);
   noip_miso_1 <= noip_miso;
   noip_monitor0_1(0 to 1) <= noip_monitor0(0 to 1);
@@ -5416,28 +5273,6 @@ axis_interconnect_1: entity work.main_design_axis_interconnect_1_0
       S01_AXIS_tstrb(3 downto 0) => noip_lvds_stream_1_M00_AXIS_TSTRB(3 downto 0),
       S01_AXIS_tvalid(0) => noip_lvds_stream_1_M00_AXIS_TVALID
     );
-fifo_generator_0: component main_design_fifo_generator_0_0
-     port map (
-      clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
-      din(63 downto 0) => noip_lvds_stream_0_fifo_write_WR_DATA(63 downto 0),
-      dout(31 downto 0) => noip_lvds_stream_0_fifo_read_RD_DATA(31 downto 0),
-      empty => noip_lvds_stream_0_fifo_read_EMPTY,
-      full => noip_lvds_stream_0_fifo_write_FULL,
-      rd_en => noip_lvds_stream_0_fifo_read_RD_EN,
-      srst => noip_lvds_stream_0_fifo_srst,
-      wr_en => noip_lvds_stream_0_fifo_write_WR_EN
-    );
-fifo_generator_1: component main_design_fifo_generator_0_1
-     port map (
-      clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
-      din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
-      dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
-      empty => noip_lvds_stream_1_fifo_read_EMPTY,
-      full => noip_lvds_stream_1_fifo_write_FULL,
-      rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
-      srst => noip_lvds_stream_1_fifo_srst,
-      wr_en => noip_lvds_stream_1_fifo_write_WR_EN
-    );
 hdmi_ctrl_0: component main_design_hdmi_ctrl_0_0
      port map (
       hdmi_data(15 downto 0) => hdmi_ctrl_0_hdmi_data(15 downto 0),
@@ -5475,102 +5310,42 @@ iobuf_I2C0_SDA: component main_design_my_iobuf_0_0
       O => my_iobuf_0_O,
       T => processing_system7_0_I2C0_SDA_T
     );
-lvds_clk_0_ibuf: component main_design_lvds_clk_1_ibuf_0
-     port map (
-      IBUF_DS_N(0) => lvds_clk_0_n_1(0),
-      IBUF_DS_P(0) => lvds_clk_0_p_1(0),
-      IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT(0)
-    );
 lvds_clk_1_ibuf: component main_design_lvds_sync_1_ibuf_0
      port map (
       IBUF_DS_N(0) => lvds_clk_1_n_1(0),
       IBUF_DS_P(0) => lvds_clk_1_p_1(0),
       IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT1(0)
     );
-lvds_data_0_concat: component main_design_xlconcat_0_1
+lvds_data_0_concat_n: component main_design_xlconcat_0_2
      port map (
-      In0(0) => lvds_dout0_0_ibuf_IBUF_OUT(0),
-      In1(0) => lvds_dout1_0_ibuf_IBUF_OUT(0),
-      In2(0) => lvds_dout0_0_ibuf_IBUF_OUT1(0),
-      In3(0) => lvds_dout1_0_ibuf_IBUF_OUT1(0),
-      dout(3 downto 0) => lvds_data_0_concat_dout(3 downto 0)
+      In0(0) => lvds_dout0_0_n_1(0),
+      In1(0) => lvds_dout1_0_n_1(0),
+      In2(0) => lvds_dout2_0_n_1(0),
+      In3(0) => lvds_dout3_0_n_1(0),
+      In4(0) => lvds_sync_0_n_1(0),
+      dout(4 downto 0) => lvds_data_0_concat_n_dout(4 downto 0)
     );
-lvds_data_0_inverter: component main_design_util_vector_logic_0_0
+lvds_data_0_concat_p: component main_design_lvds_pins_0_n_0
      port map (
-      Op1(3 downto 0) => lvds_data_0_concat_dout(3 downto 0),
-      Res(3 downto 0) => util_vector_logic_0_Res(3 downto 0)
+      In0(0) => lvds_dout0_0_p_1(0),
+      In1(0) => lvds_dout1_0_p_1(0),
+      In2(0) => lvds_dout2_0_p_1(0),
+      In3(0) => lvds_dout3_0_p_1(0),
+      In4(0) => lvds_sync_0_p_1(0),
+      dout(4 downto 0) => lvds_data_0_concat_p_dout(4 downto 0)
     );
-lvds_data_1_concat: component main_design_lvds_data_0_concat_1
+lvds_selectio_data_0: component main_design_selectio_wiz_0_2
      port map (
-      In0(0) => lvds_dout0_0_ibuf_IBUF_OUT2(0),
-      In1(0) => lvds_dout1_0_ibuf_IBUF_OUT2(0),
-      In2(0) => lvds_dout0_0_ibuf_IBUF_OUT3(0),
-      In3(0) => lvds_dout1_0_ibuf_IBUF_OUT3(0),
-      dout(3 downto 0) => lvds_data_1_concat_dout(3 downto 0)
-    );
-lvds_data_1_inverter: component main_design_lvds_data_0_inverter_0
-     port map (
-      Op1(3 downto 0) => lvds_data_1_concat_dout(3 downto 0),
-      Res(3 downto 0) => lvds_data_1_inverter_Res(3 downto 0)
-    );
-lvds_dout0_0_ibuf: component main_design_lvds_sync_0_ibuf1_0
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_1_1(0),
-      IBUF_DS_P(0) => IBUF_DS_P_1_1(0),
-      IBUF_OUT(0) => lvds_dout0_0_ibuf_IBUF_OUT(0)
-    );
-lvds_dout0_1_ibuf: component main_design_lvds_dout0_0_ibuf_3
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_1_3(0),
-      IBUF_DS_P(0) => IBUF_DS_P_1_3(0),
-      IBUF_OUT(0) => lvds_dout0_0_ibuf_IBUF_OUT2(0)
-    );
-lvds_dout1_0_ibuf: component main_design_lvds_dout0_0_ibuf_0
-     port map (
-      IBUF_DS_N(0) => lvds_dout1_0_n_1(0),
-      IBUF_DS_P(0) => lvds_dout1_0_p_1(0),
-      IBUF_OUT(0) => lvds_dout1_0_ibuf_IBUF_OUT(0)
-    );
-lvds_dout1_1_ibuf: component main_design_lvds_dout1_0_ibuf_3
-     port map (
-      IBUF_DS_N(0) => lvds_dout1_0_n_3(0),
-      IBUF_DS_P(0) => lvds_dout1_0_p_3(0),
-      IBUF_OUT(0) => lvds_dout1_0_ibuf_IBUF_OUT2(0)
-    );
-lvds_dout2_0_ibuf: component main_design_lvds_dout0_0_ibuf_1
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_1_2(0),
-      IBUF_DS_P(0) => IBUF_DS_P_1_2(0),
-      IBUF_OUT(0) => lvds_dout0_0_ibuf_IBUF_OUT1(0)
-    );
-lvds_dout2_1_ibuf: component main_design_lvds_dout2_0_ibuf_1
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_1_4(0),
-      IBUF_DS_P(0) => IBUF_DS_P_1_4(0),
-      IBUF_OUT(0) => lvds_dout0_0_ibuf_IBUF_OUT3(0)
-    );
-lvds_dout3_0_ibuf: component main_design_lvds_dout1_0_ibuf_1
-     port map (
-      IBUF_DS_N(0) => lvds_dout1_0_n_2(0),
-      IBUF_DS_P(0) => lvds_dout1_0_p_2(0),
-      IBUF_OUT(0) => lvds_dout1_0_ibuf_IBUF_OUT1(0)
-    );
-lvds_dout3_1_ibuf: component main_design_lvds_dout3_0_ibuf_1
-     port map (
-      IBUF_DS_N(0) => lvds_dout1_0_n_4(0),
-      IBUF_DS_P(0) => lvds_dout1_0_p_4(0),
-      IBUF_OUT(0) => lvds_dout1_0_ibuf_IBUF_OUT3(0)
-    );
-lvds_sync_0_ibuf: component main_design_lvds_clkin_0_ibuf_1
-     port map (
-      IBUF_DS_N(0) => IBUF_DS_N_0_2(0),
-      IBUF_DS_P(0) => IBUF_DS_P_0_2(0),
-      IBUF_OUT(0) => lvds_sync_0_ibuf_IBUF_OUT(0)
-    );
-lvds_sync_0_inverter: component main_design_lvds_sync_1_inverter_0
-     port map (
-      Op1(0) => lvds_sync_0_ibuf_IBUF_OUT(0),
-      Res(0) => lvds_sync_0_inverter_Res(0)
+      bitslip(4) => '0',
+      bitslip(3 downto 0) => noip_lvds_stream_0_bitslip(3 downto 0),
+      clk_div_out => lvds_selectio_data_0_clk_div_out,
+      clk_in_n => lvds_clk_0_n_1(0),
+      clk_in_p => lvds_clk_0_p_1(0),
+      clk_reset => Net4(0),
+      data_in_from_pins_n(4 downto 0) => lvds_data_0_concat_n_dout(4 downto 0),
+      data_in_from_pins_p(4 downto 0) => lvds_data_0_concat_p_dout(4 downto 0),
+      data_in_to_device(39 downto 0) => NLW_lvds_selectio_data_0_data_in_to_device_UNCONNECTED(39 downto 0),
+      io_reset => Net4(0)
     );
 lvds_sync_1_ibuf: component main_design_lvds_sync_0_ibuf_1
      port map (
@@ -5645,19 +5420,48 @@ noip_ctrl_0: component main_design_noip_ctrl_0_0
     );
 noip_lvds_stream_0: component main_design_noip_lvds_stream_0_0
      port map (
-      fifo_din(63 downto 0) => noip_lvds_stream_0_fifo_write_WR_DATA(63 downto 0),
-      fifo_dout(31 downto 0) => noip_lvds_stream_0_fifo_read_RD_DATA(31 downto 0),
-      fifo_empty => noip_lvds_stream_0_fifo_read_EMPTY,
-      fifo_full => noip_lvds_stream_0_fifo_write_FULL,
-      fifo_rd_en => noip_lvds_stream_0_fifo_read_RD_EN,
-      fifo_srst => noip_lvds_stream_0_fifo_srst,
-      fifo_wr_en => noip_lvds_stream_0_fifo_write_WR_EN,
-      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT(0),
-      lvds_data(0) => util_vector_logic_0_Res(3),
-      lvds_data(1) => util_vector_logic_0_Res(2),
-      lvds_data(2) => util_vector_logic_0_Res(1),
-      lvds_data(3) => util_vector_logic_0_Res(0),
-      lvds_sync => lvds_sync_0_inverter_Res(0),
+      bitslip(3 downto 0) => noip_lvds_stream_0_bitslip(3 downto 0),
+      lvds_clk_div => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(39) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(38) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(37) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(36) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(35) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(34) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(33) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(32) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(31) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(30) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(29) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(28) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(27) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(26) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(25) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(24) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(23) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(22) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(21) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(20) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(19) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(18) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(17) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(16) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(15) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(14) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(13) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(12) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(11) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(10) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(9) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(8) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(7) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(6) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(5) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(4) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(3) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(2) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(1) => lvds_selectio_data_0_clk_div_out,
+      lvds_deserialized(0) => lvds_selectio_data_0_clk_div_out,
       m00_axis_aclk => processing_system7_0_FCLK_CLK0,
       m00_axis_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
       m00_axis_tdata(31 downto 0) => S00_AXIS_1_TDATA(31 downto 0),
@@ -5678,19 +5482,9 @@ noip_lvds_stream_0: component main_design_noip_lvds_stream_0_0
     );
 noip_lvds_stream_1: component main_design_noip_lvds_stream_0_1
      port map (
-      fifo_din(63 downto 0) => noip_lvds_stream_1_fifo_write_WR_DATA(63 downto 0),
-      fifo_dout(31 downto 0) => noip_lvds_stream_1_fifo_read_RD_DATA(31 downto 0),
-      fifo_empty => noip_lvds_stream_1_fifo_read_EMPTY,
-      fifo_full => noip_lvds_stream_1_fifo_write_FULL,
-      fifo_rd_en => noip_lvds_stream_1_fifo_read_RD_EN,
-      fifo_srst => noip_lvds_stream_1_fifo_srst,
-      fifo_wr_en => noip_lvds_stream_1_fifo_write_WR_EN,
-      lvds_clk => lvds_clkin_0_ibuf_IBUF_OUT1(0),
-      lvds_data(0) => lvds_data_1_inverter_Res(3),
-      lvds_data(1) => lvds_data_1_inverter_Res(2),
-      lvds_data(2) => lvds_data_1_inverter_Res(1),
-      lvds_data(3) => lvds_data_1_inverter_Res(0),
-      lvds_sync => lvds_sync_1_inverter_Res(0),
+      bitslip(3 downto 0) => NLW_noip_lvds_stream_1_bitslip_UNCONNECTED(3 downto 0),
+      lvds_clk_div => '0',
+      lvds_deserialized(39 downto 0) => B"0000000000000000000000000000000000000000",
       m00_axis_aclk => processing_system7_0_FCLK_CLK0,
       m00_axis_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
       m00_axis_tdata(31 downto 0) => noip_lvds_stream_1_M00_AXIS_TDATA(31 downto 0),
@@ -5925,6 +5719,11 @@ ps7_0_axi_periph: entity work.main_design_ps7_0_axi_periph_0
       S00_AXI_wready => processing_system7_0_M_AXI_GP0_WREADY,
       S00_AXI_wstrb(3 downto 0) => processing_system7_0_M_AXI_GP0_WSTRB(3 downto 0),
       S00_AXI_wvalid => processing_system7_0_M_AXI_GP0_WVALID
+    );
+selectio_reset_inverter: component main_design_lvds_sync_1_inverter_1
+     port map (
+      Op1(0) => proc_sys_reset_0_peripheral_aresetn(0),
+      Res(0) => Net4(0)
     );
 trigger0_concat: component main_design_xlconcat_0_0
      port map (

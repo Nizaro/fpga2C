@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1722414646">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1722512209">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="main_design_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="main_design_wrapper_routed.rqs"/>
@@ -139,9 +139,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -152,14 +150,15 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_selectio_wiz_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_2"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_design_noip_lvds_stream_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_design_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_iobuf_I2C0_SDA_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_my_iobuf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_design_hdmi_ctrl_0_0"/>

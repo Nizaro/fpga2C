@@ -2,8 +2,6 @@
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   ipgui::add_param $IPINST -name "SENSOR_BIT_LENGTH" -widget comboBox
-  ipgui::add_param $IPINST -name "IM_HEIGHT"
-  ipgui::add_param $IPINST -name "IM_WIDTH"
 
 }
 

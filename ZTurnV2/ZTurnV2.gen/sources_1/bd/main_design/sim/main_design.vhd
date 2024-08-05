@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Thu Aug  1 13:51:24 2024
+--Date        : Mon Aug  5 09:36:31 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -4499,19 +4499,6 @@ architecture STRUCTURE of main_design is
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_monitor0_slice1_1;
-  component main_design_lvds_sync_0_ibuf_1 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_sync_0_ibuf_1;
-  component main_design_lvds_data_1_inverter_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_data_1_inverter_0;
   component main_design_hdmi_ctrl_0_0 is
   port (
     hdmi_pclk : out STD_LOGIC;
@@ -4552,13 +4539,6 @@ architecture STRUCTURE of main_design is
     T : in STD_LOGIC
   );
   end component main_design_iobuf_I2C0_SDA_0;
-  component main_design_lvds_sync_1_ibuf_0 is
-  port (
-    IBUF_DS_P : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_DS_N : in STD_LOGIC_VECTOR ( 0 to 0 );
-    IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component main_design_lvds_sync_1_ibuf_0;
   component main_design_xlconcat_0_2 is
   port (
     In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4598,8 +4578,39 @@ architecture STRUCTURE of main_design is
     data_in_to_device : out STD_LOGIC_VECTOR ( 39 downto 0 )
   );
   end component main_design_selectio_wiz_0_2;
-  signal IBUF_DS_N_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal IBUF_DS_P_0_4 : STD_LOGIC_VECTOR ( 0 to 0 );
+  component main_design_lvds_data_0_concat_n_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
+  );
+  end component main_design_lvds_data_0_concat_n_0;
+  component main_design_lvds_data_0_concat_p_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
+  );
+  end component main_design_lvds_data_0_concat_p_0;
+  component main_design_lvds_selectio_data_0_0 is
+  port (
+    data_in_from_pins_p : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    data_in_from_pins_n : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    clk_in_p : in STD_LOGIC;
+    clk_in_n : in STD_LOGIC;
+    clk_reset : in STD_LOGIC;
+    io_reset : in STD_LOGIC;
+    bitslip : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    clk_div_out : out STD_LOGIC;
+    data_in_to_device : out STD_LOGIC_VECTOR ( 39 downto 0 )
+  );
+  end component main_design_lvds_selectio_data_0_0;
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal Net2 : STD_LOGIC;
@@ -4735,22 +4746,33 @@ architecture STRUCTURE of main_design is
   signal lvds_clk_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_clk_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_clkin_0_ibuf_IBUF_OUT1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_data_0_concat_n_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal lvds_data_0_concat_p_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal lvds_data_1_concat_n_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal lvds_data_1_concat_p_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal lvds_dout0_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout0_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout0_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout0_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout1_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout1_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout1_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout1_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout2_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout2_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout2_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout2_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout3_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_dout3_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout3_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_dout3_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_selectio_data_0_clk_div_out : STD_LOGIC;
+  signal lvds_selectio_data_1_clk_div_out : STD_LOGIC;
+  signal lvds_selectio_data_1_data_in_to_device : STD_LOGIC_VECTOR ( 39 downto 0 );
   signal lvds_sync_0_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lvds_sync_0_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_sync_1_ibuf_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal lvds_sync_1_inverter_Res : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_sync_1_n_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal lvds_sync_1_p_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal monitor1_slice0_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal monitor1_slice1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal my_iobuf_0_O : STD_LOGIC;
@@ -4977,8 +4999,6 @@ architecture STRUCTURE of main_design is
   attribute x_interface_info of noip_monitor1 : signal is "xilinx.com:signal:data:1.0 DATA.NOIP_MONITOR1 DATA";
   attribute x_interface_parameter of noip_monitor1 : signal is "XIL_INTERFACENAME DATA.NOIP_MONITOR1, LAYERED_METADATA undef";
 begin
-  IBUF_DS_N_0_4(0) <= lvds_sync_1_n(0);
-  IBUF_DS_P_0_4(0) <= lvds_sync_1_p(0);
   clk_test_port <= processing_system7_0_FCLK_CLK1;
   hdmi_data(15 downto 0) <= hdmi_ctrl_0_hdmi_data(15 downto 0);
   hdmi_de <= hdmi_ctrl_0_hdmi_de;
@@ -4991,14 +5011,24 @@ begin
   lvds_clk_1_p_1(0) <= lvds_clk_1_p(0);
   lvds_dout0_0_n_1(0) <= lvds_dout0_0_n(0);
   lvds_dout0_0_p_1(0) <= lvds_dout0_0_p(0);
+  lvds_dout0_1_n_1(0) <= lvds_dout0_1_n(0);
+  lvds_dout0_1_p_1(0) <= lvds_dout0_1_p(0);
   lvds_dout1_0_n_1(0) <= lvds_dout1_0_n(0);
   lvds_dout1_0_p_1(0) <= lvds_dout1_0_p(0);
+  lvds_dout1_1_n_1(0) <= lvds_dout1_1_n(0);
+  lvds_dout1_1_p_1(0) <= lvds_dout1_1_p(0);
   lvds_dout2_0_n_1(0) <= lvds_dout2_0_n(0);
   lvds_dout2_0_p_1(0) <= lvds_dout2_0_p(0);
+  lvds_dout2_1_n_1(0) <= lvds_dout2_1_n(0);
+  lvds_dout2_1_p_1(0) <= lvds_dout2_1_p(0);
   lvds_dout3_0_n_1(0) <= lvds_dout3_0_n(0);
   lvds_dout3_0_p_1(0) <= lvds_dout3_0_p(0);
+  lvds_dout3_1_n_1(0) <= lvds_dout3_1_n(0);
+  lvds_dout3_1_p_1(0) <= lvds_dout3_1_p(0);
   lvds_sync_0_n_1(0) <= lvds_sync_0_n(0);
   lvds_sync_0_p_1(0) <= lvds_sync_0_p(0);
+  lvds_sync_1_n_1(0) <= lvds_sync_1_n(0);
+  lvds_sync_1_p_1(0) <= lvds_sync_1_p(0);
   noip_clk_pll(0 to 1) <= noip_ctrl_0_clk_pll_out(0 to 1);
   noip_miso_1 <= noip_miso;
   noip_monitor0_1(0 to 1) <= noip_monitor0(0 to 1);
@@ -5310,12 +5340,6 @@ iobuf_I2C0_SDA: component main_design_my_iobuf_0_0
       O => my_iobuf_0_O,
       T => processing_system7_0_I2C0_SDA_T
     );
-lvds_clk_1_ibuf: component main_design_lvds_sync_1_ibuf_0
-     port map (
-      IBUF_DS_N(0) => lvds_clk_1_n_1(0),
-      IBUF_DS_P(0) => lvds_clk_1_p_1(0),
-      IBUF_OUT(0) => lvds_clkin_0_ibuf_IBUF_OUT1(0)
-    );
 lvds_data_0_concat_n: component main_design_xlconcat_0_2
      port map (
       In0(0) => lvds_dout0_0_n_1(0),
@@ -5334,6 +5358,24 @@ lvds_data_0_concat_p: component main_design_lvds_pins_0_n_0
       In4(0) => lvds_sync_0_p_1(0),
       dout(4 downto 0) => lvds_data_0_concat_p_dout(4 downto 0)
     );
+lvds_data_1_concat_n: component main_design_lvds_data_0_concat_n_0
+     port map (
+      In0(0) => lvds_dout0_1_n_1(0),
+      In1(0) => lvds_dout1_1_n_1(0),
+      In2(0) => lvds_dout2_1_n_1(0),
+      In3(0) => lvds_dout3_1_n_1(0),
+      In4(0) => lvds_sync_1_n_1(0),
+      dout(4 downto 0) => lvds_data_1_concat_n_dout(4 downto 0)
+    );
+lvds_data_1_concat_p: component main_design_lvds_data_0_concat_p_0
+     port map (
+      In0(0) => lvds_dout0_1_p_1(0),
+      In1(0) => lvds_dout1_1_p_1(0),
+      In2(0) => lvds_dout2_1_p_1(0),
+      In3(0) => lvds_dout3_1_p_1(0),
+      In4(0) => lvds_sync_1_p_1(0),
+      dout(4 downto 0) => lvds_data_1_concat_p_dout(4 downto 0)
+    );
 lvds_selectio_data_0: component main_design_selectio_wiz_0_2
      port map (
       bitslip(4) => '0',
@@ -5347,16 +5389,21 @@ lvds_selectio_data_0: component main_design_selectio_wiz_0_2
       data_in_to_device(39 downto 0) => NLW_lvds_selectio_data_0_data_in_to_device_UNCONNECTED(39 downto 0),
       io_reset => Net4(0)
     );
-lvds_sync_1_ibuf: component main_design_lvds_sync_0_ibuf_1
+lvds_selectio_data_1: component main_design_lvds_selectio_data_0_0
      port map (
-      IBUF_DS_N(0) => IBUF_DS_N_0_4(0),
-      IBUF_DS_P(0) => IBUF_DS_P_0_4(0),
-      IBUF_OUT(0) => lvds_sync_1_ibuf_IBUF_OUT(0)
-    );
-lvds_sync_1_inverter: component main_design_lvds_data_1_inverter_0
-     port map (
-      Op1(0) => lvds_sync_1_ibuf_IBUF_OUT(0),
-      Res(0) => lvds_sync_1_inverter_Res(0)
+      bitslip(4) => noip_lvds_stream_1_trigger0,
+      bitslip(3) => noip_lvds_stream_1_trigger0,
+      bitslip(2) => noip_lvds_stream_1_trigger0,
+      bitslip(1) => noip_lvds_stream_1_trigger0,
+      bitslip(0) => noip_lvds_stream_1_trigger0,
+      clk_div_out => lvds_selectio_data_1_clk_div_out,
+      clk_in_n => lvds_clk_1_n_1(0),
+      clk_in_p => lvds_clk_1_p_1(0),
+      clk_reset => Net4(0),
+      data_in_from_pins_n(4 downto 0) => lvds_data_1_concat_n_dout(4 downto 0),
+      data_in_from_pins_p(4 downto 0) => lvds_data_1_concat_p_dout(4 downto 0),
+      data_in_to_device(39 downto 0) => lvds_selectio_data_1_data_in_to_device(39 downto 0),
+      io_reset => Net4(0)
     );
 monitor0_slice0: component main_design_xlslice_0_1
      port map (
@@ -5483,8 +5530,8 @@ noip_lvds_stream_0: component main_design_noip_lvds_stream_0_0
 noip_lvds_stream_1: component main_design_noip_lvds_stream_0_1
      port map (
       bitslip(3 downto 0) => NLW_noip_lvds_stream_1_bitslip_UNCONNECTED(3 downto 0),
-      lvds_clk_div => '0',
-      lvds_deserialized(39 downto 0) => B"0000000000000000000000000000000000000000",
+      lvds_clk_div => lvds_selectio_data_1_clk_div_out,
+      lvds_deserialized(39 downto 0) => lvds_selectio_data_1_data_in_to_device(39 downto 0),
       m00_axis_aclk => processing_system7_0_FCLK_CLK0,
       m00_axis_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
       m00_axis_tdata(31 downto 0) => noip_lvds_stream_1_M00_AXIS_TDATA(31 downto 0),

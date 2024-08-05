@@ -69,16 +69,16 @@
       "monitor0_slice1": "",
       "monitor1_slice0": "",
       "monitor1_slice1": "",
-      "lvds_sync_1_ibuf": "",
-      "lvds_sync_1_inverter": "",
       "hdmi_ctrl_0": "",
       "iobuf_I2C0_SDA": "",
       "iobuf_I2C0_SCL": "",
-      "lvds_clk_1_ibuf": "",
       "lvds_data_0_concat_n": "",
       "lvds_data_0_concat_p": "",
       "selectio_reset_inverter": "",
-      "lvds_selectio_data_0": ""
+      "lvds_selectio_data_0": "",
+      "lvds_data_1_concat_n": "",
+      "lvds_data_1_concat_p": "",
+      "lvds_selectio_data_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3954,36 +3954,6 @@
           }
         }
       },
-      "lvds_sync_1_ibuf": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "ip_revision": "32",
-        "xci_name": "main_design_lvds_sync_0_ibuf_1",
-        "xci_path": "ip/main_design_lvds_sync_0_ibuf_1/main_design_lvds_sync_0_ibuf_1.xci",
-        "inst_hier_path": "lvds_sync_1_ibuf",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "IBUFDS"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "lvds_sync_1_inverter": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "ip_revision": "4",
-        "xci_name": "main_design_lvds_data_1_inverter_0",
-        "xci_path": "ip/main_design_lvds_data_1_inverter_0/main_design_lvds_data_1_inverter_0.xci",
-        "inst_hier_path": "lvds_sync_1_inverter",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "hdmi_ctrl_0": {
         "vlnv": "user.org:user:hdmi_ctrl:1.0",
         "ip_revision": "5",
@@ -4043,21 +4013,6 @@
           }
         }
       },
-      "lvds_clk_1_ibuf": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "ip_revision": "32",
-        "xci_name": "main_design_lvds_sync_1_ibuf_0",
-        "xci_path": "ip/main_design_lvds_sync_1_ibuf_0/main_design_lvds_sync_1_ibuf_0.xci",
-        "inst_hier_path": "lvds_clk_1_ibuf",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "IBUFDS"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "lvds_data_0_concat_n": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "ip_revision": "6",
@@ -4103,6 +4058,87 @@
         "xci_name": "main_design_selectio_wiz_0_2",
         "xci_path": "ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2.xci",
         "inst_hier_path": "lvds_selectio_data_0",
+        "parameters": {
+          "BUS_DIR": {
+            "value": "INPUTS"
+          },
+          "BUS_IO_STD": {
+            "value": "LVDS_25"
+          },
+          "BUS_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "CLK_FWD": {
+            "value": "false"
+          },
+          "CLK_FWD_IO_STD": {
+            "value": "LVDS_25"
+          },
+          "CLK_FWD_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_ACTIVE_EDGE": {
+            "value": "SDR"
+          },
+          "SELIO_BUS_IN_DELAY": {
+            "value": "NONE"
+          },
+          "SELIO_CLK_BUF": {
+            "value": "BUFIO"
+          },
+          "SELIO_CLK_IO_STD": {
+            "value": "LVDS_25"
+          },
+          "SELIO_CLK_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_INTERFACE_TYPE": {
+            "value": "NETWORKING"
+          },
+          "SERIALIZATION_FACTOR": {
+            "value": "8"
+          },
+          "SYSTEM_DATA_WIDTH": {
+            "value": "5"
+          },
+          "USE_SERIALIZATION": {
+            "value": "true"
+          },
+          "USE_TEMPLATE": {
+            "value": "Custom"
+          }
+        }
+      },
+      "lvds_data_1_concat_n": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "6",
+        "xci_name": "main_design_lvds_data_0_concat_n_0",
+        "xci_path": "ip/main_design_lvds_data_0_concat_n_0/main_design_lvds_data_0_concat_n_0.xci",
+        "inst_hier_path": "lvds_data_1_concat_n",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "5"
+          }
+        }
+      },
+      "lvds_data_1_concat_p": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "6",
+        "xci_name": "main_design_lvds_data_0_concat_p_0",
+        "xci_path": "ip/main_design_lvds_data_0_concat_p_0/main_design_lvds_data_0_concat_p_0.xci",
+        "inst_hier_path": "lvds_data_1_concat_p",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "5"
+          }
+        }
+      },
+      "lvds_selectio_data_1": {
+        "vlnv": "xilinx.com:ip:selectio_wiz:5.1",
+        "ip_revision": "18",
+        "xci_name": "main_design_lvds_selectio_data_0_0",
+        "xci_path": "ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0.xci",
+        "inst_hier_path": "lvds_selectio_data_1",
         "parameters": {
           "BUS_DIR": {
             "value": "INPUTS"
@@ -4248,18 +4284,6 @@
       }
     },
     "nets": {
-      "IBUF_DS_N_0_4": {
-        "ports": [
-          "lvds_sync_1_n",
-          "lvds_sync_1_ibuf/IBUF_DS_N"
-        ]
-      },
-      "IBUF_DS_P_0_4": {
-        "ports": [
-          "lvds_sync_1_p",
-          "lvds_sync_1_ibuf/IBUF_DS_P"
-        ]
-      },
       "Net": {
         "ports": [
           "hdmi_int",
@@ -4282,7 +4306,9 @@
         "ports": [
           "selectio_reset_inverter/Res",
           "lvds_selectio_data_0/clk_reset",
-          "lvds_selectio_data_0/io_reset"
+          "lvds_selectio_data_0/io_reset",
+          "lvds_selectio_data_1/io_reset",
+          "lvds_selectio_data_1/clk_reset"
         ]
       },
       "hdmi_ctrl_0_hdmi_data": {
@@ -4336,18 +4362,13 @@
       "lvds_clk_1_n_1": {
         "ports": [
           "lvds_clk_1_n",
-          "lvds_clk_1_ibuf/IBUF_DS_N"
+          "lvds_selectio_data_1/clk_in_n"
         ]
       },
       "lvds_clk_1_p_1": {
         "ports": [
           "lvds_clk_1_p",
-          "lvds_clk_1_ibuf/IBUF_DS_P"
-        ]
-      },
-      "lvds_clkin_0_ibuf_IBUF_OUT1": {
-        "ports": [
-          "lvds_clk_1_ibuf/IBUF_OUT"
+          "lvds_selectio_data_1/clk_in_p"
         ]
       },
       "lvds_data_0_concat_n_dout": {
@@ -4362,6 +4383,18 @@
           "lvds_selectio_data_0/data_in_from_pins_p"
         ]
       },
+      "lvds_data_1_concat_n_dout": {
+        "ports": [
+          "lvds_data_1_concat_n/dout",
+          "lvds_selectio_data_1/data_in_from_pins_n"
+        ]
+      },
+      "lvds_data_1_concat_p_dout": {
+        "ports": [
+          "lvds_data_1_concat_p/dout",
+          "lvds_selectio_data_1/data_in_from_pins_p"
+        ]
+      },
       "lvds_dout0_0_n_1": {
         "ports": [
           "lvds_dout0_0_n",
@@ -4372,6 +4405,18 @@
         "ports": [
           "lvds_dout0_0_p",
           "lvds_data_0_concat_p/In0"
+        ]
+      },
+      "lvds_dout0_1_n_1": {
+        "ports": [
+          "lvds_dout0_1_n",
+          "lvds_data_1_concat_n/In0"
+        ]
+      },
+      "lvds_dout0_1_p_1": {
+        "ports": [
+          "lvds_dout0_1_p",
+          "lvds_data_1_concat_p/In0"
         ]
       },
       "lvds_dout1_0_n_1": {
@@ -4386,6 +4431,18 @@
           "lvds_data_0_concat_p/In1"
         ]
       },
+      "lvds_dout1_1_n_1": {
+        "ports": [
+          "lvds_dout1_1_n",
+          "lvds_data_1_concat_n/In1"
+        ]
+      },
+      "lvds_dout1_1_p_1": {
+        "ports": [
+          "lvds_dout1_1_p",
+          "lvds_data_1_concat_p/In1"
+        ]
+      },
       "lvds_dout2_0_n_1": {
         "ports": [
           "lvds_dout2_0_n",
@@ -4396,6 +4453,18 @@
         "ports": [
           "lvds_dout2_0_p",
           "lvds_data_0_concat_p/In2"
+        ]
+      },
+      "lvds_dout2_1_n_1": {
+        "ports": [
+          "lvds_dout2_1_n",
+          "lvds_data_1_concat_n/In2"
+        ]
+      },
+      "lvds_dout2_1_p_1": {
+        "ports": [
+          "lvds_dout2_1_p",
+          "lvds_data_1_concat_p/In2"
         ]
       },
       "lvds_dout3_0_n_1": {
@@ -4410,11 +4479,35 @@
           "lvds_data_0_concat_p/In3"
         ]
       },
+      "lvds_dout3_1_n_1": {
+        "ports": [
+          "lvds_dout3_1_n",
+          "lvds_data_1_concat_n/In3"
+        ]
+      },
+      "lvds_dout3_1_p_1": {
+        "ports": [
+          "lvds_dout3_1_p",
+          "lvds_data_1_concat_p/In3"
+        ]
+      },
       "lvds_selectio_data_0_clk_div_out": {
         "ports": [
           "lvds_selectio_data_0/clk_div_out",
           "noip_lvds_stream_0/lvds_clk_div",
           "noip_lvds_stream_0/lvds_deserialized"
+        ]
+      },
+      "lvds_selectio_data_1_clk_div_out": {
+        "ports": [
+          "lvds_selectio_data_1/clk_div_out",
+          "noip_lvds_stream_1/lvds_clk_div"
+        ]
+      },
+      "lvds_selectio_data_1_data_in_to_device": {
+        "ports": [
+          "lvds_selectio_data_1/data_in_to_device",
+          "noip_lvds_stream_1/lvds_deserialized"
         ]
       },
       "lvds_sync_0_n_1": {
@@ -4429,15 +4522,16 @@
           "lvds_data_0_concat_p/In4"
         ]
       },
-      "lvds_sync_1_ibuf_IBUF_OUT": {
+      "lvds_sync_1_n_1": {
         "ports": [
-          "lvds_sync_1_ibuf/IBUF_OUT",
-          "lvds_sync_1_inverter/Op1"
+          "lvds_sync_1_n",
+          "lvds_data_1_concat_n/In4"
         ]
       },
-      "lvds_sync_1_inverter_Res": {
+      "lvds_sync_1_p_1": {
         "ports": [
-          "lvds_sync_1_inverter/Res"
+          "lvds_sync_1_p",
+          "lvds_data_1_concat_p/In4"
         ]
       },
       "monitor1_slice0_Dout": {
@@ -4529,7 +4623,8 @@
       "noip_lvds_stream_1_trigger0": {
         "ports": [
           "noip_lvds_stream_1/trigger0",
-          "trigger0_concat/In1"
+          "trigger0_concat/In1",
+          "lvds_selectio_data_1/bitslip"
         ]
       },
       "noip_miso_1": {

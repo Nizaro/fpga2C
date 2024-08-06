@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Tue Aug  6 09:43:42 2024
+--Date        : Tue Aug  6 15:17:12 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -2446,6 +2446,14 @@ architecture STRUCTURE of main_design_axi_mem_intercon_0 is
     m_axi_rready : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_xbar_2;
+  signal M00_ACLK_1 : STD_LOGIC;
+  signal M00_ARESETN_1 : STD_LOGIC;
+  signal S00_ACLK_1 : STD_LOGIC;
+  signal S00_ARESETN_1 : STD_LOGIC;
+  signal S01_ACLK_1 : STD_LOGIC;
+  signal S01_ARESETN_1 : STD_LOGIC;
+  signal S02_ACLK_1 : STD_LOGIC;
+  signal S02_ARESETN_1 : STD_LOGIC;
   signal axi_mem_intercon_ACLK_net : STD_LOGIC;
   signal axi_mem_intercon_ARESETN_net : STD_LOGIC;
   signal axi_mem_intercon_to_s00_couplers_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2661,6 +2669,8 @@ architecture STRUCTURE of main_design_axi_mem_intercon_0 is
   signal NLW_xbar_s_axi_rvalid_UNCONNECTED : STD_LOGIC_VECTOR ( 2 to 2 );
   signal NLW_xbar_s_axi_wready_UNCONNECTED : STD_LOGIC_VECTOR ( 1 to 1 );
 begin
+  M00_ACLK_1 <= M00_ACLK;
+  M00_ARESETN_1 <= M00_ARESETN;
   M00_AXI_araddr(31 downto 0) <= m00_couplers_to_axi_mem_intercon_ARADDR(31 downto 0);
   M00_AXI_arburst(1 downto 0) <= m00_couplers_to_axi_mem_intercon_ARBURST(1 downto 0);
   M00_AXI_arcache(3 downto 0) <= m00_couplers_to_axi_mem_intercon_ARCACHE(3 downto 0);
@@ -2688,6 +2698,8 @@ begin
   M00_AXI_wlast <= m00_couplers_to_axi_mem_intercon_WLAST;
   M00_AXI_wstrb(7 downto 0) <= m00_couplers_to_axi_mem_intercon_WSTRB(7 downto 0);
   M00_AXI_wvalid <= m00_couplers_to_axi_mem_intercon_WVALID;
+  S00_ACLK_1 <= S00_ACLK;
+  S00_ARESETN_1 <= S00_ARESETN;
   S00_AXI_arready <= axi_mem_intercon_to_s00_couplers_ARREADY;
   S00_AXI_awready <= axi_mem_intercon_to_s00_couplers_AWREADY;
   S00_AXI_bresp(1 downto 0) <= axi_mem_intercon_to_s00_couplers_BRESP(1 downto 0);
@@ -2697,11 +2709,15 @@ begin
   S00_AXI_rresp(1 downto 0) <= axi_mem_intercon_to_s00_couplers_RRESP(1 downto 0);
   S00_AXI_rvalid <= axi_mem_intercon_to_s00_couplers_RVALID;
   S00_AXI_wready <= axi_mem_intercon_to_s00_couplers_WREADY;
+  S01_ACLK_1 <= S01_ACLK;
+  S01_ARESETN_1 <= S01_ARESETN;
   S01_AXI_arready <= axi_mem_intercon_to_s01_couplers_ARREADY;
   S01_AXI_rdata(31 downto 0) <= axi_mem_intercon_to_s01_couplers_RDATA(31 downto 0);
   S01_AXI_rlast <= axi_mem_intercon_to_s01_couplers_RLAST;
   S01_AXI_rresp(1 downto 0) <= axi_mem_intercon_to_s01_couplers_RRESP(1 downto 0);
   S01_AXI_rvalid <= axi_mem_intercon_to_s01_couplers_RVALID;
+  S02_ACLK_1 <= S02_ACLK;
+  S02_ARESETN_1 <= S02_ARESETN;
   S02_AXI_awready <= axi_mem_intercon_to_s02_couplers_AWREADY;
   S02_AXI_bresp(1 downto 0) <= axi_mem_intercon_to_s02_couplers_BRESP(1 downto 0);
   S02_AXI_bvalid <= axi_mem_intercon_to_s02_couplers_BVALID;
@@ -2761,8 +2777,8 @@ begin
   m00_couplers_to_axi_mem_intercon_WREADY <= M00_AXI_wready;
 m00_couplers: entity work.m00_couplers_imp_PEI69B
      port map (
-      M_ACLK => axi_mem_intercon_ACLK_net,
-      M_ARESETN => axi_mem_intercon_ARESETN_net,
+      M_ACLK => M00_ACLK_1,
+      M_ARESETN => M00_ARESETN_1,
       M_AXI_araddr(31 downto 0) => m00_couplers_to_axi_mem_intercon_ARADDR(31 downto 0),
       M_AXI_arburst(1 downto 0) => m00_couplers_to_axi_mem_intercon_ARBURST(1 downto 0),
       M_AXI_arcache(3 downto 0) => m00_couplers_to_axi_mem_intercon_ARCACHE(3 downto 0),
@@ -2880,8 +2896,8 @@ s00_couplers: entity work.s00_couplers_imp_1EXEZPB
       M_AXI_wready => s00_couplers_to_xbar_WREADY(0),
       M_AXI_wstrb(7 downto 0) => s00_couplers_to_xbar_WSTRB(7 downto 0),
       M_AXI_wvalid => s00_couplers_to_xbar_WVALID,
-      S_ACLK => axi_mem_intercon_ACLK_net,
-      S_ARESETN => axi_mem_intercon_ARESETN_net,
+      S_ACLK => S00_ACLK_1,
+      S_ARESETN => S00_ARESETN_1,
       S_AXI_araddr(31 downto 0) => axi_mem_intercon_to_s00_couplers_ARADDR(31 downto 0),
       S_AXI_arburst(1 downto 0) => axi_mem_intercon_to_s00_couplers_ARBURST(1 downto 0),
       S_AXI_arcache(3 downto 0) => axi_mem_intercon_to_s00_couplers_ARCACHE(3 downto 0),
@@ -2931,8 +2947,8 @@ s01_couplers: entity work.s01_couplers_imp_B6XWV5
       M_AXI_rready => s01_couplers_to_xbar_RREADY,
       M_AXI_rresp(1 downto 0) => s01_couplers_to_xbar_RRESP(3 downto 2),
       M_AXI_rvalid => s01_couplers_to_xbar_RVALID(1),
-      S_ACLK => axi_mem_intercon_ACLK_net,
-      S_ARESETN => axi_mem_intercon_ARESETN_net,
+      S_ACLK => S01_ACLK_1,
+      S_ARESETN => S01_ARESETN_1,
       S_AXI_araddr(31 downto 0) => axi_mem_intercon_to_s01_couplers_ARADDR(31 downto 0),
       S_AXI_arburst(1 downto 0) => axi_mem_intercon_to_s01_couplers_ARBURST(1 downto 0),
       S_AXI_arcache(3 downto 0) => axi_mem_intercon_to_s01_couplers_ARCACHE(3 downto 0),
@@ -2969,8 +2985,8 @@ s02_couplers: entity work.s02_couplers_imp_N3W2MA
       M_AXI_wready => s02_couplers_to_xbar_WREADY(2),
       M_AXI_wstrb(7 downto 0) => s02_couplers_to_xbar_WSTRB(7 downto 0),
       M_AXI_wvalid => s02_couplers_to_xbar_WVALID,
-      S_ACLK => axi_mem_intercon_ACLK_net,
-      S_ARESETN => axi_mem_intercon_ARESETN_net,
+      S_ACLK => S02_ACLK_1,
+      S_ARESETN => S02_ARESETN_1,
       S_AXI_awaddr(31 downto 0) => axi_mem_intercon_to_s02_couplers_AWADDR(31 downto 0),
       S_AXI_awburst(1 downto 0) => axi_mem_intercon_to_s02_couplers_AWBURST(1 downto 0),
       S_AXI_awcache(3 downto 0) => axi_mem_intercon_to_s02_couplers_AWCACHE(3 downto 0),
@@ -3188,6 +3204,12 @@ architecture STRUCTURE of main_design_axis_interconnect_0_0 is
     s_decode_err : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component main_design_xbar_3;
+  signal M00_AXIS_ACLK_1 : STD_LOGIC;
+  signal M00_AXIS_ARESETN_1 : STD_LOGIC;
+  signal M01_AXIS_ACLK_1 : STD_LOGIC;
+  signal M01_AXIS_ARESETN_1 : STD_LOGIC;
+  signal S00_AXIS_ACLK_1 : STD_LOGIC;
+  signal S00_AXIS_ARESETN_1 : STD_LOGIC;
   signal axis_interconnect_0_ACLK_net : STD_LOGIC;
   signal axis_interconnect_0_ARESETN_net : STD_LOGIC;
   signal axis_interconnect_0_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3225,14 +3247,20 @@ architecture STRUCTURE of main_design_axis_interconnect_0_0 is
   signal xbar_to_m01_couplers_TVALID : STD_LOGIC_VECTOR ( 1 to 1 );
   signal NLW_xbar_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
+  M00_AXIS_ACLK_1 <= M00_AXIS_ACLK;
+  M00_AXIS_ARESETN_1 <= M00_AXIS_ARESETN;
   M00_AXIS_tdata(31 downto 0) <= m00_couplers_to_axis_interconnect_0_TDATA(31 downto 0);
   M00_AXIS_tlast <= m00_couplers_to_axis_interconnect_0_TLAST;
   M00_AXIS_tstrb(3 downto 0) <= m00_couplers_to_axis_interconnect_0_TSTRB(3 downto 0);
   M00_AXIS_tvalid <= m00_couplers_to_axis_interconnect_0_TVALID;
+  M01_AXIS_ACLK_1 <= M01_AXIS_ACLK;
+  M01_AXIS_ARESETN_1 <= M01_AXIS_ARESETN;
   M01_AXIS_tdata(31 downto 0) <= m01_couplers_to_axis_interconnect_0_TDATA(31 downto 0);
   M01_AXIS_tlast <= m01_couplers_to_axis_interconnect_0_TLAST;
   M01_AXIS_tstrb(3 downto 0) <= m01_couplers_to_axis_interconnect_0_TSTRB(3 downto 0);
   M01_AXIS_tvalid <= m01_couplers_to_axis_interconnect_0_TVALID;
+  S00_AXIS_ACLK_1 <= S00_AXIS_ACLK;
+  S00_AXIS_ARESETN_1 <= S00_AXIS_ARESETN;
   S00_AXIS_tready <= axis_interconnect_0_to_s00_couplers_TREADY;
   axis_interconnect_0_ACLK_net <= ACLK;
   axis_interconnect_0_ARESETN_net <= ARESETN;
@@ -3244,8 +3272,8 @@ begin
   m01_couplers_to_axis_interconnect_0_TREADY <= M01_AXIS_tready;
 m00_couplers: entity work.m00_couplers_imp_EKPNVQ
      port map (
-      M_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
+      M_AXIS_ACLK => M00_AXIS_ACLK_1,
+      M_AXIS_ARESETN => M00_AXIS_ARESETN_1,
       M_AXIS_tdata(31 downto 0) => m00_couplers_to_axis_interconnect_0_TDATA(31 downto 0),
       M_AXIS_tlast => m00_couplers_to_axis_interconnect_0_TLAST,
       M_AXIS_tready => m00_couplers_to_axis_interconnect_0_TREADY,
@@ -3262,8 +3290,8 @@ m00_couplers: entity work.m00_couplers_imp_EKPNVQ
     );
 m01_couplers: entity work.m01_couplers_imp_1BJPNLK
      port map (
-      M_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
+      M_AXIS_ACLK => M01_AXIS_ACLK_1,
+      M_AXIS_ARESETN => M01_AXIS_ARESETN_1,
       M_AXIS_tdata(31 downto 0) => m01_couplers_to_axis_interconnect_0_TDATA(31 downto 0),
       M_AXIS_tlast => m01_couplers_to_axis_interconnect_0_TLAST,
       M_AXIS_tready => m01_couplers_to_axis_interconnect_0_TREADY,
@@ -3288,8 +3316,8 @@ s00_couplers: entity work.s00_couplers_imp_1O2T2YE
       M_AXIS_tlast => s00_couplers_to_xbar_TLAST,
       M_AXIS_tready => s00_couplers_to_xbar_TREADY(0),
       M_AXIS_tvalid => s00_couplers_to_xbar_TVALID,
-      S_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
+      S_AXIS_ACLK => S00_AXIS_ACLK_1,
+      S_AXIS_ARESETN => S00_AXIS_ARESETN_1,
       S_AXIS_tdata(31 downto 0) => axis_interconnect_0_to_s00_couplers_TDATA(31 downto 0),
       S_AXIS_tkeep(3 downto 0) => axis_interconnect_0_to_s00_couplers_TKEEP(3 downto 0),
       S_AXIS_tlast => axis_interconnect_0_to_s00_couplers_TLAST,
@@ -3381,6 +3409,12 @@ architecture STRUCTURE of main_design_axis_interconnect_1_0 is
     dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component main_design_s_arb_req_suppress_concat_0;
+  signal M00_AXIS_ACLK_1 : STD_LOGIC;
+  signal M00_AXIS_ARESETN_1 : STD_LOGIC;
+  signal S00_AXIS_ACLK_1 : STD_LOGIC;
+  signal S00_AXIS_ARESETN_1 : STD_LOGIC;
+  signal S01_AXIS_ACLK_1 : STD_LOGIC;
+  signal S01_AXIS_ARESETN_1 : STD_LOGIC;
   signal axis_interconnect_1_ACLK_net : STD_LOGIC;
   signal axis_interconnect_1_ARESETN_net : STD_LOGIC;
   signal axis_interconnect_1_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3418,11 +3452,17 @@ architecture STRUCTURE of main_design_axis_interconnect_1_0 is
   signal xbar_to_m00_couplers_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_xbar_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
 begin
+  M00_AXIS_ACLK_1 <= M00_AXIS_ACLK;
+  M00_AXIS_ARESETN_1 <= M00_AXIS_ARESETN;
   M00_AXIS_tdata(31 downto 0) <= m00_couplers_to_axis_interconnect_1_TDATA(31 downto 0);
   M00_AXIS_tkeep(3 downto 0) <= m00_couplers_to_axis_interconnect_1_TKEEP(3 downto 0);
   M00_AXIS_tlast <= m00_couplers_to_axis_interconnect_1_TLAST;
   M00_AXIS_tvalid <= m00_couplers_to_axis_interconnect_1_TVALID;
+  S00_AXIS_ACLK_1 <= S00_AXIS_ACLK;
+  S00_AXIS_ARESETN_1 <= S00_AXIS_ARESETN;
   S00_AXIS_tready(0) <= axis_interconnect_1_to_s00_couplers_TREADY(0);
+  S01_AXIS_ACLK_1 <= S01_AXIS_ACLK;
+  S01_AXIS_ARESETN_1 <= S01_AXIS_ARESETN;
   S01_AXIS_tready(0) <= axis_interconnect_1_to_s01_couplers_TREADY(0);
   axis_interconnect_1_ACLK_net <= ACLK;
   axis_interconnect_1_ARESETN_net <= ARESETN;
@@ -3439,8 +3479,8 @@ begin
   s01_arb_req_suppress_to_s_arb_req_suppress_concat <= S01_ARB_REQ_SUPPRESS;
 m00_couplers: entity work.m00_couplers_imp_148UC6G
      port map (
-      M_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
+      M_AXIS_ACLK => M00_AXIS_ACLK_1,
+      M_AXIS_ARESETN => M00_AXIS_ARESETN_1,
       M_AXIS_tdata(31 downto 0) => m00_couplers_to_axis_interconnect_1_TDATA(31 downto 0),
       M_AXIS_tkeep(3 downto 0) => m00_couplers_to_axis_interconnect_1_TKEEP(3 downto 0),
       M_AXIS_tlast => m00_couplers_to_axis_interconnect_1_TLAST,
@@ -3463,8 +3503,8 @@ s00_couplers: entity work.s00_couplers_imp_YP4UUW
       M_AXIS_tready(0) => s00_couplers_to_xbar_TREADY(0),
       M_AXIS_tstrb(3 downto 0) => s00_couplers_to_xbar_TSTRB(3 downto 0),
       M_AXIS_tvalid(0) => s00_couplers_to_xbar_TVALID(0),
-      S_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
+      S_AXIS_ACLK => S00_AXIS_ACLK_1,
+      S_AXIS_ARESETN => S00_AXIS_ARESETN_1,
       S_AXIS_tdata(31 downto 0) => axis_interconnect_1_to_s00_couplers_TDATA(31 downto 0),
       S_AXIS_tlast(0) => axis_interconnect_1_to_s00_couplers_TLAST(0),
       S_AXIS_tready(0) => axis_interconnect_1_to_s00_couplers_TREADY(0),
@@ -3480,8 +3520,8 @@ s01_couplers: entity work.s01_couplers_imp_1QXUVTY
       M_AXIS_tready(0) => s01_couplers_to_xbar_TREADY(1),
       M_AXIS_tstrb(3 downto 0) => s01_couplers_to_xbar_TSTRB(3 downto 0),
       M_AXIS_tvalid(0) => s01_couplers_to_xbar_TVALID(0),
-      S_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
+      S_AXIS_ACLK => S01_AXIS_ACLK_1,
+      S_AXIS_ARESETN => S01_AXIS_ARESETN_1,
       S_AXIS_tdata(31 downto 0) => axis_interconnect_1_to_s01_couplers_TDATA(31 downto 0),
       S_AXIS_tlast(0) => axis_interconnect_1_to_s01_couplers_TLAST(0),
       S_AXIS_tready(0) => axis_interconnect_1_to_s01_couplers_TREADY(0),
@@ -4249,6 +4289,7 @@ architecture STRUCTURE of main_design is
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
+    FCLK_RESET1_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     DDR_CAS_n : inout STD_LOGIC;
     DDR_CKE : inout STD_LOGIC;
@@ -4327,6 +4368,7 @@ architecture STRUCTURE of main_design is
     vddpix_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
     sw_enable_n : out STD_LOGIC_VECTOR ( 0 to 1 );
     clk_spi_in : in STD_LOGIC;
+    spi_rst_n : in STD_LOGIC;
     miso : in STD_LOGIC;
     mosi : out STD_LOGIC;
     sck : out STD_LOGIC;
@@ -4649,6 +4691,7 @@ architecture STRUCTURE of main_design is
     empty : out STD_LOGIC
   );
   end component main_design_fifo_0_1;
+  signal ARESETN_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal Net2 : STD_LOGIC;
@@ -4869,6 +4912,7 @@ architecture STRUCTURE of main_design is
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
   signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
+  signal processing_system7_0_FCLK_RESET1_N : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_MIO : STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -4963,7 +5007,6 @@ architecture STRUCTURE of main_design is
   signal NLW_hdmi_ctrl_0_s01_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_RACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_RCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -4987,7 +5030,7 @@ architecture STRUCTURE of main_design is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
   attribute X_INTERFACE_INFO of clk_test_port : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_TEST_PORT CLK";
-  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 7.14286e+07, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of clk_test_port : signal is "XIL_INTERFACENAME CLK.CLK_TEST_PORT, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of hdmi_pclk : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_PCLK CLK";
   attribute X_INTERFACE_PARAMETER of hdmi_pclk : signal is "XIL_INTERFACENAME CLK.HDMI_PCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
@@ -5195,7 +5238,7 @@ axi_dma_0: component main_design_axi_dma_0_0
 axi_mem_intercon: entity work.main_design_axi_mem_intercon_0
      port map (
       ACLK => processing_system7_0_FCLK_CLK0,
-      ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
+      ARESETN => ARESETN_1(0),
       M00_ACLK => processing_system7_0_FCLK_CLK0,
       M00_ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
       M00_AXI_araddr(31 downto 0) => axi_mem_intercon_M00_AXI_ARADDR(31 downto 0),
@@ -5304,7 +5347,7 @@ axi_mem_intercon: entity work.main_design_axi_mem_intercon_0
 axis_interconnect_0: entity work.main_design_axis_interconnect_0_0
      port map (
       ACLK => processing_system7_0_FCLK_CLK0,
-      ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
+      ARESETN => ARESETN_1(0),
       M00_AXIS_ACLK => processing_system7_0_FCLK_CLK0,
       M00_AXIS_ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
       M00_AXIS_tdata(31 downto 0) => axis_interconnect_0_M00_AXIS_TDATA(31 downto 0),
@@ -5330,7 +5373,7 @@ axis_interconnect_0: entity work.main_design_axis_interconnect_0_0
 axis_interconnect_1: entity work.main_design_axis_interconnect_1_0
      port map (
       ACLK => processing_system7_0_FCLK_CLK0,
-      ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
+      ARESETN => ARESETN_1(0),
       M00_AXIS_ACLK => processing_system7_0_FCLK_CLK0,
       M00_AXIS_ARESETN => proc_sys_reset_0_peripheral_aresetn(0),
       M00_AXIS_tdata(31 downto 0) => axis_interconnect_1_M00_AXIS_TDATA(31 downto 0),
@@ -5530,6 +5573,7 @@ noip_ctrl_0: component main_design_noip_ctrl_0_0
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
       sck => noip_ctrl_0_sck,
+      spi_rst_n => processing_system7_0_FCLK_RESET1_N,
       ss_n(0 to 1) => noip_ctrl_0_ss_n(0 to 1),
       sw_enable_n(0 to 1) => noip_ctrl_0_sw_enable_n(0 to 1),
       vdd18_toggle(0 to 1) => noip_ctrl_0_vdd18_toggle(0 to 1),
@@ -5602,7 +5646,7 @@ proc_sys_reset_0: component main_design_proc_sys_reset_0_0
       bus_struct_reset(0) => NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED(0),
       dcm_locked => '1',
       ext_reset_in => processing_system7_0_FCLK_RESET0_N,
-      interconnect_aresetn(0) => NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED(0),
+      interconnect_aresetn(0) => ARESETN_1(0),
       mb_debug_sys_rst => '0',
       mb_reset => NLW_proc_sys_reset_0_mb_reset_UNCONNECTED,
       peripheral_aresetn(0) => proc_sys_reset_0_peripheral_aresetn(0),
@@ -5631,6 +5675,7 @@ processing_system7_0: component main_design_processing_system7_0_0
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
+      FCLK_RESET1_N => processing_system7_0_FCLK_RESET1_N,
       I2C0_SCL_I => iobuf_I2C0_SCL_O,
       I2C0_SCL_O => processing_system7_0_I2C0_SCL_O,
       I2C0_SCL_T => processing_system7_0_I2C0_SCL_T,

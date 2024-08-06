@@ -30,7 +30,7 @@ create_clock -name lvds_dout3_1_n -period 10 [get_ports lvds_dout3_1_n]
 create_clock -name lvds_dout3_1_p -period 10 [get_ports lvds_dout3_1_p]
 create_clock -name lvds_sync_1_p -period 10 [get_ports lvds_sync_1_p]
 create_clock -name lvds_sync_1_n -period 10 [get_ports lvds_sync_1_n]
-create_clock -name processing_system7_0_FCLK_CLK0 -period 5 [get_pins processing_system7_0/FCLK_CLK0]
+create_clock -name processing_system7_0_FCLK_CLK0 -period 5.333 [get_pins processing_system7_0/FCLK_CLK0]
 create_clock -name processing_system7_0_FCLK_CLK1 -period 14 [get_pins processing_system7_0/FCLK_CLK1]
 
 ################################################################################

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8152EF1214927EE9",
+      "boundary_crc": "0x8152EF12DC77F76C",
       "device": "xc7z020clg400-2",
       "gen_directory": "../../../../ZTurnV2.gen/sources_1/bd/main_design",
       "name": "main_design",
@@ -1009,7 +1009,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "7.14286e+07",
+            "value": "71428566",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -1102,7 +1102,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "187.500000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "71.428566"
@@ -1114,7 +1114,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "187.500000"
           },
           "PCW_ACT_QSPI_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -1156,7 +1156,7 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "200000000"
+            "value": "187500000"
           },
           "PCW_CLK1_FREQ": {
             "value": "71428566"
@@ -1212,6 +1212,9 @@
           "PCW_EN_I2C0": {
             "value": "1"
           },
+          "PCW_EN_RST1_PORT": {
+            "value": "1"
+          },
           "PCW_EN_SPI0": {
             "value": "0"
           },
@@ -1231,7 +1234,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "200"
+            "value": "180"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "72"
@@ -2640,17 +2643,61 @@
           }
         },
         "nets": {
+          "M00_ACLK_1": {
+            "ports": [
+              "M00_ACLK",
+              "m00_couplers/M_ACLK"
+            ]
+          },
+          "M00_ARESETN_1": {
+            "ports": [
+              "M00_ARESETN",
+              "m00_couplers/M_ARESETN"
+            ]
+          },
+          "S00_ACLK_1": {
+            "ports": [
+              "S00_ACLK",
+              "s00_couplers/S_ACLK"
+            ]
+          },
+          "S00_ARESETN_1": {
+            "ports": [
+              "S00_ARESETN",
+              "s00_couplers/S_ARESETN"
+            ]
+          },
+          "S01_ACLK_1": {
+            "ports": [
+              "S01_ACLK",
+              "s01_couplers/S_ACLK"
+            ]
+          },
+          "S01_ARESETN_1": {
+            "ports": [
+              "S01_ARESETN",
+              "s01_couplers/S_ARESETN"
+            ]
+          },
+          "S02_ACLK_1": {
+            "ports": [
+              "S02_ACLK",
+              "s02_couplers/S_ACLK"
+            ]
+          },
+          "S02_ARESETN_1": {
+            "ports": [
+              "S02_ARESETN",
+              "s02_couplers/S_ARESETN"
+            ]
+          },
           "axi_mem_intercon_ACLK_net": {
             "ports": [
               "ACLK",
               "xbar/aclk",
-              "s00_couplers/S_ACLK",
-              "s01_couplers/S_ACLK",
-              "s02_couplers/S_ACLK",
               "s00_couplers/M_ACLK",
               "s01_couplers/M_ACLK",
               "s02_couplers/M_ACLK",
-              "m00_couplers/M_ACLK",
               "m00_couplers/S_ACLK"
             ]
           },
@@ -2658,13 +2705,9 @@
             "ports": [
               "ARESETN",
               "xbar/aresetn",
-              "s00_couplers/S_ARESETN",
-              "s01_couplers/S_ARESETN",
-              "s02_couplers/S_ARESETN",
               "s00_couplers/M_ARESETN",
               "s01_couplers/M_ARESETN",
               "s02_couplers/M_ARESETN",
-              "m00_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN"
             ]
           }
@@ -2690,7 +2733,7 @@
       },
       "noip_ctrl_0": {
         "vlnv": "user.org:user:noip_ctrl:1.0",
-        "ip_revision": "4",
+        "ip_revision": "6",
         "xci_name": "main_design_noip_ctrl_0_0",
         "xci_path": "ip/main_design_noip_ctrl_0_0/main_design_noip_ctrl_0_0.xci",
         "inst_hier_path": "noip_ctrl_0"
@@ -3329,14 +3372,47 @@
           }
         },
         "nets": {
+          "M00_AXIS_ACLK_1": {
+            "ports": [
+              "M00_AXIS_ACLK",
+              "m00_couplers/M_AXIS_ACLK"
+            ]
+          },
+          "M00_AXIS_ARESETN_1": {
+            "ports": [
+              "M00_AXIS_ARESETN",
+              "m00_couplers/M_AXIS_ARESETN"
+            ]
+          },
+          "M01_AXIS_ACLK_1": {
+            "ports": [
+              "M01_AXIS_ACLK",
+              "m01_couplers/M_AXIS_ACLK"
+            ]
+          },
+          "M01_AXIS_ARESETN_1": {
+            "ports": [
+              "M01_AXIS_ARESETN",
+              "m01_couplers/M_AXIS_ARESETN"
+            ]
+          },
+          "S00_AXIS_ACLK_1": {
+            "ports": [
+              "S00_AXIS_ACLK",
+              "s00_couplers/S_AXIS_ACLK"
+            ]
+          },
+          "S00_AXIS_ARESETN_1": {
+            "ports": [
+              "S00_AXIS_ARESETN",
+              "s00_couplers/S_AXIS_ARESETN"
+            ]
+          },
           "axis_interconnect_0_ACLK_net": {
             "ports": [
               "ACLK",
               "xbar/aclk",
-              "s00_couplers/S_AXIS_ACLK",
               "s00_couplers/M_AXIS_ACLK",
-              "m00_couplers/M_AXIS_ACLK",
-              "m01_couplers/M_AXIS_ACLK",
               "m00_couplers/S_AXIS_ACLK",
               "m01_couplers/S_AXIS_ACLK"
             ]
@@ -3345,10 +3421,7 @@
             "ports": [
               "ARESETN",
               "xbar/aresetn",
-              "s00_couplers/S_AXIS_ARESETN",
               "s00_couplers/M_AXIS_ARESETN",
-              "m00_couplers/M_AXIS_ARESETN",
-              "m01_couplers/M_AXIS_ARESETN",
               "m00_couplers/S_AXIS_ARESETN",
               "m01_couplers/S_AXIS_ARESETN"
             ]
@@ -3816,15 +3889,48 @@
           }
         },
         "nets": {
+          "M00_AXIS_ACLK_1": {
+            "ports": [
+              "M00_AXIS_ACLK",
+              "m00_couplers/M_AXIS_ACLK"
+            ]
+          },
+          "M00_AXIS_ARESETN_1": {
+            "ports": [
+              "M00_AXIS_ARESETN",
+              "m00_couplers/M_AXIS_ARESETN"
+            ]
+          },
+          "S00_AXIS_ACLK_1": {
+            "ports": [
+              "S00_AXIS_ACLK",
+              "s00_couplers/S_AXIS_ACLK"
+            ]
+          },
+          "S00_AXIS_ARESETN_1": {
+            "ports": [
+              "S00_AXIS_ARESETN",
+              "s00_couplers/S_AXIS_ARESETN"
+            ]
+          },
+          "S01_AXIS_ACLK_1": {
+            "ports": [
+              "S01_AXIS_ACLK",
+              "s01_couplers/S_AXIS_ACLK"
+            ]
+          },
+          "S01_AXIS_ARESETN_1": {
+            "ports": [
+              "S01_AXIS_ARESETN",
+              "s01_couplers/S_AXIS_ARESETN"
+            ]
+          },
           "axis_interconnect_1_ACLK_net": {
             "ports": [
               "ACLK",
               "xbar/aclk",
-              "s00_couplers/S_AXIS_ACLK",
-              "s01_couplers/S_AXIS_ACLK",
               "s00_couplers/M_AXIS_ACLK",
               "s01_couplers/M_AXIS_ACLK",
-              "m00_couplers/M_AXIS_ACLK",
               "m00_couplers/S_AXIS_ACLK"
             ]
           },
@@ -3832,11 +3938,8 @@
             "ports": [
               "ARESETN",
               "xbar/aresetn",
-              "s00_couplers/S_AXIS_ARESETN",
-              "s01_couplers/S_AXIS_ARESETN",
               "s00_couplers/M_AXIS_ARESETN",
               "s01_couplers/M_AXIS_ARESETN",
-              "m00_couplers/M_AXIS_ARESETN",
               "m00_couplers/S_AXIS_ARESETN"
             ]
           },
@@ -4340,6 +4443,14 @@
       }
     },
     "nets": {
+      "ARESETN_1": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "axi_mem_intercon/ARESETN",
+          "axis_interconnect_1/ARESETN",
+          "axis_interconnect_0/ARESETN"
+        ]
+      },
       "Net": {
         "ports": [
           "hdmi_int",
@@ -4736,26 +4847,23 @@
           "ps7_0_axi_periph/M01_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/S00_ARESETN",
-          "axi_mem_intercon/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "axi_mem_intercon/S02_ARESETN",
           "axi_dma_0/axi_resetn",
-          "axis_interconnect_0/ARESETN",
           "axis_interconnect_0/M00_AXIS_ARESETN",
           "axis_interconnect_0/M01_AXIS_ARESETN",
           "axis_interconnect_0/S00_AXIS_ARESETN",
-          "axis_interconnect_1/ARESETN",
           "axis_interconnect_1/M00_AXIS_ARESETN",
           "axis_interconnect_1/S00_AXIS_ARESETN",
           "axis_interconnect_1/S01_AXIS_ARESETN",
-          "noip_ctrl_0/s00_axi_aresetn",
           "hdmi_ctrl_0/s00_axis_aresetn",
           "hdmi_ctrl_0/s01_axis_aresetn",
           "selectio_reset_inverter/Op1",
           "noip_lvds_stream_0/s00_axis_aresetn",
           "noip_lvds_stream_0/m00_axis_aresetn",
           "noip_lvds_stream_1/s00_axis_aresetn",
-          "noip_lvds_stream_1/m00_axis_aresetn"
+          "noip_lvds_stream_1/m00_axis_aresetn",
+          "noip_ctrl_0/s00_axi_aresetn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -4777,7 +4885,6 @@
           "axi_dma_0/m_axi_s2mm_aclk",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_dma_0/m_axi_sg_aclk",
-          "axis_interconnect_0/ACLK",
           "axis_interconnect_0/M00_AXIS_ACLK",
           "axis_interconnect_0/M01_AXIS_ACLK",
           "axis_interconnect_0/S00_AXIS_ACLK",
@@ -4785,14 +4892,15 @@
           "axis_interconnect_1/M00_AXIS_ACLK",
           "axis_interconnect_1/S00_AXIS_ACLK",
           "axis_interconnect_1/S01_AXIS_ACLK",
-          "noip_ctrl_0/clk_spi_in",
-          "noip_ctrl_0/s00_axi_aclk",
           "hdmi_ctrl_0/s00_axis_aclk",
           "hdmi_ctrl_0/s01_axis_aclk",
           "noip_lvds_stream_0/s00_axis_aclk",
           "noip_lvds_stream_0/m00_axis_aclk",
           "noip_lvds_stream_1/s00_axis_aclk",
-          "noip_lvds_stream_1/m00_axis_aclk"
+          "noip_lvds_stream_1/m00_axis_aclk",
+          "noip_ctrl_0/clk_spi_in",
+          "noip_ctrl_0/s00_axi_aclk",
+          "axis_interconnect_0/ACLK"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
@@ -4806,6 +4914,12 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET1_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET1_N",
+          "noip_ctrl_0/spi_rst_n"
         ]
       },
       "processing_system7_0_I2C0_SCL_O": {

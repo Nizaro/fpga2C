@@ -770,6 +770,7 @@
   FCLK_CLK0,
   FCLK_CLK1,
   FCLK_RESET0_N,
+  FCLK_RESET1_N,
   MIO,
   DDR_CAS_n,
   DDR_CKE,
@@ -947,6 +948,7 @@
       output  FCLK_CLK0;
       output  FCLK_CLK1;
       output  FCLK_RESET0_N;
+      output  FCLK_RESET1_N;
       inout  [53 : 0] MIO;
       inout  DDR_CAS_n;
       inout  DDR_CKE;
@@ -1020,6 +1022,7 @@
       reg FCLK_CLK0;
       reg FCLK_CLK1;
       reg FCLK_RESET0_N;
+      reg FCLK_RESET1_N;
       string ip_name;
       reg disable_port;
 
@@ -1224,7 +1227,7 @@ output bit S_AXI_HP0_RVALID
      FCLK_CLK0 = 1'b0;
   end
 
-  always #(2.5) FCLK_CLK0 <= ~FCLK_CLK0;
+  always #(2.7777777777777777) FCLK_CLK0 <= ~FCLK_CLK0;
 
   always@(posedge FCLK_CLK0)
   begin

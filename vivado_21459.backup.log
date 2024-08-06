@@ -1372,3 +1372,935 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 11037.465 ; gain = 141.070 ; free physical = 1634 ; free virtual = 17176
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_design
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+startgroup
+set_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {180} [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+endgroup
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/hdmi_ctrl_0/s00_axis_tvalid
+/hdmi_ctrl_0/s01_axis_tvalid
+
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+CRITICAL WARNING: [xilinx.com:ip:processing_system7:5.5-1] main_design_processing_system7_0_0: Critical Warning:- LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+WARNING: [IP_Flow 19-5160] IP 'main_design_xbar_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-5160] IP 'main_design_xbar_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_xbar_3' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M00_AXIS.TDATA_NUM_BYTES'. Logical port width '4' and physical port width '8' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M00_AXIS.TDEST_WIDTH'. Logical port width '1' and physical port width '2' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M01_AXIS.TDATA_NUM_BYTES'. Logical port width '4' and physical port width '8' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M01_AXIS.TDEST_WIDTH'. Logical port width '1' and physical port width '2' do not match.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_xbar_4' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S00_AXIS.TDATA_NUM_BYTES'. Logical port width '4' and physical port width '8' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S01_AXIS.TDATA_NUM_BYTES'. Logical port width '4' and physical port width '8' do not match.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-5160] IP 'main_design_s_arb_req_suppress_concat_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+generate_target: Time (s): cpu = 00:00:41 ; elapsed = 00:00:39 . Memory (MB): peak = 11442.531 ; gain = 0.000 ; free physical = 258 ; free virtual = 16922
+catch { config_ip_cache -export [get_ips -all main_design_proc_sys_reset_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_proc_sys_reset_0_0
+catch { config_ip_cache -export [get_ips -all main_design_xbar_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_1
+catch { config_ip_cache -export [get_ips -all main_design_xbar_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_2
+catch { config_ip_cache -export [get_ips -all main_design_axi_dma_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_axi_dma_0_0
+catch { config_ip_cache -export [get_ips -all main_design_xbar_3] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_3
+catch { config_ip_cache -export [get_ips -all main_design_xbar_4] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_4
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_1
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_2
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_1
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slid_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_1
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_1
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_2
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_2
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+launch_runs main_design_auto_pc_0_synth_1 main_design_auto_pc_1_synth_1 main_design_auto_ss_k_0_synth_1 main_design_auto_ss_k_1_synth_1 main_design_auto_ss_k_2_synth_1 main_design_auto_ss_slid_0_synth_1 main_design_auto_ss_slidr_0_synth_1 main_design_auto_ss_slidr_1_synth_1 main_design_auto_ss_slidr_2_synth_1 main_design_auto_us_df_0_synth_1 main_design_auto_us_df_1_synth_1 main_design_auto_us_df_2_synth_1 main_design_axi_dma_0_0_synth_1 main_design_proc_sys_reset_0_0_synth_1 main_design_processing_system7_0_0_synth_1 main_design_xbar_1_synth_1 main_design_xbar_2_synth_1 main_design_xbar_3_synth_1 main_design_xbar_4_synth_1 -jobs 4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slid_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_axi_dma_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_xbar_4
+[Tue Aug  6 09:59:40 2024] Launched main_design_auto_pc_0_synth_1, main_design_auto_pc_1_synth_1, main_design_auto_ss_k_0_synth_1, main_design_auto_ss_k_1_synth_1, main_design_auto_ss_k_2_synth_1, main_design_auto_ss_slid_0_synth_1, main_design_auto_ss_slidr_0_synth_1, main_design_auto_ss_slidr_1_synth_1, main_design_auto_ss_slidr_2_synth_1, main_design_auto_us_df_0_synth_1, main_design_auto_us_df_1_synth_1, main_design_auto_us_df_2_synth_1, main_design_axi_dma_0_0_synth_1, main_design_proc_sys_reset_0_0_synth_1, main_design_processing_system7_0_0_synth_1, main_design_xbar_1_synth_1, main_design_xbar_2_synth_1, main_design_xbar_3_synth_1, main_design_xbar_4_synth_1...
+Run output will be captured here:
+main_design_auto_pc_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_pc_0_synth_1/runme.log
+main_design_auto_pc_1_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_pc_1_synth_1/runme.log
+main_design_auto_ss_k_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_k_0_synth_1/runme.log
+main_design_auto_ss_k_1_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_k_1_synth_1/runme.log
+main_design_auto_ss_k_2_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_k_2_synth_1/runme.log
+main_design_auto_ss_slid_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slid_0_synth_1/runme.log
+main_design_auto_ss_slidr_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_0_synth_1/runme.log
+main_design_auto_ss_slidr_1_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_1_synth_1/runme.log
+main_design_auto_ss_slidr_2_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_ss_slidr_2_synth_1/runme.log
+main_design_auto_us_df_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_us_df_0_synth_1/runme.log
+main_design_auto_us_df_1_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_us_df_1_synth_1/runme.log
+main_design_auto_us_df_2_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_auto_us_df_2_synth_1/runme.log
+main_design_axi_dma_0_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_axi_dma_0_0_synth_1/runme.log
+main_design_proc_sys_reset_0_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_proc_sys_reset_0_0_synth_1/runme.log
+main_design_processing_system7_0_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_processing_system7_0_0_synth_1/runme.log
+main_design_xbar_1_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/runme.log
+main_design_xbar_2_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_2_synth_1/runme.log
+main_design_xbar_3_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_3_synth_1/runme.log
+main_design_xbar_4_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_4_synth_1/runme.log
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/utils_1/imports/synth_1/main_design.dcp with file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.dcp
+launch_runs impl_1 -jobs 4
+[Tue Aug  6 10:10:31 2024] Launched synth_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/runme.log
+[Tue Aug  6 10:10:31 2024] Launched impl_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.36 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 343 ; free virtual = 15318
+INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 188 ; free virtual = 15237
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1570 ; free virtual = 17361
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1569 ; free virtual = 17363
+Read PlaceDB: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.59 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1501 ; free virtual = 17411
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1501 ; free virtual = 17412
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.33 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1412 ; free virtual = 17418
+Read Physdb Files: Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.96 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1412 ; free virtual = 17419
+Restored from archive | CPU: 0.940000 secs | Memory: 13.652985 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.96 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1412 ; free virtual = 17420
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 1389 ; free virtual = 17425
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 91 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 16 instances
+  SRLC32E => SRL16E: 4 instances
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 897 ; free virtual = 17195
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_clock_networks -name {network_1}
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+WARNING: [Timing 38-127] No common period was found between clocks clk_fpga_0 {rise@0ns fall@2.6665ns period=5.333ns} and lvds_selectio_data_0_clk_div_out {rise@0ns fall@13.888ns period=27.776ns} in 1000 cycles.
+WARNING: [Timing 38-127] No common period was found between clocks clk_fpga_0 {rise@0ns fall@2.6665ns period=5.333ns} and lvds_selectio_data_1_clk_div_out {rise@0ns fall@13.888ns period=27.776ns} in 1000 cycles.
+report_timing -from [get_pins {main_design_i/noip_ctrl_0/U0/read_spi_data_reg[10]/C}] -to [get_pins {main_design_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[29]/D}] -delay_type min_max -max_paths 10 -sort_by group -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -from_pins  -to_pins  -max_paths 10 -nworst 1 -delay_type min_max -sort_by group.
+close_design
+close_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 11792.586 ; gain = 0.000 ; free physical = 203 ; free virtual = 14701
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+startgroup
+set_property CONFIG.PCW_EN_RST1_PORT {1} [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PS7-6]  LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+endgroup
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded main_design_noip_ctrl_0_0 (NOIP1 Controller 1.0) from revision 4 to revision 5
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'spi_rst'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'main_design_noip_ctrl_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'main_design_noip_ctrl_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:noip_ctrl:1.0 [get_ips  main_design_noip_ctrl_0_0] -log ip_upgrade.log
+Upgrading '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded main_design_noip_ctrl_0_0 (NOIP1 Controller 1.0) from revision 5 to revision 6
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'spi_rst'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'spi_rst_n'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'main_design_noip_ctrl_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'main_design_noip_ctrl_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/nothon/fpga2C/ZTurnV2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips main_design_noip_ctrl_0_0] -no_script -sync -force -quiet
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_RESET1_N] [get_bd_pins noip_ctrl_0/spi_rst_n]
+report_ip_status -name ip_status 
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/hdmi_ctrl_0/s00_axis_tvalid
+/hdmi_ctrl_0/s01_axis_tvalid
+
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+CRITICAL WARNING: [xilinx.com:ip:processing_system7:5.5-1] main_design_processing_system7_0_0: Critical Warning:- LVCMOS33 (3.3V) is not supported for RGMII interface in Ethernet0. Recommendation is to use 1.8/2.5V IO.
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'main_design_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_ctrl_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-5160] IP 'main_design_s_arb_req_suppress_concat_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+generate_target: Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 12169.898 ; gain = 0.000 ; free physical = 449 ; free virtual = 15841
+catch { config_ip_cache -export [get_ips -all main_design_noip_ctrl_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_noip_ctrl_0_0
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d21980563a6af548 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_pc_0, cache-ID = d21980563a6af548; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9fae7fcb4aaa8b2e to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_0, cache-ID = 9fae7fcb4aaa8b2e; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 07d573ba40eacda0 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_1, cache-ID = 07d573ba40eacda0; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 847a473a91e4b7a5 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_2, cache-ID = 847a473a91e4b7a5; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 1ca0e9d4c9255d31 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_pc_1, cache-ID = 1ca0e9d4c9255d31; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slid_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 75441ea20cd4ad6d to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slid_0, cache-ID = 75441ea20cd4ad6d; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry ecb604d5dfc60b3b to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_0, cache-ID = ecb604d5dfc60b3b; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 4efa5cf390e38629 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_0, cache-ID = 4efa5cf390e38629; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 2023c9080392dbfc to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_1, cache-ID = 2023c9080392dbfc; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 826f912e4cb756ee to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_1, cache-ID = 826f912e4cb756ee; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 6446f1ff6bca1f01 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_2, cache-ID = 6446f1ff6bca1f01; cache size = 130.307 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8173b6efbbc61d8e to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_2, cache-ID = 8173b6efbbc61d8e; cache size = 130.307 MB.
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+launch_runs main_design_noip_ctrl_0_0_synth_1 main_design_processing_system7_0_0_synth_1 -jobs 4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_noip_ctrl_0_0
+[Tue Aug  6 15:01:48 2024] Launched main_design_noip_ctrl_0_0_synth_1, main_design_processing_system7_0_0_synth_1...
+Run output will be captured here:
+main_design_noip_ctrl_0_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_noip_ctrl_0_0_synth_1/runme.log
+main_design_processing_system7_0_0_synth_1: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_processing_system7_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/utils_1/imports/synth_1/main_design.dcp with file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.dcp
+launch_runs impl_1 -jobs 4
+[Tue Aug  6 15:04:41 2024] Launched synth_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/runme.log
+[Tue Aug  6 15:04:41 2024] Launched impl_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/impl_1/runme.log
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.25 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 144 ; free virtual = 14077
+INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 2257 ; free virtual = 16178
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1824 ; free virtual = 16111
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1824 ; free virtual = 16111
+Read PlaceDB: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.49 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1820 ; free virtual = 16110
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1820 ; free virtual = 16110
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.21 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1804 ; free virtual = 16096
+Read Physdb Files: Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.72 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1804 ; free virtual = 16096
+Restored from archive | CPU: 0.710000 secs | Memory: 13.417938 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.72 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1804 ; free virtual = 16096
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1804 ; free virtual = 16096
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 91 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 16 instances
+  SRLC32E => SRL16E: 4 instances
+
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 12512.797 ; gain = 0.000 ; free physical = 1388 ; free virtual = 16035
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_design
+disconnect_bd_net /proc_sys_reset_0_peripheral_aresetn [get_bd_pins axi_mem_intercon/ARESETN]
+connect_bd_net [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+disconnect_bd_net /proc_sys_reset_0_peripheral_aresetn [get_bd_pins axis_interconnect_1/ARESETN]
+connect_bd_net [get_bd_pins axis_interconnect_1/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins axis_interconnect_0/ACLK]
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins axis_interconnect_0/ACLK]'
+disconnect_bd_net /proc_sys_reset_0_peripheral_aresetn [get_bd_pins axis_interconnect_0/ARESETN]
+connect_bd_net [get_bd_pins axis_interconnect_0/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/hdmi_ctrl_0/s00_axis_tvalid
+/hdmi_ctrl_0/s01_axis_tvalid
+
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+INFO: [BD 41-1662] The design 'main_design.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/hdmi_ctrl_0/s00_axis_tvalid
+/hdmi_ctrl_0/s01_axis_tvalid
+
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd> 
+Wrote  : </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/ui/bd_9e3c1764.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(2) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/lvds_selectio_data_1/bitslip'(5) to pin '/noip_lvds_stream_1/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/sim/main_design.vhd
+VHDL Output written to : /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hdl/main_design_wrapper.vhd
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_us_df_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'main_design_auto_pc_1' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/s00_couplers/auto_ss_slid .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m00_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_0/m01_couplers/auto_ss_slidr .
+WARNING: [IP_Flow 19-5160] IP 'main_design_s_arb_req_suppress_concat_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/s_arb_req_suppress_concat .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_k .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_interconnect_1/m00_couplers/auto_ss_slidr .
+Exporting to file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/hw_handoff/main_design.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/synth/main_design.hwdef
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d21980563a6af548 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/d/2/d21980563a6af548/main_design_auto_pc_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_pc_0, cache-ID = d21980563a6af548; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9fae7fcb4aaa8b2e to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/9/f/9fae7fcb4aaa8b2e/main_design_auto_us_df_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_0, cache-ID = 9fae7fcb4aaa8b2e; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 07d573ba40eacda0 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/0/7/07d573ba40eacda0/main_design_auto_us_df_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_1, cache-ID = 07d573ba40eacda0; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_us_df_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 847a473a91e4b7a5 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/4/847a473a91e4b7a5/main_design_auto_us_df_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_us_df_2, cache-ID = 847a473a91e4b7a5; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_pc_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 1ca0e9d4c9255d31 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/1/c/1ca0e9d4c9255d31/main_design_auto_pc_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_pc_1, cache-ID = 1ca0e9d4c9255d31; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slid_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 75441ea20cd4ad6d to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/7/5/75441ea20cd4ad6d/main_design_auto_ss_slid_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slid_0, cache-ID = 75441ea20cd4ad6d; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry ecb604d5dfc60b3b to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/e/c/ecb604d5dfc60b3b/main_design_auto_ss_k_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_0, cache-ID = ecb604d5dfc60b3b; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 4efa5cf390e38629 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/4/e/4efa5cf390e38629/main_design_auto_ss_slidr_0_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_0, cache-ID = 4efa5cf390e38629; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 2023c9080392dbfc to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/2/0/2023c9080392dbfc/main_design_auto_ss_k_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_1, cache-ID = 2023c9080392dbfc; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 826f912e4cb756ee to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/2/826f912e4cb756ee/main_design_auto_ss_slidr_1_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_1, cache-ID = 826f912e4cb756ee; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_k_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 6446f1ff6bca1f01 to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/6/4/6446f1ff6bca1f01/main_design_auto_ss_k_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_k_2, cache-ID = 6446f1ff6bca1f01; cache size = 130.816 MB.
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_design_auto_ss_slidr_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8173b6efbbc61d8e to dir: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_sim_netlist.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_stub.vhdl to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2.dcp to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_sim_netlist.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/ip/2024.1/8/1/8173b6efbbc61d8e/main_design_auto_ss_slidr_2_stub.v to /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_design_auto_ss_slidr_2, cache-ID = 8173b6efbbc61d8e; cache size = 130.816 MB.
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/utils_1/imports/synth_1/main_design.dcp with file /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/main_design_wrapper.dcp
+launch_runs impl_1 -jobs 4
+[Tue Aug  6 15:17:55 2024] Launched synth_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/synth_1/runme.log
+[Tue Aug  6 15:17:55 2024] Launched impl_1...
+Run output will be captured here: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.27 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 346 ; free virtual = 13057
+INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SCL/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/I' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/O' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1742 ; free virtual = 15258
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1141 ; free virtual = 15239
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1140 ; free virtual = 15238
+Read PlaceDB: Time (s): cpu = 00:00:00.6 ; elapsed = 00:00:00.67 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1138 ; free virtual = 15245
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1138 ; free virtual = 15246
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1113 ; free virtual = 15227
+Read Physdb Files: Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.97 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1113 ; free virtual = 15227
+Restored from archive | CPU: 0.930000 secs | Memory: 13.603607 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.97 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1113 ; free virtual = 15227
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 1120 ; free virtual = 15230
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 91 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 16 instances
+  SRLC32E => SRL16E: 4 instances
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 12765.605 ; gain = 0.000 ; free physical = 711 ; free virtual = 15152
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  6 15:53:48 2024...

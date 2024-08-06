@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:noip_ctrl:1.0
--- IP Revision: 4
+-- IP Revision: 6
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -63,6 +63,7 @@ ENTITY main_design_noip_ctrl_0_0 IS
     vddpix_toggle : OUT STD_LOGIC_VECTOR(0 TO 1);
     sw_enable_n : OUT STD_LOGIC_VECTOR(0 TO 1);
     clk_spi_in : IN STD_LOGIC;
+    spi_rst_n : IN STD_LOGIC;
     miso : IN STD_LOGIC;
     mosi : OUT STD_LOGIC;
     sck : OUT STD_LOGIC;
@@ -108,6 +109,7 @@ ARCHITECTURE main_design_noip_ctrl_0_0_arch OF main_design_noip_ctrl_0_0 IS
       vddpix_toggle : OUT STD_LOGIC_VECTOR(0 TO 1);
       sw_enable_n : OUT STD_LOGIC_VECTOR(0 TO 1);
       clk_spi_in : IN STD_LOGIC;
+      spi_rst_n : IN STD_LOGIC;
       miso : IN STD_LOGIC;
       mosi : OUT STD_LOGIC;
       sck : OUT STD_LOGIC;
@@ -139,7 +141,7 @@ ARCHITECTURE main_design_noip_ctrl_0_0_arch OF main_design_noip_ctrl_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF miso: SIGNAL IS "xilinx.com:interface:spi:1.0 noip_spi IO1_I";
   ATTRIBUTE X_INTERFACE_INFO OF mosi: SIGNAL IS "xilinx.com:interface:spi:1.0 noip_spi IO1_O";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 187500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
@@ -147,7 +149,7 @@ ARCHITECTURE main_design_noip_ctrl_0_0_arch OF main_design_noip_ctrl_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN main_design_processing_sy" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN main_design_processing_sy" & 
 "stem7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
@@ -165,6 +167,8 @@ ARCHITECTURE main_design_noip_ctrl_0_0_arch OF main_design_noip_ctrl_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wstrb: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
   ATTRIBUTE X_INTERFACE_INFO OF sck: SIGNAL IS "xilinx.com:interface:spi:1.0 noip_spi SCK_O";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF spi_rst_n: SIGNAL IS "XIL_INTERFACENAME spi_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF spi_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 spi_rst RST";
   ATTRIBUTE X_INTERFACE_INFO OF ss_n: SIGNAL IS "xilinx.com:interface:spi:1.0 noip_spi SS_O";
 BEGIN
   U0 : noip_ctrl
@@ -181,6 +185,7 @@ BEGIN
       vddpix_toggle => vddpix_toggle,
       sw_enable_n => sw_enable_n,
       clk_spi_in => clk_spi_in,
+      spi_rst_n => spi_rst_n,
       miso => miso,
       mosi => mosi,
       sck => sck,

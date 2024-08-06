@@ -25,4 +25,5 @@ Le problème que cette méthode pose est qu'une grande partie de la logique de l
 
 ## Utiliser les ISERDES
 
-La partie programmable de la puce Zynq est un FPGA de la famille Artix-7 qui contient, à ses entrées/sorties, des périphériques de type ILOGIC (dans notre cas ISERDES) qui peuvent servir de sérialiseurs-désérialiseurs génériques. Cela permet d'isoler la logique rapide aux pins d'entrée, loin de la logique principale. Il suffit ensuite d'utiliser l'horloge divisée par 8 en sortie des SERDES.
+La partie programmable de la puce Zynq est un FPGA de la famille Artix-7 qui contient, à ses entrées/sorties, des périphériques de type ILOGIC (dans notre cas ISERDES) qui peuvent servir de sérialiseurs-désérialiseurs génériques. Cela permet d'isoler la logique rapide aux pins d'entrée, loin de la logique principale. Il suffit ensuite d'utiliser l'horloge divisée par 8 en sortie des SERDES pour la logique du streamer.
+Utiliser les SERDES permet également à vivado de placer les streamers très près des entrées/sorties

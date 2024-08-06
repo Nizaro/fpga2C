@@ -58,8 +58,8 @@ vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -2008  \
-"../../../bd/main_design/ipshared/dc1a/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
-"../../../bd/main_design/ipshared/dc1a/hdl/noip_ctrl.vhd" \
+"../../../bd/main_design/ipshared/34d7/hdl/noip_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../bd/main_design/ipshared/34d7/hdl/noip_ctrl.vhd" \
 
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_noip_ctrl_0_0/sim/main_design_noip_ctrl_0_0.vhd" \
@@ -106,7 +106,7 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/m
 vcom -work xil_defaultlib -  \
 "../../../bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_sim_netlist.vhdl" \
 "../../../bd/main_design/sim/main_design.vhd" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \

@@ -151,6 +151,7 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     sc_core::sc_out<bool> FCLK_CLK0;
     sc_core::sc_out<bool> FCLK_CLK1;
     sc_core::sc_out<bool> FCLK_RESET0_N;
+    sc_core::sc_out<bool> FCLK_RESET1_N;
     sc_core::sc_inout<sc_dt::sc_bv<54> >  MIO;
     sc_core::sc_inout<bool> DDR_CAS_n;
     sc_core::sc_inout<bool> DDR_CKE;
@@ -228,6 +229,9 @@ processing_system7_v5_5_tlm(sc_core::sc_module_name name,
     //FCLK_RESET0 output reset pin get toggle when emio bank 2's 31th signal gets toggled
     //EMIO[2] bank 31th(GPIO[95] signal)acts as reset signal to the PL(refer Zynq UltraScale+ TRM, page no:761)
     void FCLK_RESET0_N_trigger();
+    //FCLK_RESET1 output reset pin get toggle when emio bank 2's 30th signal gets toggled
+    //EMIO[2] bank 30th(GPIO[94] signal)acts as reset signal to the PL(refer Zynq UltraScale+ TRM, page no:761)
+    void FCLK_RESET1_N_trigger();
 
     sc_signal<bool> qemu_rst;
     void start_of_simulation();

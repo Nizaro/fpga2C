@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Aug  6 09:35:53 2024
-# Process ID: 24776
+# Start of session at: Tue Aug  6 14:59:52 2024
+# Process ID: 121430
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,16 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3341.048 MHz
+# CPU Frequency     :3058.628 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :21833 MB
+# Available Virtual :16422 MB
 #-----------------------------------------------------------
 start_gui
-open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr
+open_project /home/nothon/fpga2C/ip_repo/noip_ctrl/edit_noip_ctrl_v1_0.xpr
 WARNING: [Board 49-26] cannot add Board Part tul.com.tw:pynqzu:part0:1.1 available at /home/nothon/.Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store/XilinxBoardStore/Vivado/2024.1/boards/TUL/pynqzu/1.1/1.1/board.xml as part xczu5eg-sfvc784-1-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
@@ -112,53 +112,40 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 avail
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/nothon/fpga2C/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/nothon/fpga2C/ip_repo/noip_lvds_stream'.)
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/nothon/fpga2C/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/nothon/fpga2C/ip_repo/noip_ctrl'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 7818.602 ; gain = 324.719 ; free physical = 1053 ; free virtual = 19868
-ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml
-ipx::add_bus_interface fifo_read [ipx::current_core]
-set_property abstraction_type_vlnv xilinx.com:interface:fifo_read_rtl:1.0 [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-set_property bus_type_vlnv xilinx.com:interface:fifo_read:1.0 [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-set_property interface_mode master [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-ipx::add_port_map RD_DATA [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-set_property physical_name fifo_dout [ipx::get_port_maps RD_DATA -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]]
-ipx::add_port_map RD_EN [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-set_property physical_name fifo_rd_en [ipx::get_port_maps RD_EN -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]]
-ipx::add_port_map EMPTY [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]
-set_property physical_name fifo_empty [ipx::get_port_maps EMPTY -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::add_bus_interface fifo_write [ipx::current_core]
-set_property abstraction_type_vlnv xilinx.com:interface:fifo_write_rtl:1.0 [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-set_property bus_type_vlnv xilinx.com:interface:fifo_write:1.0 [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-set_property interface_mode master [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-ipx::add_port_map WR_DATA [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-set_property physical_name fifo_din [ipx::get_port_maps WR_DATA -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]]
-ipx::add_port_map WR_EN [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-set_property physical_name fifo_wr_en [ipx::get_port_maps WR_EN -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]]
-ipx::add_port_map FULL [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]
-set_property physical_name fifo_full [ipx::get_port_maps FULL -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-set_property core_revision 29 [ipx::current_core]
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 7773.055 ; gain = 281.203 ; free physical = 172 ; free virtual = 14848
+ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_ctrl/noip_ctrl_1_0/component.xml
+ipx::merge_project_changes ports [ipx::current_core]
+CRITICAL WARNING: [IP_Flow 19-5655] Packaging a component with a VHDL-2008 top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-3445] Bus interface 'spi_rst': Replace port-map physical named 'spi_rst' by 'spi_rst_n'.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'spi_rst': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+set_property core_revision 6 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::check_integrity [ipx::current_core]
-WARNING: [IP_Flow 19-11889] HDL Parameter 'C_M00_AXIS_TDATA_WIDTH (C M00 AXIS TDATA WIDTH)': Order is obsolete with XGUI version >= 2.0
-WARNING: [IP_Flow 19-11889] HDL Parameter 'C_S00_AXIS_TDATA_WIDTH (C S00 AXIS TDATA WIDTH)': Order is obsolete with XGUI version >= 2.0
-CRITICAL WARNING: [IP_Flow 19-626] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': verilogSource subcore file "simulation/fifo_generator_vlog_beh.v" is referenced from the pure language VHDL file group. Please consider changing the file group type to support mixed language sources.
+WARNING: [IP_Flow 19-11888] Component Definition 'user.org:user:noip_ctrl:1.0 (NOIP1 Controller)': IP description "WIP" is not meaningful: too short
+WARNING: [IP_Flow 19-11889] HDL Parameter 'C_S00_AXI_DATA_WIDTH (C S00 AXI DATA WIDTH)': Order is obsolete with XGUI version >= 2.0
+WARNING: [IP_Flow 19-11889] HDL Parameter 'C_S00_AXI_ADDR_WIDTH (C S00 AXI ADDR WIDTH)': Order is obsolete with XGUI version >= 2.0
 WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
 WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
-WARNING: [IP_Flow 19-11770] Clock interface 'M00_AXIS_CLK' has no FREQ_HZ parameter.
-WARNING: [IP_Flow 19-11770] Clock interface 'S00_AXIS_CLK' has no FREQ_HZ parameter.
-WARNING: [IP_Flow 19-1965] Bus Interface 'fifo_read': A port map to the required logical port "ALMOST_EMPTY" of the bus abstraction "xilinx.com:interface:fifo_read_rtl:1.0" is missing.
-WARNING: [IP_Flow 19-11886] Bus Interface 'fifo_read' is not associated with any clock interface
-WARNING: [IP_Flow 19-11886] Bus Interface 'fifo_write' is not associated with any clock interface
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-11770] Clock interface 'S00_AXI_CLK' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "SS_T" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "SCK_I" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "SCK_T" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "IO0_I" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "IO0_O" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "IO0_T" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-1965] Bus Interface 'noip_spi': A port map to the required logical port "IO1_T" of the bus abstraction "xilinx.com:interface:spi_rtl:1.0" is missing.
 INFO: [IP_Flow 19-2181] Payment is not required for this core.
 WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
 INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
 ipx::save_core [ipx::current_core]
 update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo
 INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/nothon/fpga2C/ip_repo'
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  6 15:00:42 2024...

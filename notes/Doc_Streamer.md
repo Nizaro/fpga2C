@@ -5,9 +5,10 @@ A propos de l'horloge LVDS, il sera peut être nécessaire d'inverser l'horloge
 # Considérations de timing
 
 Interface AXIS : 100 MHz, 32 bits par coup d'horloge : 3.2 Gbps. -> pour une ligne, 320 coups d'horloge
-Interface LVDS : 360 MHz, 4 bits par coup d'horloge (4 pixels par 10 coups d'horloge / 1 kernel par 2 coups d'horloge)
--> A la résolution maximale : ligne de 1280 pixels  = 160 kernels = 320 coups d'horloge LVDS = 889 ns / ligne (= 0.91 ms par image, sans compter FOT et ROT)
+Interface LVDS : 360 MHz, 4 bits par coup d'horloge (4 pixels par 10 coups d'horloge / 1 kernel par 20 coups d'horloge)
+-> A la résolution maximale : ligne de 1280 pixels  = 160 kernels = 3200 coups d'horloge LVDS = 8.89 ns / ligne (= 9.1 ms par image, sans compter FOT et ROT)
 Temps AXIS pour une ligne de 1280 pixels, profondeur 10-bits : 12800 / 32 = 400 coups d'horloge AXIS (409600 coups d'horloge pour une image complète, 4.1 ms)
+-> **Attention !** Le résultat ci-dessus part de l'hypothèse que le récepteur AXIS (le DMA, dans ce cas) est toujours disponible ! Ce n'est peut être pas le cas. Par sécurité, on place un FIFO entre le récepteur de pixels et le maître AXIS, au cas où les pixels arrivent plus vite qu'ils ne peuvent être envoyés car le DMA est occupé.
 
 # Considérations de mémoire
 

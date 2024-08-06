@@ -49,9 +49,9 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ipshared/7439/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/7439/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
-"../../../bd/main_design/ipshared/7439/hdl/noip_lvds_stream.vhd" \
+"../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
+"../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream.vhd" \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_0/sim/main_design_noip_lvds_stream_0_0.vhd" \
 
 vcom -work xil_defaultlib -64 -2008  \
@@ -95,14 +95,16 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../ZTurnV2.gen/sour
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/main_design/ip/main_design_lvds_sync_1_inverter_1/main_design_lvds_sync_1_inverter_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2_sim_netlist.vhdl" \
-"../../../bd/main_design/sim/main_design.vhd" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/main_design/ip/main_design_lvds_data_0_concat_n_0/sim/main_design_lvds_data_0_concat_n_0.v" \
 "../../../bd/main_design/ip/main_design_lvds_data_0_concat_p_0/sim/main_design_lvds_data_0_concat_p_0.v" \
 
 vcom -work xil_defaultlib -64 -93  \
-"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
+"/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_sim_netlist.vhdl" \
+"../../../bd/main_design/sim/main_design.vhd" \
 "../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \

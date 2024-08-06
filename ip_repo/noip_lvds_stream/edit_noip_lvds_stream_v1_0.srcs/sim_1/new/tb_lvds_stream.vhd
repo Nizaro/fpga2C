@@ -256,7 +256,7 @@ workLVDS_stream : entity work.noip_lvds_stream(arch_imp)
 		C_M00_AXIS_TDATA_WIDTH	=> 32
     )
     port map(
-		lvds_clk => lvds_clk, 
+		lvds_clk_div => lvds_clk_div, 
 		lvds_sync => lvds_sync, 
 		lvds_data => lvds_data, 
 		trigger0 => trigger0, 

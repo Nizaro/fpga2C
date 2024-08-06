@@ -10,6 +10,9 @@ https://support.xilinx.com/s/question/0D54U00005ZMzumSAD/how-to-correctly-connec
 https://support.xilinx.com/s/question/0D52E00006hpXudSAE/how-to-constrain-differential-input-clock?language=en_US
 https://stackoverflow.com/questions/35975328/generic-constants-in-vhdl
 https://support.xilinx.com/s/question/0D52E00006hpgoqSAA/clock-path-synthesis-ibufds-and-bufio?language=en_US
+https://support.xilinx.com/s/question/0D52E00006iHkCFSA0/vivado-implementation-some-logic-missing?language=en_US
+
+opt_design -debug_log
 # Vitis
 
 https://support.xilinx.com/s/question/0D54U00007jzNEXSA2/vitis-20232-unable-to-create-platform-component-project-on-ubuntu?language=en_US

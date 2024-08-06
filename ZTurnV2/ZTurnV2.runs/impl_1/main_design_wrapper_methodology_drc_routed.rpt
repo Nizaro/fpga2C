@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Mon Aug  5 09:55:27 2024
+| Date         : Tue Aug  6 09:51:50 2024
 | Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_methodology -file main_design_wrapper_methodology_drc_routed.rpt -pb main_design_wrapper_methodology_drc_routed.pb -rpx main_design_wrapper_methodology_drc_routed.rpx
 | Design       : main_design_wrapper
@@ -23,18 +23,53 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 26
-+-----------+----------+--------------------------------+------------+
-| Rule      | Severity | Description                    | Violations |
-+-----------+----------+--------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert   | 7          |
-| TIMING-18 | Warning  | Missing input or output delay  | 15         |
-| TIMING-20 | Warning  | Non-clocked latch              | 3          |
-| LATCH-1   | Advisory | Existing latches in the design | 1          |
-+-----------+----------+--------------------------------+------------+
+             Violations found: 69
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 2          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 2          |
+| TIMING-8  | Critical Warning | No common period between related clocks        | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 7          |
+| TIMING-16 | Warning          | Large setup violation                          | 19         |
+| TIMING-18 | Warning          | Missing input or output delay                  | 25         |
+| TIMING-20 | Warning          | Non-clocked latch                              | 1          |
+| LATCH-1   | Advisory         | Existing latches in the design                 | 1          |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF              | 10         |
++-----------+------------------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_0_clk_div_out are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks lvds_selectio_data_0_clk_div_out]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_1_clk_div_out are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks lvds_selectio_data_1_clk_div_out]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_0_clk_div_out are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks lvds_selectio_data_0_clk_div_out]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_1_clk_div_out are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks lvds_selectio_data_1_clk_div_out]
+Related violations: <none>
+
+TIMING-8#1 Critical Warning
+No common period between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_0_clk_div_out are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
+TIMING-8#2 Critical Warning
+No common period between related clocks  
+The clocks clk_fpga_0 and lvds_selectio_data_1_clk_div_out are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) main_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,
@@ -175,77 +210,222 @@ main_design_i/axi_mem_intercon/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full
  (the first 15 of 31 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.011 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.011 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.011 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[18]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[19]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[20]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[21]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[22]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.022 ns between main_design_i/processing_system7_0/inst/PS7_i/SAXIHP0ACLK (clocked by clk_fpga_0) and main_design_i/axi_mem_intercon/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[23]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.048 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_0/inst/pins[3].iserdese2_master/RST (clocked by lvds_selectio_data_0_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.057 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_1/inst/pins[0].iserdese2_master/RST (clocked by lvds_selectio_data_1_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.101 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_1/inst/pins[1].iserdese2_master/RST (clocked by lvds_selectio_data_1_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.110 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_1/inst/pins[2].iserdese2_master/RST (clocked by lvds_selectio_data_1_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.128 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_0/inst/pins[4].iserdese2_master/RST (clocked by lvds_selectio_data_0_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.156 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_0/inst/pins[2].iserdese2_master/RST (clocked by lvds_selectio_data_0_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.241 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_1/inst/pins[3].iserdese2_master/RST (clocked by lvds_selectio_data_1_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.280 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_0/inst/pins[0].iserdese2_master/RST (clocked by lvds_selectio_data_0_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.285 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_0/inst/pins[1].iserdese2_master/RST (clocked by lvds_selectio_data_0_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.317 ns between main_design_i/proc_sys_reset_0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and main_design_i/lvds_selectio_data_1/inst/pins[4].iserdese2_master/RST (clocked by lvds_selectio_data_1_clk_div_out). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on noip_miso relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout0_0_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_0.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on noip_mosi relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout0_1_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_1.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on noip_mosi1 relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout1_0_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_0.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on noip_rst_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout1_1_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_1.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on noip_rst_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout2_0_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_0.
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on noip_ss[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout2_1_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_1.
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on noip_ss[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout3_0_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_0.
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on sw_enable_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_dout3_1_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_1.
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on sw_enable_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_sync_0_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_0.
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on vdd18_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on lvds_sync_1_p[0] relative to the rising and/or falling clock edge(s) of lvds_clk_1.
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on vdd18_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An input delay is missing on noip_miso relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on vdd33_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on noip_mosi relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An output delay is missing on vdd33_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on noip_mosi1 relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on vddpix_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on noip_rst_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on noip_rst_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on noip_ss[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on noip_ss[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on sw_enable_n[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on sw_enable_n[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on vdd18_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on vdd18_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on vdd33_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on vdd33_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on vddpix_toggle[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#25 Warning
 Missing input or output delay  
 An output delay is missing on vddpix_toggle[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
@@ -255,19 +435,59 @@ Non-clocked latch
 The latch main_design_i/hdmi_ctrl_0/U0/red_reg[4] cannot be properly analyzed as its control pin main_design_i/hdmi_ctrl_0/U0/red_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch main_design_i/noip_lvds_stream_0/U0/noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[31] cannot be properly analyzed as its control pin main_design_i/noip_lvds_stream_0/U0/noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[31]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch main_design_i/noip_lvds_stream_1/U0/noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[31] cannot be properly analyzed as its control pin main_design_i/noip_lvds_stream_1/U0/noip_lvds_stream_master_stream_v1_0_M00_AXIS_inst/stream_data_out_reg[31]/G is not reached by a timing clock
-Related violations: <none>
-
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 32 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 30 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_0/inst/pins[0].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_0/inst/pins[1].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_0/inst/pins[2].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_0/inst/pins[3].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_0/inst/pins[4].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_1/inst/pins[0].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_1/inst/pins[1].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_1/inst/pins[2].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_1/inst/pins[3].iserdese2_master: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+main_design_i/lvds_selectio_data_1/inst/pins[4].iserdese2_master: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 

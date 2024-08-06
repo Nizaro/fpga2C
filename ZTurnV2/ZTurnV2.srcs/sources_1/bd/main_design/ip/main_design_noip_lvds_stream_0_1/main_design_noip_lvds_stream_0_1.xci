@@ -4,7 +4,7 @@
     "xci_name": "main_design_noip_lvds_stream_0_1",
     "cell_name": "noip_lvds_stream_1",
     "component_reference": "user.org:user:noip_lvds_stream:1.0",
-    "ip_revision": "27",
+    "ip_revision": "29",
     "gen_directory": "../../../../../../ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1",
     "parameters": {
       "component_parameters": {
@@ -38,7 +38,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "27" } ],
+        "IPREVISION": [ { "value": "29" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_noip_lvds_stream_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -55,6 +55,13 @@
         "monitor0": [ { "direction": "in" } ],
         "monitor1": [ { "direction": "in" } ],
         "bitslip": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "fifo_srst": [ { "direction": "out" } ],
+        "fifo_full": [ { "direction": "in" } ],
+        "fifo_din": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "fifo_wr_en": [ { "direction": "out" } ],
+        "fifo_empty": [ { "direction": "in" } ],
+        "fifo_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "fifo_rd_en": [ { "direction": "out" } ],
         "s00_axis_aclk": [ { "direction": "in" } ],
         "s00_axis_aresetn": [ { "direction": "in" } ],
         "s00_axis_tready": [ { "direction": "out" } ],
@@ -185,6 +192,26 @@
           },
           "port_maps": {
             "CLK": [ { "physical_name": "s00_axis_aclk" } ]
+          }
+        },
+        "fifo_read": {
+          "vlnv": "xilinx.com:interface:fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "fifo_dout" } ],
+            "RD_EN": [ { "physical_name": "fifo_rd_en" } ],
+            "EMPTY": [ { "physical_name": "fifo_empty" } ]
+          }
+        },
+        "fifo_write": {
+          "vlnv": "xilinx.com:interface:fifo_write:1.0",
+          "abstraction_type": "xilinx.com:interface:fifo_write_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "WR_DATA": [ { "physical_name": "fifo_din" } ],
+            "WR_EN": [ { "physical_name": "fifo_wr_en" } ],
+            "FULL": [ { "physical_name": "fifo_full" } ]
           }
         }
       }

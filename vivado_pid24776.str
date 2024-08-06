@@ -1,0 +1,306 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 24776
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Aug 06 09:36:05 CEST 2024
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-39-generic
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: Ubuntu 24.04 LTS
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 66, y = 32, width = 1854, height = 1048
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	nothon
+User home directory: /home/nothon
+User working directory: /home/nothon/fpga2C
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/nothon/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/nothon/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/nothon/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/nothon/fpga2C/vivado.log
+Vivado journal file: 	/home/nothon/fpga2C/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-24776-nothon-Swift-SF314-57
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2024.1/bin:/tools/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/nothon/fpga2C:nothon-Swift-SF314-57_1722929751_24707
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2024.1
+XILINX_SDK: /tools/Xilinx/Vitis/2024.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2024.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,473 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,541 MB. GUI used memory: 68 MB. Current time: 8/6/24, 9:36:06 AM CEST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 122 MB (+125664kb) [00:00:15]
+// [Engine Memory]: 1,754 MB (+1687562kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1924 ms.
+// Tcl Message: open_project /home/nothon/fpga2C/ip_repo/noip_lvds_stream/edit_noip_lvds_stream_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'. 
+// Project name: edit_noip_lvds_stream_v1_0; location: /home/nothon/fpga2C/ip_repo/noip_lvds_stream; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 7818.602 ; gain = 324.719 ; free physical = 1053 ; free virtual = 19868 
+dismissDialog("Open Project"); // bj (Open Project Progress)
+// [GUI Memory]: 140 MB (+12030kb) [00:00:18]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Edit Packaged IP]", 5, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // bj (Open Project Manager Progress)
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: ipx::open_ipxact_file /home/nothon/fpga2C/ip_repo/noip_lvds_stream/noip_lvds_stream_1_0/component.xml 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("IP Packager"); // bj (IP Packager Progress)
+// [Engine Memory]: 1,852 MB (+10622kb) [00:00:21]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// [GUI Memory]: 155 MB (+8375kb) [00:00:22]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, "Package IP_packager_add_bus_interface"); // B (PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, Package IP_packager_add_bus_interface)
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,860 MB. GUI used memory: 114 MB. Current time: 8/6/24, 9:36:26 AM CEST
+selectMoreButton(PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER, (String) null, "Add Interface"); // r (PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "User ; ", 8, "User", 0, true); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE) - Node
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "User ; ", 8); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "IO Interfaces ; ", 6); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Signal ; ", 5); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 26); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "fifo_read_rtl ; FIFO read interface", 69, "fifo_read_rtl", 0, false); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+// [GUI Memory]: 163 MB (+781kb) [00:00:44]
+selectButton(RDIResource.BaseDialog_OK, "OK", "Interface Definition Chooser"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Interface Definition Chooser"); // t (dialog1)
+// HOptionPane Error: 'You've entered an invalid name for new IP Interface. (Invalid IP Interface Name)'
+selectButton("OptionPane.button", "OK", "Invalid IP Interface Name"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Add Interface"); // a (RDIResource.BaseDialog_CANCEL)
+// 'a' command handler elapsed time: 28 seconds
+dismissDialog("Add Interface"); // w (dialog0)
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, "Package IP_packager_add_bus_interface"); // B (PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, Package IP_packager_add_bus_interface)
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,887 MB. GUI used memory: 117 MB. Current time: 8/6/24, 9:36:56 AM CEST
+setText(PAResourceItoN.InterfaceConfigurationPanel_NAME, "fifo_read"); // w (PAResourceItoN.InterfaceConfigurationPanel_NAME)
+selectMoreButton(PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER, (String) null, "Add Interface"); // r (PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 7); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "fifo_read_rtl ; FIFO read interface", 50, "fifo_read_rtl", 0, false); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Interface Definition Chooser"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Interface Definition Chooser"); // t (dialog3)
+// Tcl Message: ipx::add_bus_interface fifo_read [ipx::current_core] 
+// Tcl Message: set_property abstraction_type_vlnv xilinx.com:interface:fifo_read_rtl:1.0 [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+// Tcl Message: set_property bus_type_vlnv xilinx.com:interface:fifo_read:1.0 [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+// Tcl Message: set_property interface_mode master [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+selectTab(PAResourceEtoH.EditInterfaceDialog_TABBED_PANE, PAResourceEtoH.EditInterfaceDialog_PORT_MAPPING, "Port Mapping", 1); // x (PAResourceEtoH.EditInterfaceDialog_TABBED_PANE)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@292236c0", 0); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@5b8c68b5", 11); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@582cee40", 1); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@2e0dd94e", 9); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@6dd07431", 12); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@6fe5757f", 2); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@7bf8a358", 10); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@7f982f8c", 3); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@292236c0", 0); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@5b8c68b5", 11); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Add Interface"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// 'a' command handler elapsed time: 43 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1095 ms.
+// Tcl Message: ipx::add_port_map RD_DATA [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_dout [ipx::get_port_maps RD_DATA -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]] 
+// Tcl Message: ipx::add_port_map RD_EN [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_rd_en [ipx::get_port_maps RD_EN -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]] 
+// Tcl Message: ipx::add_port_map EMPTY [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_empty [ipx::get_port_maps EMPTY -of_objects [ipx::get_bus_interfaces fifo_read -of_objects [ipx::current_core]]] 
+dismissDialog("Add Interface"); // w (dialog2)
+// [Engine Memory]: 2,174 MB (+240566kb) [00:01:43]
+// [GUI Memory]: 186 MB (+15224kb) [00:01:44]
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,174 MB. GUI used memory: 91 MB. Current time: 8/6/24, 9:37:41 AM CEST
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, "Package IP_packager_add_bus_interface"); // B (PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE, Package IP_packager_add_bus_interface)
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_BUS_INTERFACE
+// TclEventType: FILE_SET_CHANGE
+selectMoreButton(PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER, (String) null, "Add Interface"); // r (PAResourceItoN.InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "IO Interfaces ; ", 6, "IO Interfaces", 0, true); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE) - Node
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "IO Interfaces ; ", 6); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+collapseTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "IO Interfaces ; ", 6); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 7); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+collapseTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 7); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 7, "Advanced", 0, true, false, false, false, false, true); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE) - Double Click - Node
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "IO Interfaces ; ", 6); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+expandTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "Advanced ; ", 16); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectTreeTable(PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE, "fifo_write_rtl ; ", 60, "fifo_write_rtl", 0, false); // P (PAResourceItoN.InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Interface Definition Chooser"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Interface Definition Chooser"); // t (dialog5)
+setText(PAResourceItoN.InterfaceConfigurationPanel_NAME, "fifo_write"); // w (PAResourceItoN.InterfaceConfigurationPanel_NAME)
+// Tcl Message: ipx::add_bus_interface fifo_write [ipx::current_core] 
+// Tcl Message: set_property abstraction_type_vlnv xilinx.com:interface:fifo_write_rtl:1.0 [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+// Tcl Message: set_property bus_type_vlnv xilinx.com:interface:fifo_write:1.0 [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+// Tcl Message: set_property interface_mode master [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+selectTab(PAResourceEtoH.EditInterfaceDialog_TABBED_PANE, PAResourceEtoH.EditInterfaceDialog_PORT_MAPPING, "Port Mapping", 1); // x (PAResourceEtoH.EditInterfaceDialog_TABBED_PANE)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@6c34daae", 0); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@3b4bfb2a", 8); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@414520dd", 1); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@1dffb57a", 9); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS, "ui.data.coregen.b@245ada2e", 2); // J (PAResourceItoN.InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@4a73b6b5", 6); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectList(PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS, "ui.data.coregen.bn@3cc5c168", 7); // K (PAResourceItoN.InterfacePortMappingPanel_IPS_PHYSICAL_PORTS)
+selectButton(PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS, "Map Ports", "Add Interface"); // a (PAResourceItoN.InterfacePortMappingPanel_MAP_PORTS)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Add Interface"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// 'a' command handler elapsed time: 37 seconds
+// Tcl Message: ipx::add_port_map WR_DATA [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_din [ipx::get_port_maps WR_DATA -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]] 
+// Tcl Message: ipx::add_port_map WR_EN [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_wr_en [ipx::get_port_maps WR_EN -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]] 
+// Tcl Message: ipx::add_port_map FULL [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]] 
+// Tcl Message: set_property physical_name fifo_full [ipx::get_port_maps FULL -of_objects [ipx::get_bus_interfaces fifo_write -of_objects [ipx::current_core]]] 
+dismissDialog("Add Interface"); // w (dialog4)
+// [GUI Memory]: 204 MB (+9490kb) [00:02:24]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,275 MB. GUI used memory: 132 MB. Current time: 8/6/24, 9:38:21 AM CEST
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 29 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed. 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/nothon/fpga2C/ip_repo 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/nothon/fpga2C/ip_repo' 
+dismissDialog("Package IP"); // bj (Package IP Progress)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog6)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Package IP"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Package IP"); // aq (dialog7)

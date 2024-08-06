@@ -78,7 +78,9 @@
       "lvds_selectio_data_0": "",
       "lvds_data_1_concat_n": "",
       "lvds_data_1_concat_p": "",
-      "lvds_selectio_data_1": ""
+      "lvds_selectio_data_1": "",
+      "fifo_0": "",
+      "fifo_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2670,7 +2672,7 @@
       },
       "noip_lvds_stream_0": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "27",
+        "ip_revision": "29",
         "xci_name": "main_design_noip_lvds_stream_0_0",
         "xci_path": "ip/main_design_noip_lvds_stream_0_0/main_design_noip_lvds_stream_0_0.xci",
         "inst_hier_path": "noip_lvds_stream_0",
@@ -2695,7 +2697,7 @@
       },
       "noip_lvds_stream_1": {
         "vlnv": "user.org:user:noip_lvds_stream:1.0",
-        "ip_revision": "27",
+        "ip_revision": "29",
         "xci_name": "main_design_noip_lvds_stream_0_1",
         "xci_path": "ip/main_design_noip_lvds_stream_0_1/main_design_noip_lvds_stream_0_1.xci",
         "inst_hier_path": "noip_lvds_stream_1",
@@ -4189,6 +4191,36 @@
             "value": "Custom"
           }
         }
+      },
+      "fifo_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "10",
+        "xci_name": "main_design_fifo_generator_0_1",
+        "xci_path": "ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1.xci",
+        "inst_hier_path": "fifo_0",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "64"
+          },
+          "Output_Data_Width": {
+            "value": "32"
+          }
+        }
+      },
+      "fifo_1": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "10",
+        "xci_name": "main_design_fifo_0_1",
+        "xci_path": "ip/main_design_fifo_0_1/main_design_fifo_0_1.xci",
+        "inst_hier_path": "fifo_1",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "64"
+          },
+          "Output_Data_Width": {
+            "value": "32"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4246,10 +4278,34 @@
           "axi_dma_0/S_AXIS_S2MM"
         ]
       },
+      "noip_lvds_stream_0_fifo_read": {
+        "interface_ports": [
+          "noip_lvds_stream_0/fifo_read",
+          "fifo_0/FIFO_READ"
+        ]
+      },
+      "noip_lvds_stream_0_fifo_write": {
+        "interface_ports": [
+          "fifo_0/FIFO_WRITE",
+          "noip_lvds_stream_0/fifo_write"
+        ]
+      },
       "noip_lvds_stream_1_M00_AXIS": {
         "interface_ports": [
           "noip_lvds_stream_1/M00_AXIS",
           "axis_interconnect_1/S01_AXIS"
+        ]
+      },
+      "noip_lvds_stream_1_fifo_read": {
+        "interface_ports": [
+          "noip_lvds_stream_1/fifo_read",
+          "fifo_1/FIFO_READ"
+        ]
+      },
+      "noip_lvds_stream_1_fifo_write": {
+        "interface_ports": [
+          "noip_lvds_stream_1/fifo_write",
+          "fifo_1/FIFO_WRITE"
         ]
       },
       "processing_system7_0_DDR": {
@@ -4495,13 +4551,20 @@
         "ports": [
           "lvds_selectio_data_0/clk_div_out",
           "noip_lvds_stream_0/lvds_clk_div",
+          "fifo_0/clk"
+        ]
+      },
+      "lvds_selectio_data_0_data_in_to_device": {
+        "ports": [
+          "lvds_selectio_data_0/data_in_to_device",
           "noip_lvds_stream_0/lvds_deserialized"
         ]
       },
       "lvds_selectio_data_1_clk_div_out": {
         "ports": [
           "lvds_selectio_data_1/clk_div_out",
-          "noip_lvds_stream_1/lvds_clk_div"
+          "noip_lvds_stream_1/lvds_clk_div",
+          "fifo_1/clk"
         ]
       },
       "lvds_selectio_data_1_data_in_to_device": {
@@ -4614,17 +4677,34 @@
           "lvds_selectio_data_0/bitslip"
         ]
       },
+      "noip_lvds_stream_0_fifo_srst": {
+        "ports": [
+          "noip_lvds_stream_0/fifo_srst",
+          "fifo_0/srst"
+        ]
+      },
       "noip_lvds_stream_0_trigger0": {
         "ports": [
           "noip_lvds_stream_0/trigger0",
           "trigger0_concat/In0"
         ]
       },
+      "noip_lvds_stream_1_bitslip": {
+        "ports": [
+          "noip_lvds_stream_1/bitslip",
+          "lvds_selectio_data_1/bitslip"
+        ]
+      },
+      "noip_lvds_stream_1_fifo_srst": {
+        "ports": [
+          "noip_lvds_stream_1/fifo_srst",
+          "fifo_1/srst"
+        ]
+      },
       "noip_lvds_stream_1_trigger0": {
         "ports": [
           "noip_lvds_stream_1/trigger0",
-          "trigger0_concat/In1",
-          "lvds_selectio_data_1/bitslip"
+          "trigger0_concat/In1"
         ]
       },
       "noip_miso_1": {

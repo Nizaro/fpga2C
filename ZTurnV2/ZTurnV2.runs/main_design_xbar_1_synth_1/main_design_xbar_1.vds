@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Aug  6 10:04:52 2024
-# Process ID: 51090
+# Start of session at: Wed Aug  7 10:01:49 2024
+# Process ID: 34433
 # Current directory: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1
 # Command line: vivado -log main_design_xbar_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_xbar_1.tcl
 # Log file: /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/main_design_xbar_1.vds
@@ -13,16 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :2099.978 MHz
+# CPU Frequency     :3500.000 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :15816 MB
+# Available Virtual :19452 MB
 #-----------------------------------------------------------
 source main_design_xbar_1.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1353.562 ; gain = 5.965 ; free physical = 202 ; free virtual = 14231
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1354.496 ; gain = 66.379 ; free physical = 253 ; free virtual = 17908
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
@@ -36,9 +36,9 @@ INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 51282
+INFO: [Synth 8-7075] Helper process launched with PID 34677
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2150.582 ; gain = 412.801 ; free physical = 198 ; free virtual = 10741
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.398 ; gain = 412.715 ; free physical = 164 ; free virtual = 15369
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_design_xbar_1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_1/synth/main_design_xbar_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_axi_crossbar' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
@@ -50,6 +50,8 @@ INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_carry_a
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_addr_decoder' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_decerr_slave' [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_decerr_slave' (0#1) [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
@@ -92,8 +94,10 @@ WARNING: [Synth 8-7129] Port ADDR[1] in module axi_crossbar_v2_1_32_addr_decoder
 WARNING: [Synth 8-7129] Port ADDR[0] in module axi_crossbar_v2_1_32_addr_decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
@@ -147,29 +151,34 @@ WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_crossbar_v2_1_32_axi_c
 WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_bid[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_buser[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_rid[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_rid[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rlast[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_rlast[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_rlast[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_ruser[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2347.551 ; gain = 609.770 ; free physical = 144 ; free virtual = 10399
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2348.336 ; gain = 610.652 ; free physical = 198 ; free virtual = 15159
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2347.551 ; gain = 609.770 ; free physical = 149 ; free virtual = 10404
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2348.336 ; gain = 610.652 ; free physical = 198 ; free virtual = 15159
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2347.551 ; gain = 609.770 ; free physical = 149 ; free virtual = 10404
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2348.336 ; gain = 610.652 ; free physical = 198 ; free virtual = 15159
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2347.551 ; gain = 0.000 ; free physical = 148 ; free virtual = 10404
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2348.336 ; gain = 0.000 ; free physical = 204 ; free virtual = 15158
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -180,31 +189,31 @@ Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_sy
 Finished Parsing XDC File [/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2445.027 ; gain = 0.000 ; free physical = 155 ; free virtual = 10446
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2431.875 ; gain = 0.000 ; free physical = 180 ; free virtual = 15138
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2445.027 ; gain = 0.000 ; free physical = 152 ; free virtual = 10446
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2431.875 ; gain = 0.000 ; free physical = 180 ; free virtual = 15138
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2445.027 ; gain = 707.246 ; free physical = 130 ; free virtual = 10426
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2431.875 ; gain = 694.191 ; free physical = 219 ; free virtual = 15099
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 128 ; free virtual = 10426
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 219 ; free virtual = 15099
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 129 ; free virtual = 10430
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 212 ; free virtual = 15098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 236 ; free virtual = 10390
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 327 ; free virtual = 15008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -213,15 +222,16 @@ Detailed RTL Component Info :
 +---Registers : 
 	               64 Bit    Registers := 1     
 	               36 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 14    
 +---Muxes : 
 	   2 Input   64 Bit        Muxes := 1     
 	   2 Input   36 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 30    
+	   2 Input    1 Bit        Muxes := 36    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -251,34 +261,27 @@ WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_crossbar_v2_1_32_axi_c
 WARNING: [Synth 8-7129] Port s_axi_awsize[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awsize[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awsize[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awburst[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awburst[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awlock[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awcache[3] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awcache[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awcache[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awcache[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 192 ; free virtual = 10366
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 244 ; free virtual = 14990
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 374 ; free virtual = 10574
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 479 ; free virtual = 15313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 363 ; free virtual = 10579
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 480 ; free virtual = 15308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 351 ; free virtual = 10576
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 472 ; free virtual = 15308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -296,37 +299,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10854
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10855
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10855
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10855
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10856
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10856
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -343,39 +346,39 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     1|
-|2     |LUT2 |    11|
-|3     |LUT3 |     8|
-|4     |LUT4 |    53|
-|5     |LUT5 |    19|
-|6     |LUT6 |    47|
-|7     |FDRE |   130|
+|2     |LUT2 |    10|
+|3     |LUT3 |    39|
+|4     |LUT4 |    48|
+|5     |LUT5 |    36|
+|6     |LUT6 |    41|
+|7     |FDRE |   131|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 2453.031 ; gain = 715.250 ; free physical = 430 ; free virtual = 10856
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.879 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 62 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 2453.031 ; gain = 617.773 ; free physical = 425 ; free virtual = 10861
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 2453.039 ; gain = 715.250 ; free physical = 425 ; free virtual = 10861
+Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2439.879 ; gain = 618.656 ; free physical = 482 ; free virtual = 15238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2439.887 ; gain = 702.195 ; free physical = 482 ; free virtual = 15238
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2453.039 ; gain = 0.000 ; free physical = 619 ; free virtual = 11101
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2439.887 ; gain = 0.000 ; free physical = 799 ; free virtual = 15556
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.059 ; gain = 0.000 ; free physical = 541 ; free virtual = 11111
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2495.906 ; gain = 0.000 ; free physical = 789 ; free virtual = 15550
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 4788a510
+Synth Design complete | Checksum: b4b6a436
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:00 . Memory (MB): peak = 2509.059 ; gain = 1131.715 ; free physical = 541 ; free virtual = 11111
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1429.121; main = 1130.956; forked = 333.246
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3485.523; main = 2509.062; forked = 1032.488
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2533.070 ; gain = 0.000 ; free physical = 540 ; free virtual = 11112
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:41 . Memory (MB): peak = 2495.906 ; gain = 1118.629 ; free physical = 793 ; free virtual = 15555
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1822.527; main = 1458.751; forked = 385.680
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3473.340; main = 2495.910; forked = 1033.457
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2519.918 ; gain = 0.000 ; free physical = 792 ; free virtual = 15553
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/main_design_xbar_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_xbar_1, cache-ID = a502e0c3a79cd963
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_xbar_1, cache-ID = 545811196656aacd
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2533.070 ; gain = 0.000 ; free physical = 512 ; free virtual = 11108
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2519.918 ; gain = 0.000 ; free physical = 771 ; free virtual = 15549
 INFO: [Common 17-1381] The checkpoint '/home/nothon/fpga2C/ZTurnV2/ZTurnV2.runs/main_design_xbar_1_synth_1/main_design_xbar_1.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_design_xbar_1_utilization_synth.rpt -pb main_design_xbar_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug  6 10:06:13 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  7 10:02:41 2024...

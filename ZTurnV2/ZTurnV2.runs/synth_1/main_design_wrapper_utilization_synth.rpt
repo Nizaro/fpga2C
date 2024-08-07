@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Tue Aug  6 15:18:47 2024
+| Date         : Wed Aug  7 11:45:37 2024
 | Host         : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
 | Design       : main_design_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   46 |     0 |          0 |       125 | 36.80 |
+| Bonded IOB                  |   48 |     0 |          0 |       125 | 38.40 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,7 +149,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   41 |                  IO |
+| OBUF     |   43 |                  IO |
 | IBUF     |    5 |                  IO |
 +----------+------+---------------------+
 
@@ -165,6 +165,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | main_design_xbar_2                 |    1 |
 | main_design_xbar_1                 |    1 |
 | main_design_selectio_wiz_0_2       |    1 |
+| main_design_rgb_led_ctrl_0_0       |    1 |
 | main_design_processing_system7_0_0 |    1 |
 | main_design_proc_sys_reset_0_0     |    1 |
 | main_design_noip_lvds_stream_0_1   |    1 |

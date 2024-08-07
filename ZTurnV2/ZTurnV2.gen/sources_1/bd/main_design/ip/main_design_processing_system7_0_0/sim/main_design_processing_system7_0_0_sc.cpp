@@ -114,7 +114,7 @@ main_design_processing_system7_0_0_sc::main_design_processing_system7_0_0_sc(con
     model_param_props.addString("C_PS7_SI_REV", "PRODUCTION");
     model_param_props.addString("C_FCLK_CLK0_BUF", "TRUE");
     model_param_props.addString("C_FCLK_CLK1_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK2_BUF", "TRUE");
     model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg400");
     model_param_props.addString("COMPONENT_NAME", "main_design_processing_system7_0_0");

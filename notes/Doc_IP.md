@@ -2,7 +2,6 @@
 # noip_ctrl
 
 noip_ctrl permet de contrôler les deux capteurs PYTHON1300 : les allumer, les éteindre, et les configurer en utilisant l'interface SPI.
-
 ## Interface AXI
 
 Le contrôleur NOIP communique avec le processeur à travers son interface AXI4-Lite, en tant que *slave*. 2 des 4 registres sont utilisés : le registre 0 sert à recevoir les commandes du processeur, et le registre 1 contient la réponse du contrôleur.
@@ -28,7 +27,10 @@ Bits 1~0 : **ResCode**
 - "10" pour "OK"
 - "01" pour "read SPI"
 - "11" pour "busy"
+## Interface SPI 
 
+Pour pouvoir configurer le PYTHON1300, on a du réécrire toute une IP SPI, car la méthode de communication avec le capteur diffère de ce que les IPs de Xilinx peuvent fournir.
+Non seulement 
 # Sources
 
 [FPGA Developer - Creating a custom IP block in Vivado](https://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html/)

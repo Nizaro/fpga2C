@@ -11,6 +11,7 @@ https://support.xilinx.com/s/question/0D52E00006hpXudSAE/how-to-constrain-differ
 https://stackoverflow.com/questions/35975328/generic-constants-in-vhdl
 https://support.xilinx.com/s/question/0D52E00006hpgoqSAA/clock-path-synthesis-ibufds-and-bufio?language=en_US
 https://support.xilinx.com/s/question/0D52E00006iHkCFSA0/vivado-implementation-some-logic-missing?language=en_US
+https://support.xilinx.com/s/question/0D52E00006hphMTSAY/default-state-of-pudcb-pin-if-bank-34-is-unused-unpowered-vcco34-is-tied-to-ground?language=zh_CN
 
 opt_design -debug_log
 # Vitis

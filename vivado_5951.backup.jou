@@ -1,0 +1,185 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Aug  7 08:43:21 2024
+# Process ID: 5951
+# Current directory: /home/nothon/fpga2C
+# Command line: vivado
+# Log file: /home/nothon/fpga2C/vivado.log
+# Journal file: /home/nothon/fpga2C/vivado.jou
+# Running On        :nothon-Swift-SF314-57
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+# CPU Frequency     :3095.017 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :7990 MB
+# Swap memory       :21474 MB
+# Total Virtual     :29465 MB
+# Available Virtual :26408 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+startgroup
+set_property package_pin "" [get_ports [list  {lvds_sync_0_p[0]}]]
+place_ports {lvds_clk_0_p[0]} K17
+endgroup
+place_ports {lvds_dout0_0_p[0]} B19
+place_ports {lvds_dout1_0_p[0]} D19
+place_ports {lvds_dout2_0_p[0]} F16
+place_ports {lvds_dout3_0_p[0]} M17
+save_constraints
+place_ports {lvds_sync_0_p[0]} K19
+save_constraints
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+close_design
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/design_1/design_1.bd
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:rgb_led_ctrl:1.0 rgb_led_ctrl_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (187 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (187 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/rgb_led_ctrl_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins rgb_led_ctrl_0/S00_AXI]
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins rgb_led_ctrl_0/green_n] [get_bd_pins rgb_led_ctrl_0/red_n] [get_bd_pins rgb_led_ctrl_0/blue_n]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+set_property name rgb_red_n [get_bd_ports red_n_0]
+set_property name rgb_green_n [get_bd_ports green_n_0]
+set_property name rgb_blue_n [get_bd_ports blue_n_0]
+save_bd_design
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+catch { config_ip_cache -export [get_ips -all main_design_xbar_1] }
+catch { config_ip_cache -export [get_ips -all main_design_rgb_led_ctrl_0_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+launch_runs main_design_rgb_led_ctrl_0_0_synth_1 main_design_xbar_1_synth_1 -jobs 4
+wait_on_run main_design_rgb_led_ctrl_0_0_synth_1
+wait_on_run main_design_xbar_1_synth_1
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property location {3586 912} [get_bd_ports rgb_red_n]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins noip_ctrl_0/clk_spi_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:div_gen:5.1 div_gen_0
+endgroup
+delete_bd_objs [get_bd_cells div_gen_0]
+startgroup
+set_property -dict [list \
+  CONFIG.PCW_EN_CLK2_PORT {1} \
+  CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {12} \
+] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins noip_ctrl_0/clk_spi_in]
+save_bd_design
+close_bd_design [get_bd_designs main_design]
+close_design
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+launch_runs main_design_processing_system7_0_0_synth_1 -jobs 4
+wait_on_run main_design_processing_system7_0_0_synth_1
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+startgroup
+set_property package_pin "" [get_ports [list  noip_sck]]
+place_ports noip_mosi1 V13
+endgroup
+place_ports noip_sck T15
+startgroup
+set_property package_pin "" [get_ports [list  {noip_ss[0]}]]
+place_ports noip_sck1 T10
+endgroup
+place_ports noip_miso U13
+save_constraints
+place_ports {noip_ss[1]} T14
+place_ports {noip_ss[0]} V10
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgb_blue_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgb_green_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgb_red_n]]
+startgroup
+set_property package_pin "" [get_ports [list  {sw_enable_n[1]}]]
+place_ports {noip_monitor1[1]} P14
+endgroup
+save_constraints
+place_ports {sw_enable_n[1]} T11
+place_ports rgb_blue_n R14
+place_ports rgb_green_n Y16
+place_ports rgb_red_n Y17
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list clk_test_port]]
+set_property iostandard LVCMOS33 [get_ports [list clk_test_port]]
+save_constraints
+close_design
+delete_bd_objs [get_bd_ports clk_test_port]
+save_bd_design
+generate_target all [get_files  /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_us_df_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slid_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_0] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_1] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_k_2] }
+catch { config_ip_cache -export [get_ips -all main_design_auto_ss_slidr_2] }
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd]
+export_simulation -of_objects [get_files /home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd] -directory /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/ZTurnV2/ZTurnV2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/ZTurnV2/ZTurnV2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_bd_design [get_bd_designs main_design]
+reset_run impl_1

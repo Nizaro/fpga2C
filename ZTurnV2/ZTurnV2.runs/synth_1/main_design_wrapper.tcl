@@ -56,10 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
 
@@ -89,21 +85,8 @@ set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZT
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_proc_sys_reset_0_0/main_design_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_ooc.xdc]
@@ -114,13 +97,26 @@ set_property used_in_synthesis false [get_files -all /home/nothon/fpga2C/ZTurnV2
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_selectio_wiz_0_2/main_design_selectio_wiz_0_2.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/main_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }

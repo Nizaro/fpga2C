@@ -51,7 +51,12 @@ vcom -work proc_sys_reset_v5_0_15 -93  -incr \
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_proc_sys_reset_0_0/sim/main_design_proc_sys_reset_0_0.vhd" \
 "../../../bd/main_design/ip/main_design_xbar_1/main_design_xbar_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_2/main_design_xbar_2_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" \
 "../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" \
 "../../../bd/main_design/ipshared/bb94/hdl/noip_lvds_stream.vhd" \
@@ -66,10 +71,22 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_noip_lvds_stream_0_1/sim/main_design_noip_lvds_stream_0_1.vhd" \
 "../../../bd/main_design/ip/main_design_axi_dma_0_0_1/main_design_axi_dma_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_3/main_design_xbar_3_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_xbar_4/main_design_xbar_4_sim_netlist.vhdl" \
 
 vlog -work xlconcat_v2_1_6  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
+"../../../bd/main_design/ip/main_design_s_arb_req_suppress_concat_0/sim/main_design_s_arb_req_suppress_concat_0.v" \
+
+vcom -work xil_defaultlib -93  -incr \
+"../../../bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl" \
+"../../../bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl" \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
 "../../../bd/main_design/ip/main_design_xlconcat_0_0/sim/main_design_xlconcat_0_0.v" \
@@ -107,24 +124,10 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/main_design/ip/main_design_lvds_selectio_data_0_0/main_design_lvds_selectio_data_0_0_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_fifo_generator_0_1/main_design_fifo_generator_0_1_sim_netlist.vhdl" \
 "../../../bd/main_design/ip/main_design_fifo_0_1/main_design_fifo_0_1_sim_netlist.vhdl" \
+"../../../bd/main_design/ipshared/432e/hdl/rgb_led_ctrl_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../bd/main_design/ipshared/432e/hdl/rgb_led_ctrl.vhd" \
+"../../../bd/main_design/ip/main_design_rgb_led_ctrl_0_0/sim/main_design_rgb_led_ctrl_0_0.vhd" \
 "../../../bd/main_design/sim/main_design.vhd" \
-"../../../bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_us_df_0/main_design_auto_us_df_0_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_us_df_1/main_design_auto_us_df_1_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_us_df_2/main_design_auto_us_df_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_slid_0/main_design_auto_ss_slid_0_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_k_0/main_design_auto_ss_k_0_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_slidr_0/main_design_auto_ss_slidr_0_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_k_1/main_design_auto_ss_k_1_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_slidr_1/main_design_auto_ss_slidr_1_sim_netlist.vhdl" \
-
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/b28c/hdl" "+incdir+../../../../ZTurnV2.gen/sources_1/bd/main_design/ipshared/434f/hdl" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l xlconcat_v2_1_6 -l xlslice_v1_0_4 \
-"../../../bd/main_design/ip/main_design_s_arb_req_suppress_concat_0/sim/main_design_s_arb_req_suppress_concat_0.v" \
-
-vcom -work xil_defaultlib -93  -incr \
-"../../../bd/main_design/ip/main_design_auto_ss_k_2/main_design_auto_ss_k_2_sim_netlist.vhdl" \
-"../../../bd/main_design/ip/main_design_auto_ss_slidr_2/main_design_auto_ss_slidr_2_sim_netlist.vhdl" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

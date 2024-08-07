@@ -6,5 +6,4 @@
 - settings in flash
 - ILA?
 - MIO reset (for ENET)?
-- SelectIO?
 - C bootup sequence

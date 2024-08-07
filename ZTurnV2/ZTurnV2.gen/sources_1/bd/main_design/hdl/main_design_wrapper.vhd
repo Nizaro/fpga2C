@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
---Date        : Tue Aug  6 15:17:12 2024
+--Date        : Wed Aug  7 11:26:43 2024
 --Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 --Command     : generate_target main_design_wrapper.bd
 --Design      : main_design_wrapper
@@ -37,7 +37,6 @@ entity main_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     I2C0_SCL : inout STD_LOGIC;
     I2C0_SDA : inout STD_LOGIC;
-    clk_test_port : out STD_LOGIC;
     hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
     hdmi_de : out STD_LOGIC;
     hdmi_hsync : out STD_LOGIC;
@@ -79,6 +78,9 @@ entity main_design_wrapper is
     noip_sck1 : out STD_LOGIC;
     noip_ss : out STD_LOGIC_VECTOR ( 0 to 1 );
     noip_trigger : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rgb_blue_n : out STD_LOGIC;
+    rgb_green_n : out STD_LOGIC;
+    rgb_red_n : out STD_LOGIC;
     sw_enable_n : out STD_LOGIC_VECTOR ( 0 to 1 );
     vdd18_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
     vdd33_toggle : out STD_LOGIC_VECTOR ( 0 to 1 );
@@ -147,7 +149,6 @@ architecture STRUCTURE of main_design_wrapper is
     lvds_dout3_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_sync_1_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     lvds_sync_1_n : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_test_port : out STD_LOGIC;
     noip_mosi1 : out STD_LOGIC;
     noip_sck1 : out STD_LOGIC;
     hdmi_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -157,7 +158,10 @@ architecture STRUCTURE of main_design_wrapper is
     hdmi_pclk : out STD_LOGIC;
     hdmi_int : inout STD_LOGIC;
     I2C0_SDA : inout STD_LOGIC;
-    I2C0_SCL : inout STD_LOGIC
+    I2C0_SCL : inout STD_LOGIC;
+    rgb_green_n : out STD_LOGIC;
+    rgb_red_n : out STD_LOGIC;
+    rgb_blue_n : out STD_LOGIC
   );
   end component main_design;
 begin
@@ -186,7 +190,6 @@ main_design_i: component main_design
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       I2C0_SCL => I2C0_SCL,
       I2C0_SDA => I2C0_SDA,
-      clk_test_port => clk_test_port,
       hdmi_data(15 downto 0) => hdmi_data(15 downto 0),
       hdmi_de => hdmi_de,
       hdmi_hsync => hdmi_hsync,
@@ -228,6 +231,9 @@ main_design_i: component main_design
       noip_sck1 => noip_sck1,
       noip_ss(0 to 1) => noip_ss(0 to 1),
       noip_trigger(1 downto 0) => noip_trigger(1 downto 0),
+      rgb_blue_n => rgb_blue_n,
+      rgb_green_n => rgb_green_n,
+      rgb_red_n => rgb_red_n,
       sw_enable_n(0 to 1) => sw_enable_n(0 to 1),
       vdd18_toggle(0 to 1) => vdd18_toggle(0 to 1),
       vdd33_toggle(0 to 1) => vdd33_toggle(0 to 1),

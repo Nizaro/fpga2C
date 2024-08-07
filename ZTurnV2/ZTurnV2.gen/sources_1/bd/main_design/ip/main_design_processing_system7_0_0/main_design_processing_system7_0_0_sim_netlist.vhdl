@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Tue Aug  6 15:02:54 2024
+-- Date        : Wed Aug  7 10:51:56 2024
 -- Host        : nothon-Swift-SF314-57 running 64-bit Ubuntu 24.04 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nothon/fpga2C/ZTurnV2/ZTurnV2.gen/sources_1/bd/main_design/ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0_sim_netlist.vhdl
@@ -724,7 +724,7 @@ entity main_design_processing_system7_0_0_processing_system7_v5_5_processing_sys
   attribute C_FCLK_CLK1_BUF : string;
   attribute C_FCLK_CLK1_BUF of main_design_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "TRUE";
   attribute C_FCLK_CLK2_BUF : string;
-  attribute C_FCLK_CLK2_BUF of main_design_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "FALSE";
+  attribute C_FCLK_CLK2_BUF of main_design_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "TRUE";
   attribute C_FCLK_CLK3_BUF : string;
   attribute C_FCLK_CLK3_BUF of main_design_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "FALSE";
   attribute C_GP0_EN_MODIFIABLE_TXN : integer;
@@ -827,7 +827,7 @@ architecture STRUCTURE of main_design_processing_system7_0_0_processing_system7_
   signal \<const0>\ : STD_LOGIC;
   signal ENET0_MDIO_T_n : STD_LOGIC;
   signal ENET1_MDIO_T_n : STD_LOGIC;
-  signal FCLK_CLK_unbuffered : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal FCLK_CLK_unbuffered : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal I2C0_SCL_T_n : STD_LOGIC;
   signal I2C0_SDA_T_n : STD_LOGIC;
   signal I2C1_SCL_T_n : STD_LOGIC;
@@ -1592,7 +1592,6 @@ architecture STRUCTURE of main_design_processing_system7_0_0_processing_system7_
   signal PS7_i_n_7 : STD_LOGIC;
   signal PS7_i_n_700 : STD_LOGIC;
   signal PS7_i_n_705 : STD_LOGIC;
-  signal PS7_i_n_706 : STD_LOGIC;
   signal PS7_i_n_709 : STD_LOGIC;
   signal PS7_i_n_71 : STD_LOGIC;
   signal PS7_i_n_710 : STD_LOGIC;
@@ -1890,6 +1889,7 @@ architecture STRUCTURE of main_design_processing_system7_0_0_processing_system7_
   attribute BOX_TYPE of PS_SRSTB_BIBUF : label is "PRIMITIVE";
   attribute BOX_TYPE of \buffer_fclk_clk_0.FCLK_CLK_0_BUFG\ : label is "PRIMITIVE";
   attribute BOX_TYPE of \buffer_fclk_clk_1.FCLK_CLK_1_BUFG\ : label is "PRIMITIVE";
+  attribute BOX_TYPE of \buffer_fclk_clk_2.FCLK_CLK_2_BUFG\ : label is "PRIMITIVE";
   attribute BOX_TYPE of \genblk13[0].MIO_BIBUF\ : label is "PRIMITIVE";
   attribute BOX_TYPE of \genblk13[10].MIO_BIBUF\ : label is "PRIMITIVE";
   attribute BOX_TYPE of \genblk13[11].MIO_BIBUF\ : label is "PRIMITIVE";
@@ -2080,7 +2080,6 @@ begin
   EVENT_STANDBYWFE(0) <= \<const0>\;
   EVENT_STANDBYWFI(1) <= \<const0>\;
   EVENT_STANDBYWFI(0) <= \<const0>\;
-  FCLK_CLK2 <= \<const0>\;
   FCLK_CLK3 <= \<const0>\;
   FCLK_RESET2_N <= \<const0>\;
   FCLK_RESET3_N <= \<const0>\;
@@ -3467,8 +3466,7 @@ PS7_i: unisim.vcomponents.PS7
       EVENTSTANDBYWFI(1) => PS7_i_n_238,
       EVENTSTANDBYWFI(0) => PS7_i_n_239,
       FCLKCLK(3) => PS7_i_n_705,
-      FCLKCLK(2) => PS7_i_n_706,
-      FCLKCLK(1 downto 0) => FCLK_CLK_unbuffered(1 downto 0),
+      FCLKCLK(2 downto 0) => FCLK_CLK_unbuffered(2 downto 0),
       FCLKCLKTRIGN(3 downto 0) => B"0000",
       FCLKRESETN(3) => PS7_i_n_709,
       FCLKRESETN(2) => PS7_i_n_710,
@@ -4572,6 +4570,11 @@ PS_SRSTB_BIBUF: unisim.vcomponents.BIBUF
       I => FCLK_CLK_unbuffered(1),
       O => FCLK_CLK1
     );
+\buffer_fclk_clk_2.FCLK_CLK_2_BUFG\: unisim.vcomponents.BUFG
+     port map (
+      I => FCLK_CLK_unbuffered(2),
+      O => FCLK_CLK2
+    );
 \genblk13[0].MIO_BIBUF\: unisim.vcomponents.BIBUF
      port map (
       IO => buffered_MIO(0),
@@ -5443,6 +5446,7 @@ entity main_design_processing_system7_0_0 is
     S_AXI_HP0_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
+    FCLK_CLK2 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     FCLK_RESET1_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -5529,7 +5533,6 @@ architecture STRUCTURE of main_design_processing_system7_0_0 is
   signal NLW_inst_ENET1_SOF_RX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_ENET1_SOF_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_EVENT_EVENTO_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_FCLK_CLK2_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_FCLK_CLK3_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_FCLK_RESET2_N_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_FCLK_RESET3_N_UNCONNECTED : STD_LOGIC;
@@ -5781,7 +5784,7 @@ architecture STRUCTURE of main_design_processing_system7_0_0 is
   attribute C_FCLK_CLK1_BUF : string;
   attribute C_FCLK_CLK1_BUF of inst : label is "TRUE";
   attribute C_FCLK_CLK2_BUF : string;
-  attribute C_FCLK_CLK2_BUF of inst : label is "FALSE";
+  attribute C_FCLK_CLK2_BUF of inst : label is "TRUE";
   attribute C_FCLK_CLK3_BUF : string;
   attribute C_FCLK_CLK3_BUF of inst : label is "FALSE";
   attribute C_GP0_EN_MODIFIABLE_TXN : integer;
@@ -5893,6 +5896,8 @@ architecture STRUCTURE of main_design_processing_system7_0_0 is
   attribute X_INTERFACE_PARAMETER of FCLK_CLK0 : signal is "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 187500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of FCLK_CLK1 : signal is "xilinx.com:signal:clock:1.0 FCLK_CLK1 CLK";
   attribute X_INTERFACE_PARAMETER of FCLK_CLK1 : signal is "XIL_INTERFACENAME FCLK_CLK1, FREQ_HZ 71428566, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of FCLK_CLK2 : signal is "xilinx.com:signal:clock:1.0 FCLK_CLK2 CLK";
+  attribute X_INTERFACE_PARAMETER of FCLK_CLK2 : signal is "XIL_INTERFACENAME FCLK_CLK2, FREQ_HZ 12000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_design_processing_system7_0_0_FCLK_CLK2, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of FCLK_RESET0_N : signal is "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST";
   attribute X_INTERFACE_PARAMETER of FCLK_RESET0_N : signal is "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of FCLK_RESET1_N : signal is "xilinx.com:signal:reset:1.0 FCLK_RESET1_N RST";
@@ -6142,7 +6147,7 @@ inst: entity work.main_design_processing_system7_0_0_processing_system7_v5_5_pro
       EVENT_STANDBYWFI(1 downto 0) => NLW_inst_EVENT_STANDBYWFI_UNCONNECTED(1 downto 0),
       FCLK_CLK0 => FCLK_CLK0,
       FCLK_CLK1 => FCLK_CLK1,
-      FCLK_CLK2 => NLW_inst_FCLK_CLK2_UNCONNECTED,
+      FCLK_CLK2 => FCLK_CLK2,
       FCLK_CLK3 => NLW_inst_FCLK_CLK3_UNCONNECTED,
       FCLK_CLKTRIG0_N => '0',
       FCLK_CLKTRIG1_N => '0',

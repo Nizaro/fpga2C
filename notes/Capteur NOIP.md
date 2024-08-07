@@ -37,7 +37,7 @@ io1_i = sensor's miso
 sck_o = sensor's sck
 ss_o = sensor's ss
 
-f_spi_sck voulue côté capteur : 10 MHz ?
+f_spi_sck voulue côté capteur : 12 MHz ?
 Du moins fin/fspi >= 6, comme fin_pll = 72M, f_spi <= 12 M.
 ## Config
 

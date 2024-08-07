@@ -80,6 +80,8 @@ On a donc les paramètres suivants :
 - B = 0.2104 
 - D > 0.4
 
+## Annexe 3 : Exporter le PCB
+
 # Sources
 
 Les documents dans `doc/PCB_LVDS` sont de sources diverses, dont Altera, Xilinx, Texas Instruments, NXP, et Analog Devices.

@@ -1,5 +1,5 @@
 
-# Utilisation de Vivado
+# Vivado
 
 ## Contexte
 
@@ -25,9 +25,9 @@ Elle est complètement à ignorer : leur synthèse fonctionne normalement.
 ## Fonctionnement de Vitis
 
 Tout design utilisant une IP de processeur Xilinx (dans notre cas, le Zynq Processing System, mais pour les cartes UltraScale c'est le processeur MicroBlaze) peut être programmée à travers l'IDE Vitis. Il permet de programmer le processeur avec du code en C ou en C++, et aussi de faire du HLS (*High Level Synthesis*).
-Un workspace Vitis contient différents éléments
-Une **plateforme** est la partie "hardware" du projet, 
-Une **application**
+Un workspace Vitis contient différents éléments : 
+Une **plateforme** est la partie "hardware" du projet, qui contient les informations du processeur et les addresses des périphériques présents dans le design.
+Une **application** contient un code exécutable par un processeur Xilinx, et est donc une couche d'abstraction au dessus de la plateforme dont elle hérite.
 
 ## Workflow
 
@@ -46,9 +46,3 @@ Le workflow serait donc :
 
 [How to Install Vitis and Petalinux 2024.1](https://www.fpgadeveloper.com/how-to-install-vitis-and-petalinux-2024.1/)
 [Vitis Docs - Zynq-7000 Embedded Design Tutorial](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2023.1/build/html/docs/Introduction/Zynq7000-EDT/Zynq7000-EDT.html)
-
-## Pour une installation des outils Xilinx sur Ubuntu
-
-[Installing Vivado 2020.x on Ubuntu 20.04](https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/) - fonctionne pour toutes les versions post-2020.
-`source /tools/Xilinx/Vivado/2024.1/settings64.sh` puis `vivado`. Fonctionne également avec Vitis.
-**Attention !** sur un système Linux il est très conseillé de [créer un fichier de mémoire swap](https://linuxize.com/post/create-a-linux-swap-file/) pour éviter que Vivado ne crashe pendant la synthèse - 10 à 16 GB supplémentaires suffisent.

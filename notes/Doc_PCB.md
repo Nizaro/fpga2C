@@ -27,7 +27,9 @@ Une fois tout cela routé, il faut relier les plans de masse et d'alimentation e
 Une partie importante de notre design est de limiter le *skew* (décalage temporel) entre les signaux et leur horloge, voire entre certains signaux eux-mêmes. Comme l'impédance des pistes est constante sur tout le circuit, la vitesse des signaux est la même, et donc que pour faire arriver deux signaux au même moment, il faut rendre leurs longueurs de piste égales. L'outil de tuning de KiCad peut faire cela : il suffit de noter la longueur de la piste la plus longue (on ne peut pas facilement raccourcir des pistes), puis de rallonger les autres pistes avec l'outil, qui crée des "accordéons". Cette pratique permet de synchroniser toutes les paires LVDS et les signaux SPI avec leurs horloges, et de rendre les deux triggers simultanés pour permettre une prise de vue synchronisée chez les deux capteurs. 
 
 Après le design d'une première version, il a été décidé de séparer le PCB en deux : une carte principale et une *breakout board* qui contiendrait un capteur. Les deux seraient reliés par des connecteurs. Ainsi, toute erreur sur la carte principale ne nécessiterait pas de jeter les capteurs, qui sont soudés en CLCC et donc très difficiles à enlever d'un PCB défectueux.
-Pour connecter le breakout au PCB principal
+Pour connecter le breakout au PCB principal, on utilise des connecteurs
+
+Note additionnelle sur le PCB principal : il peut paraître étrang
 
 # BOM
 
@@ -82,6 +84,25 @@ On a donc les paramètres suivants :
 
 ## Annexe 3 : Exporter le PCB
 
+Référence : [JLCPCB - How to generate Gerber and Drill files in KiCad 7](https://jlcpcb.com/help/article/how-to-generate-gerber-and-drill-files-in-kicad-7)
+Pour les Gerbers : Dans le PCB Editor, faire "File->Fabrication Outputs->Gerbers." Les paramètres sont :
+![[Kicad_Export_Gerber.png]]
+
+Pour les drl, choisir "Drill Files" et saisir les paramètres suivants :
+![[Kicad_Export_Drill.png]]
+## Annexe 4 : Paramètres chez JLCPCB
+
+https://cart.jlcpcb.com/quote
+
+Les paramètres à modifier pour la commande sont : 
+- Layers : 4
+- Dimensions : 128.79 x 67 mm pour **MainBoard**, 29 x 37.75 mm pour **Breakout** (amenés à changer en cas de changement du design)
+- Impedance Control : Yes
+- Layer Stackup : JLC04161H-7628 (la première option après "No Requirement")
+
+Les paramètres à changer dans la section "Assembly" sont :
+- PCBA Type : Standard
+- Assembly Side : Both Sides
 # Sources
 
 Les documents dans `doc/PCB_LVDS` sont de sources diverses, dont Altera, Xilinx, Texas Instruments, NXP, et Analog Devices.

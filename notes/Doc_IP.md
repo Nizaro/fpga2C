@@ -31,6 +31,10 @@ Bits 1~0 : **ResCode**
 
 Pour pouvoir configurer le PYTHON1300, on a du réécrire toute une IP SPI, car la méthode de communication avec le capteur diffère de ce que les IPs de Xilinx peuvent fournir.
 Non seulement 
+
+# rgb_led_ctrl
+
+Cette IP est une simple entité qui permet d'afficher une couleur sur la LED RGB de la Z-Turn en fonction de certains signaux du design. 
 # Sources
 
 [FPGA Developer - Creating a custom IP block in Vivado](https://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html/)

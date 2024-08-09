@@ -12,7 +12,7 @@ Temps AXIS pour une ligne de 1280 pixels, profondeur 10-bits : 12800 / 32 = 400 
 
 # Considérations de mémoire
 
-En plus du problème de la vitesse de transfert de l'image vers le processeur, la taille de l'image complète est également à considérer. La résolution maximale du PYTHON1300 est de 1280x1024. Avec une profondeur d'image de 10 bits, chaque image prend 1638400 octets (soit 1.5 Mo). Les deux images prendraient donc un peu plus de 3 Mo : or la BRAM de la partie FPGA du système ne peut stocker que 5 Mo, et est déjà utilisée par la partie opérative du design (notamment le DMA)
+En plus du problème de la vitesse de transfert de l'image vers le processeur, la taille de l'image complète est également à considérer. La résolution maximale du PYTHON1300 est de 1280x1024. Avec une profondeur d'image de 10 bits, chaque image prend 1638400 octets (soit 1.5 Mo). Les deux images prendraient donc un peu plus de 3 Mo : or la BRAM de la partie FPGA du système ne peut stocker que 5 Mo, et est déjà utilisée par la partie opérative du design (notamment le DMA).
 
 # Désérialisation
 

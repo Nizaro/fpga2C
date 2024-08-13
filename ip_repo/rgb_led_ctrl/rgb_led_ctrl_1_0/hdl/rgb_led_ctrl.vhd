@@ -127,7 +127,7 @@ rgb_led_ctrl_slave_lite_v1_0_S00_AXI_inst : rgb_led_ctrl_slave_lite_v1_0_S00_AXI
 
 	-- Add user logic here
 
-	rgb_val <= white;
+	
 
 	red_n <= not rgb_val(0);
 	blue_n <= not rgb_val(1);

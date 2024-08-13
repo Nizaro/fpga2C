@@ -4,14 +4,17 @@
 ## Contexte
 
 La carte utilisée ici, la MYIR Z-Turn V2, est basée sur le system-on-chip Zynq-7020, fabriqué par Xilinx, qui contient un processeur Cortex-A9 et une FPGA Artix-7 dans la même puce. Il est donc nécessaire d'utiliser les logiciels Vivado et Vitis, qui constituent le toolchain propriétaire de AMD/Xilinx pour tous leurs produits programmables.
-Sur une architecture comme le Zynq-7020, il est possible d'utiliser le "Block Design" de Vivado, un utilitaire qui permet d'assembler différentes IP matérielles dans un seul schéma, en traçant des bus et des interfaces pour les connecter. Il permet aussi d'instancier le **Zynq Processing System**, un processeur soft-core qui tourne sur le Cortex-A9, mais qui présente une forte interconnection avec la partie FPGA du SoC. Cela permet de programmer la carte avec des instructions complexes en C ou en C++, voire avec un OS embarqué - le Zynq utilise PetaLinux.
+Sur une architecture comme le Zynq-7020, il est possible d'utiliser le "Block Design" de Vivado, un utilitaire qui permet d'assembler différentes IP matérielles dans un seul schéma, en traçant des bus et des interfaces pour les connecter. Il permet aussi d'instancier le **Zynq Processing System**, un processeur soft-core qui tourne sur le Cortex-A9, mais qui présente une forte interconnection avec la partie FPGA du SoC. Cela permet de programmer la carte avec des instructions complexes en C ou en C++, voire avec un OS embarqué - le Zynq utilise PetaLinux, une version de Linux embarqué crée par Xilinx.
 
 ## Le design
 
 L'objectif principal de notre design sur FPGA est d'assurer une bonne acquisition de l'image depuis les capteurs. Il y a plusieurs considérations à prendre en compte : déjà, il faudra réaliser une IP matérielle personnalisée à notre cas d'usage, qui pourra faire l'interface entre les capteurs et le processeur. Le choix de l'interface entre les deux est également important : Xilinx propose le bus AXI et ses sous types pour une interface rapide entre toute IP et le processeur . Le capteur PYTHON1300 a un débit idéal maximal de 720 Mb/s : nous choisirons donc l'interface AXI-Stream, adaptée au *streaming* continu de données à haut débit.
 L'utilisation du bus AXI-Stream nécessite l'utilisation d'une IP de Xilinx importante : le DMA (Direct Memory Access). Cela veut dire que toutes les données l'IP `noip_lvds_stream`se situent dans "le domaine mémoire", et que le bus AXI-Stream les rapatrie vers "le domaine logique".
 
-Le design principal (le processeur et nos IPs) est entouré d'IPs qui
+Le design principal (le processeur et nos IPs) est entouré d'IPs qui permettent son bon fonctionnement : accesseur mémoire, manipulateurs logiques, déserialiseurs, buffers...
+
+Une autre partie importante du projet est son fichier de contraintes : **elab_constraints.xdc**. Il s'agit du fichier qui associe chaque signal virtuel à sa pin dans le FPGA - ainsi que d'autres informations comme le standard I/O de chaque pin et
+**Ne surtout pas le modifier à la main**, uniquement à travers les outils d'élaboration et d'implémentation de Vivado.
 
 Note : il se peut que les inverseurs (IP "Utility Vector Logic") donnent cette erreur à la génération du Block Design :
 ```

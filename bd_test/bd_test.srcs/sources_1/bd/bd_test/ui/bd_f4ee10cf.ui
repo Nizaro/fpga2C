@@ -1,0 +1,57 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.66128",
+   "Default View_TopLeft":"-624,-594",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port M00_AXIS -pg 1 -lvl 5 -x 1260 -y -430 -defaultsOSRD
+preplace port port-id_monitor0 -pg 1 -lvl 0 -x -230 -y -610 -defaultsOSRD
+preplace port port-id_monitor1 -pg 1 -lvl 0 -x -230 -y -640 -defaultsOSRD
+preplace port port-id_m00_axis_aresetn -pg 1 -lvl 0 -x -230 -y -360 -defaultsOSRD
+preplace port port-id_m00_axis_aclk -pg 1 -lvl 0 -x -230 -y -300 -defaultsOSRD
+preplace port port-id_s00_axis_aresetn -pg 1 -lvl 0 -x -230 -y -270 -defaultsOSRD
+preplace port port-id_s00_axis_aclk -pg 1 -lvl 0 -x -230 -y -330 -defaultsOSRD
+preplace port port-id_trigger0 -pg 1 -lvl 5 -x 1260 -y -550 -defaultsOSRD
+preplace port port-id_s00_axis_tvalid -pg 1 -lvl 0 -x -230 -y -210 -defaultsOSRD
+preplace port port-id_s00_axis_tlast -pg 1 -lvl 0 -x -230 -y -240 -defaultsOSRD
+preplace port port-id_s00_axis_tready -pg 1 -lvl 5 -x 1260 -y -590 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -230 -y -390 -defaultsOSRD
+preplace port port-id_lvds_clk -pg 1 -lvl 0 -x -230 -y -420 -defaultsOSRD
+preplace port port-id_lvds_sync -pg 1 -lvl 0 -x -230 -y -450 -defaultsOSRD
+preplace portBus s00_axis_tstrb -pg 1 -lvl 0 -x -230 -y -560 -defaultsOSRD
+preplace portBus s00_axis_tdata -pg 1 -lvl 0 -x -230 -y -530 -defaultsOSRD
+preplace portBus lvds_data -pg 1 -lvl 0 -x -230 -y -490 -defaultsOSRD
+preplace inst selectio_wiz_0 -pg 1 -lvl 2 -x 330 -y -450 -defaultsOSRD
+preplace inst noip_lvds_stream_0 -pg 1 -lvl 3 -x 740 -y -380 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 4 -x 1100 -y -460 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x -40 -y -480 -defaultsOSRD
+preplace netloc noip_lvds_stream_0_fifo_srst 1 3 1 940 -430n
+preplace netloc selectio_wiz_0_data_in_to_device 1 2 1 510 -440n
+preplace netloc Net 1 2 2 580 -580 940
+preplace netloc monitor0_0_1 1 0 3 -200J -350 N -350 NJ
+preplace netloc monitor1_0_1 1 0 3 -190J -330 N -330 NJ
+preplace netloc m00_axis_aresetn_0_1 1 0 3 NJ -360 60 -250 NJ
+preplace netloc m00_axis_aclk_0_1 1 0 3 NJ -300 N -300 510J
+preplace netloc s00_axis_aresetn_0_1 1 0 3 NJ -270 80 -290 NJ
+preplace netloc s00_axis_aclk_0_1 1 0 3 -210J -320 N -320 550J
+preplace netloc noip_lvds_stream_0_trigger0 1 3 2 900J -550 NJ
+preplace netloc noip_lvds_stream_0_bitslip 1 1 3 150 -570 NJ -570 890
+preplace netloc s00_axis_tvalid_0_1 1 0 3 -180J -340 N -340 530J
+preplace netloc s00_axis_tlast_0_1 1 0 3 -170J -310 N -310 520J
+preplace netloc s00_axis_tstrb_0_1 1 0 3 NJ -560 N -560 520J
+preplace netloc s00_axis_tdata_0_1 1 0 3 -210J -550 N -550 510J
+preplace netloc noip_lvds_stream_0_s00_axis_tready 1 2 3 590 -590 NJ -590 NJ
+preplace netloc clk_reset_0_1 1 0 2 N -390 140
+preplace netloc clk_in_0_1 1 0 2 -210 -410 60
+preplace netloc xlconcat_0_dout 1 1 1 60 -490n
+preplace netloc In0_0_1 1 0 1 N -490
+preplace netloc lvds_sync_1 1 0 1 -210 -470n
+preplace netloc noip_lvds_stream_0_fifo_write 1 3 1 920 -490n
+preplace netloc noip_lvds_stream_0_fifo_read 1 3 1 930 -470n
+preplace netloc noip_lvds_stream_0_M00_AXIS 1 3 2 910J -370 1240J
+levelinfo -pg 1 -230 -40 330 740 1100 1260
+pagesize -pg 1 -db -bbox -sgen -420 -710 1430 160
+"
+}
+

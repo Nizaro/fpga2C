@@ -27,9 +27,9 @@ Une fois tout cela routé, il faut relier les plans de masse et d'alimentation e
 Une partie importante de notre design est de limiter le *skew* (décalage temporel) entre les signaux et leur horloge, voire entre certains signaux eux-mêmes. Comme l'impédance des pistes est constante sur tout le circuit, la vitesse des signaux est la même, et donc que pour faire arriver deux signaux au même moment, il faut rendre leurs longueurs de piste égales. L'outil de tuning de KiCad peut faire cela : il suffit de noter la longueur de la piste la plus longue (on ne peut pas facilement raccourcir des pistes), puis de rallonger les autres pistes avec l'outil, qui crée des "accordéons". Cette pratique permet de synchroniser toutes les paires LVDS et les signaux SPI avec leurs horloges, et de rendre les deux triggers simultanés pour permettre une prise de vue synchronisée chez les deux capteurs. 
 
 Après le design d'une première version, il a été décidé de séparer le PCB en deux : une carte principale et une *breakout board* qui contiendrait un capteur. Les deux seraient reliés par des connecteurs. Ainsi, toute erreur sur la carte principale ne nécessiterait pas de jeter les capteurs, qui sont soudés en CLCC et donc très difficiles à enlever d'un PCB défectueux.
-Pour connecter le breakout au PCB principal, on utilise des connecteurs
+Pour connecter le breakout au PCB principal, on utilise des connecteurs SAMTEC.
 
-Note additionnelle sur le PCB principal : il peut paraître étrang
+Note additionnelle sur le PCB principal : le routage du connecteur
 
 # BOM
 

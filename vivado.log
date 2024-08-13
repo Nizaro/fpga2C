@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Aug  9 09:15:57 2024
-# Process ID: 14173
+# Start of session at: Fri Aug  9 15:31:21 2024
+# Process ID: 76446
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,16 +13,15 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3239.825 MHz
+# CPU Frequency     :3350.751 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :25206 MB
+# Available Virtual :21785 MB
 #-----------------------------------------------------------
 start_gui
-open_project /home/nothon/fpga2C/ip_repo/rgb_led_ctrl/edit_rgb_led_ctrl_v1_0.xpr
 WARNING: [Board 49-26] cannot add Board Part tul.com.tw:pynqzu:part0:1.1 available at /home/nothon/.Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store/XilinxBoardStore/Vivado/2024.1/boards/TUL/pynqzu/1.1/1.1/board.xml as part xczu5eg-sfvc784-1-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
@@ -109,11 +108,550 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/nothon/fpga2C/ip_repo/rgb_led_ctrl/edit_rgb_led_ctrl_v1_0.gen/sources_1'.
+open_project /home/nothon/fpga2C/bd_test/bd_test.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo/rgb_led_ctrl'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
+INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 7786.699 ; gain = 337.086 ; free physical = 250 ; free virtual = 22934
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  /home/nothon/fpga2C/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
+open_bd_design {/home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd}
+Reading block design file </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd>...
+Successfully read diagram <bd_test> from block design file </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd>
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:selectio_wiz:5.1 selectio_wiz_0
+INFO: [Device 21-403] Loading part xc7z020iclg400-1L
+INFO: [Device 21-9227] Part: xc7z020iclg400-1L does not have CEAM library.
+The HP banks in device are  && local var set to 0 && devicetype is 3
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:noip_lvds_stream:1.0 noip_lvds_stream_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+endgroup
+set_property location {1 208 -249} [get_bd_cells selectio_wiz_0]
+The HP banks in device are  && local var set to 0 && devicetype is 3
+The HP banks in device are  && local var set to 0 && devicetype is 3
+The HP banks in device are  && local var set to 0 && devicetype is 3
+set_property -dict [list \
+  CONFIG.BUS_IO_STD {LVCMOS33} \
+  CONFIG.CLK_FWD_IO_STD {LVCMOS33} \
+  CONFIG.SELIO_CLK_IO_STD {LVCMOS33} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SERIALIZATION_FACTOR {4} \
+  CONFIG.SYSTEM_DATA_WIDTH {5} \
+  CONFIG.USE_SERIALIZATION {true} \
+] [get_bd_cells selectio_wiz_0]
+The HP banks in device are  && local var set to 0 && devicetype is 3
+set_property location {1 188 -449} [get_bd_cells fifo_generator_0]
+set_property location {1 22 -270} [get_bd_cells selectio_wiz_0]
+connect_bd_net [get_bd_pins fifo_generator_0/srst] [get_bd_pins noip_lvds_stream_0/fifo_srst]
+set_property location {1 54 -267} [get_bd_cells selectio_wiz_0]
+set_property location {2.5 1074 -462} [get_bd_cells fifo_generator_0]
+set_property location {1 125 -453} [get_bd_cells selectio_wiz_0]
+The HP banks in device are  && local var set to 0 && devicetype is 3
+The HP banks in device are  && local var set to 0 && devicetype is 3
+set_property -dict [list \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {5} \
+] [get_bd_cells selectio_wiz_0]
+connect_bd_net [get_bd_pins selectio_wiz_0/data_in_to_device] [get_bd_pins noip_lvds_stream_0/lvds_deserialized]
+connect_bd_intf_net [get_bd_intf_pins fifo_generator_0/FIFO_WRITE] [get_bd_intf_pins noip_lvds_stream_0/fifo_write]
+connect_bd_intf_net [get_bd_intf_pins noip_lvds_stream_0/fifo_read] [get_bd_intf_pins fifo_generator_0/FIFO_READ]
+connect_bd_net [get_bd_pins fifo_generator_0/clk] [get_bd_pins noip_lvds_stream_0/lvds_clk_div]
+save_bd_design
+WARNING: [BD 41-597] NET <Net> has no source
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+connect_bd_net [get_bd_pins selectio_wiz_0/clk_div_out] [get_bd_pins fifo_generator_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/monitor0] [get_bd_pins noip_lvds_stream_0/monitor1]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/m00_axis_aresetn] [get_bd_pins noip_lvds_stream_0/m00_axis_aclk] [get_bd_pins noip_lvds_stream_0/s00_axis_aresetn] [get_bd_pins noip_lvds_stream_0/s00_axis_aclk] [get_bd_pins noip_lvds_stream_0/trigger0]
+endgroup
+connect_bd_net [get_bd_pins noip_lvds_stream_0/bitslip] [get_bd_pins selectio_wiz_0/bitslip]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+connect_bd_net [get_bd_pins selectio_wiz_0/clk_reset] [get_bd_pins selectio_wiz_0/io_reset]
+set_property name monitor1 [get_bd_ports monitor1_0]
+set_property name monitor0 [get_bd_ports monitor0_0]
+set_property name s00_axis_aclk [get_bd_ports s00_axis_aclk_0]
+set_property name m00_axis_aclk [get_bd_ports m00_axis_aclk_0]
+set_property name s00_axis_aresetn [get_bd_ports s00_axis_aresetn_0]
+set_property name m00_axis_aresetn [get_bd_ports m00_axis_aresetn_0]
+set_property name trigger0 [get_bd_ports trigger0_0]
+startgroup
+make_bd_pins_external  [get_bd_pins noip_lvds_stream_0/s00_axis_tvalid] [get_bd_pins noip_lvds_stream_0/s00_axis_tlast] [get_bd_pins noip_lvds_stream_0/s00_axis_tstrb] [get_bd_pins noip_lvds_stream_0/s00_axis_tdata] [get_bd_pins noip_lvds_stream_0/s00_axis_tready]
+WARNING: [BD 41-1306] The connection to interface pin </noip_lvds_stream_0/s00_axis_tvalid> is being overridden by the user with net <s00_axis_tvalid_0_1>. This pin will not be connected as a part of interface connection <S00_AXIS>.
+WARNING: [BD 41-1306] The connection to interface pin </noip_lvds_stream_0/s00_axis_tlast> is being overridden by the user with net <s00_axis_tlast_0_1>. This pin will not be connected as a part of interface connection <S00_AXIS>.
+WARNING: [BD 41-1306] The connection to interface pin </noip_lvds_stream_0/s00_axis_tstrb> is being overridden by the user with net <s00_axis_tstrb_0_1>. This pin will not be connected as a part of interface connection <S00_AXIS>.
+WARNING: [BD 41-1306] The connection to interface pin </noip_lvds_stream_0/s00_axis_tdata> is being overridden by the user with net <s00_axis_tdata_0_1>. This pin will not be connected as a part of interface connection <S00_AXIS>.
+WARNING: [BD 41-1306] The connection to interface pin </noip_lvds_stream_0/s00_axis_tready> is being overridden by the user with net <noip_lvds_stream_0_s00_axis_tready>. This pin will not be connected as a part of interface connection <S00_AXIS>.
+endgroup
+set_property name s00_axis_tstrb [get_bd_ports s00_axis_tstrb_0]
+set_property name s00_axis_tdata [get_bd_ports s00_axis_tdata_0]
+set_property name s00_axis_tlast [get_bd_ports s00_axis_tlast_0]
+set_property name s00_axis_tvalid [get_bd_ports s00_axis_tvalid_0]
+set_property name s00_axis_tready [get_bd_ports s00_axis_tready_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins noip_lvds_stream_0/M00_AXIS]
+endgroup
+set_property name M00_AXIS [get_bd_intf_ports M00_AXIS_0]
+set_property CONFIG.ASSOCIATED_BUSIF {M00_AXIS} [get_bd_ports /m00_axis_aclk]
+delete_bd_objs [get_bd_nets Net1]
+startgroup
+make_bd_pins_external  [get_bd_pins selectio_wiz_0/clk_reset]
+endgroup
+connect_bd_net [get_bd_ports clk_reset_0] [get_bd_pins selectio_wiz_0/io_reset]
+set_property name reset [get_bd_ports clk_reset_0]
+startgroup
+make_bd_pins_external  [get_bd_pins selectio_wiz_0/clk_in]
+endgroup
+set_property name lvds_clk_in [get_bd_ports clk_in_0]
+set_property name lvds_clk [get_bd_ports lvds_clk_in]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+startgroup
+make_bd_pins_external  [get_bd_pins selectio_wiz_0/data_in_from_pins]
+endgroup
+delete_bd_objs [get_bd_nets data_in_from_pins_0_1] [get_bd_ports data_in_from_pins_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {1 -7 -502} [get_bd_cells xlslice_0]
+set_property name xlslice_data [get_bd_cells xlslice_0]
+copy_bd_objs /  [get_bd_cells {xlslice_data}]
+set_property name xlslice_sync [get_bd_cells xlslice_data1]
+delete_bd_objs [get_bd_cells xlslice_sync]
+delete_bd_objs [get_bd_cells xlslice_data]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {1 -11 -478} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property CONFIG.IN0_WIDTH {4} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins selectio_wiz_0/data_in_from_pins]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In1]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In0]
+endgroup
+set_property name lvds_sync [get_bd_ports In1_0]
+set_property name lvds_data [get_bd_ports In0_0]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+make_wrapper -files [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -top
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+add_files -norecurse /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+file mkdir /home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd w ]
+add_files -fileset sim_1 /home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd
+update_compile_order -fileset sim_1
+make_wrapper -files [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -fileset [get_filesets sources_1] -inst_template
+INFO: [BD 41-1662] The design 'bd_test.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+make_wrapper -files [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -fileset [get_filesets sources_1] -inst_template
+INFO: [BD 41-1662] The design 'bd_test.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+set_property top tb_bd [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd]
+INFO: [BD 41-1662] The design 'bd_test.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block selectio_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block noip_lvds_stream_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fifo_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hw_handoff/bd_test.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.hwdef
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -directory /home/nothon/fpga2C/bd_test/bd_test.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/bd_test/bd_test.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/bd_test/bd_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bd' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_selectio_wiz_0_0/bd_test_selectio_wiz_0_0_selectio_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_test_selectio_wiz_0_0_selectio_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_selectio_wiz_0_0/bd_test_selectio_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_test_selectio_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_fifo_generator_0_0/sim/bd_test_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_test_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_xlconcat_0_0/sim/bd_test_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_test_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_noip_lvds_stream_0_0/sim/bd_test_noip_lvds_stream_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_noip_lvds_stream_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bd'
+ERROR: [VRFC 10-719] formal port/generic <sensor_bit_length> is not declared in <bd_test_wrapper> [/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd:246]
+ERROR: [VRFC 10-1471] type error near lvds_sync ; current type std_logic; expected type std_logic_vector [/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd:254]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd:38]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bd' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_noip_lvds_stream_0_0/sim/bd_test_noip_lvds_stream_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_noip_lvds_stream_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bd'
+ERROR: [VRFC 10-1471] type error near lvds_sync ; current type std_logic; expected type std_logic_vector [/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd:247]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd:38]
+INFO: [VRFC 10-8704] VHDL file '/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+delete_bd_objs [get_bd_nets In1_0_1]
+delete_bd_objs [get_bd_ports lvds_sync]
+create_bd_port -dir I -type data lvds_sync
+connect_bd_net [get_bd_ports lvds_sync] [get_bd_pins xlconcat_0/In1]
+save_bd_design
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/ui/bd_f4ee10cf.ui> 
+generate_target Simulation [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd]
+Wrote  : </home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fifo_generator_0/din'(18) to pin: '/noip_lvds_stream_0/fifo_din'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/noip_lvds_stream_0/fifo_dout'(32) to pin: '/fifo_generator_0/dout'(18) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/selectio_wiz_0/bitslip'(5) to pin '/noip_lvds_stream_0/bitslip'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd
+VHDL Output written to : /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd
+Exporting to file /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hw_handoff/bd_test.hwh
+Generated Hardware Definition File /home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/synth/bd_test.hwdef
+export_ip_user_files -of_objects [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/nothon/fpga2C/bd_test/bd_test.srcs/sources_1/bd/bd_test/bd_test.bd] -directory /home/nothon/fpga2C/bd_test/bd_test.ip_user_files/sim_scripts -ip_user_files_dir /home/nothon/fpga2C/bd_test/bd_test.ip_user_files -ipstatic_source_dir /home/nothon/fpga2C/bd_test/bd_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/modelsim} {questa=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/questa} {xcelium=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/xcelium} {vcs=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/vcs} {riviera=/home/nothon/fpga2C/bd_test/bd_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bd' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_slave_stream_v1_0_S00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_slave_stream_v1_0_S00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream_master_stream_v1_0_M00_AXIS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream_master_stream_v1_0_M00_AXIS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ipshared/bb94/hdl/noip_lvds_stream.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'noip_lvds_stream'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/ip/bd_test_noip_lvds_stream_0_0/sim/bd_test_noip_lvds_stream_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_noip_lvds_stream_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/sim/bd_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.gen/sources_1/bd/bd_test/hdl/bd_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_test_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nothon/fpga2C/bd_test/bd_test.srcs/sim_1/new/tb_bd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bd'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_10.fifo_generator_v13_2_10_bhv_ver_...
+Compiling module fifo_generator_v13_2_10.fifo_generator_v13_2_10_CONV_VER...
+Compiling module fifo_generator_v13_2_10.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.bd_test_fifo_generator_0_0
+Compiling architecture arch_imp of entity xil_defaultlib.noip_lvds_stream_slave_stream_v1_0_S00_AXIS [noip_lvds_stream_slave_stream_v1...]
+Compiling architecture implementation of entity xil_defaultlib.noip_lvds_stream_master_stream_v1_0_M00_AXIS [noip_lvds_stream_master_stream_v...]
+Compiling architecture arch_imp of entity xil_defaultlib.noip_lvds_stream [noip_lvds_stream_default]
+Compiling architecture bd_test_noip_lvds_stream_0_0_arch of entity xil_defaultlib.bd_test_noip_lvds_stream_0_0 [bd_test_noip_lvds_stream_0_0_def...]
+Compiling module unisims_ver.IBUF(IOSTANDARD="LVCMOS33")
+Compiling module unisims_ver.BUFIO
+Compiling module unisims_ver.BUFR(BUFR_DIVIDE="8")
+Compiling module unisims_ver.ISERDESE2(DATA_RATE="SDR",DATA_W...
+Compiling module xil_defaultlib.bd_test_selectio_wiz_0_0_selecti...
+Compiling module xil_defaultlib.bd_test_selectio_wiz_0_0(SYS_W=5...
+Compiling module xlconcat_v2_1_6.xlconcat_v2_1_6_xlconcat(IN0_WID...
+Compiling module xil_defaultlib.bd_test_xlconcat_0_0
+Compiling architecture structure of entity xil_defaultlib.bd_test [bd_test_default]
+Compiling architecture structure of entity xil_defaultlib.bd_test_wrapper [bd_test_wrapper_default]
+Compiling architecture tb of entity xil_defaultlib.tb_bd
+Built simulation snapshot tb_bd_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bd_behav -key {Behavioral:sim_1:Functional:tb_bd} -tclbatch {tb_bd.tcl} -protoinst "protoinst_files/bd_test.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_test.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_bd/workLVDS_stream/bd_test_i//noip_lvds_stream_0/M00_AXIS
+Time resolution is 1 ps
+source tb_bd.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bd_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 8801.824 ; gain = 34.289 ; free physical = 1399 ; free virtual = 20416
+save_wave_config {/home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg
+set_property xsim.view /home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg [get_filesets sim_1]
+save_wave_config {/home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg}
+save_wave_config {/home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bd' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_test.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_bd/workLVDS_stream/bd_test_i//noip_lvds_stream_0/M00_AXIS
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 8861.863 ; gain = 0.000 ; free physical = 1205 ; free virtual = 20237
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_test.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_bd/workLVDS_stream/bd_test_i//noip_lvds_stream_0/M00_AXIS
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8861.863 ; gain = 0.000 ; free physical = 1129 ; free virtual = 20189
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bd_vlog.prj
+xvhdl --incr --relax -prj tb_bd_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/nothon/fpga2C/bd_test/bd_test.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_10 -L xlconcat_v2_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bd_behav xil_defaultlib.tb_bd xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_test.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_bd/workLVDS_stream/bd_test_i//noip_lvds_stream_0/M00_AXIS
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 8861.863 ; gain = 0.000 ; free physical = 1151 ; free virtual = 20210
+save_wave_config {/home/nothon/fpga2C/bd_test/tb_bd_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  9 18:47:21 2024...

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../bd_test.gen/sources_1/bd/bd_test/ip/bd_test_selectio_wiz_0_0/bd_test_selectio_wiz_0_0_selectio_wiz.v" \
+"../../../../bd_test.gen/sources_1/bd/bd_test/ip/bd_test_selectio_wiz_0_0/bd_test_selectio_wiz_0_0.v" \
+"../../../../bd_test.gen/sources_1/bd/bd_test/ip/bd_test_fifo_generator_0_0/sim/bd_test_fifo_generator_0_0.v" \
+"../../../../bd_test.gen/sources_1/bd/bd_test/ip/bd_test_xlconcat_0_0/sim/bd_test_xlconcat_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

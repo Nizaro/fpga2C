@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Sep 26 13:45:29 2024
-# Process ID: 43668
+# Start of session at: Sun Sep 22 14:11:33 2024
+# Process ID: 119192
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,15 +13,16 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3271.766 MHz
+# CPU Frequency     :990.618 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :17136 MB
+# Available Virtual :19310 MB
 #-----------------------------------------------------------
 start_gui
+open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
@@ -107,18 +108,17 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-open_project /home/nothon/fpga2C/ZTurnV2/ZTurnV2.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 8143.211 ; gain = 616.211 ; free physical = 837 ; free virtual = 15332
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 8267.070 ; gain = 820.477 ; free physical = 205 ; free virtual = 17444
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
-Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 8806.184 ; gain = 0.000 ; free physical = 445 ; free virtual = 15004
+Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.19 . Memory (MB): peak = 9080.230 ; gain = 0.000 ; free physical = 410 ; free virtual = 16782
 INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
@@ -141,24 +141,24 @@ WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because
 WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
-Read ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8817.406 ; gain = 0.000 ; free physical = 471 ; free virtual = 15035
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9080.230 ; gain = 0.000 ; free physical = 309 ; free virtual = 16698
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9208.816 ; gain = 0.000 ; free physical = 204 ; free virtual = 14565
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9382.855 ; gain = 0.000 ; free physical = 261 ; free virtual = 16012
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9208.816 ; gain = 0.000 ; free physical = 247 ; free virtual = 14564
-Read PlaceDB: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.45 . Memory (MB): peak = 9216.816 ; gain = 8.000 ; free physical = 233 ; free virtual = 14546
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9216.816 ; gain = 0.000 ; free physical = 233 ; free virtual = 14546
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9382.855 ; gain = 0.000 ; free physical = 261 ; free virtual = 16011
+Read PlaceDB: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.51 . Memory (MB): peak = 9400.855 ; gain = 18.000 ; free physical = 235 ; free virtual = 15987
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9400.855 ; gain = 0.000 ; free physical = 235 ; free virtual = 15987
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9223.816 ; gain = 7.000 ; free physical = 224 ; free virtual = 14539
-Read Physdb Files: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.55 . Memory (MB): peak = 9223.816 ; gain = 15.000 ; free physical = 224 ; free virtual = 14539
-Restored from archive | CPU: 0.810000 secs | Memory: 15.097176 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.55 . Memory (MB): peak = 9223.816 ; gain = 15.000 ; free physical = 224 ; free virtual = 14539
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9731.055 ; gain = 0.000 ; free physical = 370 ; free virtual = 14486
+Read RouteStorage: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9406.855 ; gain = 6.000 ; free physical = 223 ; free virtual = 15976
+Read Physdb Files: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.63 . Memory (MB): peak = 9406.855 ; gain = 24.000 ; free physical = 223 ; free virtual = 15976
+Restored from archive | CPU: 0.820000 secs | Memory: 13.843605 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.63 . Memory (MB): peak = 9406.855 ; gain = 24.000 ; free physical = 223 ; free virtual = 15976
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9937.090 ; gain = 0.000 ; free physical = 303 ; free virtual = 15868
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 91 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
@@ -167,8 +167,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E(x4)): 16 instances
   SRLC32E => SRL16E: 4 instances
 
-open_run: Time (s): cpu = 00:00:57 ; elapsed = 00:00:23 . Memory (MB): peak = 9731.055 ; gain = 1532.477 ; free physical = 207 ; free virtual = 14374
+open_run: Time (s): cpu = 00:01:09 ; elapsed = 00:00:29 . Memory (MB): peak = 9937.090 ; gain = 1560.996 ; free physical = 198 ; free virtual = 15739
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 15:42:04 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 22 14:24:14 2024...

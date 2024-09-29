@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Sep 26 13:45:29 2024
-# Process ID: 43668
+# Start of session at: Wed Sep 25 20:40:07 2024
+# Process ID: 93336
 # Current directory: /home/nothon/fpga2C
 # Command line: vivado
 # Log file: /home/nothon/fpga2C/vivado.log
@@ -13,13 +13,13 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-# CPU Frequency     :3271.766 MHz
+# CPU Frequency     :2740.636 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :7990 MB
 # Swap memory       :21474 MB
 # Total Virtual     :29465 MB
-# Available Virtual :17136 MB
+# Available Virtual :17186 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
@@ -114,11 +114,103 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/interface_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nothon/fpga2C/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 8143.211 ; gain = 616.211 ; free physical = 837 ; free virtual = 15332
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 8129.309 ; gain = 603.656 ; free physical = 447 ; free virtual = 15057
+open_bd_design {/home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd}
+Reading block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_0
+Adding component instance block -- user.org:user:noip_ctrl:1.0 - noip_ctrl_0
+Adding component instance block -- user.org:user:noip_lvds_stream:1.0 - noip_lvds_stream_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_0
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slid
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:axis_interconnect:2.1 - axis_interconnect_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - s_arb_req_suppress_concat
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_k
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - auto_ss_slidr
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - trigger0_concat
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor0_slice1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - monitor1_slice1
+Adding component instance block -- user.org:user:hdmi_ctrl:1.0 - hdmi_ctrl_0
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SDA
+Adding component instance block -- xilinx.com:module_ref:my_iobuf:1.0 - iobuf_I2C0_SCL
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat_n
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_0_concat_p
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - selectio_reset_inverter
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - lvds_selectio_data_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat_n
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - lvds_data_1_concat_p
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - lvds_selectio_data_1
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_1
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_1Executing the post_config_ip from bd
+Adding component instance block -- user.org:user:rgb_led_ctrl:1.0 - rgb_led_ctrl_0
+Successfully read diagram <main_design> from block design file </home/nothon/fpga2C/ZTurnV2/ZTurnV2.srcs/sources_1/bd/main_design/main_design.bd>
+open_bd_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:14 . Memory (MB): peak = 8599.156 ; gain = 428.195 ; free physical = 586 ; free virtual = 14968
+update_compile_order -fileset sources_1
+write_bd_layout -force -format svg -verbose /tmp/block.design.svg
+/tmp/block.design.svg
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+archive
+bd_test
+doc
+drivers
+hs_err_pid11095.log
+hs_err_pid17935.log
+hs_err_pid33251.log
+hs_err_pid53852.log
+interface_repo
+ip_repo
+JLCPCB_Multilayer
+Kick
+logs
+Materiel.ods
+notes
+PCB-Output-Products
+Pinout.ods
+rapport
+Rapport.odt
+README.md
+sd_backup
+vitis_workspace
+vivado_119017.backup.jou
+vivado_119017.backup.log
+vivado_119192.backup.jou
+vivado_119192.backup.log
+vivado_40883.backup.jou
+vivado_40883.backup.log
+vivado_61216.backup.jou
+vivado_61216.backup.log
+vivado_92494.backup.jou
+vivado_92494.backup.log
+vivado.jou
+vivado.log
+vivado_pid93336.str
+ZTurnV2
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Device 21-9227] Part: xc7z020clg400-2 does not have CEAM library.
-Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 8806.184 ; gain = 0.000 ; free physical = 445 ; free virtual = 15004
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 8635.938 ; gain = 0.000 ; free physical = 226 ; free virtual = 15071
 INFO: [Netlist 29-17] Analyzing 297 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
@@ -141,24 +233,24 @@ WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because
 WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'main_design_i/iobuf_I2C0_SDA/T' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
-Read ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8817.406 ; gain = 0.000 ; free physical = 471 ; free virtual = 15035
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8683.617 ; gain = 4.000 ; free physical = 212 ; free virtual = 15008
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9208.816 ; gain = 0.000 ; free physical = 204 ; free virtual = 14565
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9284.195 ; gain = 0.000 ; free physical = 247 ; free virtual = 14545
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9208.816 ; gain = 0.000 ; free physical = 247 ; free virtual = 14564
-Read PlaceDB: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.45 . Memory (MB): peak = 9216.816 ; gain = 8.000 ; free physical = 233 ; free virtual = 14546
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9216.816 ; gain = 0.000 ; free physical = 233 ; free virtual = 14546
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9284.195 ; gain = 0.000 ; free physical = 243 ; free virtual = 14541
+Read PlaceDB: Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 9290.195 ; gain = 6.000 ; free physical = 206 ; free virtual = 14506
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9290.195 ; gain = 0.000 ; free physical = 206 ; free virtual = 14506
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9223.816 ; gain = 7.000 ; free physical = 224 ; free virtual = 14539
-Read Physdb Files: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.55 . Memory (MB): peak = 9223.816 ; gain = 15.000 ; free physical = 224 ; free virtual = 14539
-Restored from archive | CPU: 0.810000 secs | Memory: 15.097176 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.55 . Memory (MB): peak = 9223.816 ; gain = 15.000 ; free physical = 224 ; free virtual = 14539
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9731.055 ; gain = 0.000 ; free physical = 370 ; free virtual = 14486
+Read RouteStorage: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9297.195 ; gain = 7.000 ; free physical = 198 ; free virtual = 14500
+Read Physdb Files: Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.57 . Memory (MB): peak = 9297.195 ; gain = 13.000 ; free physical = 198 ; free virtual = 14500
+Restored from archive | CPU: 0.730000 secs | Memory: 14.104324 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.57 . Memory (MB): peak = 9297.195 ; gain = 13.000 ; free physical = 198 ; free virtual = 14500
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9297.195 ; gain = 0.000 ; free physical = 198 ; free virtual = 14503
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 91 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
@@ -167,8 +259,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E(x4)): 16 instances
   SRLC32E => SRL16E: 4 instances
 
-open_run: Time (s): cpu = 00:00:57 ; elapsed = 00:00:23 . Memory (MB): peak = 9731.055 ; gain = 1532.477 ; free physical = 207 ; free virtual = 14374
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 9474.914 ; gain = 838.977 ; free physical = 204 ; free virtual = 14319
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 15:42:04 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 25 21:27:56 2024...

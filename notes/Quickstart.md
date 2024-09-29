@@ -15,6 +15,7 @@ En plus de cela, `vitis_workspace` contient le workspace Vitis principal - c'est
 
 Pour plus de détails, voir [[Doc_Software]].
 Documentation et utilisation de l'IP Streamer (noip_lvds_stream) : [[Doc_Streamer]]
+Pour le reste des IPs : [[Doc_IP]].
 
 # Partie Hardware
 

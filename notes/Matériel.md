@@ -56,7 +56,6 @@ Apparamment marche avec du LVDS : non confirmé
 
 [Harrier 10x AF-Zoom](https://www.activesilicon.com/products/harrier-10x-af-zoom-camera/)
 - 62.4mm x 43mm x 44mm
-
 # Lentilles
 
 S-Mount / C-Mount / CS-Mount
